@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name footprints)(type KiCad)(uri ${KIPRJMOD}/Mylibraries/footprints.pretty)(options "")(descr ""))
+  (lib (name PIC24FJ128GC006)(type KiCad)(uri ${KIPRJMOD}/Mylibraries/PIC24FJ128GC006.pretty)(options "")(descr ""))
+)

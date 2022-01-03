@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name 2021-04-06_19-32-46)(type Legacy)(uri ${KIPRJMOD}/Mylibraries/2021-04-06_19-32-46.lib)(options "")(descr ""))
+  (lib (name 2021-04-06_19-40-33)(type Legacy)(uri ${KIPRJMOD}/Mylibraries/2021-04-06_19-40-33.lib)(options "")(descr ""))
+  (lib (name 2021-04-06_19-58-28)(type Legacy)(uri ${KIPRJMOD}/Mylibraries/2021-04-06_19-58-28.lib)(options "")(descr ""))
+)

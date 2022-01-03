@@ -1,0 +1,35 @@
+{
+    "type": "InteractiveHtmlBom settings",
+    "version": 1,
+    "pcbmetadata": {
+        "title": "solar_mppt1",
+        "revision": "",
+        "company": "",
+        "date": "2021-07-21 22:07:42"
+    },
+    "settings": {
+        "canvaslayout": "FB",
+        "bomlayout": "left-right",
+        "bommode": "grouped",
+        "checkboxes": [
+            "Sourced",
+            "Placed"
+        ],
+        "checkboxStoredRefs": {
+            "Sourced": "39,34,38,37,101,109,116,117,30,33,106,111,99,81,102,103,80,79,104,107,78,77,76,75,74,36,73,72,71,69,68,67,66,65,64,2,63,62,53,35,32,29,98,100,70,118,119,122,28,105,110,108,115,61,112,93,92,89,88,85,83,54,91,90,87,86,84,82,144,148,149,151,135,136,145,138,139,140,141,142,59,58,150,137,147,42,143,146,43,49,132,25,50,56,47,46,51,4,5,3,96,41,40,18,153,57,26,45,44,20,21,19,123,152,133,134,52,129,130,128,48,60,31",
+            "Placed": ""
+        },
+        "darkMode": true,
+        "highlightpin1": true,
+        "redrawOnDrag": true,
+        "boardRotation": 0,
+        "renderPads": true,
+        "renderReferences": true,
+        "renderValues": true,
+        "renderSilkscreen": true,
+        "renderFabrication": false,
+        "renderDnpOutline": false,
+        "renderTracks": true,
+        "renderZones": true
+    }
+}
