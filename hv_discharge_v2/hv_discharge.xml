@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\nxf69791\Documents\Kicad\PCB_Kicad\hv_discharge_v2\hv_discharge.kicad_sch</source>
+    <date>3/29/2022 1:27:00 PM</date>
+    <tool>Eeschema (6.0.2)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Z+ HV discharge, series and meter circuit</title>
+        <company>NXP Toulouse</company>
+        <rev>B</rev>
+        <date>2021-11-02</date>
+        <source>hv_discharge.kicad_sch</source>
+        <comment number="1" value="Xavier Bourlot"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6566354-2eb8-4827-bc1d-775153cdfa8e</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>1N4007</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000618815d1</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>1N4007</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006188292c</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>1N4007</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006188303b</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>BZV55B9V1</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</datasheet>
+      <libsource lib="Diode" part="BZV55B9V1" description="9.1V, 500mW, 2%, Zener diode, MiniMELF"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1d749410-c23b-4fc4-a585-7515e43a8f86</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>1N4007</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006187f216</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>BZV55B9V1</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</datasheet>
+      <libsource lib="Diode" part="BZV55B9V1" description="9.1V, 500mW, 2%, Zener diode, MiniMELF"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2bdf1cdf-b31f-47cc-b56b-dd5e0d861f5b</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>BZV55B9V1</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</datasheet>
+      <libsource lib="Diode" part="BZV55B9V1" description="9.1V, 500mW, 2%, Zener diode, MiniMELF"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fedc3313-81e9-483a-b405-f12c49e311d4</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>BZV55B9V1</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</datasheet>
+      <libsource lib="Diode" part="BZV55B9V1" description="9.1V, 500mW, 2%, Zener diode, MiniMELF"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3a892c2d-161e-4205-8a60-0efd55404a63</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>D</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006199e806</tstamps>
+    </comp>
+    <comp ref="D10">
+      <value>D</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006199d9f8</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>B+</value>
+      <footprint>TestPoint:TestPoint_THTPad_D4.0mm_Drill2.0mm</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000619952c1</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>B-</value>
+      <footprint>TestPoint:TestPoint_THTPad_D4.0mm_Drill2.0mm</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000061994b8d</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>A+</value>
+      <footprint>TestPoint:TestPoint_THTPad_D4.0mm_Drill2.0mm</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006198fc05</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>A-</value>
+      <footprint>TestPoint:TestPoint_THTPad_D4.0mm_Drill2.0mm</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006198bde5</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>R+</value>
+      <footprint>TestPoint:TestPoint_THTPad_D4.0mm_Drill2.0mm</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1bbe4085-362a-42b7-9f4d-f7a95cf86eea</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>R-</value>
+      <footprint>TestPoint:TestPoint_THTPad_D4.0mm_Drill2.0mm</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62393c0d-065b-4bbf-8298-99595a9aae4f</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>M+</value>
+      <footprint>TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000619a7443</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>M-</value>
+      <footprint>TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000619a70cf</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>O-</value>
+      <footprint>TestPoint:TestPoint_THTPad_D4.0mm_Drill2.0mm</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006199b472</tstamps>
+    </comp>
+    <comp ref="J10">
+      <value>O+</value>
+      <footprint>TestPoint:TestPoint_THTPad_D4.0mm_Drill2.0mm</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006199894b</tstamps>
+    </comp>
+    <comp ref="J11">
+      <value>DB9_Female</value>
+      <datasheet> ~</datasheet>
+      <libsource lib="Connector" part="DB9_Female" description="9-pin female D-SUB connector"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000061be1b69</tstamps>
+    </comp>
+    <comp ref="J12">
+      <value>DB9_Male</value>
+      <datasheet> ~</datasheet>
+      <libsource lib="Connector" part="DB9_Male" description="9-pin male D-SUB connector"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000061c9abe3</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>2N7002</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</datasheet>
+      <libsource lib="Transistor_FET" part="2N7002" description="0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9d2134e0-b90a-44db-acc9-25c93f2b2aa1</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>Q_NMOS_SGD</value>
+      <footprint>Package_TO_SOT_THT:TO-92L_Wide</footprint>
+      <libsource lib="Device" part="Q_NMOS_SGD" description="N-MOSFET transistor, source/gate/drain"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f9b9deb1-9dfa-4352-b64f-19d79aa5e6fc</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>Q_NMOS_SGD</value>
+      <footprint>Package_TO_SOT_THT:TO-92L_Wide</footprint>
+      <libsource lib="Device" part="Q_NMOS_SGD" description="N-MOSFET transistor, source/gate/drain"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eba74d2a-bf1a-4881-97f9-ecbfc5564a84</tstamps>
+    </comp>
+    <comp ref="Q4">
+      <value>Q_NMOS_SGD</value>
+      <footprint>Package_TO_SOT_THT:TO-92L_Wide</footprint>
+      <libsource lib="Device" part="Q_NMOS_SGD" description="N-MOSFET transistor, source/gate/drain"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ebb558b1-6c85-4cb1-9dff-f113c9e7d0b8</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f9f06343-11e3-4345-a2e1-546d259e0962</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>efed8074-f922-4331-b07e-52d5d1763ff0</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3a4d294a-6cc8-4d20-94ee-4accc538bdbf</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3153f797-1b0f-4c24-99f0-2031beccfc6b</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6215c2d-f2b4-4275-9fe9-0c6af90f6f66</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ab21a90e-af5c-4728-9f30-e876b934807f</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10</value>
+      <footprint>footprints:RBridged_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="_MYLIBRARY" part="BridgedResistor" description="BridgedResistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6251de50-0d3a-4caa-8b22-bf8c5a2af0d7</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cc1ec2a9-686c-44b6-939d-713a2efcc9b8</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>64079770-e9a9-4d10-b68d-44e6abff857b</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7645da6-164b-4bc7-9ad0-5c36b056f5b7</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e181474-cac5-48e8-ac15-f2756cbd557a</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a2649090-6b9b-48b7-946e-3479862be891</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e4de1a99-a947-46e9-8be2-11a3db90b580</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a7813d72-3946-4dd7-ab00-0dfe02570c66</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>10</value>
+      <footprint>footprints:RBridged_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="_MYLIBRARY" part="BridgedResistor" description="BridgedResistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ba0d8953-8548-47b4-9f8e-cf953dc84920</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>10</value>
+      <footprint>footprints:RBridged_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="_MYLIBRARY" part="BridgedResistor" description="BridgedResistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>53d0e2b8-8664-4924-b669-a3feedf96d52</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>10</value>
+      <footprint>footprints:RBridged_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <libsource lib="_MYLIBRARY" part="BridgedResistor" description="BridgedResistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6095e563-257d-4996-9cad-5f1d424c164b</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>R</value>
+      <footprint>Resistor_THT:R_Axial_Power_L48.0mm_W12.5mm_P10.16mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0f9afea4-34ec-4b0e-bb29-899ceef6fa03</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>R</value>
+      <footprint>Resistor_THT:R_Axial_Power_L48.0mm_W12.5mm_P10.16mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3719f2c9-d494-431f-acba-36221c8abddd</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006188ed75</tstamps>
+    </comp>
+    <comp ref="R21">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006188ed6f</tstamps>
+    </comp>
+    <comp ref="R22">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006188ed69</tstamps>
+    </comp>
+    <comp ref="R23">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006188cd12</tstamps>
+    </comp>
+    <comp ref="R24">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006188c839</tstamps>
+    </comp>
+    <comp ref="R25">
+      <value>2M</value>
+      <footprint>Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006188c341</tstamps>
+    </comp>
+    <comp ref="RV1">
+      <value>200k</value>
+      <footprint>Potentiometer_THT:Potentiometer_Bourns_3266Z_Horizontal</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hv_discharge.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8bcde31-fe24-4fcf-92f5-621c616d7300</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="DB9_Female">
+      <description>9-pin female D-SUB connector</description>
+      <docs> ~</docs>
+      <footprints>
+        <fp>DSUB*Female*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DB9_Female</field>
+        <field name="Datasheet"> ~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="DB9_Male">
+      <description>9-pin male D-SUB connector</description>
+      <docs> ~</docs>
+      <footprints>
+        <fp>DSUB*Male*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DB9_Male</field>
+        <field name="Datasheet"> ~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x01">
+      <description>Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x01</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_NMOS_SGD">
+      <description>N-MOSFET transistor, source/gate/drain</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NMOS_SGD</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S" type="passive"/>
+        <pin num="2" name="G" type="input"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Potentiometer">
+      <description>Potentiometer</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">R_Potentiometer</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="1N4007">
+      <description>1000V 1A General Purpose Rectifier Diode, DO-41</description>
+      <docs>http://www.vishay.com/docs/88503/1n4001.pdf</docs>
+      <footprints>
+        <fp>D*DO?41*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4007</field>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+        <field name="Datasheet">http://www.vishay.com/docs/88503/1n4001.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="BZV55B9V1">
+      <description>9.1V, 500mW, 2%, Zener diode, MiniMELF</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</docs>
+      <footprints>
+        <fp>D*MiniMELF*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">BZV55B9V1</field>
+        <field name="Footprint">Diode_SMD:D_MiniMELF</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="2N7002">
+      <description>0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23</description>
+      <docs>https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2N7002</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="_MYLIBRARY" part="BridgedResistor">
+      <description>BridgedResistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">BridgedResistor</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Diode.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Transistor_FET.kicad_sym</uri>
+    </library>
+    <library logical="_MYLIBRARY">
+      <uri>C:/Users/nxf69791/Documents/Kicad/PCB_Kicad/LIBRARIES/_MYLIBRARY.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/A+">
+      <node ref="J11" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="2" name="/A-">
+      <node ref="J11" pin="7" pinfunction="7" pintype="passive"/>
+    </net>
+    <net code="3" name="/B+">
+      <node ref="J11" pin="5" pinfunction="5" pintype="passive"/>
+    </net>
+    <net code="4" name="/B-">
+      <node ref="J11" pin="9" pinfunction="9" pintype="passive"/>
+    </net>
+    <net code="5" name="/Dischg_dis">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="6" name="/Meter+">
+      <node ref="D10" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D9" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J7" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="RV1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="7" name="/O+">
+      <node ref="J11" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="8" name="/O-">
+      <node ref="J11" pin="6" pinfunction="6" pintype="passive"/>
+    </net>
+    <net code="9" name="/Vd1">
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="Q3" pin="1" pinfunction="S" pintype="passive"/>
+      <node ref="Q4" pin="3" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="10" name="/Vd2">
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="S" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="11" name="/Vd3">
+      <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="/Vg1">
+      <node ref="D8" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+    </net>
+    <net code="13" name="/Vg2">
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+    </net>
+    <net code="14" name="/Vg3">
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="15" name="/Vout+">
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J10" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="/Vout-">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="D10" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D8" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D9" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q4" pin="1" pinfunction="S" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+    </net>
+    <net code="17" name="/Vsup+">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="18" name="/Vsup-">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="19" name="/Vsupmid">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(Q1-Pad1)">
+      <node ref="Q1" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(Q2-Pad2)">
+      <node ref="Q2" pin="2" pinfunction="G" pintype="input"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(Q3-Pad2)">
+      <node ref="Q3" pin="2" pinfunction="G" pintype="input"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(Q4-Pad2)">
+      <node ref="Q4" pin="2" pinfunction="G" pintype="input"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(R2-Pad2)">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(R3-Pad2)">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(R4-Pad2)">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(R5-Pad2)">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(R8-Pad2)">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(R10-Pad2)">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(R12-Pad2)">
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(R18-Pad2)">
+      <node ref="R18" pin="2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(R20-Pad2)">
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+    </net>
+    <net code="34" name="Net-(R21-Pad2)">
+      <node ref="R21" pin="2" pintype="passive"/>
+      <node ref="R22" pin="1" pintype="passive"/>
+    </net>
+    <net code="35" name="Net-(R22-Pad2)">
+      <node ref="R22" pin="2" pintype="passive"/>
+      <node ref="R23" pin="1" pintype="passive"/>
+    </net>
+    <net code="36" name="Net-(R23-Pad2)">
+      <node ref="R23" pin="2" pintype="passive"/>
+      <node ref="R24" pin="1" pintype="passive"/>
+    </net>
+    <net code="37" name="Net-(R24-Pad2)">
+      <node ref="R24" pin="2" pintype="passive"/>
+      <node ref="R25" pin="1" pintype="passive"/>
+    </net>
+    <net code="38" name="Net-(R25-Pad2)">
+      <node ref="R25" pin="2" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="39" name="unconnected-(J11-Pad2)">
+      <node ref="J11" pin="2" pinfunction="2" pintype="passive+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(J11-Pad4)">
+      <node ref="J11" pin="4" pinfunction="4" pintype="passive+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(J11-Pad8)">
+      <node ref="J11" pin="8" pinfunction="8" pintype="passive+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(J12-Pad1)">
+      <node ref="J12" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(J12-Pad2)">
+      <node ref="J12" pin="2" pinfunction="2" pintype="passive+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(J12-Pad3)">
+      <node ref="J12" pin="3" pinfunction="3" pintype="passive+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(J12-Pad4)">
+      <node ref="J12" pin="4" pinfunction="4" pintype="passive+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(J12-Pad5)">
+      <node ref="J12" pin="5" pinfunction="5" pintype="passive+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(J12-Pad6)">
+      <node ref="J12" pin="6" pinfunction="6" pintype="passive+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(J12-Pad7)">
+      <node ref="J12" pin="7" pinfunction="7" pintype="passive+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(J12-Pad8)">
+      <node ref="J12" pin="8" pinfunction="8" pintype="passive+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(J12-Pad9)">
+      <node ref="J12" pin="9" pinfunction="9" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
