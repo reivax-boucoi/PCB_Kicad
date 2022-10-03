@@ -1,4 +1,4 @@
-16973176630701819
+16978116944468819
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -65022,6 +65022,13 @@ mouse-bite-2mm-slot
 0
 0
 0
+Panelization
+mouse-bite-2mm-slot_long
+
+
+0
+0
+0
 Potentiometer_SMD
 Potentiometer_ACP_CA6-VSMD_Vertical
 Potentiometer, vertical, ACP CA6-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/06/01-ACP-CA6.pdf
@@ -75215,6 +75222,13 @@ varistor SIOV
 2
 2
 footprints
+C_Socket_D5.0mm_W2.5mm_P5.00mm
+C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf
+C Disc series Radial pin pitch 5.00mm  diameter 5mm width 2.5mm Capacitor
+0
+2
+2
+footprints
 IEC_mains_3pin
 
 
@@ -75270,6 +75284,13 @@ QR_github
 0
 0
 0
+footprints
+R_Socket_L6.3mm_D2.5mm_P10.16mm_Horizontal
+Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
+Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm
+0
+2
+2
 footprints
 SPDT_SW_edge_mount
 

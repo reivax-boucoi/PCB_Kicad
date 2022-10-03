@@ -1,0 +1,23 @@
+Circuit: * C:\users\user\My Documents\PCB\50W_LED_boost\sim_ltspice\sim.asc
+
+WARNING: Node N004 is floating.
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Jul 24 16:47:37 2022
+Total elapsed time: 11.845 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2290421
+traniter = 2290415
+tranpoints = 644856
+accept = 479708
+rejected = 165148
+matrix size = 16
+fillins = 4
+solver = Normal
+Matrix Compiler1: 912 bytes object code size  0.5/0.3/[0.2]
+Matrix Compiler2: 1.18 KB object code size  0.2/0.4/[0.2]
+
