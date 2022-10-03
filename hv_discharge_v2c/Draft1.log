@@ -1,0 +1,21 @@
+Circuit: * C:\Users\nxf69791\Documents\Kicad\PCB_Kicad\hv_discharge_v2c\Draft1.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Sep 29 15:04:17 2022
+Total elapsed time: 15.268 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 6857395
+traniter = 6857385
+tranpoints = 1617193
+accept = 1212591
+rejected = 404602
+matrix size = 6
+fillins = 0
+solver = Normal
+Matrix Compiler1:      11 opcodes  0.1/[0.0]/0.0
+Matrix Compiler2:      34 opcodes  0.1/[0.0]/0.0
+
