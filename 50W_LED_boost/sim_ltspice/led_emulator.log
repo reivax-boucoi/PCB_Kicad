@@ -1,0 +1,52 @@
+Circuit: * C:\users\user\My Documents\PCB\50W_LED_boost\sim_ltspice\led_emulator.asc
+
+.step rt=1000
+Direct Newton iteration for .op point succeeded.
+Semiconductor Device Operating Points:
+                        --- Diodes ---
+Name:      d2          d1
+Model:   udzv12b     dflz33
+Id:      -1.07e-3    -1.06e-3
+Vd:      -1.20e+1    -3.23e+1
+Req:      7.28e+0     1.94e+2
+CAP:      2.54e-8      NaN
+
+                        --- Bipolar Transistors ---
+Name:       q2          q4          q1          q3
+Model:    2n2222      2n2222      2n3055      2n3055
+Ib:        6.48e-6     5.54e-6     1.47e-3     1.47e-3
+Ic:        1.46e-3     1.46e-3     9.75e-2     9.75e-2
+Vbe:       6.62e-1     6.58e-1     3.98e-1     3.98e-1
+Vbc:      -1.30e+1    -3.23e+1    -1.37e+1    -3.30e+1
+Vce:       1.37e+1     3.30e+1     1.41e+1     3.34e+1
+BetaDC:    2.25e+2     2.64e+2     6.65e+1     6.65e+1
+Gm:        5.62e-2     5.62e-2     3.46e+0     3.46e+0
+Rpi:       3.99e+3     4.67e+3     1.77e+1     1.76e+1
+Rx:        1.00e+1     1.00e+1     8.10e-1     8.10e-1
+Ro:        7.75e+4     9.07e+4     0.00e+0     0.00e+0
+Cbe:        NaN         NaN        3.45e-7     3.45e-7
+Cbc:        NaN         NaN         NaN         NaN
+Cjs:       0.00e+0     0.00e+0     0.00e+0     0.00e+0
+BetaAC:    2.24e+2     2.63e+2     6.11e+1     6.11e+1
+Cbx:       0.00e+0     0.00e+0     0.00e+0     0.00e+0
+Ft:        1.38e+8     1.40e+8     1.59e+6     1.59e+6
+
+
+.step rt=13000
+
+Date: Sun Oct 30 01:22:54 2022
+Total elapsed time: 1.273 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 44
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 21
+fillins = 18
+solver = Normal
+Matrix Compiler1: 2.73 KB object code size
+Matrix Compiler2:     164 opcodes

@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/user/Documents/PCB/relay_brd/relay_brd.kicad_sch</source>
-    <date>lun. 03 oct. 2022 01:46:46</date>
+    <date>lun. 03 oct. 2022 03:05:10</date>
     <tool>Eeschema 6.0.8-f2edbf62ab~116~ubuntu22.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -36,7 +36,11 @@
     <comp ref="C2">
       <value>10u</value>
       <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -63,7 +67,11 @@
     <comp ref="C5">
       <value>10u</value>
       <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -72,7 +80,11 @@
     <comp ref="C6">
       <value>10u</value>
       <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -99,7 +111,11 @@
     <comp ref="C9">
       <value>10u</value>
       <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -278,7 +294,11 @@
       <value>1N4007</value>
       <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
       <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -287,7 +307,11 @@
     <comp ref="H1">
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_4.3mm_M4</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -296,7 +320,11 @@
     <comp ref="H2">
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_4.3mm_M4</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -305,7 +333,11 @@
     <comp ref="H3">
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_4.3mm_M4</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -314,7 +346,11 @@
     <comp ref="H4">
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_4.3mm_M4</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -323,7 +359,11 @@
     <comp ref="J1">
       <value>PWR</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -332,7 +372,11 @@
     <comp ref="J2">
       <value>5V</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -341,7 +385,11 @@
     <comp ref="J3">
       <value>CTRL</value>
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -350,7 +398,11 @@
     <comp ref="J4">
       <value>12V</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -359,7 +411,11 @@
     <comp ref="J5">
       <value>VDD</value>
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -368,7 +424,11 @@
     <comp ref="J6">
       <value>VDDA</value>
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -377,7 +437,11 @@
     <comp ref="J7">
       <value>OUT</value>
       <footprint>Connector_PinSocket_2.54mm:PinSocket_2x16_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_02x16_Odd_Even" description="Generic connector, double row, 02x16, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -386,7 +450,11 @@
     <comp ref="JP1">
       <value>~{RST}</value>
       <footprint>Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Jumper" part="SolderJumper_3_Bridged12" description="3-pole Solder Jumper, pins 1+2 closed/bridged"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -395,7 +463,11 @@
     <comp ref="JP2">
       <value>~{OE}</value>
       <footprint>Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Jumper" part="SolderJumper_3_Bridged12" description="3-pole Solder Jumper, pins 1+2 closed/bridged"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -405,7 +477,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -415,7 +491,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -425,7 +505,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -435,7 +519,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -445,7 +533,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -455,7 +547,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -465,7 +561,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -475,7 +575,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -485,7 +589,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -495,7 +603,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -505,7 +617,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -515,7 +631,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -525,7 +645,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -535,7 +659,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -545,7 +673,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -555,7 +687,11 @@
       <value>COTO</value>
       <footprint>Relay_THT:Relay_StandexMeder_DIP_LowProfile</footprint>
       <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Relay" part="DIPxx-1Axx-11x" description="Standex Meder DIP reed relay, SPST, Closing Contact"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -564,7 +700,11 @@
     <comp ref="L1">
       <value>L</value>
       <footprint>Inductor_THT:L_Axial_L7.0mm_D3.3mm_P12.70mm_Horizontal_Fastron_MICC</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1084,7 +1224,11 @@
     <comp ref="R23">
       <value>4k1</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1111,7 +1255,11 @@
     <comp ref="SW1">
       <value>~{RST}</value>
       <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1120,7 +1268,11 @@
     <comp ref="SW2">
       <value>~{OE}</value>
       <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1129,7 +1281,11 @@
     <comp ref="TP1">
       <value>SER_OUT</value>
       <footprint>TestPoint:TestPoint_Keystone_5010-5014_Multipurpose</footprint>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1139,7 +1295,11 @@
       <value>LM317_TO-220</value>
       <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/lm317.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Regulator_Linear" part="LM317_TO-220" description="1.5A 35V Adjustable Linear Regulator, TO-220"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1149,7 +1309,11 @@
       <value>LM317_TO-220</value>
       <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/lm317.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="Regulator_Linear" part="LM317_TO-220" description="1.5A 35V Adjustable Linear Regulator, TO-220"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1159,7 +1323,11 @@
       <value>74HC595</value>
       <footprint>Package_DIP:DIP-16_W7.62mm_Socket_LongPads</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/sn74hc595.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="74xx" part="74HC595" description="8-bit serial in/out Shift Register 3-State Outputs"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1169,7 +1337,11 @@
       <value>74HC595</value>
       <footprint>Package_DIP:DIP-16_W7.62mm_Socket_LongPads</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/sn74hc595.pdf</datasheet>
+      <fields>
+        <field name="JLCPCB BOM">0</field>
+      </fields>
       <libsource lib="74xx" part="74HC595" description="8-bit serial in/out Shift Register 3-State Outputs"/>
+      <property name="JLCPCB BOM" value="0"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="File: relay_brd.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>

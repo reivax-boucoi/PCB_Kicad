@@ -1,0 +1,492 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Crystal_GND2 Y?
+U 1 1 627D92C0
+P 2900 2500
+F 0 "Y?" H 2900 2700 50  0000 C CNN
+F 1 "32.768" H 2900 2650 50  0000 C CNN
+F 2 "Crystal:Crystal_C26-LF_D2.1mm_L6.5mm_Horizontal_1EP_style2" H 2900 2500 50  0001 C CNN
+F 3 "~" H 2900 2500 50  0001 C CNN
+	1    2900 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 627DABC1
+P 2650 2850
+F 0 "C?" H 2765 2896 50  0000 L CNN
+F 1 "33p" H 2765 2805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2688 2700 50  0001 C CNN
+F 3 "~" H 2650 2850 50  0001 C CNN
+	1    2650 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 628079ED
+P 3150 2850
+F 0 "C?" H 2950 2900 50  0000 L CNN
+F 1 "33p" H 2950 2800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3188 2700 50  0001 C CNN
+F 3 "~" H 3150 2850 50  0001 C CNN
+	1    3150 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2500 3050 2500
+Wire Wire Line
+	2750 2500 2650 2500
+Wire Wire Line
+	2650 2500 2650 2700
+Wire Wire Line
+	2650 3000 2900 3000
+Wire Wire Line
+	2900 3000 2900 2700
+Wire Wire Line
+	2900 3000 3150 3000
+Connection ~ 2900 3000
+$Comp
+L power:GND #PWR?
+U 1 1 6280845B
+P 2900 3000
+F 0 "#PWR?" H 2900 2750 50  0001 C CNN
+F 1 "GND" H 2905 2827 50  0000 C CNN
+F 2 "" H 2900 3000 50  0001 C CNN
+F 3 "" H 2900 3000 50  0001 C CNN
+	1    2900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62808651
+P 1200 2500
+F 0 "#PWR?" H 1200 2250 50  0001 C CNN
+F 1 "GND" H 1205 2327 50  0000 C CNN
+F 2 "" H 1200 2500 50  0001 C CNN
+F 3 "" H 1200 2500 50  0001 C CNN
+	1    1200 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L cd4060:CD4060 U?
+U 1 1 6280A5FD
+P 1650 2050
+F 0 "U?" H 1650 2587 60  0000 C CNN
+F 1 "CD4060" H 1650 2481 60  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 1700 2050 60  0001 C CNN
+F 3 "" H 1700 2050 60  0000 C CNN
+	1    1650 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 6280B123
+P 2150 1700
+F 0 "#PWR?" H 2150 1550 50  0001 C CNN
+F 1 "VCC" H 2167 1873 50  0000 C CNN
+F 2 "" H 2150 1700 50  0001 C CNN
+F 3 "" H 2150 1700 50  0001 C CNN
+	1    2150 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 1700 2150 1800
+Wire Wire Line
+	2150 1800 2100 1800
+$Comp
+L power:VCC #PWR?
+U 1 1 6280FCBB
+P 6250 1100
+F 0 "#PWR?" H 6250 950 50  0001 C CNN
+F 1 "VCC" H 6267 1273 50  0000 C CNN
+F 2 "" H 6250 1100 50  0001 C CNN
+F 3 "" H 6250 1100 50  0001 C CNN
+	1    6250 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62810045
+P 6300 3100
+F 0 "#PWR?" H 6300 2850 50  0001 C CNN
+F 1 "GND" H 6305 2927 50  0000 C CNN
+F 2 "" H 6300 3100 50  0001 C CNN
+F 3 "" H 6300 3100 50  0001 C CNN
+	1    6300 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 628167B9
+P 2050 4350
+F 0 "#PWR?" H 2050 4100 50  0001 C CNN
+F 1 "GND" H 2055 4177 50  0000 C CNN
+F 2 "" H 2050 4350 50  0001 C CNN
+F 3 "" H 2050 4350 50  0001 C CNN
+	1    2050 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 628167CD
+P 3000 3550
+F 0 "#PWR?" H 3000 3400 50  0001 C CNN
+F 1 "VCC" H 3017 3723 50  0000 C CNN
+F 2 "" H 3000 3550 50  0001 C CNN
+F 3 "" H 3000 3550 50  0001 C CNN
+	1    3000 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3550 3000 3650
+Wire Wire Line
+	3000 3650 2950 3650
+Text Label 2200 2200 0    50   ~ 0
+rst
+Wire Wire Line
+	2200 2200 2100 2200
+Wire Wire Line
+	2950 4050 3100 4050
+Text Label 3100 4050 0    50   ~ 0
+rst
+Wire Wire Line
+	5800 2000 5600 2000
+Text Label 5600 2000 0    50   ~ 0
+rst
+$Comp
+L 4xxx:4017 U?
+U 1 1 6282932B
+P 6250 4750
+F 0 "U?" H 6250 5731 50  0000 C CNN
+F 1 "4017" H 6250 5640 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 6250 4750 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf" H 6250 4750 50  0001 C CNN
+	1    6250 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 62829331
+P 6250 3650
+F 0 "#PWR?" H 6250 3500 50  0001 C CNN
+F 1 "VCC" H 6267 3823 50  0000 C CNN
+F 2 "" H 6250 3650 50  0001 C CNN
+F 3 "" H 6250 3650 50  0001 C CNN
+	1    6250 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62829337
+P 6250 5650
+F 0 "#PWR?" H 6250 5400 50  0001 C CNN
+F 1 "GND" H 6255 5477 50  0000 C CNN
+F 2 "" H 6250 5650 50  0001 C CNN
+F 3 "" H 6250 5650 50  0001 C CNN
+	1    6250 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3650 6250 3950
+Wire Wire Line
+	5750 4550 5600 4550
+Text Label 5600 4550 0    50   ~ 0
+rst
+$Comp
+L Device:R R?
+U 1 1 6282EEE9
+P 2900 2200
+F 0 "R?" V 2693 2200 50  0000 C CNN
+F 1 "10M" V 2784 2200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2830 2200 50  0001 C CNN
+F 3 "~" H 2900 2200 50  0001 C CNN
+	1    2900 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6282F3F0
+P 2400 2400
+F 0 "R?" V 2300 2450 50  0000 R CNN
+F 1 "330k" V 2200 2500 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2330 2400 50  0001 C CNN
+F 3 "~" H 2400 2400 50  0001 C CNN
+	1    2400 2400
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3150 2500
+Wire Wire Line
+	3050 2200 3150 2200
+Wire Wire Line
+	2750 2200 2650 2200
+Connection ~ 2650 2500
+Wire Wire Line
+	2650 2400 2650 2500
+Wire Wire Line
+	3150 2200 3150 2500
+Wire Wire Line
+	2100 2400 2250 2400
+Wire Wire Line
+	2500 2050 3150 2050
+Wire Wire Line
+	3150 2050 3150 2200
+Connection ~ 3150 2200
+$Comp
+L Device:Jumper_NC_Small JP?
+U 1 1 6283F024
+P 950 1900
+F 0 "JP?" H 950 2000 50  0000 C CNN
+F 1 " " H 950 1700 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 950 1900 50  0001 C CNN
+F 3 "~" H 950 1900 50  0001 C CNN
+	1    950  1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 6283FA2B
+P 950 2000
+F 0 "JP?" H 950 1900 50  0000 C CNN
+F 1 " " H 950 2094 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 950 2000 50  0001 C CNN
+F 3 "~" H 950 2000 50  0001 C CNN
+	1    950  2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 2000 1200 2000
+Wire Wire Line
+	1200 1900 1050 1900
+Wire Wire Line
+	850  1900 800  1900
+Wire Wire Line
+	800  1900 800  2000
+Wire Wire Line
+	800  2000 850  2000
+Text Label 800  1900 2    50   ~ 0
+1Hz
+$Comp
+L Device:LED D?
+U 1 1 6284EAC1
+P 3550 2250
+F 0 "D?" V 3589 2133 50  0000 R CNN
+F 1 "LED" V 3498 2133 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm" H 3550 2250 50  0001 C CNN
+F 3 "~" H 3550 2250 50  0001 C CNN
+	1    3550 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 62851EB7
+P 3550 2100
+F 0 "#PWR?" H 3550 1950 50  0001 C CNN
+F 1 "VCC" H 3567 2273 50  0000 C CNN
+F 2 "" H 3550 2100 50  0001 C CNN
+F 3 "" H 3550 2100 50  0001 C CNN
+	1    3550 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 62853D71
+P 3550 2550
+F 0 "R?" H 3480 2504 50  0000 R CNN
+F 1 "1k" H 3480 2595 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3480 2550 50  0001 C CNN
+F 3 "~" H 3550 2550 50  0001 C CNN
+	1    3550 2550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3550 2700 3550 2800
+Text Label 3550 2800 0    50   ~ 0
+1Hz
+NoConn ~ 2950 4250
+NoConn ~ 2950 4350
+NoConn ~ 2100 1900
+NoConn ~ 2100 2000
+NoConn ~ 2100 2100
+NoConn ~ 2100 2500
+NoConn ~ 1200 1800
+NoConn ~ 1200 2100
+NoConn ~ 1200 2200
+NoConn ~ 1200 2300
+NoConn ~ 1200 2400
+NoConn ~ 2950 3950
+NoConn ~ 2950 3850
+NoConn ~ 2950 3750
+NoConn ~ 2050 3950
+NoConn ~ 2050 4050
+NoConn ~ 2050 4150
+NoConn ~ 2050 4250
+$Comp
+L cd4060:CD4060 U?
+U 1 1 628167C3
+P 2500 3900
+F 0 "U?" H 2500 4437 60  0000 C CNN
+F 1 "CD4060" H 2500 4331 60  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 2550 3900 60  0001 C CNN
+F 3 "" H 2550 3900 60  0000 C CNN
+	1    2500 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4150 3100 4150
+Text Label 3100 4150 0    50   ~ 0
+1Hz
+$Comp
+L Switch:SW_SPDT SW?
+U 1 1 6287803C
+P 1100 3750
+F 0 "SW?" H 1100 3425 50  0000 C CNN
+F 1 "SW_SPDT" H 1100 3516 50  0000 C CNN
+F 2 "" H 1100 3750 50  0001 C CNN
+F 3 "~" H 1100 3750 50  0001 C CNN
+	1    1100 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	900  3650 900  3550
+Wire Wire Line
+	900  3550 1750 3550
+Wire Wire Line
+	1750 3550 1750 3650
+Wire Wire Line
+	1750 3650 2050 3650
+Wire Wire Line
+	900  3850 900  3950
+Wire Wire Line
+	900  3950 1750 3950
+Wire Wire Line
+	1750 3950 1750 3850
+Wire Wire Line
+	1750 3850 2050 3850
+Wire Wire Line
+	2050 3750 1800 3750
+$Comp
+L Device:R R?
+U 1 1 62882ABE
+P 1650 3750
+F 0 "R?" V 1550 3750 50  0000 C CNN
+F 1 "330k" V 1750 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1580 3750 50  0001 C CNN
+F 3 "~" H 1650 3750 50  0001 C CNN
+	1    1650 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1500 3750 1300 3750
+Text Label 1300 3750 0    50   ~ 0
+Finc
+Text Label 1850 3750 0    50   ~ 0
+F30m
+Text Label 1750 3650 0    50   ~ 0
+F15m
+Text Label 1750 3950 0    50   ~ 0
+F1h
+Wire Wire Line
+	6250 1100 6300 1400
+$Comp
+L 4xxx:4017 U?
+U 1 1 627D7571
+P 6300 2200
+F 0 "U?" H 6300 3181 50  0000 C CNN
+F 1 "4017" H 6300 3090 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 6300 2200 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf" H 6300 2200 50  0001 C CNN
+	1    6300 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1700 5600 1700
+Wire Wire Line
+	5750 4250 5600 4250
+Text Label 5600 1700 0    50   ~ 0
+Finc
+Text Label 5600 4250 0    50   ~ 0
+Finc
+$Comp
+L Device:C C?
+U 1 1 628A2E52
+P 3500 5000
+F 0 "C?" H 3300 5050 50  0000 L CNN
+F 1 "10u" H 3300 4950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3538 4850 50  0001 C CNN
+F 3 "~" H 3500 5000 50  0001 C CNN
+	1    3500 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 628A490F
+P 3500 5450
+F 0 "R?" H 3430 5404 50  0000 R CNN
+F 1 "100k" H 3430 5495 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3430 5450 50  0001 C CNN
+F 3 "~" H 3500 5450 50  0001 C CNN
+	1    3500 5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 5300 3500 5150
+$Comp
+L power:GND #PWR?
+U 1 1 628A5EA8
+P 3500 5600
+F 0 "#PWR?" H 3500 5350 50  0001 C CNN
+F 1 "GND" H 3505 5427 50  0000 C CNN
+F 2 "" H 3500 5600 50  0001 C CNN
+F 3 "" H 3500 5600 50  0001 C CNN
+	1    3500 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 628A6E0A
+P 3500 4850
+F 0 "#PWR?" H 3500 4700 50  0001 C CNN
+F 1 "VCC" H 3517 5023 50  0000 C CNN
+F 2 "" H 3500 4850 50  0001 C CNN
+F 3 "" H 3500 4850 50  0001 C CNN
+	1    3500 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 2300 2500 2300
+Wire Wire Line
+	2500 2300 2500 2050
+Wire Wire Line
+	3150 2500 3150 2700
+Wire Wire Line
+	2550 2400 2650 2400
+Wire Wire Line
+	2650 2200 2650 2400
+Connection ~ 2650 2400
+Wire Wire Line
+	5800 1800 5550 1800
+Wire Wire Line
+	6800 2600 7000 2600
+Text Label 7000 2600 0    50   ~ 0
+CK_EN
+Text Label 5550 1800 0    50   ~ 0
+CK_EN
+Wire Wire Line
+	5750 4350 5500 4350
+Text Label 5500 4350 0    50   ~ 0
+~CK_EN
+$EndSCHEMATC
