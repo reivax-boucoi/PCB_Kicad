@@ -9,19 +9,20 @@ LCD::digit LCD::digits[]={
 		{{2,2,2,3,3,3,3},{&LCDDR0,&LCDDR5,&LCDDR10,&LCDDR15,&LCDDR10,&LCDDR0,&LCDDR5}},
 		{{0,0,0,1,1,1,1},{&LCDDR0,&LCDDR5,&LCDDR10,&LCDDR15,&LCDDR10,&LCDDR0,&LCDDR5}}};
 
-LCD::LCD(){
+LCD::LCD(bool lowP){
 	DDRB |= (1 << PB0);
 	PORTB |= (1<<PB0);
 	LCDCRB|=(1<<LCDMUX1)|(1<<LCDMUX0);
-	if(F_CPU<6000000UL){
-		LCDFRR|=(1<<LCDPS2)|(1<<LCDCD2); // prescaler 512, division factor 5 & K=8 for duty 1/4
-	}else if(F_CPU<12000000UL){
-		LCDFRR|=(1<<LCDPS2)|(1<<LCDPS1)|(1<<LCDPS0)|(1<<LCDCD2); // prescaler 4096, division factor 5 & K=8 for duty 1/4
+	
+	if(lowP){
+		LCDFRR|=(1<<LCDPS2)|(1<<LCDPS1)|(1<<LCDPS0)|(1<<LCDCD2)|(1<<LCDCD1)|(1<<LCDCD0); // prescaler 4096, division factor 32 & K=8 for duty 1/4
+		LCDCCR|=(1<<LCDDC0);// 2.6V 70µs
+		LCDCRA|=(1<<LCDEN)|(1<<LCDAB);//LCDAB=low power waveform
 	}else{
 		LCDFRR|=(1<<LCDPS2)|(1<<LCDPS1)|(1<<LCDPS0)|(1<<LCDCD2)|(1<<LCDCD2)|(1<<LCDCD0); // prescaler 4096, division factor 8 & K=8 for duty 1/4
+		LCDCCR|=(1<<LCDCC1)|(1<<LCDCC2)|(1<<LCDDC1);//2.7V 1150µs
+		LCDCRA|=(1<<LCDEN);
 	}
-	LCDCCR|=(1<<LCDCC1)|(1<<LCDDC2)|(1<<LCDDC1);
-	LCDCRA|=(1<<LCDEN);
 }
 
 LCD::~LCD() {
