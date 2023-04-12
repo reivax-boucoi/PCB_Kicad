@@ -30,12 +30,23 @@ LCD myLCD(0);//Use 1 for lowest power LCD mode
 
 #define STATE_OFF 0
 #define STATE_WAKEUP 1
+#define STATE_WAKE_DURATION 10
 #define STATE_TARE 2
+#define STATE_TAR_DURATION 30
 #define STATE_IDLE 3
+#define STATE_IDL_DURATION 255
+#define STATE_TIME_S 4
+#define STATE_TIME_S1 5
+#define STATE_TIME_M 6
+#define STATE_TIME_M1 7
+#define STATE_TIME_H 8
+#define STATE_TIME_H1 9
+#define STATE_TIME_DURATION 50
+
 
 volatile uint32_t cnt=59650;
 volatile uint8_t state=STATE_WAKEUP;
-volatile uint32_t powerup_cnt=0;
+volatile uint8_t timer=STATE_WAKE_DURATION;
 
 int main(void){
 	
@@ -49,6 +60,9 @@ int main(void){
 	DDRB=0x00;
 	PORTB=0xFF;
 	
+	LED0_ON;
+	PRR|=(1<<PRTIM1)|(1<<PRSPI)|(1<<PRUSART0);//Shut down clock to Timer1, SPI, UART
+	
 	ADMUX|=(1<<REFS0)|0b11110;//Set AVCC as reference voltage for ADC, ADC MUX input to 1.1V BG
 	ADCSRA|=(1<<ADEN)|(1<<ADIE)|(1<<ADPS1);//Enable conversin complete interrupt, Clock prescaler 12MHz/64=187kHz
 	EIMSK=0b00100000;//Enable pin change interrupt PCINT8-15 WARNING Avrdude is not up to date with changelog from P to PA: PCIE1 has changed location from bit 7 to 5 
@@ -58,31 +72,45 @@ int main(void){
 	
 	while(1){
 	
-		_delay_ms(1500);
-		switch(state){
-			case STATE_OFF:
-				set_sleep_mode(SLEEP_MODE_PWR_SAVE);
-				//set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-				cli();
-				if (1){
-					sleep_enable();
+		_delay_ms(100);
+		timer--;
+		if(timer==0){
+			switch(state){
+				case STATE_OFF:
+					ADCSRA&=~(1<<ADEN);//Disable ADC
+					PRR|=(1<<PRTIM1)|(1<<PRSPI)|(1<<PRUSART0)|(1<<PRADC);//Shut down clock to Timer1, SPI, UART, ADC
+					
+					set_sleep_mode(SLEEP_MODE_PWR_SAVE);
+					//set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+					cli();
+					if (1){
+						sleep_enable();
+						sei();
+						sleep_cpu();
+						sleep_disable();
+					}
+					PRR&=~(1<<PRADC);//Enable power to ADC again
+					ADCSRA|=(1<<ADEN);//Enable ADC again
 					sei();
-					sleep_cpu();
-					sleep_disable();
-				}
-				sei();
-				state=STATE_WAKEUP;
-				break;
-				
-			case STATE_WAKEUP:
-				myLCD.setNb(888888);
-				state=STATE_IDLE;
-				break;
-				
-			case STATE_IDLE:
-				ADCSRA|=(1<<ADSC); //Start single ADC conversion
-		}
-		
+					
+					state=STATE_WAKEUP;
+					timer=STATE_WAKE_DURATION;
+					break;
+					
+				case STATE_WAKEUP:
+					myLCD.setNb(888888);
+					state=STATE_IDLE;
+					timer=STATE_IDL_DURATION;
+					break;
+					
+				case STATE_IDLE:
+					if(timer==0){
+						timer=STATE_IDL_DURATION;
+						LED0_Toggle;
+					}
+					ADCSRA|=(1<<ADSC); //Start single ADC conversion
+			}
+		}		
 		
 		if(cnt>=BATT_FULL){
 			myLCD.setBattery(LCD::FULL);
@@ -94,7 +122,7 @@ int main(void){
 			myLCD.setBattery(LCD::EMPTY);
 		}else{
 			myLCD.setBattery(LCD::NONE);
-			//we should sutdown here
+			//we should shutdown here
 		}
 	}
 
