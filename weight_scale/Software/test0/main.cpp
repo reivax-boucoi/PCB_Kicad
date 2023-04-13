@@ -28,20 +28,6 @@ LCD myLCD(0);//Use 1 for lowest power LCD mode
 #define BATT_TWOBAR 3750
 #define BATT_FULL 3900
 
-#define STATE_OFF 0
-#define STATE_WAKEUP 1
-#define STATE_WAKE_DURATION 10
-#define STATE_TARE 2
-#define STATE_TAR_DURATION 30
-#define STATE_IDLE 3
-#define STATE_IDL_DURATION 255
-#define STATE_TIME_S 4
-#define STATE_TIME_S1 5
-#define STATE_TIME_M 6
-#define STATE_TIME_M1 7
-#define STATE_TIME_H 8
-#define STATE_TIME_H1 9
-#define STATE_TIME_DURATION 50
 
 
 volatile uint32_t cnt=59650;
