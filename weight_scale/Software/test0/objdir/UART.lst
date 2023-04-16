@@ -1,0 +1,209 @@
+   1               		.file	"UART.cpp"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               	.global	_ZN4UARTC2Ev
+  12               	_ZN4UARTC2Ev:
+  13               	.LFB1:
+  14               		.file 1 "UART.cpp"
+   1:UART.cpp      **** #include "UART.h"
+   2:UART.cpp      **** 
+   3:UART.cpp      **** UART::UART(void){
+  15               		.loc 1 3 0
+  16               		.cfi_startproc
+  17               	.LVL0:
+  18               	/* prologue: function */
+  19               	/* frame size = 0 */
+  20               	/* stack size = 0 */
+  21               	.L__stack_usage = 0
+  22 0000 0895      		ret
+  23               		.cfi_endproc
+  24               	.LFE1:
+  26               	.global	_ZN4UARTC1Ev
+  27               		.set	_ZN4UARTC1Ev,_ZN4UARTC2Ev
+  28               	.global	_ZN4UARTD2Ev
+  30               	_ZN4UARTD2Ev:
+  31               	.LFB4:
+   4:UART.cpp      ****     /*UBRR0H = (UART_BAUD>>8);
+   5:UART.cpp      ****     UBRR0L = UART_BAUD;	// set baud rate
+   6:UART.cpp      ****     UCSR0B|= (1<<TXEN0)|(1<<RXEN0);	// enable receiver and transmitter
+   7:UART.cpp      ****     UCSR0C|= (1<<UMSEL01)|(1<<UCSZ00)|(1<<UCSZ01);	// 8bit data format    */
+   8:UART.cpp      ****     
+   9:UART.cpp      **** }
+  10:UART.cpp      **** 
+  11:UART.cpp      **** UART::~UART(void){
+  32               		.loc 1 11 0
+  33               		.cfi_startproc
+  34               	.LVL1:
+  35               	/* prologue: function */
+  36               	/* frame size = 0 */
+  37               	/* stack size = 0 */
+  38               	.L__stack_usage = 0
+  39 0002 0895      		ret
+  40               		.cfi_endproc
+  41               	.LFE4:
+  43               	.global	_ZN4UARTD1Ev
+  44               		.set	_ZN4UARTD1Ev,_ZN4UARTD2Ev
+  45               	.global	_ZN4UART8sendByteEh
+  47               	_ZN4UART8sendByteEh:
+  48               	.LFB6:
+  12:UART.cpp      ****     
+  13:UART.cpp      **** }
+  14:UART.cpp      **** 
+  15:UART.cpp      **** void UART::sendByte(uint8_t b){
+  49               		.loc 1 15 0
+  50               		.cfi_startproc
+  51               	/* prologue: function */
+  52               	/* frame size = 0 */
+  53               	/* stack size = 0 */
+  54               	.L__stack_usage = 0
+  55               	.LVL2:
+  56               	.L4:
+  16:UART.cpp      ****     while (!( UCSRA & (1<<UDRE)));	// wait while register is free
+  57               		.loc 1 16 0
+  58 0004 8091 C000 		lds r24,192
+  59 0008 85FF      		sbrs r24,5
+  60 000a 00C0      		rjmp .L4
+  17:UART.cpp      ****     UDR = b;	// load data in the register
+  61               		.loc 1 17 0
+  62 000c 6093 C600 		sts 198,r22
+  63 0010 0895      		ret
+  64               		.cfi_endproc
+  65               	.LFE6:
+  67               	.global	_ZN4UART10sendStringEPc
+  69               	_ZN4UART10sendStringEPc:
+  70               	.LFB7:
+  18:UART.cpp      **** }
+  19:UART.cpp      **** 
+  20:UART.cpp      **** void UART::sendString(char* data){
+  71               		.loc 1 20 0
+  72               		.cfi_startproc
+  73               	.LVL3:
+  74 0012 0F93      		push r16
+  75               	.LCFI0:
+  76               		.cfi_def_cfa_offset 3
+  77               		.cfi_offset 16, -2
+  78 0014 1F93      		push r17
+  79               	.LCFI1:
+  80               		.cfi_def_cfa_offset 4
+  81               		.cfi_offset 17, -3
+  82 0016 CF93      		push r28
+  83               	.LCFI2:
+  84               		.cfi_def_cfa_offset 5
+  85               		.cfi_offset 28, -4
+  86 0018 DF93      		push r29
+  87               	.LCFI3:
+  88               		.cfi_def_cfa_offset 6
+  89               		.cfi_offset 29, -5
+  90               	/* prologue: function */
+  91               	/* frame size = 0 */
+  92               	/* stack size = 4 */
+  93               	.L__stack_usage = 4
+  94 001a 8C01      		movw r16,r24
+  95 001c EB01      		movw r28,r22
+  96               	.LVL4:
+  97               	.L10:
+  21:UART.cpp      ****     while(*data>0){
+  98               		.loc 1 21 0
+  99 001e 6991      		ld r22,Y+
+ 100               	.LVL5:
+ 101 0020 6623      		tst r22
+ 102 0022 01F0      		breq .L8
+ 103               	.LVL6:
+  22:UART.cpp      **** 		sendByte(*data++);
+ 104               		.loc 1 22 0
+ 105 0024 C801      		movw r24,r16
+ 106 0026 0E94 0000 		call _ZN4UART8sendByteEh
+ 107               	.LVL7:
+  21:UART.cpp      ****     while(*data>0){
+ 108               		.loc 1 21 0
+ 109 002a 00C0      		rjmp .L10
+ 110               	.LVL8:
+ 111               	.L8:
+ 112               	/* epilogue start */
+  23:UART.cpp      **** 	}
+  24:UART.cpp      **** }
+ 113               		.loc 1 24 0
+ 114 002c DF91      		pop r29
+ 115 002e CF91      		pop r28
+ 116               	.LVL9:
+ 117 0030 1F91      		pop r17
+ 118 0032 0F91      		pop r16
+ 119               	.LVL10:
+ 120 0034 0895      		ret
+ 121               		.cfi_endproc
+ 122               	.LFE7:
+ 124               	.global	_ZN4UART7getCharEv
+ 126               	_ZN4UART7getCharEv:
+ 127               	.LFB8:
+  25:UART.cpp      **** 
+  26:UART.cpp      **** uint8_t UART::getChar(void){
+ 128               		.loc 1 26 0
+ 129               		.cfi_startproc
+ 130               	.LVL11:
+ 131               	/* prologue: function */
+ 132               	/* frame size = 0 */
+ 133               	/* stack size = 0 */
+ 134               	.L__stack_usage = 0
+  27:UART.cpp      ****     if(isDataAvailable()){
+  28:UART.cpp      ****         while(!(UCSRA) & (1<<RXC));	// wait while data is being received
+ 135               		.loc 1 28 0
+ 136 0036 8091 C000 		lds r24,192
+ 137               	.LVL12:
+  29:UART.cpp      ****         return UDR;	// return 8-bit data
+ 138               		.loc 1 29 0
+ 139 003a 8091 C600 		lds r24,198
+  30:UART.cpp      ****     }else{
+  31:UART.cpp      ****         return 0;
+  32:UART.cpp      ****     }
+  33:UART.cpp      ****     
+  34:UART.cpp      **** }
+ 140               		.loc 1 34 0
+ 141 003e 0895      		ret
+ 142               		.cfi_endproc
+ 143               	.LFE8:
+ 145               	.global	_ZN4UART15isDataAvailableEv
+ 147               	_ZN4UART15isDataAvailableEv:
+ 148               	.LFB9:
+  35:UART.cpp      **** 
+  36:UART.cpp      **** bool UART::isDataAvailable(void){
+ 149               		.loc 1 36 0
+ 150               		.cfi_startproc
+ 151               	.LVL13:
+ 152               	/* prologue: function */
+ 153               	/* frame size = 0 */
+ 154               	/* stack size = 0 */
+ 155               	.L__stack_usage = 0
+  37:UART.cpp      ****     return 1;
+  38:UART.cpp      **** }
+ 156               		.loc 1 38 0
+ 157 0040 81E0      		ldi r24,lo8(1)
+ 158               	.LVL14:
+ 159 0042 0895      		ret
+ 160               		.cfi_endproc
+ 161               	.LFE9:
+ 163               	.Letext0:
+ 164               		.file 2 "UART.h"
+ 165               		.file 3 "/usr/lib/avr/include/stdint.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 UART.cpp
+     /tmp/ccUNUrRs.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccUNUrRs.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccUNUrRs.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccUNUrRs.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccUNUrRs.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccUNUrRs.s:12     .text:0000000000000000 _ZN4UARTC2Ev
+     /tmp/ccUNUrRs.s:12     .text:0000000000000000 _ZN4UARTC1Ev
+     /tmp/ccUNUrRs.s:30     .text:0000000000000002 _ZN4UARTD2Ev
+     /tmp/ccUNUrRs.s:30     .text:0000000000000002 _ZN4UARTD1Ev
+     /tmp/ccUNUrRs.s:47     .text:0000000000000004 _ZN4UART8sendByteEh
+     /tmp/ccUNUrRs.s:69     .text:0000000000000012 _ZN4UART10sendStringEPc
+     /tmp/ccUNUrRs.s:126    .text:0000000000000036 _ZN4UART7getCharEv
+     /tmp/ccUNUrRs.s:147    .text:0000000000000040 _ZN4UART15isDataAvailableEv
+
+NO UNDEFINED SYMBOLS

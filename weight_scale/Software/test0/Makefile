@@ -84,7 +84,7 @@ SRC =
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
-CPPSRC = $(TARGET).cpp LCD.cpp state_machine.cpp sclae.cpp ADC.cpp
+CPPSRC = $(TARGET).cpp LCD.cpp state_machine.cpp scale.cpp ADC.cpp UART.cpp
 
 
 # List Assembler source files here.

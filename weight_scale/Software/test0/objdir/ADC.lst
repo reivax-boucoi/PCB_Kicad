@@ -1,0 +1,125 @@
+   1               		.file	"ADC.cpp"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               	.global	_ZN7MCP3462C2Ev
+  12               	_ZN7MCP3462C2Ev:
+  13               	.LFB1:
+  14               		.file 1 "ADC.cpp"
+   1:ADC.cpp       **** #include "ADC.h"
+   2:ADC.cpp       **** 
+   3:ADC.cpp       **** 
+   4:ADC.cpp       **** MCP3462::MCP3462(){
+  15               		.loc 1 4 0
+  16               		.cfi_startproc
+  17               	.LVL0:
+  18               	/* prologue: function */
+  19               	/* frame size = 0 */
+  20               	/* stack size = 0 */
+  21               	.L__stack_usage = 0
+  22 0000 0895      		ret
+  23               		.cfi_endproc
+  24               	.LFE1:
+  26               	.global	_ZN7MCP3462C1Ev
+  27               		.set	_ZN7MCP3462C1Ev,_ZN7MCP3462C2Ev
+  28               	.global	_ZN7MCP3462D2Ev
+  30               	_ZN7MCP3462D2Ev:
+  31               	.LFB4:
+   5:ADC.cpp       ****     
+   6:ADC.cpp       **** }
+   7:ADC.cpp       **** 
+   8:ADC.cpp       **** MCP3462::~MCP3462(){
+  32               		.loc 1 8 0
+  33               		.cfi_startproc
+  34               	.LVL1:
+  35               	/* prologue: function */
+  36               	/* frame size = 0 */
+  37               	/* stack size = 0 */
+  38               	.L__stack_usage = 0
+  39 0002 0895      		ret
+  40               		.cfi_endproc
+  41               	.LFE4:
+  43               	.global	_ZN7MCP3462D1Ev
+  44               		.set	_ZN7MCP3462D1Ev,_ZN7MCP3462D2Ev
+  45               	.global	_ZN7MCP346211isDataReadyEv
+  47               	_ZN7MCP346211isDataReadyEv:
+  48               	.LFB6:
+   9:ADC.cpp       ****     
+  10:ADC.cpp       **** }
+  11:ADC.cpp       **** 
+  12:ADC.cpp       **** bool MCP3462::isDataReady(void){
+  49               		.loc 1 12 0
+  50               		.cfi_startproc
+  51               	/* prologue: function */
+  52               	/* frame size = 0 */
+  53               	/* stack size = 0 */
+  54               	.L__stack_usage = 0
+  13:ADC.cpp       ****     return 0;
+  14:ADC.cpp       **** }
+  55               		.loc 1 14 0
+  56 0004 80E0      		ldi r24,0
+  57 0006 0895      		ret
+  58               		.cfi_endproc
+  59               	.LFE6:
+  61               	.global	_ZN7MCP346213getDirectDataEv
+  63               	_ZN7MCP346213getDirectDataEv:
+  64               	.LFB10:
+  65               		.cfi_startproc
+  66               	/* prologue: function */
+  67               	/* frame size = 0 */
+  68               	/* stack size = 0 */
+  69               	.L__stack_usage = 0
+  70 0008 60E0      		ldi r22,0
+  71 000a 70E0      		ldi r23,0
+  72 000c CB01      		movw r24,r22
+  73 000e 0895      		ret
+  74               		.cfi_endproc
+  75               	.LFE10:
+  77               	.global	_ZN7MCP346213getGainedDataEv
+  79               	_ZN7MCP346213getGainedDataEv:
+  80               	.LFB8:
+  15:ADC.cpp       **** 
+  16:ADC.cpp       **** uint32_t MCP3462::getDirectData(void){
+  17:ADC.cpp       ****     return 0;
+  18:ADC.cpp       **** }
+  19:ADC.cpp       **** 
+  20:ADC.cpp       **** uint32_t MCP3462::getGainedData(void){
+  81               		.loc 1 20 0
+  82               		.cfi_startproc
+  83               	/* prologue: function */
+  84               	/* frame size = 0 */
+  85               	/* stack size = 0 */
+  86               	.L__stack_usage = 0
+  21:ADC.cpp       ****     return 0;
+  22:ADC.cpp       **** }
+  87               		.loc 1 22 0
+  88 0010 60E0      		ldi r22,0
+  89 0012 70E0      		ldi r23,0
+  90 0014 CB01      		movw r24,r22
+  91 0016 0895      		ret
+  92               		.cfi_endproc
+  93               	.LFE8:
+  95               	.Letext0:
+  96               		.file 2 "ADC.h"
+  97               		.file 3 "/usr/lib/avr/include/stdint.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ADC.cpp
+     /tmp/cctesFWU.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cctesFWU.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cctesFWU.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cctesFWU.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cctesFWU.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cctesFWU.s:12     .text:0000000000000000 _ZN7MCP3462C2Ev
+     /tmp/cctesFWU.s:12     .text:0000000000000000 _ZN7MCP3462C1Ev
+     /tmp/cctesFWU.s:30     .text:0000000000000002 _ZN7MCP3462D2Ev
+     /tmp/cctesFWU.s:30     .text:0000000000000002 _ZN7MCP3462D1Ev
+     /tmp/cctesFWU.s:47     .text:0000000000000004 _ZN7MCP346211isDataReadyEv
+     /tmp/cctesFWU.s:63     .text:0000000000000008 _ZN7MCP346213getDirectDataEv
+     /tmp/cctesFWU.s:79     .text:0000000000000010 _ZN7MCP346213getGainedDataEv
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,184 @@
+   1               		.file	"state_machine.cpp"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               	.global	_ZN2SMC2Ev
+  12               	_ZN2SMC2Ev:
+  13               	.LFB1:
+  14               		.file 1 "state_machine.cpp"
+   1:state_machine.cpp **** #include "state_machine.h"
+   2:state_machine.cpp **** 
+   3:state_machine.cpp **** const uint8_t SM::states_duration[] = {0, 10, 20, 255};
+   4:state_machine.cpp **** 
+   5:state_machine.cpp **** SM::SM(void){
+  15               		.loc 1 5 0
+  16               		.cfi_startproc
+  17               	.LVL0:
+  18               	/* prologue: function */
+  19               	/* frame size = 0 */
+  20               	/* stack size = 0 */
+  21               	.L__stack_usage = 0
+  22               	.LBB2:
+   6:state_machine.cpp **** 	current_state=STATE_WAKEUP;
+  23               		.loc 1 6 0
+  24 0000 21E0      		ldi r18,lo8(1)
+  25 0002 FC01      		movw r30,r24
+  26 0004 2083      		st Z,r18
+   7:state_machine.cpp **** 	current_duration=states_duration[current_state];
+  27               		.loc 1 7 0
+  28 0006 2AE0      		ldi r18,lo8(10)
+  29 0008 2183      		std Z+1,r18
+  30 000a 0895      		ret
+  31               	.LBE2:
+  32               		.cfi_endproc
+  33               	.LFE1:
+  35               	.global	_ZN2SMC1Ev
+  36               		.set	_ZN2SMC1Ev,_ZN2SMC2Ev
+  37               	.global	_ZN2SMD2Ev
+  39               	_ZN2SMD2Ev:
+  40               	.LFB4:
+   8:state_machine.cpp **** }
+   9:state_machine.cpp **** 
+  10:state_machine.cpp **** 
+  11:state_machine.cpp **** SM::~SM(void){
+  41               		.loc 1 11 0
+  42               		.cfi_startproc
+  43               	.LVL1:
+  44               	/* prologue: function */
+  45               	/* frame size = 0 */
+  46               	/* stack size = 0 */
+  47               	.L__stack_usage = 0
+  48 000c 0895      		ret
+  49               		.cfi_endproc
+  50               	.LFE4:
+  52               	.global	_ZN2SMD1Ev
+  53               		.set	_ZN2SMD1Ev,_ZN2SMD2Ev
+  54               	.global	_ZN2SM9nextStateEv
+  56               	_ZN2SM9nextStateEv:
+  57               	.LFB7:
+  12:state_machine.cpp **** }
+  13:state_machine.cpp **** 
+  14:state_machine.cpp **** void SM::update(void){
+  15:state_machine.cpp **** 	if(current_duration--==0){
+  16:state_machine.cpp **** 		nextState();
+  17:state_machine.cpp **** 	}
+  18:state_machine.cpp **** 	switch(current_state){
+  19:state_machine.cpp **** 		case STATE_OFF:
+  20:state_machine.cpp **** 			//this should not occur
+  21:state_machine.cpp **** 			break;
+  22:state_machine.cpp **** 		case STATE_WAKEUP:
+  23:state_machine.cpp **** 			//show some infos?
+  24:state_machine.cpp **** 			//check batt voltage
+  25:state_machine.cpp **** 			break;
+  26:state_machine.cpp **** 		case STATE_TARE:
+  27:state_machine.cpp **** 			//measure and accumulate result
+  28:state_machine.cpp **** 			break;
+  29:state_machine.cpp **** 		case STATE_IDLE:
+  30:state_machine.cpp **** 			//measure and show result
+  31:state_machine.cpp **** 			break;
+  32:state_machine.cpp **** 	}
+  33:state_machine.cpp **** }
+  34:state_machine.cpp **** 
+  35:state_machine.cpp **** void SM::nextState(void){
+  58               		.loc 1 35 0
+  59               		.cfi_startproc
+  60               	.LVL2:
+  61               	/* prologue: function */
+  62               	/* frame size = 0 */
+  63               	/* stack size = 0 */
+  64               	.L__stack_usage = 0
+  65               		.loc 1 35 0
+  66 000e DC01      		movw r26,r24
+  36:state_machine.cpp **** 	switch(current_state){
+  37:state_machine.cpp **** 		case STATE_OFF:
+  38:state_machine.cpp **** 			//show splash screen
+  39:state_machine.cpp **** 			break;
+  40:state_machine.cpp **** 		case STATE_WAKEUP:
+  41:state_machine.cpp **** 			//show tare, initialize accumulator
+  42:state_machine.cpp **** 			break;
+  43:state_machine.cpp **** 		case STATE_TARE:
+  44:state_machine.cpp **** 			//switch to meas mode with tare offset
+  45:state_machine.cpp **** 			break;
+  46:state_machine.cpp **** 		case STATE_IDLE:
+  47:state_machine.cpp **** 			//goto sleep
+  48:state_machine.cpp **** 		break;
+  49:state_machine.cpp **** 	}
+  50:state_machine.cpp **** 	
+  51:state_machine.cpp **** 	current_state++;
+  67               		.loc 1 51 0
+  68 0010 EC91      		ld r30,X
+  69 0012 EF5F      		subi r30,lo8(-(1))
+  70 0014 EC93      		st X,r30
+  52:state_machine.cpp **** 	current_duration=states_duration[current_state];
+  71               		.loc 1 52 0
+  72 0016 F0E0      		ldi r31,0
+  73 0018 E050      		subi r30,lo8(-(_ZN2SM15states_durationE))
+  74 001a F040      		sbci r31,hi8(-(_ZN2SM15states_durationE))
+  75 001c 8081      		ld r24,Z
+  76               	.LVL3:
+  77 001e 1196      		adiw r26,1
+  78 0020 8C93      		st X,r24
+  79 0022 0895      		ret
+  80               		.cfi_endproc
+  81               	.LFE7:
+  83               	.global	_ZN2SM6updateEv
+  85               	_ZN2SM6updateEv:
+  86               	.LFB6:
+  14:state_machine.cpp **** 	if(current_duration--==0){
+  87               		.loc 1 14 0
+  88               		.cfi_startproc
+  89               	.LVL4:
+  90               	/* prologue: function */
+  91               	/* frame size = 0 */
+  92               	/* stack size = 0 */
+  93               	.L__stack_usage = 0
+  15:state_machine.cpp **** 		nextState();
+  94               		.loc 1 15 0
+  95 0024 FC01      		movw r30,r24
+  96 0026 2181      		ldd r18,Z+1
+  97 0028 3FEF      		ldi r19,lo8(-1)
+  98 002a 320F      		add r19,r18
+  99 002c 3183      		std Z+1,r19
+ 100 002e 2111      		cpse r18,__zero_reg__
+ 101 0030 00C0      		rjmp .L4
+  16:state_machine.cpp **** 	}
+ 102               		.loc 1 16 0
+ 103 0032 0C94 0000 		jmp _ZN2SM9nextStateEv
+ 104               	.LVL5:
+ 105               	.L4:
+ 106 0036 0895      		ret
+ 107               		.cfi_endproc
+ 108               	.LFE6:
+ 110               	.global	_ZN2SM15states_durationE
+ 111               		.section	.rodata
+ 114               	_ZN2SM15states_durationE:
+ 115 0000 00        		.byte	0
+ 116 0001 0A        		.byte	10
+ 117 0002 14        		.byte	20
+ 118 0003 FF        		.byte	-1
+ 119               		.text
+ 120               	.Letext0:
+ 121               		.file 2 "state_machine.h"
+ 122               		.file 3 "/usr/lib/avr/include/stdint.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 state_machine.cpp
+     /tmp/ccXgVFh7.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccXgVFh7.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccXgVFh7.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccXgVFh7.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccXgVFh7.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccXgVFh7.s:12     .text:0000000000000000 _ZN2SMC2Ev
+     /tmp/ccXgVFh7.s:12     .text:0000000000000000 _ZN2SMC1Ev
+     /tmp/ccXgVFh7.s:39     .text:000000000000000c _ZN2SMD2Ev
+     /tmp/ccXgVFh7.s:39     .text:000000000000000c _ZN2SMD1Ev
+     /tmp/ccXgVFh7.s:56     .text:000000000000000e _ZN2SM9nextStateEv
+     /tmp/ccXgVFh7.s:114    .rodata:0000000000000000 _ZN2SM15states_durationE
+     /tmp/ccXgVFh7.s:85     .text:0000000000000024 _ZN2SM6updateEv
+
+UNDEFINED SYMBOLS
+__do_copy_data

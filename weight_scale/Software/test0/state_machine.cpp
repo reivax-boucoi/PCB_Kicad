@@ -1,56 +1,54 @@
 #include "state_machine.h"
 
+const uint8_t SM::states_duration[] = {0, 10, 20, 255};
+
 SM::SM(void){
-	current_state=WAKEUP;
-	current_duration=WAKEUP_d;
+	current_state=STATE_WAKEUP;
+	current_duration=states_duration[current_state];
 }
 
 
 SM::~SM(void){
 }
 
-SM::update(void){
+void SM::update(void){
 	if(current_duration--==0){
 		nextState();
 	}
 	switch(current_state){
-		case OFF:
+		case STATE_OFF:
 			//this should not occur
 			break;
-		case WAKEUP:
+		case STATE_WAKEUP:
 			//show some infos?
 			//check batt voltage
 			break;
-		case TARE:
+		case STATE_TARE:
 			//measure and accumulate result
 			break;
-		case IDLE:
+		case STATE_IDLE:
 			//measure and show result
 			break;
 	}
 }
 
-SM::nextState(void){
+void SM::nextState(void){
 	switch(current_state){
-		case OFF:
-			current_state=WAKEUP;
-			current_duration=WAKEUP_d;
+		case STATE_OFF:
 			//show splash screen
 			break;
-		case WAKEUP:
-			current_state=TARE;
-			current_duration=TARE_d;
+		case STATE_WAKEUP:
 			//show tare, initialize accumulator
 			break;
-		case TARE:
-			current_state=IDLE;
-			current_duration=IDLE_d;
+		case STATE_TARE:
 			//switch to meas mode with tare offset
 			break;
-		case IDLE:
-			current_state=OFF;
-			current_duration=OFF_d;
+		case STATE_IDLE:
 			//goto sleep
 		break;
 	}
+	
+	current_state++;
+	current_duration=states_duration[current_state];
 }
+

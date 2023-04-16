@@ -2,7 +2,16 @@
 #include <avr/interrupt.h>
 #include <avr/sleep.h>
 #include <util/delay.h>
+#include <stdlib.h> //for itoa
+
 #include "LCD.h"
+#include "UART.h"
+#include "ADC.h"
+#include "state_machine.h"
+
+UART uart;
+MCP3462 myADC;
+SM mySM;
 LCD myLCD(0);//Use 1 for lowest power LCD mode
 
 //Fuses -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0xfd:m 
@@ -31,8 +40,7 @@ LCD myLCD(0);//Use 1 for lowest power LCD mode
 
 
 volatile uint32_t cnt=59650;
-volatile uint8_t state=STATE_WAKEUP;
-volatile uint8_t timer=STATE_WAKE_DURATION;
+volatile uint8_t state=1;
 
 int main(void){
 	
@@ -59,44 +67,36 @@ int main(void){
 	while(1){
 	
 		_delay_ms(100);
-		timer--;
-		if(timer==0){
-			switch(state){
-				case STATE_OFF:
-					ADCSRA&=~(1<<ADEN);//Disable ADC
-					PRR|=(1<<PRTIM1)|(1<<PRSPI)|(1<<PRUSART0)|(1<<PRADC);//Shut down clock to Timer1, SPI, UART, ADC
-					
-					set_sleep_mode(SLEEP_MODE_PWR_SAVE);
-					//set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-					cli();
-					if (1){
-						sleep_enable();
-						sei();
-						sleep_cpu();
-						sleep_disable();
-					}
-					PRR&=~(1<<PRADC);//Enable power to ADC again
-					ADCSRA|=(1<<ADEN);//Enable ADC again
+		switch(state){
+			case 0:
+				ADCSRA&=~(1<<ADEN);//Disable ADC
+				PRR|=(1<<PRTIM1)|(1<<PRSPI)|(1<<PRUSART0)|(1<<PRADC);//Shut down clock to Timer1, SPI, UART, ADC
+				
+				set_sleep_mode(SLEEP_MODE_PWR_SAVE);
+				//set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+				cli();
+				if (1){
+					sleep_enable();
 					sei();
-					
-					state=STATE_WAKEUP;
-					timer=STATE_WAKE_DURATION;
-					break;
-					
-				case STATE_WAKEUP:
-					myLCD.setNb(888888);
-					state=STATE_IDLE;
-					timer=STATE_IDL_DURATION;
-					break;
-					
-				case STATE_IDLE:
-					if(timer==0){
-						timer=STATE_IDL_DURATION;
-						LED0_Toggle;
-					}
-					ADCSRA|=(1<<ADSC); //Start single ADC conversion
-			}
-		}		
+					sleep_cpu();
+					sleep_disable();
+				}
+				PRR&=~(1<<PRADC);//Enable power to ADC again
+				ADCSRA|=(1<<ADEN);//Enable ADC again
+				sei();
+				state=1;
+				break;
+				
+			case 1:
+				LED0_Toggle;
+				ADCSRA|=(1<<ADSC); //Start single ADC conversion
+				if(myADC.isDataReady()){
+					uint32_t d=myADC.getDirectData();
+					char buffer [11];//32 bits in decimal is 4milions, 10 digits
+					itoa(d,buffer,10);
+					uart.sendString(buffer);
+				}
+		}
 		
 		if(cnt>=BATT_FULL){
 			myLCD.setBattery(LCD::FULL);
@@ -119,12 +119,11 @@ int main(void){
 
 ISR(PCINT1_vect){
 	if(BTN0){
-		if(state==STATE_IDLE){
+		if(state==1){
 			LED0_OFF;
-			state=STATE_OFF;
+			state=0;
 		}else{
 			LED0_ON;
-			state=STATE_WAKEUP;
 		}
 	}
 }
@@ -137,4 +136,8 @@ ISR(ADC_vect){
 	//Vref=1.1*1024/CNT
 	cnt=(1024.0*1100.0)/ADC_val;
 	myLCD.setNb(cnt);
+}
+
+ISR(USART_RX_vect){
+	uint8_t data=uart.getChar();
 }
