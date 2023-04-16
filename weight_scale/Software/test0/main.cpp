@@ -93,7 +93,7 @@ int main(void){
 				if(myADC.isDataReady()){
 					uint32_t d=myADC.getDirectData();
 					char buffer [11];//32 bits in decimal is 4milions, 10 digits
-					itoa(d,buffer,10);
+					ultoa(d,buffer,10);
 					uart.sendString(buffer);
 				}
 		}
