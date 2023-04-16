@@ -1448,27 +1448,27 @@
  1085               		.file 4 "LCD.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 LCD.cpp
-     /tmp/cc3tsMRs.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/cc3tsMRs.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/cc3tsMRs.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/cc3tsMRs.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/cc3tsMRs.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/cc3tsMRs.s:12     .text:0000000000000000 _ZN3LCDC2Eb
-     /tmp/cc3tsMRs.s:12     .text:0000000000000000 _ZN3LCDC1Eb
-     /tmp/cc3tsMRs.s:84     .text:000000000000004a _ZN3LCDD2Ev
-     /tmp/cc3tsMRs.s:84     .text:000000000000004a _ZN3LCDD1Ev
-     /tmp/cc3tsMRs.s:131    .text:000000000000006e _ZN3LCD8setDigitEhh
-     /tmp/cc3tsMRs.s:1071   .rodata:0000000000000000 _ZN3LCD5NbMapE
-     /tmp/cc3tsMRs.s:982    .data:0000000000000000 _ZN3LCD6digitsE
-     /tmp/cc3tsMRs.s:275    .text:000000000000010e _ZN3LCD8setDigitEhNS_6SymbolE
-     /tmp/cc3tsMRs.s:415    .text:00000000000001a4 _ZN3LCD10setBatteryENS_7BatteryE
-     /tmp/cc3tsMRs.s:545    .text:0000000000000258 _ZN3LCD5setDPEb
-     /tmp/cc3tsMRs.s:581    .text:0000000000000270 _ZN3LCD6setClkEb
-     /tmp/cc3tsMRs.s:617    .text:0000000000000288 _ZN3LCD5getDPEv
-     /tmp/cc3tsMRs.s:636    .text:0000000000000292 _ZN3LCD6getClkEv
-     /tmp/cc3tsMRs.s:654    .text:000000000000029a _ZN3LCD5blinkEj
-     /tmp/cc3tsMRs.s:716    .text:00000000000002c8 _ZN3LCD5setNbEl
-     /tmp/cc3tsMRs.s:932    .text:00000000000003aa _ZN3LCD5clearEv
+     /tmp/cciqv2HK.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cciqv2HK.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cciqv2HK.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cciqv2HK.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cciqv2HK.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cciqv2HK.s:12     .text:0000000000000000 _ZN3LCDC2Eb
+     /tmp/cciqv2HK.s:12     .text:0000000000000000 _ZN3LCDC1Eb
+     /tmp/cciqv2HK.s:84     .text:000000000000004a _ZN3LCDD2Ev
+     /tmp/cciqv2HK.s:84     .text:000000000000004a _ZN3LCDD1Ev
+     /tmp/cciqv2HK.s:131    .text:000000000000006e _ZN3LCD8setDigitEhh
+     /tmp/cciqv2HK.s:1071   .rodata:0000000000000000 _ZN3LCD5NbMapE
+     /tmp/cciqv2HK.s:982    .data:0000000000000000 _ZN3LCD6digitsE
+     /tmp/cciqv2HK.s:275    .text:000000000000010e _ZN3LCD8setDigitEhNS_6SymbolE
+     /tmp/cciqv2HK.s:415    .text:00000000000001a4 _ZN3LCD10setBatteryENS_7BatteryE
+     /tmp/cciqv2HK.s:545    .text:0000000000000258 _ZN3LCD5setDPEb
+     /tmp/cciqv2HK.s:581    .text:0000000000000270 _ZN3LCD6setClkEb
+     /tmp/cciqv2HK.s:617    .text:0000000000000288 _ZN3LCD5getDPEv
+     /tmp/cciqv2HK.s:636    .text:0000000000000292 _ZN3LCD6getClkEv
+     /tmp/cciqv2HK.s:654    .text:000000000000029a _ZN3LCD5blinkEj
+     /tmp/cciqv2HK.s:716    .text:00000000000002c8 _ZN3LCD5setNbEl
+     /tmp/cciqv2HK.s:932    .text:00000000000003aa _ZN3LCD5clearEv
 
 UNDEFINED SYMBOLS
 __tablejump2__

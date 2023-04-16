@@ -167,18 +167,18 @@
  122               		.file 3 "/usr/lib/avr/include/stdint.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 state_machine.cpp
-     /tmp/ccXgVFh7.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccXgVFh7.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccXgVFh7.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccXgVFh7.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccXgVFh7.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccXgVFh7.s:12     .text:0000000000000000 _ZN2SMC2Ev
-     /tmp/ccXgVFh7.s:12     .text:0000000000000000 _ZN2SMC1Ev
-     /tmp/ccXgVFh7.s:39     .text:000000000000000c _ZN2SMD2Ev
-     /tmp/ccXgVFh7.s:39     .text:000000000000000c _ZN2SMD1Ev
-     /tmp/ccXgVFh7.s:56     .text:000000000000000e _ZN2SM9nextStateEv
-     /tmp/ccXgVFh7.s:114    .rodata:0000000000000000 _ZN2SM15states_durationE
-     /tmp/ccXgVFh7.s:85     .text:0000000000000024 _ZN2SM6updateEv
+     /tmp/cc6Sd6pQ.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cc6Sd6pQ.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cc6Sd6pQ.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cc6Sd6pQ.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cc6Sd6pQ.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cc6Sd6pQ.s:12     .text:0000000000000000 _ZN2SMC2Ev
+     /tmp/cc6Sd6pQ.s:12     .text:0000000000000000 _ZN2SMC1Ev
+     /tmp/cc6Sd6pQ.s:39     .text:000000000000000c _ZN2SMD2Ev
+     /tmp/cc6Sd6pQ.s:39     .text:000000000000000c _ZN2SMD1Ev
+     /tmp/cc6Sd6pQ.s:56     .text:000000000000000e _ZN2SM9nextStateEv
+     /tmp/cc6Sd6pQ.s:114    .rodata:0000000000000000 _ZN2SM15states_durationE
+     /tmp/cc6Sd6pQ.s:85     .text:0000000000000024 _ZN2SM6updateEv
 
 UNDEFINED SYMBOLS
 __do_copy_data

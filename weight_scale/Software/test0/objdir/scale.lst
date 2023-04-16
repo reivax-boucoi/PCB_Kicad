@@ -10,10 +10,10 @@
   10               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 scale.cpp
-     /tmp/cchFlEQ4.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/cchFlEQ4.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/cchFlEQ4.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/cchFlEQ4.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/cchFlEQ4.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccIwO98L.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccIwO98L.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccIwO98L.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccIwO98L.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccIwO98L.s:6      *ABS*:0000000000000001 __zero_reg__
 
 NO UNDEFINED SYMBOLS

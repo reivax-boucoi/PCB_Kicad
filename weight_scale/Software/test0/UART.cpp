@@ -1,10 +1,10 @@
 #include "UART.h"
 
 UART::UART(void){
-    /*UBRR0H = (UART_BAUD>>8);
-    UBRR0L = UART_BAUD;	// set baud rate
-    UCSR0B|= (1<<TXEN0)|(1<<RXEN0);	// enable receiver and transmitter
-    UCSR0C|= (1<<UMSEL01)|(1<<UCSZ00)|(1<<UCSZ01);	// 8bit data format    */
+    UBRRH = (UART_BAUD>>8);
+    UBRRL = UART_BAUD;	// set baud rate
+    UCSRB|= (1<<TXEN)|(1<<RXEN);	// enable receiver and transmitter
+    UCSRC|= (1<<UMSEL)|(1<<UCSZ0)|(1<<UCSZ1);	// 8bit data format    
     
 }
 

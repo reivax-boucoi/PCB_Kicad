@@ -28,8 +28,15 @@ LCD myLCD(0);//Use 1 for lowest power LCD mode
 #define LED1_OFF (PORTD&=~(1<<7))
 #define LED1_Toggle (PORTD^=(1<<7))
 
-#define BTN0 (PINB&(1<<6)) //PCINT14
-#define BTN1 (PINB&(1<<7)) //PCINT15
+#define BTN0 (PIND&(1<<4))
+#define BTN1 (PIND&(1<<5))
+
+#define IRQ_STATE (PINE&(1<<7))
+
+#define PWR_en_ON (PORTE|=(1<<5))
+#define PWR_en_OFF (PORTE&=~(1<<6))
+#define LoadCell_en_ON (PORTE|=(1<<7))
+#define LoadCell_en_OFF (PORTE&=~(1<<7))
 
 #define BATT_CUTOUT 3200
 #define BATT_EMPTY 3500
@@ -44,23 +51,18 @@ volatile uint8_t state=1;
 
 int main(void){
 	
-	DDRD=0b11000000; 	//LED0, LED1 as outputs
-	PORTD=0x00;			//LED initial state:low
-	DDRB=0x00; 			//BTN0, BTN1 as inputs
-	PORTB=0b11000000;	//BTN0, BTN1 activate internal pullups
+	DDRD=0b11000000; 	//LED0, LED1 as outputs, BTN 0/1 as inputs
+	PORTD=0b00110000;			//LED initial state:low, enable BTN pullups
 	
-	DDRE=0x00;
-	PORTE=0xFF;
-	DDRB=0x00;
-	PORTB=0xFF;
+	DDRE=0b01100011;//IRQ as input, LoadCell_en/PWR_en as outputs, TX as output, RX as input
+	PORTE=0b11100000;//Enable IRQ pullup, set LoadCell_en/PWR_en to 1
+	
 	
 	LED0_ON;
-	PRR|=(1<<PRTIM1)|(1<<PRSPI)|(1<<PRUSART0);//Shut down clock to Timer1, SPI, UART
+	PRR|=(1<<PRTIM1);//Shut down clock to Timer1
 	
 	ADMUX|=(1<<REFS0)|0b11110;//Set AVCC as reference voltage for ADC, ADC MUX input to 1.1V BG
 	ADCSRA|=(1<<ADEN)|(1<<ADIE)|(1<<ADPS1);//Enable conversin complete interrupt, Clock prescaler 12MHz/64=187kHz
-	EIMSK=0b00100000;//Enable pin change interrupt PCINT8-15 WARNING Avrdude is not up to date with changelog from P to PA: PCIE1 has changed location from bit 7 to 5 
-	PCMSK1=(1<<PCINT14);//Enable BTN0 interrupt
 	sei();
 	
 	
@@ -81,20 +83,21 @@ int main(void){
 					sleep_cpu();
 					sleep_disable();
 				}
-				PRR&=~(1<<PRADC);//Enable power to ADC again
+				PRR&=~(1<<PRADC)|(1<<PRSPI)|(1<<PRUSART0);//Enable power to ADC, UART and SPI  again
 				ADCSRA|=(1<<ADEN);//Enable ADC again
 				sei();
 				state=1;
 				break;
 				
 			case 1:
-				LED0_Toggle;
 				ADCSRA|=(1<<ADSC); //Start single ADC conversion
 				if(myADC.isDataReady()){
 					uint32_t d=myADC.getDirectData();
+					d=12345;
 					char buffer [11];//32 bits in decimal is 4milions, 10 digits
 					ultoa(d,buffer,10);
 					uart.sendString(buffer);
+					LED0_Toggle;
 				}
 		}
 		
@@ -110,6 +113,15 @@ int main(void){
 			myLCD.setBattery(LCD::NONE);
 			//we should shutdown here
 		}
+		
+		if(!BTN0){
+			if(state==1){
+				LED0_OFF;
+			//	state=0;
+			}else{
+				LED0_ON;
+			}
+		}
 	}
 
 	return 0;
@@ -117,16 +129,6 @@ int main(void){
 
 
 
-ISR(PCINT1_vect){
-	if(BTN0){
-		if(state==1){
-			LED0_OFF;
-			state=0;
-		}else{
-			LED0_ON;
-		}
-	}
-}
 
 ISR(ADC_vect){
 	uint16_t ADC_val=ADCL;
@@ -134,7 +136,10 @@ ISR(ADC_vect){
 	
 	//CNT=1.1*1024/Vref
 	//Vref=1.1*1024/CNT
-	cnt=(1024.0*1100.0)/ADC_val;
+	//1.02578
+	//1.0127
+	//
+	cnt=(1024.0*1073.0)/ADC_val;
 	myLCD.setNb(cnt);
 }
 

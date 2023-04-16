@@ -14,7 +14,7 @@
    1:ADC.cpp       **** #include "ADC.h"
    2:ADC.cpp       **** 
    3:ADC.cpp       **** 
-   4:ADC.cpp       **** MCP3462::MCP3462(){
+   4:ADC.cpp       **** MCP3462::MCP3462(void){
   15               		.loc 1 4 0
   16               		.cfi_startproc
   17               	.LVL0:
@@ -22,104 +22,246 @@
   19               	/* frame size = 0 */
   20               	/* stack size = 0 */
   21               	.L__stack_usage = 0
-  22 0000 0895      		ret
-  23               		.cfi_endproc
-  24               	.LFE1:
-  26               	.global	_ZN7MCP3462C1Ev
-  27               		.set	_ZN7MCP3462C1Ev,_ZN7MCP3462C2Ev
-  28               	.global	_ZN7MCP3462D2Ev
-  30               	_ZN7MCP3462D2Ev:
-  31               	.LFB4:
+  22               	.LBB2:
    5:ADC.cpp       ****     
-   6:ADC.cpp       **** }
-   7:ADC.cpp       **** 
-   8:ADC.cpp       **** MCP3462::~MCP3462(){
-  32               		.loc 1 8 0
-  33               		.cfi_startproc
-  34               	.LVL1:
-  35               	/* prologue: function */
-  36               	/* frame size = 0 */
-  37               	/* stack size = 0 */
-  38               	.L__stack_usage = 0
-  39 0002 0895      		ret
-  40               		.cfi_endproc
-  41               	.LFE4:
-  43               	.global	_ZN7MCP3462D1Ev
-  44               		.set	_ZN7MCP3462D1Ev,_ZN7MCP3462D2Ev
-  45               	.global	_ZN7MCP346211isDataReadyEv
-  47               	_ZN7MCP346211isDataReadyEv:
-  48               	.LFB6:
-   9:ADC.cpp       ****     
-  10:ADC.cpp       **** }
-  11:ADC.cpp       **** 
-  12:ADC.cpp       **** bool MCP3462::isDataReady(void){
-  49               		.loc 1 12 0
-  50               		.cfi_startproc
-  51               	/* prologue: function */
-  52               	/* frame size = 0 */
-  53               	/* stack size = 0 */
-  54               	.L__stack_usage = 0
-  13:ADC.cpp       ****     return 0;
-  14:ADC.cpp       **** }
-  55               		.loc 1 14 0
-  56 0004 80E0      		ldi r24,0
-  57 0006 0895      		ret
-  58               		.cfi_endproc
-  59               	.LFE6:
-  61               	.global	_ZN7MCP346213getDirectDataEv
-  63               	_ZN7MCP346213getDirectDataEv:
-  64               	.LFB10:
-  65               		.cfi_startproc
-  66               	/* prologue: function */
-  67               	/* frame size = 0 */
-  68               	/* stack size = 0 */
-  69               	.L__stack_usage = 0
-  70 0008 60E0      		ldi r22,0
-  71 000a 70E0      		ldi r23,0
-  72 000c CB01      		movw r24,r22
-  73 000e 0895      		ret
-  74               		.cfi_endproc
-  75               	.LFE10:
-  77               	.global	_ZN7MCP346213getGainedDataEv
-  79               	_ZN7MCP346213getGainedDataEv:
-  80               	.LFB8:
-  15:ADC.cpp       **** 
-  16:ADC.cpp       **** uint32_t MCP3462::getDirectData(void){
-  17:ADC.cpp       ****     return 0;
-  18:ADC.cpp       **** }
-  19:ADC.cpp       **** 
-  20:ADC.cpp       **** uint32_t MCP3462::getGainedData(void){
-  81               		.loc 1 20 0
-  82               		.cfi_startproc
-  83               	/* prologue: function */
-  84               	/* frame size = 0 */
-  85               	/* stack size = 0 */
-  86               	.L__stack_usage = 0
-  21:ADC.cpp       ****     return 0;
-  22:ADC.cpp       **** }
-  87               		.loc 1 22 0
-  88 0010 60E0      		ldi r22,0
-  89 0012 70E0      		ldi r23,0
-  90 0014 CB01      		movw r24,r22
-  91 0016 0895      		ret
-  92               		.cfi_endproc
-  93               	.LFE8:
-  95               	.Letext0:
-  96               		.file 2 "ADC.h"
-  97               		.file 3 "/usr/lib/avr/include/stdint.h"
+   6:ADC.cpp       ****     DDRB=0b00000110;//set SCK, MOSI to outputs, MISO to input
+  23               		.loc 1 6 0
+  24 0000 86E0      		ldi r24,lo8(6)
+  25               	.LVL1:
+  26 0002 84B9      		out 0x4,r24
+   7:ADC.cpp       ****     SPI_CS_DDR |=(1<<SPI_CS_PIN); //set CSB pin as output
+  27               		.loc 1 7 0
+  28 0004 209A      		sbi 0x4,0
+   8:ADC.cpp       ****     SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB initial state to high
+  29               		.loc 1 8 0
+  30 0006 289A      		sbi 0x5,0
+   9:ADC.cpp       ****     SPCR = (1<<SPE)|(1<<MSTR);
+  31               		.loc 1 9 0
+  32 0008 80E5      		ldi r24,lo8(80)
+  33 000a 8CBD      		out 0x2c,r24
+  34 000c 0895      		ret
+  35               	.LBE2:
+  36               		.cfi_endproc
+  37               	.LFE1:
+  39               	.global	_ZN7MCP3462C1Ev
+  40               		.set	_ZN7MCP3462C1Ev,_ZN7MCP3462C2Ev
+  41               	.global	_ZN7MCP3462D2Ev
+  43               	_ZN7MCP3462D2Ev:
+  44               	.LFB4:
+  10:ADC.cpp       **** 
+  11:ADC.cpp       ****     //set COMMAND to write incremental
+  12:ADC.cpp       ****     //W CONFIG0 (0x1): 0b11100011 //sets clock to internal, no current source/sink/ADC in conversio
+  13:ADC.cpp       ****     //W CONFIG1 (0x2): (MCP3462_AMCLK_PSC<<6) | (MCP3462_OSR<<2);
+  14:ADC.cpp       ****     //W CONFIG2 (0x3): (0b10<<6)|(MCP3462_GAIN<<3)|0b111;   //BBOST current x1, Gain, AutoZero enab
+  15:ADC.cpp       ****     //W CONFIG3: 0b11xx0000 Continuous conversion, no CRC, offset or gain cal. 
+  16:ADC.cpp       ****         //XX is data format: 00=16 signed bits. 11=32bits total: 4 bits chan ID + 12x sign bit + 16
+  17:ADC.cpp       ****     
+  18:ADC.cpp       ****     //TODO: read OFFSET (MUX 0x88) and write opposite into OFFSETCAL. May not be necessary if AutoZ
+  19:ADC.cpp       ****     /*
+  20:ADC.cpp       ****     Enable SCAN mode: 
+  21:ADC.cpp       ****     raw input: CH0-CH1: bit 8, MUX 0x01
+  22:ADC.cpp       ****     gained input: CH2-CH3: bit 9, MUX 0x23
+  23:ADC.cpp       ****     TEMP: 12, MUX 0xDE. Equation: 0.00133*ADC-267.146
+  24:ADC.cpp       ****     AVdd: 13, scale factor 1/3, MUX 0x98->may not be relevant sinc erelative to ref+/-
+  25:ADC.cpp       ****     
+  26:ADC.cpp       ****     Scan DLY: between adc mux change:   111=512 DMclock periods
+  27:ADC.cpp       ****                                         000=0clock periods
+  28:ADC.cpp       ****         TIMER[23:0]: 0->0n  24 '1'->16777215 periods
+  29:ADC.cpp       ****     */
+  30:ADC.cpp       **** }
+  31:ADC.cpp       **** MCP3462::~MCP3462(void){
+  45               		.loc 1 31 0
+  46               		.cfi_startproc
+  47               	.LVL2:
+  48               	/* prologue: function */
+  49               	/* frame size = 0 */
+  50               	/* stack size = 0 */
+  51               	.L__stack_usage = 0
+  52 000e 0895      		ret
+  53               		.cfi_endproc
+  54               	.LFE4:
+  56               	.global	_ZN7MCP3462D1Ev
+  57               		.set	_ZN7MCP3462D1Ev,_ZN7MCP3462D2Ev
+  58               	.global	_ZN7MCP346211isDataReadyEv
+  60               	_ZN7MCP346211isDataReadyEv:
+  61               	.LFB6:
+  32:ADC.cpp       ****     
+  33:ADC.cpp       **** }
+  34:ADC.cpp       **** 
+  35:ADC.cpp       **** bool MCP3462::isDataReady(void){
+  62               		.loc 1 35 0
+  63               		.cfi_startproc
+  64               	.LVL3:
+  65               	/* prologue: function */
+  66               	/* frame size = 0 */
+  67               	/* stack size = 0 */
+  68               	.L__stack_usage = 0
+  36:ADC.cpp       ****     return 0;
+  37:ADC.cpp       **** }
+  69               		.loc 1 37 0
+  70 0010 80E0      		ldi r24,0
+  71               	.LVL4:
+  72 0012 0895      		ret
+  73               		.cfi_endproc
+  74               	.LFE6:
+  76               	.global	_ZN7MCP346213getDirectDataEv
+  78               	_ZN7MCP346213getDirectDataEv:
+  79               	.LFB13:
+  80               		.cfi_startproc
+  81               	/* prologue: function */
+  82               	/* frame size = 0 */
+  83               	/* stack size = 0 */
+  84               	.L__stack_usage = 0
+  85 0014 60E0      		ldi r22,0
+  86 0016 70E0      		ldi r23,0
+  87 0018 CB01      		movw r24,r22
+  88 001a 0895      		ret
+  89               		.cfi_endproc
+  90               	.LFE13:
+  92               	.global	_ZN7MCP346213getGainedDataEv
+  94               	_ZN7MCP346213getGainedDataEv:
+  95               	.LFB8:
+  38:ADC.cpp       **** 
+  39:ADC.cpp       **** uint32_t MCP3462::getDirectData(void){
+  40:ADC.cpp       ****     return 0;
+  41:ADC.cpp       **** }
+  42:ADC.cpp       **** 
+  43:ADC.cpp       **** uint32_t MCP3462::getGainedData(void){
+  96               		.loc 1 43 0
+  97               		.cfi_startproc
+  98               	.LVL5:
+  99               	/* prologue: function */
+ 100               	/* frame size = 0 */
+ 101               	/* stack size = 0 */
+ 102               	.L__stack_usage = 0
+  44:ADC.cpp       ****     return 0;
+  45:ADC.cpp       **** }
+ 103               		.loc 1 45 0
+ 104 001c 60E0      		ldi r22,0
+ 105 001e 70E0      		ldi r23,0
+ 106 0020 CB01      		movw r24,r22
+ 107 0022 0895      		ret
+ 108               		.cfi_endproc
+ 109               	.LFE8:
+ 111               	.global	_ZN7MCP34629writeByteEh
+ 113               	_ZN7MCP34629writeByteEh:
+ 114               	.LFB10:
+  46:ADC.cpp       **** /*
+  47:ADC.cpp       **** uint32_t MCP3462::readADCreg(void){
+  48:ADC.cpp       ****     uint32_t d=0
+  49:ADC.cpp       ****     SPI_CS_PORT &=~(1<<SPI_CS_PIN); //set CSB low
+  50:ADC.cpp       ****     uint8_t d=transmit(addr)
+  51:ADC.cpp       ****     SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB high
+  52:ADC.cpp       ****     return d;
+  53:ADC.cpp       ****     
+  54:ADC.cpp       **** }
+  55:ADC.cpp       **** */
+  56:ADC.cpp       **** uint8_t MCP3462::readByte(uint8_t addr){
+  57:ADC.cpp       ****     SPI_CS_PORT &=~(1<<SPI_CS_PIN); //set CSB low
+  58:ADC.cpp       ****     uint8_t d=transmit(addr);
+  59:ADC.cpp       ****     SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB high
+  60:ADC.cpp       ****     return d;
+  61:ADC.cpp       **** }
+  62:ADC.cpp       **** 
+  63:ADC.cpp       **** uint8_t MCP3462::writeByte(uint8_t addr){
+ 115               		.loc 1 63 0
+ 116               		.cfi_startproc
+ 117               	.LVL6:
+ 118               	/* prologue: function */
+ 119               	/* frame size = 0 */
+ 120               	/* stack size = 0 */
+ 121               	.L__stack_usage = 0
+  64:ADC.cpp       ****     SPI_CS_PORT &=~(1<<SPI_CS_PIN); //set CSB low
+ 122               		.loc 1 64 0
+ 123 0024 2898      		cbi 0x5,0
+  65:ADC.cpp       ****     
+  66:ADC.cpp       ****     
+  67:ADC.cpp       ****     SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB high
+ 124               		.loc 1 67 0
+ 125 0026 289A      		sbi 0x5,0
+  68:ADC.cpp       ****     return 0;
+  69:ADC.cpp       ****     
+  70:ADC.cpp       **** }
+ 126               		.loc 1 70 0
+ 127 0028 80E0      		ldi r24,0
+ 128               	.LVL7:
+ 129 002a 0895      		ret
+ 130               		.cfi_endproc
+ 131               	.LFE10:
+ 133               	.global	_ZN7MCP34628transmitEh
+ 135               	_ZN7MCP34628transmitEh:
+ 136               	.LFB11:
+  71:ADC.cpp       **** uint8_t MCP3462::transmit(uint8_t d){
+ 137               		.loc 1 71 0
+ 138               		.cfi_startproc
+ 139               	.LVL8:
+ 140               	/* prologue: function */
+ 141               	/* frame size = 0 */
+ 142               	/* stack size = 0 */
+ 143               	.L__stack_usage = 0
+  72:ADC.cpp       ****     SPDR = d;
+ 144               		.loc 1 72 0
+ 145 002c 6EBD      		out 0x2e,r22
+ 146               	.L8:
+  73:ADC.cpp       ****     while(!(SPSR & (1<<SPIF)));
+ 147               		.loc 1 73 0
+ 148 002e 0DB4      		in __tmp_reg__,0x2d
+ 149 0030 07FE      		sbrs __tmp_reg__,7
+ 150 0032 00C0      		rjmp .L8
+  74:ADC.cpp       ****     return SPDR;
+ 151               		.loc 1 74 0
+ 152 0034 8EB5      		in r24,0x2e
+ 153               	.LVL9:
+  75:ADC.cpp       **** }
+ 154               		.loc 1 75 0
+ 155 0036 0895      		ret
+ 156               		.cfi_endproc
+ 157               	.LFE11:
+ 159               	.global	_ZN7MCP34628readByteEh
+ 161               	_ZN7MCP34628readByteEh:
+ 162               	.LFB9:
+  56:ADC.cpp       ****     SPI_CS_PORT &=~(1<<SPI_CS_PIN); //set CSB low
+ 163               		.loc 1 56 0
+ 164               		.cfi_startproc
+ 165               	.LVL10:
+ 166               	/* prologue: function */
+ 167               	/* frame size = 0 */
+ 168               	/* stack size = 0 */
+ 169               	.L__stack_usage = 0
+  57:ADC.cpp       ****     uint8_t d=transmit(addr);
+ 170               		.loc 1 57 0
+ 171 0038 2898      		cbi 0x5,0
+  58:ADC.cpp       ****     SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB high
+ 172               		.loc 1 58 0
+ 173 003a 0E94 0000 		call _ZN7MCP34628transmitEh
+ 174               	.LVL11:
+  59:ADC.cpp       ****     return d;
+ 175               		.loc 1 59 0
+ 176 003e 289A      		sbi 0x5,0
+  61:ADC.cpp       **** 
+ 177               		.loc 1 61 0
+ 178 0040 0895      		ret
+ 179               		.cfi_endproc
+ 180               	.LFE9:
+ 182               	.Letext0:
+ 183               		.file 2 "/usr/lib/avr/include/stdint.h"
+ 184               		.file 3 "ADC.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ADC.cpp
-     /tmp/cctesFWU.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/cctesFWU.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/cctesFWU.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/cctesFWU.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/cctesFWU.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/cctesFWU.s:12     .text:0000000000000000 _ZN7MCP3462C2Ev
-     /tmp/cctesFWU.s:12     .text:0000000000000000 _ZN7MCP3462C1Ev
-     /tmp/cctesFWU.s:30     .text:0000000000000002 _ZN7MCP3462D2Ev
-     /tmp/cctesFWU.s:30     .text:0000000000000002 _ZN7MCP3462D1Ev
-     /tmp/cctesFWU.s:47     .text:0000000000000004 _ZN7MCP346211isDataReadyEv
-     /tmp/cctesFWU.s:63     .text:0000000000000008 _ZN7MCP346213getDirectDataEv
-     /tmp/cctesFWU.s:79     .text:0000000000000010 _ZN7MCP346213getGainedDataEv
+     /tmp/ccxZL5Xu.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccxZL5Xu.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccxZL5Xu.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccxZL5Xu.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccxZL5Xu.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccxZL5Xu.s:12     .text:0000000000000000 _ZN7MCP3462C2Ev
+     /tmp/ccxZL5Xu.s:12     .text:0000000000000000 _ZN7MCP3462C1Ev
+     /tmp/ccxZL5Xu.s:43     .text:000000000000000e _ZN7MCP3462D2Ev
+     /tmp/ccxZL5Xu.s:43     .text:000000000000000e _ZN7MCP3462D1Ev
+     /tmp/ccxZL5Xu.s:60     .text:0000000000000010 _ZN7MCP346211isDataReadyEv
+     /tmp/ccxZL5Xu.s:78     .text:0000000000000014 _ZN7MCP346213getDirectDataEv
+     /tmp/ccxZL5Xu.s:94     .text:000000000000001c _ZN7MCP346213getGainedDataEv
+     /tmp/ccxZL5Xu.s:113    .text:0000000000000024 _ZN7MCP34629writeByteEh
+     /tmp/ccxZL5Xu.s:135    .text:000000000000002c _ZN7MCP34628transmitEh
+     /tmp/ccxZL5Xu.s:161    .text:0000000000000038 _ZN7MCP34628readByteEh
 
 NO UNDEFINED SYMBOLS
