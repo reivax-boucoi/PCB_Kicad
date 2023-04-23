@@ -74,7 +74,10 @@ int32_t MCP3462::readADCreg(void){
     SPI_CS_PORT &=~(1<<SPI_CS_PIN); //set CSB low
     
     uint8_t status=transmit(SPI_ADDR|SPI_TYPE_STATIC_R|REG_ADCDATA);
-    if(status!=0x13)return 0xFFFFFFFF;//Data is not ready of other error (POR)
+    if(status!=0x13){
+        SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB high
+        return 0xFFFFFFFF;//Data is not ready of other error (POR)
+    }
     
     d=transmit(0); //CH_ID[3:0], SIGN(4 bits)
     ch=d>>4;
@@ -94,11 +97,12 @@ int32_t MCP3462::readADCreg(void){
     
     SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB high
     
-    if(sign){
+    /*if(sign){
         return ((0x0000<<15) | ADC_code);        
     }else{
         return ((0x7000<<15) | ADC_code);
-    }
+    }*/
+    return data;
     
 }
 

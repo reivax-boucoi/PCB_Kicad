@@ -137,7 +137,7 @@ uint8_t LCD::setNb(int32_t nb, uint8_t dig) {
 	int8_t d=5;
 	uint8_t min=6-dig;
 	if(nb<0){
-		setDigit(0,Minus);
+		setDigit(min,Minus);
 		min++;
 		nb=(~nb)+1;
 	}

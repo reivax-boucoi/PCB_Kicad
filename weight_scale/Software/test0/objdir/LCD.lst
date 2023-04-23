@@ -1055,7 +1055,7 @@
  726               	.L__stack_usage = 16
  727 02ba 6B01      		movw r12,r22
  728 02bc 7C01      		movw r14,r24
- 729 02be D42F      		mov r29,r20
+ 729 02be C42F      		mov r28,r20
  134:LCD.cpp       **** 	if(nb>999999 || nb <-99999){
  730               		.loc 1 134 0
  731 02c0 DC01      		movw r26,r24
@@ -1078,50 +1078,50 @@
  137:LCD.cpp       **** 	int8_t d=5;
  138:LCD.cpp       **** 	uint8_t min=6-dig;
  746               		.loc 1 138 0
- 747 02d8 C6E0      		ldi r28,lo8(6)
- 748 02da C41B      		sub r28,r20
+ 747 02d8 86E0      		ldi r24,lo8(6)
+ 748 02da 841B      		sub r24,r20
  749               	.LVL35:
  139:LCD.cpp       **** 	if(nb<0){
  750               		.loc 1 139 0
  751 02dc F7FE      		sbrs r15,7
  752 02de 00C0      		rjmp .L49
- 140:LCD.cpp       **** 		setDigit(0,Minus);
+ 140:LCD.cpp       **** 		setDigit(min,Minus);
  753               		.loc 1 140 0
  754 02e0 60E4      		ldi r22,lo8(64)
  755               	.LVL36:
- 756 02e2 80E0      		ldi r24,0
- 757 02e4 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
- 758               	.LVL37:
+ 756 02e2 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 757               	.LVL37:
  141:LCD.cpp       **** 		min++;
- 759               		.loc 1 141 0
- 760 02e8 C7E0      		ldi r28,lo8(7)
- 761               	.LVL38:
- 762 02ea CD1B      		sub r28,r29
- 763               	.LVL39:
+ 758               		.loc 1 141 0
+ 759 02e6 87E0      		ldi r24,lo8(7)
+ 760               	.LVL38:
+ 761 02e8 8C1B      		sub r24,r28
+ 762               	.LVL39:
  142:LCD.cpp       **** 		nb=(~nb)+1;
- 764               		.loc 1 142 0
- 765 02ec F094      		com r15
- 766 02ee E094      		com r14
- 767 02f0 D094      		com r13
- 768 02f2 C094      		com r12
- 769 02f4 C11C      		adc r12,__zero_reg__
- 770 02f6 D11C      		adc r13,__zero_reg__
- 771 02f8 E11C      		adc r14,__zero_reg__
- 772 02fa F11C      		adc r15,__zero_reg__
- 773               	.LVL40:
- 774               	.L49:
- 775               	.LBE33:
- 776               	.LBE32:
+ 763               		.loc 1 142 0
+ 764 02ea F094      		com r15
+ 765 02ec E094      		com r14
+ 766 02ee D094      		com r13
+ 767 02f0 C094      		com r12
+ 768 02f2 C11C      		adc r12,__zero_reg__
+ 769 02f4 D11C      		adc r13,__zero_reg__
+ 770 02f6 E11C      		adc r14,__zero_reg__
+ 771 02f8 F11C      		adc r15,__zero_reg__
+ 772               	.LVL40:
+ 773               	.L49:
+ 774               	.LBE33:
+ 775               	.LBE32:
  133:LCD.cpp       **** 	if(nb>999999 || nb <-99999){
- 777               		.loc 1 133 0
- 778 02fc 15E0      		ldi r17,lo8(5)
- 779               	.LBB36:
- 780               	.LBB34:
+ 776               		.loc 1 133 0
+ 777 02fa 15E0      		ldi r17,lo8(5)
+ 778               	.LBB36:
+ 779               	.LBB34:
  143:LCD.cpp       **** 	}
  144:LCD.cpp       **** 	while(d>=min){
- 781               		.loc 1 144 0
- 782 02fe D0E0      		ldi r29,0
- 783               	.LVL41:
+ 780               		.loc 1 144 0
+ 781 02fc C82F      		mov r28,r24
+ 782               	.LVL41:
+ 783 02fe D0E0      		ldi r29,0
  145:LCD.cpp       **** 		setDigit(d--,nb%10);
  784               		.loc 1 145 0
  785 0300 8AE0      		ldi r24,lo8(10)
@@ -1434,28 +1434,28 @@
  1078               		.file 4 "LCD.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 LCD.cpp
-     /tmp/ccSmzmtK.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccSmzmtK.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccSmzmtK.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccSmzmtK.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccSmzmtK.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccSmzmtK.s:12     .text:0000000000000000 _ZN3LCDC2Eb
-     /tmp/ccSmzmtK.s:12     .text:0000000000000000 _ZN3LCDC1Eb
-     /tmp/ccSmzmtK.s:84     .text:000000000000004a _ZN3LCDD2Ev
-     /tmp/ccSmzmtK.s:84     .text:000000000000004a _ZN3LCDD1Ev
-     /tmp/ccSmzmtK.s:131    .text:000000000000006e _ZN3LCD8setDigitEhh
-     /tmp/ccSmzmtK.s:1064   .rodata:0000000000000000 _ZN3LCD5NbMapE
-     /tmp/ccSmzmtK.s:975    .data:0000000000000000 _ZN3LCD6digitsE
-     /tmp/ccSmzmtK.s:275    .text:000000000000010e _ZN3LCD8setDigitEhNS_6SymbolE
-     /tmp/ccSmzmtK.s:415    .text:00000000000001a4 _ZN3LCD10setBatteryENS_7BatteryE
-     /tmp/ccSmzmtK.s:545    .text:0000000000000258 _ZN3LCD5setDPEb
-     /tmp/ccSmzmtK.s:581    .text:0000000000000270 _ZN3LCD6setClkEb
-     /tmp/ccSmzmtK.s:617    .text:0000000000000288 _ZN3LCD5getDPEv
-     /tmp/ccSmzmtK.s:636    .text:0000000000000292 _ZN3LCD6getClkEv
-     /tmp/ccSmzmtK.s:654    .text:000000000000029a _ZN3LCD5setNbElh
-     /tmp/ccSmzmtK.s:884    .text:0000000000000380 _ZN3LCD5setNbEl
-     /tmp/ccSmzmtK.s:902    .text:0000000000000386 _ZN3LCD5clearEb
-     /tmp/ccSmzmtK.s:956    .text:00000000000003b0 _ZN3LCD5clearEv
+     /tmp/ccziwQC8.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccziwQC8.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccziwQC8.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccziwQC8.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccziwQC8.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccziwQC8.s:12     .text:0000000000000000 _ZN3LCDC2Eb
+     /tmp/ccziwQC8.s:12     .text:0000000000000000 _ZN3LCDC1Eb
+     /tmp/ccziwQC8.s:84     .text:000000000000004a _ZN3LCDD2Ev
+     /tmp/ccziwQC8.s:84     .text:000000000000004a _ZN3LCDD1Ev
+     /tmp/ccziwQC8.s:131    .text:000000000000006e _ZN3LCD8setDigitEhh
+     /tmp/ccziwQC8.s:1064   .rodata:0000000000000000 _ZN3LCD5NbMapE
+     /tmp/ccziwQC8.s:975    .data:0000000000000000 _ZN3LCD6digitsE
+     /tmp/ccziwQC8.s:275    .text:000000000000010e _ZN3LCD8setDigitEhNS_6SymbolE
+     /tmp/ccziwQC8.s:415    .text:00000000000001a4 _ZN3LCD10setBatteryENS_7BatteryE
+     /tmp/ccziwQC8.s:545    .text:0000000000000258 _ZN3LCD5setDPEb
+     /tmp/ccziwQC8.s:581    .text:0000000000000270 _ZN3LCD6setClkEb
+     /tmp/ccziwQC8.s:617    .text:0000000000000288 _ZN3LCD5getDPEv
+     /tmp/ccziwQC8.s:636    .text:0000000000000292 _ZN3LCD6getClkEv
+     /tmp/ccziwQC8.s:654    .text:000000000000029a _ZN3LCD5setNbElh
+     /tmp/ccziwQC8.s:884    .text:0000000000000380 _ZN3LCD5setNbEl
+     /tmp/ccziwQC8.s:902    .text:0000000000000386 _ZN3LCD5clearEb
+     /tmp/ccziwQC8.s:956    .text:00000000000003b0 _ZN3LCD5clearEv
 
 UNDEFINED SYMBOLS
 __tablejump2__

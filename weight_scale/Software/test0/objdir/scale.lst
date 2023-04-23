@@ -47,7 +47,7 @@
   45               	.L__stack_usage = 6
   46 000c EC01      		movw r28,r24
   47 000e 7B01      		movw r14,r22
-  48               	.LBB2:
+  48               	.LBB7:
   49               		.loc 1 3 0
   50 0010 8C01      		movw r16,r24
   51 0012 005F      		subi r16,-16
@@ -70,327 +70,560 @@
   66 002a 9983      		std Y+1,r25
   67 002c AA83      		std Y+2,r26
   68 002e BB83      		std Y+3,r27
-   6:scale.cpp     ****     offset=myADC.getDirectData();
-  69               		.loc 1 6 0
-  70 0030 C801      		movw r24,r16
-  71 0032 0E94 0000 		call _ZN7MCP346213getDirectDataEv
-  72               	.LVL3:
-  73 0036 6C83      		std Y+4,r22
-  74 0038 7D83      		std Y+5,r23
-  75 003a 8E83      		std Y+6,r24
-  76 003c 9F83      		std Y+7,r25
-  77               	/* epilogue start */
-  78               	.LBE2:
-   7:scale.cpp     **** }
-  79               		.loc 1 7 0
-  80 003e DF91      		pop r29
-  81 0040 CF91      		pop r28
-  82               	.LVL4:
-  83 0042 1F91      		pop r17
-  84 0044 0F91      		pop r16
-  85               	.LVL5:
-  86 0046 FF90      		pop r15
-  87 0048 EF90      		pop r14
-  88               	.LVL6:
-  89 004a 0895      		ret
-  90               		.cfi_endproc
-  91               	.LFE11:
-  93               	.global	_ZN5ScaleC1EP4UART
-  94               		.set	_ZN5ScaleC1EP4UART,_ZN5ScaleC2EP4UART
-  95               	.global	_ZN5ScaleD2Ev
-  97               	_ZN5ScaleD2Ev:
-  98               	.LFB14:
-   8:scale.cpp     **** 
-   9:scale.cpp     **** Scale::~Scale(void){
-  99               		.loc 1 9 0
- 100               		.cfi_startproc
- 101               	.LVL7:
- 102               	/* prologue: function */
- 103               	/* frame size = 0 */
- 104               	/* stack size = 0 */
- 105               	.L__stack_usage = 0
- 106               	.LBB3:
- 107               		.loc 1 9 0
- 108 004c 4096      		adiw r24,16
- 109               	.LVL8:
- 110 004e 0C94 0000 		jmp _ZN7MCP3462D1Ev
- 111               	.LVL9:
- 112               	.LBE3:
- 113               		.cfi_endproc
- 114               	.LFE14:
- 116               	.global	_ZN5ScaleD1Ev
- 117               		.set	_ZN5ScaleD1Ev,_ZN5ScaleD2Ev
- 118               	.global	_ZN5Scale4tareEv
- 120               	_ZN5Scale4tareEv:
- 121               	.LFB16:
-  10:scale.cpp     ****     
-  11:scale.cpp     **** }
-  12:scale.cpp     **** 
-  13:scale.cpp     **** 
-  14:scale.cpp     **** int32_t Scale::tare(void){
- 122               		.loc 1 14 0
- 123               		.cfi_startproc
- 124               	.LVL10:
- 125 0052 0F93      		push r16
- 126               	.LCFI6:
- 127               		.cfi_def_cfa_offset 3
- 128               		.cfi_offset 16, -2
- 129 0054 1F93      		push r17
- 130               	.LCFI7:
- 131               		.cfi_def_cfa_offset 4
- 132               		.cfi_offset 17, -3
- 133 0056 CF93      		push r28
- 134               	.LCFI8:
- 135               		.cfi_def_cfa_offset 5
- 136               		.cfi_offset 28, -4
- 137 0058 DF93      		push r29
- 138               	.LCFI9:
- 139               		.cfi_def_cfa_offset 6
- 140               		.cfi_offset 29, -5
- 141               	/* prologue: function */
- 142               	/* frame size = 0 */
- 143               	/* stack size = 4 */
- 144               	.L__stack_usage = 4
- 145 005a EC01      		movw r28,r24
-  15:scale.cpp     ****     offset=(myADC.getDirectData()+offset)>>1;
- 146               		.loc 1 15 0
- 147 005c 4096      		adiw r24,16
- 148               	.LVL11:
- 149 005e 0E94 0000 		call _ZN7MCP346213getDirectDataEv
- 150               	.LVL12:
- 151 0062 0C81      		ldd r16,Y+4
- 152 0064 1D81      		ldd r17,Y+5
- 153 0066 2E81      		ldd r18,Y+6
- 154 0068 3F81      		ldd r19,Y+7
- 155 006a DC01      		movw r26,r24
- 156 006c CB01      		movw r24,r22
- 157 006e 800F      		add r24,r16
- 158 0070 911F      		adc r25,r17
- 159 0072 A21F      		adc r26,r18
- 160 0074 B31F      		adc r27,r19
- 161 0076 BC01      		movw r22,r24
- 162 0078 CD01      		movw r24,r26
- 163 007a 9595      		asr r25
- 164 007c 8795      		ror r24
- 165 007e 7795      		ror r23
- 166 0080 6795      		ror r22
- 167 0082 6C83      		std Y+4,r22
- 168 0084 7D83      		std Y+5,r23
- 169 0086 8E83      		std Y+6,r24
- 170 0088 9F83      		std Y+7,r25
- 171               	/* epilogue start */
-  16:scale.cpp     ****     return offset;
-  17:scale.cpp     **** }
- 172               		.loc 1 17 0
- 173 008a DF91      		pop r29
- 174 008c CF91      		pop r28
- 175               	.LVL13:
- 176 008e 1F91      		pop r17
- 177 0090 0F91      		pop r16
- 178 0092 0895      		ret
- 179               		.cfi_endproc
- 180               	.LFE16:
- 182               	.global	_ZN5Scale9getWeightEv
- 184               	_ZN5Scale9getWeightEv:
- 185               	.LFB17:
-  18:scale.cpp     **** 
-  19:scale.cpp     **** 
-  20:scale.cpp     **** int32_t Scale::getWeight(void){
- 186               		.loc 1 20 0
- 187               		.cfi_startproc
- 188               	.LVL14:
- 189 0094 CF92      		push r12
- 190               	.LCFI10:
- 191               		.cfi_def_cfa_offset 3
- 192               		.cfi_offset 12, -2
- 193 0096 DF92      		push r13
- 194               	.LCFI11:
- 195               		.cfi_def_cfa_offset 4
- 196               		.cfi_offset 13, -3
- 197 0098 EF92      		push r14
- 198               	.LCFI12:
- 199               		.cfi_def_cfa_offset 5
- 200               		.cfi_offset 14, -4
- 201 009a FF92      		push r15
- 202               	.LCFI13:
- 203               		.cfi_def_cfa_offset 6
- 204               		.cfi_offset 15, -5
- 205 009c 0F93      		push r16
- 206               	.LCFI14:
- 207               		.cfi_def_cfa_offset 7
- 208               		.cfi_offset 16, -6
- 209 009e 1F93      		push r17
- 210               	.LCFI15:
- 211               		.cfi_def_cfa_offset 8
- 212               		.cfi_offset 17, -7
- 213 00a0 CF93      		push r28
- 214               	.LCFI16:
- 215               		.cfi_def_cfa_offset 9
- 216               		.cfi_offset 28, -8
- 217 00a2 DF93      		push r29
- 218               	.LCFI17:
- 219               		.cfi_def_cfa_offset 10
- 220               		.cfi_offset 29, -9
- 221               	/* prologue: function */
- 222               	/* frame size = 0 */
- 223               	/* stack size = 8 */
- 224               	.L__stack_usage = 8
- 225 00a4 EC01      		movw r28,r24
-  21:scale.cpp     ****     value=myADC.getDirectData();
- 226               		.loc 1 21 0
- 227 00a6 4096      		adiw r24,16
- 228               	.LVL15:
- 229 00a8 0E94 0000 		call _ZN7MCP346213getDirectDataEv
- 230               	.LVL16:
- 231 00ac 6887      		std Y+8,r22
- 232 00ae 7987      		std Y+9,r23
- 233 00b0 8A87      		std Y+10,r24
- 234 00b2 9B87      		std Y+11,r25
-  22:scale.cpp     ****     value_scl=(value-offset)*gain;
- 235               		.loc 1 22 0
- 236 00b4 0C81      		ldd r16,Y+4
- 237 00b6 1D81      		ldd r17,Y+5
- 238 00b8 2E81      		ldd r18,Y+6
- 239 00ba 3F81      		ldd r19,Y+7
- 240 00bc 6B01      		movw r12,r22
- 241 00be 7C01      		movw r14,r24
- 242 00c0 C01A      		sub r12,r16
- 243 00c2 D10A      		sbc r13,r17
- 244 00c4 E20A      		sbc r14,r18
- 245 00c6 F30A      		sbc r15,r19
- 246 00c8 A701      		movw r20,r14
- 247 00ca 9601      		movw r18,r12
- 248 00cc 6881      		ld r22,Y
- 249 00ce 7981      		ldd r23,Y+1
- 250 00d0 8A81      		ldd r24,Y+2
- 251 00d2 9B81      		ldd r25,Y+3
- 252 00d4 0E94 0000 		call __mulsi3
- 253 00d8 6C87      		std Y+12,r22
- 254 00da 7D87      		std Y+13,r23
- 255 00dc 8E87      		std Y+14,r24
- 256 00de 9F87      		std Y+15,r25
- 257               	/* epilogue start */
-  23:scale.cpp     ****  return value_scl;
-  24:scale.cpp     **** }
- 258               		.loc 1 24 0
- 259 00e0 DF91      		pop r29
- 260 00e2 CF91      		pop r28
- 261               	.LVL17:
- 262 00e4 1F91      		pop r17
- 263 00e6 0F91      		pop r16
- 264 00e8 FF90      		pop r15
- 265 00ea EF90      		pop r14
- 266 00ec DF90      		pop r13
- 267 00ee CF90      		pop r12
- 268 00f0 0895      		ret
- 269               		.cfi_endproc
- 270               	.LFE17:
- 272               	.global	_ZN5Scale10showWeightEb
- 274               	_ZN5Scale10showWeightEb:
- 275               	.LFB18:
+  69               	.L3:
+   6:scale.cpp     ****     while(DATA_READY){
+  70               		.loc 1 6 0
+  71 0030 679B      		sbis 0xc,7
+  72 0032 00C0      		rjmp .L2
+  73               	.LVL3:
+  74               	.LBB8:
+  75               	.LBB9:
+  76               		.file 2 "/usr/lib/avr/include/util/delay.h"
+   1:/usr/lib/avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   2:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
+   3:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2007  Florin-Viorel Petrov
+   4:/usr/lib/avr/include/util/delay.h ****    All rights reserved.
+   5:/usr/lib/avr/include/util/delay.h **** 
+   6:/usr/lib/avr/include/util/delay.h ****    Redistribution and use in source and binary forms, with or without
+   7:/usr/lib/avr/include/util/delay.h ****    modification, are permitted provided that the following conditions are met:
+   8:/usr/lib/avr/include/util/delay.h **** 
+   9:/usr/lib/avr/include/util/delay.h ****    * Redistributions of source code must retain the above copyright
+  10:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer.
+  11:/usr/lib/avr/include/util/delay.h **** 
+  12:/usr/lib/avr/include/util/delay.h ****    * Redistributions in binary form must reproduce the above copyright
+  13:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer in
+  14:/usr/lib/avr/include/util/delay.h ****      the documentation and/or other materials provided with the
+  15:/usr/lib/avr/include/util/delay.h ****      distribution.
+  16:/usr/lib/avr/include/util/delay.h **** 
+  17:/usr/lib/avr/include/util/delay.h ****    * Neither the name of the copyright holders nor the names of
+  18:/usr/lib/avr/include/util/delay.h ****      contributors may be used to endorse or promote products derived
+  19:/usr/lib/avr/include/util/delay.h ****      from this software without specific prior written permission.
+  20:/usr/lib/avr/include/util/delay.h **** 
+  21:/usr/lib/avr/include/util/delay.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:/usr/lib/avr/include/util/delay.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:/usr/lib/avr/include/util/delay.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:/usr/lib/avr/include/util/delay.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  25:/usr/lib/avr/include/util/delay.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:/usr/lib/avr/include/util/delay.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:/usr/lib/avr/include/util/delay.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:/usr/lib/avr/include/util/delay.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:/usr/lib/avr/include/util/delay.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:/usr/lib/avr/include/util/delay.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:/usr/lib/avr/include/util/delay.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  32:/usr/lib/avr/include/util/delay.h **** 
+  33:/usr/lib/avr/include/util/delay.h **** /* $Id$ */
+  34:/usr/lib/avr/include/util/delay.h **** 
+  35:/usr/lib/avr/include/util/delay.h **** #ifndef _UTIL_DELAY_H_
+  36:/usr/lib/avr/include/util/delay.h **** #define _UTIL_DELAY_H_ 1
+  37:/usr/lib/avr/include/util/delay.h **** 
+  38:/usr/lib/avr/include/util/delay.h **** #ifndef __DOXYGEN__
+  39:/usr/lib/avr/include/util/delay.h **** #  ifndef __HAS_DELAY_CYCLES
+  40:/usr/lib/avr/include/util/delay.h **** #    define __HAS_DELAY_CYCLES 1
+  41:/usr/lib/avr/include/util/delay.h **** #  endif
+  42:/usr/lib/avr/include/util/delay.h **** #endif  /* __DOXYGEN__ */
+  43:/usr/lib/avr/include/util/delay.h **** 
+  44:/usr/lib/avr/include/util/delay.h **** #include <inttypes.h>
+  45:/usr/lib/avr/include/util/delay.h **** #include <util/delay_basic.h>
+  46:/usr/lib/avr/include/util/delay.h **** #include <math.h>
+  47:/usr/lib/avr/include/util/delay.h **** 
+  48:/usr/lib/avr/include/util/delay.h **** /** \file */
+  49:/usr/lib/avr/include/util/delay.h **** /** \defgroup util_delay <util/delay.h>: Convenience functions for busy-wait delay loops
+  50:/usr/lib/avr/include/util/delay.h ****     \code
+  51:/usr/lib/avr/include/util/delay.h ****     #define F_CPU 1000000UL  // 1 MHz
+  52:/usr/lib/avr/include/util/delay.h ****     //#define F_CPU 14.7456E6
+  53:/usr/lib/avr/include/util/delay.h ****     #include <util/delay.h>
+  54:/usr/lib/avr/include/util/delay.h ****     \endcode
+  55:/usr/lib/avr/include/util/delay.h **** 
+  56:/usr/lib/avr/include/util/delay.h ****     \note As an alternative method, it is possible to pass the
+  57:/usr/lib/avr/include/util/delay.h ****     F_CPU macro down to the compiler from the Makefile.
+  58:/usr/lib/avr/include/util/delay.h ****     Obviously, in that case, no \c \#define statement should be
+  59:/usr/lib/avr/include/util/delay.h ****     used.
+  60:/usr/lib/avr/include/util/delay.h **** 
+  61:/usr/lib/avr/include/util/delay.h ****     The functions in this header file are wrappers around the basic
+  62:/usr/lib/avr/include/util/delay.h ****     busy-wait functions from <util/delay_basic.h>.  They are meant as
+  63:/usr/lib/avr/include/util/delay.h ****     convenience functions where actual time values can be specified
+  64:/usr/lib/avr/include/util/delay.h ****     rather than a number of cycles to wait for.  The idea behind is
+  65:/usr/lib/avr/include/util/delay.h ****     that compile-time constant expressions will be eliminated by
+  66:/usr/lib/avr/include/util/delay.h ****     compiler optimization so floating-point expressions can be used
+  67:/usr/lib/avr/include/util/delay.h ****     to calculate the number of delay cycles needed based on the CPU
+  68:/usr/lib/avr/include/util/delay.h ****     frequency passed by the macro F_CPU.
+  69:/usr/lib/avr/include/util/delay.h **** 
+  70:/usr/lib/avr/include/util/delay.h ****     \note In order for these functions to work as intended, compiler
+  71:/usr/lib/avr/include/util/delay.h ****     optimizations <em>must</em> be enabled, and the delay time
+  72:/usr/lib/avr/include/util/delay.h ****     <em>must</em> be an expression that is a known constant at
+  73:/usr/lib/avr/include/util/delay.h ****     compile-time.  If these requirements are not met, the resulting
+  74:/usr/lib/avr/include/util/delay.h ****     delay will be much longer (and basically unpredictable), and
+  75:/usr/lib/avr/include/util/delay.h ****     applications that otherwise do not use floating-point calculations
+  76:/usr/lib/avr/include/util/delay.h ****     will experience severe code bloat by the floating-point library
+  77:/usr/lib/avr/include/util/delay.h ****     routines linked into the application.
+  78:/usr/lib/avr/include/util/delay.h **** 
+  79:/usr/lib/avr/include/util/delay.h ****     The functions available allow the specification of microsecond, and
+  80:/usr/lib/avr/include/util/delay.h ****     millisecond delays directly, using the application-supplied macro
+  81:/usr/lib/avr/include/util/delay.h ****     F_CPU as the CPU clock frequency (in Hertz).
+  82:/usr/lib/avr/include/util/delay.h **** 
+  83:/usr/lib/avr/include/util/delay.h **** */
+  84:/usr/lib/avr/include/util/delay.h **** 
+  85:/usr/lib/avr/include/util/delay.h **** #if !defined(__DOXYGEN__)
+  86:/usr/lib/avr/include/util/delay.h **** static __inline__ void _delay_us(double __us) __attribute__((__always_inline__));
+  87:/usr/lib/avr/include/util/delay.h **** static __inline__ void _delay_ms(double __ms) __attribute__((__always_inline__));
+  88:/usr/lib/avr/include/util/delay.h **** #endif
+  89:/usr/lib/avr/include/util/delay.h **** 
+  90:/usr/lib/avr/include/util/delay.h **** #ifndef F_CPU
+  91:/usr/lib/avr/include/util/delay.h **** /* prevent compiler error by supplying a default */
+  92:/usr/lib/avr/include/util/delay.h **** # warning "F_CPU not defined for <util/delay.h>"
+  93:/usr/lib/avr/include/util/delay.h **** /** \ingroup util_delay
+  94:/usr/lib/avr/include/util/delay.h ****     \def F_CPU
+  95:/usr/lib/avr/include/util/delay.h ****     \brief CPU frequency in Hz
+  96:/usr/lib/avr/include/util/delay.h **** 
+  97:/usr/lib/avr/include/util/delay.h ****     The macro F_CPU specifies the CPU frequency to be considered by
+  98:/usr/lib/avr/include/util/delay.h ****     the delay macros.  This macro is normally supplied by the
+  99:/usr/lib/avr/include/util/delay.h ****     environment (e.g. from within a project header, or the project's
+ 100:/usr/lib/avr/include/util/delay.h ****     Makefile).  The value 1 MHz here is only provided as a "vanilla"
+ 101:/usr/lib/avr/include/util/delay.h ****     fallback if no such user-provided definition could be found.
+ 102:/usr/lib/avr/include/util/delay.h **** 
+ 103:/usr/lib/avr/include/util/delay.h ****     In terms of the delay functions, the CPU frequency can be given as
+ 104:/usr/lib/avr/include/util/delay.h ****     a floating-point constant (e.g. 3.6864E6 for 3.6864 MHz).
+ 105:/usr/lib/avr/include/util/delay.h ****     However, the macros in <util/setbaud.h> require it to be an
+ 106:/usr/lib/avr/include/util/delay.h ****     integer value.
+ 107:/usr/lib/avr/include/util/delay.h ****  */
+ 108:/usr/lib/avr/include/util/delay.h **** # define F_CPU 1000000UL
+ 109:/usr/lib/avr/include/util/delay.h **** #endif
+ 110:/usr/lib/avr/include/util/delay.h **** 
+ 111:/usr/lib/avr/include/util/delay.h **** #ifndef __OPTIMIZE__
+ 112:/usr/lib/avr/include/util/delay.h **** # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+ 113:/usr/lib/avr/include/util/delay.h **** #endif
+ 114:/usr/lib/avr/include/util/delay.h **** 
+ 115:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 116:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 117:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 118:/usr/lib/avr/include/util/delay.h **** #  include <math.h>
+ 119:/usr/lib/avr/include/util/delay.h **** #endif
+ 120:/usr/lib/avr/include/util/delay.h **** 
+ 121:/usr/lib/avr/include/util/delay.h **** /**
+ 122:/usr/lib/avr/include/util/delay.h ****    \ingroup util_delay
+ 123:/usr/lib/avr/include/util/delay.h **** 
+ 124:/usr/lib/avr/include/util/delay.h ****    Perform a delay of \c __ms milliseconds, using _delay_loop_2().
+ 125:/usr/lib/avr/include/util/delay.h **** 
+ 126:/usr/lib/avr/include/util/delay.h ****    The macro F_CPU is supposed to be defined to a
+ 127:/usr/lib/avr/include/util/delay.h ****    constant defining the CPU clock frequency (in Hertz).
+ 128:/usr/lib/avr/include/util/delay.h **** 
+ 129:/usr/lib/avr/include/util/delay.h ****    The maximal possible delay is 262.14 ms / F_CPU in MHz.
+ 130:/usr/lib/avr/include/util/delay.h **** 
+ 131:/usr/lib/avr/include/util/delay.h ****    When the user request delay which exceed the maximum possible one,
+ 132:/usr/lib/avr/include/util/delay.h ****    _delay_ms() provides a decreased resolution functionality. In this
+ 133:/usr/lib/avr/include/util/delay.h ****    mode _delay_ms() will work with a resolution of 1/10 ms, providing
+ 134:/usr/lib/avr/include/util/delay.h ****    delays up to 6.5535 seconds (independent from CPU frequency).  The
+ 135:/usr/lib/avr/include/util/delay.h ****    user will not be informed about decreased resolution.
+ 136:/usr/lib/avr/include/util/delay.h **** 
+ 137:/usr/lib/avr/include/util/delay.h ****    If the avr-gcc toolchain has __builtin_avr_delay_cycles()
+ 138:/usr/lib/avr/include/util/delay.h ****    support, maximal possible delay is 4294967.295 ms/ F_CPU in MHz. For
+ 139:/usr/lib/avr/include/util/delay.h ****    values greater than the maximal possible delay, overflows results in
+ 140:/usr/lib/avr/include/util/delay.h ****    no delay i.e., 0ms.
+ 141:/usr/lib/avr/include/util/delay.h **** 
+ 142:/usr/lib/avr/include/util/delay.h ****    Conversion of \c __ms into clock cycles may not always result in
+ 143:/usr/lib/avr/include/util/delay.h ****    integer.  By default, the clock cycles rounded up to next
+ 144:/usr/lib/avr/include/util/delay.h ****    integer. This ensures that the user gets at least \c __ms
+ 145:/usr/lib/avr/include/util/delay.h ****    microseconds of delay.
+ 146:/usr/lib/avr/include/util/delay.h **** 
+ 147:/usr/lib/avr/include/util/delay.h ****    Alternatively, by defining the macro \c __DELAY_ROUND_DOWN__, or
+ 148:/usr/lib/avr/include/util/delay.h ****    \c __DELAY_ROUND_CLOSEST__, before including this header file, the
+ 149:/usr/lib/avr/include/util/delay.h ****    algorithm can be made to round down, or round to closest integer,
+ 150:/usr/lib/avr/include/util/delay.h ****    respectively.
+ 151:/usr/lib/avr/include/util/delay.h **** 
+ 152:/usr/lib/avr/include/util/delay.h ****    \note
+ 153:/usr/lib/avr/include/util/delay.h **** 
+ 154:/usr/lib/avr/include/util/delay.h ****    The implementation of _delay_ms() based on
+ 155:/usr/lib/avr/include/util/delay.h ****    __builtin_avr_delay_cycles() is not backward compatible with older
+ 156:/usr/lib/avr/include/util/delay.h ****    implementations.  In order to get functionality backward compatible
+ 157:/usr/lib/avr/include/util/delay.h ****    with previous versions, the macro \c "__DELAY_BACKWARD_COMPATIBLE__"
+ 158:/usr/lib/avr/include/util/delay.h ****    must be defined before including this header file. Also, the
+ 159:/usr/lib/avr/include/util/delay.h ****    backward compatible algorithm will be chosen if the code is
+ 160:/usr/lib/avr/include/util/delay.h ****    compiled in a <em>freestanding environment</em> (GCC option
+ 161:/usr/lib/avr/include/util/delay.h ****    \c -ffreestanding), as the math functions required for rounding are
+ 162:/usr/lib/avr/include/util/delay.h ****    not available to the compiler then.
+ 163:/usr/lib/avr/include/util/delay.h **** 
+ 164:/usr/lib/avr/include/util/delay.h ****  */
+ 165:/usr/lib/avr/include/util/delay.h **** void
+ 166:/usr/lib/avr/include/util/delay.h **** _delay_ms(double __ms)
+ 167:/usr/lib/avr/include/util/delay.h **** {
+ 168:/usr/lib/avr/include/util/delay.h **** 	double __tmp ;
+ 169:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 170:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 171:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 172:/usr/lib/avr/include/util/delay.h **** 	uint32_t __ticks_dc;
+ 173:/usr/lib/avr/include/util/delay.h **** 	extern void __builtin_avr_delay_cycles(unsigned long);
+ 174:/usr/lib/avr/include/util/delay.h **** 	__tmp = ((F_CPU) / 1e3) * __ms;
+ 175:/usr/lib/avr/include/util/delay.h **** 
+ 176:/usr/lib/avr/include/util/delay.h **** 	#if defined(__DELAY_ROUND_DOWN__)
+ 177:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)fabs(__tmp);
+ 178:/usr/lib/avr/include/util/delay.h **** 
+ 179:/usr/lib/avr/include/util/delay.h **** 	#elif defined(__DELAY_ROUND_CLOSEST__)
+ 180:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(fabs(__tmp)+0.5);
+ 181:/usr/lib/avr/include/util/delay.h **** 
+ 182:/usr/lib/avr/include/util/delay.h **** 	#else
+ 183:/usr/lib/avr/include/util/delay.h **** 		//round up by default
+ 184:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+ 185:/usr/lib/avr/include/util/delay.h **** 	#endif
+ 186:/usr/lib/avr/include/util/delay.h **** 
+ 187:/usr/lib/avr/include/util/delay.h **** 	__builtin_avr_delay_cycles(__ticks_dc);
+  77               		.loc 2 187 0
+  78 0034 8FEC      		ldi r24,lo8(1999)
+  79 0036 97E0      		ldi r25,hi8(1999)
+  80 0038 0197      	1:	sbiw r24,1
+  81 003a 01F4      		brne 1b
+  82 003c 00C0      		rjmp .
+  83 003e 0000      		nop
+  84 0040 00C0      		rjmp .L3
+  85               	.LVL4:
+  86               	.L2:
+  87               	.LBE9:
+  88               	.LBE8:
+   7:scale.cpp     ****         _delay_ms(1);
+   8:scale.cpp     ****     }
+   9:scale.cpp     ****     offset=myADC.getDirectData();
+  89               		.loc 1 9 0
+  90 0042 C801      		movw r24,r16
+  91 0044 0E94 0000 		call _ZN7MCP346213getDirectDataEv
+  92               	.LVL5:
+  93 0048 6C83      		std Y+4,r22
+  94 004a 7D83      		std Y+5,r23
+  95 004c 8E83      		std Y+6,r24
+  96 004e 9F83      		std Y+7,r25
+  97               	/* epilogue start */
+  98               	.LBE7:
+  10:scale.cpp     **** }
+  99               		.loc 1 10 0
+ 100 0050 DF91      		pop r29
+ 101 0052 CF91      		pop r28
+ 102               	.LVL6:
+ 103 0054 1F91      		pop r17
+ 104 0056 0F91      		pop r16
+ 105               	.LVL7:
+ 106 0058 FF90      		pop r15
+ 107 005a EF90      		pop r14
+ 108               	.LVL8:
+ 109 005c 0895      		ret
+ 110               		.cfi_endproc
+ 111               	.LFE11:
+ 113               	.global	_ZN5ScaleC1EP4UART
+ 114               		.set	_ZN5ScaleC1EP4UART,_ZN5ScaleC2EP4UART
+ 115               	.global	_ZN5ScaleD2Ev
+ 117               	_ZN5ScaleD2Ev:
+ 118               	.LFB14:
+  11:scale.cpp     **** 
+  12:scale.cpp     **** Scale::~Scale(void){
+ 119               		.loc 1 12 0
+ 120               		.cfi_startproc
+ 121               	.LVL9:
+ 122               	/* prologue: function */
+ 123               	/* frame size = 0 */
+ 124               	/* stack size = 0 */
+ 125               	.L__stack_usage = 0
+ 126               	.LBB10:
+ 127               		.loc 1 12 0
+ 128 005e 4096      		adiw r24,16
+ 129               	.LVL10:
+ 130 0060 0C94 0000 		jmp _ZN7MCP3462D1Ev
+ 131               	.LVL11:
+ 132               	.LBE10:
+ 133               		.cfi_endproc
+ 134               	.LFE14:
+ 136               	.global	_ZN5ScaleD1Ev
+ 137               		.set	_ZN5ScaleD1Ev,_ZN5ScaleD2Ev
+ 138               	.global	_ZN5Scale4tareEv
+ 140               	_ZN5Scale4tareEv:
+ 141               	.LFB16:
+  13:scale.cpp     ****     
+  14:scale.cpp     **** }
+  15:scale.cpp     **** 
+  16:scale.cpp     **** 
+  17:scale.cpp     **** int32_t Scale::tare(void){
+ 142               		.loc 1 17 0
+ 143               		.cfi_startproc
+ 144               	.LVL12:
+ 145 0064 0F93      		push r16
+ 146               	.LCFI6:
+ 147               		.cfi_def_cfa_offset 3
+ 148               		.cfi_offset 16, -2
+ 149 0066 1F93      		push r17
+ 150               	.LCFI7:
+ 151               		.cfi_def_cfa_offset 4
+ 152               		.cfi_offset 17, -3
+ 153 0068 CF93      		push r28
+ 154               	.LCFI8:
+ 155               		.cfi_def_cfa_offset 5
+ 156               		.cfi_offset 28, -4
+ 157 006a DF93      		push r29
+ 158               	.LCFI9:
+ 159               		.cfi_def_cfa_offset 6
+ 160               		.cfi_offset 29, -5
+ 161               	/* prologue: function */
+ 162               	/* frame size = 0 */
+ 163               	/* stack size = 4 */
+ 164               	.L__stack_usage = 4
+ 165 006c EC01      		movw r28,r24
+ 166               	.LVL13:
+ 167               	.L8:
+  18:scale.cpp     ****     while(DATA_READY){
+ 168               		.loc 1 18 0
+ 169 006e 679B      		sbis 0xc,7
+ 170 0070 00C0      		rjmp .L7
+ 171               	.LVL14:
+ 172               	.LBB11:
+ 173               	.LBB12:
+ 174               		.loc 2 187 0
+ 175 0072 8FEC      		ldi r24,lo8(1999)
+ 176 0074 97E0      		ldi r25,hi8(1999)
+ 177 0076 0197      	1:	sbiw r24,1
+ 178 0078 01F4      		brne 1b
+ 179 007a 00C0      		rjmp .
+ 180 007c 0000      		nop
+ 181 007e 00C0      		rjmp .L8
+ 182               	.LVL15:
+ 183               	.L7:
+ 184               	.LBE12:
+ 185               	.LBE11:
+  19:scale.cpp     ****         _delay_ms(1);
+  20:scale.cpp     ****     }
+  21:scale.cpp     ****     offset=(myADC.getDirectData()+offset)>>1;
+ 186               		.loc 1 21 0
+ 187 0080 CE01      		movw r24,r28
+ 188 0082 4096      		adiw r24,16
+ 189 0084 0E94 0000 		call _ZN7MCP346213getDirectDataEv
+ 190               	.LVL16:
+ 191 0088 0C81      		ldd r16,Y+4
+ 192 008a 1D81      		ldd r17,Y+5
+ 193 008c 2E81      		ldd r18,Y+6
+ 194 008e 3F81      		ldd r19,Y+7
+ 195 0090 DC01      		movw r26,r24
+ 196 0092 CB01      		movw r24,r22
+ 197 0094 800F      		add r24,r16
+ 198 0096 911F      		adc r25,r17
+ 199 0098 A21F      		adc r26,r18
+ 200 009a B31F      		adc r27,r19
+ 201 009c BC01      		movw r22,r24
+ 202 009e CD01      		movw r24,r26
+ 203 00a0 9595      		asr r25
+ 204 00a2 8795      		ror r24
+ 205 00a4 7795      		ror r23
+ 206 00a6 6795      		ror r22
+ 207 00a8 6C83      		std Y+4,r22
+ 208 00aa 7D83      		std Y+5,r23
+ 209 00ac 8E83      		std Y+6,r24
+ 210 00ae 9F83      		std Y+7,r25
+ 211               	/* epilogue start */
+  22:scale.cpp     ****     return offset;
+  23:scale.cpp     **** }
+ 212               		.loc 1 23 0
+ 213 00b0 DF91      		pop r29
+ 214 00b2 CF91      		pop r28
+ 215               	.LVL17:
+ 216 00b4 1F91      		pop r17
+ 217 00b6 0F91      		pop r16
+ 218 00b8 0895      		ret
+ 219               		.cfi_endproc
+ 220               	.LFE16:
+ 222               	.global	_ZN5Scale9getWeightEv
+ 224               	_ZN5Scale9getWeightEv:
+ 225               	.LFB17:
+  24:scale.cpp     **** 
   25:scale.cpp     **** 
-  26:scale.cpp     **** void Scale::showWeight(bool verbose){
- 276               		.loc 1 26 0
- 277               		.cfi_startproc
- 278               	.LVL18:
- 279 00f2 0F93      		push r16
- 280               	.LCFI18:
- 281               		.cfi_def_cfa_offset 3
- 282               		.cfi_offset 16, -2
- 283 00f4 CF93      		push r28
- 284               	.LCFI19:
- 285               		.cfi_def_cfa_offset 4
- 286               		.cfi_offset 28, -3
- 287 00f6 DF93      		push r29
- 288               	.LCFI20:
- 289               		.cfi_def_cfa_offset 5
- 290               		.cfi_offset 29, -4
- 291               	/* prologue: function */
- 292               	/* frame size = 0 */
- 293               	/* stack size = 3 */
- 294               	.L__stack_usage = 3
- 295 00f8 EC01      		movw r28,r24
- 296 00fa 262F      		mov r18,r22
- 297 00fc 4C85      		ldd r20,Y+12
- 298 00fe 5D85      		ldd r21,Y+13
- 299 0100 6E85      		ldd r22,Y+14
- 300 0102 7F85      		ldd r23,Y+15
- 301 0104 8989      		ldd r24,Y+17
- 302 0106 9A89      		ldd r25,Y+18
- 303               	.LVL19:
-  27:scale.cpp     ****     
-  28:scale.cpp     ****     if(verbose){
- 304               		.loc 1 28 0
- 305 0108 2223      		tst r18
- 306 010a 01F0      		breq .L6
-  29:scale.cpp     ****         uart->sendNb(value_scl,10,false);
- 307               		.loc 1 29 0
- 308 010c 00E0      		ldi r16,0
- 309 010e 2AE0      		ldi r18,lo8(10)
- 310 0110 0E94 0000 		call _ZN4UART6sendNbElhb
- 311               	.LVL20:
-  30:scale.cpp     ****         uart->sendByte('\t');
- 312               		.loc 1 30 0
- 313 0114 69E0      		ldi r22,lo8(9)
- 314 0116 8989      		ldd r24,Y+17
- 315 0118 9A89      		ldd r25,Y+18
- 316 011a 0E94 0000 		call _ZN4UART8sendByteEc
- 317               	.LVL21:
-  31:scale.cpp     ****         uart->sendNb(value,2,true);
- 318               		.loc 1 31 0
- 319 011e 4885      		ldd r20,Y+8
- 320 0120 5985      		ldd r21,Y+9
- 321 0122 6A85      		ldd r22,Y+10
- 322 0124 7B85      		ldd r23,Y+11
- 323 0126 01E0      		ldi r16,lo8(1)
- 324 0128 22E0      		ldi r18,lo8(2)
- 325 012a 8989      		ldd r24,Y+17
- 326 012c 9A89      		ldd r25,Y+18
- 327 012e 0E94 0000 		call _ZN4UART6sendNbElhb
- 328               	.LVL22:
- 329               	/* epilogue start */
-  32:scale.cpp     ****     }else{
-  33:scale.cpp     ****         uart->sendNb(value_scl);
-  34:scale.cpp     ****     }
-  35:scale.cpp     **** }
- 330               		.loc 1 35 0
- 331 0132 DF91      		pop r29
- 332 0134 CF91      		pop r28
- 333               	.LVL23:
- 334 0136 0F91      		pop r16
- 335 0138 0895      		ret
- 336               	.LVL24:
- 337               	.L6:
- 338               	/* epilogue start */
- 339 013a DF91      		pop r29
- 340 013c CF91      		pop r28
- 341               	.LVL25:
- 342 013e 0F91      		pop r16
-  33:scale.cpp     ****     }
- 343               		.loc 1 33 0
- 344 0140 0C94 0000 		jmp _ZN4UART6sendNbEl
- 345               	.LVL26:
- 346               		.cfi_endproc
- 347               	.LFE18:
- 349               	.Letext0:
- 350               		.file 2 "/usr/lib/avr/include/stdint.h"
- 351               		.file 3 "ADC.h"
- 352               		.file 4 "UART.h"
- 353               		.file 5 "scale.h"
+  26:scale.cpp     **** int32_t Scale::getWeight(void){
+ 226               		.loc 1 26 0
+ 227               		.cfi_startproc
+ 228               	.LVL18:
+ 229 00ba CF92      		push r12
+ 230               	.LCFI10:
+ 231               		.cfi_def_cfa_offset 3
+ 232               		.cfi_offset 12, -2
+ 233 00bc DF92      		push r13
+ 234               	.LCFI11:
+ 235               		.cfi_def_cfa_offset 4
+ 236               		.cfi_offset 13, -3
+ 237 00be EF92      		push r14
+ 238               	.LCFI12:
+ 239               		.cfi_def_cfa_offset 5
+ 240               		.cfi_offset 14, -4
+ 241 00c0 FF92      		push r15
+ 242               	.LCFI13:
+ 243               		.cfi_def_cfa_offset 6
+ 244               		.cfi_offset 15, -5
+ 245 00c2 0F93      		push r16
+ 246               	.LCFI14:
+ 247               		.cfi_def_cfa_offset 7
+ 248               		.cfi_offset 16, -6
+ 249 00c4 1F93      		push r17
+ 250               	.LCFI15:
+ 251               		.cfi_def_cfa_offset 8
+ 252               		.cfi_offset 17, -7
+ 253 00c6 CF93      		push r28
+ 254               	.LCFI16:
+ 255               		.cfi_def_cfa_offset 9
+ 256               		.cfi_offset 28, -8
+ 257 00c8 DF93      		push r29
+ 258               	.LCFI17:
+ 259               		.cfi_def_cfa_offset 10
+ 260               		.cfi_offset 29, -9
+ 261               	/* prologue: function */
+ 262               	/* frame size = 0 */
+ 263               	/* stack size = 8 */
+ 264               	.L__stack_usage = 8
+ 265 00ca EC01      		movw r28,r24
+  27:scale.cpp     ****     value=myADC.getDirectData();
+ 266               		.loc 1 27 0
+ 267 00cc 4096      		adiw r24,16
+ 268               	.LVL19:
+ 269 00ce 0E94 0000 		call _ZN7MCP346213getDirectDataEv
+ 270               	.LVL20:
+ 271 00d2 6887      		std Y+8,r22
+ 272 00d4 7987      		std Y+9,r23
+ 273 00d6 8A87      		std Y+10,r24
+ 274 00d8 9B87      		std Y+11,r25
+  28:scale.cpp     ****     value_scl=(value-offset)*gain;
+ 275               		.loc 1 28 0
+ 276 00da 0C81      		ldd r16,Y+4
+ 277 00dc 1D81      		ldd r17,Y+5
+ 278 00de 2E81      		ldd r18,Y+6
+ 279 00e0 3F81      		ldd r19,Y+7
+ 280 00e2 6B01      		movw r12,r22
+ 281 00e4 7C01      		movw r14,r24
+ 282 00e6 C01A      		sub r12,r16
+ 283 00e8 D10A      		sbc r13,r17
+ 284 00ea E20A      		sbc r14,r18
+ 285 00ec F30A      		sbc r15,r19
+ 286 00ee A701      		movw r20,r14
+ 287 00f0 9601      		movw r18,r12
+ 288 00f2 6881      		ld r22,Y
+ 289 00f4 7981      		ldd r23,Y+1
+ 290 00f6 8A81      		ldd r24,Y+2
+ 291 00f8 9B81      		ldd r25,Y+3
+ 292 00fa 0E94 0000 		call __mulsi3
+ 293 00fe 6C87      		std Y+12,r22
+ 294 0100 7D87      		std Y+13,r23
+ 295 0102 8E87      		std Y+14,r24
+ 296 0104 9F87      		std Y+15,r25
+ 297               	/* epilogue start */
+  29:scale.cpp     ****  return value_scl;
+  30:scale.cpp     **** }
+ 298               		.loc 1 30 0
+ 299 0106 DF91      		pop r29
+ 300 0108 CF91      		pop r28
+ 301               	.LVL21:
+ 302 010a 1F91      		pop r17
+ 303 010c 0F91      		pop r16
+ 304 010e FF90      		pop r15
+ 305 0110 EF90      		pop r14
+ 306 0112 DF90      		pop r13
+ 307 0114 CF90      		pop r12
+ 308 0116 0895      		ret
+ 309               		.cfi_endproc
+ 310               	.LFE17:
+ 312               	.global	_ZN5Scale10showWeightEb
+ 314               	_ZN5Scale10showWeightEb:
+ 315               	.LFB18:
+  31:scale.cpp     **** 
+  32:scale.cpp     **** void Scale::showWeight(bool verbose){
+ 316               		.loc 1 32 0
+ 317               		.cfi_startproc
+ 318               	.LVL22:
+ 319 0118 0F93      		push r16
+ 320               	.LCFI18:
+ 321               		.cfi_def_cfa_offset 3
+ 322               		.cfi_offset 16, -2
+ 323 011a CF93      		push r28
+ 324               	.LCFI19:
+ 325               		.cfi_def_cfa_offset 4
+ 326               		.cfi_offset 28, -3
+ 327 011c DF93      		push r29
+ 328               	.LCFI20:
+ 329               		.cfi_def_cfa_offset 5
+ 330               		.cfi_offset 29, -4
+ 331               	/* prologue: function */
+ 332               	/* frame size = 0 */
+ 333               	/* stack size = 3 */
+ 334               	.L__stack_usage = 3
+ 335 011e EC01      		movw r28,r24
+ 336 0120 262F      		mov r18,r22
+ 337 0122 4C85      		ldd r20,Y+12
+ 338 0124 5D85      		ldd r21,Y+13
+ 339 0126 6E85      		ldd r22,Y+14
+ 340 0128 7F85      		ldd r23,Y+15
+ 341 012a 8989      		ldd r24,Y+17
+ 342 012c 9A89      		ldd r25,Y+18
+ 343               	.LVL23:
+  33:scale.cpp     ****     
+  34:scale.cpp     ****     if(verbose){
+ 344               		.loc 1 34 0
+ 345 012e 2223      		tst r18
+ 346 0130 01F0      		breq .L11
+  35:scale.cpp     ****         uart->sendNb(value_scl,10,false);
+ 347               		.loc 1 35 0
+ 348 0132 00E0      		ldi r16,0
+ 349 0134 2AE0      		ldi r18,lo8(10)
+ 350 0136 0E94 0000 		call _ZN4UART6sendNbElhb
+ 351               	.LVL24:
+  36:scale.cpp     ****         uart->sendByte('\t');
+ 352               		.loc 1 36 0
+ 353 013a 69E0      		ldi r22,lo8(9)
+ 354 013c 8989      		ldd r24,Y+17
+ 355 013e 9A89      		ldd r25,Y+18
+ 356 0140 0E94 0000 		call _ZN4UART8sendByteEc
+ 357               	.LVL25:
+  37:scale.cpp     ****         uart->sendNb(value,2,true);
+ 358               		.loc 1 37 0
+ 359 0144 4885      		ldd r20,Y+8
+ 360 0146 5985      		ldd r21,Y+9
+ 361 0148 6A85      		ldd r22,Y+10
+ 362 014a 7B85      		ldd r23,Y+11
+ 363 014c 01E0      		ldi r16,lo8(1)
+ 364 014e 22E0      		ldi r18,lo8(2)
+ 365 0150 8989      		ldd r24,Y+17
+ 366 0152 9A89      		ldd r25,Y+18
+ 367 0154 0E94 0000 		call _ZN4UART6sendNbElhb
+ 368               	.LVL26:
+ 369               	/* epilogue start */
+  38:scale.cpp     ****     }else{
+  39:scale.cpp     ****         uart->sendNb(value_scl);
+  40:scale.cpp     ****     }
+  41:scale.cpp     **** }
+ 370               		.loc 1 41 0
+ 371 0158 DF91      		pop r29
+ 372 015a CF91      		pop r28
+ 373               	.LVL27:
+ 374 015c 0F91      		pop r16
+ 375 015e 0895      		ret
+ 376               	.LVL28:
+ 377               	.L11:
+ 378               	/* epilogue start */
+ 379 0160 DF91      		pop r29
+ 380 0162 CF91      		pop r28
+ 381               	.LVL29:
+ 382 0164 0F91      		pop r16
+  39:scale.cpp     ****     }
+ 383               		.loc 1 39 0
+ 384 0166 0C94 0000 		jmp _ZN4UART6sendNbEl
+ 385               	.LVL30:
+ 386               		.cfi_endproc
+ 387               	.LFE18:
+ 389               	.Letext0:
+ 390               		.file 3 "/usr/lib/avr/include/stdint.h"
+ 391               		.file 4 "ADC.h"
+ 392               		.file 5 "UART.h"
+ 393               		.file 6 "scale.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 scale.cpp
-     /tmp/ccnQQoyH.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccnQQoyH.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccnQQoyH.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccnQQoyH.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccnQQoyH.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccnQQoyH.s:12     .text:0000000000000000 _ZN5ScaleC2EP4UART
-     /tmp/ccnQQoyH.s:12     .text:0000000000000000 _ZN5ScaleC1EP4UART
-     /tmp/ccnQQoyH.s:97     .text:000000000000004c _ZN5ScaleD2Ev
-     /tmp/ccnQQoyH.s:97     .text:000000000000004c _ZN5ScaleD1Ev
-     /tmp/ccnQQoyH.s:120    .text:0000000000000052 _ZN5Scale4tareEv
-     /tmp/ccnQQoyH.s:184    .text:0000000000000094 _ZN5Scale9getWeightEv
-     /tmp/ccnQQoyH.s:274    .text:00000000000000f2 _ZN5Scale10showWeightEb
+     /tmp/ccjAVqCp.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccjAVqCp.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccjAVqCp.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccjAVqCp.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccjAVqCp.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccjAVqCp.s:12     .text:0000000000000000 _ZN5ScaleC2EP4UART
+     /tmp/ccjAVqCp.s:12     .text:0000000000000000 _ZN5ScaleC1EP4UART
+     /tmp/ccjAVqCp.s:117    .text:000000000000005e _ZN5ScaleD2Ev
+     /tmp/ccjAVqCp.s:117    .text:000000000000005e _ZN5ScaleD1Ev
+     /tmp/ccjAVqCp.s:140    .text:0000000000000064 _ZN5Scale4tareEv
+     /tmp/ccjAVqCp.s:224    .text:00000000000000ba _ZN5Scale9getWeightEv
+     /tmp/ccjAVqCp.s:314    .text:0000000000000118 _ZN5Scale10showWeightEb
 
 UNDEFINED SYMBOLS
 _ZN7MCP3462C1Ev

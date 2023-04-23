@@ -3,6 +3,9 @@
 Scale::Scale(UART* u){
     uart=u;
     gain=1;
+    while(DATA_READY){
+        _delay_ms(1);
+    }
     offset=myADC.getDirectData();
 }
 
@@ -12,6 +15,9 @@ Scale::~Scale(void){
 
 
 int32_t Scale::tare(void){
+    while(DATA_READY){
+        _delay_ms(1);
+    }
     offset=(myADC.getDirectData()+offset)>>1;
     return offset;
 }

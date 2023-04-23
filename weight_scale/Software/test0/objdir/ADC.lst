@@ -135,58 +135,62 @@
   74:ADC.cpp       ****     SPI_CS_PORT &=~(1<<SPI_CS_PIN); //set CSB low
   75:ADC.cpp       ****     
   76:ADC.cpp       ****     uint8_t status=transmit(SPI_ADDR|SPI_TYPE_STATIC_R|REG_ADCDATA);
-  77:ADC.cpp       ****     if(status!=0x13)return 0xFFFFFFFF;//Data is not ready of other error (POR)
-  78:ADC.cpp       ****     
-  79:ADC.cpp       ****     d=transmit(0); //CH_ID[3:0], SIGN(4 bits)
-  80:ADC.cpp       ****     ch=d>>4;
-  81:ADC.cpp       ****     sign=d&0x01;
-  82:ADC.cpp       ****     data=d;
-  83:ADC.cpp       ****     
-  84:ADC.cpp       ****     d=transmit(0);//SIGN(8 bits)
-  85:ADC.cpp       ****     data=(data<<8)|d;
+  77:ADC.cpp       ****     if(status!=0x13){
+  78:ADC.cpp       ****         SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB high
+  79:ADC.cpp       ****         return 0xFFFFFFFF;//Data is not ready of other error (POR)
+  80:ADC.cpp       ****     }
+  81:ADC.cpp       ****     
+  82:ADC.cpp       ****     d=transmit(0); //CH_ID[3:0], SIGN(4 bits)
+  83:ADC.cpp       ****     ch=d>>4;
+  84:ADC.cpp       ****     sign=d&0x01;
+  85:ADC.cpp       ****     data=d;
   86:ADC.cpp       ****     
-  87:ADC.cpp       ****     d=transmit(0);//DATA[15:8]
+  87:ADC.cpp       ****     d=transmit(0);//SIGN(8 bits)
   88:ADC.cpp       ****     data=(data<<8)|d;
-  89:ADC.cpp       ****     ADC_code=d;
-  90:ADC.cpp       ****     
-  91:ADC.cpp       ****     d=transmit(0);//DATA[7:0]
-  92:ADC.cpp       ****     data=(data<<8)|d;
-  93:ADC.cpp       ****     ADC_code=(ADC_code<<8)|d;;
-  94:ADC.cpp       ****     
-  95:ADC.cpp       ****     SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB high
-  96:ADC.cpp       ****     
-  97:ADC.cpp       ****     if(sign){
-  98:ADC.cpp       ****         return ((0x0000<<15) | ADC_code);        
-  99:ADC.cpp       ****     }else{
- 100:ADC.cpp       ****         return ((0x7000<<15) | ADC_code);
- 101:ADC.cpp       ****     }
- 102:ADC.cpp       ****     
- 103:ADC.cpp       **** }
- 104:ADC.cpp       **** 
- 105:ADC.cpp       **** 
- 106:ADC.cpp       **** uint8_t MCP3462::transmit(uint8_t d){
-  69               		.loc 1 106 0
+  89:ADC.cpp       ****     
+  90:ADC.cpp       ****     d=transmit(0);//DATA[15:8]
+  91:ADC.cpp       ****     data=(data<<8)|d;
+  92:ADC.cpp       ****     ADC_code=d;
+  93:ADC.cpp       ****     
+  94:ADC.cpp       ****     d=transmit(0);//DATA[7:0]
+  95:ADC.cpp       ****     data=(data<<8)|d;
+  96:ADC.cpp       ****     ADC_code=(ADC_code<<8)|d;;
+  97:ADC.cpp       ****     
+  98:ADC.cpp       ****     SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB high
+  99:ADC.cpp       ****     
+ 100:ADC.cpp       ****     /*if(sign){
+ 101:ADC.cpp       ****         return ((0x0000<<15) | ADC_code);        
+ 102:ADC.cpp       ****     }else{
+ 103:ADC.cpp       ****         return ((0x7000<<15) | ADC_code);
+ 104:ADC.cpp       ****     }*/
+ 105:ADC.cpp       ****     return data;
+ 106:ADC.cpp       ****     
+ 107:ADC.cpp       **** }
+ 108:ADC.cpp       **** 
+ 109:ADC.cpp       **** 
+ 110:ADC.cpp       **** uint8_t MCP3462::transmit(uint8_t d){
+  69               		.loc 1 110 0
   70               		.cfi_startproc
   71               	.LVL4:
   72               	/* prologue: function */
   73               	/* frame size = 0 */
   74               	/* stack size = 0 */
   75               	.L__stack_usage = 0
- 107:ADC.cpp       ****     SPDR = d;
-  76               		.loc 1 107 0
+ 111:ADC.cpp       ****     SPDR = d;
+  76               		.loc 1 111 0
   77 000e 6EBD      		out 0x2e,r22
   78               	.L5:
- 108:ADC.cpp       ****     while(!(SPSR & (1<<SPIF)));
-  79               		.loc 1 108 0
+ 112:ADC.cpp       ****     while(!(SPSR & (1<<SPIF)));
+  79               		.loc 1 112 0
   80 0010 0DB4      		in __tmp_reg__,0x2d
   81 0012 07FE      		sbrs __tmp_reg__,7
   82 0014 00C0      		rjmp .L5
- 109:ADC.cpp       ****     return SPDR;
-  83               		.loc 1 109 0
+ 113:ADC.cpp       ****     return SPDR;
+  83               		.loc 1 113 0
   84 0016 8EB5      		in r24,0x2e
   85               	.LVL5:
- 110:ADC.cpp       **** }
-  86               		.loc 1 110 0
+ 114:ADC.cpp       **** }
+  86               		.loc 1 114 0
   87 0018 0895      		ret
   88               		.cfi_endproc
   89               	.LFE16:
@@ -535,7 +539,7 @@
  149               	.LVL11:
   36:ADC.cpp       ****     
  150               		.loc 1 36 0
- 151 004a 60E3      		ldi r22,lo8(48)
+ 151 004a 68E2      		ldi r22,lo8(40)
  152 004c CE01      		movw r24,r28
  153 004e 0E94 0000 		call _ZN7MCP34628transmitEh
  154               	.LVL12:
@@ -599,136 +603,179 @@
  206               		.loc 1 68 0
  207               		.cfi_startproc
  208               	.LVL20:
- 209 0086 0F93      		push r16
+ 209 0086 CF92      		push r12
  210               	.LCFI2:
  211               		.cfi_def_cfa_offset 3
- 212               		.cfi_offset 16, -2
- 213 0088 1F93      		push r17
+ 212               		.cfi_offset 12, -2
+ 213 0088 DF92      		push r13
  214               	.LCFI3:
  215               		.cfi_def_cfa_offset 4
- 216               		.cfi_offset 17, -3
- 217 008a CF93      		push r28
+ 216               		.cfi_offset 13, -3
+ 217 008a EF92      		push r14
  218               	.LCFI4:
  219               		.cfi_def_cfa_offset 5
- 220               		.cfi_offset 28, -4
- 221               	/* prologue: function */
- 222               	/* frame size = 0 */
- 223               	/* stack size = 3 */
- 224               	.L__stack_usage = 3
- 225 008c 8C01      		movw r16,r24
- 226               	.LVL21:
+ 220               		.cfi_offset 14, -4
+ 221 008c FF92      		push r15
+ 222               	.LCFI5:
+ 223               		.cfi_def_cfa_offset 6
+ 224               		.cfi_offset 15, -5
+ 225 008e CF93      		push r28
+ 226               	.LCFI6:
+ 227               		.cfi_def_cfa_offset 7
+ 228               		.cfi_offset 28, -6
+ 229 0090 DF93      		push r29
+ 230               	.LCFI7:
+ 231               		.cfi_def_cfa_offset 8
+ 232               		.cfi_offset 29, -7
+ 233               	/* prologue: function */
+ 234               	/* frame size = 0 */
+ 235               	/* stack size = 6 */
+ 236               	.L__stack_usage = 6
+ 237 0092 EC01      		movw r28,r24
+ 238               	.LVL21:
   74:ADC.cpp       ****     
- 227               		.loc 1 74 0
- 228 008e 2898      		cbi 0x5,0
-  76:ADC.cpp       ****     if(status!=0x13)return 0xFFFFFFFF;//Data is not ready of other error (POR)
- 229               		.loc 1 76 0
- 230 0090 61E4      		ldi r22,lo8(65)
- 231 0092 0E94 0000 		call _ZN7MCP34628transmitEh
- 232               	.LVL22:
-  77:ADC.cpp       ****     
- 233               		.loc 1 77 0
- 234 0096 8331      		cpi r24,lo8(19)
- 235 0098 01F4      		brne .L11
-  79:ADC.cpp       ****     ch=d>>4;
- 236               		.loc 1 79 0
- 237 009a 60E0      		ldi r22,0
- 238 009c C801      		movw r24,r16
- 239               	.LVL23:
- 240 009e 0E94 0000 		call _ZN7MCP34628transmitEh
- 241               	.LVL24:
-  84:ADC.cpp       ****     data=(data<<8)|d;
- 242               		.loc 1 84 0
- 243 00a2 60E0      		ldi r22,0
- 244 00a4 C801      		movw r24,r16
- 245 00a6 0E94 0000 		call _ZN7MCP34628transmitEh
- 246               	.LVL25:
+ 239               		.loc 1 74 0
+ 240 0094 2898      		cbi 0x5,0
+  76:ADC.cpp       ****     if(status!=0x13){
+ 241               		.loc 1 76 0
+ 242 0096 61E4      		ldi r22,lo8(65)
+ 243 0098 0E94 0000 		call _ZN7MCP34628transmitEh
+ 244               	.LVL22:
+  77:ADC.cpp       ****         SPI_CS_PORT |=(1<<SPI_CS_PIN); //set CSB high
+ 245               		.loc 1 77 0
+ 246 009c 8331      		cpi r24,lo8(19)
+ 247 009e 01F0      		breq .L10
+ 248               	.LVL23:
+ 249               	.LBB14:
+ 250               	.LBB15:
+  78:ADC.cpp       ****         return 0xFFFFFFFF;//Data is not ready of other error (POR)
+ 251               		.loc 1 78 0
+ 252 00a0 289A      		sbi 0x5,0
+ 253               	.LVL24:
+ 254 00a2 6FEF      		ldi r22,lo8(-1)
+ 255 00a4 7FEF      		ldi r23,lo8(-1)
+ 256 00a6 CB01      		movw r24,r22
+ 257 00a8 00C0      		rjmp .L11
+ 258               	.L10:
+ 259               	.LBE15:
+ 260               	.LBE14:
+  82:ADC.cpp       ****     ch=d>>4;
+ 261               		.loc 1 82 0
+ 262 00aa 60E0      		ldi r22,0
+ 263 00ac CE01      		movw r24,r28
+ 264               	.LVL25:
+ 265 00ae 0E94 0000 		call _ZN7MCP34628transmitEh
+ 266               	.LVL26:
+ 267 00b2 C82E      		mov r12,r24
+ 268               	.LVL27:
   87:ADC.cpp       ****     data=(data<<8)|d;
- 247               		.loc 1 87 0
- 248 00aa 60E0      		ldi r22,0
- 249 00ac C801      		movw r24,r16
- 250 00ae 0E94 0000 		call _ZN7MCP34628transmitEh
- 251               	.LVL26:
- 252 00b2 C82F      		mov r28,r24
- 253               	.LVL27:
-  91:ADC.cpp       ****     data=(data<<8)|d;
- 254               		.loc 1 91 0
- 255 00b4 60E0      		ldi r22,0
- 256 00b6 C801      		movw r24,r16
- 257               	.LVL28:
- 258 00b8 0E94 0000 		call _ZN7MCP34628transmitEh
- 259               	.LVL29:
-  93:ADC.cpp       ****     
- 260               		.loc 1 93 0
- 261 00bc 6C2F      		mov r22,r28
- 262 00be 70E0      		ldi r23,0
- 263 00c0 762F      		mov r23,r22
- 264 00c2 6627      		clr r22
- 265               	.LVL30:
-  95:ADC.cpp       ****     
- 266               		.loc 1 95 0
- 267 00c4 289A      		sbi 0x5,0
- 100:ADC.cpp       ****     }
- 268               		.loc 1 100 0
- 269 00c6 682B      		or r22,r24
- 270               	.LVL31:
- 271 00c8 80E0      		ldi r24,0
- 272 00ca 90E0      		ldi r25,0
- 273               	.LVL32:
- 274 00cc 00C0      		rjmp .L10
- 275               	.LVL33:
- 276               	.L11:
-  77:ADC.cpp       ****     
- 277               		.loc 1 77 0
- 278 00ce 6FEF      		ldi r22,lo8(-1)
- 279 00d0 7FEF      		ldi r23,lo8(-1)
- 280 00d2 CB01      		movw r24,r22
- 281               	.LVL34:
- 282               	.L10:
- 283               	/* epilogue start */
- 103:ADC.cpp       **** 
- 284               		.loc 1 103 0
- 285 00d4 CF91      		pop r28
- 286 00d6 1F91      		pop r17
- 287 00d8 0F91      		pop r16
- 288               	.LVL35:
- 289 00da 0895      		ret
- 290               		.cfi_endproc
- 291               	.LFE15:
- 293               	.global	_ZN7MCP346213getDirectDataEv
- 295               	_ZN7MCP346213getDirectDataEv:
- 296               	.LFB13:
+ 269               		.loc 1 87 0
+ 270 00b4 60E0      		ldi r22,0
+ 271 00b6 CE01      		movw r24,r28
+ 272 00b8 0E94 0000 		call _ZN7MCP34628transmitEh
+ 273               	.LVL28:
+  88:ADC.cpp       ****     
+ 274               		.loc 1 88 0
+ 275 00bc D12C      		mov r13,__zero_reg__
+ 276 00be E12C      		mov r14,__zero_reg__
+ 277 00c0 F12C      		mov r15,__zero_reg__
+ 278 00c2 FE2C      		mov r15,r14
+ 279 00c4 ED2C      		mov r14,r13
+ 280 00c6 DC2C      		mov r13,r12
+ 281 00c8 CC24      		clr r12
+ 282               	.LVL29:
+ 283 00ca C82A      		or r12,r24
+ 284               	.LVL30:
+  90:ADC.cpp       ****     data=(data<<8)|d;
+ 285               		.loc 1 90 0
+ 286 00cc 60E0      		ldi r22,0
+ 287 00ce CE01      		movw r24,r28
+ 288               	.LVL31:
+ 289 00d0 0E94 0000 		call _ZN7MCP34628transmitEh
+ 290               	.LVL32:
+  91:ADC.cpp       ****     ADC_code=d;
+ 291               		.loc 1 91 0
+ 292 00d4 FE2C      		mov r15,r14
+ 293 00d6 ED2C      		mov r14,r13
+ 294 00d8 DC2C      		mov r13,r12
+ 295 00da CC24      		clr r12
+ 296               	.LVL33:
+ 297 00dc C82A      		or r12,r24
+ 298               	.LVL34:
+  94:ADC.cpp       ****     data=(data<<8)|d;
+ 299               		.loc 1 94 0
+ 300 00de 60E0      		ldi r22,0
+ 301 00e0 CE01      		movw r24,r28
+ 302               	.LVL35:
+ 303 00e2 0E94 0000 		call _ZN7MCP34628transmitEh
+ 304               	.LVL36:
+  95:ADC.cpp       ****     ADC_code=(ADC_code<<8)|d;;
+ 305               		.loc 1 95 0
+ 306 00e6 FE2C      		mov r15,r14
+ 307 00e8 ED2C      		mov r14,r13
+ 308 00ea DC2C      		mov r13,r12
+ 309 00ec CC24      		clr r12
+ 310               	.LVL37:
+  98:ADC.cpp       ****     
+ 311               		.loc 1 98 0
+ 312 00ee 289A      		sbi 0x5,0
+ 105:ADC.cpp       ****     
+ 313               		.loc 1 105 0
+ 314 00f0 A701      		movw r20,r14
+ 315 00f2 9601      		movw r18,r12
+ 316 00f4 282B      		or r18,r24
+ 317 00f6 CA01      		movw r24,r20
+ 318 00f8 B901      		movw r22,r18
+ 319               	.LVL38:
+ 320               	.L11:
+ 321               	/* epilogue start */
+ 107:ADC.cpp       **** 
+ 322               		.loc 1 107 0
+ 323 00fa DF91      		pop r29
+ 324 00fc CF91      		pop r28
+ 325               	.LVL39:
+ 326 00fe FF90      		pop r15
+ 327 0100 EF90      		pop r14
+ 328 0102 DF90      		pop r13
+ 329 0104 CF90      		pop r12
+ 330 0106 0895      		ret
+ 331               		.cfi_endproc
+ 332               	.LFE15:
+ 334               	.global	_ZN7MCP346213getDirectDataEv
+ 336               	_ZN7MCP346213getDirectDataEv:
+ 337               	.LFB13:
   60:ADC.cpp       ****     return readADCreg();
- 297               		.loc 1 60 0
- 298               		.cfi_startproc
- 299               	.LVL36:
- 300               	/* prologue: function */
- 301               	/* frame size = 0 */
- 302               	/* stack size = 0 */
- 303               	.L__stack_usage = 0
+ 338               		.loc 1 60 0
+ 339               		.cfi_startproc
+ 340               	.LVL40:
+ 341               	/* prologue: function */
+ 342               	/* frame size = 0 */
+ 343               	/* stack size = 0 */
+ 344               	.L__stack_usage = 0
   61:ADC.cpp       **** }
- 304               		.loc 1 61 0
- 305 00dc 0C94 0000 		jmp _ZN7MCP346210readADCregEv
- 306               	.LVL37:
- 307               		.cfi_endproc
- 308               	.LFE13:
- 310               	.Letext0:
- 311               		.file 3 "/usr/lib/avr/include/stdint.h"
- 312               		.file 4 "ADC.h"
+ 345               		.loc 1 61 0
+ 346 0108 0C94 0000 		jmp _ZN7MCP346210readADCregEv
+ 347               	.LVL41:
+ 348               		.cfi_endproc
+ 349               	.LFE13:
+ 351               	.Letext0:
+ 352               		.file 3 "/usr/lib/avr/include/stdint.h"
+ 353               		.file 4 "ADC.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ADC.cpp
-     /tmp/ccQgsIQg.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccQgsIQg.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccQgsIQg.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccQgsIQg.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccQgsIQg.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccQgsIQg.s:12     .text:0000000000000000 _ZN7MCP3462D2Ev
-     /tmp/ccQgsIQg.s:12     .text:0000000000000000 _ZN7MCP3462D1Ev
-     /tmp/ccQgsIQg.s:30     .text:0000000000000002 _ZN7MCP346211isDataReadyEv
-     /tmp/ccQgsIQg.s:48     .text:0000000000000006 _ZN7MCP346213getGainedDataEv
-     /tmp/ccQgsIQg.s:67     .text:000000000000000e _ZN7MCP34628transmitEh
-     /tmp/ccQgsIQg.s:93     .text:000000000000001a _ZN7MCP3462C2Ev
-     /tmp/ccQgsIQg.s:93     .text:000000000000001a _ZN7MCP3462C1Ev
-     /tmp/ccQgsIQg.s:204    .text:0000000000000086 _ZN7MCP346210readADCregEv
-     /tmp/ccQgsIQg.s:295    .text:00000000000000dc _ZN7MCP346213getDirectDataEv
+     /tmp/ccQl7eCW.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccQl7eCW.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccQl7eCW.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccQl7eCW.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccQl7eCW.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccQl7eCW.s:12     .text:0000000000000000 _ZN7MCP3462D2Ev
+     /tmp/ccQl7eCW.s:12     .text:0000000000000000 _ZN7MCP3462D1Ev
+     /tmp/ccQl7eCW.s:30     .text:0000000000000002 _ZN7MCP346211isDataReadyEv
+     /tmp/ccQl7eCW.s:48     .text:0000000000000006 _ZN7MCP346213getGainedDataEv
+     /tmp/ccQl7eCW.s:67     .text:000000000000000e _ZN7MCP34628transmitEh
+     /tmp/ccQl7eCW.s:93     .text:000000000000001a _ZN7MCP3462C2Ev
+     /tmp/ccQl7eCW.s:93     .text:000000000000001a _ZN7MCP3462C1Ev
+     /tmp/ccQl7eCW.s:204    .text:0000000000000086 _ZN7MCP346210readADCregEv
+     /tmp/ccQl7eCW.s:336    .text:0000000000000108 _ZN7MCP346213getDirectDataEv
 
 NO UNDEFINED SYMBOLS

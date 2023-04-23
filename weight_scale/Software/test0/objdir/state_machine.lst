@@ -730,19 +730,19 @@
  542               		.file 7 "state_machine.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 state_machine.cpp
-     /tmp/ccf07QZE.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccf07QZE.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccf07QZE.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccf07QZE.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccf07QZE.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccf07QZE.s:16     .text:0000000000000000 _ZN2SMC2EP4UARTP5ScaleP3LCD
-     /tmp/ccf07QZE.s:16     .text:0000000000000000 _ZN2SMC1EP4UARTP5ScaleP3LCD
-     /tmp/ccf07QZE.s:63     .text:0000000000000022 _ZN2SMD2Ev
-     /tmp/ccf07QZE.s:63     .text:0000000000000022 _ZN2SMD1Ev
-     /tmp/ccf07QZE.s:80     .text:0000000000000024 _ZN2SM6streamEbb
-     /tmp/ccf07QZE.s:112    .text:000000000000002e _ZN2SM9nextStateEv
-     /tmp/ccf07QZE.s:530    .rodata:0000000000000000 _ZN2SM15states_durationE
-     /tmp/ccf07QZE.s:331    .text:0000000000000158 _ZN2SM6updateEv
+     /tmp/ccpfN7Ob.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccpfN7Ob.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccpfN7Ob.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccpfN7Ob.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccpfN7Ob.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccpfN7Ob.s:16     .text:0000000000000000 _ZN2SMC2EP4UARTP5ScaleP3LCD
+     /tmp/ccpfN7Ob.s:16     .text:0000000000000000 _ZN2SMC1EP4UARTP5ScaleP3LCD
+     /tmp/ccpfN7Ob.s:63     .text:0000000000000022 _ZN2SMD2Ev
+     /tmp/ccpfN7Ob.s:63     .text:0000000000000022 _ZN2SMD1Ev
+     /tmp/ccpfN7Ob.s:80     .text:0000000000000024 _ZN2SM6streamEbb
+     /tmp/ccpfN7Ob.s:112    .text:000000000000002e _ZN2SM9nextStateEv
+     /tmp/ccpfN7Ob.s:530    .rodata:0000000000000000 _ZN2SM15states_durationE
+     /tmp/ccpfN7Ob.s:331    .text:0000000000000158 _ZN2SM6updateEv
 
 UNDEFINED SYMBOLS
 _ZN4UART10sendStringEPcb
