@@ -30,7 +30,7 @@
   19               	/* frame size = 0 */
   20               	/* stack size = 0 */
   21               	.L__stack_usage = 0
-  22               	.LBB15:
+  22               	.LBB10:
   13:LCD.cpp       **** 	DDRB |= (1 << PB0);
   23               		.loc 1 13 0
   24 0000 209A      		sbi 0x4,0
@@ -43,25 +43,25 @@
   29               	.LVL1:
   30 0008 8063      		ori r24,lo8(48)
   31 000a 8093 E500 		sts 229,r24
-  32               	.LBE15:
-  33               	.LBB16:
-  34               	.LBB17:
+  32               	.LBE10:
+  33               	.LBB11:
+  34               	.LBB12:
   16:LCD.cpp       **** 	
   17:LCD.cpp       **** 	if(lowP){
   18:LCD.cpp       **** 		LCDFRR|=(1<<LCDPS2)|(1<<LCDPS1)|(1<<LCDPS0)|(1<<LCDCD2)|(1<<LCDCD1)|(1<<LCDCD0); // prescaler 409
   35               		.loc 1 18 0
   36 000e 8091 E600 		lds r24,230
-  37               	.LBE17:
-  38               	.LBE16:
-  39               	.LBB19:
+  37               	.LBE12:
+  38               	.LBE11:
+  39               	.LBB14:
   17:LCD.cpp       **** 		LCDFRR|=(1<<LCDPS2)|(1<<LCDPS1)|(1<<LCDPS0)|(1<<LCDCD2)|(1<<LCDCD1)|(1<<LCDCD0); // prescaler 409
   40               		.loc 1 17 0
   41 0012 6623      		tst r22
   42 0014 01F0      		breq .L2
   43               	.LVL2:
-  44               	.LBE19:
-  45               	.LBB20:
-  46               	.LBB18:
+  44               	.LBE14:
+  45               	.LBB15:
+  46               	.LBB13:
   47               		.loc 1 18 0
   48 0016 8767      		ori r24,lo8(119)
   49 0018 8093 E600 		sts 230,r24
@@ -77,9 +77,9 @@
   57 002c 00C0      		rjmp .L4
   58               	.LVL3:
   59               	.L2:
-  60               	.LBE18:
-  61               	.LBE20:
-  62               	.LBB21:
+  60               	.LBE13:
+  61               	.LBE15:
+  62               	.LBB16:
   21:LCD.cpp       **** 	}else{
   22:LCD.cpp       **** 		LCDFRR|=(1<<LCDPS2)|(1<<LCDPS1)|(1<<LCDPS0)|(1<<LCDCD2)|(1<<LCDCD2)|(1<<LCDCD0); // prescaler 409
   63               		.loc 1 22 0
@@ -97,7 +97,7 @@
   73               	.L4:
   74 0044 8093 E400 		sts 228,r24
   75 0048 0895      		ret
-  76               	.LBE21:
+  76               	.LBE16:
   77               		.cfi_endproc
   78               	.LFE7:
   80               	.global	_ZN3LCDC1Eb
@@ -116,7 +116,7 @@
   90               	/* frame size = 0 */
   91               	/* stack size = 0 */
   92               	.L__stack_usage = 0
-  93               	.LBB22:
+  93               	.LBB17:
   29:LCD.cpp       **** 	LCDCRA|=(1<<LCDBL);
   94               		.loc 1 29 0
   95 004a E4EE      		ldi r30,lo8(-28)
@@ -126,8 +126,8 @@
   99 0050 8160      		ori r24,lo8(1)
  100 0052 8083      		st Z,r24
  101               	.LVL6:
- 102               	.LBB23:
- 103               	.LBB24:
+ 102               	.LBB18:
+ 103               	.LBB19:
  104               		.file 2 "/usr/lib/avr/include/util/delay.h"
    1:/usr/lib/avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
    2:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
@@ -327,8 +327,8 @@
  113 0062 00C0      		rjmp .
  114 0064 0000      		nop
  115               	.LVL7:
- 116               	.LBE24:
- 117               	.LBE23:
+ 116               	.LBE19:
+ 117               	.LBE18:
   30:LCD.cpp       **** 	_delay_ms(500);
   31:LCD.cpp       **** 	LCDCRA&=~(1<<LCDEN);
  118               		.loc 1 31 0
@@ -336,7 +336,7 @@
  120 0068 8F77      		andi r24,lo8(127)
  121 006a 8083      		st Z,r24
  122 006c 0895      		ret
- 123               	.LBE22:
+ 123               	.LBE17:
  124               		.cfi_endproc
  125               	.LFE10:
  127               	.global	_ZN3LCDD1Ev
@@ -387,7 +387,7 @@
  170               	/* stack size = 8 */
  171               	.L__stack_usage = 8
  172               	.LVL9:
- 173               	.LBB25:
+ 173               	.LBB20:
   35:LCD.cpp       **** 	for(uint8_t j=0;j<8;j++){
   36:LCD.cpp       **** 		if(NbMap[nb] & (1<<j)){
  174               		.loc 1 36 0
@@ -483,7 +483,7 @@
  256 00f8 3105      		cpc r19,__zero_reg__
  257 00fa 01F4      		brne .L10
  258               	/* epilogue start */
- 259               	.LBE25:
+ 259               	.LBE20:
   40:LCD.cpp       **** 		}	
   41:LCD.cpp       **** 	}
   42:LCD.cpp       **** }
@@ -555,7 +555,7 @@
  325               		.loc 1 44 0
  326 012c 20E0      		ldi r18,0
  327 012e 30E0      		ldi r19,0
- 328               	.LBB26:
+ 328               	.LBB21:
   45:LCD.cpp       **** 	for(uint8_t j=0;j<8;j++){
   46:LCD.cpp       **** 		if(sy & (1<<j)){
  329               		.loc 1 46 0
@@ -636,7 +636,7 @@
  396 018e 3105      		cpc r19,__zero_reg__
  397 0190 01F4      		brne .L16
  398               	/* epilogue start */
- 399               	.LBE26:
+ 399               	.LBE21:
   50:LCD.cpp       **** 		}
   51:LCD.cpp       **** 	}
   52:LCD.cpp       **** }
@@ -867,8 +867,8 @@
  555 0258 8823      		tst r24
  556 025a 01F0      		breq .L38
  557               	.LVL24:
- 558               	.LBB29:
- 559               	.LBB30:
+ 558               	.LBB24:
+ 559               	.LBB25:
  109:LCD.cpp       **** 		LCDDR15|=(1<<4);
  560               		.loc 1 109 0
  561 025c 8091 FB00 		lds r24,251
@@ -877,8 +877,8 @@
  564 0262 00C0      		rjmp .L40
  565               	.LVL26:
  566               	.L38:
- 567               	.LBE30:
- 568               	.LBE29:
+ 567               	.LBE25:
+ 568               	.LBE24:
  110:LCD.cpp       **** 	}else{
  111:LCD.cpp       **** 		LCDDR15&=~(1<<4);
  569               		.loc 1 111 0
@@ -909,8 +909,8 @@
  591 0270 8823      		tst r24
  592 0272 01F0      		breq .L42
  593               	.LVL29:
- 594               	.LBB33:
- 595               	.LBB34:
+ 594               	.LBB28:
+ 595               	.LBB29:
  117:LCD.cpp       **** 		LCDDR16|=1;
  596               		.loc 1 117 0
  597 0274 8091 FC00 		lds r24,252
@@ -919,8 +919,8 @@
  600 027a 00C0      		rjmp .L44
  601               	.LVL31:
  602               	.L42:
- 603               	.LBE34:
- 604               	.LBE33:
+ 603               	.LBE29:
+ 604               	.LBE28:
  118:LCD.cpp       **** 	}else{
  119:LCD.cpp       **** 		LCDDR16&=~1;
  605               		.loc 1 119 0
@@ -975,500 +975,487 @@
  648 0298 0895      		ret
  649               		.cfi_endproc
  650               	.LFE18:
- 652               	.global	_ZN3LCD5blinkEj
- 654               	_ZN3LCD5blinkEj:
+ 652               	.global	_ZN3LCD5setNbElh
+ 654               	_ZN3LCD5setNbElh:
  655               	.LFB19:
  130:LCD.cpp       **** 
- 131:LCD.cpp       **** void LCD::blink(uint16_t t) {
- 656               		.loc 1 131 0
+ 131:LCD.cpp       **** 
+ 132:LCD.cpp       **** 
+ 133:LCD.cpp       **** uint8_t LCD::setNb(int32_t nb, uint8_t dig) {
+ 656               		.loc 1 133 0
  657               		.cfi_startproc
  658               	.LVL33:
- 659               	/* prologue: function */
- 660               	/* frame size = 0 */
- 661               	/* stack size = 0 */
- 662               	.L__stack_usage = 0
- 663               	.LBB35:
- 132:LCD.cpp       **** 	for(uint16_t i=0;i<t;i++){
- 664               		.loc 1 132 0
- 665 029a 20E0      		ldi r18,0
- 666 029c 30E0      		ldi r19,0
- 667               	.LVL34:
- 668               	.L49:
- 669               		.loc 1 132 0 is_stmt 0 discriminator 3
- 670 029e 2817      		cp r18,r24
- 671 02a0 3907      		cpc r19,r25
- 672 02a2 01F0      		breq .L47
- 133:LCD.cpp       **** 		PORTB|=(1<<PB0);
- 673               		.loc 1 133 0 is_stmt 1 discriminator 2
- 674 02a4 289A      		sbi 0x5,0
- 675               	.LVL35:
- 676               	.LBB36:
- 677               	.LBB37:
- 678               		.loc 2 187 0 discriminator 2
- 679 02a6 EFE2      		ldi r30,lo8(29999)
- 680 02a8 F5E7      		ldi r31,hi8(29999)
- 681 02aa 3197      	1:	sbiw r30,1
- 682 02ac 01F4      		brne 1b
- 683 02ae 00C0      		rjmp .
- 684 02b0 0000      		nop
- 685               	.LVL36:
- 686               	.LBE37:
- 687               	.LBE36:
- 134:LCD.cpp       **** 		_delay_ms(15);
- 135:LCD.cpp       **** 		PORTB&=~(1<<PB0);
- 688               		.loc 1 135 0 discriminator 2
- 689 02b2 2898      		cbi 0x5,0
- 690               	.LVL37:
- 691               	.LBB38:
- 692               	.LBB39:
- 693               		.loc 2 187 0 discriminator 2
- 694 02b4 EFE2      		ldi r30,lo8(29999)
- 695 02b6 F5E7      		ldi r31,hi8(29999)
- 696 02b8 3197      	1:	sbiw r30,1
- 697 02ba 01F4      		brne 1b
- 698 02bc 00C0      		rjmp .
- 699 02be 0000      		nop
- 700               	.LVL38:
- 701               	.LBE39:
- 702               	.LBE38:
- 132:LCD.cpp       **** 		PORTB|=(1<<PB0);
- 703               		.loc 1 132 0 discriminator 2
- 704 02c0 2F5F      		subi r18,-1
- 705 02c2 3F4F      		sbci r19,-1
- 706               	.LVL39:
- 707 02c4 00C0      		rjmp .L49
- 708               	.L47:
- 709 02c6 0895      		ret
- 710               	.LBE35:
- 711               		.cfi_endproc
- 712               	.LFE19:
- 714               	.global	_ZN3LCD5setNbEl
- 716               	_ZN3LCD5setNbEl:
- 717               	.LFB20:
- 136:LCD.cpp       **** 		_delay_ms(15);
- 137:LCD.cpp       **** 	}
- 138:LCD.cpp       **** }
- 139:LCD.cpp       **** 
- 140:LCD.cpp       **** uint8_t LCD::setNb(int32_t nb) {// TODO 10ms !
- 718               		.loc 1 140 0
- 719               		.cfi_startproc
- 720               	.LVL40:
- 721 02c8 4F92      		push r4
- 722               	.LCFI16:
- 723               		.cfi_def_cfa_offset 3
- 724               		.cfi_offset 4, -2
- 725 02ca 5F92      		push r5
- 726               	.LCFI17:
- 727               		.cfi_def_cfa_offset 4
- 728               		.cfi_offset 5, -3
- 729 02cc 6F92      		push r6
- 730               	.LCFI18:
- 731               		.cfi_def_cfa_offset 5
- 732               		.cfi_offset 6, -4
- 733 02ce 7F92      		push r7
- 734               	.LCFI19:
- 735               		.cfi_def_cfa_offset 6
- 736               		.cfi_offset 7, -5
- 737 02d0 8F92      		push r8
- 738               	.LCFI20:
- 739               		.cfi_def_cfa_offset 7
- 740               		.cfi_offset 8, -6
- 741 02d2 9F92      		push r9
- 742               	.LCFI21:
- 743               		.cfi_def_cfa_offset 8
- 744               		.cfi_offset 9, -7
- 745 02d4 AF92      		push r10
- 746               	.LCFI22:
- 747               		.cfi_def_cfa_offset 9
- 748               		.cfi_offset 10, -8
- 749 02d6 BF92      		push r11
- 750               	.LCFI23:
- 751               		.cfi_def_cfa_offset 10
- 752               		.cfi_offset 11, -9
- 753 02d8 CF92      		push r12
- 754               	.LCFI24:
- 755               		.cfi_def_cfa_offset 11
- 756               		.cfi_offset 12, -10
- 757 02da DF92      		push r13
- 758               	.LCFI25:
- 759               		.cfi_def_cfa_offset 12
- 760               		.cfi_offset 13, -11
- 761 02dc EF92      		push r14
- 762               	.LCFI26:
- 763               		.cfi_def_cfa_offset 13
- 764               		.cfi_offset 14, -12
- 765 02de FF92      		push r15
- 766               	.LCFI27:
- 767               		.cfi_def_cfa_offset 14
- 768               		.cfi_offset 15, -13
- 769 02e0 0F93      		push r16
- 770               	.LCFI28:
- 771               		.cfi_def_cfa_offset 15
- 772               		.cfi_offset 16, -14
- 773 02e2 1F93      		push r17
- 774               	.LCFI29:
- 775               		.cfi_def_cfa_offset 16
- 776               		.cfi_offset 17, -15
- 777 02e4 CF93      		push r28
- 778               	.LCFI30:
- 779               		.cfi_def_cfa_offset 17
- 780               		.cfi_offset 28, -16
- 781 02e6 DF93      		push r29
- 782               	.LCFI31:
- 783               		.cfi_def_cfa_offset 18
- 784               		.cfi_offset 29, -17
- 785               	/* prologue: function */
- 786               	/* frame size = 0 */
- 787               	/* stack size = 16 */
- 788               	.L__stack_usage = 16
- 789 02e8 6B01      		movw r12,r22
- 790 02ea 7C01      		movw r14,r24
- 141:LCD.cpp       **** 	if(nb>999999 || nb <-99999){
- 791               		.loc 1 141 0
- 792 02ec DC01      		movw r26,r24
- 793 02ee CB01      		movw r24,r22
- 794 02f0 8156      		subi r24,97
- 795 02f2 9947      		sbci r25,121
- 796 02f4 AE4F      		sbci r26,-2
- 797 02f6 BF4F      		sbci r27,-1
- 798 02f8 8F3D      		cpi r24,-33
- 799 02fa 984C      		sbci r25,-56
- 800 02fc A041      		sbci r26,16
- 801 02fe B105      		cpc r27,__zero_reg__
- 802 0300 00F0      		brlo .+2
- 803 0302 00C0      		rjmp .L57
- 804               	.LVL41:
- 142:LCD.cpp       **** 		return 1;
+ 659 029a 4F92      		push r4
+ 660               	.LCFI16:
+ 661               		.cfi_def_cfa_offset 3
+ 662               		.cfi_offset 4, -2
+ 663 029c 5F92      		push r5
+ 664               	.LCFI17:
+ 665               		.cfi_def_cfa_offset 4
+ 666               		.cfi_offset 5, -3
+ 667 029e 6F92      		push r6
+ 668               	.LCFI18:
+ 669               		.cfi_def_cfa_offset 5
+ 670               		.cfi_offset 6, -4
+ 671 02a0 7F92      		push r7
+ 672               	.LCFI19:
+ 673               		.cfi_def_cfa_offset 6
+ 674               		.cfi_offset 7, -5
+ 675 02a2 8F92      		push r8
+ 676               	.LCFI20:
+ 677               		.cfi_def_cfa_offset 7
+ 678               		.cfi_offset 8, -6
+ 679 02a4 9F92      		push r9
+ 680               	.LCFI21:
+ 681               		.cfi_def_cfa_offset 8
+ 682               		.cfi_offset 9, -7
+ 683 02a6 AF92      		push r10
+ 684               	.LCFI22:
+ 685               		.cfi_def_cfa_offset 9
+ 686               		.cfi_offset 10, -8
+ 687 02a8 BF92      		push r11
+ 688               	.LCFI23:
+ 689               		.cfi_def_cfa_offset 10
+ 690               		.cfi_offset 11, -9
+ 691 02aa CF92      		push r12
+ 692               	.LCFI24:
+ 693               		.cfi_def_cfa_offset 11
+ 694               		.cfi_offset 12, -10
+ 695 02ac DF92      		push r13
+ 696               	.LCFI25:
+ 697               		.cfi_def_cfa_offset 12
+ 698               		.cfi_offset 13, -11
+ 699 02ae EF92      		push r14
+ 700               	.LCFI26:
+ 701               		.cfi_def_cfa_offset 13
+ 702               		.cfi_offset 14, -12
+ 703 02b0 FF92      		push r15
+ 704               	.LCFI27:
+ 705               		.cfi_def_cfa_offset 14
+ 706               		.cfi_offset 15, -13
+ 707 02b2 0F93      		push r16
+ 708               	.LCFI28:
+ 709               		.cfi_def_cfa_offset 15
+ 710               		.cfi_offset 16, -14
+ 711 02b4 1F93      		push r17
+ 712               	.LCFI29:
+ 713               		.cfi_def_cfa_offset 16
+ 714               		.cfi_offset 17, -15
+ 715 02b6 CF93      		push r28
+ 716               	.LCFI30:
+ 717               		.cfi_def_cfa_offset 17
+ 718               		.cfi_offset 28, -16
+ 719 02b8 DF93      		push r29
+ 720               	.LCFI31:
+ 721               		.cfi_def_cfa_offset 18
+ 722               		.cfi_offset 29, -17
+ 723               	/* prologue: function */
+ 724               	/* frame size = 0 */
+ 725               	/* stack size = 16 */
+ 726               	.L__stack_usage = 16
+ 727 02ba 6B01      		movw r12,r22
+ 728 02bc 7C01      		movw r14,r24
+ 729 02be D42F      		mov r29,r20
+ 134:LCD.cpp       **** 	if(nb>999999 || nb <-99999){
+ 730               		.loc 1 134 0
+ 731 02c0 DC01      		movw r26,r24
+ 732 02c2 CB01      		movw r24,r22
+ 733 02c4 8156      		subi r24,97
+ 734 02c6 9947      		sbci r25,121
+ 735 02c8 AE4F      		sbci r26,-2
+ 736 02ca BF4F      		sbci r27,-1
+ 737 02cc 8F3D      		cpi r24,-33
+ 738 02ce 984C      		sbci r25,-56
+ 739 02d0 A041      		sbci r26,16
+ 740 02d2 B105      		cpc r27,__zero_reg__
+ 741 02d4 00F0      		brlo .+2
+ 742 02d6 00C0      		rjmp .L54
+ 743               	.LVL34:
+ 744               	.LBB32:
+ 745               	.LBB33:
+ 135:LCD.cpp       **** 		return 1;
+ 136:LCD.cpp       **** 	}
+ 137:LCD.cpp       **** 	int8_t d=5;
+ 138:LCD.cpp       **** 	uint8_t min=6-dig;
+ 746               		.loc 1 138 0
+ 747 02d8 C6E0      		ldi r28,lo8(6)
+ 748 02da C41B      		sub r28,r20
+ 749               	.LVL35:
+ 139:LCD.cpp       **** 	if(nb<0){
+ 750               		.loc 1 139 0
+ 751 02dc F7FE      		sbrs r15,7
+ 752 02de 00C0      		rjmp .L49
+ 140:LCD.cpp       **** 		setDigit(0,Minus);
+ 753               		.loc 1 140 0
+ 754 02e0 60E4      		ldi r22,lo8(64)
+ 755               	.LVL36:
+ 756 02e2 80E0      		ldi r24,0
+ 757 02e4 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 758               	.LVL37:
+ 141:LCD.cpp       **** 		min++;
+ 759               		.loc 1 141 0
+ 760 02e8 C7E0      		ldi r28,lo8(7)
+ 761               	.LVL38:
+ 762 02ea CD1B      		sub r28,r29
+ 763               	.LVL39:
+ 142:LCD.cpp       **** 		nb=(~nb)+1;
+ 764               		.loc 1 142 0
+ 765 02ec F094      		com r15
+ 766 02ee E094      		com r14
+ 767 02f0 D094      		com r13
+ 768 02f2 C094      		com r12
+ 769 02f4 C11C      		adc r12,__zero_reg__
+ 770 02f6 D11C      		adc r13,__zero_reg__
+ 771 02f8 E11C      		adc r14,__zero_reg__
+ 772 02fa F11C      		adc r15,__zero_reg__
+ 773               	.LVL40:
+ 774               	.L49:
+ 775               	.LBE33:
+ 776               	.LBE32:
+ 133:LCD.cpp       **** 	if(nb>999999 || nb <-99999){
+ 777               		.loc 1 133 0
+ 778 02fc 15E0      		ldi r17,lo8(5)
+ 779               	.LBB36:
+ 780               	.LBB34:
  143:LCD.cpp       **** 	}
- 144:LCD.cpp       **** 	int8_t d=5;
- 145:LCD.cpp       **** 	uint8_t min=0;
- 146:LCD.cpp       **** 	if(nb<0){
- 805               		.loc 1 146 0
- 806 0304 F7FE      		sbrs r15,7
- 807 0306 00C0      		rjmp .L58
- 147:LCD.cpp       **** 		setDigit(0,Minus);
- 808               		.loc 1 147 0
- 809 0308 60E4      		ldi r22,lo8(64)
- 810               	.LVL42:
- 811 030a 80E0      		ldi r24,0
- 812 030c 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
- 813               	.LVL43:
- 148:LCD.cpp       **** 		min++;
- 149:LCD.cpp       **** 		nb=(~nb)+1;
- 814               		.loc 1 149 0
- 815 0310 F094      		com r15
- 816 0312 E094      		com r14
- 817 0314 D094      		com r13
- 818 0316 C094      		com r12
- 819 0318 C11C      		adc r12,__zero_reg__
- 820 031a D11C      		adc r13,__zero_reg__
- 821 031c E11C      		adc r14,__zero_reg__
- 822 031e F11C      		adc r15,__zero_reg__
- 823               	.LVL44:
- 148:LCD.cpp       **** 		min++;
- 824               		.loc 1 148 0
- 825 0320 01E0      		ldi r16,lo8(1)
- 826 0322 00C0      		rjmp .L52
- 827               	.LVL45:
- 828               	.L58:
- 145:LCD.cpp       **** 	if(nb<0){
- 829               		.loc 1 145 0
- 830 0324 00E0      		ldi r16,0
- 831               	.LVL46:
- 832               	.L52:
- 148:LCD.cpp       **** 		min++;
- 833               		.loc 1 148 0
- 834 0326 C5E0      		ldi r28,lo8(5)
- 150:LCD.cpp       **** 	}
- 151:LCD.cpp       **** 	while(d>=min){
- 835               		.loc 1 151 0
- 836 0328 10E0      		ldi r17,0
- 152:LCD.cpp       **** 		setDigit(d--,nb%10);
- 837               		.loc 1 152 0
- 838 032a 8AE0      		ldi r24,lo8(10)
- 839 032c 482E      		mov r4,r24
- 840 032e 512C      		mov r5,__zero_reg__
- 841 0330 612C      		mov r6,__zero_reg__
- 842 0332 712C      		mov r7,__zero_reg__
- 843               	.LVL47:
- 844               	.L54:
- 151:LCD.cpp       **** 		setDigit(d--,nb%10);
- 845               		.loc 1 151 0
- 846 0334 8C2F      		mov r24,r28
- 847 0336 0C2E      		mov __tmp_reg__,r28
- 848 0338 000C      		lsl r0
- 849 033a 990B      		sbc r25,r25
- 850 033c 8017      		cp r24,r16
- 851 033e 9107      		cpc r25,r17
- 852 0340 04F4      		brge .L53
- 853               	.LVL48:
- 854               	.L55:
- 153:LCD.cpp       **** 		nb/=10;
- 154:LCD.cpp       **** 		if(nb==0)break;
- 155:LCD.cpp       **** 	}
- 156:LCD.cpp       **** 	while(d>=min)setDigit(d--,Blank);
- 157:LCD.cpp       **** 	return 0;
- 855               		.loc 1 157 0
- 856 0342 80E0      		ldi r24,0
- 857 0344 00C0      		rjmp .L51
- 858               	.LVL49:
- 859               	.L53:
- 152:LCD.cpp       **** 		nb/=10;
- 860               		.loc 1 152 0
- 861 0346 C701      		movw r24,r14
- 862 0348 B601      		movw r22,r12
- 863 034a A301      		movw r20,r6
- 864 034c 9201      		movw r18,r4
- 865 034e 0E94 0000 		call __divmodsi4
- 866 0352 4901      		movw r8,r18
- 867 0354 5A01      		movw r10,r20
- 868 0356 8C2F      		mov r24,r28
- 869 0358 C150      		subi r28,lo8(-(-1))
- 870               	.LVL50:
- 871 035a 0E94 0000 		call _ZN3LCD8setDigitEhh
- 872               	.LVL51:
- 153:LCD.cpp       **** 		nb/=10;
- 873               		.loc 1 153 0
- 874 035e 6401      		movw r12,r8
- 875               	.LVL52:
- 876 0360 7501      		movw r14,r10
- 877               	.LVL53:
- 154:LCD.cpp       **** 	}
- 878               		.loc 1 154 0
- 879 0362 C114      		cp r12,__zero_reg__
- 880 0364 D104      		cpc r13,__zero_reg__
- 881 0366 E104      		cpc r14,__zero_reg__
- 882 0368 F104      		cpc r15,__zero_reg__
- 883 036a 01F4      		brne .L54
- 884               	.LVL54:
- 885               	.L56:
- 156:LCD.cpp       **** 	return 0;
- 886               		.loc 1 156 0 discriminator 2
- 887 036c 8C2F      		mov r24,r28
- 888 036e 0C2E      		mov __tmp_reg__,r28
- 889 0370 000C      		lsl r0
- 890 0372 990B      		sbc r25,r25
- 891 0374 8017      		cp r24,r16
- 892 0376 9107      		cpc r25,r17
- 893 0378 04F0      		brlt .L55
- 156:LCD.cpp       **** 	return 0;
- 894               		.loc 1 156 0 is_stmt 0 discriminator 1
- 895 037a 8C2F      		mov r24,r28
- 896 037c 60E0      		ldi r22,0
- 897 037e C150      		subi r28,lo8(-(-1))
- 898               	.LVL55:
- 899 0380 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
- 900               	.LVL56:
- 901 0384 00C0      		rjmp .L56
- 902               	.LVL57:
- 903               	.L57:
- 142:LCD.cpp       **** 	}
- 904               		.loc 1 142 0 is_stmt 1
- 905 0386 81E0      		ldi r24,lo8(1)
- 906               	.LVL58:
- 907               	.L51:
- 908               	/* epilogue start */
- 158:LCD.cpp       **** }
- 909               		.loc 1 158 0
- 910 0388 DF91      		pop r29
- 911 038a CF91      		pop r28
- 912 038c 1F91      		pop r17
- 913 038e 0F91      		pop r16
- 914 0390 FF90      		pop r15
- 915 0392 EF90      		pop r14
- 916 0394 DF90      		pop r13
- 917 0396 CF90      		pop r12
- 918 0398 BF90      		pop r11
- 919 039a AF90      		pop r10
- 920 039c 9F90      		pop r9
- 921 039e 8F90      		pop r8
- 922 03a0 7F90      		pop r7
- 923 03a2 6F90      		pop r6
- 924 03a4 5F90      		pop r5
- 925 03a6 4F90      		pop r4
- 926 03a8 0895      		ret
- 927               		.cfi_endproc
- 928               	.LFE20:
- 930               	.global	_ZN3LCD5clearEv
- 932               	_ZN3LCD5clearEv:
- 933               	.LFB21:
- 159:LCD.cpp       **** 
- 160:LCD.cpp       **** void LCD::clear(void) {
- 934               		.loc 1 160 0
- 935               		.cfi_startproc
- 936 03aa CF93      		push r28
- 937               	.LCFI32:
- 938               		.cfi_def_cfa_offset 3
- 939               		.cfi_offset 28, -2
- 940               	/* prologue: function */
- 941               	/* frame size = 0 */
- 942               	/* stack size = 1 */
- 943               	.L__stack_usage = 1
- 161:LCD.cpp       **** 	setBattery(NONE);
- 944               		.loc 1 161 0
- 945 03ac 80E0      		ldi r24,0
- 946 03ae 0E94 0000 		call _ZN3LCD10setBatteryENS_7BatteryE
- 947               	.LVL59:
+ 144:LCD.cpp       **** 	while(d>=min){
+ 781               		.loc 1 144 0
+ 782 02fe D0E0      		ldi r29,0
+ 783               	.LVL41:
+ 145:LCD.cpp       **** 		setDigit(d--,nb%10);
+ 784               		.loc 1 145 0
+ 785 0300 8AE0      		ldi r24,lo8(10)
+ 786 0302 482E      		mov r4,r24
+ 787 0304 512C      		mov r5,__zero_reg__
+ 788 0306 612C      		mov r6,__zero_reg__
+ 789 0308 712C      		mov r7,__zero_reg__
+ 790               	.LVL42:
+ 791               	.L51:
+ 144:LCD.cpp       **** 		setDigit(d--,nb%10);
+ 792               		.loc 1 144 0
+ 793 030a 812F      		mov r24,r17
+ 794 030c 012E      		mov __tmp_reg__,r17
+ 795 030e 000C      		lsl r0
+ 796 0310 990B      		sbc r25,r25
+ 797 0312 8C17      		cp r24,r28
+ 798 0314 9D07      		cpc r25,r29
+ 799 0316 04F4      		brge .L50
+ 800               	.LVL43:
+ 801               	.L52:
+ 802               	.LBE34:
+ 803               	.LBE36:
+ 135:LCD.cpp       **** 	}
+ 804               		.loc 1 135 0
+ 805 0318 80E0      		ldi r24,0
+ 806 031a 00C0      		rjmp .L48
+ 807               	.LVL44:
+ 808               	.L50:
+ 809               	.LBB37:
+ 810               	.LBB35:
+ 811               		.loc 1 145 0
+ 812 031c C701      		movw r24,r14
+ 813 031e B601      		movw r22,r12
+ 814 0320 A301      		movw r20,r6
+ 815 0322 9201      		movw r18,r4
+ 816 0324 0E94 0000 		call __divmodsi4
+ 817 0328 4901      		movw r8,r18
+ 818 032a 5A01      		movw r10,r20
+ 819 032c 812F      		mov r24,r17
+ 820 032e 1150      		subi r17,lo8(-(-1))
+ 821               	.LVL45:
+ 822 0330 0E94 0000 		call _ZN3LCD8setDigitEhh
+ 823               	.LVL46:
+ 146:LCD.cpp       **** 		nb/=10;
+ 824               		.loc 1 146 0
+ 825 0334 6401      		movw r12,r8
+ 826               	.LVL47:
+ 827 0336 7501      		movw r14,r10
+ 828               	.LVL48:
+ 147:LCD.cpp       **** 		if(nb==0)break;
+ 829               		.loc 1 147 0
+ 830 0338 C114      		cp r12,__zero_reg__
+ 831 033a D104      		cpc r13,__zero_reg__
+ 832 033c E104      		cpc r14,__zero_reg__
+ 833 033e F104      		cpc r15,__zero_reg__
+ 834 0340 01F4      		brne .L51
+ 835               	.LVL49:
+ 836               	.L53:
+ 148:LCD.cpp       **** 	}
+ 149:LCD.cpp       **** 	while(d>=min)setDigit(d--,Blank);
+ 837               		.loc 1 149 0
+ 838 0342 812F      		mov r24,r17
+ 839 0344 012E      		mov __tmp_reg__,r17
+ 840 0346 000C      		lsl r0
+ 841 0348 990B      		sbc r25,r25
+ 842 034a 8C17      		cp r24,r28
+ 843 034c 9D07      		cpc r25,r29
+ 844 034e 04F0      		brlt .L52
+ 845 0350 812F      		mov r24,r17
+ 846 0352 60E0      		ldi r22,0
+ 847 0354 1150      		subi r17,lo8(-(-1))
+ 848               	.LVL50:
+ 849 0356 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 850               	.LVL51:
+ 851 035a 00C0      		rjmp .L53
+ 852               	.LVL52:
+ 853               	.L54:
+ 854               	.LBE35:
+ 855               	.LBE37:
+ 135:LCD.cpp       **** 	}
+ 856               		.loc 1 135 0
+ 857 035c 81E0      		ldi r24,lo8(1)
+ 858               	.LVL53:
+ 859               	.L48:
+ 860               	/* epilogue start */
+ 150:LCD.cpp       **** 	return 0;
+ 151:LCD.cpp       **** }
+ 861               		.loc 1 151 0
+ 862 035e DF91      		pop r29
+ 863 0360 CF91      		pop r28
+ 864 0362 1F91      		pop r17
+ 865 0364 0F91      		pop r16
+ 866 0366 FF90      		pop r15
+ 867 0368 EF90      		pop r14
+ 868 036a DF90      		pop r13
+ 869 036c CF90      		pop r12
+ 870 036e BF90      		pop r11
+ 871 0370 AF90      		pop r10
+ 872 0372 9F90      		pop r9
+ 873 0374 8F90      		pop r8
+ 874 0376 7F90      		pop r7
+ 875 0378 6F90      		pop r6
+ 876 037a 5F90      		pop r5
+ 877 037c 4F90      		pop r4
+ 878 037e 0895      		ret
+ 879               		.cfi_endproc
+ 880               	.LFE19:
+ 882               	.global	_ZN3LCD5setNbEl
+ 884               	_ZN3LCD5setNbEl:
+ 885               	.LFB20:
+ 152:LCD.cpp       **** 
+ 153:LCD.cpp       **** uint8_t LCD::setNb(int32_t nb) {
+ 886               		.loc 1 153 0
+ 887               		.cfi_startproc
+ 888               	.LVL54:
+ 889               	/* prologue: function */
+ 890               	/* frame size = 0 */
+ 891               	/* stack size = 0 */
+ 892               	.L__stack_usage = 0
+ 154:LCD.cpp       **** 	return setNb(nb,6);
+ 893               		.loc 1 154 0
+ 894 0380 46E0      		ldi r20,lo8(6)
+ 895 0382 0C94 0000 		jmp _ZN3LCD5setNbElh
+ 896               	.LVL55:
+ 897               		.cfi_endproc
+ 898               	.LFE20:
+ 900               	.global	_ZN3LCD5clearEb
+ 902               	_ZN3LCD5clearEb:
+ 903               	.LFB22:
+ 155:LCD.cpp       **** }
+ 156:LCD.cpp       **** 
+ 157:LCD.cpp       **** void LCD::clear(void) {
+ 158:LCD.cpp       **** 	clear(true);
+ 159:LCD.cpp       **** }
+ 160:LCD.cpp       **** void LCD::clear(bool clearBatt) {
+ 904               		.loc 1 160 0
+ 905               		.cfi_startproc
+ 906               	.LVL56:
+ 907 0386 CF93      		push r28
+ 908               	.LCFI32:
+ 909               		.cfi_def_cfa_offset 3
+ 910               		.cfi_offset 28, -2
+ 911               	/* prologue: function */
+ 912               	/* frame size = 0 */
+ 913               	/* stack size = 1 */
+ 914               	.L__stack_usage = 1
+ 161:LCD.cpp       **** 	if(clearBatt)setBattery(NONE);
+ 915               		.loc 1 161 0
+ 916 0388 8823      		tst r24
+ 917 038a 01F0      		breq .L58
+ 918               		.loc 1 161 0 is_stmt 0 discriminator 1
+ 919 038c 80E0      		ldi r24,0
+ 920               	.LVL57:
+ 921 038e 0E94 0000 		call _ZN3LCD10setBatteryENS_7BatteryE
+ 922               	.LVL58:
+ 923               	.L58:
  162:LCD.cpp       **** 	setClk(false);
- 948               		.loc 1 162 0
- 949 03b2 80E0      		ldi r24,0
- 950 03b4 0E94 0000 		call _ZN3LCD6setClkEb
- 951               	.LVL60:
+ 924               		.loc 1 162 0 is_stmt 1
+ 925 0392 80E0      		ldi r24,0
+ 926 0394 0E94 0000 		call _ZN3LCD6setClkEb
+ 927               	.LVL59:
  163:LCD.cpp       **** 	setDP(false);
- 952               		.loc 1 163 0
- 953 03b8 80E0      		ldi r24,0
- 954 03ba 0E94 0000 		call _ZN3LCD5setDPEb
- 955               	.LVL61:
- 956               	.LBB40:
+ 928               		.loc 1 163 0
+ 929 0398 80E0      		ldi r24,0
+ 930 039a 0E94 0000 		call _ZN3LCD5setDPEb
+ 931               	.LVL60:
+ 932               	.LBB38:
  164:LCD.cpp       **** 	for(int8_t i=5;i>=0;i--)setDigit(i,Blank);
- 957               		.loc 1 164 0
- 958 03be C5E0      		ldi r28,lo8(5)
- 959               	.LVL62:
- 960               	.L61:
- 961               		.loc 1 164 0 is_stmt 0 discriminator 2
- 962 03c0 60E0      		ldi r22,0
- 963 03c2 8C2F      		mov r24,r28
- 964 03c4 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
- 965               	.LVL63:
- 966               	.LVL64:
- 967 03c8 C150      		subi r28,1
- 968 03ca 00F4      		brcc .L61
- 969               	/* epilogue start */
- 970               	.LBE40:
+ 933               		.loc 1 164 0
+ 934 039e C5E0      		ldi r28,lo8(5)
+ 935               	.LVL61:
+ 936               	.L59:
+ 937               		.loc 1 164 0 is_stmt 0 discriminator 2
+ 938 03a0 60E0      		ldi r22,0
+ 939 03a2 8C2F      		mov r24,r28
+ 940 03a4 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 941               	.LVL62:
+ 942               	.LVL63:
+ 943 03a8 C150      		subi r28,1
+ 944 03aa 00F4      		brcc .L59
+ 945               	/* epilogue start */
+ 946               	.LBE38:
  165:LCD.cpp       **** }
- 971               		.loc 1 165 0 is_stmt 1
- 972 03cc CF91      		pop r28
- 973               	.LVL65:
- 974 03ce 0895      		ret
- 975               		.cfi_endproc
- 976               	.LFE21:
- 978               	.global	_ZN3LCD6digitsE
- 979               		.data
- 982               	_ZN3LCD6digitsE:
- 983 0000 02        		.byte	2
- 984 0001 02        		.byte	2
- 985 0002 02        		.byte	2
- 986 0003 03        		.byte	3
- 987 0004 03        		.byte	3
- 988 0005 03        		.byte	3
- 989 0006 03        		.byte	3
- 990 0007 ED00      		.word	237
- 991 0009 F200      		.word	242
- 992 000b F700      		.word	247
- 993 000d FC00      		.word	252
- 994 000f F700      		.word	247
- 995 0011 ED00      		.word	237
- 996 0013 F200      		.word	242
- 997 0015 00        		.byte	0
- 998 0016 00        		.byte	0
- 999 0017 00        		.byte	0
- 1000 0018 01        		.byte	1
- 1001 0019 01        		.byte	1
- 1002 001a 01        		.byte	1
- 1003 001b 01        		.byte	1
- 1004 001c ED00      		.word	237
- 1005 001e F200      		.word	242
- 1006 0020 F700      		.word	247
- 1007 0022 FC00      		.word	252
- 1008 0024 F700      		.word	247
- 1009 0026 ED00      		.word	237
- 1010 0028 F200      		.word	242
- 1011 002a 06        		.byte	6
- 1012 002b 06        		.byte	6
- 1013 002c 06        		.byte	6
- 1014 002d 07        		.byte	7
- 1015 002e 07        		.byte	7
- 1016 002f 07        		.byte	7
- 1017 0030 07        		.byte	7
- 1018 0031 EC00      		.word	236
- 1019 0033 F100      		.word	241
- 1020 0035 F600      		.word	246
- 1021 0037 FB00      		.word	251
- 1022 0039 F600      		.word	246
- 1023 003b EC00      		.word	236
- 1024 003d F100      		.word	241
- 1025 003f 04        		.byte	4
- 1026 0040 04        		.byte	4
- 1027 0041 04        		.byte	4
- 1028 0042 05        		.byte	5
- 1029 0043 05        		.byte	5
- 1030 0044 05        		.byte	5
- 1031 0045 05        		.byte	5
- 1032 0046 EC00      		.word	236
- 1033 0048 F100      		.word	241
- 1034 004a F600      		.word	246
- 1035 004c FB00      		.word	251
- 1036 004e F600      		.word	246
- 1037 0050 EC00      		.word	236
- 1038 0052 F100      		.word	241
- 1039 0054 02        		.byte	2
- 1040 0055 02        		.byte	2
- 1041 0056 02        		.byte	2
- 1042 0057 03        		.byte	3
- 1043 0058 03        		.byte	3
- 1044 0059 03        		.byte	3
- 1045 005a 03        		.byte	3
- 1046 005b EC00      		.word	236
- 1047 005d F100      		.word	241
- 1048 005f F600      		.word	246
- 1049 0061 FB00      		.word	251
- 1050 0063 F600      		.word	246
- 1051 0065 EC00      		.word	236
- 1052 0067 F100      		.word	241
- 1053 0069 00        		.byte	0
- 1054 006a 00        		.byte	0
- 1055 006b 00        		.byte	0
- 1056 006c 01        		.byte	1
- 1057 006d 01        		.byte	1
- 1058 006e 01        		.byte	1
- 1059 006f 01        		.byte	1
- 1060 0070 EC00      		.word	236
- 1061 0072 F100      		.word	241
- 1062 0074 F600      		.word	246
- 1063 0076 FB00      		.word	251
- 1064 0078 F600      		.word	246
- 1065 007a EC00      		.word	236
- 1066 007c F100      		.word	241
- 1067               	.global	_ZN3LCD5NbMapE
- 1068               		.section	.rodata
- 1071               	_ZN3LCD5NbMapE:
- 1072 0000 3F        		.byte	63
- 1073 0001 06        		.byte	6
- 1074 0002 5B        		.byte	91
- 1075 0003 4F        		.byte	79
- 1076 0004 66        		.byte	102
- 1077 0005 6D        		.byte	109
- 1078 0006 7D        		.byte	125
- 1079 0007 07        		.byte	7
- 1080 0008 7F        		.byte	127
- 1081 0009 6F        		.byte	111
- 1082               		.text
- 1083               	.Letext0:
- 1084               		.file 3 "/usr/lib/avr/include/stdint.h"
- 1085               		.file 4 "LCD.h"
+ 947               		.loc 1 165 0 is_stmt 1
+ 948 03ac CF91      		pop r28
+ 949               	.LVL64:
+ 950 03ae 0895      		ret
+ 951               		.cfi_endproc
+ 952               	.LFE22:
+ 954               	.global	_ZN3LCD5clearEv
+ 956               	_ZN3LCD5clearEv:
+ 957               	.LFB21:
+ 157:LCD.cpp       **** 	clear(true);
+ 958               		.loc 1 157 0
+ 959               		.cfi_startproc
+ 960               	/* prologue: function */
+ 961               	/* frame size = 0 */
+ 962               	/* stack size = 0 */
+ 963               	.L__stack_usage = 0
+ 158:LCD.cpp       **** }
+ 964               		.loc 1 158 0
+ 965 03b0 81E0      		ldi r24,lo8(1)
+ 966 03b2 0C94 0000 		jmp _ZN3LCD5clearEb
+ 967               	.LVL65:
+ 968               		.cfi_endproc
+ 969               	.LFE21:
+ 971               	.global	_ZN3LCD6digitsE
+ 972               		.data
+ 975               	_ZN3LCD6digitsE:
+ 976 0000 02        		.byte	2
+ 977 0001 02        		.byte	2
+ 978 0002 02        		.byte	2
+ 979 0003 03        		.byte	3
+ 980 0004 03        		.byte	3
+ 981 0005 03        		.byte	3
+ 982 0006 03        		.byte	3
+ 983 0007 ED00      		.word	237
+ 984 0009 F200      		.word	242
+ 985 000b F700      		.word	247
+ 986 000d FC00      		.word	252
+ 987 000f F700      		.word	247
+ 988 0011 ED00      		.word	237
+ 989 0013 F200      		.word	242
+ 990 0015 00        		.byte	0
+ 991 0016 00        		.byte	0
+ 992 0017 00        		.byte	0
+ 993 0018 01        		.byte	1
+ 994 0019 01        		.byte	1
+ 995 001a 01        		.byte	1
+ 996 001b 01        		.byte	1
+ 997 001c ED00      		.word	237
+ 998 001e F200      		.word	242
+ 999 0020 F700      		.word	247
+ 1000 0022 FC00      		.word	252
+ 1001 0024 F700      		.word	247
+ 1002 0026 ED00      		.word	237
+ 1003 0028 F200      		.word	242
+ 1004 002a 06        		.byte	6
+ 1005 002b 06        		.byte	6
+ 1006 002c 06        		.byte	6
+ 1007 002d 07        		.byte	7
+ 1008 002e 07        		.byte	7
+ 1009 002f 07        		.byte	7
+ 1010 0030 07        		.byte	7
+ 1011 0031 EC00      		.word	236
+ 1012 0033 F100      		.word	241
+ 1013 0035 F600      		.word	246
+ 1014 0037 FB00      		.word	251
+ 1015 0039 F600      		.word	246
+ 1016 003b EC00      		.word	236
+ 1017 003d F100      		.word	241
+ 1018 003f 04        		.byte	4
+ 1019 0040 04        		.byte	4
+ 1020 0041 04        		.byte	4
+ 1021 0042 05        		.byte	5
+ 1022 0043 05        		.byte	5
+ 1023 0044 05        		.byte	5
+ 1024 0045 05        		.byte	5
+ 1025 0046 EC00      		.word	236
+ 1026 0048 F100      		.word	241
+ 1027 004a F600      		.word	246
+ 1028 004c FB00      		.word	251
+ 1029 004e F600      		.word	246
+ 1030 0050 EC00      		.word	236
+ 1031 0052 F100      		.word	241
+ 1032 0054 02        		.byte	2
+ 1033 0055 02        		.byte	2
+ 1034 0056 02        		.byte	2
+ 1035 0057 03        		.byte	3
+ 1036 0058 03        		.byte	3
+ 1037 0059 03        		.byte	3
+ 1038 005a 03        		.byte	3
+ 1039 005b EC00      		.word	236
+ 1040 005d F100      		.word	241
+ 1041 005f F600      		.word	246
+ 1042 0061 FB00      		.word	251
+ 1043 0063 F600      		.word	246
+ 1044 0065 EC00      		.word	236
+ 1045 0067 F100      		.word	241
+ 1046 0069 00        		.byte	0
+ 1047 006a 00        		.byte	0
+ 1048 006b 00        		.byte	0
+ 1049 006c 01        		.byte	1
+ 1050 006d 01        		.byte	1
+ 1051 006e 01        		.byte	1
+ 1052 006f 01        		.byte	1
+ 1053 0070 EC00      		.word	236
+ 1054 0072 F100      		.word	241
+ 1055 0074 F600      		.word	246
+ 1056 0076 FB00      		.word	251
+ 1057 0078 F600      		.word	246
+ 1058 007a EC00      		.word	236
+ 1059 007c F100      		.word	241
+ 1060               	.global	_ZN3LCD5NbMapE
+ 1061               		.section	.rodata
+ 1064               	_ZN3LCD5NbMapE:
+ 1065 0000 3F        		.byte	63
+ 1066 0001 06        		.byte	6
+ 1067 0002 5B        		.byte	91
+ 1068 0003 4F        		.byte	79
+ 1069 0004 66        		.byte	102
+ 1070 0005 6D        		.byte	109
+ 1071 0006 7D        		.byte	125
+ 1072 0007 07        		.byte	7
+ 1073 0008 7F        		.byte	127
+ 1074 0009 6F        		.byte	111
+ 1075               		.text
+ 1076               	.Letext0:
+ 1077               		.file 3 "/usr/lib/avr/include/stdint.h"
+ 1078               		.file 4 "LCD.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 LCD.cpp
-     /tmp/cciqv2HK.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/cciqv2HK.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/cciqv2HK.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/cciqv2HK.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/cciqv2HK.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/cciqv2HK.s:12     .text:0000000000000000 _ZN3LCDC2Eb
-     /tmp/cciqv2HK.s:12     .text:0000000000000000 _ZN3LCDC1Eb
-     /tmp/cciqv2HK.s:84     .text:000000000000004a _ZN3LCDD2Ev
-     /tmp/cciqv2HK.s:84     .text:000000000000004a _ZN3LCDD1Ev
-     /tmp/cciqv2HK.s:131    .text:000000000000006e _ZN3LCD8setDigitEhh
-     /tmp/cciqv2HK.s:1071   .rodata:0000000000000000 _ZN3LCD5NbMapE
-     /tmp/cciqv2HK.s:982    .data:0000000000000000 _ZN3LCD6digitsE
-     /tmp/cciqv2HK.s:275    .text:000000000000010e _ZN3LCD8setDigitEhNS_6SymbolE
-     /tmp/cciqv2HK.s:415    .text:00000000000001a4 _ZN3LCD10setBatteryENS_7BatteryE
-     /tmp/cciqv2HK.s:545    .text:0000000000000258 _ZN3LCD5setDPEb
-     /tmp/cciqv2HK.s:581    .text:0000000000000270 _ZN3LCD6setClkEb
-     /tmp/cciqv2HK.s:617    .text:0000000000000288 _ZN3LCD5getDPEv
-     /tmp/cciqv2HK.s:636    .text:0000000000000292 _ZN3LCD6getClkEv
-     /tmp/cciqv2HK.s:654    .text:000000000000029a _ZN3LCD5blinkEj
-     /tmp/cciqv2HK.s:716    .text:00000000000002c8 _ZN3LCD5setNbEl
-     /tmp/cciqv2HK.s:932    .text:00000000000003aa _ZN3LCD5clearEv
+     /tmp/ccSmzmtK.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccSmzmtK.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccSmzmtK.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccSmzmtK.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccSmzmtK.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccSmzmtK.s:12     .text:0000000000000000 _ZN3LCDC2Eb
+     /tmp/ccSmzmtK.s:12     .text:0000000000000000 _ZN3LCDC1Eb
+     /tmp/ccSmzmtK.s:84     .text:000000000000004a _ZN3LCDD2Ev
+     /tmp/ccSmzmtK.s:84     .text:000000000000004a _ZN3LCDD1Ev
+     /tmp/ccSmzmtK.s:131    .text:000000000000006e _ZN3LCD8setDigitEhh
+     /tmp/ccSmzmtK.s:1064   .rodata:0000000000000000 _ZN3LCD5NbMapE
+     /tmp/ccSmzmtK.s:975    .data:0000000000000000 _ZN3LCD6digitsE
+     /tmp/ccSmzmtK.s:275    .text:000000000000010e _ZN3LCD8setDigitEhNS_6SymbolE
+     /tmp/ccSmzmtK.s:415    .text:00000000000001a4 _ZN3LCD10setBatteryENS_7BatteryE
+     /tmp/ccSmzmtK.s:545    .text:0000000000000258 _ZN3LCD5setDPEb
+     /tmp/ccSmzmtK.s:581    .text:0000000000000270 _ZN3LCD6setClkEb
+     /tmp/ccSmzmtK.s:617    .text:0000000000000288 _ZN3LCD5getDPEv
+     /tmp/ccSmzmtK.s:636    .text:0000000000000292 _ZN3LCD6getClkEv
+     /tmp/ccSmzmtK.s:654    .text:000000000000029a _ZN3LCD5setNbElh
+     /tmp/ccSmzmtK.s:884    .text:0000000000000380 _ZN3LCD5setNbEl
+     /tmp/ccSmzmtK.s:902    .text:0000000000000386 _ZN3LCD5clearEb
+     /tmp/ccSmzmtK.s:956    .text:00000000000003b0 _ZN3LCD5clearEv
 
 UNDEFINED SYMBOLS
 __tablejump2__

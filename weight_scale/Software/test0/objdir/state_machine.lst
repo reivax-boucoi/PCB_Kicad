@@ -7,178 +7,754 @@
    7               		.text
    8               	.Ltext0:
    9               		.cfi_sections	.debug_frame
-  10               	.global	_ZN2SMC2Ev
-  12               	_ZN2SMC2Ev:
-  13               	.LFB1:
-  14               		.file 1 "state_machine.cpp"
+  10               		.section	.rodata.str1.1,"aMS",@progbits,1
+  11               	.LC0:
+  12 0000 0D0A 0A49 		.string	"\r\n\nInit\n"
+  12      6E69 740A 
+  12      00
+  13               		.text
+  14               	.global	_ZN2SMC2EP4UARTP5ScaleP3LCD
+  16               	_ZN2SMC2EP4UARTP5ScaleP3LCD:
+  17               	.LFB11:
+  18               		.file 1 "state_machine.cpp"
    1:state_machine.cpp **** #include "state_machine.h"
    2:state_machine.cpp **** 
-   3:state_machine.cpp **** const uint8_t SM::states_duration[] = {0, 10, 20, 255};
+   3:state_machine.cpp **** const uint8_t SM::states_duration[] = {0, 40, 30, 0};
    4:state_machine.cpp **** 
-   5:state_machine.cpp **** SM::SM(void){
-  15               		.loc 1 5 0
-  16               		.cfi_startproc
-  17               	.LVL0:
-  18               	/* prologue: function */
-  19               	/* frame size = 0 */
-  20               	/* stack size = 0 */
-  21               	.L__stack_usage = 0
-  22               	.LBB2:
-   6:state_machine.cpp **** 	current_state=STATE_WAKEUP;
-  23               		.loc 1 6 0
-  24 0000 21E0      		ldi r18,lo8(1)
-  25 0002 FC01      		movw r30,r24
-  26 0004 2083      		st Z,r18
-   7:state_machine.cpp **** 	current_duration=states_duration[current_state];
-  27               		.loc 1 7 0
-  28 0006 2AE0      		ldi r18,lo8(10)
-  29 0008 2183      		std Z+1,r18
-  30 000a 0895      		ret
-  31               	.LBE2:
-  32               		.cfi_endproc
-  33               	.LFE1:
-  35               	.global	_ZN2SMC1Ev
-  36               		.set	_ZN2SMC1Ev,_ZN2SMC2Ev
-  37               	.global	_ZN2SMD2Ev
-  39               	_ZN2SMD2Ev:
-  40               	.LFB4:
-   8:state_machine.cpp **** }
-   9:state_machine.cpp **** 
-  10:state_machine.cpp **** 
-  11:state_machine.cpp **** SM::~SM(void){
-  41               		.loc 1 11 0
-  42               		.cfi_startproc
-  43               	.LVL1:
-  44               	/* prologue: function */
-  45               	/* frame size = 0 */
-  46               	/* stack size = 0 */
-  47               	.L__stack_usage = 0
-  48 000c 0895      		ret
-  49               		.cfi_endproc
-  50               	.LFE4:
-  52               	.global	_ZN2SMD1Ev
-  53               		.set	_ZN2SMD1Ev,_ZN2SMD2Ev
-  54               	.global	_ZN2SM9nextStateEv
-  56               	_ZN2SM9nextStateEv:
-  57               	.LFB7:
-  12:state_machine.cpp **** }
-  13:state_machine.cpp **** 
-  14:state_machine.cpp **** void SM::update(void){
-  15:state_machine.cpp **** 	if(current_duration--==0){
-  16:state_machine.cpp **** 		nextState();
-  17:state_machine.cpp **** 	}
-  18:state_machine.cpp **** 	switch(current_state){
-  19:state_machine.cpp **** 		case STATE_OFF:
-  20:state_machine.cpp **** 			//this should not occur
-  21:state_machine.cpp **** 			break;
-  22:state_machine.cpp **** 		case STATE_WAKEUP:
-  23:state_machine.cpp **** 			//show some infos?
-  24:state_machine.cpp **** 			//check batt voltage
-  25:state_machine.cpp **** 			break;
-  26:state_machine.cpp **** 		case STATE_TARE:
-  27:state_machine.cpp **** 			//measure and accumulate result
-  28:state_machine.cpp **** 			break;
-  29:state_machine.cpp **** 		case STATE_IDLE:
-  30:state_machine.cpp **** 			//measure and show result
-  31:state_machine.cpp **** 			break;
-  32:state_machine.cpp **** 	}
-  33:state_machine.cpp **** }
-  34:state_machine.cpp **** 
-  35:state_machine.cpp **** void SM::nextState(void){
-  58               		.loc 1 35 0
-  59               		.cfi_startproc
-  60               	.LVL2:
-  61               	/* prologue: function */
-  62               	/* frame size = 0 */
-  63               	/* stack size = 0 */
-  64               	.L__stack_usage = 0
-  65               		.loc 1 35 0
-  66 000e DC01      		movw r26,r24
-  36:state_machine.cpp **** 	switch(current_state){
-  37:state_machine.cpp **** 		case STATE_OFF:
-  38:state_machine.cpp **** 			//show splash screen
-  39:state_machine.cpp **** 			break;
-  40:state_machine.cpp **** 		case STATE_WAKEUP:
-  41:state_machine.cpp **** 			//show tare, initialize accumulator
-  42:state_machine.cpp **** 			break;
-  43:state_machine.cpp **** 		case STATE_TARE:
-  44:state_machine.cpp **** 			//switch to meas mode with tare offset
-  45:state_machine.cpp **** 			break;
-  46:state_machine.cpp **** 		case STATE_IDLE:
-  47:state_machine.cpp **** 			//goto sleep
-  48:state_machine.cpp **** 		break;
-  49:state_machine.cpp **** 	}
-  50:state_machine.cpp **** 	
-  51:state_machine.cpp **** 	current_state++;
-  67               		.loc 1 51 0
-  68 0010 EC91      		ld r30,X
-  69 0012 EF5F      		subi r30,lo8(-(1))
-  70 0014 EC93      		st X,r30
-  52:state_machine.cpp **** 	current_duration=states_duration[current_state];
-  71               		.loc 1 52 0
-  72 0016 F0E0      		ldi r31,0
-  73 0018 E050      		subi r30,lo8(-(_ZN2SM15states_durationE))
-  74 001a F040      		sbci r31,hi8(-(_ZN2SM15states_durationE))
-  75 001c 8081      		ld r24,Z
-  76               	.LVL3:
-  77 001e 1196      		adiw r26,1
-  78 0020 8C93      		st X,r24
-  79 0022 0895      		ret
-  80               		.cfi_endproc
-  81               	.LFE7:
-  83               	.global	_ZN2SM6updateEv
-  85               	_ZN2SM6updateEv:
-  86               	.LFB6:
-  14:state_machine.cpp **** 	if(current_duration--==0){
-  87               		.loc 1 14 0
-  88               		.cfi_startproc
-  89               	.LVL4:
-  90               	/* prologue: function */
-  91               	/* frame size = 0 */
-  92               	/* stack size = 0 */
-  93               	.L__stack_usage = 0
-  15:state_machine.cpp **** 		nextState();
-  94               		.loc 1 15 0
-  95 0024 FC01      		movw r30,r24
-  96 0026 2181      		ldd r18,Z+1
-  97 0028 3FEF      		ldi r19,lo8(-1)
-  98 002a 320F      		add r19,r18
-  99 002c 3183      		std Z+1,r19
- 100 002e 2111      		cpse r18,__zero_reg__
- 101 0030 00C0      		rjmp .L4
-  16:state_machine.cpp **** 	}
- 102               		.loc 1 16 0
- 103 0032 0C94 0000 		jmp _ZN2SM9nextStateEv
- 104               	.LVL5:
- 105               	.L4:
- 106 0036 0895      		ret
- 107               		.cfi_endproc
- 108               	.LFE6:
- 110               	.global	_ZN2SM15states_durationE
- 111               		.section	.rodata
- 114               	_ZN2SM15states_durationE:
- 115 0000 00        		.byte	0
- 116 0001 0A        		.byte	10
- 117 0002 14        		.byte	20
- 118 0003 FF        		.byte	-1
- 119               		.text
- 120               	.Letext0:
- 121               		.file 2 "state_machine.h"
- 122               		.file 3 "/usr/lib/avr/include/stdint.h"
+   5:state_machine.cpp **** SM::SM(UART* u, Scale *s, LCD *l){
+  19               		.loc 1 5 0
+  20               		.cfi_startproc
+  21               	.LVL0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	/* stack size = 0 */
+  25               	.L__stack_usage = 0
+  26 0000 FC01      		movw r30,r24
+  27 0002 CB01      		movw r24,r22
+  28               	.LVL1:
+  29               	.LBB2:
+   6:state_machine.cpp **** 	uart=u;
+  30               		.loc 1 6 0
+  31 0004 7683      		std Z+6,r23
+  32 0006 6583      		std Z+5,r22
+   7:state_machine.cpp **** 	myScale=s;
+  33               		.loc 1 7 0
+  34 0008 5183      		std Z+1,r21
+  35 000a 4083      		st Z,r20
+   8:state_machine.cpp **** 	myLCD=l;
+  36               		.loc 1 8 0
+  37 000c 3087      		std Z+8,r19
+  38 000e 2783      		std Z+7,r18
+   9:state_machine.cpp **** 	current_state=STATE_OFF;
+  39               		.loc 1 9 0
+  40 0010 1282      		std Z+2,__zero_reg__
+  10:state_machine.cpp **** 	current_duration=1;
+  41               		.loc 1 10 0
+  42 0012 21E0      		ldi r18,lo8(1)
+  43               	.LVL2:
+  44 0014 2483      		std Z+4,r18
+  11:state_machine.cpp **** 	uart_flags=0;
+  45               		.loc 1 11 0
+  46 0016 1382      		std Z+3,__zero_reg__
+  12:state_machine.cpp **** 	uart->sendString("\r\n\nInit\n",true);
+  47               		.loc 1 12 0
+  48 0018 41E0      		ldi r20,lo8(1)
+  49               	.LVL3:
+  50 001a 60E0      		ldi r22,lo8(.LC0)
+  51 001c 70E0      		ldi r23,hi8(.LC0)
+  52               	.LVL4:
+  53 001e 0C94 0000 		jmp _ZN4UART10sendStringEPcb
+  54               	.LVL5:
+  55               	.LBE2:
+  56               		.cfi_endproc
+  57               	.LFE11:
+  59               	.global	_ZN2SMC1EP4UARTP5ScaleP3LCD
+  60               		.set	_ZN2SMC1EP4UARTP5ScaleP3LCD,_ZN2SMC2EP4UARTP5ScaleP3LCD
+  61               	.global	_ZN2SMD2Ev
+  63               	_ZN2SMD2Ev:
+  64               	.LFB14:
+  13:state_machine.cpp **** }
+  14:state_machine.cpp **** 
+  15:state_machine.cpp **** 
+  16:state_machine.cpp **** SM::~SM(void){
+  65               		.loc 1 16 0
+  66               		.cfi_startproc
+  67               	.LVL6:
+  68               	/* prologue: function */
+  69               	/* frame size = 0 */
+  70               	/* stack size = 0 */
+  71               	.L__stack_usage = 0
+  72 0022 0895      		ret
+  73               		.cfi_endproc
+  74               	.LFE14:
+  76               	.global	_ZN2SMD1Ev
+  77               		.set	_ZN2SMD1Ev,_ZN2SMD2Ev
+  78               	.global	_ZN2SM6streamEbb
+  80               	_ZN2SM6streamEbb:
+  81               	.LFB16:
+  17:state_machine.cpp **** }
+  18:state_machine.cpp **** 
+  19:state_machine.cpp **** 
+  20:state_machine.cpp **** void SM::stream(bool enable, bool verbose){
+  82               		.loc 1 20 0
+  83               		.cfi_startproc
+  84               	.LVL7:
+  85               	/* prologue: function */
+  86               	/* frame size = 0 */
+  87               	/* stack size = 0 */
+  88               	.L__stack_usage = 0
+  21:state_machine.cpp **** 	uart_flags=enable | (verbose<<1);
+  89               		.loc 1 21 0
+  90 0024 440F      		lsl r20
+  91               	.LVL8:
+  92 0026 642B      		or r22,r20
+  93               	.LVL9:
+  94 0028 FC01      		movw r30,r24
+  95 002a 6383      		std Z+3,r22
+  96 002c 0895      		ret
+  97               		.cfi_endproc
+  98               	.LFE16:
+ 100               		.section	.rodata.str1.1
+ 101               	.LC1:
+ 102 0009 534D 3A57 		.string	"SM:Wakeup"
+ 102      616B 6575 
+ 102      7000 
+ 103               	.LC2:
+ 104 0013 534D 3A54 		.string	"SM:Tare"
+ 104      6172 6500 
+ 105               	.LC3:
+ 106 001b 0954 6172 		.string	"\tTare completed: "
+ 106      6520 636F 
+ 106      6D70 6C65 
+ 106      7465 643A 
+ 106      2000 
+ 107               	.LC4:
+ 108 002d 534D 3A49 		.string	"SM:Idle"
+ 108      646C 6500 
+ 109               		.text
+ 110               	.global	_ZN2SM9nextStateEv
+ 112               	_ZN2SM9nextStateEv:
+ 113               	.LFB18:
+  22:state_machine.cpp **** }
+  23:state_machine.cpp **** 
+  24:state_machine.cpp **** void SM::update(void){
+  25:state_machine.cpp **** 	if(current_duration!=0){//States with 0 duration stay on indefinitely
+  26:state_machine.cpp **** 		if(--current_duration==0){
+  27:state_machine.cpp **** 			nextState();
+  28:state_machine.cpp **** 		}
+  29:state_machine.cpp **** 	}
+  30:state_machine.cpp **** 	switch(current_state){
+  31:state_machine.cpp **** 		case STATE_OFF:
+  32:state_machine.cpp **** 			//this should not occur
+  33:state_machine.cpp **** 			break;
+  34:state_machine.cpp **** 			
+  35:state_machine.cpp **** 		case STATE_WAKEUP:
+  36:state_machine.cpp **** 			//show some infos?
+  37:state_machine.cpp **** 			//check batt voltage
+  38:state_machine.cpp **** 			if(current_duration==30){
+  39:state_machine.cpp **** 				myLCD->setDigit(0,LCD::V);
+  40:state_machine.cpp **** 				myLCD->setDigit(1,LCD::Equal);
+  41:state_machine.cpp **** 				myLCD->setDigit(2,LCD::b);
+  42:state_machine.cpp **** 				myLCD->setDigit(3,LCD::A);
+  43:state_machine.cpp **** 				myLCD->setDigit(4,LCD::t);
+  44:state_machine.cpp **** 				myLCD->setDigit(5,LCD::t);
+  45:state_machine.cpp **** 				
+  46:state_machine.cpp **** 			}else if(current_duration==20){
+  47:state_machine.cpp **** 				ADCSRA|=(1<<ADSC); //Start single ADC conversion
+  48:state_machine.cpp **** 				myLCD->setDigit(0,LCD::V);
+  49:state_machine.cpp **** 				myLCD->setDigit(1,LCD::Equal);
+  50:state_machine.cpp **** 				myLCD->setDigit(2,LCD::Blank);
+  51:state_machine.cpp **** 				myLCD->setDP(true);
+  52:state_machine.cpp **** 			}else if(current_duration<20){
+  53:state_machine.cpp **** 				ADCSRA|=(1<<ADSC); //Start single ADC conversion
+  54:state_machine.cpp **** 			}
+  55:state_machine.cpp **** 			
+  56:state_machine.cpp **** 			break;
+  57:state_machine.cpp **** 			
+  58:state_machine.cpp **** 		case STATE_TARE:
+  59:state_machine.cpp **** 			//measure and accumulate result
+  60:state_machine.cpp **** 			if(current_duration==20){
+  61:state_machine.cpp **** 				myLCD->clear(false);
+  62:state_machine.cpp **** 				myLCD->setDigit(0,LCD::t);
+  63:state_machine.cpp **** 				myLCD->setNb(myScale->tare(),5);
+  64:state_machine.cpp **** 			}else if(current_duration<20){
+  65:state_machine.cpp **** 				myLCD->setNb(myScale->tare(),5);
+  66:state_machine.cpp **** 			}
+  67:state_machine.cpp **** 			
+  68:state_machine.cpp **** 			break;
+  69:state_machine.cpp **** 			
+  70:state_machine.cpp **** 		case STATE_IDLE:
+  71:state_machine.cpp **** 			//measure and show result
+  72:state_machine.cpp **** 			myLCD->setNb(myScale->getWeight());
+  73:state_machine.cpp **** 			if(uart_flags & UART_STREAM)
+  74:state_machine.cpp **** 				myScale->showWeight(uart_flags & UART_STREAM_VERBOSE);
+  75:state_machine.cpp **** 			
+  76:state_machine.cpp **** 			break;
+  77:state_machine.cpp **** 	}
+  78:state_machine.cpp **** }
+  79:state_machine.cpp **** 
+  80:state_machine.cpp **** void SM::nextState(void){
+ 114               		.loc 1 80 0
+ 115               		.cfi_startproc
+ 116               	.LVL10:
+ 117 002e CF93      		push r28
+ 118               	.LCFI0:
+ 119               		.cfi_def_cfa_offset 3
+ 120               		.cfi_offset 28, -2
+ 121 0030 DF93      		push r29
+ 122               	.LCFI1:
+ 123               		.cfi_def_cfa_offset 4
+ 124               		.cfi_offset 29, -3
+ 125               	/* prologue: function */
+ 126               	/* frame size = 0 */
+ 127               	/* stack size = 2 */
+ 128               	.L__stack_usage = 2
+ 129 0032 EC01      		movw r28,r24
+  81:state_machine.cpp **** 	switch(current_state){
+ 130               		.loc 1 81 0
+ 131 0034 8A81      		ldd r24,Y+2
+ 132               	.LVL11:
+ 133 0036 8130      		cpi r24,lo8(1)
+ 134 0038 01F4      		brne .+2
+ 135 003a 00C0      		rjmp .L6
+ 136 003c 00F0      		brlo .L7
+ 137 003e 8230      		cpi r24,lo8(2)
+ 138 0040 01F4      		brne .+2
+ 139 0042 00C0      		rjmp .L8
+ 140 0044 8330      		cpi r24,lo8(3)
+ 141 0046 01F0      		breq .+2
+ 142 0048 00C0      		rjmp .L5
+  82:state_machine.cpp **** 		case STATE_OFF:
+  83:state_machine.cpp **** 			uart->sendString("SM:Wakeup",true);
+  84:state_machine.cpp **** 			myLCD->setDigit(0,LCD::H);
+  85:state_machine.cpp **** 			myLCD->setDigit(1,LCD::E);
+  86:state_machine.cpp **** 			myLCD->setDigit(2,LCD::L);
+  87:state_machine.cpp **** 			myLCD->setDigit(3,LCD::L);
+  88:state_machine.cpp **** 			myLCD->setDigit(4,0);
+  89:state_machine.cpp **** 			myLCD->setDigit(5,LCD::Blank);
+  90:state_machine.cpp **** 			//show splash screen
+  91:state_machine.cpp **** 			break;
+  92:state_machine.cpp **** 		case STATE_WAKEUP:
+  93:state_machine.cpp **** 			uart->sendString("SM:Tare",true);
+  94:state_machine.cpp **** 			myLCD->setDP(false);
+  95:state_machine.cpp **** 			myLCD->setDigit(0,LCD::t);
+  96:state_machine.cpp **** 			myLCD->setDigit(1,LCD::A);
+  97:state_machine.cpp **** 			myLCD->setDigit(2,LCD::r);
+  98:state_machine.cpp **** 			myLCD->setDigit(3,LCD::E);
+  99:state_machine.cpp **** 			myLCD->setDigit(4,LCD::Blank);
+ 100:state_machine.cpp **** 			myLCD->setDigit(5,LCD::Blank);
+ 101:state_machine.cpp **** 			
+ 102:state_machine.cpp **** 			//show tare, initialize accumulator
+ 103:state_machine.cpp **** 			break;
+ 104:state_machine.cpp **** 		case STATE_TARE:
+ 105:state_machine.cpp **** 			
+ 106:state_machine.cpp **** 			uart->sendString("\tTare completed: ");
+ 107:state_machine.cpp **** 			uart->sendNb(myScale->offset);
+ 108:state_machine.cpp **** 			uart->sendString("SM:Idle",true);
+ 109:state_machine.cpp **** 			myLCD->clear(false);
+ 110:state_machine.cpp **** 			//switch to meas mode with tare offset
+ 111:state_machine.cpp **** 			break;
+ 112:state_machine.cpp **** 			
+ 113:state_machine.cpp **** 		case STATE_IDLE: //goto sleep
+ 114:state_machine.cpp **** 			ADCSRA&=~(1<<ADEN);//Disable ADC
+ 143               		.loc 1 114 0
+ 144 004a 8091 7A00 		lds r24,122
+ 145 004e 8F77      		andi r24,lo8(127)
+ 146 0050 8093 7A00 		sts 122,r24
+ 115:state_machine.cpp **** 			PRR|=(1<<PRTIM1)|(1<<PRSPI)|(1<<PRUSART0)|(1<<PRADC);//Shut down clock to Timer1, SPI, UART, ADC
+ 147               		.loc 1 115 0
+ 148 0054 8091 6400 		lds r24,100
+ 149 0058 8F60      		ori r24,lo8(15)
+ 150 005a 8093 6400 		sts 100,r24
+ 116:state_machine.cpp **** 			
+ 117:state_machine.cpp **** 			set_sleep_mode(SLEEP_MODE_PWR_SAVE);
+ 151               		.loc 1 117 0
+ 152 005e 83B7      		in r24,0x33
+ 153 0060 817F      		andi r24,lo8(-15)
+ 154 0062 8660      		ori r24,lo8(6)
+ 155 0064 83BF      		out 0x33,r24
+ 118:state_machine.cpp **** 			//set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+ 119:state_machine.cpp **** 			cli();
+ 156               		.loc 1 119 0
+ 157               	/* #APP */
+ 158               	 ;  119 "state_machine.cpp" 1
+ 159 0066 F894      		cli
+ 160               	 ;  0 "" 2
+ 120:state_machine.cpp **** 			if (1){
+ 121:state_machine.cpp **** 				sleep_enable();
+ 161               		.loc 1 121 0
+ 162               	/* #NOAPP */
+ 163 0068 83B7      		in r24,0x33
+ 164 006a 8160      		ori r24,lo8(1)
+ 165 006c 83BF      		out 0x33,r24
+ 122:state_machine.cpp **** 				sei();
+ 166               		.loc 1 122 0
+ 167               	/* #APP */
+ 168               	 ;  122 "state_machine.cpp" 1
+ 169 006e 7894      		sei
+ 170               	 ;  0 "" 2
+ 123:state_machine.cpp **** 				sleep_cpu();
+ 171               		.loc 1 123 0
+ 172               	 ;  123 "state_machine.cpp" 1
+ 173 0070 8895      		sleep
+ 174               		
+ 175               	 ;  0 "" 2
+ 124:state_machine.cpp **** 				sleep_disable();
+ 176               		.loc 1 124 0
+ 177               	/* #NOAPP */
+ 178 0072 83B7      		in r24,0x33
+ 179 0074 8E7F      		andi r24,lo8(-2)
+ 180 0076 83BF      		out 0x33,r24
+ 125:state_machine.cpp **** 			}
+ 126:state_machine.cpp **** 			PRR&=~(1<<PRADC)|(1<<PRSPI)|(1<<PRUSART0);//Enable power to ADC, UART and SPI  again
+ 181               		.loc 1 126 0
+ 182 0078 8091 6400 		lds r24,100
+ 183 007c 8E7F      		andi r24,lo8(-2)
+ 184 007e 8093 6400 		sts 100,r24
+ 127:state_machine.cpp **** 			ADCSRA|=(1<<ADEN);//Enable ADC again
+ 185               		.loc 1 127 0
+ 186 0082 8091 7A00 		lds r24,122
+ 187 0086 8068      		ori r24,lo8(-128)
+ 188 0088 8093 7A00 		sts 122,r24
+ 128:state_machine.cpp **** 			sei();
+ 189               		.loc 1 128 0
+ 190               	/* #APP */
+ 191               	 ;  128 "state_machine.cpp" 1
+ 192 008c 7894      		sei
+ 193               	 ;  0 "" 2
+ 129:state_machine.cpp **** 		break;
+ 194               		.loc 1 129 0
+ 195               	/* #NOAPP */
+ 196 008e 00C0      		rjmp .L5
+ 197               	.L7:
+  83:state_machine.cpp **** 			myLCD->setDigit(0,LCD::H);
+ 198               		.loc 1 83 0
+ 199 0090 41E0      		ldi r20,lo8(1)
+ 200 0092 60E0      		ldi r22,lo8(.LC1)
+ 201 0094 70E0      		ldi r23,hi8(.LC1)
+ 202 0096 8D81      		ldd r24,Y+5
+ 203 0098 9E81      		ldd r25,Y+6
+ 204 009a 0E94 0000 		call _ZN4UART10sendStringEPcb
+ 205               	.LVL12:
+  84:state_machine.cpp **** 			myLCD->setDigit(1,LCD::E);
+ 206               		.loc 1 84 0
+ 207 009e 66E7      		ldi r22,lo8(118)
+ 208 00a0 80E0      		ldi r24,0
+ 209 00a2 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 210               	.LVL13:
+  85:state_machine.cpp **** 			myLCD->setDigit(2,LCD::L);
+ 211               		.loc 1 85 0
+ 212 00a6 69E7      		ldi r22,lo8(121)
+ 213 00a8 81E0      		ldi r24,lo8(1)
+ 214 00aa 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 215               	.LVL14:
+  86:state_machine.cpp **** 			myLCD->setDigit(3,LCD::L);
+ 216               		.loc 1 86 0
+ 217 00ae 68E3      		ldi r22,lo8(56)
+ 218 00b0 82E0      		ldi r24,lo8(2)
+ 219 00b2 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 220               	.LVL15:
+  87:state_machine.cpp **** 			myLCD->setDigit(4,0);
+ 221               		.loc 1 87 0
+ 222 00b6 68E3      		ldi r22,lo8(56)
+ 223 00b8 83E0      		ldi r24,lo8(3)
+ 224 00ba 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 225               	.LVL16:
+  88:state_machine.cpp **** 			myLCD->setDigit(5,LCD::Blank);
+ 226               		.loc 1 88 0
+ 227 00be 60E0      		ldi r22,0
+ 228 00c0 84E0      		ldi r24,lo8(4)
+ 229 00c2 0E94 0000 		call _ZN3LCD8setDigitEhh
+ 230               	.LVL17:
+ 231 00c6 00C0      		rjmp .L10
+ 232               	.L6:
+  93:state_machine.cpp **** 			myLCD->setDP(false);
+ 233               		.loc 1 93 0
+ 234 00c8 41E0      		ldi r20,lo8(1)
+ 235 00ca 60E0      		ldi r22,lo8(.LC2)
+ 236 00cc 70E0      		ldi r23,hi8(.LC2)
+ 237 00ce 8D81      		ldd r24,Y+5
+ 238 00d0 9E81      		ldd r25,Y+6
+ 239 00d2 0E94 0000 		call _ZN4UART10sendStringEPcb
+ 240               	.LVL18:
+  94:state_machine.cpp **** 			myLCD->setDigit(0,LCD::t);
+ 241               		.loc 1 94 0
+ 242 00d6 80E0      		ldi r24,0
+ 243 00d8 0E94 0000 		call _ZN3LCD5setDPEb
+ 244               	.LVL19:
+  95:state_machine.cpp **** 			myLCD->setDigit(1,LCD::A);
+ 245               		.loc 1 95 0
+ 246 00dc 68E7      		ldi r22,lo8(120)
+ 247 00de 80E0      		ldi r24,0
+ 248 00e0 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 249               	.LVL20:
+  96:state_machine.cpp **** 			myLCD->setDigit(2,LCD::r);
+ 250               		.loc 1 96 0
+ 251 00e4 67E7      		ldi r22,lo8(119)
+ 252 00e6 81E0      		ldi r24,lo8(1)
+ 253 00e8 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 254               	.LVL21:
+  97:state_machine.cpp **** 			myLCD->setDigit(3,LCD::E);
+ 255               		.loc 1 97 0
+ 256 00ec 60E5      		ldi r22,lo8(80)
+ 257 00ee 82E0      		ldi r24,lo8(2)
+ 258 00f0 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 259               	.LVL22:
+  98:state_machine.cpp **** 			myLCD->setDigit(4,LCD::Blank);
+ 260               		.loc 1 98 0
+ 261 00f4 69E7      		ldi r22,lo8(121)
+ 262 00f6 83E0      		ldi r24,lo8(3)
+ 263 00f8 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 264               	.LVL23:
+  99:state_machine.cpp **** 			myLCD->setDigit(5,LCD::Blank);
+ 265               		.loc 1 99 0
+ 266 00fc 60E0      		ldi r22,0
+ 267 00fe 84E0      		ldi r24,lo8(4)
+ 268 0100 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 269               	.LVL24:
+ 270               	.L10:
+ 100:state_machine.cpp **** 			
+ 271               		.loc 1 100 0
+ 272 0104 60E0      		ldi r22,0
+ 273 0106 85E0      		ldi r24,lo8(5)
+ 274 0108 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 275               	.LVL25:
+ 103:state_machine.cpp **** 		case STATE_TARE:
+ 276               		.loc 1 103 0
+ 277 010c 00C0      		rjmp .L5
+ 278               	.L8:
+ 106:state_machine.cpp **** 			uart->sendNb(myScale->offset);
+ 279               		.loc 1 106 0
+ 280 010e 60E0      		ldi r22,lo8(.LC3)
+ 281 0110 70E0      		ldi r23,hi8(.LC3)
+ 282 0112 8D81      		ldd r24,Y+5
+ 283 0114 9E81      		ldd r25,Y+6
+ 284 0116 0E94 0000 		call _ZN4UART10sendStringEPc
+ 285               	.LVL26:
+ 107:state_machine.cpp **** 			uart->sendString("SM:Idle",true);
+ 286               		.loc 1 107 0
+ 287 011a E881      		ld r30,Y
+ 288 011c F981      		ldd r31,Y+1
+ 289 011e 4481      		ldd r20,Z+4
+ 290 0120 5581      		ldd r21,Z+5
+ 291 0122 6681      		ldd r22,Z+6
+ 292 0124 7781      		ldd r23,Z+7
+ 293 0126 8D81      		ldd r24,Y+5
+ 294 0128 9E81      		ldd r25,Y+6
+ 295 012a 0E94 0000 		call _ZN4UART6sendNbEl
+ 296               	.LVL27:
+ 108:state_machine.cpp **** 			myLCD->clear(false);
+ 297               		.loc 1 108 0
+ 298 012e 41E0      		ldi r20,lo8(1)
+ 299 0130 60E0      		ldi r22,lo8(.LC4)
+ 300 0132 70E0      		ldi r23,hi8(.LC4)
+ 301 0134 8D81      		ldd r24,Y+5
+ 302 0136 9E81      		ldd r25,Y+6
+ 303 0138 0E94 0000 		call _ZN4UART10sendStringEPcb
+ 304               	.LVL28:
+ 109:state_machine.cpp **** 			//switch to meas mode with tare offset
+ 305               		.loc 1 109 0
+ 306 013c 80E0      		ldi r24,0
+ 307 013e 0E94 0000 		call _ZN3LCD5clearEb
+ 308               	.LVL29:
+ 309               	.L5:
+ 130:state_machine.cpp **** 	}
+ 131:state_machine.cpp **** 	
+ 132:state_machine.cpp **** 	current_state++;
+ 310               		.loc 1 132 0
+ 311 0142 EA81      		ldd r30,Y+2
+ 312 0144 EF5F      		subi r30,lo8(-(1))
+ 313 0146 EA83      		std Y+2,r30
+ 133:state_machine.cpp **** 	current_duration=states_duration[current_state];
+ 314               		.loc 1 133 0
+ 315 0148 F0E0      		ldi r31,0
+ 316 014a E050      		subi r30,lo8(-(_ZN2SM15states_durationE))
+ 317 014c F040      		sbci r31,hi8(-(_ZN2SM15states_durationE))
+ 318 014e 8081      		ld r24,Z
+ 319 0150 8C83      		std Y+4,r24
+ 320               	/* epilogue start */
+ 134:state_machine.cpp **** }
+ 321               		.loc 1 134 0
+ 322 0152 DF91      		pop r29
+ 323 0154 CF91      		pop r28
+ 324               	.LVL30:
+ 325 0156 0895      		ret
+ 326               		.cfi_endproc
+ 327               	.LFE18:
+ 329               	.global	_ZN2SM6updateEv
+ 331               	_ZN2SM6updateEv:
+ 332               	.LFB17:
+  24:state_machine.cpp **** 	if(current_duration!=0){//States with 0 duration stay on indefinitely
+ 333               		.loc 1 24 0
+ 334               		.cfi_startproc
+ 335               	.LVL31:
+ 336 0158 CF93      		push r28
+ 337               	.LCFI2:
+ 338               		.cfi_def_cfa_offset 3
+ 339               		.cfi_offset 28, -2
+ 340 015a DF93      		push r29
+ 341               	.LCFI3:
+ 342               		.cfi_def_cfa_offset 4
+ 343               		.cfi_offset 29, -3
+ 344               	/* prologue: function */
+ 345               	/* frame size = 0 */
+ 346               	/* stack size = 2 */
+ 347               	.L__stack_usage = 2
+ 348 015c EC01      		movw r28,r24
+  25:state_machine.cpp **** 		if(--current_duration==0){
+ 349               		.loc 1 25 0
+ 350 015e 8C81      		ldd r24,Y+4
+ 351               	.LVL32:
+ 352 0160 8823      		tst r24
+ 353 0162 01F0      		breq .L14
+  26:state_machine.cpp **** 			nextState();
+ 354               		.loc 1 26 0
+ 355 0164 8150      		subi r24,lo8(-(-1))
+ 356 0166 8C83      		std Y+4,r24
+ 357 0168 8111      		cpse r24,__zero_reg__
+ 358 016a 00C0      		rjmp .L14
+  27:state_machine.cpp **** 		}
+ 359               		.loc 1 27 0
+ 360 016c CE01      		movw r24,r28
+ 361 016e 0E94 0000 		call _ZN2SM9nextStateEv
+ 362               	.LVL33:
+ 363               	.L14:
+  30:state_machine.cpp **** 		case STATE_OFF:
+ 364               		.loc 1 30 0
+ 365 0172 8A81      		ldd r24,Y+2
+ 366 0174 8230      		cpi r24,lo8(2)
+ 367 0176 01F4      		brne .+2
+ 368 0178 00C0      		rjmp .L17
+ 369 017a 8330      		cpi r24,lo8(3)
+ 370 017c 01F4      		brne .+2
+ 371 017e 00C0      		rjmp .L18
+ 372 0180 8130      		cpi r24,lo8(1)
+ 373 0182 01F0      		breq .+2
+ 374 0184 00C0      		rjmp .L12
+  38:state_machine.cpp **** 				myLCD->setDigit(0,LCD::V);
+ 375               		.loc 1 38 0
+ 376 0186 8C81      		ldd r24,Y+4
+ 377 0188 8E31      		cpi r24,lo8(30)
+ 378 018a 01F4      		brne .L20
+  39:state_machine.cpp **** 				myLCD->setDigit(1,LCD::Equal);
+ 379               		.loc 1 39 0
+ 380 018c 6EE3      		ldi r22,lo8(62)
+ 381 018e 80E0      		ldi r24,0
+ 382 0190 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 383               	.LVL34:
+  40:state_machine.cpp **** 				myLCD->setDigit(2,LCD::b);
+ 384               		.loc 1 40 0
+ 385 0194 68E4      		ldi r22,lo8(72)
+ 386 0196 81E0      		ldi r24,lo8(1)
+ 387 0198 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 388               	.LVL35:
+  41:state_machine.cpp **** 				myLCD->setDigit(3,LCD::A);
+ 389               		.loc 1 41 0
+ 390 019c 6CE7      		ldi r22,lo8(124)
+ 391 019e 82E0      		ldi r24,lo8(2)
+ 392 01a0 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 393               	.LVL36:
+  42:state_machine.cpp **** 				myLCD->setDigit(4,LCD::t);
+ 394               		.loc 1 42 0
+ 395 01a4 67E7      		ldi r22,lo8(119)
+ 396 01a6 83E0      		ldi r24,lo8(3)
+ 397 01a8 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 398               	.LVL37:
+  43:state_machine.cpp **** 				myLCD->setDigit(5,LCD::t);
+ 399               		.loc 1 43 0
+ 400 01ac 68E7      		ldi r22,lo8(120)
+ 401 01ae 84E0      		ldi r24,lo8(4)
+ 402 01b0 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 403               	.LVL38:
+  44:state_machine.cpp **** 				
+ 404               		.loc 1 44 0
+ 405 01b4 68E7      		ldi r22,lo8(120)
+ 406 01b6 85E0      		ldi r24,lo8(5)
+ 407               	/* epilogue start */
+  78:state_machine.cpp **** 
+ 408               		.loc 1 78 0
+ 409 01b8 DF91      		pop r29
+ 410 01ba CF91      		pop r28
+ 411               	.LVL39:
+  44:state_machine.cpp **** 				
+ 412               		.loc 1 44 0
+ 413 01bc 0C94 0000 		jmp _ZN3LCD8setDigitEhNS_6SymbolE
+ 414               	.LVL40:
+ 415               	.L20:
+  46:state_machine.cpp **** 				ADCSRA|=(1<<ADSC); //Start single ADC conversion
+ 416               		.loc 1 46 0
+ 417 01c0 8431      		cpi r24,lo8(20)
+ 418 01c2 01F4      		brne .L21
+  47:state_machine.cpp **** 				myLCD->setDigit(0,LCD::V);
+ 419               		.loc 1 47 0
+ 420 01c4 8091 7A00 		lds r24,122
+ 421 01c8 8064      		ori r24,lo8(64)
+ 422 01ca 8093 7A00 		sts 122,r24
+  48:state_machine.cpp **** 				myLCD->setDigit(1,LCD::Equal);
+ 423               		.loc 1 48 0
+ 424 01ce 6EE3      		ldi r22,lo8(62)
+ 425 01d0 80E0      		ldi r24,0
+ 426 01d2 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 427               	.LVL41:
+  49:state_machine.cpp **** 				myLCD->setDigit(2,LCD::Blank);
+ 428               		.loc 1 49 0
+ 429 01d6 68E4      		ldi r22,lo8(72)
+ 430 01d8 81E0      		ldi r24,lo8(1)
+ 431 01da 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 432               	.LVL42:
+  50:state_machine.cpp **** 				myLCD->setDP(true);
+ 433               		.loc 1 50 0
+ 434 01de 60E0      		ldi r22,0
+ 435 01e0 82E0      		ldi r24,lo8(2)
+ 436 01e2 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 437               	.LVL43:
+  51:state_machine.cpp **** 			}else if(current_duration<20){
+ 438               		.loc 1 51 0
+ 439 01e6 81E0      		ldi r24,lo8(1)
+ 440               	/* epilogue start */
+  78:state_machine.cpp **** 
+ 441               		.loc 1 78 0
+ 442 01e8 DF91      		pop r29
+ 443 01ea CF91      		pop r28
+ 444               	.LVL44:
+  51:state_machine.cpp **** 			}else if(current_duration<20){
+ 445               		.loc 1 51 0
+ 446 01ec 0C94 0000 		jmp _ZN3LCD5setDPEb
+ 447               	.LVL45:
+ 448               	.L21:
+  52:state_machine.cpp **** 				ADCSRA|=(1<<ADSC); //Start single ADC conversion
+ 449               		.loc 1 52 0
+ 450 01f0 8431      		cpi r24,lo8(20)
+ 451 01f2 00F4      		brsh .L12
+  53:state_machine.cpp **** 			}
+ 452               		.loc 1 53 0
+ 453 01f4 8091 7A00 		lds r24,122
+ 454 01f8 8064      		ori r24,lo8(64)
+ 455 01fa 8093 7A00 		sts 122,r24
+ 456 01fe 00C0      		rjmp .L12
+ 457               	.L17:
+  60:state_machine.cpp **** 				myLCD->clear(false);
+ 458               		.loc 1 60 0
+ 459 0200 8C81      		ldd r24,Y+4
+ 460 0202 8431      		cpi r24,lo8(20)
+ 461 0204 01F4      		brne .L23
+  61:state_machine.cpp **** 				myLCD->setDigit(0,LCD::t);
+ 462               		.loc 1 61 0
+ 463 0206 80E0      		ldi r24,0
+ 464 0208 0E94 0000 		call _ZN3LCD5clearEb
+ 465               	.LVL46:
+  62:state_machine.cpp **** 				myLCD->setNb(myScale->tare(),5);
+ 466               		.loc 1 62 0
+ 467 020c 68E7      		ldi r22,lo8(120)
+ 468 020e 80E0      		ldi r24,0
+ 469 0210 0E94 0000 		call _ZN3LCD8setDigitEhNS_6SymbolE
+ 470               	.LVL47:
+ 471 0214 00C0      		rjmp .L28
+ 472               	.L23:
+  64:state_machine.cpp **** 				myLCD->setNb(myScale->tare(),5);
+ 473               		.loc 1 64 0
+ 474 0216 8431      		cpi r24,lo8(20)
+ 475 0218 00F4      		brsh .L12
+ 476               	.L28:
+  65:state_machine.cpp **** 			}
+ 477               		.loc 1 65 0
+ 478 021a 8881      		ld r24,Y
+ 479 021c 9981      		ldd r25,Y+1
+ 480 021e 0E94 0000 		call _ZN5Scale4tareEv
+ 481               	.LVL48:
+ 482 0222 45E0      		ldi r20,lo8(5)
+ 483               	/* epilogue start */
+  78:state_machine.cpp **** 
+ 484               		.loc 1 78 0
+ 485 0224 DF91      		pop r29
+ 486 0226 CF91      		pop r28
+ 487               	.LVL49:
+  65:state_machine.cpp **** 			}
+ 488               		.loc 1 65 0
+ 489 0228 0C94 0000 		jmp _ZN3LCD5setNbElh
+ 490               	.LVL50:
+ 491               	.L18:
+  72:state_machine.cpp **** 			if(uart_flags & UART_STREAM)
+ 492               		.loc 1 72 0
+ 493 022c 8881      		ld r24,Y
+ 494 022e 9981      		ldd r25,Y+1
+ 495 0230 0E94 0000 		call _ZN5Scale9getWeightEv
+ 496               	.LVL51:
+ 497 0234 0E94 0000 		call _ZN3LCD5setNbEl
+ 498               	.LVL52:
+  73:state_machine.cpp **** 				myScale->showWeight(uart_flags & UART_STREAM_VERBOSE);
+ 499               		.loc 1 73 0
+ 500 0238 6B81      		ldd r22,Y+3
+ 501 023a 60FF      		sbrs r22,0
+ 502 023c 00C0      		rjmp .L12
+  74:state_machine.cpp **** 			
+ 503               		.loc 1 74 0
+ 504 023e 6695      		lsr r22
+ 505 0240 6170      		andi r22,1
+ 506 0242 8881      		ld r24,Y
+ 507 0244 9981      		ldd r25,Y+1
+ 508               	/* epilogue start */
+  78:state_machine.cpp **** 
+ 509               		.loc 1 78 0
+ 510 0246 DF91      		pop r29
+ 511 0248 CF91      		pop r28
+ 512               	.LVL53:
+  74:state_machine.cpp **** 			
+ 513               		.loc 1 74 0
+ 514 024a 0C94 0000 		jmp _ZN5Scale10showWeightEb
+ 515               	.LVL54:
+ 516               	.L12:
+ 517               	/* epilogue start */
+  78:state_machine.cpp **** 
+ 518               		.loc 1 78 0
+ 519 024e DF91      		pop r29
+ 520 0250 CF91      		pop r28
+ 521               	.LVL55:
+ 522 0252 0895      		ret
+ 523               		.cfi_endproc
+ 524               	.LFE17:
+ 526               	.global	_ZN2SM15states_durationE
+ 527               		.section	.rodata
+ 530               	_ZN2SM15states_durationE:
+ 531 0000 00        		.byte	0
+ 532 0001 28        		.byte	40
+ 533 0002 1E        		.byte	30
+ 534 0003 00        		.byte	0
+ 535               		.text
+ 536               	.Letext0:
+ 537               		.file 2 "/usr/lib/avr/include/stdint.h"
+ 538               		.file 3 "UART.h"
+ 539               		.file 4 "ADC.h"
+ 540               		.file 5 "scale.h"
+ 541               		.file 6 "LCD.h"
+ 542               		.file 7 "state_machine.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 state_machine.cpp
-     /tmp/cc6Sd6pQ.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/cc6Sd6pQ.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/cc6Sd6pQ.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/cc6Sd6pQ.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/cc6Sd6pQ.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/cc6Sd6pQ.s:12     .text:0000000000000000 _ZN2SMC2Ev
-     /tmp/cc6Sd6pQ.s:12     .text:0000000000000000 _ZN2SMC1Ev
-     /tmp/cc6Sd6pQ.s:39     .text:000000000000000c _ZN2SMD2Ev
-     /tmp/cc6Sd6pQ.s:39     .text:000000000000000c _ZN2SMD1Ev
-     /tmp/cc6Sd6pQ.s:56     .text:000000000000000e _ZN2SM9nextStateEv
-     /tmp/cc6Sd6pQ.s:114    .rodata:0000000000000000 _ZN2SM15states_durationE
-     /tmp/cc6Sd6pQ.s:85     .text:0000000000000024 _ZN2SM6updateEv
+     /tmp/ccf07QZE.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccf07QZE.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccf07QZE.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccf07QZE.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccf07QZE.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccf07QZE.s:16     .text:0000000000000000 _ZN2SMC2EP4UARTP5ScaleP3LCD
+     /tmp/ccf07QZE.s:16     .text:0000000000000000 _ZN2SMC1EP4UARTP5ScaleP3LCD
+     /tmp/ccf07QZE.s:63     .text:0000000000000022 _ZN2SMD2Ev
+     /tmp/ccf07QZE.s:63     .text:0000000000000022 _ZN2SMD1Ev
+     /tmp/ccf07QZE.s:80     .text:0000000000000024 _ZN2SM6streamEbb
+     /tmp/ccf07QZE.s:112    .text:000000000000002e _ZN2SM9nextStateEv
+     /tmp/ccf07QZE.s:530    .rodata:0000000000000000 _ZN2SM15states_durationE
+     /tmp/ccf07QZE.s:331    .text:0000000000000158 _ZN2SM6updateEv
 
 UNDEFINED SYMBOLS
+_ZN4UART10sendStringEPcb
+_ZN3LCD8setDigitEhNS_6SymbolE
+_ZN3LCD8setDigitEhh
+_ZN3LCD5setDPEb
+_ZN4UART10sendStringEPc
+_ZN4UART6sendNbEl
+_ZN3LCD5clearEb
+_ZN5Scale4tareEv
+_ZN3LCD5setNbElh
+_ZN5Scale9getWeightEv
+_ZN3LCD5setNbEl
+_ZN5Scale10showWeightEb
 __do_copy_data

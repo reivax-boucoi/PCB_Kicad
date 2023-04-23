@@ -7,13 +7,396 @@
    7               		.text
    8               	.Ltext0:
    9               		.cfi_sections	.debug_frame
-  10               	.Letext0:
+  10               	.global	_ZN5ScaleC2EP4UART
+  12               	_ZN5ScaleC2EP4UART:
+  13               	.LFB11:
+  14               		.file 1 "scale.cpp"
+   1:scale.cpp     **** #include "scale.h"
+   2:scale.cpp     **** 
+   3:scale.cpp     **** Scale::Scale(UART* u){
+  15               		.loc 1 3 0
+  16               		.cfi_startproc
+  17               	.LVL0:
+  18 0000 EF92      		push r14
+  19               	.LCFI0:
+  20               		.cfi_def_cfa_offset 3
+  21               		.cfi_offset 14, -2
+  22 0002 FF92      		push r15
+  23               	.LCFI1:
+  24               		.cfi_def_cfa_offset 4
+  25               		.cfi_offset 15, -3
+  26 0004 0F93      		push r16
+  27               	.LCFI2:
+  28               		.cfi_def_cfa_offset 5
+  29               		.cfi_offset 16, -4
+  30 0006 1F93      		push r17
+  31               	.LCFI3:
+  32               		.cfi_def_cfa_offset 6
+  33               		.cfi_offset 17, -5
+  34 0008 CF93      		push r28
+  35               	.LCFI4:
+  36               		.cfi_def_cfa_offset 7
+  37               		.cfi_offset 28, -6
+  38 000a DF93      		push r29
+  39               	.LCFI5:
+  40               		.cfi_def_cfa_offset 8
+  41               		.cfi_offset 29, -7
+  42               	/* prologue: function */
+  43               	/* frame size = 0 */
+  44               	/* stack size = 6 */
+  45               	.L__stack_usage = 6
+  46 000c EC01      		movw r28,r24
+  47 000e 7B01      		movw r14,r22
+  48               	.LBB2:
+  49               		.loc 1 3 0
+  50 0010 8C01      		movw r16,r24
+  51 0012 005F      		subi r16,-16
+  52 0014 1F4F      		sbci r17,-1
+  53 0016 C801      		movw r24,r16
+  54               	.LVL1:
+  55 0018 0E94 0000 		call _ZN7MCP3462C1Ev
+  56               	.LVL2:
+   4:scale.cpp     ****     uart=u;
+  57               		.loc 1 4 0
+  58 001c FA8A      		std Y+18,r15
+  59 001e E98A      		std Y+17,r14
+   5:scale.cpp     ****     gain=1;
+  60               		.loc 1 5 0
+  61 0020 81E0      		ldi r24,lo8(1)
+  62 0022 90E0      		ldi r25,0
+  63 0024 A0E0      		ldi r26,0
+  64 0026 B0E0      		ldi r27,0
+  65 0028 8883      		st Y,r24
+  66 002a 9983      		std Y+1,r25
+  67 002c AA83      		std Y+2,r26
+  68 002e BB83      		std Y+3,r27
+   6:scale.cpp     ****     offset=myADC.getDirectData();
+  69               		.loc 1 6 0
+  70 0030 C801      		movw r24,r16
+  71 0032 0E94 0000 		call _ZN7MCP346213getDirectDataEv
+  72               	.LVL3:
+  73 0036 6C83      		std Y+4,r22
+  74 0038 7D83      		std Y+5,r23
+  75 003a 8E83      		std Y+6,r24
+  76 003c 9F83      		std Y+7,r25
+  77               	/* epilogue start */
+  78               	.LBE2:
+   7:scale.cpp     **** }
+  79               		.loc 1 7 0
+  80 003e DF91      		pop r29
+  81 0040 CF91      		pop r28
+  82               	.LVL4:
+  83 0042 1F91      		pop r17
+  84 0044 0F91      		pop r16
+  85               	.LVL5:
+  86 0046 FF90      		pop r15
+  87 0048 EF90      		pop r14
+  88               	.LVL6:
+  89 004a 0895      		ret
+  90               		.cfi_endproc
+  91               	.LFE11:
+  93               	.global	_ZN5ScaleC1EP4UART
+  94               		.set	_ZN5ScaleC1EP4UART,_ZN5ScaleC2EP4UART
+  95               	.global	_ZN5ScaleD2Ev
+  97               	_ZN5ScaleD2Ev:
+  98               	.LFB14:
+   8:scale.cpp     **** 
+   9:scale.cpp     **** Scale::~Scale(void){
+  99               		.loc 1 9 0
+ 100               		.cfi_startproc
+ 101               	.LVL7:
+ 102               	/* prologue: function */
+ 103               	/* frame size = 0 */
+ 104               	/* stack size = 0 */
+ 105               	.L__stack_usage = 0
+ 106               	.LBB3:
+ 107               		.loc 1 9 0
+ 108 004c 4096      		adiw r24,16
+ 109               	.LVL8:
+ 110 004e 0C94 0000 		jmp _ZN7MCP3462D1Ev
+ 111               	.LVL9:
+ 112               	.LBE3:
+ 113               		.cfi_endproc
+ 114               	.LFE14:
+ 116               	.global	_ZN5ScaleD1Ev
+ 117               		.set	_ZN5ScaleD1Ev,_ZN5ScaleD2Ev
+ 118               	.global	_ZN5Scale4tareEv
+ 120               	_ZN5Scale4tareEv:
+ 121               	.LFB16:
+  10:scale.cpp     ****     
+  11:scale.cpp     **** }
+  12:scale.cpp     **** 
+  13:scale.cpp     **** 
+  14:scale.cpp     **** int32_t Scale::tare(void){
+ 122               		.loc 1 14 0
+ 123               		.cfi_startproc
+ 124               	.LVL10:
+ 125 0052 0F93      		push r16
+ 126               	.LCFI6:
+ 127               		.cfi_def_cfa_offset 3
+ 128               		.cfi_offset 16, -2
+ 129 0054 1F93      		push r17
+ 130               	.LCFI7:
+ 131               		.cfi_def_cfa_offset 4
+ 132               		.cfi_offset 17, -3
+ 133 0056 CF93      		push r28
+ 134               	.LCFI8:
+ 135               		.cfi_def_cfa_offset 5
+ 136               		.cfi_offset 28, -4
+ 137 0058 DF93      		push r29
+ 138               	.LCFI9:
+ 139               		.cfi_def_cfa_offset 6
+ 140               		.cfi_offset 29, -5
+ 141               	/* prologue: function */
+ 142               	/* frame size = 0 */
+ 143               	/* stack size = 4 */
+ 144               	.L__stack_usage = 4
+ 145 005a EC01      		movw r28,r24
+  15:scale.cpp     ****     offset=(myADC.getDirectData()+offset)>>1;
+ 146               		.loc 1 15 0
+ 147 005c 4096      		adiw r24,16
+ 148               	.LVL11:
+ 149 005e 0E94 0000 		call _ZN7MCP346213getDirectDataEv
+ 150               	.LVL12:
+ 151 0062 0C81      		ldd r16,Y+4
+ 152 0064 1D81      		ldd r17,Y+5
+ 153 0066 2E81      		ldd r18,Y+6
+ 154 0068 3F81      		ldd r19,Y+7
+ 155 006a DC01      		movw r26,r24
+ 156 006c CB01      		movw r24,r22
+ 157 006e 800F      		add r24,r16
+ 158 0070 911F      		adc r25,r17
+ 159 0072 A21F      		adc r26,r18
+ 160 0074 B31F      		adc r27,r19
+ 161 0076 BC01      		movw r22,r24
+ 162 0078 CD01      		movw r24,r26
+ 163 007a 9595      		asr r25
+ 164 007c 8795      		ror r24
+ 165 007e 7795      		ror r23
+ 166 0080 6795      		ror r22
+ 167 0082 6C83      		std Y+4,r22
+ 168 0084 7D83      		std Y+5,r23
+ 169 0086 8E83      		std Y+6,r24
+ 170 0088 9F83      		std Y+7,r25
+ 171               	/* epilogue start */
+  16:scale.cpp     ****     return offset;
+  17:scale.cpp     **** }
+ 172               		.loc 1 17 0
+ 173 008a DF91      		pop r29
+ 174 008c CF91      		pop r28
+ 175               	.LVL13:
+ 176 008e 1F91      		pop r17
+ 177 0090 0F91      		pop r16
+ 178 0092 0895      		ret
+ 179               		.cfi_endproc
+ 180               	.LFE16:
+ 182               	.global	_ZN5Scale9getWeightEv
+ 184               	_ZN5Scale9getWeightEv:
+ 185               	.LFB17:
+  18:scale.cpp     **** 
+  19:scale.cpp     **** 
+  20:scale.cpp     **** int32_t Scale::getWeight(void){
+ 186               		.loc 1 20 0
+ 187               		.cfi_startproc
+ 188               	.LVL14:
+ 189 0094 CF92      		push r12
+ 190               	.LCFI10:
+ 191               		.cfi_def_cfa_offset 3
+ 192               		.cfi_offset 12, -2
+ 193 0096 DF92      		push r13
+ 194               	.LCFI11:
+ 195               		.cfi_def_cfa_offset 4
+ 196               		.cfi_offset 13, -3
+ 197 0098 EF92      		push r14
+ 198               	.LCFI12:
+ 199               		.cfi_def_cfa_offset 5
+ 200               		.cfi_offset 14, -4
+ 201 009a FF92      		push r15
+ 202               	.LCFI13:
+ 203               		.cfi_def_cfa_offset 6
+ 204               		.cfi_offset 15, -5
+ 205 009c 0F93      		push r16
+ 206               	.LCFI14:
+ 207               		.cfi_def_cfa_offset 7
+ 208               		.cfi_offset 16, -6
+ 209 009e 1F93      		push r17
+ 210               	.LCFI15:
+ 211               		.cfi_def_cfa_offset 8
+ 212               		.cfi_offset 17, -7
+ 213 00a0 CF93      		push r28
+ 214               	.LCFI16:
+ 215               		.cfi_def_cfa_offset 9
+ 216               		.cfi_offset 28, -8
+ 217 00a2 DF93      		push r29
+ 218               	.LCFI17:
+ 219               		.cfi_def_cfa_offset 10
+ 220               		.cfi_offset 29, -9
+ 221               	/* prologue: function */
+ 222               	/* frame size = 0 */
+ 223               	/* stack size = 8 */
+ 224               	.L__stack_usage = 8
+ 225 00a4 EC01      		movw r28,r24
+  21:scale.cpp     ****     value=myADC.getDirectData();
+ 226               		.loc 1 21 0
+ 227 00a6 4096      		adiw r24,16
+ 228               	.LVL15:
+ 229 00a8 0E94 0000 		call _ZN7MCP346213getDirectDataEv
+ 230               	.LVL16:
+ 231 00ac 6887      		std Y+8,r22
+ 232 00ae 7987      		std Y+9,r23
+ 233 00b0 8A87      		std Y+10,r24
+ 234 00b2 9B87      		std Y+11,r25
+  22:scale.cpp     ****     value_scl=(value-offset)*gain;
+ 235               		.loc 1 22 0
+ 236 00b4 0C81      		ldd r16,Y+4
+ 237 00b6 1D81      		ldd r17,Y+5
+ 238 00b8 2E81      		ldd r18,Y+6
+ 239 00ba 3F81      		ldd r19,Y+7
+ 240 00bc 6B01      		movw r12,r22
+ 241 00be 7C01      		movw r14,r24
+ 242 00c0 C01A      		sub r12,r16
+ 243 00c2 D10A      		sbc r13,r17
+ 244 00c4 E20A      		sbc r14,r18
+ 245 00c6 F30A      		sbc r15,r19
+ 246 00c8 A701      		movw r20,r14
+ 247 00ca 9601      		movw r18,r12
+ 248 00cc 6881      		ld r22,Y
+ 249 00ce 7981      		ldd r23,Y+1
+ 250 00d0 8A81      		ldd r24,Y+2
+ 251 00d2 9B81      		ldd r25,Y+3
+ 252 00d4 0E94 0000 		call __mulsi3
+ 253 00d8 6C87      		std Y+12,r22
+ 254 00da 7D87      		std Y+13,r23
+ 255 00dc 8E87      		std Y+14,r24
+ 256 00de 9F87      		std Y+15,r25
+ 257               	/* epilogue start */
+  23:scale.cpp     ****  return value_scl;
+  24:scale.cpp     **** }
+ 258               		.loc 1 24 0
+ 259 00e0 DF91      		pop r29
+ 260 00e2 CF91      		pop r28
+ 261               	.LVL17:
+ 262 00e4 1F91      		pop r17
+ 263 00e6 0F91      		pop r16
+ 264 00e8 FF90      		pop r15
+ 265 00ea EF90      		pop r14
+ 266 00ec DF90      		pop r13
+ 267 00ee CF90      		pop r12
+ 268 00f0 0895      		ret
+ 269               		.cfi_endproc
+ 270               	.LFE17:
+ 272               	.global	_ZN5Scale10showWeightEb
+ 274               	_ZN5Scale10showWeightEb:
+ 275               	.LFB18:
+  25:scale.cpp     **** 
+  26:scale.cpp     **** void Scale::showWeight(bool verbose){
+ 276               		.loc 1 26 0
+ 277               		.cfi_startproc
+ 278               	.LVL18:
+ 279 00f2 0F93      		push r16
+ 280               	.LCFI18:
+ 281               		.cfi_def_cfa_offset 3
+ 282               		.cfi_offset 16, -2
+ 283 00f4 CF93      		push r28
+ 284               	.LCFI19:
+ 285               		.cfi_def_cfa_offset 4
+ 286               		.cfi_offset 28, -3
+ 287 00f6 DF93      		push r29
+ 288               	.LCFI20:
+ 289               		.cfi_def_cfa_offset 5
+ 290               		.cfi_offset 29, -4
+ 291               	/* prologue: function */
+ 292               	/* frame size = 0 */
+ 293               	/* stack size = 3 */
+ 294               	.L__stack_usage = 3
+ 295 00f8 EC01      		movw r28,r24
+ 296 00fa 262F      		mov r18,r22
+ 297 00fc 4C85      		ldd r20,Y+12
+ 298 00fe 5D85      		ldd r21,Y+13
+ 299 0100 6E85      		ldd r22,Y+14
+ 300 0102 7F85      		ldd r23,Y+15
+ 301 0104 8989      		ldd r24,Y+17
+ 302 0106 9A89      		ldd r25,Y+18
+ 303               	.LVL19:
+  27:scale.cpp     ****     
+  28:scale.cpp     ****     if(verbose){
+ 304               		.loc 1 28 0
+ 305 0108 2223      		tst r18
+ 306 010a 01F0      		breq .L6
+  29:scale.cpp     ****         uart->sendNb(value_scl,10,false);
+ 307               		.loc 1 29 0
+ 308 010c 00E0      		ldi r16,0
+ 309 010e 2AE0      		ldi r18,lo8(10)
+ 310 0110 0E94 0000 		call _ZN4UART6sendNbElhb
+ 311               	.LVL20:
+  30:scale.cpp     ****         uart->sendByte('\t');
+ 312               		.loc 1 30 0
+ 313 0114 69E0      		ldi r22,lo8(9)
+ 314 0116 8989      		ldd r24,Y+17
+ 315 0118 9A89      		ldd r25,Y+18
+ 316 011a 0E94 0000 		call _ZN4UART8sendByteEc
+ 317               	.LVL21:
+  31:scale.cpp     ****         uart->sendNb(value,2,true);
+ 318               		.loc 1 31 0
+ 319 011e 4885      		ldd r20,Y+8
+ 320 0120 5985      		ldd r21,Y+9
+ 321 0122 6A85      		ldd r22,Y+10
+ 322 0124 7B85      		ldd r23,Y+11
+ 323 0126 01E0      		ldi r16,lo8(1)
+ 324 0128 22E0      		ldi r18,lo8(2)
+ 325 012a 8989      		ldd r24,Y+17
+ 326 012c 9A89      		ldd r25,Y+18
+ 327 012e 0E94 0000 		call _ZN4UART6sendNbElhb
+ 328               	.LVL22:
+ 329               	/* epilogue start */
+  32:scale.cpp     ****     }else{
+  33:scale.cpp     ****         uart->sendNb(value_scl);
+  34:scale.cpp     ****     }
+  35:scale.cpp     **** }
+ 330               		.loc 1 35 0
+ 331 0132 DF91      		pop r29
+ 332 0134 CF91      		pop r28
+ 333               	.LVL23:
+ 334 0136 0F91      		pop r16
+ 335 0138 0895      		ret
+ 336               	.LVL24:
+ 337               	.L6:
+ 338               	/* epilogue start */
+ 339 013a DF91      		pop r29
+ 340 013c CF91      		pop r28
+ 341               	.LVL25:
+ 342 013e 0F91      		pop r16
+  33:scale.cpp     ****     }
+ 343               		.loc 1 33 0
+ 344 0140 0C94 0000 		jmp _ZN4UART6sendNbEl
+ 345               	.LVL26:
+ 346               		.cfi_endproc
+ 347               	.LFE18:
+ 349               	.Letext0:
+ 350               		.file 2 "/usr/lib/avr/include/stdint.h"
+ 351               		.file 3 "ADC.h"
+ 352               		.file 4 "UART.h"
+ 353               		.file 5 "scale.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 scale.cpp
-     /tmp/ccIwO98L.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccIwO98L.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccIwO98L.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccIwO98L.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccIwO98L.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccnQQoyH.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccnQQoyH.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccnQQoyH.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccnQQoyH.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccnQQoyH.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccnQQoyH.s:12     .text:0000000000000000 _ZN5ScaleC2EP4UART
+     /tmp/ccnQQoyH.s:12     .text:0000000000000000 _ZN5ScaleC1EP4UART
+     /tmp/ccnQQoyH.s:97     .text:000000000000004c _ZN5ScaleD2Ev
+     /tmp/ccnQQoyH.s:97     .text:000000000000004c _ZN5ScaleD1Ev
+     /tmp/ccnQQoyH.s:120    .text:0000000000000052 _ZN5Scale4tareEv
+     /tmp/ccnQQoyH.s:184    .text:0000000000000094 _ZN5Scale9getWeightEv
+     /tmp/ccnQQoyH.s:274    .text:00000000000000f2 _ZN5Scale10showWeightEb
 
-NO UNDEFINED SYMBOLS
+UNDEFINED SYMBOLS
+_ZN7MCP3462C1Ev
+_ZN7MCP346213getDirectDataEv
+_ZN7MCP3462D1Ev
+__mulsi3
+_ZN4UART6sendNbElhb
+_ZN4UART8sendByteEc
+_ZN4UART6sendNbEl

@@ -128,21 +128,14 @@ bool LCD::getClk(void) {
 	return (LCDDR16 & 1);
 }
 
-void LCD::blink(uint16_t t) {
-	for(uint16_t i=0;i<t;i++){
-		PORTB|=(1<<PB0);
-		_delay_ms(15);
-		PORTB&=~(1<<PB0);
-		_delay_ms(15);
-	}
-}
 
-uint8_t LCD::setNb(int32_t nb) {// TODO 10ms !
+
+uint8_t LCD::setNb(int32_t nb, uint8_t dig) {
 	if(nb>999999 || nb <-99999){
 		return 1;
 	}
 	int8_t d=5;
-	uint8_t min=0;
+	uint8_t min=6-dig;
 	if(nb<0){
 		setDigit(0,Minus);
 		min++;
@@ -157,8 +150,15 @@ uint8_t LCD::setNb(int32_t nb) {// TODO 10ms !
 	return 0;
 }
 
+uint8_t LCD::setNb(int32_t nb) {
+	return setNb(nb,6);
+}
+
 void LCD::clear(void) {
-	setBattery(NONE);
+	clear(true);
+}
+void LCD::clear(bool clearBatt) {
+	if(clearBatt)setBattery(NONE);
 	setClk(false);
 	setDP(false);
 	for(int8_t i=5;i>=0;i--)setDigit(i,Blank);
