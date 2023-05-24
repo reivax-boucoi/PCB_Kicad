@@ -54,6 +54,11 @@
   (pad "4" thru_hole circle (at 3 -1.25) (size 1.8 1.8) (drill 0.7) (layers "*.Cu" "*.Mask") (tstamp a1e4e5ad-4e1a-4d0b-89da-f4467fa668e9))
   (pad "5" thru_hole circle (at 0 -1.25) (size 1.8 1.8) (drill 0.7) (layers "*.Cu" "*.Mask") (tstamp a1e4e5ad-4e1a-4d0b-89da-f4467fa668e9))
   (pad "6" thru_hole circle (at -3 -1.25) (size 1.8 1.8) (drill 0.7) (layers "*.Cu" "*.Mask") (tstamp a1e4e5ad-4e1a-4d0b-89da-f4467fa668e9))
-  (pad "7" thru_hole roundrect (at -8.9 0) (size 2 3) (drill oval 0.6 1.6) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.25) (tstamp 13a2b9fa-7e20-4ccb-9571-6708d8b4a743))
-  (pad "7" thru_hole roundrect (at 8.9 0) (size 2 3) (drill oval 0.6 1.6) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.25) (tstamp a18be59b-931a-4f01-985b-4551fee99083))
+  (pad "7" thru_hole roundrect (at -8.9 0) (size 2 3) (drill oval 0.7 1.6) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.25) (tstamp 13a2b9fa-7e20-4ccb-9571-6708d8b4a743))
+  (pad "7" thru_hole roundrect (at 8.9 0) (size 2 3) (drill oval 0.7 1.6) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.25) (tstamp a18be59b-931a-4f01-985b-4551fee99083))
+  (model "${KICAD_USR_LIB_DIR}/3Dmodels/SSSU121700.STEP"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
+  )
 )
