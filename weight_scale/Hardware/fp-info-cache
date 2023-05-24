@@ -1,372 +1,1163 @@
-88233846454752
-footprints
-105-1102-001
-
-
+278639960741569
+MountingHole
+MountingHole_2.1mm
+Mounting Hole 2.1mm, no annular
+mounting hole 2.1mm no annular
 0
-2
-2
-footprints
-571-0100_Black
-
-
 0
-2
-2
-footprints
-571-0100_Red
-
-
 0
-2
-2
-footprints
-282834-3
-
-
+MountingHole
+MountingHole_2.2mm_M2
+Mounting Hole 2.2mm, no annular, M2
+mounting hole 2.2mm no annular m2
 0
-3
-3
-footprints
-282834-4
-
-
 0
-4
-4
-footprints
-796638-3
-
-
+0
+MountingHole
+MountingHole_2.2mm_M2_DIN965
+Mounting Hole 2.2mm, no annular, M2, DIN965
+mounting hole 2.2mm no annular m2 din965
+0
+0
+0
+MountingHole
+MountingHole_2.2mm_M2_DIN965_Pad
+Mounting Hole 2.2mm, M2, DIN965
+mounting hole 2.2mm m2 din965
+0
+1
+1
+MountingHole
+MountingHole_2.2mm_M2_DIN965_Pad_TopBottom
+Mounting Hole 2.2mm, M2, DIN965
+mounting hole 2.2mm m2 din965
 0
 3
-3
-footprints
-796638-4
-
-
-0
-4
-4
-footprints
-5520252-4
-
-
-0
-10
-10
-footprints
-731000105
-
-
-0
-3
-3
-footprints
-750318114
-
-
-0
-8
-8
-footprints
-B78307A
-DK E10 EM series
-
-0
-8
-8
-footprints
-Board_chain_Conn
-
-
-0
-2
-2
-footprints
-Board_edge_cap_P5mm_D10mm
-
-
-0
-2
-2
-footprints
-CL525N3-G
-
-
-0
-3
-3
-footprints
-COTO-2900
-COTO 2900-0043 5V SPDT relay
-
-0
-5
-5
-footprints
-C_Disc_D5.0mm_W2.5mm_P5.00mm
-C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf
-C Disc series Radial pin pitch 5.00mm  diameter 5mm width 2.5mm Capacitor
-0
-2
-2
-footprints
-C_SocketINSA_D5.0mm_W2.5mm_P5.00mm
-C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf
-C Disc series Radial pin pitch 5.00mm  diameter 5mm width 2.5mm Capacitor
-0
-2
-2
-footprints
-C_Socket_D5.0mm_W2.5mm_P5.00mm
-C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf
-C Disc series Radial pin pitch 5.00mm  diameter 5mm width 2.5mm Capacitor
-0
-2
-2
-footprints
-CitecM_2W_pot
-
-
-0
-3
-3
-footprints
-DE0_Altera
-Through hole straight pin header, 2x13, 2.54mm pitch, double rows
-Through hole pin header THT 2x13 2.54mm double row
-0
-30
-27
-footprints
-GD3163_SOIC-40_1.575x0.3, 9.575w
-
-
-0
-40
-40
-footprints
-GDC0570_LCD_6digits_2mmPitch
-
-
-0
-17
-17
-footprints
-HSC100
-
-
-0
-2
-2
-footprints
-IEC_mains_3pin
-
-
-0
-3
-3
-footprints
-LM25180QNGURQ1
-
-
-0
-13
-10
-footprints
-MCP65R41T-2402E
-
-
-0
-6
-6
-footprints
-MIC5209-3.3YS-TR
-
-
-0
-4
-4
-footprints
-MIC5209-5.0YS-TR
-
-
-0
-4
-4
-footprints
-MIC5209YU-TR
-
-
-0
-6
-6
-footprints
-Potentiometer_Bourns_3224W_Vertical
-Potentiometer, vertical, Bourns 3224W, https://www.bourns.com/docs/Product-Datasheets/3224.pdf
-Potentiometer vertical Bourns 3224W
-0
-3
-3
-footprints
-Psoc_C8CKIT-043
-
-
-0
-58
-58
-footprints
-QR_github
-
-
-0
-0
-0
-footprints
-RBridged_0805_2012Metric_Pad1.20x1.40mm_HandSolder
-Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-resistor handsolder
-0
-2
-2
-footprints
-R_Axial_INSA_L6.3mm_D2.5mm_P2.54mm_Vertical
-Resistor, Axial_DIN0207 series, Axial, Vertical, pin pitch=2.54mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
-Resistor Axial_DIN0207 series Axial Vertical pin pitch 2.54mm 0.25W = 1/4W length 6.3mm diameter 2.5mm
-0
-2
-2
-footprints
-R_Axial_INSA_L6.3mm_D2.5mm_P10.16mm_Horizontal
-Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
-Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm
-0
-2
-2
-footprints
-R_SocketINSA_L6.3mm_D2.5mm_P10.16mm_Horizontal
-Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
-Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm
-0
-2
-2
-footprints
-R_Socket_L6.3mm_D2.5mm_P10.16mm_Horizontal
-Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
-Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm
-0
-2
-2
-footprints
-Relay_SPDT_Omron-G5LE-1
-Omron Relay SPDT, http://www.omron.com/ecb/products/pdf/en-g5le.pdf
-Omron Relay SPDT
-0
-5
-5
-footprints
-SPDT_SW_edge_mount
-
-
-0
-3
-3
-footprints
-SPDT_SW_pcb_edge_mount
-
-
-0
-5
-4
-footprints
-SPDT_SW_pcb_half_edge_mount
-
-
-0
-7
-4
-footprints
-SW_PUSH_6mm_2pins
-tact sw push 6mm 2 central pins
-tact sw push 6mm
-0
-2
-2
-footprints
-THS2510RJ
-
-
-0
-2
-2
-footprints
-THS2510RJ_special
-
-
+1
+MountingHole
+MountingHole_2.2mm_M2_DIN965_Pad_TopOnly
+Mounting Hole 2.2mm, M2, DIN965
+mounting hole 2.2mm m2 din965
 0
 2
 1
-footprints
-Tag-Connect_noHoles
-Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2030-IDC-NL.pdf
-tag connect programming header pogo pins
+MountingHole
+MountingHole_2.2mm_M2_ISO7380
+Mounting Hole 2.2mm, no annular, M2, ISO7380
+mounting hole 2.2mm no annular m2 iso7380
+0
+0
+0
+MountingHole
+MountingHole_2.2mm_M2_ISO7380_Pad
+Mounting Hole 2.2mm, M2, ISO7380
+mounting hole 2.2mm m2 iso7380
+0
+1
+1
+MountingHole
+MountingHole_2.2mm_M2_ISO7380_Pad_TopBottom
+Mounting Hole 2.2mm, M2, ISO7380
+mounting hole 2.2mm m2 iso7380
+0
+3
+1
+MountingHole
+MountingHole_2.2mm_M2_ISO7380_Pad_TopOnly
+Mounting Hole 2.2mm, M2, ISO7380
+mounting hole 2.2mm m2 iso7380
+0
+2
+1
+MountingHole
+MountingHole_2.2mm_M2_ISO14580
+Mounting Hole 2.2mm, no annular, M2, ISO14580
+mounting hole 2.2mm no annular m2 iso14580
+0
+0
+0
+MountingHole
+MountingHole_2.2mm_M2_ISO14580_Pad
+Mounting Hole 2.2mm, M2, ISO14580
+mounting hole 2.2mm m2 iso14580
+0
+1
+1
+MountingHole
+MountingHole_2.2mm_M2_ISO14580_Pad_TopBottom
+Mounting Hole 2.2mm, M2, ISO14580
+mounting hole 2.2mm m2 iso14580
+0
+3
+1
+MountingHole
+MountingHole_2.2mm_M2_ISO14580_Pad_TopOnly
+Mounting Hole 2.2mm, M2, ISO14580
+mounting hole 2.2mm m2 iso14580
+0
+2
+1
+MountingHole
+MountingHole_2.2mm_M2_Pad
+Mounting Hole 2.2mm, M2
+mounting hole 2.2mm m2
+0
+1
+1
+MountingHole
+MountingHole_2.2mm_M2_Pad_TopBottom
+Mounting Hole 2.2mm, M2
+mounting hole 2.2mm m2
+0
+3
+1
+MountingHole
+MountingHole_2.2mm_M2_Pad_TopOnly
+Mounting Hole 2.2mm, M2
+mounting hole 2.2mm m2
+0
+2
+1
+MountingHole
+MountingHole_2.2mm_M2_Pad_Via
+Mounting Hole 2.2mm, M2
+mounting hole 2.2mm m2
 0
 9
-6
-footprints
-TangNano
-
-
+1
+MountingHole
+MountingHole_2.5mm
+Mounting Hole 2.5mm, no annular
+mounting hole 2.5mm no annular
 0
-40
-40
-footprints
-TestPoint_Keystone_5010-5014_Multipurpose
-Keystone Miniature THM Test Point 5010-5014, http://www.keyelco.com/product-pdf.cfm?p=1319
-Through Hole Mount Test Points
+0
+0
+MountingHole
+MountingHole_2.5mm_Pad
+Mounting Hole 2.5mm
+mounting hole 2.5mm
 0
 1
 1
-footprints
-USBA_PCB
-
-
+MountingHole
+MountingHole_2.5mm_Pad_TopBottom
+Mounting Hole 2.5mm
+mounting hole 2.5mm
+0
+3
+1
+MountingHole
+MountingHole_2.5mm_Pad_TopOnly
+Mounting Hole 2.5mm
+mounting hole 2.5mm
 0
 2
+1
+MountingHole
+MountingHole_2.5mm_Pad_Via
+Mounting Hole 2.5mm
+mounting hole 2.5mm
+0
+9
+1
+MountingHole
+MountingHole_2.7mm
+Mounting Hole 2.7mm, no annular
+mounting hole 2.7mm no annular
+0
+0
+0
+MountingHole
+MountingHole_2.7mm_M2.5
+Mounting Hole 2.7mm, no annular, M2.5
+mounting hole 2.7mm no annular m2.5
+0
+0
+0
+MountingHole
+MountingHole_2.7mm_M2.5_DIN965
+Mounting Hole 2.7mm, no annular, M2.5, DIN965
+mounting hole 2.7mm no annular m2.5 din965
+0
+0
+0
+MountingHole
+MountingHole_2.7mm_M2.5_DIN965_Pad
+Mounting Hole 2.7mm, M2.5, DIN965
+mounting hole 2.7mm m2.5 din965
+0
+1
+1
+MountingHole
+MountingHole_2.7mm_M2.5_DIN965_Pad_TopBottom
+Mounting Hole 2.7mm, M2.5, DIN965
+mounting hole 2.7mm m2.5 din965
+0
+3
+1
+MountingHole
+MountingHole_2.7mm_M2.5_DIN965_Pad_TopOnly
+Mounting Hole 2.7mm, M2.5, DIN965
+mounting hole 2.7mm m2.5 din965
+0
 2
-footprints
-VB1-2-1-12_transformer
-
-
-0
-4
-4
-footprints
-VGT12EEM-200S1A4
-
-
-0
-8
-8
-footprints
-YA9036-ALD
-
-
-0
-8
-8
-footprints
-mouse-bite-2mm-slot
-
-
+1
+MountingHole
+MountingHole_2.7mm_M2.5_ISO7380
+Mounting Hole 2.7mm, no annular, M2.5, ISO7380
+mounting hole 2.7mm no annular m2.5 iso7380
 0
 0
 0
-footprints
-nxp_logo
-
-
+MountingHole
+MountingHole_2.7mm_M2.5_ISO7380_Pad
+Mounting Hole 2.7mm, M2.5, ISO7380
+mounting hole 2.7mm m2.5 iso7380
+0
+1
+1
+MountingHole
+MountingHole_2.7mm_M2.5_ISO7380_Pad_TopBottom
+Mounting Hole 2.7mm, M2.5, ISO7380
+mounting hole 2.7mm m2.5 iso7380
+0
+3
+1
+MountingHole
+MountingHole_2.7mm_M2.5_ISO7380_Pad_TopOnly
+Mounting Hole 2.7mm, M2.5, ISO7380
+mounting hole 2.7mm m2.5 iso7380
+0
+2
+1
+MountingHole
+MountingHole_2.7mm_M2.5_ISO14580
+Mounting Hole 2.7mm, no annular, M2.5, ISO14580
+mounting hole 2.7mm no annular m2.5 iso14580
 0
 0
 0
+MountingHole
+MountingHole_2.7mm_M2.5_ISO14580_Pad
+Mounting Hole 2.7mm, M2.5, ISO14580
+mounting hole 2.7mm m2.5 iso14580
+0
+1
+1
+MountingHole
+MountingHole_2.7mm_M2.5_ISO14580_Pad_TopBottom
+Mounting Hole 2.7mm, M2.5, ISO14580
+mounting hole 2.7mm m2.5 iso14580
+0
+3
+1
+MountingHole
+MountingHole_2.7mm_M2.5_ISO14580_Pad_TopOnly
+Mounting Hole 2.7mm, M2.5, ISO14580
+mounting hole 2.7mm m2.5 iso14580
+0
+2
+1
+MountingHole
+MountingHole_2.7mm_M2.5_Pad
+Mounting Hole 2.7mm, M2.5
+mounting hole 2.7mm m2.5
+0
+1
+1
+MountingHole
+MountingHole_2.7mm_M2.5_Pad_TopBottom
+Mounting Hole 2.7mm, M2.5
+mounting hole 2.7mm m2.5
+0
+3
+1
+MountingHole
+MountingHole_2.7mm_M2.5_Pad_TopOnly
+Mounting Hole 2.7mm, M2.5
+mounting hole 2.7mm m2.5
+0
+2
+1
+MountingHole
+MountingHole_2.7mm_M2.5_Pad_Via
+Mounting Hole 2.7mm
+mounting hole 2.7mm
+0
+9
+1
+MountingHole
+MountingHole_2.7mm_Pad
+Mounting Hole 2.7mm
+mounting hole 2.7mm
+0
+1
+1
+MountingHole
+MountingHole_2.7mm_Pad_TopBottom
+Mounting Hole 2.7mm
+mounting hole 2.7mm
+0
+3
+1
+MountingHole
+MountingHole_2.7mm_Pad_TopOnly
+Mounting Hole 2.7mm
+mounting hole 2.7mm
+0
+2
+1
+MountingHole
+MountingHole_2.7mm_Pad_Via
+Mounting Hole 2.7mm
+mounting hole 2.7mm
+0
+9
+1
+MountingHole
+MountingHole_2mm
+Mounting Hole 2mm, no annular
+mounting hole 2mm no annular
+0
+0
+0
+MountingHole
+MountingHole_3.2mm_M3
+Mounting Hole 3.2mm, no annular, M3
+mounting hole 3.2mm no annular m3
+0
+0
+0
+MountingHole
+MountingHole_3.2mm_M3_DIN965
+Mounting Hole 3.2mm, no annular, M3, DIN965
+mounting hole 3.2mm no annular m3 din965
+0
+0
+0
+MountingHole
+MountingHole_3.2mm_M3_DIN965_Pad
+Mounting Hole 3.2mm, M3, DIN965
+mounting hole 3.2mm m3 din965
+0
+1
+1
+MountingHole
+MountingHole_3.2mm_M3_DIN965_Pad_TopBottom
+Mounting Hole 3.2mm, M3, DIN965
+mounting hole 3.2mm m3 din965
+0
+3
+1
+MountingHole
+MountingHole_3.2mm_M3_DIN965_Pad_TopOnly
+Mounting Hole 3.2mm, M3, DIN965
+mounting hole 3.2mm m3 din965
+0
+2
+1
+MountingHole
+MountingHole_3.2mm_M3_ISO7380
+Mounting Hole 3.2mm, no annular, M3, ISO7380
+mounting hole 3.2mm no annular m3 iso7380
+0
+0
+0
+MountingHole
+MountingHole_3.2mm_M3_ISO7380_Pad
+Mounting Hole 3.2mm, M3, ISO7380
+mounting hole 3.2mm m3 iso7380
+0
+1
+1
+MountingHole
+MountingHole_3.2mm_M3_ISO7380_Pad_TopBottom
+Mounting Hole 3.2mm, M3, ISO7380
+mounting hole 3.2mm m3 iso7380
+0
+3
+1
+MountingHole
+MountingHole_3.2mm_M3_ISO7380_Pad_TopOnly
+Mounting Hole 3.2mm, M3, ISO7380
+mounting hole 3.2mm m3 iso7380
+0
+2
+1
+MountingHole
+MountingHole_3.2mm_M3_ISO14580
+Mounting Hole 3.2mm, no annular, M3, ISO14580
+mounting hole 3.2mm no annular m3 iso14580
+0
+0
+0
+MountingHole
+MountingHole_3.2mm_M3_ISO14580_Pad
+Mounting Hole 3.2mm, M3, ISO14580
+mounting hole 3.2mm m3 iso14580
+0
+1
+1
+MountingHole
+MountingHole_3.2mm_M3_ISO14580_Pad_TopBottom
+Mounting Hole 3.2mm, M3, ISO14580
+mounting hole 3.2mm m3 iso14580
+0
+3
+1
+MountingHole
+MountingHole_3.2mm_M3_ISO14580_Pad_TopOnly
+Mounting Hole 3.2mm, M3, ISO14580
+mounting hole 3.2mm m3 iso14580
+0
+2
+1
+MountingHole
+MountingHole_3.2mm_M3_Pad
+Mounting Hole 3.2mm, M3
+mounting hole 3.2mm m3
+0
+1
+1
+MountingHole
+MountingHole_3.2mm_M3_Pad_TopBottom
+Mounting Hole 3.2mm, M3
+mounting hole 3.2mm m3
+0
+3
+1
+MountingHole
+MountingHole_3.2mm_M3_Pad_TopOnly
+Mounting Hole 3.2mm, M3
+mounting hole 3.2mm m3
+0
+2
+1
+MountingHole
+MountingHole_3.2mm_M3_Pad_Via
+Mounting Hole 3.2mm, M3
+mounting hole 3.2mm m3
+0
+9
+1
+MountingHole
+MountingHole_3.5mm
+Mounting Hole 3.5mm, no annular
+mounting hole 3.5mm no annular
+0
+0
+0
+MountingHole
+MountingHole_3.5mm_Pad
+Mounting Hole 3.5mm
+mounting hole 3.5mm
+0
+1
+1
+MountingHole
+MountingHole_3.5mm_Pad_TopBottom
+Mounting Hole 3.5mm
+mounting hole 3.5mm
+0
+3
+1
+MountingHole
+MountingHole_3.5mm_Pad_TopOnly
+Mounting Hole 3.5mm
+mounting hole 3.5mm
+0
+2
+1
+MountingHole
+MountingHole_3.5mm_Pad_Via
+Mounting Hole 3.5mm
+mounting hole 3.5mm
+0
+9
+1
+MountingHole
+MountingHole_3.7mm
+Mounting Hole 3.7mm, no annular
+mounting hole 3.7mm no annular
+0
+0
+0
+MountingHole
+MountingHole_3.7mm_Pad
+Mounting Hole 3.7mm
+mounting hole 3.7mm
+0
+1
+1
+MountingHole
+MountingHole_3.7mm_Pad_TopBottom
+Mounting Hole 3.7mm
+mounting hole 3.7mm
+0
+3
+1
+MountingHole
+MountingHole_3.7mm_Pad_TopOnly
+Mounting Hole 3.7mm
+mounting hole 3.7mm
+0
+2
+1
+MountingHole
+MountingHole_3.7mm_Pad_Via
+Mounting Hole 3.7mm
+mounting hole 3.7mm
+0
+9
+1
+MountingHole
+MountingHole_3mm
+Mounting Hole 3mm, no annular
+mounting hole 3mm no annular
+0
+0
+0
+MountingHole
+MountingHole_3mm_Pad
+Mounting Hole 3mm
+mounting hole 3mm
+0
+1
+1
+MountingHole
+MountingHole_3mm_Pad_TopBottom
+Mounting Hole 3mm
+mounting hole 3mm
+0
+3
+1
+MountingHole
+MountingHole_3mm_Pad_TopOnly
+Mounting Hole 3mm
+mounting hole 3mm
+0
+2
+1
+MountingHole
+MountingHole_3mm_Pad_Via
+Mounting Hole 3mm
+mounting hole 3mm
+0
+9
+1
+MountingHole
+MountingHole_4.3mm_M4
+Mounting Hole 4.3mm, no annular, M4
+mounting hole 4.3mm no annular m4
+0
+0
+0
+MountingHole
+MountingHole_4.3mm_M4_DIN965
+Mounting Hole 4.3mm, no annular, M4, DIN965
+mounting hole 4.3mm no annular m4 din965
+0
+0
+0
+MountingHole
+MountingHole_4.3mm_M4_DIN965_Pad
+Mounting Hole 4.3mm, M4, DIN965
+mounting hole 4.3mm m4 din965
+0
+1
+1
+MountingHole
+MountingHole_4.3mm_M4_DIN965_Pad_TopBottom
+Mounting Hole 4.3mm, M4, DIN965
+mounting hole 4.3mm m4 din965
+0
+3
+1
+MountingHole
+MountingHole_4.3mm_M4_DIN965_Pad_TopOnly
+Mounting Hole 4.3mm, M4, DIN965
+mounting hole 4.3mm m4 din965
+0
+2
+1
+MountingHole
+MountingHole_4.3mm_M4_ISO7380
+Mounting Hole 4.3mm, no annular, M4, ISO7380
+mounting hole 4.3mm no annular m4 iso7380
+0
+0
+0
+MountingHole
+MountingHole_4.3mm_M4_ISO7380_Pad
+Mounting Hole 4.3mm, M4, ISO7380
+mounting hole 4.3mm m4 iso7380
+0
+1
+1
+MountingHole
+MountingHole_4.3mm_M4_ISO7380_Pad_TopBottom
+Mounting Hole 4.3mm, M4, ISO7380
+mounting hole 4.3mm m4 iso7380
+0
+3
+1
+MountingHole
+MountingHole_4.3mm_M4_ISO7380_Pad_TopOnly
+Mounting Hole 4.3mm, M4, ISO7380
+mounting hole 4.3mm m4 iso7380
+0
+2
+1
+MountingHole
+MountingHole_4.3mm_M4_ISO14580
+Mounting Hole 4.3mm, no annular, M4, ISO14580
+mounting hole 4.3mm no annular m4 iso14580
+0
+0
+0
+MountingHole
+MountingHole_4.3mm_M4_ISO14580_Pad
+Mounting Hole 4.3mm, M4, ISO14580
+mounting hole 4.3mm m4 iso14580
+0
+1
+1
+MountingHole
+MountingHole_4.3mm_M4_ISO14580_Pad_TopBottom
+Mounting Hole 4.3mm, M4, ISO14580
+mounting hole 4.3mm m4 iso14580
+0
+3
+1
+MountingHole
+MountingHole_4.3mm_M4_ISO14580_Pad_TopOnly
+Mounting Hole 4.3mm, M4, ISO14580
+mounting hole 4.3mm m4 iso14580
+0
+2
+1
+MountingHole
+MountingHole_4.3mm_M4_Pad
+Mounting Hole 4.3mm, M4
+mounting hole 4.3mm m4
+0
+1
+1
+MountingHole
+MountingHole_4.3mm_M4_Pad_TopBottom
+Mounting Hole 4.3mm, M4
+mounting hole 4.3mm m4
+0
+3
+1
+MountingHole
+MountingHole_4.3mm_M4_Pad_TopOnly
+Mounting Hole 4.3mm, M4
+mounting hole 4.3mm m4
+0
+2
+1
+MountingHole
+MountingHole_4.3mm_M4_Pad_Via
+Mounting Hole 4.3mm, M4
+mounting hole 4.3mm m4
+0
+9
+1
+MountingHole
+MountingHole_4.3x6.2mm_M4_Pad
+Mounting Hole 4.3x6.2mm, M4
+mounting hole 4.3x6.2mm m4
+0
+1
+1
+MountingHole
+MountingHole_4.3x6.2mm_M4_Pad_Via
+Mounting Hole 4.3x6.2mm, M4
+mounting hole 4.3x6.2mm m4
+0
+17
+1
+MountingHole
+MountingHole_4.5mm
+Mounting Hole 4.5mm, no annular
+mounting hole 4.5mm no annular
+0
+0
+0
+MountingHole
+MountingHole_4.5mm_Pad
+Mounting Hole 4.5mm
+mounting hole 4.5mm
+0
+1
+1
+MountingHole
+MountingHole_4.5mm_Pad_TopBottom
+Mounting Hole 4.5mm
+mounting hole 4.5mm
+0
+3
+1
+MountingHole
+MountingHole_4.5mm_Pad_TopOnly
+Mounting Hole 4.5mm
+mounting hole 4.5mm
+0
+2
+1
+MountingHole
+MountingHole_4.5mm_Pad_Via
+Mounting Hole 4.5mm
+mounting hole 4.5mm
+0
+9
+1
+MountingHole
+MountingHole_4mm
+Mounting Hole 4mm, no annular
+mounting hole 4mm no annular
+0
+0
+0
+MountingHole
+MountingHole_4mm_Pad
+Mounting Hole 4mm
+mounting hole 4mm
+0
+1
+1
+MountingHole
+MountingHole_4mm_Pad_TopBottom
+Mounting Hole 4mm
+mounting hole 4mm
+0
+3
+1
+MountingHole
+MountingHole_4mm_Pad_TopOnly
+Mounting Hole 4mm
+mounting hole 4mm
+0
+2
+1
+MountingHole
+MountingHole_4mm_Pad_Via
+Mounting Hole 4mm
+mounting hole 4mm
+0
+9
+1
+MountingHole
+MountingHole_5.3mm_M5
+Mounting Hole 5.3mm, no annular, M5
+mounting hole 5.3mm no annular m5
+0
+0
+0
+MountingHole
+MountingHole_5.3mm_M5_DIN965
+Mounting Hole 5.3mm, no annular, M5, DIN965
+mounting hole 5.3mm no annular m5 din965
+0
+0
+0
+MountingHole
+MountingHole_5.3mm_M5_DIN965_Pad
+Mounting Hole 5.3mm, M5, DIN965
+mounting hole 5.3mm m5 din965
+0
+1
+1
+MountingHole
+MountingHole_5.3mm_M5_DIN965_Pad_TopBottom
+Mounting Hole 5.3mm, M5, DIN965
+mounting hole 5.3mm m5 din965
+0
+3
+1
+MountingHole
+MountingHole_5.3mm_M5_DIN965_Pad_TopOnly
+Mounting Hole 5.3mm, M5, DIN965
+mounting hole 5.3mm m5 din965
+0
+2
+1
+MountingHole
+MountingHole_5.3mm_M5_ISO7380
+Mounting Hole 5.3mm, no annular, M5, ISO7380
+mounting hole 5.3mm no annular m5 iso7380
+0
+0
+0
+MountingHole
+MountingHole_5.3mm_M5_ISO7380_Pad
+Mounting Hole 5.3mm, M5, ISO7380
+mounting hole 5.3mm m5 iso7380
+0
+1
+1
+MountingHole
+MountingHole_5.3mm_M5_ISO7380_Pad_TopBottom
+Mounting Hole 5.3mm, M5, ISO7380
+mounting hole 5.3mm m5 iso7380
+0
+3
+1
+MountingHole
+MountingHole_5.3mm_M5_ISO7380_Pad_TopOnly
+Mounting Hole 5.3mm, M5, ISO7380
+mounting hole 5.3mm m5 iso7380
+0
+2
+1
+MountingHole
+MountingHole_5.3mm_M5_ISO14580
+Mounting Hole 5.3mm, no annular, M5, ISO14580
+mounting hole 5.3mm no annular m5 iso14580
+0
+0
+0
+MountingHole
+MountingHole_5.3mm_M5_ISO14580_Pad
+Mounting Hole 5.3mm, M5, ISO14580
+mounting hole 5.3mm m5 iso14580
+0
+1
+1
+MountingHole
+MountingHole_5.3mm_M5_ISO14580_Pad_TopBottom
+Mounting Hole 5.3mm, M5, ISO14580
+mounting hole 5.3mm m5 iso14580
+0
+3
+1
+MountingHole
+MountingHole_5.3mm_M5_ISO14580_Pad_TopOnly
+Mounting Hole 5.3mm, M5, ISO14580
+mounting hole 5.3mm m5 iso14580
+0
+2
+1
+MountingHole
+MountingHole_5.3mm_M5_Pad
+Mounting Hole 5.3mm, M5
+mounting hole 5.3mm m5
+0
+1
+1
+MountingHole
+MountingHole_5.3mm_M5_Pad_TopBottom
+Mounting Hole 5.3mm, M5
+mounting hole 5.3mm m5
+0
+3
+1
+MountingHole
+MountingHole_5.3mm_M5_Pad_TopOnly
+Mounting Hole 5.3mm, M5
+mounting hole 5.3mm m5
+0
+2
+1
+MountingHole
+MountingHole_5.3mm_M5_Pad_Via
+Mounting Hole 5.3mm, M5
+mounting hole 5.3mm m5
+0
+9
+1
+MountingHole
+MountingHole_5.5mm
+Mounting Hole 5.5mm, no annular
+mounting hole 5.5mm no annular
+0
+0
+0
+MountingHole
+MountingHole_5.5mm_Pad
+Mounting Hole 5.5mm
+mounting hole 5.5mm
+0
+1
+1
+MountingHole
+MountingHole_5.5mm_Pad_TopBottom
+Mounting Hole 5.5mm
+mounting hole 5.5mm
+0
+3
+1
+MountingHole
+MountingHole_5.5mm_Pad_TopOnly
+Mounting Hole 5.5mm
+mounting hole 5.5mm
+0
+2
+1
+MountingHole
+MountingHole_5.5mm_Pad_Via
+Mounting Hole 5.5mm
+mounting hole 5.5mm
+0
+9
+1
+MountingHole
+MountingHole_5mm
+Mounting Hole 5mm, no annular
+mounting hole 5mm no annular
+0
+0
+0
+MountingHole
+MountingHole_5mm_Pad
+Mounting Hole 5mm
+mounting hole 5mm
+0
+1
+1
+MountingHole
+MountingHole_5mm_Pad_TopBottom
+Mounting Hole 5mm
+mounting hole 5mm
+0
+3
+1
+MountingHole
+MountingHole_5mm_Pad_TopOnly
+Mounting Hole 5mm
+mounting hole 5mm
+0
+2
+1
+MountingHole
+MountingHole_5mm_Pad_Via
+Mounting Hole 5mm
+mounting hole 5mm
+0
+9
+1
+MountingHole
+MountingHole_6.4mm_M6
+Mounting Hole 6.4mm, no annular, M6
+mounting hole 6.4mm no annular m6
+0
+0
+0
+MountingHole
+MountingHole_6.4mm_M6_DIN965
+Mounting Hole 6.4mm, no annular, M6, DIN965
+mounting hole 6.4mm no annular m6 din965
+0
+0
+0
+MountingHole
+MountingHole_6.4mm_M6_DIN965_Pad
+Mounting Hole 6.4mm, M6, DIN965
+mounting hole 6.4mm m6 din965
+0
+1
+1
+MountingHole
+MountingHole_6.4mm_M6_DIN965_Pad_TopBottom
+Mounting Hole 6.4mm, M6, DIN965
+mounting hole 6.4mm m6 din965
+0
+3
+1
+MountingHole
+MountingHole_6.4mm_M6_DIN965_Pad_TopOnly
+Mounting Hole 6.4mm, M6, DIN965
+mounting hole 6.4mm m6 din965
+0
+2
+1
+MountingHole
+MountingHole_6.4mm_M6_ISO7380
+Mounting Hole 6.4mm, no annular, M6, ISO7380
+mounting hole 6.4mm no annular m6 iso7380
+0
+0
+0
+MountingHole
+MountingHole_6.4mm_M6_ISO7380_Pad
+Mounting Hole 6.4mm, M6, ISO7380
+mounting hole 6.4mm m6 iso7380
+0
+1
+1
+MountingHole
+MountingHole_6.4mm_M6_ISO7380_Pad_TopBottom
+Mounting Hole 6.4mm, M6, ISO7380
+mounting hole 6.4mm m6 iso7380
+0
+3
+1
+MountingHole
+MountingHole_6.4mm_M6_ISO7380_Pad_TopOnly
+Mounting Hole 6.4mm, M6, ISO7380
+mounting hole 6.4mm m6 iso7380
+0
+2
+1
+MountingHole
+MountingHole_6.4mm_M6_ISO14580
+Mounting Hole 6.4mm, no annular, M6, ISO14580
+mounting hole 6.4mm no annular m6 iso14580
+0
+0
+0
+MountingHole
+MountingHole_6.4mm_M6_ISO14580_Pad
+Mounting Hole 6.4mm, M6, ISO14580
+mounting hole 6.4mm m6 iso14580
+0
+1
+1
+MountingHole
+MountingHole_6.4mm_M6_ISO14580_Pad_TopBottom
+Mounting Hole 6.4mm, M6, ISO14580
+mounting hole 6.4mm m6 iso14580
+0
+3
+1
+MountingHole
+MountingHole_6.4mm_M6_ISO14580_Pad_TopOnly
+Mounting Hole 6.4mm, M6, ISO14580
+mounting hole 6.4mm m6 iso14580
+0
+2
+1
+MountingHole
+MountingHole_6.4mm_M6_Pad
+Mounting Hole 6.4mm, M6
+mounting hole 6.4mm m6
+0
+1
+1
+MountingHole
+MountingHole_6.4mm_M6_Pad_TopBottom
+Mounting Hole 6.4mm, M6
+mounting hole 6.4mm m6
+0
+3
+1
+MountingHole
+MountingHole_6.4mm_M6_Pad_TopOnly
+Mounting Hole 6.4mm, M6
+mounting hole 6.4mm m6
+0
+2
+1
+MountingHole
+MountingHole_6.4mm_M6_Pad_Via
+Mounting Hole 6.4mm, M6
+mounting hole 6.4mm m6
+0
+9
+1
+MountingHole
+MountingHole_6.5mm
+Mounting Hole 6.5mm, no annular
+mounting hole 6.5mm no annular
+0
+0
+0
+MountingHole
+MountingHole_6.5mm_Pad
+Mounting Hole 6.5mm
+mounting hole 6.5mm
+0
+1
+1
+MountingHole
+MountingHole_6.5mm_Pad_TopBottom
+Mounting Hole 6.5mm
+mounting hole 6.5mm
+0
+3
+1
+MountingHole
+MountingHole_6.5mm_Pad_TopOnly
+Mounting Hole 6.5mm
+mounting hole 6.5mm
+0
+2
+1
+MountingHole
+MountingHole_6.5mm_Pad_Via
+Mounting Hole 6.5mm
+mounting hole 6.5mm
+0
+9
+1
+MountingHole
+MountingHole_6mm
+Mounting Hole 6mm, no annular
+mounting hole 6mm no annular
+0
+0
+0
+MountingHole
+MountingHole_6mm_Pad
+Mounting Hole 6mm
+mounting hole 6mm
+0
+1
+1
+MountingHole
+MountingHole_6mm_Pad_TopBottom
+Mounting Hole 6mm
+mounting hole 6mm
+0
+3
+1
+MountingHole
+MountingHole_6mm_Pad_TopOnly
+Mounting Hole 6mm
+mounting hole 6mm
+0
+2
+1
+MountingHole
+MountingHole_6mm_Pad_Via
+Mounting Hole 6mm
+mounting hole 6mm
+0
+9
+1
+MountingHole
+MountingHole_8.4mm_M8
+Mounting Hole 8.4mm, no annular, M8
+mounting hole 8.4mm no annular m8
+0
+0
+0
+MountingHole
+MountingHole_8.4mm_M8_Pad
+Mounting Hole 8.4mm, M8
+mounting hole 8.4mm m8
+0
+1
+1
+MountingHole
+MountingHole_8.4mm_M8_Pad_TopBottom
+Mounting Hole 8.4mm, M8
+mounting hole 8.4mm m8
+0
+3
+1
+MountingHole
+MountingHole_8.4mm_M8_Pad_TopOnly
+Mounting Hole 8.4mm, M8
+mounting hole 8.4mm m8
+0
+2
+1
+MountingHole
+MountingHole_8.4mm_M8_Pad_Via
+Mounting Hole 8.4mm, M8
+mounting hole 8.4mm m8
+0
+9
+1
