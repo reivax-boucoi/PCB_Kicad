@@ -5,6 +5,8 @@
 #include "ADC.h"
 #include "UART.h"
 
+#define SCALE_GAIN 191//1.907g/bit
+
 class Scale{
 public:
     Scale(UART* u);

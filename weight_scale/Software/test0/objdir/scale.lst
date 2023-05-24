@@ -60,9 +60,9 @@
   57               		.loc 1 4 0
   58 001c FA8A      		std Y+18,r15
   59 001e E98A      		std Y+17,r14
-   5:scale.cpp     ****     gain=1;
+   5:scale.cpp     ****     gain=SCALE_GAIN;
   60               		.loc 1 5 0
-  61 0020 81E0      		ldi r24,lo8(1)
+  61 0020 8FEB      		ldi r24,lo8(-65)
   62 0022 90E0      		ldi r25,0
   63 0024 A0E0      		ldi r26,0
   64 0026 B0E0      		ldi r27,0
@@ -612,18 +612,18 @@
  393               		.file 6 "scale.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 scale.cpp
-     /tmp/ccjAVqCp.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccjAVqCp.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccjAVqCp.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccjAVqCp.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccjAVqCp.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccjAVqCp.s:12     .text:0000000000000000 _ZN5ScaleC2EP4UART
-     /tmp/ccjAVqCp.s:12     .text:0000000000000000 _ZN5ScaleC1EP4UART
-     /tmp/ccjAVqCp.s:117    .text:000000000000005e _ZN5ScaleD2Ev
-     /tmp/ccjAVqCp.s:117    .text:000000000000005e _ZN5ScaleD1Ev
-     /tmp/ccjAVqCp.s:140    .text:0000000000000064 _ZN5Scale4tareEv
-     /tmp/ccjAVqCp.s:224    .text:00000000000000ba _ZN5Scale9getWeightEv
-     /tmp/ccjAVqCp.s:314    .text:0000000000000118 _ZN5Scale10showWeightEb
+     /tmp/ccMug9LF.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccMug9LF.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccMug9LF.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccMug9LF.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccMug9LF.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccMug9LF.s:12     .text:0000000000000000 _ZN5ScaleC2EP4UART
+     /tmp/ccMug9LF.s:12     .text:0000000000000000 _ZN5ScaleC1EP4UART
+     /tmp/ccMug9LF.s:117    .text:000000000000005e _ZN5ScaleD2Ev
+     /tmp/ccMug9LF.s:117    .text:000000000000005e _ZN5ScaleD1Ev
+     /tmp/ccMug9LF.s:140    .text:0000000000000064 _ZN5Scale4tareEv
+     /tmp/ccMug9LF.s:224    .text:00000000000000ba _ZN5Scale9getWeightEv
+     /tmp/ccMug9LF.s:314    .text:0000000000000118 _ZN5Scale10showWeightEb
 
 UNDEFINED SYMBOLS
 _ZN7MCP3462C1Ev

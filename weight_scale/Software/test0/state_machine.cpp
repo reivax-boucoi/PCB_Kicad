@@ -107,6 +107,7 @@ void SM::nextState(void){
 			uart->sendNb(myScale->offset);
 			uart->sendString("SM:Idle",true);
 			myLCD->clear(false);
+			myLCD->setDP(true);
 			//switch to meas mode with tare offset
 			break;
 			

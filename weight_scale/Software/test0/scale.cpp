@@ -2,7 +2,7 @@
 
 Scale::Scale(UART* u){
     uart=u;
-    gain=1;
+    gain=SCALE_GAIN;
     while(DATA_READY){
         _delay_ms(1);
     }
