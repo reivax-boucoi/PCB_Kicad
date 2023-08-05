@@ -126,6 +126,7 @@ void LEDs_init() {
 }
 
 void LEDs_setColor(uint32_t c) {
+    led_strip.clear();
     led_strip.setPixelColor(0, c);
     led_strip.show();
 }
