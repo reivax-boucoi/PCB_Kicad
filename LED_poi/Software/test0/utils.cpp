@@ -23,9 +23,8 @@ void supply_ON() {
 }
 
 void supply_OFF() {
-    Serial.println("turn OF !");
-    for (uint8_t i = 255; i >6; i-=5) {
-    Serial.println(i);
+    Serial.println("turn OFF !");
+    for (uint8_t i = 255; i > 5; i -= 5) {
         LEDs_setColor(i);
         _delay_ms(30);
     }
