@@ -1,7 +1,6 @@
 #include "utils.h"
 #include "IR_cmd.h"
 #include "Accelero.h"
-//#include "Animations.h"
 
 
 #define ACC_POLL_RATE 10 //in ms
@@ -12,14 +11,16 @@ boolean oldState = LOW;
 uint32_t pTime = 0;
 uint16_t psu_refresh_counter = 0;
 ACC* acc;
+Button* myBtn;
 
 void setup() {
     IO_initialize();
     LEDs_init();
     acc = new ACC(200, 8);
+    myBtn=new Button();
     Serial.begin(115200);
-    //    while (!Serial) {}
-    Serial.println("Hello!");
+    //while (!Serial) {}
+    Serial.println("Hello!1");
     LEDs_setColor(0xFF0000);
     _delay_ms(250);
     LEDs_setColor(0x00FF00);
@@ -54,7 +55,7 @@ void loop() {
         }
         myAnimations->update();
 
-        switch (myBtn.pressed()) {
+        switch (myBtn->wasPressed()) {
             case 2:
                 supply_OFF();
                 break;
@@ -65,7 +66,6 @@ void loop() {
                 break;
         }
     }
-    oldState = newState;
-}
-IR_poll();
+
+    IR_poll();
 }
