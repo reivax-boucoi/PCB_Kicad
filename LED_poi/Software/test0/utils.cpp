@@ -23,7 +23,12 @@ void supply_ON() {
 }
 
 void supply_OFF() {
-    Serial.println("turn OFF !");
+    Serial.println("turn OF !");
+    for (uint8_t i = 255; i >6; i-=5) {
+    Serial.println(i);
+        LEDs_setColor(i);
+        _delay_ms(30);
+    }
     delay(60);
     digitalWrite(KEY, HIGH);
     delay(60);
@@ -42,7 +47,7 @@ Button::Button(void) {
     newstate = LOW;
     pressTime = 0;
 }
-uint8_t Button::pressed(void) {
+uint8_t Button::wasPressed(void) {
     if (!digitalRead(BTN)) { //Button is not pressed
         newstate = LOW;
         pstate = LOW;
@@ -52,15 +57,15 @@ uint8_t Button::pressed(void) {
             pressTime = millis();
         } else {
             if (pstate == LOW) {
-                if (millis() - pressTime) > BTN_SHORT_PRESS) {
-                    Serial.println("ShortPress!");
+                if ((millis() - pressTime) > BTN_SHORT_PRESS) {
+                    //Serial.println("ShortPress!");
                     pstate = HIGH;
                     return 1;
                 }
             } else {
-                if (millis() - pressTime) > BTN_LONG_PRESS) {
+                if ((millis() - pressTime) > BTN_LONG_PRESS) {
                     pressTime = millis();
-                    Serial.println("LongPress!");
+                    //Serial.println("LongPress!");
                     return 2;
                 }
             }
