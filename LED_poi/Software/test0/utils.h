@@ -25,7 +25,6 @@ class Button {
         uint32_t pressTime;
     public:
         Button(void);
-        uint8_t pressed(void);
+        uint8_t wasPressed(void);
 };
-Button myBtn();
 #endif
