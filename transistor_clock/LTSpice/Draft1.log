@@ -1,24 +1,21 @@
 Circuit: * Z:\home\user\Documents\PCB\transistor_clock\LTSpice\Draft1.asc
 
-WARNING: Node NC_01 is floating.
-
-WARNING: Less than two connections to node NC_01.  This node is used by C2.
 Direct Newton iteration for .op point succeeded.
 
-Date: Wed Sep 27 11:37:17 2023
-Total elapsed time: 0.218 seconds.
+Date: Thu Sep 28 12:46:59 2023
+Total elapsed time: 0.460 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 2702
-traniter = 2668
-tranpoints = 1242
-accept = 1197
-rejected = 45
-matrix size = 20
-fillins = 10
+totiter = 10468
+traniter = 10430
+tranpoints = 4026
+accept = 3197
+rejected = 829
+matrix size = 59
+fillins = 62
 solver = Normal
-Matrix Compiler1: 1.57 KB object code size  1.1/0.5/[0.4]
-Matrix Compiler2: off  [0.4]/0.6/0.6
+Matrix Compiler1: 8.11 KB object code size  4.0/1.8/[1.2]
+Matrix Compiler2: 6.19 KB object code size  1.2/1.8/[1.1]
 
