@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "RGB_strip_driver-rescue")(type "KiCad")(uri "${KIPRJMOD}/RGB_strip_driver-rescue.kicad_sym")(options "")(descr ""))
+)
