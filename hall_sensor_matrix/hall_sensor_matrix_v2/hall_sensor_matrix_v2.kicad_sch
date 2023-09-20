@@ -766,6 +766,89 @@
         )
       )
     )
+    (symbol "Device:LED" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "D" (at 0 2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "LED" (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "LED diode" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Light emitting diode" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "LED_0_1"
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy 1.27 0)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -3.048 -0.762)
+            (xy -4.572 -2.286)
+            (xy -3.81 -2.286)
+            (xy -4.572 -2.286)
+            (xy -4.572 -1.524)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.778 -0.762)
+            (xy -3.302 -2.286)
+            (xy -2.54 -2.286)
+            (xy -3.302 -2.286)
+            (xy -3.302 -1.524)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "LED_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 3.81 0 180) (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Device:R" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "R" (at 2.032 0 90)
         (effects (font (size 1.27 1.27)))
@@ -899,12 +982,23 @@
     )
   )
 
-
+  (junction (at 167.64 137.16) (diameter 0) (color 0 0 0 0)
+    (uuid 02b8c556-292b-4605-9b9c-d6751b47d7fa)
+  )
+  (junction (at 167.64 121.92) (diameter 0) (color 0 0 0 0)
+    (uuid 04eea4ef-711e-4094-8caf-d67a0dbd98e0)
+  )
   (junction (at 129.54 177.8) (diameter 0) (color 0 0 0 0)
     (uuid 0bfc144a-c7b3-463d-a78d-62fc6adf20f2)
   )
   (junction (at 129.54 182.88) (diameter 0) (color 0 0 0 0)
     (uuid 13c29d2a-c596-495d-859a-b189b5e2e736)
+  )
+  (junction (at 167.64 134.62) (diameter 0) (color 0 0 0 0)
+    (uuid 17474dde-1dc4-480b-8003-afbadf3cf352)
+  )
+  (junction (at 167.64 154.94) (diameter 0) (color 0 0 0 0)
+    (uuid 18a14b38-354d-44b9-9949-9188ad75c67b)
   )
   (junction (at 129.54 187.96) (diameter 0) (color 0 0 0 0)
     (uuid 2214c9f9-d902-4f96-b98e-6512614b5e6c)
@@ -912,14 +1006,32 @@
   (junction (at 129.54 167.64) (diameter 0) (color 0 0 0 0)
     (uuid 23c459ac-dbde-474c-83ba-3d45d5251d9f)
   )
+  (junction (at 167.64 144.78) (diameter 0) (color 0 0 0 0)
+    (uuid 2c30ecee-b5d1-4598-9181-dfe26e8ec6a7)
+  )
   (junction (at 129.54 170.18) (diameter 0) (color 0 0 0 0)
     (uuid 2e772879-cfcd-4dba-bbf6-2986689dc890)
+  )
+  (junction (at 167.64 129.54) (diameter 0) (color 0 0 0 0)
+    (uuid 3abbb280-0981-450a-912c-4f9342ffa8d6)
+  )
+  (junction (at 167.64 147.32) (diameter 0) (color 0 0 0 0)
+    (uuid 3c8c049b-b1cb-411a-9b69-ba244a5778f0)
   )
   (junction (at 25.4 177.8) (diameter 0) (color 0 0 0 0)
     (uuid 3e53e4c5-b0ab-4ec7-879f-242bf6b007d1)
   )
+  (junction (at 167.64 157.48) (diameter 0) (color 0 0 0 0)
+    (uuid 44ed58b6-ea3d-42de-83a9-7e2c40b5515a)
+  )
   (junction (at 129.54 185.42) (diameter 0) (color 0 0 0 0)
     (uuid 5108a994-ff66-4092-a54b-17f025d101b4)
+  )
+  (junction (at 167.64 139.7) (diameter 0) (color 0 0 0 0)
+    (uuid 55999726-c9e0-45e0-8c31-9be75386cf60)
+  )
+  (junction (at 167.64 142.24) (diameter 0) (color 0 0 0 0)
+    (uuid 6bd67167-2b47-4884-af53-68a2cdbf0e08)
   )
   (junction (at 129.54 154.94) (diameter 0) (color 0 0 0 0)
     (uuid 7ac7cc8c-79bd-4f1f-9afd-8f28f8146444)
@@ -927,14 +1039,29 @@
   (junction (at 129.54 175.26) (diameter 0) (color 0 0 0 0)
     (uuid 7c3536b7-29a8-4834-82bc-fa607ec4065d)
   )
+  (junction (at 167.64 149.86) (diameter 0) (color 0 0 0 0)
+    (uuid 8f1910de-1ddd-4be0-bcdb-751e9bc7679e)
+  )
   (junction (at 129.54 172.72) (diameter 0) (color 0 0 0 0)
     (uuid 8f772c7d-8860-4c26-bdb0-391e3ac527ed)
+  )
+  (junction (at 167.64 152.4) (diameter 0) (color 0 0 0 0)
+    (uuid a2f10d1c-b334-4f3a-b305-c76a5ed5e593)
+  )
+  (junction (at 167.64 127) (diameter 0) (color 0 0 0 0)
+    (uuid aae7aa9f-6b49-4e9b-b279-7056a99f491f)
   )
   (junction (at 129.54 165.1) (diameter 0) (color 0 0 0 0)
     (uuid abfe6767-2e34-45ec-9d74-ed81af879b08)
   )
+  (junction (at 167.64 124.46) (diameter 0) (color 0 0 0 0)
+    (uuid c2bdfdbd-b08a-482d-96fb-8152293615d5)
+  )
   (junction (at 129.54 162.56) (diameter 0) (color 0 0 0 0)
     (uuid c3baf364-73b8-43d6-9313-8fa7a9d6b041)
+  )
+  (junction (at 167.64 132.08) (diameter 0) (color 0 0 0 0)
+    (uuid c72ab33b-b6ae-4f4e-a2a8-533069cb8df7)
   )
   (junction (at 129.54 160.02) (diameter 0) (color 0 0 0 0)
     (uuid ce9d1b8b-4996-4df4-a4b2-9be6e6ae97ea)
@@ -953,6 +1080,10 @@
     (stroke (width 0) (type default))
     (uuid 018707fa-cdbe-4f57-abd5-6b1774597844)
   )
+  (wire (pts (xy 167.64 127) (xy 167.64 129.54))
+    (stroke (width 0) (type default))
+    (uuid 03ca80bd-8910-436e-ad57-92ebaa9b33b4)
+  )
   (wire (pts (xy 175.26 66.04) (xy 180.34 66.04))
     (stroke (width 0) (type default))
     (uuid 03e57969-59ad-48fa-9d6f-565690c1539c)
@@ -965,9 +1096,21 @@
     (stroke (width 0) (type default))
     (uuid 057e0be6-4376-4437-aca4-aa9993c9958d)
   )
+  (wire (pts (xy 182.88 132.08) (xy 200.66 132.08))
+    (stroke (width 0) (type default))
+    (uuid 06a74ccb-8b9c-49d9-ad49-d50787f1c6cd)
+  )
+  (wire (pts (xy 182.88 147.32) (xy 200.66 147.32))
+    (stroke (width 0) (type default))
+    (uuid 09696ae3-c43c-4be3-a8e8-a00472773ef1)
+  )
   (wire (pts (xy 88.9 86.36) (xy 93.98 86.36))
     (stroke (width 0) (type default))
     (uuid 098e8150-dda6-4e5e-84c8-cf806ca39d4e)
+  )
+  (wire (pts (xy 167.64 118.11) (xy 167.64 121.92))
+    (stroke (width 0) (type default))
+    (uuid 0bc15f74-ad55-4d02-a314-0780c909ffc0)
   )
   (wire (pts (xy 229.87 60.96) (xy 236.22 60.96))
     (stroke (width 0) (type default))
@@ -1017,6 +1160,10 @@
     (stroke (width 0) (type default))
     (uuid 343c3c37-38f1-43b5-a084-d1c4bef2c989)
   )
+  (wire (pts (xy 182.88 154.94) (xy 200.66 154.94))
+    (stroke (width 0) (type default))
+    (uuid 347d4123-c50b-41b8-aada-8f98f8690e86)
+  )
   (wire (pts (xy 34.29 170.18) (xy 30.48 170.18))
     (stroke (width 0) (type default))
     (uuid 38a29d7d-d675-420d-a0f3-2ad30c74e736)
@@ -1033,6 +1180,14 @@
     (stroke (width 0) (type default))
     (uuid 3fa51f3a-d168-466c-bef3-78d8310944b2)
   )
+  (wire (pts (xy 167.64 157.48) (xy 167.64 160.02))
+    (stroke (width 0) (type default))
+    (uuid 416bac4b-2337-4daa-a68f-73b8d10501a8)
+  )
+  (wire (pts (xy 167.64 124.46) (xy 167.64 127))
+    (stroke (width 0) (type default))
+    (uuid 4364fee9-2589-4046-953c-0d8f061708e0)
+  )
   (wire (pts (xy 176.53 27.94) (xy 180.34 27.94))
     (stroke (width 0) (type default))
     (uuid 43e70851-d94f-40fc-ae51-56e6015c5565)
@@ -1045,6 +1200,10 @@
     (stroke (width 0) (type default))
     (uuid 447f308a-11eb-4459-80dd-03a776492f59)
   )
+  (wire (pts (xy 167.64 129.54) (xy 167.64 132.08))
+    (stroke (width 0) (type default))
+    (uuid 4620e3c1-70e4-4d58-88e2-28716e9dd9f7)
+  )
   (wire (pts (xy 129.54 185.42) (xy 129.54 187.96))
     (stroke (width 0) (type default))
     (uuid 47fb2b7f-c102-439a-86e3-60bac5fe2294)
@@ -1056,6 +1215,10 @@
   (wire (pts (xy 19.05 27.94) (xy 27.94 27.94))
     (stroke (width 0) (type default))
     (uuid 4e928676-3cb3-422d-b117-7b6068ec7fe9)
+  )
+  (wire (pts (xy 167.64 132.08) (xy 167.64 134.62))
+    (stroke (width 0) (type default))
+    (uuid 5047b1f3-51f5-4181-a401-e9e61cbb1d6a)
   )
   (wire (pts (xy 68.58 96.52) (xy 69.85 96.52))
     (stroke (width 0) (type default))
@@ -1077,9 +1240,17 @@
     (stroke (width 0) (type default))
     (uuid 59c7362e-3691-482c-913b-89d412c06b52)
   )
+  (wire (pts (xy 167.64 154.94) (xy 167.64 157.48))
+    (stroke (width 0) (type default))
+    (uuid 625d95cd-fdd6-4415-9656-b4aa56261dc3)
+  )
   (wire (pts (xy 34.29 160.02) (xy 30.48 160.02))
     (stroke (width 0) (type default))
     (uuid 643bc7c5-9d0c-47b3-855f-290071836ad9)
+  )
+  (wire (pts (xy 167.64 152.4) (xy 167.64 154.94))
+    (stroke (width 0) (type default))
+    (uuid 6536bc32-35a6-4432-be48-e273d42c5f66)
   )
   (wire (pts (xy 176.53 45.72) (xy 180.34 45.72))
     (stroke (width 0) (type default))
@@ -1149,6 +1320,10 @@
     (stroke (width 0) (type default))
     (uuid 82f6768a-9312-4529-b800-ef2fff60b830)
   )
+  (wire (pts (xy 182.88 124.46) (xy 200.66 124.46))
+    (stroke (width 0) (type default))
+    (uuid 84b8407f-38a4-4a47-9956-938c2188b3b8)
+  )
   (wire (pts (xy 88.9 81.28) (xy 93.98 81.28))
     (stroke (width 0) (type default))
     (uuid 88b7bc5e-74bb-49a2-ba64-28eb97f4f54d)
@@ -1160,6 +1335,14 @@
   (wire (pts (xy 88.9 66.04) (xy 93.98 66.04))
     (stroke (width 0) (type default))
     (uuid 8e97da11-2dd9-475a-9f27-b562213d7455)
+  )
+  (wire (pts (xy 182.88 139.7) (xy 200.66 139.7))
+    (stroke (width 0) (type default))
+    (uuid 917b8357-07f3-4ea1-9227-2456d61badc1)
+  )
+  (wire (pts (xy 182.88 149.86) (xy 200.66 149.86))
+    (stroke (width 0) (type default))
+    (uuid 91cfaee2-f3f4-44f7-bb9e-3fdabaf27ead)
   )
   (wire (pts (xy 143.51 180.34) (xy 137.16 180.34))
     (stroke (width 0) (type default))
@@ -1176,6 +1359,14 @@
   (wire (pts (xy 22.86 40.64) (xy 27.94 40.64))
     (stroke (width 0) (type default))
     (uuid 99c884a5-f52a-412c-9c1f-5c3f90a0ec64)
+  )
+  (wire (pts (xy 182.88 121.92) (xy 200.66 121.92))
+    (stroke (width 0) (type default))
+    (uuid 99d6cf88-e58c-4186-87b3-21f6e52baded)
+  )
+  (wire (pts (xy 167.64 139.7) (xy 167.64 142.24))
+    (stroke (width 0) (type default))
+    (uuid 9d578f29-c1e8-4537-b9d2-2c596d415118)
   )
   (wire (pts (xy 67.31 154.94) (xy 74.93 154.94))
     (stroke (width 0) (type default))
@@ -1205,6 +1396,10 @@
     (stroke (width 0) (type default))
     (uuid a73dc3a0-4b19-492e-b3ad-a925b9c389bc)
   )
+  (wire (pts (xy 167.64 142.24) (xy 167.64 144.78))
+    (stroke (width 0) (type default))
+    (uuid a88774d2-a022-4b34-a238-3745470bc86a)
+  )
   (wire (pts (xy 143.51 172.72) (xy 137.16 172.72))
     (stroke (width 0) (type default))
     (uuid aa7aadc0-0ed0-4d61-8ef7-71f344a962e6)
@@ -1212,6 +1407,10 @@
   (wire (pts (xy 229.87 66.04) (xy 236.22 66.04))
     (stroke (width 0) (type default))
     (uuid ad8cefff-30a8-4b61-bcc3-9b4bd2519bda)
+  )
+  (wire (pts (xy 182.88 134.62) (xy 200.66 134.62))
+    (stroke (width 0) (type default))
+    (uuid ae52d588-16b7-4cd4-af27-484af9c6a691)
   )
   (wire (pts (xy 175.26 71.12) (xy 180.34 71.12))
     (stroke (width 0) (type default))
@@ -1233,13 +1432,25 @@
     (stroke (width 0) (type default))
     (uuid b1f6ba9e-871e-4b68-a650-58db5bfa69b7)
   )
+  (wire (pts (xy 182.88 160.02) (xy 200.66 160.02))
+    (stroke (width 0) (type default))
+    (uuid b4a615d8-bf35-4581-93b0-b3df2d5477e5)
+  )
   (wire (pts (xy 232.41 33.02) (xy 236.22 33.02))
     (stroke (width 0) (type default))
     (uuid b50c28de-ea8f-4553-8560-807350679598)
   )
+  (wire (pts (xy 182.88 127) (xy 200.66 127))
+    (stroke (width 0) (type default))
+    (uuid b5b56551-8272-4a59-96d3-3170c7db5033)
+  )
   (wire (pts (xy 175.26 91.44) (xy 180.34 91.44))
     (stroke (width 0) (type default))
     (uuid b7f17c73-8b6f-46d2-9152-4e235bfa62bd)
+  )
+  (wire (pts (xy 167.64 149.86) (xy 167.64 152.4))
+    (stroke (width 0) (type default))
+    (uuid b97c5d44-e142-48e4-ade6-6cdbc865ed45)
   )
   (wire (pts (xy 129.54 172.72) (xy 129.54 175.26))
     (stroke (width 0) (type default))
@@ -1249,9 +1460,21 @@
     (stroke (width 0) (type default))
     (uuid bcf64d99-99bc-4c51-a36a-f30fdeae92bb)
   )
+  (wire (pts (xy 167.64 134.62) (xy 167.64 137.16))
+    (stroke (width 0) (type default))
+    (uuid bedcfbe9-084b-4c61-bae2-78d805ac01c3)
+  )
+  (wire (pts (xy 182.88 129.54) (xy 200.66 129.54))
+    (stroke (width 0) (type default))
+    (uuid c0154460-e369-4878-800f-1b720b945ef6)
+  )
   (wire (pts (xy 76.2 81.28) (xy 68.58 81.28))
     (stroke (width 0) (type default))
     (uuid c1fbb55d-cf1a-49f3-945d-5686b8cf48f0)
+  )
+  (wire (pts (xy 182.88 144.78) (xy 200.66 144.78))
+    (stroke (width 0) (type default))
+    (uuid c21b9b93-1a93-4951-8451-6466ff8a7d7a)
   )
   (wire (pts (xy 129.54 165.1) (xy 129.54 167.64))
     (stroke (width 0) (type default))
@@ -1261,13 +1484,25 @@
     (stroke (width 0) (type default))
     (uuid c8b6088c-7ce0-4dff-9f0e-74e15223c3c8)
   )
+  (wire (pts (xy 182.88 142.24) (xy 200.66 142.24))
+    (stroke (width 0) (type default))
+    (uuid cc24ed44-e783-475d-82af-ec1adf0cc9b4)
+  )
   (wire (pts (xy 175.26 60.96) (xy 180.34 60.96))
     (stroke (width 0) (type default))
     (uuid cc351455-87e4-42e0-8daf-528f841c4a04)
   )
+  (wire (pts (xy 182.88 137.16) (xy 200.66 137.16))
+    (stroke (width 0) (type default))
+    (uuid cc38bbdb-f975-4ee8-927f-8f3dc243be9d)
+  )
   (wire (pts (xy 143.51 187.96) (xy 137.16 187.96))
     (stroke (width 0) (type default))
     (uuid cd04b878-2249-4c91-b2a7-7fcc6aa33d72)
+  )
+  (wire (pts (xy 182.88 152.4) (xy 200.66 152.4))
+    (stroke (width 0) (type default))
+    (uuid d1b591d0-a226-45db-a7d4-360a81e3e0b0)
   )
   (wire (pts (xy 67.31 152.4) (xy 74.93 152.4))
     (stroke (width 0) (type default))
@@ -1313,6 +1548,10 @@
     (stroke (width 0) (type default))
     (uuid f138b8f9-d535-4ccd-89cb-05289e51ef25)
   )
+  (wire (pts (xy 167.64 121.92) (xy 167.64 124.46))
+    (stroke (width 0) (type default))
+    (uuid f262a920-1490-48ca-85af-7cd88f6bd830)
+  )
   (wire (pts (xy 34.29 167.64) (xy 30.48 167.64))
     (stroke (width 0) (type default))
     (uuid f44286ab-0da3-44c6-bafa-8c73651f6ce6)
@@ -1321,13 +1560,29 @@
     (stroke (width 0) (type default))
     (uuid f46c3ec4-8a1e-4e67-9732-40aa8b5fb49c)
   )
+  (wire (pts (xy 182.88 157.48) (xy 200.66 157.48))
+    (stroke (width 0) (type default))
+    (uuid f8f56d91-d7dd-4c6d-8ffe-0ac11d6a89a2)
+  )
   (wire (pts (xy 143.51 154.94) (xy 137.16 154.94))
     (stroke (width 0) (type default))
     (uuid fbff2024-d35a-4ff8-bd22-5c043104a220)
   )
+  (wire (pts (xy 167.64 144.78) (xy 167.64 147.32))
+    (stroke (width 0) (type default))
+    (uuid fc3d0dc9-4e94-4358-b4e1-32d3ed5154af)
+  )
+  (wire (pts (xy 167.64 147.32) (xy 167.64 149.86))
+    (stroke (width 0) (type default))
+    (uuid feb78087-c6e4-49d5-8969-267b63f629dd)
+  )
   (wire (pts (xy 129.54 180.34) (xy 129.54 182.88))
     (stroke (width 0) (type default))
     (uuid ffeba362-fcb4-483e-957e-34ce61fdde19)
+  )
+  (wire (pts (xy 167.64 137.16) (xy 167.64 139.7))
+    (stroke (width 0) (type default))
+    (uuid ffebc3b9-9008-4f19-a981-e36bd86c6f85)
   )
 
   (label "R11" (at 137.16 182.88 0) (fields_autoplaced)
@@ -1362,6 +1617,14 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 0e15f069-e11b-4918-a664-c1bb389ef1a9)
   )
+  (label "R8" (at 200.66 142.24 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 10a2f3ca-9655-40c3-aa7d-7660e54c9364)
+  )
+  (label "R12" (at 200.66 152.4 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 10b56192-12b2-4cbb-bf14-fad6400bbb71)
+  )
   (label "R13" (at 229.87 86.36 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 136d0a00-b0b4-4488-8857-69be19f397d2)
@@ -1378,6 +1641,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 1e61361f-f880-4051-9638-dfecaff1fbb6)
   )
+  (label "R13" (at 200.66 154.94 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 1f14c7b7-c326-4652-8e8b-dca3b5e4d86f)
+  )
   (label "d_C3" (at 68.58 71.12 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 25d0dbea-d659-4e54-b238-fc27fe4b57e7)
@@ -1389,6 +1656,10 @@
   (label "R0" (at 175.26 60.96 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 2880bd94-3f75-4194-a038-c77a99f91e42)
+  )
+  (label "R14" (at 200.66 157.48 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 2957d125-495a-4624-8ed0-9b3218f2d652)
   )
   (label "R3" (at 175.26 76.2 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1434,9 +1705,17 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5b66ddd0-f9b4-4370-a544-f583c47c18ac)
   )
+  (label "R5" (at 200.66 134.62 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 5d2dd6b7-c7d3-4e42-8099-9862feb37482)
+  )
   (label "R9" (at 229.87 66.04 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 630063f5-89fe-467d-b910-e9535a28cc6d)
+  )
+  (label "R9" (at 200.66 144.78 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 66847428-19d2-4682-b4f0-8ef225901982)
   )
   (label "R5" (at 137.16 167.64 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1450,13 +1729,21 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 7594bb1c-31ff-4772-b9e4-ca683ebb6dcd)
   )
-  (label "CLK" (at 67.31 160.02 0) (fields_autoplaced)
+  (label "CLK" (at 67.31 154.94 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 75bc738c-4efa-491b-9ce0-18ab3bf63af9)
   )
   (label "C2" (at 93.98 66.04 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 774d3831-9fde-4da3-aa94-2fca01982b66)
+  )
+  (label "R11" (at 200.66 149.86 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 7b13a208-8201-492f-9f8d-da73e11fef8d)
+  )
+  (label "R4" (at 200.66 132.08 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 7dc1a308-d2c7-4cea-8735-29dbdf236e81)
   )
   (label "CLK" (at 232.41 45.72 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1465,6 +1752,10 @@
   (label "R8" (at 137.16 175.26 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 7f936725-2d7e-48b9-af24-7c6209a84465)
+  )
+  (label "R2" (at 200.66 127 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 86fb86c2-1bef-4e7f-83ed-574afc4a5caf)
   )
   (label "Dout" (at 276.86 96.52 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1485,6 +1776,10 @@
   (label "R7" (at 175.26 96.52 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 92064858-74d6-46bb-9fc3-3ac3321f720f)
+  )
+  (label "R0" (at 200.66 121.92 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 928f0a76-f2e8-4a80-8899-c6657f42764c)
   )
   (label "R2" (at 175.26 71.12 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1513,6 +1808,10 @@
   (label "R15" (at 137.16 193.04 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 9aa3f735-4a13-4c01-b300-a73bed3bf52b)
+  )
+  (label "R7" (at 200.66 139.7 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 9b37e60d-b4e9-4ad2-a779-753945bebb0c)
   )
   (label "R1" (at 175.26 66.04 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1550,6 +1849,14 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid b54d820a-7a4c-4d7d-9333-ffbd5cb0d9c0)
   )
+  (label "R15" (at 200.66 160.02 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid b663a034-9447-4bf6-89f3-547496e6ca8b)
+  )
+  (label "R1" (at 200.66 124.46 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid bc622b79-f93f-4365-910c-088fa0413808)
+  )
   (label "C7" (at 30.48 175.26 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid c1ffa21b-4092-45d3-9fe2-8e5605fb77f3)
@@ -1569,6 +1876,10 @@
   (label "R9" (at 137.16 177.8 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid cacc76e4-d832-47af-992f-174ca2320ddb)
+  )
+  (label "R10" (at 200.66 147.32 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid ce1583c7-7363-4174-a616-d533160ba369)
   )
   (label "Latch" (at 176.53 40.64 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1590,11 +1901,19 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e5101a81-b427-4280-9855-eadb3932be58)
   )
+  (label "R6" (at 200.66 137.16 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid e52e5e8b-249f-4b47-bbe3-932410b52ccb)
+  )
+  (label "R3" (at 200.66 129.54 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid e594a8b8-c3da-422b-9a60-95e066b8e5c6)
+  )
   (label "C1" (at 30.48 160.02 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid e5fb515d-56b0-42bc-bf0f-2601fdcbeeb7)
   )
-  (label "Din" (at 67.31 154.94 0) (fields_autoplaced)
+  (label "Din" (at 67.31 160.02 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e62c1ebf-10d5-488a-9dcd-16b402f365b6)
   )
@@ -1621,6 +1940,56 @@
   (label "R15" (at 229.87 96.52 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid f880de1c-a78b-4e64-84ab-8aef38ed1b61)
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 160.02 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 00746c2c-4ad5-4121-b806-a10efa3f9078)
+    (property "Reference" "D24" (at 187.96 160.02 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 160.02 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 160.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 160.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f4fb5010-0cce-430e-a18c-998a871c5aca))
+    (pin "2" (uuid bde14513-2866-494e-8d36-7840dc77a572))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D24") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+5V") (at 22.86 40.64 0) (unit 1)
@@ -1839,6 +2208,156 @@
     )
   )
 
+  (symbol (lib_id "Device:LED") (at 179.07 154.94 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 1ebdd69c-9aa5-4df6-b826-77c9ed9b7ec0)
+    (property "Reference" "D22" (at 187.96 154.94 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 154.94 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 55b0b5d4-0c87-4f37-8bac-f4a9ca5ae484))
+    (pin "2" (uuid 8c2a05d5-1b43-4fe5-882d-ae936b82e6bf))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D22") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 142.24 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 20b1618b-aaa6-4113-80d3-d5d282efe6a7)
+    (property "Reference" "R41" (at 160.02 142.24 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 142.24 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 144.018 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 142.24 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d9c24a65-f656-4e3f-a251-bc5d00c36614))
+    (pin "2" (uuid a5efdf7f-73ad-4606-a2a2-71884921395a))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R41") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 127 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 21a2cdf3-e355-44d0-8773-448b642312d4)
+    (property "Reference" "D11" (at 187.96 127 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 127 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 56d053ac-49d2-4581-9945-51291150640c))
+    (pin "2" (uuid 40c959c1-7bf1-4888-a2f0-32978abf82f1))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D11") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+5V") (at 176.53 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 237852b1-ce92-48c3-955b-7e435d1b5169)
@@ -1964,6 +2483,56 @@
     )
   )
 
+  (symbol (lib_id "Device:R") (at 171.45 124.46 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 2eb3df80-cc1a-4b64-a6ae-043bf999b0f2)
+    (property "Reference" "R34" (at 160.02 124.46 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 124.46 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 126.238 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 124.46 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c40ff2de-8da0-43b3-8bc3-b43dc312b3fa))
+    (pin "2" (uuid 4f47b87d-e846-4110-a2bb-abe75acc3835))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R34") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+5V") (at 85.09 179.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2f6721ff-277c-42fa-bfd9-df087ee1c622)
@@ -1984,6 +2553,56 @@
       (project "hall_sensor_matrix_v2"
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
           (reference "#PWR018") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 154.94 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 342038ff-f76c-41fd-832d-42b527f7b712)
+    (property "Reference" "R46" (at 160.02 154.94 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 154.94 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 156.718 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 3757c7f0-b500-46c9-bc55-29ed01818341))
+    (pin "2" (uuid 3fe42dba-e361-4a47-896e-41fbf47b5e50))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R46") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -2086,6 +2705,56 @@
       (project "hall_sensor_matrix_v2"
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
           (reference "C3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 160.02 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 4074f014-ff8b-4a13-8b5a-fd2cd43e8cce)
+    (property "Reference" "R48" (at 160.02 160.02 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 160.02 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 161.798 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 160.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 3e4f6fc7-3d6a-47f0-9981-653db3e43f88))
+    (pin "2" (uuid fd5c9401-da3c-48b6-9b20-96fc24bf7bb4))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R48") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -2291,6 +2960,56 @@
     )
   )
 
+  (symbol (lib_id "Device:LED") (at 179.07 147.32 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 5e8af63f-b037-419e-ab9c-2248bba24ee5)
+    (property "Reference" "D19" (at 187.96 147.32 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 147.32 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 147.32 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 147.32 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2b51fa1c-d6a7-44e9-be91-6613cdc673ad))
+    (pin "2" (uuid c2cc23ad-4cfd-4db7-989f-d341cb815dd3))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D19") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 85.09 186.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5f596177-4aca-425d-b641-35c7f4e3de8c)
@@ -2336,6 +3055,106 @@
       (project "hall_sensor_matrix_v2"
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
           (reference "#PWR08") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 129.54 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 65689cf3-4b8b-47a7-a293-92ee20cb6558)
+    (property "Reference" "R36" (at 160.02 129.54 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 129.54 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 131.318 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 80460873-0197-46d6-b811-2dfafc2ebe5e))
+    (pin "2" (uuid 4d4bf283-fbae-4e1d-9523-06bf81967529))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R36") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 129.54 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 697eae35-4d4e-411c-86a0-aadfef0e2e2b)
+    (property "Reference" "D12" (at 187.96 129.54 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 129.54 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b956c94b-0142-47c2-84ab-c25563d35b92))
+    (pin "2" (uuid c872cbb6-e300-4c29-8486-305a623f6c23))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
         )
       )
     )
@@ -2450,6 +3269,156 @@
     )
   )
 
+  (symbol (lib_id "Device:LED") (at 179.07 144.78 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 7a937566-38a5-4756-a3a1-63a7d62d25f5)
+    (property "Reference" "D18" (at 187.96 144.78 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 144.78 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 144.78 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 144.78 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b9794e37-e7bb-4a97-9774-b7c8bc5d3d0f))
+    (pin "2" (uuid b7f545e3-34c5-4c73-b22b-3fa4011a3281))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D18") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 139.7 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 7c4cdbff-dfb2-410d-8b6e-a3724c8b159f)
+    (property "Reference" "R40" (at 160.02 139.7 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 139.7 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 141.478 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 139.7 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d5277235-01a8-45c6-b84a-3c71467554c9))
+    (pin "2" (uuid 63b068e6-0aff-44f0-b286-034cd358dc6b))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R40") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 134.62 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 7f8ab2ec-0ed6-4e28-b3f3-25bfe688a8d0)
+    (property "Reference" "D14" (at 187.96 134.62 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 134.62 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0b92aa4d-c860-436e-abcf-784b6d409575))
+    (pin "2" (uuid 8521f006-37f7-43e3-9d2c-0b8d87c85862))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:C_Polarized") (at 63.5 182.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8022efbd-30f8-4d9b-90b7-af584df87733)
@@ -2552,6 +3521,106 @@
     )
   )
 
+  (symbol (lib_id "Device:LED") (at 179.07 121.92 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 8d2383a2-bb29-420b-8d4d-6ebfd0ad1b4d)
+    (property "Reference" "D9" (at 187.96 121.92 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 121.92 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 70e82c20-595b-428b-9910-9ea709fd7acf))
+    (pin "2" (uuid ddd732d1-a861-4310-aa23-795d2a846b04))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D9") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 132.08 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 9288857f-41ae-476c-8a68-3f2089851dba)
+    (property "Reference" "R37" (at 160.02 132.08 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 132.08 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 133.858 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 132.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 8e1aaf8a-a516-4ae4-83e3-83a2c7f09db8))
+    (pin "2" (uuid 6ee3e0d3-51ed-4896-aaff-98155afa92c6))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R37") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 57.15 186.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9bf9b21f-7afb-4ff6-8acb-5321e0a13cb8)
@@ -2577,6 +3646,56 @@
     )
   )
 
+  (symbol (lib_id "Device:R") (at 171.45 144.78 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 9d014028-f19a-4613-938f-43d625ab80c7)
+    (property "Reference" "R42" (at 160.02 144.78 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 144.78 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 146.558 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 144.78 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 6258f6fc-9bfa-4ebf-80fe-7390e03bd1cc))
+    (pin "2" (uuid bb88d121-8dc6-477e-935b-70b52e95594f))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R42") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+5V") (at 48.26 20.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a24c7377-542c-498a-91d7-62d7af7a50e0)
@@ -2597,6 +3716,56 @@
       (project "hall_sensor_matrix_v2"
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
           (reference "#PWR03") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 142.24 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid a4f8d324-159a-48d7-b201-b089c653283a)
+    (property "Reference" "D17" (at 187.96 142.24 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 142.24 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 142.24 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 142.24 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 5f92e71b-c759-4e34-90ff-d12b7e6ea38c))
+    (pin "2" (uuid 856d4538-af82-4dca-a13b-64ccbd1fb7ee))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D17") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
         )
       )
     )
@@ -2652,6 +3821,106 @@
     )
   )
 
+  (symbol (lib_id "Device:R") (at 171.45 127 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid ac2b8002-a59b-43bc-a599-74b2def436dd)
+    (property "Reference" "R35" (at 160.02 127 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 127 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 128.778 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ed237d77-9c1d-406f-ba8e-15b0bc50eca3))
+    (pin "2" (uuid 297d45e2-8048-4d93-a74e-251e5a8070ef))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R35") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 157.48 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid b2355d62-90c5-45ea-b4e6-2a4853bf826d)
+    (property "Reference" "D23" (at 187.96 157.48 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 157.48 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 157.48 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 157.48 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b764bb4f-c53d-49ca-9850-272766c9c58f))
+    (pin "2" (uuid 9594f982-9251-4bdb-8b96-27ca7ca60bd5))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D23") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R") (at 133.35 190.5 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b67462a0-b2d7-4016-9301-acc3bebf5fa9)
@@ -2702,19 +3971,19 @@
     )
   )
 
-  (symbol (lib_id "Connector_Generic:Conn_01x06") (at 80.01 157.48 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+  (symbol (lib_id "Connector_Generic:Conn_01x06") (at 80.01 160.02 0) (mirror x) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid be20fba9-abad-4656-a034-d1a01b33cb15)
-    (property "Reference" "J1" (at 82.042 158.1063 0)
+    (property "Reference" "J1" (at 82.042 159.3937 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "CTRL" (at 82.042 160.0273 0)
+    (property "Value" "CTRL" (at 82.042 157.4727 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal" (at 80.01 157.48 0)
+    (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal" (at 80.01 160.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 80.01 157.48 0)
+    (property "Datasheet" "~" (at 80.01 160.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b5d15f39-a9df-4e8a-8414-a73525c0dd1e))
@@ -2727,6 +3996,56 @@
       (project "hall_sensor_matrix_v2"
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
           (reference "J1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 132.08 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid bf69617c-0659-4dcc-aaa1-23b07c76226c)
+    (property "Reference" "D13" (at 187.96 132.08 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 132.08 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 132.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 132.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 99617045-1397-4fc1-b7e1-f0781aa64a6e))
+    (pin "2" (uuid 6637f1ae-9553-4aaa-a997-be6db6799967))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D13") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
         )
       )
     )
@@ -2852,6 +4171,56 @@
       (project "hall_sensor_matrix_v2"
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
           (reference "#PWR020") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 149.86 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid c542e35a-ca6e-48cd-85b2-7fb0ab475cb4)
+    (property "Reference" "R44" (at 160.02 149.86 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 149.86 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 151.638 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0b0884f2-5a01-4112-bde5-d873a4e4aa66))
+    (pin "2" (uuid e574c27b-fddd-4f4f-8459-f7387710b4bb))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R44") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -3007,6 +4376,106 @@
     )
   )
 
+  (symbol (lib_id "Device:R") (at 171.45 152.4 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid cb8b5663-15ba-44d3-b4cd-4192bae9da15)
+    (property "Reference" "R45" (at 160.02 152.4 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 152.4 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 154.178 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 152.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 76a89402-8ca5-404c-944a-6077b49974a4))
+    (pin "2" (uuid dce64ed7-057f-4124-947b-eae319df0190))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R45") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 147.32 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid d0291255-94b4-490d-9cb2-1a80c8eb8a48)
+    (property "Reference" "R43" (at 160.02 147.32 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 147.32 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 149.098 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 147.32 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a1acb54c-8da8-46d0-b53e-9a9768ab1f56))
+    (pin "2" (uuid adab92b3-945e-42a2-929b-c5c7b0536ad6))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R43") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "74xx_IEEE:74LS595") (at 48.26 55.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d362acf7-f807-4b1a-8dba-ca1a848aedec)
@@ -3042,6 +4511,56 @@
       (project "hall_sensor_matrix_v2"
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
           (reference "U1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 124.46 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid d3e2994c-2c1d-49e4-9d73-1de7975bed72)
+    (property "Reference" "D10" (at 187.96 124.46 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 124.46 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 124.46 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 124.46 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid efcd233f-73ee-436d-a6a0-bcb5c8211530))
+    (pin "2" (uuid 0900ff1b-7bf2-4997-8444-2339126007a0))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
         )
       )
     )
@@ -3098,6 +4617,56 @@
     )
   )
 
+  (symbol (lib_id "Device:R") (at 171.45 134.62 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid d67abac6-3097-4782-b151-3e1d2917330c)
+    (property "Reference" "R38" (at 160.02 134.62 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 134.62 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 136.398 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 7d29b009-ecfe-453d-b68c-09e0f855d603))
+    (pin "2" (uuid d516c092-a81c-4313-ab07-ecf94f875c38))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R38") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Connector_Generic:Conn_01x16") (at 148.59 172.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid da2c9a90-70c3-4d81-8dca-01fb2fa22f59)
@@ -3133,6 +4702,156 @@
       (project "hall_sensor_matrix_v2"
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
           (reference "J3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 137.16 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid daf2ea46-b867-48be-a083-f3a8ea2b10f0)
+    (property "Reference" "R39" (at 160.02 137.16 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 137.16 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 138.938 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 91abc642-d531-40a4-a335-fe6bb93d7772))
+    (pin "2" (uuid 0b619f18-6121-434b-b2e6-53bea1467e99))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R39") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 137.16 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid dfa1c713-6e3d-45cd-a5f4-f1b0ab47f773)
+    (property "Reference" "D15" (at 187.96 137.16 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 137.16 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 10dd1877-3578-4860-97bb-715998c76409))
+    (pin "2" (uuid b93aef89-3a19-4568-8f0f-7103d5298f6e))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D15") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 157.48 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid e0b61f4a-9fb2-4cea-aa6a-1169cfd91e90)
+    (property "Reference" "R47" (at 160.02 157.48 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 157.48 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 159.258 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 157.48 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b1de43d4-28a8-4933-871e-2f89e8e51583))
+    (pin "2" (uuid 134d6c09-72ea-4136-945e-16cf553e713d))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R47") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -3183,6 +4902,56 @@
       (project "hall_sensor_matrix_v2"
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
           (reference "#PWR028") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 139.7 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid e65fe29c-eea0-4ab4-bcf2-1e27c1fe2131)
+    (property "Reference" "D16" (at 187.96 139.7 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 139.7 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 139.7 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 139.7 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 4f5db4bf-69a1-41e4-a4b3-9dae3d9453fd))
+    (pin "2" (uuid 58c8904d-63c8-4c1a-a61b-daa2c562f392))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D16") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
         )
       )
     )
@@ -3263,6 +5032,56 @@
     )
   )
 
+  (symbol (lib_id "Device:LED") (at 179.07 152.4 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid ee48eb75-e35c-4de5-bf99-79adffda1cf8)
+    (property "Reference" "D21" (at 187.96 152.4 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 152.4 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 152.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 152.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 293d1484-1c85-44a9-861d-3ee9610dda0c))
+    (pin "2" (uuid fdaf61bc-5c44-493b-a04c-b10b5121a4e6))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D21") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+5V") (at 57.15 179.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f041a4aa-a752-4b2d-987b-61915fecde51)
@@ -3283,6 +5102,81 @@
       (project "hall_sensor_matrix_v2"
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
           (reference "#PWR015") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+5V") (at 167.64 118.11 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid f4e38d0e-4e20-4362-94bb-fb68838bc90c)
+    (property "Reference" "#PWR022" (at 167.64 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 167.64 114.6081 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 167.64 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 167.64 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 33f1b7ab-81a1-4256-a298-615e9e36860b))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "#PWR022") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 171.45 121.92 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid f61ae7ee-defc-4f31-8878-356eb5d67d80)
+    (property "Reference" "R33" (at 160.02 121.92 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "470" (at 165.1 121.92 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 171.45 123.698 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 171.45 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f74017cf-cffa-4e2c-9d20-d1f4f8d15b52))
+    (pin "2" (uuid b4ea94df-dfc5-4a23-8e5f-c374a07ce377))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "R33") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "R2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "R4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "R6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "R8") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "R10") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "R12") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "R14") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -3333,6 +5227,56 @@
         )
         (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
           (reference "R16") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:LED") (at 179.07 149.86 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid f7d2de94-d2e9-486b-879d-46b2453656d2)
+    (property "Reference" "D20" (at 187.96 149.86 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 193.04 149.86 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 179.07 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 179.07 149.86 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b2907a5e-0b48-4785-b677-40f60df56eeb))
+    (pin "2" (uuid 851eaa37-ca13-4b9b-9f19-4c7a8cea6189))
+    (instances
+      (project "hall_sensor_matrix_v2"
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34"
+          (reference "D20") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/5878d428-2ef9-4049-b47e-59c7db46ce83"
+          (reference "D1") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/033b991d-f208-48f3-9122-9e376d008372"
+          (reference "D2") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/38ad311c-bbe1-48fc-a2c7-b381860ab391"
+          (reference "D3") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/d36a4b3c-d576-4686-ac52-a93f1cda454d"
+          (reference "D4") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/1b079932-7165-4e41-8e8d-37f9b75f5f0c"
+          (reference "D5") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/6a59aa9e-2bb9-4564-bc55-681bef165382"
+          (reference "D6") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/c9f7101f-4f18-47df-a467-630e5a67a764"
+          (reference "D7") (unit 1)
+        )
+        (path "/9a30e28a-cd46-4b7f-9427-a633c652be34/b330cd60-021a-4992-ad96-16d1f7b59e38"
+          (reference "D8") (unit 1)
         )
       )
     )
@@ -3515,11 +5459,11 @@
     )
     (pin "in" input (at 76.2 76.2 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 2fbe1b78-d595-445b-b464-5e06244c6455)
+      (uuid 2fbe1b78-d595-445b-b464-5e06244c6456)
     )
     (pin "out" output (at 88.9 76.2 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid af0eb138-4bb0-463d-b729-94b191855ef4)
+      (uuid af0eb138-4bb0-463d-b729-94b191855ef5)
     )
     (instances
       (project "hall_sensor_matrix_v2"
@@ -3540,11 +5484,11 @@
     )
     (pin "in" input (at 76.2 66.04 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 2fbe1b78-d595-445b-b464-5e06244c6455)
+      (uuid 2fbe1b78-d595-445b-b464-5e06244c6457)
     )
     (pin "out" output (at 88.9 66.04 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid af0eb138-4bb0-463d-b729-94b191855ef4)
+      (uuid af0eb138-4bb0-463d-b729-94b191855ef6)
     )
     (instances
       (project "hall_sensor_matrix_v2"
@@ -3590,11 +5534,11 @@
     )
     (pin "in" input (at 76.2 81.28 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 2fbe1b78-d595-445b-b464-5e06244c6455)
+      (uuid 2fbe1b78-d595-445b-b464-5e06244c6458)
     )
     (pin "out" output (at 88.9 81.28 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid af0eb138-4bb0-463d-b729-94b191855ef4)
+      (uuid af0eb138-4bb0-463d-b729-94b191855ef7)
     )
     (instances
       (project "hall_sensor_matrix_v2"
@@ -3615,11 +5559,11 @@
     )
     (pin "in" input (at 76.2 91.44 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 2fbe1b78-d595-445b-b464-5e06244c6455)
+      (uuid 2fbe1b78-d595-445b-b464-5e06244c6459)
     )
     (pin "out" output (at 88.9 91.44 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid af0eb138-4bb0-463d-b729-94b191855ef4)
+      (uuid af0eb138-4bb0-463d-b729-94b191855ef8)
     )
     (instances
       (project "hall_sensor_matrix_v2"
@@ -3640,11 +5584,11 @@
     )
     (pin "in" input (at 76.2 86.36 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 2fbe1b78-d595-445b-b464-5e06244c6455)
+      (uuid 2fbe1b78-d595-445b-b464-5e06244c645a)
     )
     (pin "out" output (at 88.9 86.36 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid af0eb138-4bb0-463d-b729-94b191855ef4)
+      (uuid af0eb138-4bb0-463d-b729-94b191855ef9)
     )
     (instances
       (project "hall_sensor_matrix_v2"
@@ -3665,11 +5609,11 @@
     )
     (pin "in" input (at 76.2 71.12 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 2fbe1b78-d595-445b-b464-5e06244c6455)
+      (uuid 2fbe1b78-d595-445b-b464-5e06244c645b)
     )
     (pin "out" output (at 88.9 71.12 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid af0eb138-4bb0-463d-b729-94b191855ef4)
+      (uuid af0eb138-4bb0-463d-b729-94b191855efa)
     )
     (instances
       (project "hall_sensor_matrix_v2"
