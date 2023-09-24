@@ -1,0 +1,866 @@
+   1               		.file	"main.cpp"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               		.section	.rodata.str1.1,"aMS",@progbits,1
+  11               	.LC0:
+  12 0000 5374 6172 		.string	"Start verbose streaming"
+  12      7420 7665 
+  12      7262 6F73 
+  12      6520 7374 
+  12      7265 616D 
+  13               		.section	.text.startup,"ax",@progbits
+  14               	.global	main
+  16               	main:
+  17               	.LFB10:
+  18               		.file 1 "main.cpp"
+   1:main.cpp      **** #include <avr/io.h>
+   2:main.cpp      **** #include <avr/interrupt.h>
+   3:main.cpp      **** #include <avr/sleep.h>
+   4:main.cpp      **** #include <util/delay.h>
+   5:main.cpp      **** #include <stdlib.h> //for itoa
+   6:main.cpp      **** 
+   7:main.cpp      **** #include "state_machine.h"
+   8:main.cpp      **** #include "LCD.h"
+   9:main.cpp      **** #include "UART.h"
+  10:main.cpp      **** 
+  11:main.cpp      **** #define LED0_ON (PORTD|=(1<<6))
+  12:main.cpp      **** #define LED0_OFF (PORTD&=~(1<<6))
+  13:main.cpp      **** #define LED0_Toggle (PORTD^=(1<<6))
+  14:main.cpp      **** 
+  15:main.cpp      **** #define LED1_ON (PORTD|=(1<<7))
+  16:main.cpp      **** #define LED1_OFF (PORTD&=~(1<<7))
+  17:main.cpp      **** #define LED1_Toggle (PORTD^=(1<<7))
+  18:main.cpp      **** 
+  19:main.cpp      **** #define BTN0 (PIND&(1<<4))
+  20:main.cpp      **** #define BTN1 (PIND&(1<<5))
+  21:main.cpp      **** 
+  22:main.cpp      **** #define IRQ_STATE (PINE&(1<<7))
+  23:main.cpp      **** 
+  24:main.cpp      **** #define PWR_en_ON (PORTE|=(1<<5))
+  25:main.cpp      **** #define PWR_en_OFF (PORTE&=~(1<<6))
+  26:main.cpp      **** #define LoadCell_en_ON (PORTE|=(1<<7))
+  27:main.cpp      **** #define LoadCell_en_OFF (PORTE&=~(1<<7))
+  28:main.cpp      **** 
+  29:main.cpp      **** #define BATT_CUTOUT 295
+  30:main.cpp      **** #define BATT_EMPTY 305
+  31:main.cpp      **** #define BATT_ONEBAR 315
+  32:main.cpp      **** #define BATT_TWOBAR 325
+  33:main.cpp      **** #define BATT_FULL 335
+  34:main.cpp      **** 
+  35:main.cpp      **** UART uart;
+  36:main.cpp      **** LCD myLCD=LCD(0);//Use 1 for lowest power LCD mode
+  37:main.cpp      **** //Scale myScale=Scale(&uart);
+  38:main.cpp      **** //SM mySM(&uart, &myScale,&myLCD);
+  39:main.cpp      **** 
+  40:main.cpp      **** //Fuses -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0xfd:m 
+  41:main.cpp      **** //Int RC osc, 6CK+65ms startup time
+  42:main.cpp      **** //No Clock div by 8
+  43:main.cpp      **** //Brown out detection enabled, 1.8V
+  44:main.cpp      **** //For BoD at 2.7V, use Efuse=FB instead of FD
+  45:main.cpp      **** 
+  46:main.cpp      **** volatile uint8_t loop_cnt=0;
+  47:main.cpp      **** volatile uint8_t btn_state=0;
+  48:main.cpp      **** 
+  49:main.cpp      **** int main(void){
+  19               		.loc 1 49 0
+  20               		.cfi_startproc
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	/* stack size = 0 */
+  24               	.L__stack_usage = 0
+  50:main.cpp      **** 	
+  51:main.cpp      **** 	DDRD=0b11000000; 	//LED0, LED1 as outputs, BTN 0/1 as inputs
+  25               		.loc 1 51 0
+  26 0000 80EC      		ldi r24,lo8(-64)
+  27 0002 8AB9      		out 0xa,r24
+  52:main.cpp      **** 	PORTD=0b00110000;			//LED initial state:low, enable BTN pullups
+  28               		.loc 1 52 0
+  29 0004 80E3      		ldi r24,lo8(48)
+  30 0006 8BB9      		out 0xb,r24
+  53:main.cpp      **** 	
+  54:main.cpp      **** 	DDRE=0b01100011;//IRQ as input, LoadCell_en/PWR_en as outputs, TX as output, RX as input
+  31               		.loc 1 54 0
+  32 0008 83E6      		ldi r24,lo8(99)
+  33 000a 8DB9      		out 0xd,r24
+  55:main.cpp      **** 	PORTE=0b11100000;//Enable IRQ pullup, set LoadCell_en/PWR_en to 1
+  34               		.loc 1 55 0
+  35 000c 80EE      		ldi r24,lo8(-32)
+  36 000e 8EB9      		out 0xe,r24
+  56:main.cpp      **** 	
+  57:main.cpp      **** 	LED0_ON;
+  37               		.loc 1 57 0
+  38 0010 5E9A      		sbi 0xb,6
+  58:main.cpp      **** 	PRR|=(1<<PRTIM1);//Shut down clock to Timer1
+  39               		.loc 1 58 0
+  40 0012 8091 6400 		lds r24,100
+  41 0016 8860      		ori r24,lo8(8)
+  42 0018 8093 6400 		sts 100,r24
+  59:main.cpp      **** 	
+  60:main.cpp      **** 	ADMUX|=(1<<REFS0)|0b11110;//Set AVCC as reference voltage for ADC, ADC MUX input to 1.1V BG
+  43               		.loc 1 60 0
+  44 001c 8091 7C00 		lds r24,124
+  45 0020 8E65      		ori r24,lo8(94)
+  46 0022 8093 7C00 		sts 124,r24
+  61:main.cpp      **** 	ADCSRA|=(1<<ADEN)|(1<<ADIE)|(1<<ADPS1);//Enable conversin complete interrupt, Clock prescaler 12MH
+  47               		.loc 1 61 0
+  48 0026 8091 7A00 		lds r24,122
+  49 002a 8A68      		ori r24,lo8(-118)
+  50 002c 8093 7A00 		sts 122,r24
+  62:main.cpp      **** 	sei();
+  51               		.loc 1 62 0
+  52               	/* #APP */
+  53               	 ;  62 "main.cpp" 1
+  54 0030 7894      		sei
+  55               	 ;  0 "" 2
+  56               	/* #NOAPP */
+  57               	.LBB9:
+  63:main.cpp      **** 	
+  64:main.cpp      **** 	
+  65:main.cpp      **** 	while(1){
+  66:main.cpp      **** 	
+  67:main.cpp      **** 		_delay_ms(10);
+  68:main.cpp      **** 		loop_cnt++;
+  69:main.cpp      **** 		if(loop_cnt>9){
+  70:main.cpp      **** 			loop_cnt=0;
+  71:main.cpp      **** 			//mySM.update();
+  72:main.cpp      **** 		}
+  73:main.cpp      **** 
+  74:main.cpp      **** 		if(BTN0!=btn_state){
+  75:main.cpp      **** 			btn_state=BTN0;
+  76:main.cpp      **** 			if(btn_state){
+  77:main.cpp      **** 				LED0_Toggle;
+  58               		.loc 1 77 0
+  59 0032 C0E4      		ldi r28,lo8(64)
+  60               	.L6:
+  61               	.LVL0:
+  62               	.LBB10:
+  63               	.LBB11:
+  64               		.file 2 "/usr/lib/avr/include/util/delay.h"
+   1:/usr/lib/avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   2:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
+   3:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2007  Florin-Viorel Petrov
+   4:/usr/lib/avr/include/util/delay.h ****    All rights reserved.
+   5:/usr/lib/avr/include/util/delay.h **** 
+   6:/usr/lib/avr/include/util/delay.h ****    Redistribution and use in source and binary forms, with or without
+   7:/usr/lib/avr/include/util/delay.h ****    modification, are permitted provided that the following conditions are met:
+   8:/usr/lib/avr/include/util/delay.h **** 
+   9:/usr/lib/avr/include/util/delay.h ****    * Redistributions of source code must retain the above copyright
+  10:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer.
+  11:/usr/lib/avr/include/util/delay.h **** 
+  12:/usr/lib/avr/include/util/delay.h ****    * Redistributions in binary form must reproduce the above copyright
+  13:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer in
+  14:/usr/lib/avr/include/util/delay.h ****      the documentation and/or other materials provided with the
+  15:/usr/lib/avr/include/util/delay.h ****      distribution.
+  16:/usr/lib/avr/include/util/delay.h **** 
+  17:/usr/lib/avr/include/util/delay.h ****    * Neither the name of the copyright holders nor the names of
+  18:/usr/lib/avr/include/util/delay.h ****      contributors may be used to endorse or promote products derived
+  19:/usr/lib/avr/include/util/delay.h ****      from this software without specific prior written permission.
+  20:/usr/lib/avr/include/util/delay.h **** 
+  21:/usr/lib/avr/include/util/delay.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:/usr/lib/avr/include/util/delay.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:/usr/lib/avr/include/util/delay.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:/usr/lib/avr/include/util/delay.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  25:/usr/lib/avr/include/util/delay.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:/usr/lib/avr/include/util/delay.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:/usr/lib/avr/include/util/delay.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:/usr/lib/avr/include/util/delay.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:/usr/lib/avr/include/util/delay.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:/usr/lib/avr/include/util/delay.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:/usr/lib/avr/include/util/delay.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  32:/usr/lib/avr/include/util/delay.h **** 
+  33:/usr/lib/avr/include/util/delay.h **** /* $Id$ */
+  34:/usr/lib/avr/include/util/delay.h **** 
+  35:/usr/lib/avr/include/util/delay.h **** #ifndef _UTIL_DELAY_H_
+  36:/usr/lib/avr/include/util/delay.h **** #define _UTIL_DELAY_H_ 1
+  37:/usr/lib/avr/include/util/delay.h **** 
+  38:/usr/lib/avr/include/util/delay.h **** #ifndef __DOXYGEN__
+  39:/usr/lib/avr/include/util/delay.h **** #  ifndef __HAS_DELAY_CYCLES
+  40:/usr/lib/avr/include/util/delay.h **** #    define __HAS_DELAY_CYCLES 1
+  41:/usr/lib/avr/include/util/delay.h **** #  endif
+  42:/usr/lib/avr/include/util/delay.h **** #endif  /* __DOXYGEN__ */
+  43:/usr/lib/avr/include/util/delay.h **** 
+  44:/usr/lib/avr/include/util/delay.h **** #include <inttypes.h>
+  45:/usr/lib/avr/include/util/delay.h **** #include <util/delay_basic.h>
+  46:/usr/lib/avr/include/util/delay.h **** #include <math.h>
+  47:/usr/lib/avr/include/util/delay.h **** 
+  48:/usr/lib/avr/include/util/delay.h **** /** \file */
+  49:/usr/lib/avr/include/util/delay.h **** /** \defgroup util_delay <util/delay.h>: Convenience functions for busy-wait delay loops
+  50:/usr/lib/avr/include/util/delay.h ****     \code
+  51:/usr/lib/avr/include/util/delay.h ****     #define F_CPU 1000000UL  // 1 MHz
+  52:/usr/lib/avr/include/util/delay.h ****     //#define F_CPU 14.7456E6
+  53:/usr/lib/avr/include/util/delay.h ****     #include <util/delay.h>
+  54:/usr/lib/avr/include/util/delay.h ****     \endcode
+  55:/usr/lib/avr/include/util/delay.h **** 
+  56:/usr/lib/avr/include/util/delay.h ****     \note As an alternative method, it is possible to pass the
+  57:/usr/lib/avr/include/util/delay.h ****     F_CPU macro down to the compiler from the Makefile.
+  58:/usr/lib/avr/include/util/delay.h ****     Obviously, in that case, no \c \#define statement should be
+  59:/usr/lib/avr/include/util/delay.h ****     used.
+  60:/usr/lib/avr/include/util/delay.h **** 
+  61:/usr/lib/avr/include/util/delay.h ****     The functions in this header file are wrappers around the basic
+  62:/usr/lib/avr/include/util/delay.h ****     busy-wait functions from <util/delay_basic.h>.  They are meant as
+  63:/usr/lib/avr/include/util/delay.h ****     convenience functions where actual time values can be specified
+  64:/usr/lib/avr/include/util/delay.h ****     rather than a number of cycles to wait for.  The idea behind is
+  65:/usr/lib/avr/include/util/delay.h ****     that compile-time constant expressions will be eliminated by
+  66:/usr/lib/avr/include/util/delay.h ****     compiler optimization so floating-point expressions can be used
+  67:/usr/lib/avr/include/util/delay.h ****     to calculate the number of delay cycles needed based on the CPU
+  68:/usr/lib/avr/include/util/delay.h ****     frequency passed by the macro F_CPU.
+  69:/usr/lib/avr/include/util/delay.h **** 
+  70:/usr/lib/avr/include/util/delay.h ****     \note In order for these functions to work as intended, compiler
+  71:/usr/lib/avr/include/util/delay.h ****     optimizations <em>must</em> be enabled, and the delay time
+  72:/usr/lib/avr/include/util/delay.h ****     <em>must</em> be an expression that is a known constant at
+  73:/usr/lib/avr/include/util/delay.h ****     compile-time.  If these requirements are not met, the resulting
+  74:/usr/lib/avr/include/util/delay.h ****     delay will be much longer (and basically unpredictable), and
+  75:/usr/lib/avr/include/util/delay.h ****     applications that otherwise do not use floating-point calculations
+  76:/usr/lib/avr/include/util/delay.h ****     will experience severe code bloat by the floating-point library
+  77:/usr/lib/avr/include/util/delay.h ****     routines linked into the application.
+  78:/usr/lib/avr/include/util/delay.h **** 
+  79:/usr/lib/avr/include/util/delay.h ****     The functions available allow the specification of microsecond, and
+  80:/usr/lib/avr/include/util/delay.h ****     millisecond delays directly, using the application-supplied macro
+  81:/usr/lib/avr/include/util/delay.h ****     F_CPU as the CPU clock frequency (in Hertz).
+  82:/usr/lib/avr/include/util/delay.h **** 
+  83:/usr/lib/avr/include/util/delay.h **** */
+  84:/usr/lib/avr/include/util/delay.h **** 
+  85:/usr/lib/avr/include/util/delay.h **** #if !defined(__DOXYGEN__)
+  86:/usr/lib/avr/include/util/delay.h **** static __inline__ void _delay_us(double __us) __attribute__((__always_inline__));
+  87:/usr/lib/avr/include/util/delay.h **** static __inline__ void _delay_ms(double __ms) __attribute__((__always_inline__));
+  88:/usr/lib/avr/include/util/delay.h **** #endif
+  89:/usr/lib/avr/include/util/delay.h **** 
+  90:/usr/lib/avr/include/util/delay.h **** #ifndef F_CPU
+  91:/usr/lib/avr/include/util/delay.h **** /* prevent compiler error by supplying a default */
+  92:/usr/lib/avr/include/util/delay.h **** # warning "F_CPU not defined for <util/delay.h>"
+  93:/usr/lib/avr/include/util/delay.h **** /** \ingroup util_delay
+  94:/usr/lib/avr/include/util/delay.h ****     \def F_CPU
+  95:/usr/lib/avr/include/util/delay.h ****     \brief CPU frequency in Hz
+  96:/usr/lib/avr/include/util/delay.h **** 
+  97:/usr/lib/avr/include/util/delay.h ****     The macro F_CPU specifies the CPU frequency to be considered by
+  98:/usr/lib/avr/include/util/delay.h ****     the delay macros.  This macro is normally supplied by the
+  99:/usr/lib/avr/include/util/delay.h ****     environment (e.g. from within a project header, or the project's
+ 100:/usr/lib/avr/include/util/delay.h ****     Makefile).  The value 1 MHz here is only provided as a "vanilla"
+ 101:/usr/lib/avr/include/util/delay.h ****     fallback if no such user-provided definition could be found.
+ 102:/usr/lib/avr/include/util/delay.h **** 
+ 103:/usr/lib/avr/include/util/delay.h ****     In terms of the delay functions, the CPU frequency can be given as
+ 104:/usr/lib/avr/include/util/delay.h ****     a floating-point constant (e.g. 3.6864E6 for 3.6864 MHz).
+ 105:/usr/lib/avr/include/util/delay.h ****     However, the macros in <util/setbaud.h> require it to be an
+ 106:/usr/lib/avr/include/util/delay.h ****     integer value.
+ 107:/usr/lib/avr/include/util/delay.h ****  */
+ 108:/usr/lib/avr/include/util/delay.h **** # define F_CPU 1000000UL
+ 109:/usr/lib/avr/include/util/delay.h **** #endif
+ 110:/usr/lib/avr/include/util/delay.h **** 
+ 111:/usr/lib/avr/include/util/delay.h **** #ifndef __OPTIMIZE__
+ 112:/usr/lib/avr/include/util/delay.h **** # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+ 113:/usr/lib/avr/include/util/delay.h **** #endif
+ 114:/usr/lib/avr/include/util/delay.h **** 
+ 115:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 116:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 117:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 118:/usr/lib/avr/include/util/delay.h **** #  include <math.h>
+ 119:/usr/lib/avr/include/util/delay.h **** #endif
+ 120:/usr/lib/avr/include/util/delay.h **** 
+ 121:/usr/lib/avr/include/util/delay.h **** /**
+ 122:/usr/lib/avr/include/util/delay.h ****    \ingroup util_delay
+ 123:/usr/lib/avr/include/util/delay.h **** 
+ 124:/usr/lib/avr/include/util/delay.h ****    Perform a delay of \c __ms milliseconds, using _delay_loop_2().
+ 125:/usr/lib/avr/include/util/delay.h **** 
+ 126:/usr/lib/avr/include/util/delay.h ****    The macro F_CPU is supposed to be defined to a
+ 127:/usr/lib/avr/include/util/delay.h ****    constant defining the CPU clock frequency (in Hertz).
+ 128:/usr/lib/avr/include/util/delay.h **** 
+ 129:/usr/lib/avr/include/util/delay.h ****    The maximal possible delay is 262.14 ms / F_CPU in MHz.
+ 130:/usr/lib/avr/include/util/delay.h **** 
+ 131:/usr/lib/avr/include/util/delay.h ****    When the user request delay which exceed the maximum possible one,
+ 132:/usr/lib/avr/include/util/delay.h ****    _delay_ms() provides a decreased resolution functionality. In this
+ 133:/usr/lib/avr/include/util/delay.h ****    mode _delay_ms() will work with a resolution of 1/10 ms, providing
+ 134:/usr/lib/avr/include/util/delay.h ****    delays up to 6.5535 seconds (independent from CPU frequency).  The
+ 135:/usr/lib/avr/include/util/delay.h ****    user will not be informed about decreased resolution.
+ 136:/usr/lib/avr/include/util/delay.h **** 
+ 137:/usr/lib/avr/include/util/delay.h ****    If the avr-gcc toolchain has __builtin_avr_delay_cycles()
+ 138:/usr/lib/avr/include/util/delay.h ****    support, maximal possible delay is 4294967.295 ms/ F_CPU in MHz. For
+ 139:/usr/lib/avr/include/util/delay.h ****    values greater than the maximal possible delay, overflows results in
+ 140:/usr/lib/avr/include/util/delay.h ****    no delay i.e., 0ms.
+ 141:/usr/lib/avr/include/util/delay.h **** 
+ 142:/usr/lib/avr/include/util/delay.h ****    Conversion of \c __ms into clock cycles may not always result in
+ 143:/usr/lib/avr/include/util/delay.h ****    integer.  By default, the clock cycles rounded up to next
+ 144:/usr/lib/avr/include/util/delay.h ****    integer. This ensures that the user gets at least \c __ms
+ 145:/usr/lib/avr/include/util/delay.h ****    microseconds of delay.
+ 146:/usr/lib/avr/include/util/delay.h **** 
+ 147:/usr/lib/avr/include/util/delay.h ****    Alternatively, by defining the macro \c __DELAY_ROUND_DOWN__, or
+ 148:/usr/lib/avr/include/util/delay.h ****    \c __DELAY_ROUND_CLOSEST__, before including this header file, the
+ 149:/usr/lib/avr/include/util/delay.h ****    algorithm can be made to round down, or round to closest integer,
+ 150:/usr/lib/avr/include/util/delay.h ****    respectively.
+ 151:/usr/lib/avr/include/util/delay.h **** 
+ 152:/usr/lib/avr/include/util/delay.h ****    \note
+ 153:/usr/lib/avr/include/util/delay.h **** 
+ 154:/usr/lib/avr/include/util/delay.h ****    The implementation of _delay_ms() based on
+ 155:/usr/lib/avr/include/util/delay.h ****    __builtin_avr_delay_cycles() is not backward compatible with older
+ 156:/usr/lib/avr/include/util/delay.h ****    implementations.  In order to get functionality backward compatible
+ 157:/usr/lib/avr/include/util/delay.h ****    with previous versions, the macro \c "__DELAY_BACKWARD_COMPATIBLE__"
+ 158:/usr/lib/avr/include/util/delay.h ****    must be defined before including this header file. Also, the
+ 159:/usr/lib/avr/include/util/delay.h ****    backward compatible algorithm will be chosen if the code is
+ 160:/usr/lib/avr/include/util/delay.h ****    compiled in a <em>freestanding environment</em> (GCC option
+ 161:/usr/lib/avr/include/util/delay.h ****    \c -ffreestanding), as the math functions required for rounding are
+ 162:/usr/lib/avr/include/util/delay.h ****    not available to the compiler then.
+ 163:/usr/lib/avr/include/util/delay.h **** 
+ 164:/usr/lib/avr/include/util/delay.h ****  */
+ 165:/usr/lib/avr/include/util/delay.h **** void
+ 166:/usr/lib/avr/include/util/delay.h **** _delay_ms(double __ms)
+ 167:/usr/lib/avr/include/util/delay.h **** {
+ 168:/usr/lib/avr/include/util/delay.h **** 	double __tmp ;
+ 169:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 170:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 171:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 172:/usr/lib/avr/include/util/delay.h **** 	uint32_t __ticks_dc;
+ 173:/usr/lib/avr/include/util/delay.h **** 	extern void __builtin_avr_delay_cycles(unsigned long);
+ 174:/usr/lib/avr/include/util/delay.h **** 	__tmp = ((F_CPU) / 1e3) * __ms;
+ 175:/usr/lib/avr/include/util/delay.h **** 
+ 176:/usr/lib/avr/include/util/delay.h **** 	#if defined(__DELAY_ROUND_DOWN__)
+ 177:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)fabs(__tmp);
+ 178:/usr/lib/avr/include/util/delay.h **** 
+ 179:/usr/lib/avr/include/util/delay.h **** 	#elif defined(__DELAY_ROUND_CLOSEST__)
+ 180:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(fabs(__tmp)+0.5);
+ 181:/usr/lib/avr/include/util/delay.h **** 
+ 182:/usr/lib/avr/include/util/delay.h **** 	#else
+ 183:/usr/lib/avr/include/util/delay.h **** 		//round up by default
+ 184:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+ 185:/usr/lib/avr/include/util/delay.h **** 	#endif
+ 186:/usr/lib/avr/include/util/delay.h **** 
+ 187:/usr/lib/avr/include/util/delay.h **** 	__builtin_avr_delay_cycles(__ticks_dc);
+  65               		.loc 2 187 0
+  66 0034 8FE1      		ldi r24,lo8(19999)
+  67 0036 9EE4      		ldi r25,hi8(19999)
+  68 0038 0197      	1:	sbiw r24,1
+  69 003a 01F4      		brne 1b
+  70 003c 00C0      		rjmp .
+  71 003e 0000      		nop
+  72               	.LVL1:
+  73               	.LBE11:
+  74               	.LBE10:
+  68:main.cpp      **** 		if(loop_cnt>9){
+  75               		.loc 1 68 0
+  76 0040 8091 0000 		lds r24,loop_cnt
+  77 0044 8F5F      		subi r24,lo8(-(1))
+  78 0046 8093 0000 		sts loop_cnt,r24
+  69:main.cpp      **** 			loop_cnt=0;
+  79               		.loc 1 69 0
+  80 004a 8091 0000 		lds r24,loop_cnt
+  81 004e 8A30      		cpi r24,lo8(10)
+  82 0050 00F0      		brlo .L2
+  70:main.cpp      **** 			//mySM.update();
+  83               		.loc 1 70 0
+  84 0052 1092 0000 		sts loop_cnt,__zero_reg__
+  85               	.L2:
+  74:main.cpp      **** 			btn_state=BTN0;
+  86               		.loc 1 74 0
+  87 0056 89B1      		in r24,0x9
+  88 0058 9091 0000 		lds r25,btn_state
+  89 005c 8071      		andi r24,lo8(16)
+  90 005e 8917      		cp r24,r25
+  91 0060 01F0      		breq .L4
+  75:main.cpp      **** 			if(btn_state){
+  92               		.loc 1 75 0
+  93 0062 89B1      		in r24,0x9
+  94 0064 8071      		andi r24,lo8(16)
+  95 0066 8093 0000 		sts btn_state,r24
+  76:main.cpp      **** 				LED0_Toggle;
+  96               		.loc 1 76 0
+  97 006a 8091 0000 		lds r24,btn_state
+  98 006e 8823      		tst r24
+  99 0070 01F0      		breq .L4
+ 100               		.loc 1 77 0
+ 101 0072 8BB1      		in r24,0xb
+ 102 0074 8C27      		eor r24,r28
+ 103 0076 8BB9      		out 0xb,r24
+ 104               	.L4:
+ 105               	.LBB12:
+  78:main.cpp      **** 			}
+  79:main.cpp      **** 		}
+  80:main.cpp      **** 		if(uart.isDataAvailable()){
+ 106               		.loc 1 80 0
+ 107 0078 80E0      		ldi r24,lo8(uart)
+ 108 007a 90E0      		ldi r25,hi8(uart)
+ 109 007c 0E94 0000 		call _ZN4UART15isDataAvailableEv
+ 110               	.LVL2:
+ 111 0080 8823      		tst r24
+ 112 0082 01F0      		breq .L6
+ 113               	.LBB13:
+  81:main.cpp      **** 			char *cmd=uart.retrieve();
+ 114               		.loc 1 81 0
+ 115 0084 80E0      		ldi r24,lo8(uart)
+ 116 0086 90E0      		ldi r25,hi8(uart)
+ 117 0088 0E94 0000 		call _ZN4UART8retrieveEv
+ 118               	.LVL3:
+  82:main.cpp      **** 			uart.sendString("Start verbose streaming",true);
+ 119               		.loc 1 82 0
+ 120 008c 41E0      		ldi r20,lo8(1)
+ 121 008e 60E0      		ldi r22,lo8(.LC0)
+ 122 0090 70E0      		ldi r23,hi8(.LC0)
+ 123 0092 80E0      		ldi r24,lo8(uart)
+ 124 0094 90E0      		ldi r25,hi8(uart)
+ 125 0096 0E94 0000 		call _ZN4UART10sendStringEPcb
+ 126               	.LVL4:
+ 127               	.LBE13:
+ 128 009a 00C0      		rjmp .L6
+ 129               	.LBE12:
+ 130               	.LBE9:
+ 131               		.cfi_endproc
+ 132               	.LFE10:
+ 134               	.global	__floatunsisf
+ 135               	.global	__divsf3
+ 136               	.global	__fixunssfsi
+ 137               		.text
+ 138               	.global	__vector_19
+ 140               	__vector_19:
+ 141               	.LFB11:
+  83:main.cpp      **** 		}
+  84:main.cpp      **** 	}
+  85:main.cpp      **** 
+  86:main.cpp      **** 	return 0;
+  87:main.cpp      **** }
+  88:main.cpp      **** 
+  89:main.cpp      **** 
+  90:main.cpp      **** 
+  91:main.cpp      **** 
+  92:main.cpp      **** ISR(ADC_vect){
+ 142               		.loc 1 92 0
+ 143               		.cfi_startproc
+ 144 0000 1F92      		push r1
+ 145               	.LCFI0:
+ 146               		.cfi_def_cfa_offset 3
+ 147               		.cfi_offset 1, -2
+ 148 0002 0F92      		push r0
+ 149               	.LCFI1:
+ 150               		.cfi_def_cfa_offset 4
+ 151               		.cfi_offset 0, -3
+ 152 0004 0FB6      		in r0,__SREG__
+ 153 0006 0F92      		push r0
+ 154 0008 1124      		clr __zero_reg__
+ 155 000a CF92      		push r12
+ 156               	.LCFI2:
+ 157               		.cfi_def_cfa_offset 5
+ 158               		.cfi_offset 12, -4
+ 159 000c DF92      		push r13
+ 160               	.LCFI3:
+ 161               		.cfi_def_cfa_offset 6
+ 162               		.cfi_offset 13, -5
+ 163 000e EF92      		push r14
+ 164               	.LCFI4:
+ 165               		.cfi_def_cfa_offset 7
+ 166               		.cfi_offset 14, -6
+ 167 0010 FF92      		push r15
+ 168               	.LCFI5:
+ 169               		.cfi_def_cfa_offset 8
+ 170               		.cfi_offset 15, -7
+ 171 0012 2F93      		push r18
+ 172               	.LCFI6:
+ 173               		.cfi_def_cfa_offset 9
+ 174               		.cfi_offset 18, -8
+ 175 0014 3F93      		push r19
+ 176               	.LCFI7:
+ 177               		.cfi_def_cfa_offset 10
+ 178               		.cfi_offset 19, -9
+ 179 0016 4F93      		push r20
+ 180               	.LCFI8:
+ 181               		.cfi_def_cfa_offset 11
+ 182               		.cfi_offset 20, -10
+ 183 0018 5F93      		push r21
+ 184               	.LCFI9:
+ 185               		.cfi_def_cfa_offset 12
+ 186               		.cfi_offset 21, -11
+ 187 001a 6F93      		push r22
+ 188               	.LCFI10:
+ 189               		.cfi_def_cfa_offset 13
+ 190               		.cfi_offset 22, -12
+ 191 001c 7F93      		push r23
+ 192               	.LCFI11:
+ 193               		.cfi_def_cfa_offset 14
+ 194               		.cfi_offset 23, -13
+ 195 001e 8F93      		push r24
+ 196               	.LCFI12:
+ 197               		.cfi_def_cfa_offset 15
+ 198               		.cfi_offset 24, -14
+ 199 0020 9F93      		push r25
+ 200               	.LCFI13:
+ 201               		.cfi_def_cfa_offset 16
+ 202               		.cfi_offset 25, -15
+ 203 0022 AF93      		push r26
+ 204               	.LCFI14:
+ 205               		.cfi_def_cfa_offset 17
+ 206               		.cfi_offset 26, -16
+ 207 0024 BF93      		push r27
+ 208               	.LCFI15:
+ 209               		.cfi_def_cfa_offset 18
+ 210               		.cfi_offset 27, -17
+ 211 0026 EF93      		push r30
+ 212               	.LCFI16:
+ 213               		.cfi_def_cfa_offset 19
+ 214               		.cfi_offset 30, -18
+ 215 0028 FF93      		push r31
+ 216               	.LCFI17:
+ 217               		.cfi_def_cfa_offset 20
+ 218               		.cfi_offset 31, -19
+ 219               	/* prologue: Signal */
+ 220               	/* frame size = 0 */
+ 221               	/* stack size = 19 */
+ 222               	.L__stack_usage = 19
+  93:main.cpp      **** 	uint16_t ADC_val=ADCL;
+ 223               		.loc 1 93 0
+ 224 002a 8091 7800 		lds r24,120
+ 225               	.LVL5:
+  94:main.cpp      **** 	ADC_val+=ADCH<<8;
+ 226               		.loc 1 94 0
+ 227 002e 6091 7900 		lds r22,121
+ 228               	.LVL6:
+  95:main.cpp      **** 	
+  96:main.cpp      **** 	//CNT=1.1*1024/Vref
+  97:main.cpp      **** 	//Vref=1.1*1024/CNT
+  98:main.cpp      **** 	//1.02578
+  99:main.cpp      **** 	//1.0127
+ 100:main.cpp      **** 	//
+ 101:main.cpp      **** 	uint32_t cnt=(109875.0)/ADC_val;// in tens of mV, i.e. 330=>3.30V
+ 229               		.loc 1 101 0
+ 230 0032 70E0      		ldi r23,0
+ 231 0034 762F      		mov r23,r22
+ 232 0036 6627      		clr r22
+ 233               	.LVL7:
+ 234 0038 680F      		add r22,r24
+ 235 003a 711D      		adc r23,__zero_reg__
+ 236 003c 80E0      		ldi r24,0
+ 237 003e 90E0      		ldi r25,0
+ 238 0040 0E94 0000 		call __floatunsisf
+ 239               	.LVL8:
+ 240 0044 9B01      		movw r18,r22
+ 241 0046 AC01      		movw r20,r24
+ 242 0048 60E8      		ldi r22,lo8(-128)
+ 243 004a 79E9      		ldi r23,lo8(-103)
+ 244 004c 86ED      		ldi r24,lo8(-42)
+ 245 004e 97E4      		ldi r25,lo8(71)
+ 246 0050 0E94 0000 		call __divsf3
+ 247               	.LVL9:
+ 248 0054 0E94 0000 		call __fixunssfsi
+ 249               	.LVL10:
+ 250 0058 6B01      		movw r12,r22
+ 251 005a 7C01      		movw r14,r24
+ 252               	.LVL11:
+ 102:main.cpp      **** 	myLCD.setNb(cnt,3);
+ 253               		.loc 1 102 0
+ 254 005c 43E0      		ldi r20,lo8(3)
+ 255 005e 0E94 0000 		call _ZN3LCD5setNbElh
+ 256               	.LVL12:
+ 103:main.cpp      **** 	if(cnt>=BATT_FULL){
+ 257               		.loc 1 103 0
+ 258 0062 8FE4      		ldi r24,79
+ 259 0064 C816      		cp r12,r24
+ 260 0066 81E0      		ldi r24,1
+ 261 0068 D806      		cpc r13,r24
+ 262 006a E104      		cpc r14,__zero_reg__
+ 263 006c F104      		cpc r15,__zero_reg__
+ 264 006e 00F0      		brlo .L15
+ 104:main.cpp      **** 		myLCD.setBattery(LCD::FULL);
+ 265               		.loc 1 104 0
+ 266 0070 87E0      		ldi r24,lo8(7)
+ 267 0072 00C0      		rjmp .L20
+ 268               	.L15:
+ 105:main.cpp      **** 	}else if(cnt>=BATT_TWOBAR){
+ 269               		.loc 1 105 0
+ 270 0074 85E4      		ldi r24,69
+ 271 0076 C816      		cp r12,r24
+ 272 0078 81E0      		ldi r24,1
+ 273 007a D806      		cpc r13,r24
+ 274 007c E104      		cpc r14,__zero_reg__
+ 275 007e F104      		cpc r15,__zero_reg__
+ 276 0080 00F0      		brlo .L17
+ 106:main.cpp      **** 		myLCD.setBattery(LCD::TWOBAR);
+ 277               		.loc 1 106 0
+ 278 0082 86E0      		ldi r24,lo8(6)
+ 279 0084 00C0      		rjmp .L20
+ 280               	.L17:
+ 107:main.cpp      **** 	}else if(cnt>=BATT_ONEBAR){
+ 281               		.loc 1 107 0
+ 282 0086 8BE3      		ldi r24,59
+ 283 0088 C816      		cp r12,r24
+ 284 008a 81E0      		ldi r24,1
+ 285 008c D806      		cpc r13,r24
+ 286 008e E104      		cpc r14,__zero_reg__
+ 287 0090 F104      		cpc r15,__zero_reg__
+ 288 0092 00F0      		brlo .L18
+ 108:main.cpp      **** 		myLCD.setBattery(LCD::ONEBAR);
+ 289               		.loc 1 108 0
+ 290 0094 85E0      		ldi r24,lo8(5)
+ 291 0096 00C0      		rjmp .L20
+ 292               	.L18:
+ 109:main.cpp      **** 	}else if(cnt>=BATT_EMPTY){
+ 293               		.loc 1 109 0
+ 294 0098 81E3      		ldi r24,49
+ 295 009a C816      		cp r12,r24
+ 296 009c 81E0      		ldi r24,1
+ 297 009e D806      		cpc r13,r24
+ 298 00a0 E104      		cpc r14,__zero_reg__
+ 299 00a2 F104      		cpc r15,__zero_reg__
+ 300 00a4 00F0      		brlo .L19
+ 110:main.cpp      **** 		myLCD.setBattery(LCD::EMPTY);
+ 301               		.loc 1 110 0
+ 302 00a6 81E0      		ldi r24,lo8(1)
+ 303 00a8 00C0      		rjmp .L20
+ 304               	.L19:
+ 111:main.cpp      **** 	}else{
+ 112:main.cpp      **** 		myLCD.setBattery(LCD::NONE);
+ 305               		.loc 1 112 0
+ 306 00aa 80E0      		ldi r24,0
+ 307               	.L20:
+ 308 00ac 0E94 0000 		call _ZN3LCD10setBatteryENS_7BatteryE
+ 309               	.LVL13:
+ 310               	/* epilogue start */
+ 113:main.cpp      **** 		//we should shutdown here
+ 114:main.cpp      **** 	}
+ 115:main.cpp      **** }
+ 311               		.loc 1 115 0
+ 312 00b0 FF91      		pop r31
+ 313 00b2 EF91      		pop r30
+ 314 00b4 BF91      		pop r27
+ 315 00b6 AF91      		pop r26
+ 316 00b8 9F91      		pop r25
+ 317 00ba 8F91      		pop r24
+ 318 00bc 7F91      		pop r23
+ 319 00be 6F91      		pop r22
+ 320 00c0 5F91      		pop r21
+ 321 00c2 4F91      		pop r20
+ 322 00c4 3F91      		pop r19
+ 323 00c6 2F91      		pop r18
+ 324 00c8 FF90      		pop r15
+ 325 00ca EF90      		pop r14
+ 326 00cc DF90      		pop r13
+ 327 00ce CF90      		pop r12
+ 328               	.LVL14:
+ 329 00d0 0F90      		pop r0
+ 330 00d2 0FBE      		out __SREG__,r0
+ 331 00d4 0F90      		pop r0
+ 332 00d6 1F90      		pop r1
+ 333 00d8 1895      		reti
+ 334               		.cfi_endproc
+ 335               	.LFE11:
+ 337               	.global	__vector_13
+ 339               	__vector_13:
+ 340               	.LFB12:
+ 116:main.cpp      **** 
+ 117:main.cpp      **** ISR(USART0_RX_vect){
+ 341               		.loc 1 117 0
+ 342               		.cfi_startproc
+ 343 00da 1F92      		push r1
+ 344               	.LCFI18:
+ 345               		.cfi_def_cfa_offset 3
+ 346               		.cfi_offset 1, -2
+ 347 00dc 0F92      		push r0
+ 348               	.LCFI19:
+ 349               		.cfi_def_cfa_offset 4
+ 350               		.cfi_offset 0, -3
+ 351 00de 0FB6      		in r0,__SREG__
+ 352 00e0 0F92      		push r0
+ 353 00e2 1124      		clr __zero_reg__
+ 354 00e4 2F93      		push r18
+ 355               	.LCFI20:
+ 356               		.cfi_def_cfa_offset 5
+ 357               		.cfi_offset 18, -4
+ 358 00e6 3F93      		push r19
+ 359               	.LCFI21:
+ 360               		.cfi_def_cfa_offset 6
+ 361               		.cfi_offset 19, -5
+ 362 00e8 4F93      		push r20
+ 363               	.LCFI22:
+ 364               		.cfi_def_cfa_offset 7
+ 365               		.cfi_offset 20, -6
+ 366 00ea 5F93      		push r21
+ 367               	.LCFI23:
+ 368               		.cfi_def_cfa_offset 8
+ 369               		.cfi_offset 21, -7
+ 370 00ec 6F93      		push r22
+ 371               	.LCFI24:
+ 372               		.cfi_def_cfa_offset 9
+ 373               		.cfi_offset 22, -8
+ 374 00ee 7F93      		push r23
+ 375               	.LCFI25:
+ 376               		.cfi_def_cfa_offset 10
+ 377               		.cfi_offset 23, -9
+ 378 00f0 8F93      		push r24
+ 379               	.LCFI26:
+ 380               		.cfi_def_cfa_offset 11
+ 381               		.cfi_offset 24, -10
+ 382 00f2 9F93      		push r25
+ 383               	.LCFI27:
+ 384               		.cfi_def_cfa_offset 12
+ 385               		.cfi_offset 25, -11
+ 386 00f4 AF93      		push r26
+ 387               	.LCFI28:
+ 388               		.cfi_def_cfa_offset 13
+ 389               		.cfi_offset 26, -12
+ 390 00f6 BF93      		push r27
+ 391               	.LCFI29:
+ 392               		.cfi_def_cfa_offset 14
+ 393               		.cfi_offset 27, -13
+ 394 00f8 EF93      		push r30
+ 395               	.LCFI30:
+ 396               		.cfi_def_cfa_offset 15
+ 397               		.cfi_offset 30, -14
+ 398 00fa FF93      		push r31
+ 399               	.LCFI31:
+ 400               		.cfi_def_cfa_offset 16
+ 401               		.cfi_offset 31, -15
+ 402               	/* prologue: Signal */
+ 403               	/* frame size = 0 */
+ 404               	/* stack size = 15 */
+ 405               	.L__stack_usage = 15
+ 118:main.cpp      **** 	uart.receive();
+ 406               		.loc 1 118 0
+ 407 00fc 80E0      		ldi r24,lo8(uart)
+ 408 00fe 90E0      		ldi r25,hi8(uart)
+ 409 0100 0E94 0000 		call _ZN4UART7receiveEv
+ 410               	.LVL15:
+ 411               	/* epilogue start */
+ 119:main.cpp      **** }
+ 412               		.loc 1 119 0
+ 413 0104 FF91      		pop r31
+ 414 0106 EF91      		pop r30
+ 415 0108 BF91      		pop r27
+ 416 010a AF91      		pop r26
+ 417 010c 9F91      		pop r25
+ 418 010e 8F91      		pop r24
+ 419 0110 7F91      		pop r23
+ 420 0112 6F91      		pop r22
+ 421 0114 5F91      		pop r21
+ 422 0116 4F91      		pop r20
+ 423 0118 3F91      		pop r19
+ 424 011a 2F91      		pop r18
+ 425 011c 0F90      		pop r0
+ 426 011e 0FBE      		out __SREG__,r0
+ 427 0120 0F90      		pop r0
+ 428 0122 1F90      		pop r1
+ 429 0124 1895      		reti
+ 430               		.cfi_endproc
+ 431               	.LFE12:
+ 433               		.section	.text.startup
+ 435               	_GLOBAL__sub_I_uart:
+ 436               	.LFB14:
+ 437               		.loc 1 119 0
+ 438               		.cfi_startproc
+ 439               	/* prologue: function */
+ 440               	/* frame size = 0 */
+ 441               	/* stack size = 0 */
+ 442               	.L__stack_usage = 0
+ 443               	.LVL16:
+ 444               	.LBB16:
+ 445               	.LBB17:
+  35:main.cpp      **** LCD myLCD=LCD(0);//Use 1 for lowest power LCD mode
+ 446               		.loc 1 35 0
+ 447 009c 80E0      		ldi r24,lo8(uart)
+ 448 009e 90E0      		ldi r25,hi8(uart)
+ 449 00a0 0E94 0000 		call _ZN4UARTC1Ev
+ 450               	.LVL17:
+  36:main.cpp      **** //Scale myScale=Scale(&uart);
+ 451               		.loc 1 36 0
+ 452 00a4 60E0      		ldi r22,0
+ 453 00a6 80E0      		ldi r24,lo8(myLCD)
+ 454 00a8 90E0      		ldi r25,hi8(myLCD)
+ 455 00aa 0C94 0000 		jmp _ZN3LCDC1Eb
+ 456               	.LVL18:
+ 457               	.LBE17:
+ 458               	.LBE16:
+ 459               		.cfi_endproc
+ 460               	.LFE14:
+ 462               		.global __do_global_ctors
+ 463               		.section .ctors,"a",@progbits
+ 464               		.p2align	1
+ 465 0000 0000      		.word	gs(_GLOBAL__sub_I_uart)
+ 466               		.section	.text.exit,"ax",@progbits
+ 468               	_GLOBAL__sub_D_uart:
+ 469               	.LFB15:
+ 470               		.loc 1 119 0
+ 471               		.cfi_startproc
+ 472               	/* prologue: function */
+ 473               	/* frame size = 0 */
+ 474               	/* stack size = 0 */
+ 475               	.L__stack_usage = 0
+ 476               	.LVL19:
+ 477               	.LBB22:
+ 478               	.LBB23:
+ 479               	.LBB24:
+  36:main.cpp      **** //Scale myScale=Scale(&uart);
+ 480               		.loc 1 36 0
+ 481 0000 80E0      		ldi r24,lo8(myLCD)
+ 482 0002 90E0      		ldi r25,hi8(myLCD)
+ 483 0004 0E94 0000 		call _ZN3LCDD1Ev
+ 484               	.LVL20:
+  35:main.cpp      **** LCD myLCD=LCD(0);//Use 1 for lowest power LCD mode
+ 485               		.loc 1 35 0
+ 486 0008 80E0      		ldi r24,lo8(uart)
+ 487 000a 90E0      		ldi r25,hi8(uart)
+ 488 000c 0C94 0000 		jmp _ZN4UARTD1Ev
+ 489               	.LVL21:
+ 490               	.LBE24:
+ 491               	.LBE23:
+ 492               	.LBE22:
+ 493               		.cfi_endproc
+ 494               	.LFE15:
+ 496               		.global __do_global_dtors
+ 497               		.section .dtors,"a",@progbits
+ 498               		.p2align	1
+ 499 0000 0000      		.word	gs(_GLOBAL__sub_D_uart)
+ 500               	.global	btn_state
+ 501               		.section .bss
+ 504               	btn_state:
+ 505 0000 00        		.zero	1
+ 506               	.global	loop_cnt
+ 509               	loop_cnt:
+ 510 0001 00        		.zero	1
+ 511               	.global	myLCD
+ 514               	myLCD:
+ 515 0002 00        		.zero	1
+ 516               	.global	uart
+ 519               	uart:
+ 520 0003 0000 0000 		.zero	22
+ 520      0000 0000 
+ 520      0000 0000 
+ 520      0000 0000 
+ 520      0000 0000 
+ 521               		.text
+ 522               	.Letext0:
+ 523               		.file 3 "/usr/lib/avr/include/stdint.h"
+ 524               		.file 4 "UART.h"
+ 525               		.file 5 "LCD.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.cpp
+     /tmp/ccy1PBD1.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccy1PBD1.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccy1PBD1.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccy1PBD1.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccy1PBD1.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccy1PBD1.s:16     .text.startup:0000000000000000 main
+     /tmp/ccy1PBD1.s:509    .bss:0000000000000001 loop_cnt
+     /tmp/ccy1PBD1.s:504    .bss:0000000000000000 btn_state
+     /tmp/ccy1PBD1.s:519    .bss:0000000000000003 uart
+     /tmp/ccy1PBD1.s:140    .text:0000000000000000 __vector_19
+     /tmp/ccy1PBD1.s:339    .text:00000000000000da __vector_13
+     /tmp/ccy1PBD1.s:435    .text.startup:000000000000009c _GLOBAL__sub_I_uart
+     /tmp/ccy1PBD1.s:514    .bss:0000000000000002 myLCD
+     /tmp/ccy1PBD1.s:468    .text.exit:0000000000000000 _GLOBAL__sub_D_uart
+
+UNDEFINED SYMBOLS
+_ZN4UART15isDataAvailableEv
+_ZN4UART8retrieveEv
+_ZN4UART10sendStringEPcb
+__floatunsisf
+__divsf3
+__fixunssfsi
+_ZN3LCD5setNbElh
+_ZN3LCD10setBatteryENS_7BatteryE
+_ZN4UART7receiveEv
+_ZN4UARTC1Ev
+_ZN3LCDC1Eb
+__do_global_ctors
+_ZN3LCDD1Ev
+_ZN4UARTD1Ev
+__do_global_dtors
+__do_copy_data
+__do_clear_bss
