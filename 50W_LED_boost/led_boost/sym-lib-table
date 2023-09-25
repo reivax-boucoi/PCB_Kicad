@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "led_boost-rescue")(type "KiCad")(uri "${KIPRJMOD}/led_boost-rescue.kicad_sym")(options "")(descr ""))
+)
