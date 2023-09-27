@@ -690,6 +690,11 @@
     (uuid f8de22e3-42a2-408b-81d2-a9ef193d4d95)
   )
 
+  (text "TODO fix cap/osc" (at 82.55 148.59 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid a6996d61-8edd-4cac-b31b-0d6a880452c6)
+  )
+
   (hierarchical_label "clk" (shape output) (at 166.37 129.54 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid df0b481b-5d84-431f-bdef-c1f15e0da659)
