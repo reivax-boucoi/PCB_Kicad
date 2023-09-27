@@ -745,9 +745,6 @@
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
           (reference "Q10") (unit 1)
         )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "Q120") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
           (reference "Q9") (unit 1)
         )
@@ -759,6 +756,9 @@
         )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b/96e6f7be-f6c4-492d-846f-fd0cf1759d6a"
           (reference "Q110") (unit 1)
+        )
+        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+          (reference "Q120") (unit 1)
         )
       )
     )
@@ -901,9 +901,6 @@
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
           (reference "Q10") (unit 1)
         )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "Q119") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
           (reference "Q9") (unit 1)
         )
@@ -915,6 +912,9 @@
         )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b/96e6f7be-f6c4-492d-846f-fd0cf1759d6a"
           (reference "Q110") (unit 1)
+        )
+        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+          (reference "Q119") (unit 1)
         )
       )
     )
@@ -1080,10 +1080,10 @@
     (property "Assembly" "" (at 196.85 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC_PN" "" (at 196.85 109.22 0)
+    (property "LCSC_PN" "C14663" (at 196.85 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Price" "" (at 196.85 109.22 0)
+    (property "Price" "0.0021" (at 196.85 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1aa146e2-d653-41e2-9866-5dd7eb024f4a))
@@ -1102,9 +1102,6 @@
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b/96e6f7be-f6c4-492d-846f-fd0cf1759d6a"
           (reference "C51") (unit 1)
         )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "C73") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
           (reference "C33") (unit 1)
         )
@@ -1113,6 +1110,9 @@
         )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/b51d637d-960d-44ae-9d65-17e24c553fce/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
           (reference "C46") (unit 1)
+        )
+        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+          (reference "C73") (unit 1)
         )
       )
     )
@@ -1202,7 +1202,7 @@
   (symbol (lib_id "Device:R") (at 142.24 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 615b440f-3275-44b7-bd1a-fdb7bcf90707)
-    (property "Reference" "R248" (at 144.018 74.2863 0)
+    (property "Reference" "R252" (at 144.018 74.2863 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2k2" (at 144.018 76.2073 0)
@@ -1227,9 +1227,6 @@
     (pin "2" (uuid c2bf7c99-3c69-4313-b4c9-921974150ccc))
     (instances
       (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R248") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
           (reference "R252") (unit 1)
         )
@@ -1251,6 +1248,9 @@
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b"
           (reference "R213") (unit 1)
         )
+        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+          (reference "R248") (unit 1)
+        )
       )
     )
   )
@@ -1258,7 +1258,7 @@
   (symbol (lib_id "Device:R") (at 107.95 95.25 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6a6f6e30-7164-4067-ba58-b249960ea3a8)
-    (property "Reference" "R244" (at 107.95 91.2241 90)
+    (property "Reference" "R213" (at 107.95 91.2241 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 107.95 93.1451 90)
@@ -1283,9 +1283,6 @@
     (pin "2" (uuid 1f710a27-421d-4cef-9191-1d902ec8c3a1))
     (instances
       (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R244") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b"
           (reference "R213") (unit 1)
         )
@@ -1307,6 +1304,9 @@
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
           (reference "R248") (unit 1)
         )
+        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+          (reference "R244") (unit 1)
+        )
       )
     )
   )
@@ -1314,7 +1314,7 @@
   (symbol (lib_id "Device:R") (at 142.24 93.98 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6e3b4986-aa67-4f7c-b8db-0088f3949c50)
-    (property "Reference" "R237" (at 144.018 93.3363 0)
+    (property "Reference" "R213" (at 144.018 93.3363 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 144.018 95.2573 0)
@@ -1339,9 +1339,6 @@
     (pin "2" (uuid 20d05457-edba-49e1-95c0-6151c7bdeb24))
     (instances
       (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R237") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b"
           (reference "R213") (unit 1)
         )
@@ -1363,6 +1360,9 @@
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
           (reference "R254") (unit 1)
         )
+        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+          (reference "R237") (unit 1)
+        )
       )
     )
   )
@@ -1370,7 +1370,7 @@
   (symbol (lib_id "Device:R") (at 119.38 111.76 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 72b89387-9f7a-4f60-92e3-2c12b750aeb1)
-    (property "Reference" "R247" (at 121.158 111.1163 0)
+    (property "Reference" "R213" (at 121.158 111.1163 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100k" (at 121.158 113.0373 0)
@@ -1395,9 +1395,6 @@
     (pin "2" (uuid 1ee795c3-786e-4dcd-b899-c35ea89b2838))
     (instances
       (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R247") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b"
           (reference "R213") (unit 1)
         )
@@ -1418,6 +1415,9 @@
         )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
           (reference "R249") (unit 1)
+        )
+        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+          (reference "R247") (unit 1)
         )
       )
     )
@@ -1650,7 +1650,7 @@
   (symbol (lib_id "Transistor_BJT:MMBT3904") (at 124.46 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ab9254cb-c850-4230-b974-016c5238d6b8)
-    (property "Reference" "Q121" (at 129.54 103.505 0)
+    (property "Reference" "Q107" (at 129.54 103.505 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MMBT3904" (at 129.54 105.41 0)
@@ -1676,9 +1676,6 @@
     (pin "3" (uuid 4b538591-05b9-4342-829f-619d47ef614d))
     (instances
       (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "Q121") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b"
           (reference "Q107") (unit 1)
         )
@@ -1699,6 +1696,9 @@
         )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
           (reference "Q124") (unit 1)
+        )
+        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+          (reference "Q121") (unit 1)
         )
       )
     )
@@ -1863,7 +1863,7 @@
   (symbol (lib_id "Device:R") (at 142.24 86.36 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fae7078f-f0dd-4573-9fcc-3516f9faa0cb)
-    (property "Reference" "R249" (at 144.018 85.7163 0)
+    (property "Reference" "R213" (at 144.018 85.7163 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 144.018 87.6373 0)
@@ -1888,9 +1888,6 @@
     (pin "2" (uuid ccd4a51a-6937-47c1-b452-0a6db1c1b01f))
     (instances
       (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R249") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b"
           (reference "R213") (unit 1)
         )
@@ -1911,6 +1908,9 @@
         )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
           (reference "R254") (unit 1)
+        )
+        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+          (reference "R249") (unit 1)
         )
       )
     )
@@ -2005,9 +2005,6 @@
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b/96e6f7be-f6c4-492d-846f-fd0cf1759d6a"
           (reference "D249") (unit 1)
         )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "D293") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
           (reference "D124") (unit 1)
         )
@@ -2016,6 +2013,9 @@
         )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/b51d637d-960d-44ae-9d65-17e24c553fce/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
           (reference "D246") (unit 1)
+        )
+        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+          (reference "D293") (unit 1)
         )
       )
     )
