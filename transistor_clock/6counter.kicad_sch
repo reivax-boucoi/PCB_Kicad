@@ -1064,7 +1064,7 @@
   (symbol (lib_id "Device:C") (at 38.1 71.12 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 96e82d7c-83ff-4bef-b2d3-4dd0501b4ff0)
-    (property "Reference" "C51" (at 41.021 70.4763 0)
+    (property "Reference" "C77" (at 41.021 70.4763 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100n" (at 41.021 72.3973 0)
