@@ -283,22 +283,22 @@
     (property "Reference" "C76" (at 192.151 45.4573 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "100u" (at 192.151 47.3783 0)
+    (property "Value" "10u" (at 192.151 47.3783 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 190.1952 50.8 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 190.1952 50.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 189.23 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Assembly" "False" (at 189.23 46.99 0)
+    (property "Assembly" "True" (at 189.23 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC_PN" "" (at 189.23 46.99 0)
+    (property "LCSC_PN" "C15850" (at 189.23 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Price" "" (at 189.23 46.99 0)
+    (property "Price" "0.0105" (at 189.23 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 64fcb303-f7f4-4548-bf88-67064fa82dd3))
@@ -342,12 +342,6 @@
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
           (reference "#PWR0114") (unit 1)
         )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/b51d637d-960d-44ae-9d65-17e24c553fce"
-          (reference "#PWR0133") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b"
-          (reference "#PWR0164") (unit 1)
-        )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
           (reference "#PWR0191") (unit 1)
         )
@@ -387,12 +381,6 @@
         )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
           (reference "#PWR0112") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/b51d637d-960d-44ae-9d65-17e24c553fce"
-          (reference "#PWR0131") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/f60bc725-791e-421e-aa65-9d00c6f8a7a8/e4b3f9d6-b335-4f04-8cec-00b858f4333b"
-          (reference "#PWR0162") (unit 1)
         )
         (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
           (reference "#PWR0181") (unit 1)
