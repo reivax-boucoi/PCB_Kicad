@@ -1410,7 +1410,7 @@
     (property "Value" "1k" (at 96.0121 73.6673 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 97.79 72.39 0)
+    (property "Footprint" "Potentiometer_THT:Potentiometer_Vishay_T73YP_Vertical" (at 97.79 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 97.79 72.39 0)

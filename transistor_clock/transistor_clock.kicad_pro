@@ -452,6 +452,7 @@
     },
     "net_colors": null,
     "netclass_assignments": {
+      "/PSU/Vleds": "HVsup",
       "VD": "HVsup"
     },
     "netclass_patterns": []
