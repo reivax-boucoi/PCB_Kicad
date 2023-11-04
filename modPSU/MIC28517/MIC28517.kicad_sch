@@ -1285,6 +1285,14 @@
     (uuid fd1fec50-bce1-4fcd-865b-6d42151fd8fa)
   )
 
+  (text_box "C1 C9 10u LV\nR1 R2 27k4\nR10 10k R9 150k\nC12 10u 50V"
+    (at 160.02 88.9 0) (size 27.94 13.97)
+    (stroke (width 0) (type default))
+    (fill (type color) (color 255 255 194 1))
+    (effects (font (size 1.27 1.27)) (justify left top))
+    (uuid 05e66613-fbb1-4908-8032-d5b7172f004d)
+  )
+
   (text "Int. supply, 65V" (at 166.37 33.02 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 35215733-6efc-4f25-a5ec-a518ddc5c6fc)
