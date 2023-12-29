@@ -57,7 +57,9 @@ fdatf = abs(fdatf/N);
 fdatf = fdatf(1:N/2+1);
 fdatf(2:end-1) = 2*fdatf(2:end-1);
 f = Fs*(0:(N/2))/N;
-startF=find(f>1,1,'first');
+
+startF=find(f>0.5,1,'first');
+
 subplot (2, 1, 2);
 semilogx(f(startF:end),fdat(startF:end),'DisplayName',"Raw spectrum");
 hold on;
@@ -65,6 +67,7 @@ semilogx(f(startF:end),fdatf(startF:end),'DisplayName',"Filtered spectrum");
 legend();
 grid;
 title('Spectrum view');
+xlim([f(startF) max(f)]);
 xlabel('f (Hz)');
 ylabel('|FFT(f)|');
 
