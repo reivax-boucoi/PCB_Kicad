@@ -1,10 +1,11 @@
 close all;
+clear all;
 putty=load("putty.log");
 
 Fs=1/(10e-3);
 Ts=1/Fs;
-start=1;%1520
-stop=length(putty);%2600;%1800
+start=1;
+stop=length(putty);
 data=putty(start : stop);
 N=length(data)-1;
 t=(0:N)*Ts;
@@ -34,6 +35,7 @@ for i = 2:N+1
 endfor
 
 subplot (2, 1, 1);
+
 plot(t,data,'DisplayName',"Raw data");
 hold on;
 plot(t,data_filt,'DisplayName',"Filtered data");
@@ -47,27 +49,39 @@ xlabel('t (seconds)');
 ylabel('Z axis acceleration (in mG)');
 
 
-fdat=fft(data);
-fdat = abs(fdat/N);
-fdat = fdat(1:N/2+1);
-fdat(2:end-1) = 2*fdat(2:end-1);
-
-fdatf=fft(data_filt);
-fdatf = abs(fdatf/N);
-fdatf = fdatf(1:N/2+1);
-fdatf(2:end-1) = 2*fdatf(2:end-1);
-f = Fs*(0:(N/2))/N;
-
-startF=find(f>0.5,1,'first');
 
 subplot (2, 1, 2);
-semilogx(f(startF:end),fdat(startF:end),'DisplayName',"Raw spectrum");
+
+plot(t,(dmax-dmin),'DisplayName',"diff");
 hold on;
-semilogx(f(startF:end),fdatf(startF:end),'DisplayName',"Filtered spectrum");
+plot(t,(dmax+dmin)/2,'DisplayName',"avg");
 legend();
-grid;
-title('Spectrum view');
-xlim([f(startF) max(f)]);
-xlabel('f (Hz)');
-ylabel('|FFT(f)|');
+title('Time domain signal');
+xlabel('t (seconds)');
+ylabel('Z axis acceleration (in mG)');
+
+##
+##fdat=fft(data);
+##fdat = abs(fdat/N);
+##fdat = fdat(1:N/2+1);
+##fdat(2:end-1) = 2*fdat(2:end-1);
+##
+##fdatf=fft(data_filt);
+##fdatf = abs(fdatf/N);
+##fdatf = fdatf(1:N/2+1);
+##fdatf(2:end-1) = 2*fdatf(2:end-1);
+##f = Fs*(0:(N/2))/N;
+##
+##startF=find(f>0.5,1,'first');
+##
+##subplot (2, 1, 2);
+##semilogx(f(startF:end),fdat(startF:end),'DisplayName',"Raw spectrum");
+##hold on;
+##semilogx(f(startF:end),fdatf(startF:end),'DisplayName',"Filtered spectrum");
+##legend();
+##grid;
+##title('Spectrum view');
+##xlim([f(startF) max(f)]);
+##xlabel('f (Hz)');
+##ylabel('|FFT(f)|');
 
