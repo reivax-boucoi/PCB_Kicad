@@ -12,8 +12,10 @@ class ACC {
         int16_t value_f;
         int16_t value;
         bool newCycleFlag;
-        uint16_t periodPos;
-        uint16_t periodNeg;
+        uint8_t periodPos;
+        uint8_t periodNeg;
+        uint8_t cntPos;
+        uint8_t cntNeg;
 
     public:
         ACC(uint8_t rate, uint8_t gees);

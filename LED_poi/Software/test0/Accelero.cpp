@@ -19,19 +19,31 @@ ACC::ACC(uint8_t rate, uint8_t gees) {
     minY=value;
     value_f=value;
     newCycleFlag=false;
+    cntPos=0;
+    cntNeg=0;
 }
 int16_t ACC::getY() {
     uint8_t _buf[2];
     i2c.read(0x1C, 0x03, _buf, 2);//0x1=X axis, 0x3=Y axis
     int16_t value = (_buf[0] << 6) | ((_buf[1] >> 2) & 0x63);
     if (value > 8191) value -= 16384;
+
+    
     value_f=(value_f*3+value)>>2;
     maxY = max(value_f, maxY - ACC_DECAY);
     minY = min(value_f, minY + ACC_DECAY);
+
+    cntPos++;
+    cntNeg++;
+    
     if(maxY==value_f && newCycleFlag==false){
         newCycleFlag=true;
+        periodPos=cntPos;
+        cntPos=0;
     }else if(minY==value_f && newCycleFlag==true){
         newCycleFlag=false;
+        periodNeg=cntNeg;
+        cntNeg=0;
     }
     
     //float acc=float(accA)/4096.0;//4096=2g range, 1024=8g range
