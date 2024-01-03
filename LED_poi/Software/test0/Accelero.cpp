@@ -58,12 +58,18 @@ int16_t ACC::getY() {
     return value;
 }
 
-void ACC::print() {
-    Serial.print(meanY);
+void ACC::printRaw() {
+    Serial.print(value);
+    Serial.print(',');
+    Serial.print(value_f);
     Serial.print(',');
     Serial.print(maxY);
     Serial.print(',');
-    Serial.print(minY);
+    Serial.println(minY);
+}
+
+void ACC::printPeriod() {
+    Serial.print(periodPos);
     Serial.print(',');
-    Serial.println(value);
+    Serial.println(periodNeg);
 }
