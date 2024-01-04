@@ -20,7 +20,7 @@ class ACC {
     public:
         ACC(uint8_t rate, uint8_t gees);
         int16_t getY();
-        void print();
+        void printRaw();
 };
 
 #endif
