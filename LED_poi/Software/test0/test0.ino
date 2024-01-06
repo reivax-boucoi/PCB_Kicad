@@ -29,9 +29,10 @@ void loop() {
 
     if (millis() - pTime > ACC_POLL_RATE) {
         pTime = millis();
-        Serial.println(acc->getY());
-//        acc->getY();
-  //      acc->print();
+        //      Serial.println(acc->getY());
+        acc->getY();
+        acc->printRaw();
+        //acc->printPeriod();
         digitalWrite(LED_ONBRD, !digitalRead(LED_ONBRD));
         //acc.print();
         if (++psu_refresh_counter > PSU_REFRESH_CNT) {
@@ -49,7 +50,7 @@ void loop() {
             newState = digitalRead(BTN);
             if (newState == HIGH) {     // Yes, still hi
                 if (++mode > 7) mode = 0;
-                Serial.println("Mode"+mode);
+                Serial.println("Mode" + mode);
                 LEDS_showMode(mode);/*
                 switch (mode) {
                     case 0:
