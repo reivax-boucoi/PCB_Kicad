@@ -9,18 +9,19 @@ MMA8451 mma8451;
 ACC::ACC(uint8_t rate, uint8_t gees) {
     if (!mma8451.initialize(rate, gees))
         Serial.println("Accelerometer not detected");
-        return;
-        
+    return;
+
     uint8_t _buf[2];
     i2c.read(0x1C, 0x03, _buf, 2);//0x1=X axis, 0x3=Y axis
     int16_t value = (_buf[0] << 6) | ((_buf[1] >> 2) & 0x63);
     if (value > 8191) value -= 16384;
-    maxY=value;
-    minY=value;
-    value_f=value;
-    newCycleFlag=false;
-    cntPos=0;
-    cntNeg=0;
+    maxY = value;
+    minY = value;
+    value_f = value;
+    newHalfCycleFlag = false;
+    cycleState = false;
+    cntPos = 0;
+    cntNeg = 0;
 }
 int16_t ACC::getY() {
     uint8_t _buf[2];
@@ -28,24 +29,26 @@ int16_t ACC::getY() {
     int16_t value = (_buf[0] << 6) | ((_buf[1] >> 2) & 0x63);
     if (value > 8191) value -= 16384;
 
-    
-    value_f=(value_f*3+value)>>2;
+
+    value_f = (value_f * 3 + value) >> 2;
     maxY = max(value_f, maxY - ACC_DECAY);
     minY = min(value_f, minY + ACC_DECAY);
 
     cntPos++;
     cntNeg++;
-    
-    if(maxY==value_f && newCycleFlag==false){
-        newCycleFlag=true;
-        periodPos=cntPos;
-        cntPos=0;
-    }else if(minY==value_f && newCycleFlag==true){
-        newCycleFlag=false;
-        periodNeg=cntNeg;
-        cntNeg=0;
+
+    if (maxY == value_f && cycleState == false) {
+        newHalfCycleFlag = true;
+        cycleState = true;
+        periodPos = cntPos;
+        cntPos = 0;
+    } else if (minY == value_f && cycleState == true) {
+        newHalfCycleFlag = true;
+        cycleState = false;
+        periodNeg = cntNeg;
+        cntNeg = 0;
     }
-    
+
     //float acc=float(accA)/4096.0;//4096=2g range, 1024=8g range
     /*  acc_min=min(accA,acc_min+10);
         acc_max=max(accA,acc_max-10);
@@ -59,17 +62,23 @@ int16_t ACC::getY() {
 }
 
 void ACC::printRaw() {
-    Serial.print(value);
-    Serial.print(',');
     Serial.print(value_f);
     Serial.print(',');
     Serial.print(maxY);
     Serial.print(',');
-    Serial.println(minY);
+    Serial.print(minY);
+    Serial.print(',');
+    Serial.println(cycleState * 10000);
 }
 
 void ACC::printPeriod() {
     Serial.print(periodPos);
     Serial.print(',');
-    Serial.println(periodNeg);
+    Serial.print(periodNeg);
+    Serial.print(',');
+    Serial.print(cntPos);
+    Serial.print(',');
+    Serial.print(cntNeg);
+    Serial.print(',');
+    Serial.println(cycleState * 100);
 }
