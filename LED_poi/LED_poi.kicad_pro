@@ -55,7 +55,13 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|93810001|51007501|4071a9da-f7f1-4523-8618-5e0cd28c3e84|78aca54d-57db-460a-b8ac-57a0036c654e",
+        "courtyards_overlap|94650001|51007501|4071a9da-f7f1-4523-8618-5e0cd28c3e84|694f0c03-bfbf-46cf-babd-2f32262e09ee",
+        "courtyards_overlap|97834264|48820001|4071a9da-f7f1-4523-8618-5e0cd28c3e84|f9ae76da-9854-4df8-8d80-e04d8ffd54cc",
+        "courtyards_overlap|98800001|48500001|2d46f57b-a84e-4b86-a811-6551eebc025d|4071a9da-f7f1-4523-8618-5e0cd28c3e84",
+        "pth_inside_courtyard|100100000|49800000|68baf311-dc00-45f8-bceb-3d939247652e|4071a9da-f7f1-4523-8618-5e0cd28c3e84"
+      ],
       "meta": {
         "version": 2
       },
@@ -120,7 +126,7 @@
         "min_microvia_drill": 0.09999999999999999,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.7999999999999999,
+        "min_text_height": 0.75,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.0,
@@ -173,8 +179,8 @@
       ],
       "track_widths": [
         0.0,
+        0.4,
         0.5,
-        0.6,
         0.8,
         1.0
       ],
