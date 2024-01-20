@@ -13,10 +13,8 @@ void LEDs_init() {
 }
 
 void LEDs_setColor(uint32_t c) {
-    led_strip.clear();
-    uint32_t color = led_strip.Color(  0,   0, 127);
-    uint32_t index = led_strip.numPixels() - 3;
-    led_strip.setPixelColor(index, c);
+    
+    led_strip.setPixelColor(0, c);
     led_strip.show();
 }
 
