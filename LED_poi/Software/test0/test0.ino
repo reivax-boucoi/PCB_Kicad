@@ -31,8 +31,16 @@ void loop() {
         pTime = millis();
         //      Serial.println(acc->getY());
         acc->getY();
-        acc->printRaw();
-        //acc->printPeriod();
+        //acc->printRaw();
+        acc->printPeriod();
+        if(acc->newHalfCycleFlag==true){
+            acc->newHalfCycleFlag=false;
+            if(acc->cycleState==true){
+                LEDs_setColor(0x000000);
+            }else{
+                LEDs_setColor(0xFF0000);                
+            }
+        }
         digitalWrite(LED_ONBRD, !digitalRead(LED_ONBRD));
         //acc.print();
         if (++psu_refresh_counter > PSU_REFRESH_CNT) {
