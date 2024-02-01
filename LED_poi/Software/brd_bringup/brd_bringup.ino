@@ -19,4 +19,5 @@ void loop() {
     led_strip.fill(0x000000, mode++, 0);
     if (mode > 13)mode = 0;
     led_strip.show();
+    delay(500);
 }
