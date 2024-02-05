@@ -1,6 +1,8 @@
 #include "utils.h"
 
 
+Animations myAnimations();
+
 void IO_initialize(){
     digitalWrite(KEY,LOW);
     digitalWrite(BTN,LOW);
@@ -32,5 +34,4 @@ void supply_OFF(){
     digitalWrite(KEY,HIGH);
     delay(60);
     digitalWrite(KEY,LOW);
-    while(1){}
 }
