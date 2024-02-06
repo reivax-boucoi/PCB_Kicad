@@ -46,6 +46,7 @@ void loop() {
         if (++psu_refresh_counter > PSU_REFRESH_CNT) {
             psu_refresh_counter = 0;
             supply_ON();
+            myAnimations.update();
         }
 
 
