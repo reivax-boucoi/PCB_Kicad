@@ -23,7 +23,16 @@ void IR_poll() {
 
         if (irData.addr == 0x10) {
             switch (irData.cmd) {
-                case 0x15:
+                case 0x00:
+                case 0x01:
+                case 0x02:
+                case 0x03:
+                case 0x04:
+                case 0x05:
+                    myAnimations.setAnim(irData.cmd);
+                    break;
+                    
+                case 0x15: //ON/OFF
                     supply_OFF();
                     break;
                 default:
