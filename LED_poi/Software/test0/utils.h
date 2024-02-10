@@ -26,7 +26,6 @@ class Button {
     public:
         Button(void);
         uint8_t pressed(void);
-
-}
-
+};
+Button myBtn();
 #endif
