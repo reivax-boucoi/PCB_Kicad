@@ -448,7 +448,7 @@
   "pcbnew": {
     "last_paths": {
       "gencad": "",
-      "idf": "",
+      "idf": "../Mechanical/LED_poi_brd.emn",
       "netlist": "",
       "specctra_dsn": "",
       "step": "",
