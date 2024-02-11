@@ -451,7 +451,7 @@
       "idf": "../Mechanical/LED_poi_brd.emn",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../Mechanical/LED_poi_brd.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
