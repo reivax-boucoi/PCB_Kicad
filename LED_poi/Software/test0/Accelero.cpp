@@ -2,17 +2,44 @@
 
 #include <Wire.h>
 #include "i2c.h"
-#include "i2c_MMA8451.h"
 
-MMA8451 mma8451;
+#define ADXL343_ADDRESS (0x53) //ALT adress pin LOW, A6 for write, A7 for read
+
+#define ADXL3XX_DEVID (0xE5)           /**< Device ID, located at reg ADXL3XX_REG_DEVID */
+#define ADXL3XX_REG_DEVID (0x00)       /**< Device ID,*/
+#define ADXL3XX_REG_BW_RATE (0x2C)     /**< Data rate and power mode control */
+#define ADXL3XX_REG_POWER_CTL (0x2D)   /**< Power-saving features control */
+#define ADXL3XX_REG_INT_ENABLE (0x2E)  /**< Interrupt enable control */
+#define ADXL3XX_REG_INT_MAP (0x2F)     /**< Interrupt mapping control */
+#define ADXL3XX_REG_INT_SOURCE (0x30)  /**< Source of interrupts */
+#define ADXL3XX_REG_DATA_FORMAT (0x31) /**< Data format control */
+#define ADXL3XX_REG_DATAX0 (0x32)      /**< X-axis data 0 */
+#define ADXL3XX_REG_DATAX1 (0x33)      /**< X-axis data 1 */
+#define ADXL3XX_REG_DATAY0 (0x34)      /**< Y-axis data 0 */
+#define ADXL3XX_REG_DATAY1 (0x35)      /**< Y-axis data 1 */
+#define ADXL3XX_REG_DATAZ0 (0x36)      /**< Z-axis data 0 */
+#define ADXL3XX_REG_DATAZ1 (0x37)      /**< Z-axis data 1 */
+#define ADXL3XX_REG_FIFO_CTL (0x38)    /**< FIFO control */
+#define ADXL3XX_REG_FIFO_STATUS (0x39) /**< FIFO status */
+
+//  ADXL343_DATARATE_400_HZ = 0b1100,  /**<  400Hz Bandwidth */
+//  ADXL343_DATARATE_200_HZ = 0b1011,  /**<  200Hz Bandwidth */
+//  ADXL343_DATARATE_100_HZ = 0b1010,  /**<  100Hz Bandwidth */
+//  ADXL343_DATARATE_0_39_HZ = 0b0010, /**< 0.39Hz Bandwidth */
+//  ADXL343_DATARATE_0_10_HZ = 0b0000, /**< 0.10Hz Bandwidth (default value) */
+//  ADXL343_RANGE_16_G = 0b11, /**< +/- 16g */
+//  ADXL343_RANGE_8_G = 0b10,  /**< +/- 8g */
+
 
 ACC::ACC(uint8_t rate, uint8_t gees) {
-    if (!mma8451.initialize(rate, gees))
+    uint8_t _buf[2];
+    i2c.read(ADXL343_ADDRESS, ADXL3XX_REG_DEVID, _buf, 1);
+    if (_but[0]!=ADXL3XX_DEVID)
         Serial.println("Accelerometer not detected");
     return;
 
     uint8_t _buf[2];
-    i2c.read(0x1C, 0x03, _buf, 2);//0x1=X axis, 0x3=Y axis
+    i2c.read(ADXL343_ADDRESS, ADXL3XX_REG_DATAZ0, _buf, 2);
     int16_t value = (_buf[0] << 6) | ((_buf[1] >> 2) & 0x63);
     if (value > 8191) value -= 16384;
     maxY = value;
@@ -25,7 +52,7 @@ ACC::ACC(uint8_t rate, uint8_t gees) {
 }
 int16_t ACC::getY() {
     uint8_t _buf[2];
-    i2c.read(0x1C, 0x03, _buf, 2);//0x1=X axis, 0x3=Y axis
+    i2c.read(ADXL343_ADDRESS, ADXL3XX_REG_DATAZ0, _buf, 2);
     int16_t value = (_buf[0] << 6) | ((_buf[1] >> 2) & 0x63);
     if (value > 8191) value -= 16384;
 
