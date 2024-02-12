@@ -18,7 +18,7 @@ void setup() {
     LEDs_init();
     acc = new ACC(200, 8);
     Serial.begin(115200);
-//    while (!Serial) {}
+    //    while (!Serial) {}
     Serial.println("Hello!");
     LEDs_setColor(0xFF0000);
     _delay_ms(250);
@@ -31,41 +31,41 @@ void setup() {
 
 void loop() {
 
-      if (millis() - pTime > ACC_POLL_RATE) {
+    if (millis() - pTime > ACC_POLL_RATE) {
         pTime = millis();
         //      Serial.println(acc->getY());
         acc->getY();
         //acc->printRaw();
         //acc->printPeriod();
-        if(acc->newHalfCycleFlag==true){
-            acc->newHalfCycleFlag=false;
-            if(acc->cycleState==true){
+        if (acc->newHalfCycleFlag == true) {
+            acc->newHalfCycleFlag = false;
+            if (acc->cycleState == true) {
                 //LEDs_setColor(0x000000);
-            }else{
+            } else {
                 //LEDs_setColor(0xFF0000);
             }
         }
         //acc.print();
-        
+
         if (++psu_refresh_counter > PSU_REFRESH_CNT) {
             psu_refresh_counter = 0;
             supply_ON();
-            
+
         }
         myAnimations->update();
 
-        boolean newState = digitalRead(BTN);
-        // Check if state changed from low to hi (button press).
-        if ((newState == HIGH) && (oldState == LOW)) {
-            // Short delay to debounce button.
-            delay(20);
-            // Check if button is still low after debounce.
-            newState = digitalRead(BTN);
-            if (newState == HIGH) {     // Yes, still hi
+        switch (myBtn.pressed()) {
+            case 2:
+                supply_OFF();
+                break;
+            case 1:
                 myAnimations->nextAnim(true);
-            }
+                break;
+            default:
+                break;
         }
-        oldState = newState;
-        }
-    IR_poll();
+    }
+    oldState = newState;
+}
+IR_poll();
 }
