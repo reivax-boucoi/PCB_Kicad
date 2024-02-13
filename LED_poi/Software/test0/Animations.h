@@ -7,7 +7,7 @@
 #define PIXEL_COUNT 7
 
 #define ANIM_COUNT 7
-#define ANIM_VERBOSE
+//#define ANIM_VERBOSE
 
 void LEDs_init();
 void LEDs_setColor(uint32_t c);
