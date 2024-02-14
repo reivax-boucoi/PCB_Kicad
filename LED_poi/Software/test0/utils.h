@@ -15,4 +15,18 @@ void IO_initialize();
 void supply_ON();
 void supply_OFF();
 
+#define BTN_SHORT_PRESS 20
+#define BTN_LONG_PRESS 2000
+
+class Button {
+    private:
+        bool pstate;
+        bool newstate;
+        uint32_t pressTime;
+    public:
+        Button(void);
+        uint8_t pressed(void);
+
+}
+
 #endif
