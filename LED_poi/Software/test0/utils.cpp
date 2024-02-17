@@ -1,13 +1,11 @@
 #include "utils.h"
 
 
-//Animations myAnimations();
+Animations* myAnimations=new Animations();
 
 void IO_initialize(){
     digitalWrite(KEY,LOW);
     digitalWrite(BTN,LOW);
-    digitalWrite(LED_ONBRD,LOW);
-    pinMode(LED_ONBRD,OUTPUT);
     pinMode(KEY,OUTPUT);
     pinMode(BTN,INPUT);
     
@@ -22,10 +20,10 @@ void supply_ON(){
     digitalWrite(KEY,HIGH);
     delay(60);
     digitalWrite(KEY,LOW);
-    
 }
 
 void supply_OFF(){
+    Serial.println("turn OFF !");
     delay(60);
     digitalWrite(KEY,HIGH);
     delay(60);
