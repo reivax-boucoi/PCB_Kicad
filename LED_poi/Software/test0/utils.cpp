@@ -1,7 +1,7 @@
 #include "utils.h"
 
 
-Animations myAnimations();
+//Animations myAnimations();
 
 void IO_initialize(){
     digitalWrite(KEY,LOW);
