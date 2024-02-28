@@ -29,7 +29,7 @@ void IR_poll() {
                 case 0x03:
                 case 0x04:
                 case 0x05:
-                    myAnimations.setAnim(irData.cmd);
+//                    myAnimations.setAnim(irData.cmd);
                     break;
                     
                 case 0x15: //ON/OFF
