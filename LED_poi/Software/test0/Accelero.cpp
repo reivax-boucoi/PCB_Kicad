@@ -34,11 +34,10 @@
 ACC::ACC(uint8_t rate, uint8_t gees) {
     uint8_t _buf[2];
     i2c.read(ADXL343_ADDRESS, ADXL3XX_REG_DEVID, _buf, 1);
-    if (_but[0]!=ADXL3XX_DEVID)
+    if (_buf[0] != ADXL3XX_DEVID)
         Serial.println("Accelerometer not detected");
     return;
 
-    uint8_t _buf[2];
     i2c.read(ADXL343_ADDRESS, ADXL3XX_REG_DATAZ0, _buf, 2);
     int16_t value = (_buf[0] << 6) | ((_buf[1] >> 2) & 0x63);
     if (value > 8191) value -= 16384;
