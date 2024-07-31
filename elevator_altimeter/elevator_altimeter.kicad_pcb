@@ -1538,6 +1538,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1550,6 +1551,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1562,6 +1564,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1718,7 +1721,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R4"
-			(at -2.7375 -0.0375 360)
+			(at -2.7375 -0.0375 0)
 			(layer "F.SilkS")
 			(uuid "87f1452b-a382-4cd7-8fb8-1b1ec80c47a8")
 			(effects
@@ -1729,7 +1732,7 @@
 			)
 		)
 		(property "Value" "1M"
-			(at 0 1.43 360)
+			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "812b1e2e-4d9f-4800-9c8b-b491f519d0d6")
 			(effects
@@ -1740,7 +1743,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "802c3bd8-97b6-4923-bd76-d9b8e81c36c5")
@@ -1752,7 +1755,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f49cee18-98be-4b70-a953-08959fab55be")
@@ -1764,7 +1767,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "300edc90-6b2d-49d1-95c7-88f240fdfe0b")
@@ -1881,7 +1884,7 @@
 			(uuid "bed197dd-0c30-4854-8677-bd2529364495")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "e3545317-090b-4979-8e63-73f269745efb")
 			(effects
@@ -1928,7 +1931,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C13"
-			(at -3.15 0.025 270)
+			(at -3.15 0.025 -90)
 			(layer "F.SilkS")
 			(uuid "1a70b4fa-4b3d-42ef-a378-811e70568060")
 			(effects
@@ -1939,7 +1942,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 0 1.43 270)
+			(at 0 1.43 -90)
 			(layer "F.Fab")
 			(uuid "03ca3517-13ac-4c75-b18a-42a8833d068d")
 			(effects
@@ -1950,7 +1953,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a14b337f-60d7-4549-8085-26a3750fdcd8")
@@ -1962,7 +1965,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b7eb9173-5b76-446f-b998-adfc01d67252")
@@ -1974,7 +1977,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2327d542-206d-4ffb-85ca-e8ed81bb34ee")
@@ -2091,7 +2094,7 @@
 			(uuid "a020c4aa-9201-428d-b546-1ed0eb919d4a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "251fd0b6-da8c-449a-b793-f97a5bbc7568")
 			(effects
@@ -3024,7 +3027,7 @@
 		(descr "Inductor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 80, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "inductor handsolder")
 		(property "Reference" "FB1"
-			(at 0.875 8.100002 360)
+			(at 0.875 8.100002 0)
 			(layer "F.SilkS")
 			(uuid "85f8845d-4e11-4e70-9bbd-6b937e14621b")
 			(effects
@@ -3035,7 +3038,7 @@
 			)
 		)
 		(property "Value" "FerriteBead"
-			(at 0 1.55 360)
+			(at 0 1.55 0)
 			(layer "F.Fab")
 			(uuid "6cc7095b-4799-4ebe-8e16-7912bb3cdb99")
 			(effects
@@ -3046,7 +3049,7 @@
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0bc16701-6e03-458a-a799-2d23e6a41fca")
@@ -3058,7 +3061,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0d7e5d40-e300-4452-89bd-3c4d03b5f139")
@@ -3070,7 +3073,7 @@
 			)
 		)
 		(property "Description" "Ferrite bead"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f32c9546-953e-4d1d-94fb-c9bde884414b")
@@ -3187,7 +3190,7 @@
 			(uuid "0bfb8683-52c4-4269-87bd-2032ecf1510f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "97322238-846f-4394-98d9-d8dfc7c70ac5")
 			(effects
@@ -3865,7 +3868,7 @@
 		(descr "SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip")
 		(tags "net tie solder jumper bridged")
 		(property "Reference" "JP1"
-			(at -3.15 0.075 270)
+			(at -3.15 0.075 -90)
 			(layer "F.SilkS")
 			(uuid "23f8c1bc-40f5-489d-b87c-b29aef0dcf1b")
 			(effects
@@ -3876,7 +3879,7 @@
 			)
 		)
 		(property "Value" "DAT"
-			(at 0 1.9 270)
+			(at 0 1.9 -90)
 			(layer "F.Fab")
 			(uuid "aab1f7aa-0425-49c8-8a54-126401f050e1")
 			(effects
@@ -3887,7 +3890,7 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "130a2901-e2fc-4cf0-9d54-3fd65d5b352b")
@@ -3899,7 +3902,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6a56db09-0c85-4d6c-aa97-3b88bea815aa")
@@ -3911,7 +3914,7 @@
 			)
 		)
 		(property "Description" "Jumper, 2-pole, closed/bridged"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "33344ab5-54f2-4755-9ad6-4943f8903f4f")
@@ -4775,7 +4778,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R3"
-			(at 0 -1.43 360)
+			(at 0 -1.43 0)
 			(layer "F.SilkS")
 			(uuid "a56ded9a-d889-496d-8e43-777d309f1275")
 			(effects
@@ -4786,7 +4789,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 0 1.43 360)
+			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "794c0766-d032-4964-9c5d-24d2c5462bfe")
 			(effects
@@ -4797,7 +4800,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "09905df1-9ccb-4ab5-9dfc-001cbcf43cfc")
@@ -4809,7 +4812,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b0f26584-d58b-44dd-895e-1840928125eb")
@@ -4821,7 +4824,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ea8ba3e1-0415-4cde-a821-787703a65191")
@@ -4938,7 +4941,7 @@
 			(uuid "bac4e9c4-f5e3-44d9-9edb-08700e6493e1")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "1c7c4fdc-5594-477e-9d4b-b2206eb8ff27")
 			(effects
@@ -4985,7 +4988,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R6"
-			(at -2.65 -0.0375 270)
+			(at -2.65 -0.0375 -90)
 			(layer "F.SilkS")
 			(uuid "a769ed6e-8932-429c-a716-74fe6e2324ee")
 			(effects
@@ -4996,7 +4999,7 @@
 			)
 		)
 		(property "Value" "1M"
-			(at 0 1.43 270)
+			(at 0 1.43 -90)
 			(layer "F.Fab")
 			(uuid "68ba610f-f902-4542-9465-bd66ee954b46")
 			(effects
@@ -5007,7 +5010,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fd4c4a8c-9c8c-46bd-b8c4-be7ba8f52031")
@@ -5019,7 +5022,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4bf3e069-e89b-4356-9006-f675be5fef07")
@@ -5031,7 +5034,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ef430dc9-a797-4ebf-b005-9f22533ee602")
@@ -5148,7 +5151,7 @@
 			(uuid "2da516e1-55e3-4c01-afcf-3a41be86fb1e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "c6955be1-1f9e-45f8-8331-cbbc3990bd0b")
 			(effects
@@ -5195,7 +5198,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C1"
-			(at -2.65 -0.0375 270)
+			(at -2.65 -0.0375 -90)
 			(layer "F.SilkS")
 			(uuid "30002da1-b404-4f29-ac8e-3496580629b8")
 			(effects
@@ -5206,7 +5209,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 0 1.43 270)
+			(at 0 1.43 -90)
 			(layer "F.Fab")
 			(uuid "d1dcc480-2864-4dc5-893a-c5a3dbe52e57")
 			(effects
@@ -5217,7 +5220,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4178bb6f-7b8e-4f08-b788-9b9a4f43fef5")
@@ -5229,7 +5232,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f2887722-4845-4ba5-b297-70e7c23db261")
@@ -5241,7 +5244,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5d5a79c3-3f9c-4cd9-aa68-684f12d5aa2e")
@@ -5358,7 +5361,7 @@
 			(uuid "e804139b-d2c0-48be-a34b-f529863764aa")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "a38ac780-765d-43dc-a1a2-54a46c3ffd73")
 			(effects
@@ -5825,7 +5828,7 @@
 		(descr "NXP  LGA, 8 Pin (https://www.nxp.com/docs/en/data-sheet/MPL3115A2.pdf#page=42), generated with kicad-footprint-generator ipc_noLead_generator.py")
 		(tags "NXP LGA NoLead")
 		(property "Reference" "U1"
-			(at 0.775 -3.475 360)
+			(at 0.775 -3.475 0)
 			(layer "F.SilkS")
 			(uuid "3bc7ed61-639b-4f25-b5b4-8e2d64faed2b")
 			(effects
@@ -5836,7 +5839,7 @@
 			)
 		)
 		(property "Value" "MPL3115A2"
-			(at 0 3.45 360)
+			(at 0 3.45 0)
 			(layer "F.Fab")
 			(uuid "5a59e6cb-c609-4b7c-b622-b7036e83557b")
 			(effects
@@ -5847,7 +5850,7 @@
 			)
 		)
 		(property "Footprint" "Package_LGA:NXP_LGA-8_3x5mm_P1.25mm_H1.1mm"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d09bc412-9c5d-4067-873b-6e4732ba152d")
@@ -5859,7 +5862,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.nxp.com/docs/en/data-sheet/MPL3115A2.pdf"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a824191f-cadf-4cfb-b4de-771640acf4b2")
@@ -5871,7 +5874,7 @@
 			)
 		)
 		(property "Description" "I2C precision pressure sensor with altimetry, LGA-8"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "52f46c74-0eb6-4153-9876-0f41699c9c8a")
@@ -6332,7 +6335,7 @@
 			(uuid "75284002-c568-4659-8ead-8e731782a6e5")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 3.81 270)
+			(at 0 3.81 -90)
 			(layer "F.Fab")
 			(uuid "f4bf1d26-4d83-4210-ac1a-f8b0cd05555c")
 			(effects
@@ -6405,7 +6408,7 @@
 		(descr "SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip")
 		(tags "net tie solder jumper bridged")
 		(property "Reference" "JP2"
-			(at -3.15 -0.075 270)
+			(at -3.15 -0.075 -90)
 			(layer "F.SilkS")
 			(uuid "cc838ccc-5e0f-4c7b-b342-a5cee1564657")
 			(effects
@@ -6416,7 +6419,7 @@
 			)
 		)
 		(property "Value" "CLK"
-			(at 0 1.9 270)
+			(at 0 1.9 -90)
 			(layer "F.Fab")
 			(uuid "b04e7cfb-1984-4f67-a073-ce6459435c5d")
 			(effects
@@ -6427,7 +6430,7 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3da3b2ff-94e9-4444-b2bb-9519716c213f")
@@ -6439,7 +6442,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "88155938-6a6c-449a-b607-533dd0c5160c")
@@ -6451,7 +6454,7 @@
 			)
 		)
 		(property "Description" "Jumper, 2-pole, closed/bridged"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "239c9159-1df6-4d52-933d-efff1f7095ee")
@@ -6895,7 +6898,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C8"
-			(at -3.05 0.05 360)
+			(at -3.05 0.05 0)
 			(layer "F.SilkS")
 			(uuid "ec6adfca-635b-43f3-830e-fc9c6644dde3")
 			(effects
@@ -6906,7 +6909,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 0 1.68 360)
+			(at 0 1.68 0)
 			(layer "F.Fab")
 			(uuid "48264dfe-e645-4ace-9a99-669d0356f3db")
 			(effects
@@ -6917,7 +6920,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6124a8b3-687e-4f5d-911f-44849995e512")
@@ -6929,7 +6932,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "36a7ce3c-abce-4858-bc4f-998d2a77c2e4")
@@ -6941,7 +6944,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e1145696-ee8a-4638-a1c0-f791b1f6b7dc")
@@ -7058,7 +7061,7 @@
 			(uuid "d9c11c01-6c8c-47ba-b6df-6cbc6cf959cf")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "009ba20d-c1d6-44a7-a02e-9f9a3c2973ba")
 			(effects
@@ -7555,6 +7558,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7567,6 +7571,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7579,6 +7584,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8445,7 +8451,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C6"
-			(at -2.95 -0.025 270)
+			(at -2.95 -0.025 -90)
 			(layer "F.SilkS")
 			(uuid "59eb3ed9-0262-426b-85e6-3dd124f9b530")
 			(effects
@@ -8456,7 +8462,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 0 1.68 270)
+			(at 0 1.68 -90)
 			(layer "F.Fab")
 			(uuid "7379f2a2-ced2-4770-8151-7ce8edf1b4bb")
 			(effects
@@ -8467,7 +8473,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2bc02d76-1c25-4424-a9a0-755fb9fcc128")
@@ -8479,7 +8485,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c4b60cd9-b641-46bc-a942-9b6285ec0d58")
@@ -8491,7 +8497,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6652d42b-af69-47ca-a612-34c4d2ce0ffb")
@@ -8608,7 +8614,7 @@
 			(uuid "07455198-fe26-487c-9db8-d1d249d3ce54")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "F.Fab")
 			(uuid "e68bddf4-c909-4944-ab26-733caf2c2f07")
 			(effects
@@ -10022,7 +10028,7 @@
 			(xy 155 110) (xy 95 110)
 		)
 		(height 6.999999)
-		(gr_text "60.0000 mm"
+		(gr_text "60,0000 mm"
 			(at 125 101.850001 0)
 			(layer "Dwgs.User")
 			(uuid "dacfb1a9-950b-44a5-acc7-f36d207841d1")
@@ -10055,7 +10061,7 @@
 			(xy 154 110) (xy 154 150)
 		)
 		(height -5)
-		(gr_text "40.0000 mm"
+		(gr_text "40,0000 mm"
 			(at 157.85 130 90)
 			(layer "Dwgs.User")
 			(uuid "ddeabe0d-6f06-49d5-b302-222d4507fc9e")
