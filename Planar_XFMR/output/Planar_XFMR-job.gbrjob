@@ -3,9 +3,9 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "7.0.10"
+      "Version": "8.0.0"
     },
-    "CreationDate": "2024-02-14T10:35:44+01:00"
+    "CreationDate": "2024-05-13T09:11:22+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -18,7 +18,7 @@
       "Y": 50.1
     },
     "LayerNumber": 4,
-    "BoardThickness": 1.6054,
+    "BoardThickness": 1.7204,
     "Finish": "None"
   },
   "DesignRules": [
@@ -27,7 +27,7 @@
       "PadToPad": 0.1,
       "PadToTrack": 0.1,
       "TrackToTrack": 0.1,
-      "MinLineWidth": 0.2
+      "MinLineWidth": 0.1
     },
     {
       "Layers": "Inner",
@@ -97,6 +97,7 @@
   "MaterialStackup": [
     {
       "Type": "Legend",
+      "Color": "Green",
       "Name": "Top Silk Screen"
     },
     {
@@ -115,7 +116,7 @@
     },
     {
       "Type": "Dielectric",
-      "Thickness": 0.21,
+      "Thickness": 0.3,
       "Material": "FR4",
       "Name": "F.Cu/In1.Cu",
       "Notes": "Type: dielectric layer 1 (from F.Cu to In1.Cu)"
@@ -127,7 +128,7 @@
     },
     {
       "Type": "Dielectric",
-      "Thickness": 1.065,
+      "Thickness": 1.0,
       "Material": "FR4",
       "Name": "In1.Cu/In2.Cu",
       "Notes": "Type: dielectric layer 2 (from In1.Cu to In2.Cu)"
@@ -139,7 +140,7 @@
     },
     {
       "Type": "Dielectric",
-      "Thickness": 0.21,
+      "Thickness": 0.3,
       "Material": "FR4",
       "Name": "In2.Cu/B.Cu",
       "Notes": "Type: dielectric layer 3 (from In2.Cu to B.Cu)"
@@ -160,6 +161,7 @@
     },
     {
       "Type": "Legend",
+      "Color": "Green",
       "Name": "Bottom Silk Screen"
     }
   ]
