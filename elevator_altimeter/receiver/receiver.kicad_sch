@@ -3655,6 +3655,175 @@
 				)
 			)
 		)
+		(symbol "_MYLIBRARY:TP4056_USB-C_module"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TP4056"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "footprints:TP4056_USB-C_module"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TP4056_USB-C_module_1_1"
+				(rectangle
+					(start -8.89 6.35)
+					(end 8.89 -8.89)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 11.43 3.81 180)
+					(length 2.54)
+					(name "OUT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -11.43 90)
+					(length 2.54)
+					(name "BAT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -11.43 90)
+					(length 2.54)
+					(name "BAT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 11.43 -2.54 180)
+					(length 2.54)
+					(name "OUT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -11.43 3.81 0)
+					(length 2.54)
+					(name "INT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -11.43 -2.54 0)
+					(length 2.54)
+					(name "INT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:+BATT"
 			(power)
 			(pin_names
@@ -4313,6 +4482,10 @@
 		(uuid "2029b067-4cd6-4481-8282-411d4d8c2cd8")
 	)
 	(no_connect
+		(at 45.72 125.73)
+		(uuid "28c72215-5691-45c1-a2b0-40e220f86491")
+	)
+	(no_connect
 		(at 191.77 49.53)
 		(uuid "2b722386-b5a6-4bce-9587-58a61acf4919")
 	)
@@ -4331,6 +4504,10 @@
 	(no_connect
 		(at 43.18 66.04)
 		(uuid "8f8fc162-846d-4bd9-8f51-3040e422848e")
+	)
+	(no_connect
+		(at 45.72 132.08)
+		(uuid "979323ed-de3f-42b4-aa02-592380a858ec")
 	)
 	(no_connect
 		(at 222.25 52.07)
@@ -4401,6 +4578,16 @@
 			(type default)
 		)
 		(uuid "0adfd685-12ff-47e9-aaf2-99453ae81de4")
+	)
+	(wire
+		(pts
+			(xy 54.61 140.97) (xy 53.34 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c37caff-eae0-4577-9b95-88e40db0fe7c")
 	)
 	(wire
 		(pts
@@ -4571,6 +4758,26 @@
 			(type default)
 		)
 		(uuid "320c6643-6674-4367-915d-4d4505e328be")
+	)
+	(wire
+		(pts
+			(xy 60.96 140.97) (xy 60.96 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "343977f3-623d-4600-8fd0-72ae7feaed72")
+	)
+	(wire
+		(pts
+			(xy 53.34 140.97) (xy 53.34 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "357f218a-6eb3-42d0-ad84-ed1e157f2755")
 	)
 	(wire
 		(pts
@@ -4804,6 +5011,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 140.97) (xy 60.96 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "746ca61b-1066-41fb-89e0-b14d580e7982")
+	)
+	(wire
+		(pts
 			(xy 140.97 58.42) (xy 148.59 58.42)
 		)
 		(stroke
@@ -4924,6 +5141,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 125.73) (xy 68.58 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bd864ca-be62-48ff-a292-786cc9df8814")
+	)
+	(wire
+		(pts
 			(xy 80.01 52.07) (xy 93.98 52.07)
 		)
 		(stroke
@@ -4981,6 +5208,26 @@
 			(type default)
 		)
 		(uuid "98b56c45-2ba5-4bf1-a20f-2e93aa39e58c")
+	)
+	(wire
+		(pts
+			(xy 68.58 124.46) (xy 74.93 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a84b55e-9648-475b-8aae-ee5faa92acb2")
+	)
+	(wire
+		(pts
+			(xy 68.58 132.08) (xy 74.93 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bf24f72-4617-4933-995b-9cb1cc75784d")
 	)
 	(wire
 		(pts
@@ -6165,7 +6412,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 74.93 132.08 90)
+		(at 74.93 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6174,7 +6421,7 @@
 		(fields_autoplaced yes)
 		(uuid "076f2735-7cb6-4668-9b0c-f3dc8cb3c3d6")
 		(property "Reference" "#FLG02"
-			(at 73.025 132.08 0)
+			(at 74.93 130.175 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6183,7 +6430,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 70.7969 132.08 0)
+			(at 74.93 127.9469 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7580,7 +7827,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 74.93 124.46 90)
+		(at 74.93 124.46 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7589,7 +7836,7 @@
 		(fields_autoplaced yes)
 		(uuid "65e8ca68-21e0-4b62-961b-16d6152cb333")
 		(property "Reference" "#FLG01"
-			(at 73.025 124.46 0)
+			(at 74.93 126.365 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7598,7 +7845,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 70.7969 124.46 0)
+			(at 74.93 128.5931 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9287,6 +9534,86 @@
 		)
 	)
 	(symbol
+		(lib_id "_MYLIBRARY:TP4056_USB-C_module")
+		(at 57.15 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b87e94e8-54ae-45c6-8f2b-6c971ef5c803")
+		(property "Reference" "U?"
+			(at 57.15 120.6585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP4056"
+			(at 57.15 122.3399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footprints:TP4056_USB-C_module"
+			(at 57.15 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 57.15 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "1557eb17-112c-468b-9e98-8410c1388eb7")
+		)
+		(pin "3"
+			(uuid "95c20356-9801-41e6-b523-db87c05511e3")
+		)
+		(pin "7"
+			(uuid "1fa0463d-6b07-4ae5-bb40-7ac360c8275c")
+		)
+		(pin "4"
+			(uuid "d6712889-69bd-45d3-8c9e-90a15a6a3e3b")
+		)
+		(pin "1"
+			(uuid "54cd3146-2b6d-4973-84a1-73b513f0a9bc")
+		)
+		(pin "2"
+			(uuid "968bc093-ea6f-4f44-bddb-281d9827d73a")
+		)
+		(instances
+			(project "receiver"
+				(path "/508af014-8a23-4e20-8ad2-ca910f035369"
+					(reference "U?")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 222.25 132.08 0)
 		(unit 1)
@@ -9638,7 +9965,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 74.93 129.54 0)
+		(at 58.42 148.59 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9647,25 +9974,23 @@
 		(fields_autoplaced yes)
 		(uuid "d2056436-0cf1-4443-9b14-de7ebecb4ece")
 		(property "Reference" "BT1"
-			(at 77.851 126.4863 0)
+			(at 56.5785 142.2865 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "18650"
-			(at 77.851 128.9106 0)
+			(at 56.5785 144.7108 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
-			(at 74.93 128.016 90)
+			(at 56.896 148.59 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9674,7 +9999,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 74.93 128.016 90)
+			(at 56.896 148.59 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9683,7 +10008,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 74.93 129.54 0)
+			(at 58.42 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
