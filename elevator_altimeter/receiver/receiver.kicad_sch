@@ -4,6 +4,12 @@
 	(generator_version "8.0")
 	(uuid "508af014-8a23-4e20-8ad2-ca910f035369")
 	(paper "A4")
+	(title_block
+		(title "Elevator altimeter receiver")
+		(date "2024-08-06")
+		(rev "A")
+		(company "Xavier Bourlot")
+	)
 	(lib_symbols
 		(symbol "Device:Battery_Cell"
 			(pin_numbers hide)
