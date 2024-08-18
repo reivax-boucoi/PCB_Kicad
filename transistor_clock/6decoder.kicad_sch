@@ -1,1847 +1,4516 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid 109af144-bfdc-4da8-b2a0-80c4a8e78366)
-
-  (paper "A4")
-
-  (lib_symbols
-    (symbol "Device:D" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "D" (at 0 2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "D" (at 0 -2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Sim.Device" "D" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Sim.Pins" "1=K 2=A" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "diode" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Diode" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "D_0_1"
-        (polyline
-          (pts
-            (xy -1.27 1.27)
-            (xy -1.27 -1.27)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.27 0)
-            (xy -1.27 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.27 1.27)
-            (xy 1.27 -1.27)
-            (xy -1.27 0)
-            (xy 1.27 1.27)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "D_1_1"
-        (pin passive line (at -3.81 0 0) (length 2.54)
-          (name "K" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 3.81 0 180) (length 2.54)
-          (name "A" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-  )
-
-  (junction (at 73.66 90.17) (diameter 0) (color 0 0 0 0)
-    (uuid 0a5eb4b8-7143-4b35-a21a-21c914bdea39)
-  )
-  (junction (at 66.04 87.63) (diameter 0) (color 0 0 0 0)
-    (uuid 0f59d767-47a5-41e4-8179-3601c7fb1b14)
-  )
-  (junction (at 45.72 68.58) (diameter 0) (color 0 0 0 0)
-    (uuid 21dee8ed-7c3a-407a-b926-6f52fdf218e5)
-  )
-  (junction (at 96.52 100.33) (diameter 0) (color 0 0 0 0)
-    (uuid 26ce1771-ca12-4d83-a9dc-94b1b21eda6e)
-  )
-  (junction (at 76.2 74.93) (diameter 0) (color 0 0 0 0)
-    (uuid 280c7c8a-3fa5-484f-91cb-e7cef2b97666)
-  )
-  (junction (at 73.66 71.12) (diameter 0) (color 0 0 0 0)
-    (uuid 2d163bb6-c132-49cc-abfc-021cf8187cad)
-  )
-  (junction (at 76.2 68.58) (diameter 0) (color 0 0 0 0)
-    (uuid 2eb377d2-1c84-4443-b698-70cc83d6db7e)
-  )
-  (junction (at 76.2 87.63) (diameter 0) (color 0 0 0 0)
-    (uuid 308e4a75-507a-479c-bcde-60a8286b3d13)
-  )
-  (junction (at 83.82 71.12) (diameter 0) (color 0 0 0 0)
-    (uuid 32a10246-b6c3-43d3-b245-56f2448f2a34)
-  )
-  (junction (at 104.14 71.12) (diameter 0) (color 0 0 0 0)
-    (uuid 3399a905-3b4f-43de-a4c9-9473ea2110bc)
-  )
-  (junction (at 45.72 87.63) (diameter 0) (color 0 0 0 0)
-    (uuid 410b5a55-efd0-47fe-82e1-b78ef0c0a14f)
-  )
-  (junction (at 76.2 81.28) (diameter 0) (color 0 0 0 0)
-    (uuid 4af0226c-0b3e-4265-8129-baaa8ab6df2f)
-  )
-  (junction (at 83.82 83.82) (diameter 0) (color 0 0 0 0)
-    (uuid 5048bd2a-a38c-48d9-a513-b567368668b2)
-  )
-  (junction (at 66.04 74.93) (diameter 0) (color 0 0 0 0)
-    (uuid 54a231a5-d6f4-4b0e-9868-05a1b96d4b16)
-  )
-  (junction (at 96.52 68.58) (diameter 0) (color 0 0 0 0)
-    (uuid 55c0c9a4-4502-45f9-b51c-7a8437f96ec3)
-  )
-  (junction (at 45.72 74.93) (diameter 0) (color 0 0 0 0)
-    (uuid 56a552e0-4821-4bf5-b5ad-2b63f7121fe2)
-  )
-  (junction (at 86.36 100.33) (diameter 0) (color 0 0 0 0)
-    (uuid 66418974-e1ea-482e-8a15-9ae7e76c5a32)
-  )
-  (junction (at 73.66 77.47) (diameter 0) (color 0 0 0 0)
-    (uuid 709aaf46-9db6-494f-9ff0-d0b6542ad0ea)
-  )
-  (junction (at 83.82 110.49) (diameter 0) (color 0 0 0 0)
-    (uuid 71a6b0fb-7c24-498f-9a5f-85678fd7abb1)
-  )
-  (junction (at 93.98 83.82) (diameter 0) (color 0 0 0 0)
-    (uuid 75b587f5-e9e3-4429-831c-8a40988a59d3)
-  )
-  (junction (at 66.04 93.98) (diameter 0) (color 0 0 0 0)
-    (uuid 763fbabd-1abf-47aa-a13b-f833d12542c9)
-  )
-  (junction (at 93.98 102.87) (diameter 0) (color 0 0 0 0)
-    (uuid 79385fba-1f4f-4403-afde-7dd7caa71a9a)
-  )
-  (junction (at 104.14 110.49) (diameter 0) (color 0 0 0 0)
-    (uuid 82326e0b-87fc-4271-928d-cdaa2f3a0e5e)
-  )
-  (junction (at 104.14 102.87) (diameter 0) (color 0 0 0 0)
-    (uuid 9bde2edf-8548-4698-af69-53bf276e33fe)
-  )
-  (junction (at 86.36 81.28) (diameter 0) (color 0 0 0 0)
-    (uuid aab73583-46a7-49b0-a308-c41fde7d861d)
-  )
-  (junction (at 93.98 77.47) (diameter 0) (color 0 0 0 0)
-    (uuid adcd7d31-e790-4153-a710-75b8bcf340ab)
-  )
-  (junction (at 93.98 110.49) (diameter 0) (color 0 0 0 0)
-    (uuid b36bd3ed-ff8e-4e68-af83-00b4b985105f)
-  )
-  (junction (at 63.5 77.47) (diameter 0) (color 0 0 0 0)
-    (uuid b4d122ea-6827-45e4-9791-c7e8461d7474)
-  )
-  (junction (at 104.14 90.17) (diameter 0) (color 0 0 0 0)
-    (uuid b5ed6e8d-5129-498c-a2fe-1a5e69c730f8)
-  )
-  (junction (at 73.66 96.52) (diameter 0) (color 0 0 0 0)
-    (uuid b6e4cc74-e3ff-444c-b051-7d0086c666d9)
-  )
-  (junction (at 45.72 93.98) (diameter 0) (color 0 0 0 0)
-    (uuid bc4d1c61-11d0-4c22-ac09-9217530b0ef0)
-  )
-  (junction (at 63.5 83.82) (diameter 0) (color 0 0 0 0)
-    (uuid bd2a74a1-4802-4e9c-b1ec-96b479389b73)
-  )
-  (junction (at 83.82 90.17) (diameter 0) (color 0 0 0 0)
-    (uuid bea0d98e-4bb8-43f9-ae8c-4c05bcc18501)
-  )
-  (junction (at 86.36 74.93) (diameter 0) (color 0 0 0 0)
-    (uuid cc56a79f-4422-46ac-8a5f-e6741027c1b5)
-  )
-  (junction (at 66.04 68.58) (diameter 0) (color 0 0 0 0)
-    (uuid d35f8e9f-a01a-4f0e-96ff-ff2f7544cb29)
-  )
-  (junction (at 55.88 74.93) (diameter 0) (color 0 0 0 0)
-    (uuid dd4bd5f4-9607-4df0-b9e9-960f5d83fc94)
-  )
-  (junction (at 45.72 81.28) (diameter 0) (color 0 0 0 0)
-    (uuid e0024d76-6d5e-4a31-8368-25aad49afafb)
-  )
-  (junction (at 104.14 83.82) (diameter 0) (color 0 0 0 0)
-    (uuid eb1360f2-adc1-4d43-8545-8fef223ccd6e)
-  )
-  (junction (at 96.52 87.63) (diameter 0) (color 0 0 0 0)
-    (uuid ed47f823-7062-4819-b8cc-bcb1dc693627)
-  )
-  (junction (at 83.82 77.47) (diameter 0) (color 0 0 0 0)
-    (uuid ef455b8f-f2a3-49cf-901a-3f14c51ecdcf)
-  )
-  (junction (at 96.52 81.28) (diameter 0) (color 0 0 0 0)
-    (uuid f12f5e46-396f-4309-8756-8c2046446118)
-  )
-
-  (wire (pts (xy 73.66 74.93) (xy 73.66 77.47))
-    (stroke (width 0) (type default))
-    (uuid 00e8d38c-5db9-429c-94db-557cfbaa3798)
-  )
-  (wire (pts (xy 96.52 81.28) (xy 96.52 87.63))
-    (stroke (width 0) (type default))
-    (uuid 02c9c674-f19a-4cb6-8b45-91463125dc6c)
-  )
-  (wire (pts (xy 76.2 74.93) (xy 76.2 81.28))
-    (stroke (width 0) (type default))
-    (uuid 03f3e759-cfab-4c89-aa72-dc0d417ce2b4)
-  )
-  (wire (pts (xy 96.52 100.33) (xy 96.52 106.68))
-    (stroke (width 0) (type default))
-    (uuid 03fcf7d8-5979-4a94-ae66-a7451d970a35)
-  )
-  (wire (pts (xy 45.72 87.63) (xy 45.72 93.98))
-    (stroke (width 0) (type default))
-    (uuid 08578c77-ec26-41d4-8f99-9f26fbeadcf2)
-  )
-  (wire (pts (xy 86.36 81.28) (xy 86.36 100.33))
-    (stroke (width 0) (type default))
-    (uuid 0e2d5e50-6981-4f84-bae7-2fccb376b2f9)
-  )
-  (wire (pts (xy 96.52 60.96) (xy 96.52 68.58))
-    (stroke (width 0) (type default))
-    (uuid 14c85412-ff45-49cd-bd10-de52d763ad31)
-  )
-  (wire (pts (xy 76.2 87.63) (xy 76.2 106.68))
-    (stroke (width 0) (type default))
-    (uuid 16fe6ac0-948c-4aa1-8ea0-b01b9e53f1ae)
-  )
-  (wire (pts (xy 83.82 77.47) (xy 93.98 77.47))
-    (stroke (width 0) (type default))
-    (uuid 2025a2f3-226f-46a6-ad63-5795f9a00fe7)
-  )
-  (wire (pts (xy 53.34 68.58) (xy 53.34 71.12))
-    (stroke (width 0) (type default))
-    (uuid 20797f4a-3ef2-4513-9050-1bc9666bed37)
-  )
-  (wire (pts (xy 45.72 60.96) (xy 45.72 68.58))
-    (stroke (width 0) (type default))
-    (uuid 20b8e9df-30c4-47bf-a5a7-99886300d7f9)
-  )
-  (wire (pts (xy 53.34 87.63) (xy 53.34 90.17))
-    (stroke (width 0) (type default))
-    (uuid 226810c2-46ca-44fb-85e7-896e6ac3f31b)
-  )
-  (wire (pts (xy 63.5 83.82) (xy 83.82 83.82))
-    (stroke (width 0) (type default))
-    (uuid 22aa355d-a1f4-4703-8f60-fc0ca49b76dc)
-  )
-  (wire (pts (xy 86.36 74.93) (xy 86.36 81.28))
-    (stroke (width 0) (type default))
-    (uuid 237e9e1c-fc66-4d12-8086-f59de01d76bf)
-  )
-  (wire (pts (xy 104.14 81.28) (xy 104.14 83.82))
-    (stroke (width 0) (type default))
-    (uuid 23873786-2287-455c-b9b8-517da1d99bf4)
-  )
-  (wire (pts (xy 63.5 81.28) (xy 63.5 83.82))
-    (stroke (width 0) (type default))
-    (uuid 24eec2d6-2c85-41e4-9b99-69f91112c77b)
-  )
-  (wire (pts (xy 45.72 68.58) (xy 45.72 74.93))
-    (stroke (width 0) (type default))
-    (uuid 26f9fde2-c4ac-4507-b662-fa61e7c068d7)
-  )
-  (wire (pts (xy 73.66 87.63) (xy 73.66 90.17))
-    (stroke (width 0) (type default))
-    (uuid 28ce9463-36ab-4979-9996-8a7fce4debfc)
-  )
-  (wire (pts (xy 83.82 71.12) (xy 104.14 71.12))
-    (stroke (width 0) (type default))
-    (uuid 30415d04-ee84-4438-ad35-964eeabe9a7e)
-  )
-  (wire (pts (xy 104.14 100.33) (xy 104.14 102.87))
-    (stroke (width 0) (type default))
-    (uuid 32cc62b1-f65e-476c-9377-5c117a66c1b5)
-  )
-  (wire (pts (xy 83.82 110.49) (xy 93.98 110.49))
-    (stroke (width 0) (type default))
-    (uuid 3c216d1c-0596-491e-9b64-d6c940b3f0d3)
-  )
-  (wire (pts (xy 66.04 93.98) (xy 66.04 106.68))
-    (stroke (width 0) (type default))
-    (uuid 3c8028e9-06d3-4305-ae0b-ca8c7d2fb4b8)
-  )
-  (wire (pts (xy 66.04 68.58) (xy 66.04 74.93))
-    (stroke (width 0) (type default))
-    (uuid 3e0d7a17-fc11-4ad7-b6bb-32697eb37cb4)
-  )
-  (wire (pts (xy 66.04 87.63) (xy 66.04 93.98))
-    (stroke (width 0) (type default))
-    (uuid 3eb1dbaf-13f1-40a7-9976-04b9643a2405)
-  )
-  (wire (pts (xy 73.66 77.47) (xy 83.82 77.47))
-    (stroke (width 0) (type default))
-    (uuid 3fe38500-9ca7-4364-b0cc-a7fb842f10e2)
-  )
-  (wire (pts (xy 45.72 93.98) (xy 45.72 100.33))
-    (stroke (width 0) (type default))
-    (uuid 41f5f208-0a5d-4286-97c9-f3e85af2301c)
-  )
-  (wire (pts (xy 73.66 90.17) (xy 83.82 90.17))
-    (stroke (width 0) (type default))
-    (uuid 42f492d5-e168-44ed-8bba-649d78be7936)
-  )
-  (wire (pts (xy 45.72 81.28) (xy 45.72 87.63))
-    (stroke (width 0) (type default))
-    (uuid 43e37bae-d53a-48a4-899e-ddc978b528c0)
-  )
-  (wire (pts (xy 63.5 77.47) (xy 73.66 77.47))
-    (stroke (width 0) (type default))
-    (uuid 4656f8b1-6c4e-4fe8-9ad9-08d99855c3b7)
-  )
-  (wire (pts (xy 93.98 106.68) (xy 93.98 110.49))
-    (stroke (width 0) (type default))
-    (uuid 4f054c02-0f45-48ba-9950-a1266b9c0003)
-  )
-  (wire (pts (xy 53.34 90.17) (xy 73.66 90.17))
-    (stroke (width 0) (type default))
-    (uuid 5c2566cd-8a16-4630-8ad3-6b7b289a2d9e)
-  )
-  (wire (pts (xy 83.82 68.58) (xy 83.82 71.12))
-    (stroke (width 0) (type default))
-    (uuid 66b3d814-5cc7-485c-b509-e07932336649)
-  )
-  (wire (pts (xy 73.66 68.58) (xy 73.66 71.12))
-    (stroke (width 0) (type default))
-    (uuid 66f01007-290a-4488-8499-c06c3a369cf3)
-  )
-  (wire (pts (xy 73.66 71.12) (xy 83.82 71.12))
-    (stroke (width 0) (type default))
-    (uuid 674e843d-e947-4853-9f7c-4ea1bae3fb9f)
-  )
-  (wire (pts (xy 73.66 93.98) (xy 73.66 96.52))
-    (stroke (width 0) (type default))
-    (uuid 6df57a5a-2cd1-4031-9f91-88aa421d18d0)
-  )
-  (wire (pts (xy 86.36 100.33) (xy 86.36 106.68))
-    (stroke (width 0) (type default))
-    (uuid 71761dc3-3ff2-40c1-9683-10ffebd9478f)
-  )
-  (wire (pts (xy 93.98 74.93) (xy 93.98 77.47))
-    (stroke (width 0) (type default))
-    (uuid 74c9a4af-2f7d-446b-a2e5-3a1474f4a94d)
-  )
-  (wire (pts (xy 66.04 74.93) (xy 66.04 87.63))
-    (stroke (width 0) (type default))
-    (uuid 75b8ef10-96ac-4cbc-9b7b-3c8ef442638d)
-  )
-  (wire (pts (xy 83.82 83.82) (xy 93.98 83.82))
-    (stroke (width 0) (type default))
-    (uuid 779ad04b-b756-4a1c-a3e9-ceb90fc97dfc)
-  )
-  (wire (pts (xy 104.14 106.68) (xy 104.14 110.49))
-    (stroke (width 0) (type default))
-    (uuid 7f1d557f-04fd-44c5-8e76-44bb5eb7a731)
-  )
-  (wire (pts (xy 93.98 100.33) (xy 93.98 102.87))
-    (stroke (width 0) (type default))
-    (uuid 828e3f0e-a361-4708-9a11-dd857d55fef0)
-  )
-  (wire (pts (xy 53.34 77.47) (xy 63.5 77.47))
-    (stroke (width 0) (type default))
-    (uuid 88e5833c-8981-4c14-90d8-706b3ce2d407)
-  )
-  (wire (pts (xy 93.98 102.87) (xy 104.14 102.87))
-    (stroke (width 0) (type default))
-    (uuid 8b3ccc80-1965-4faf-ae6d-85919d014cde)
-  )
-  (wire (pts (xy 93.98 81.28) (xy 93.98 83.82))
-    (stroke (width 0) (type default))
-    (uuid 8c637e37-dd88-409d-8807-21f858e78d53)
-  )
-  (wire (pts (xy 104.14 90.17) (xy 110.49 90.17))
-    (stroke (width 0) (type default))
-    (uuid 968c1c0a-36b0-472a-944b-b5722e2d9351)
-  )
-  (wire (pts (xy 53.34 96.52) (xy 73.66 96.52))
-    (stroke (width 0) (type default))
-    (uuid 96d377d6-ee90-4df7-8ccc-9716930b61b5)
-  )
-  (wire (pts (xy 96.52 68.58) (xy 96.52 81.28))
-    (stroke (width 0) (type default))
-    (uuid 9b984e16-ba7d-4520-8bdd-2896d740cdb5)
-  )
-  (wire (pts (xy 53.34 93.98) (xy 53.34 96.52))
-    (stroke (width 0) (type default))
-    (uuid 9c885788-1d54-4db9-9661-283b2cc7db03)
-  )
-  (wire (pts (xy 96.52 87.63) (xy 96.52 100.33))
-    (stroke (width 0) (type default))
-    (uuid ab2dc9d4-c4cb-45f5-9f83-9c81c5e926f3)
-  )
-  (wire (pts (xy 93.98 77.47) (xy 110.49 77.47))
-    (stroke (width 0) (type default))
-    (uuid ab6d4bbb-aa72-4699-a0d7-1b1e014168bd)
-  )
-  (wire (pts (xy 93.98 110.49) (xy 104.14 110.49))
-    (stroke (width 0) (type default))
-    (uuid ab843149-cc4f-4f46-affa-aec1c6d9e0ff)
-  )
-  (wire (pts (xy 76.2 60.96) (xy 76.2 68.58))
-    (stroke (width 0) (type default))
-    (uuid ac0faad1-f8b4-4807-989f-136f237a5bee)
-  )
-  (wire (pts (xy 53.34 74.93) (xy 53.34 77.47))
-    (stroke (width 0) (type default))
-    (uuid ac9fbec4-b3fa-442b-92ac-1ef940b1c58f)
-  )
-  (wire (pts (xy 55.88 60.96) (xy 55.88 74.93))
-    (stroke (width 0) (type default))
-    (uuid ad752e89-d20b-4420-9526-1147386b9256)
-  )
-  (wire (pts (xy 63.5 74.93) (xy 63.5 77.47))
-    (stroke (width 0) (type default))
-    (uuid aff156a9-2ed1-4da5-87cd-75034a31386e)
-  )
-  (wire (pts (xy 104.14 71.12) (xy 110.49 71.12))
-    (stroke (width 0) (type default))
-    (uuid b1f76e11-aa8e-44fa-af36-ecbd7d25aa25)
-  )
-  (wire (pts (xy 83.82 74.93) (xy 83.82 77.47))
-    (stroke (width 0) (type default))
-    (uuid bb200f18-0608-47a6-9900-f7b62554e8b9)
-  )
-  (wire (pts (xy 73.66 106.68) (xy 73.66 110.49))
-    (stroke (width 0) (type default))
-    (uuid bb31514c-39da-4fa3-b4bf-76a78c81b06c)
-  )
-  (wire (pts (xy 83.82 106.68) (xy 83.82 110.49))
-    (stroke (width 0) (type default))
-    (uuid c2861758-26ec-4d21-95d6-e5de3d72d794)
-  )
-  (wire (pts (xy 104.14 68.58) (xy 104.14 71.12))
-    (stroke (width 0) (type default))
-    (uuid c4c7c189-66e9-45ef-bb06-27f013591d70)
-  )
-  (wire (pts (xy 73.66 96.52) (xy 110.49 96.52))
-    (stroke (width 0) (type default))
-    (uuid c5030006-574f-4511-8d75-05a0a8c8bbf7)
-  )
-  (wire (pts (xy 76.2 68.58) (xy 76.2 74.93))
-    (stroke (width 0) (type default))
-    (uuid c8d93fb5-f826-4c45-9052-898ba1cbf2e5)
-  )
-  (wire (pts (xy 104.14 102.87) (xy 110.49 102.87))
-    (stroke (width 0) (type default))
-    (uuid cae631c6-5c25-44e6-b673-3bd2a0cc9118)
-  )
-  (wire (pts (xy 53.34 83.82) (xy 63.5 83.82))
-    (stroke (width 0) (type default))
-    (uuid cb1a8b60-17a7-43f8-8df3-084f634490ea)
-  )
-  (wire (pts (xy 83.82 87.63) (xy 83.82 90.17))
-    (stroke (width 0) (type default))
-    (uuid ce933a46-5d3f-4780-a302-85159b53def5)
-  )
-  (wire (pts (xy 104.14 110.49) (xy 110.49 110.49))
-    (stroke (width 0) (type default))
-    (uuid d16293fd-fccb-42a7-8e55-9747c1092b10)
-  )
-  (wire (pts (xy 83.82 81.28) (xy 83.82 83.82))
-    (stroke (width 0) (type default))
-    (uuid dc1e584f-2011-429e-a70f-0b6200107c78)
-  )
-  (wire (pts (xy 53.34 102.87) (xy 93.98 102.87))
-    (stroke (width 0) (type default))
-    (uuid dc3e1ce1-2374-48b0-bfc5-90495bdeddd8)
-  )
-  (wire (pts (xy 83.82 90.17) (xy 104.14 90.17))
-    (stroke (width 0) (type default))
-    (uuid dc962753-9fa7-4941-952a-3aa5d16ca92b)
-  )
-  (wire (pts (xy 104.14 83.82) (xy 110.49 83.82))
-    (stroke (width 0) (type default))
-    (uuid de1672fd-fc72-4362-b229-e7e8451beedd)
-  )
-  (wire (pts (xy 86.36 60.96) (xy 86.36 74.93))
-    (stroke (width 0) (type default))
-    (uuid df5c9c10-47c4-4f39-bdff-8051347b5202)
-  )
-  (wire (pts (xy 45.72 74.93) (xy 45.72 81.28))
-    (stroke (width 0) (type default))
-    (uuid dff88fc4-f359-482e-bc01-58c74ca1c56c)
-  )
-  (wire (pts (xy 53.34 71.12) (xy 73.66 71.12))
-    (stroke (width 0) (type default))
-    (uuid e8169b1d-792d-474a-aab5-c5d55eef0535)
-  )
-  (wire (pts (xy 53.34 100.33) (xy 53.34 102.87))
-    (stroke (width 0) (type default))
-    (uuid e994d6c1-519f-4a01-bc8c-3f20fcc1aaaf)
-  )
-  (wire (pts (xy 104.14 87.63) (xy 104.14 90.17))
-    (stroke (width 0) (type default))
-    (uuid ecffa62a-4614-4255-a5a3-d42058a192f9)
-  )
-  (wire (pts (xy 76.2 81.28) (xy 76.2 87.63))
-    (stroke (width 0) (type default))
-    (uuid ed9a1871-868b-4ea9-b1fb-7f6eda1418a8)
-  )
-  (wire (pts (xy 73.66 110.49) (xy 83.82 110.49))
-    (stroke (width 0) (type default))
-    (uuid f21bcc25-61cc-498a-b4b1-d16d5d3bf9bc)
-  )
-  (wire (pts (xy 55.88 74.93) (xy 55.88 81.28))
-    (stroke (width 0) (type default))
-    (uuid f4447767-aa17-4197-b0bb-e8b9e747cc6d)
-  )
-  (wire (pts (xy 93.98 83.82) (xy 104.14 83.82))
-    (stroke (width 0) (type default))
-    (uuid f52023e4-ad0a-4448-9b14-4d6a183c9a85)
-  )
-  (wire (pts (xy 66.04 60.96) (xy 66.04 68.58))
-    (stroke (width 0) (type default))
-    (uuid fb0ce991-7f99-47d0-8a30-180afa0f68c2)
-  )
-  (wire (pts (xy 53.34 81.28) (xy 53.34 83.82))
-    (stroke (width 0) (type default))
-    (uuid ffc21fa6-dd93-4d92-9f3a-c6e2d5848726)
-  )
-
-  (hierarchical_label "4" (shape input) (at 86.36 60.96 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 025de2bb-2bde-4c2e-bea1-53b1307215f1)
-  )
-  (hierarchical_label "F" (shape output) (at 110.49 102.87 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 0fa62e7b-d510-4c44-b6c6-83bc9f0b513c)
-  )
-  (hierarchical_label "B" (shape output) (at 110.49 77.47 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 14e0b6d3-02ab-4a40-8e6d-8a24565bc1c9)
-  )
-  (hierarchical_label "A" (shape output) (at 110.49 71.12 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 16366b1b-ab24-42d4-a4b3-6bb9e2f44b32)
-  )
-  (hierarchical_label "C" (shape output) (at 110.49 83.82 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 208d1c58-6413-4129-8309-2f77b5870f4d)
-  )
-  (hierarchical_label "G" (shape output) (at 110.49 110.49 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 271aeb87-37a3-4698-af70-fbe8119f194d)
-  )
-  (hierarchical_label "3" (shape input) (at 76.2 60.96 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 59e059ac-788a-4911-a9ec-3522b7ddb0ac)
-  )
-  (hierarchical_label "2" (shape input) (at 66.04 60.96 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 90fe77af-2c58-42b7-ad33-d36be8915820)
-  )
-  (hierarchical_label "E" (shape output) (at 110.49 96.52 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 9367da2b-51d6-4c47-b051-87fc610236d1)
-  )
-  (hierarchical_label "0" (shape input) (at 45.72 60.96 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 9b2c9b85-e42e-4dfb-bc19-24db2ab44f92)
-  )
-  (hierarchical_label "1" (shape input) (at 55.88 60.96 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid a18d5739-77a0-4ae9-a8ae-c8a0e735317a)
-  )
-  (hierarchical_label "5" (shape input) (at 96.52 60.96 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid bea86330-8763-414d-8a84-5ae3a5aa4a11)
-  )
-  (hierarchical_label "D" (shape output) (at 110.49 90.17 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid caedb4fb-733f-44bc-87e7-0fe4a7a4f885)
-  )
-
-  (symbol (lib_id "Device:D") (at 49.53 87.63 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 0ac5ca23-9369-4f68-95fc-65f477f249c2)
-    (property "Reference" "D27" (at 49.53 83.82 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 49.53 85.2711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 49.53 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 49.53 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 49.53 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 49.53 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 49.53 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 49.53 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 49.53 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a6e1af7a-a704-4352-b7d8-8546df277fc9))
-    (pin "2" (uuid f9317d9f-528a-45fd-9ad9-26cb68c310c5))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D27") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D68") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D95") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 69.85 68.58 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 0e634889-3df6-491a-b6cd-471b55302c12)
-    (property "Reference" "D10" (at 69.85 64.77 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 69.85 66.2211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 69.85 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 69.85 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 69.85 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 69.85 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 69.85 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 69.85 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 69.85 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 24c3f8a3-c97a-44f8-9789-e8cee412069f))
-    (pin "2" (uuid 8f829c7a-d112-4fa3-a8cc-612331c178ac))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D10") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D73") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D100") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 90.17 74.93 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 17f1c06b-60e4-4699-9ff7-361fbcebb90f)
-    (property "Reference" "D21" (at 90.17 71.12 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 90.17 72.5711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 90.17 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 90.17 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 90.17 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 90.17 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 90.17 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 90.17 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 90.17 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 00478350-da8d-4334-8b24-db5246089455))
-    (pin "2" (uuid bccd5673-e329-4578-b60f-9afb30b7a06e))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D21") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D83") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D110") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 59.69 81.28 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 29e630a1-ff8c-4ccc-9d77-d559791c36ed)
-    (property "Reference" "D28" (at 59.69 77.47 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 59.69 78.9211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 59.69 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 59.69 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 59.69 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 59.69 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 59.69 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 59.69 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 59.69 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ad5bcead-c351-420d-826a-781675ada3b2))
-    (pin "2" (uuid d47fbbe2-4b9b-4054-9f60-2f329fc23826))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D28") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D72") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D99") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 80.01 74.93 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 2da58032-0074-41f1-9fd0-0bae8921530b)
-    (property "Reference" "D20" (at 80.01 71.12 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 80.01 72.5711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 80.01 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 80.01 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 80.01 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 80.01 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 80.01 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 80.01 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 80.01 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0a41c9fb-6477-4df3-a40c-10b3f2def449))
-    (pin "2" (uuid c1b33191-f35e-4368-9889-1406037e97cb))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D20") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D79") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D106") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 100.33 68.58 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 34c77c81-d950-41ec-bbd9-92c8658fe897)
-    (property "Reference" "D9" (at 100.33 64.77 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 100.33 66.2211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 100.33 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 100.33 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 100.33 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 100.33 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 100.33 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 100.33 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 100.33 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f0fe9ef8-e495-4a9d-8c3e-2bb5b81207ad))
-    (pin "2" (uuid 0af8d225-2c87-4803-9482-01b9997ff9e6))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D9") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D87") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D114") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 80.01 81.28 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 3e54c386-3fc4-4d71-b2d0-dc57e74a1225)
-    (property "Reference" "D32" (at 80.01 77.47 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 80.01 78.9211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 80.01 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 80.01 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 80.01 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 80.01 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 80.01 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 80.01 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 80.01 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4d8a9c8e-1101-4a01-b345-d66a7d34862d))
-    (pin "2" (uuid a97034d5-418a-47f3-990a-5412a0ce506a))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D32") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D80") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D107") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 49.53 93.98 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 4c299afb-676b-4946-b62d-3f463cbbc2a2)
-    (property "Reference" "D44" (at 49.53 90.17 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 49.53 91.6211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 49.53 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 49.53 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 49.53 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 49.53 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 49.53 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 49.53 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 49.53 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 70d03e6d-4f7a-4440-802b-1a61a6be6ccc))
-    (pin "2" (uuid cf617272-47c3-4140-b584-2c2c78922340))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D44") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D69") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D96") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 69.85 93.98 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 4ddf6efe-4942-415e-b36e-5ea1f399d76f)
-    (property "Reference" "D48" (at 69.85 90.17 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 69.85 91.6211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 69.85 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 69.85 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 69.85 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 69.85 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 69.85 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 69.85 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 69.85 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 89a49ec6-a976-40d0-88d4-d5385e4ea4a6))
-    (pin "2" (uuid b637dae4-9a39-43a6-8c3d-9d2faf2d986b))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D48") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D76") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D103") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 90.17 106.68 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 500298d1-ffe0-448b-89c6-15a2faa19353)
-    (property "Reference" "D66" (at 90.17 102.87 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 90.17 104.3211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 90.17 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 90.17 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 90.17 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 90.17 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 90.17 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 90.17 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 90.17 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 66463783-068e-41a4-a04e-35b29ea7a5f3))
-    (pin "2" (uuid fabcbda3-924e-4f5a-81f4-c5eaef66a950))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D66") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D86") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D113") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 100.33 100.33 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 525d1c02-aa62-4baf-bb81-9bdf5b0164cf)
-    (property "Reference" "D55" (at 100.33 96.52 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 100.33 97.9711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 100.33 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 100.33 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 100.33 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 100.33 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 100.33 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 100.33 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 100.33 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ea7a093e-6d5d-41ef-b1fa-7482d266045b))
-    (pin "2" (uuid 87936823-70e4-4c42-861e-905a1c3e61ab))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D55") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D90") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D117") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 90.17 81.28 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 5b9ebd67-8e5c-4d60-b1f1-8a3d2cfb0d21)
-    (property "Reference" "D34" (at 90.17 77.47 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 90.17 78.9211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 90.17 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 90.17 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 90.17 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 90.17 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 90.17 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 90.17 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 90.17 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 10724b91-f5b0-4eea-8a79-eb07d06ba565))
-    (pin "2" (uuid 10944289-3873-4ca6-a0e1-5093d5c86ec7))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D34") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D84") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D111") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 49.53 100.33 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 5e0fca19-0700-40ef-84be-666dd07e6939)
-    (property "Reference" "D45" (at 49.53 96.52 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 49.53 97.9711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 49.53 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 49.53 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 49.53 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 49.53 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 49.53 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 49.53 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 49.53 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 61ff1fc6-cc78-4fbd-ac6d-45db6bd354cc))
-    (pin "2" (uuid e1df4251-8b1b-4d9b-9055-17cb32022065))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D45") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D70") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D97") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 49.53 68.58 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 74fd0d9f-6fa6-4dcf-bee4-033883d08ab9)
-    (property "Reference" "D8" (at 49.53 64.77 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 49.53 66.2211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 49.53 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 49.53 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 49.53 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 49.53 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 49.53 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 49.53 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 49.53 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid bd932387-a142-490d-8b78-287bb708f95a))
-    (pin "2" (uuid 26c3932a-395c-4cc8-b978-8cbdf59171fa))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D8") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D65") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D92") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 90.17 100.33 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 778b62dc-cfe0-4b4a-ade4-fb3392aac8b7)
-    (property "Reference" "D53" (at 90.17 96.52 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 90.17 97.9711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 90.17 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 90.17 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 90.17 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 90.17 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 90.17 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 90.17 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 90.17 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 89b93f9d-e0f3-406c-93bd-4000b9c75699))
-    (pin "2" (uuid 9b021882-8c71-4a9b-925f-c6a01cf67213))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D53") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D85") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D112") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 80.01 68.58 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 95a63ceb-d955-4dea-b801-7ec244e1033f)
-    (property "Reference" "D11" (at 80.01 64.77 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 80.01 66.2211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 80.01 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 80.01 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 80.01 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 80.01 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 80.01 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 80.01 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 80.01 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4f5d4887-3ca6-4fc9-a8c2-c1c580d3c624))
-    (pin "2" (uuid 28016acb-088b-498f-8a9d-1c4cc53f5d27))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D11") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D78") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D105") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 100.33 87.63 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 9ab4189e-f20a-4a81-be2c-ab10cf29fcfe)
-    (property "Reference" "D37" (at 100.33 83.82 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 100.33 85.2711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 100.33 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 100.33 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 100.33 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 100.33 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 100.33 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 100.33 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 100.33 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid fc681a02-9105-414b-b2d1-2588bbbb35d0))
-    (pin "2" (uuid 06450089-a059-4a03-8e73-2292df1cf689))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D37") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D89") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D116") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 80.01 87.63 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 9c6d1575-05f8-455c-8fcb-633410f1969f)
-    (property "Reference" "D33" (at 80.01 83.82 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 80.01 85.2711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 80.01 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 80.01 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 80.01 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 80.01 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 80.01 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 80.01 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 80.01 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 3d3cd2f9-f117-47d8-8a57-a945afc7a9ca))
-    (pin "2" (uuid 17480d84-4b22-4eb6-b04b-679a69feb902))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D33") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D81") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D108") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 49.53 74.93 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid a995e34b-05ec-438a-9bd1-6f14257f5834)
-    (property "Reference" "D17" (at 49.53 71.12 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 49.53 72.5711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 49.53 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 49.53 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 49.53 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 49.53 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 49.53 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 49.53 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 49.53 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 70ad9dde-bc85-41c1-8140-765ffaef76d5))
-    (pin "2" (uuid 1d425902-77db-401b-a15e-0f6fb1b43638))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D17") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D66") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D93") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 59.69 74.93 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid bba6a631-b927-435d-ad95-d0d35e8e0371)
-    (property "Reference" "D18" (at 59.69 71.12 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 59.69 72.5711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 59.69 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 59.69 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 59.69 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 59.69 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 59.69 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 59.69 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 59.69 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 2ae31c37-e47a-44e2-801f-98cfb4b9cefb))
-    (pin "2" (uuid b4065f31-3fcc-46b2-acec-30e12dc50c36))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D18") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D71") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D98") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 49.53 81.28 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid bec0d0c8-06b6-4aa5-b9dc-9c28fa842cc2)
-    (property "Reference" "D26" (at 49.53 77.47 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 49.53 78.9211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 49.53 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 49.53 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 49.53 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 49.53 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 49.53 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 49.53 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 49.53 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 2dc63000-b65c-4edb-b227-93d92bb84edc))
-    (pin "2" (uuid a495a61a-53f6-4f11-8f29-be98c9166d69))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D26") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D67") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D94") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 80.01 106.68 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid cadcbcd5-b6aa-49a9-b504-4e22faf9782d)
-    (property "Reference" "D65" (at 80.01 102.87 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 80.01 104.3211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 80.01 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 80.01 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 80.01 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 80.01 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 80.01 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 80.01 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 80.01 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid efa4596b-207d-49cf-a6d2-ebf0d4f59753))
-    (pin "2" (uuid 938a5595-5269-493b-9f5b-de80b2e26dc9))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D65") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D82") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D109") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 100.33 106.68 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid d366313e-25f6-4210-94a7-181a0609756c)
-    (property "Reference" "D67" (at 100.33 102.87 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 100.33 104.3211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 100.33 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 100.33 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 100.33 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 100.33 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 100.33 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 100.33 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 100.33 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid c285099d-8afb-4d17-b2e8-fbc172999de5))
-    (pin "2" (uuid 1411763f-623a-4bc2-9452-20580c7eed35))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D67") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D91") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D118") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 69.85 106.68 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid dc0e9b2a-3265-4e5a-b811-c532f4d499ba)
-    (property "Reference" "D64" (at 69.85 102.87 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 69.85 104.3211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 69.85 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 69.85 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 69.85 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 69.85 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 69.85 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 69.85 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 69.85 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4bfb8d1d-5020-430d-bee2-88a028fc9d76))
-    (pin "2" (uuid 9e6104cb-c16f-49e1-9bcd-cef30482d79c))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D64") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D77") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D104") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 69.85 87.63 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid e0074984-fbec-482e-aabd-4e65582049c6)
-    (property "Reference" "D31" (at 69.85 83.82 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 69.85 85.2711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 69.85 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 69.85 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 69.85 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 69.85 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 69.85 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 69.85 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 69.85 87.63 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 351fcf4a-7ec9-4da6-929e-81b5e0fc778e))
-    (pin "2" (uuid bd23cb70-d671-4616-87b0-42d83c30c7cc))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D31") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D75") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D102") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 100.33 81.28 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid e4e31fc8-e6d7-43f1-93f6-ae59c975b51b)
-    (property "Reference" "D36" (at 100.33 77.47 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 100.33 78.9211 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 100.33 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 100.33 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 100.33 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 100.33 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 100.33 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 100.33 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 100.33 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ba135a33-de8d-494e-8eae-0123c3f6d9a5))
-    (pin "2" (uuid eb5de7b6-3edc-420a-8e86-f17c74d3a88d))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D36") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D88") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D115") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 69.85 74.93 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid f986b2c4-8a83-43f5-a84a-7c66efcf383c)
-    (property "Reference" "D19" (at 69.85 71.12 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 69.85 72.5711 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 69.85 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 69.85 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 69.85 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 69.85 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 69.85 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 69.85 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 69.85 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 985c8a87-7359-497d-9d94-9ed0dd897b75))
-    (pin "2" (uuid 2299baf3-f8f9-43b9-bff9-97fe452a18b9))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/a656f16a-fa83-4cef-871c-5aaaf289a7f0"
-          (reference "D19") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D74") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
-          (reference "D101") (unit 1)
-        )
-      )
-    )
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "109af144-bfdc-4da8-b2a0-80c4a8e78366")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:D"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 73.66 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0a5eb4b8-7143-4b35-a21a-21c914bdea39")
+	)
+	(junction
+		(at 66.04 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f59d767-47a5-41e4-8179-3601c7fb1b14")
+	)
+	(junction
+		(at 45.72 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21dee8ed-7c3a-407a-b926-6f52fdf218e5")
+	)
+	(junction
+		(at 96.52 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "26ce1771-ca12-4d83-a9dc-94b1b21eda6e")
+	)
+	(junction
+		(at 76.2 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "280c7c8a-3fa5-484f-91cb-e7cef2b97666")
+	)
+	(junction
+		(at 73.66 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2d163bb6-c132-49cc-abfc-021cf8187cad")
+	)
+	(junction
+		(at 76.2 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2eb377d2-1c84-4443-b698-70cc83d6db7e")
+	)
+	(junction
+		(at 76.2 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "308e4a75-507a-479c-bcde-60a8286b3d13")
+	)
+	(junction
+		(at 83.82 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "32a10246-b6c3-43d3-b245-56f2448f2a34")
+	)
+	(junction
+		(at 104.14 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3399a905-3b4f-43de-a4c9-9473ea2110bc")
+	)
+	(junction
+		(at 45.72 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "410b5a55-efd0-47fe-82e1-b78ef0c0a14f")
+	)
+	(junction
+		(at 76.2 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4af0226c-0b3e-4265-8129-baaa8ab6df2f")
+	)
+	(junction
+		(at 83.82 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5048bd2a-a38c-48d9-a513-b567368668b2")
+	)
+	(junction
+		(at 66.04 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "54a231a5-d6f4-4b0e-9868-05a1b96d4b16")
+	)
+	(junction
+		(at 96.52 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55c0c9a4-4502-45f9-b51c-7a8437f96ec3")
+	)
+	(junction
+		(at 45.72 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56a552e0-4821-4bf5-b5ad-2b63f7121fe2")
+	)
+	(junction
+		(at 86.36 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "66418974-e1ea-482e-8a15-9ae7e76c5a32")
+	)
+	(junction
+		(at 73.66 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "709aaf46-9db6-494f-9ff0-d0b6542ad0ea")
+	)
+	(junction
+		(at 83.82 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "71a6b0fb-7c24-498f-9a5f-85678fd7abb1")
+	)
+	(junction
+		(at 93.98 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "75b587f5-e9e3-4429-831c-8a40988a59d3")
+	)
+	(junction
+		(at 66.04 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "763fbabd-1abf-47aa-a13b-f833d12542c9")
+	)
+	(junction
+		(at 93.98 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "79385fba-1f4f-4403-afde-7dd7caa71a9a")
+	)
+	(junction
+		(at 104.14 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82326e0b-87fc-4271-928d-cdaa2f3a0e5e")
+	)
+	(junction
+		(at 104.14 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9bde2edf-8548-4698-af69-53bf276e33fe")
+	)
+	(junction
+		(at 86.36 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aab73583-46a7-49b0-a308-c41fde7d861d")
+	)
+	(junction
+		(at 93.98 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "adcd7d31-e790-4153-a710-75b8bcf340ab")
+	)
+	(junction
+		(at 93.98 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b36bd3ed-ff8e-4e68-af83-00b4b985105f")
+	)
+	(junction
+		(at 63.5 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b4d122ea-6827-45e4-9791-c7e8461d7474")
+	)
+	(junction
+		(at 104.14 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5ed6e8d-5129-498c-a2fe-1a5e69c730f8")
+	)
+	(junction
+		(at 73.66 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b6e4cc74-e3ff-444c-b051-7d0086c666d9")
+	)
+	(junction
+		(at 45.72 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bc4d1c61-11d0-4c22-ac09-9217530b0ef0")
+	)
+	(junction
+		(at 63.5 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bd2a74a1-4802-4e9c-b1ec-96b479389b73")
+	)
+	(junction
+		(at 83.82 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bea0d98e-4bb8-43f9-ae8c-4c05bcc18501")
+	)
+	(junction
+		(at 86.36 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cc56a79f-4422-46ac-8a5f-e6741027c1b5")
+	)
+	(junction
+		(at 66.04 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d35f8e9f-a01a-4f0e-96ff-ff2f7544cb29")
+	)
+	(junction
+		(at 55.88 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dd4bd5f4-9607-4df0-b9e9-960f5d83fc94")
+	)
+	(junction
+		(at 45.72 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e0024d76-6d5e-4a31-8368-25aad49afafb")
+	)
+	(junction
+		(at 104.14 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eb1360f2-adc1-4d43-8545-8fef223ccd6e")
+	)
+	(junction
+		(at 96.52 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed47f823-7062-4819-b8cc-bcb1dc693627")
+	)
+	(junction
+		(at 83.82 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef455b8f-f2a3-49cf-901a-3f14c51ecdcf")
+	)
+	(junction
+		(at 96.52 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f12f5e46-396f-4309-8756-8c2046446118")
+	)
+	(wire
+		(pts
+			(xy 73.66 74.93) (xy 73.66 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00e8d38c-5db9-429c-94db-557cfbaa3798")
+	)
+	(wire
+		(pts
+			(xy 96.52 81.28) (xy 96.52 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02c9c674-f19a-4cb6-8b45-91463125dc6c")
+	)
+	(wire
+		(pts
+			(xy 76.2 74.93) (xy 76.2 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03f3e759-cfab-4c89-aa72-dc0d417ce2b4")
+	)
+	(wire
+		(pts
+			(xy 96.52 100.33) (xy 96.52 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03fcf7d8-5979-4a94-ae66-a7451d970a35")
+	)
+	(wire
+		(pts
+			(xy 45.72 87.63) (xy 45.72 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08578c77-ec26-41d4-8f99-9f26fbeadcf2")
+	)
+	(wire
+		(pts
+			(xy 86.36 81.28) (xy 86.36 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e2d5e50-6981-4f84-bae7-2fccb376b2f9")
+	)
+	(wire
+		(pts
+			(xy 96.52 60.96) (xy 96.52 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14c85412-ff45-49cd-bd10-de52d763ad31")
+	)
+	(wire
+		(pts
+			(xy 76.2 87.63) (xy 76.2 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16fe6ac0-948c-4aa1-8ea0-b01b9e53f1ae")
+	)
+	(wire
+		(pts
+			(xy 83.82 77.47) (xy 93.98 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2025a2f3-226f-46a6-ad63-5795f9a00fe7")
+	)
+	(wire
+		(pts
+			(xy 53.34 68.58) (xy 53.34 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20797f4a-3ef2-4513-9050-1bc9666bed37")
+	)
+	(wire
+		(pts
+			(xy 45.72 60.96) (xy 45.72 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20b8e9df-30c4-47bf-a5a7-99886300d7f9")
+	)
+	(wire
+		(pts
+			(xy 53.34 87.63) (xy 53.34 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "226810c2-46ca-44fb-85e7-896e6ac3f31b")
+	)
+	(wire
+		(pts
+			(xy 63.5 83.82) (xy 83.82 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22aa355d-a1f4-4703-8f60-fc0ca49b76dc")
+	)
+	(wire
+		(pts
+			(xy 86.36 74.93) (xy 86.36 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "237e9e1c-fc66-4d12-8086-f59de01d76bf")
+	)
+	(wire
+		(pts
+			(xy 104.14 81.28) (xy 104.14 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23873786-2287-455c-b9b8-517da1d99bf4")
+	)
+	(wire
+		(pts
+			(xy 63.5 81.28) (xy 63.5 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24eec2d6-2c85-41e4-9b99-69f91112c77b")
+	)
+	(wire
+		(pts
+			(xy 45.72 68.58) (xy 45.72 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26f9fde2-c4ac-4507-b662-fa61e7c068d7")
+	)
+	(wire
+		(pts
+			(xy 73.66 87.63) (xy 73.66 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28ce9463-36ab-4979-9996-8a7fce4debfc")
+	)
+	(wire
+		(pts
+			(xy 83.82 71.12) (xy 104.14 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30415d04-ee84-4438-ad35-964eeabe9a7e")
+	)
+	(wire
+		(pts
+			(xy 104.14 100.33) (xy 104.14 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32cc62b1-f65e-476c-9377-5c117a66c1b5")
+	)
+	(wire
+		(pts
+			(xy 83.82 110.49) (xy 93.98 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c216d1c-0596-491e-9b64-d6c940b3f0d3")
+	)
+	(wire
+		(pts
+			(xy 66.04 93.98) (xy 66.04 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c8028e9-06d3-4305-ae0b-ca8c7d2fb4b8")
+	)
+	(wire
+		(pts
+			(xy 66.04 68.58) (xy 66.04 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e0d7a17-fc11-4ad7-b6bb-32697eb37cb4")
+	)
+	(wire
+		(pts
+			(xy 66.04 87.63) (xy 66.04 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3eb1dbaf-13f1-40a7-9976-04b9643a2405")
+	)
+	(wire
+		(pts
+			(xy 73.66 77.47) (xy 83.82 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fe38500-9ca7-4364-b0cc-a7fb842f10e2")
+	)
+	(wire
+		(pts
+			(xy 45.72 93.98) (xy 45.72 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41f5f208-0a5d-4286-97c9-f3e85af2301c")
+	)
+	(wire
+		(pts
+			(xy 73.66 90.17) (xy 83.82 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42f492d5-e168-44ed-8bba-649d78be7936")
+	)
+	(wire
+		(pts
+			(xy 45.72 81.28) (xy 45.72 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43e37bae-d53a-48a4-899e-ddc978b528c0")
+	)
+	(wire
+		(pts
+			(xy 63.5 77.47) (xy 73.66 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4656f8b1-6c4e-4fe8-9ad9-08d99855c3b7")
+	)
+	(wire
+		(pts
+			(xy 93.98 106.68) (xy 93.98 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f054c02-0f45-48ba-9950-a1266b9c0003")
+	)
+	(wire
+		(pts
+			(xy 53.34 90.17) (xy 73.66 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c2566cd-8a16-4630-8ad3-6b7b289a2d9e")
+	)
+	(wire
+		(pts
+			(xy 83.82 68.58) (xy 83.82 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66b3d814-5cc7-485c-b509-e07932336649")
+	)
+	(wire
+		(pts
+			(xy 73.66 68.58) (xy 73.66 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66f01007-290a-4488-8499-c06c3a369cf3")
+	)
+	(wire
+		(pts
+			(xy 73.66 71.12) (xy 83.82 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "674e843d-e947-4853-9f7c-4ea1bae3fb9f")
+	)
+	(wire
+		(pts
+			(xy 73.66 93.98) (xy 73.66 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6df57a5a-2cd1-4031-9f91-88aa421d18d0")
+	)
+	(wire
+		(pts
+			(xy 86.36 100.33) (xy 86.36 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71761dc3-3ff2-40c1-9683-10ffebd9478f")
+	)
+	(wire
+		(pts
+			(xy 93.98 74.93) (xy 93.98 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74c9a4af-2f7d-446b-a2e5-3a1474f4a94d")
+	)
+	(wire
+		(pts
+			(xy 66.04 74.93) (xy 66.04 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75b8ef10-96ac-4cbc-9b7b-3c8ef442638d")
+	)
+	(wire
+		(pts
+			(xy 83.82 83.82) (xy 93.98 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "779ad04b-b756-4a1c-a3e9-ceb90fc97dfc")
+	)
+	(wire
+		(pts
+			(xy 104.14 106.68) (xy 104.14 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f1d557f-04fd-44c5-8e76-44bb5eb7a731")
+	)
+	(wire
+		(pts
+			(xy 93.98 100.33) (xy 93.98 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "828e3f0e-a361-4708-9a11-dd857d55fef0")
+	)
+	(wire
+		(pts
+			(xy 53.34 77.47) (xy 63.5 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88e5833c-8981-4c14-90d8-706b3ce2d407")
+	)
+	(wire
+		(pts
+			(xy 93.98 102.87) (xy 104.14 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b3ccc80-1965-4faf-ae6d-85919d014cde")
+	)
+	(wire
+		(pts
+			(xy 93.98 81.28) (xy 93.98 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c637e37-dd88-409d-8807-21f858e78d53")
+	)
+	(wire
+		(pts
+			(xy 104.14 90.17) (xy 110.49 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "968c1c0a-36b0-472a-944b-b5722e2d9351")
+	)
+	(wire
+		(pts
+			(xy 53.34 96.52) (xy 73.66 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96d377d6-ee90-4df7-8ccc-9716930b61b5")
+	)
+	(wire
+		(pts
+			(xy 96.52 68.58) (xy 96.52 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b984e16-ba7d-4520-8bdd-2896d740cdb5")
+	)
+	(wire
+		(pts
+			(xy 53.34 93.98) (xy 53.34 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c885788-1d54-4db9-9661-283b2cc7db03")
+	)
+	(wire
+		(pts
+			(xy 96.52 87.63) (xy 96.52 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab2dc9d4-c4cb-45f5-9f83-9c81c5e926f3")
+	)
+	(wire
+		(pts
+			(xy 93.98 77.47) (xy 110.49 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab6d4bbb-aa72-4699-a0d7-1b1e014168bd")
+	)
+	(wire
+		(pts
+			(xy 93.98 110.49) (xy 104.14 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab843149-cc4f-4f46-affa-aec1c6d9e0ff")
+	)
+	(wire
+		(pts
+			(xy 76.2 60.96) (xy 76.2 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac0faad1-f8b4-4807-989f-136f237a5bee")
+	)
+	(wire
+		(pts
+			(xy 53.34 74.93) (xy 53.34 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac9fbec4-b3fa-442b-92ac-1ef940b1c58f")
+	)
+	(wire
+		(pts
+			(xy 55.88 60.96) (xy 55.88 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad752e89-d20b-4420-9526-1147386b9256")
+	)
+	(wire
+		(pts
+			(xy 63.5 74.93) (xy 63.5 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aff156a9-2ed1-4da5-87cd-75034a31386e")
+	)
+	(wire
+		(pts
+			(xy 104.14 71.12) (xy 110.49 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1f76e11-aa8e-44fa-af36-ecbd7d25aa25")
+	)
+	(wire
+		(pts
+			(xy 83.82 74.93) (xy 83.82 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb200f18-0608-47a6-9900-f7b62554e8b9")
+	)
+	(wire
+		(pts
+			(xy 73.66 106.68) (xy 73.66 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb31514c-39da-4fa3-b4bf-76a78c81b06c")
+	)
+	(wire
+		(pts
+			(xy 83.82 106.68) (xy 83.82 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2861758-26ec-4d21-95d6-e5de3d72d794")
+	)
+	(wire
+		(pts
+			(xy 104.14 68.58) (xy 104.14 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4c7c189-66e9-45ef-bb06-27f013591d70")
+	)
+	(wire
+		(pts
+			(xy 73.66 96.52) (xy 110.49 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5030006-574f-4511-8d75-05a0a8c8bbf7")
+	)
+	(wire
+		(pts
+			(xy 76.2 68.58) (xy 76.2 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8d93fb5-f826-4c45-9052-898ba1cbf2e5")
+	)
+	(wire
+		(pts
+			(xy 104.14 102.87) (xy 110.49 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cae631c6-5c25-44e6-b673-3bd2a0cc9118")
+	)
+	(wire
+		(pts
+			(xy 53.34 83.82) (xy 63.5 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb1a8b60-17a7-43f8-8df3-084f634490ea")
+	)
+	(wire
+		(pts
+			(xy 83.82 87.63) (xy 83.82 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce933a46-5d3f-4780-a302-85159b53def5")
+	)
+	(wire
+		(pts
+			(xy 104.14 110.49) (xy 110.49 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d16293fd-fccb-42a7-8e55-9747c1092b10")
+	)
+	(wire
+		(pts
+			(xy 83.82 81.28) (xy 83.82 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc1e584f-2011-429e-a70f-0b6200107c78")
+	)
+	(wire
+		(pts
+			(xy 53.34 102.87) (xy 93.98 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc3e1ce1-2374-48b0-bfc5-90495bdeddd8")
+	)
+	(wire
+		(pts
+			(xy 83.82 90.17) (xy 104.14 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc962753-9fa7-4941-952a-3aa5d16ca92b")
+	)
+	(wire
+		(pts
+			(xy 104.14 83.82) (xy 110.49 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de1672fd-fc72-4362-b229-e7e8451beedd")
+	)
+	(wire
+		(pts
+			(xy 86.36 60.96) (xy 86.36 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df5c9c10-47c4-4f39-bdff-8051347b5202")
+	)
+	(wire
+		(pts
+			(xy 45.72 74.93) (xy 45.72 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dff88fc4-f359-482e-bc01-58c74ca1c56c")
+	)
+	(wire
+		(pts
+			(xy 53.34 71.12) (xy 73.66 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8169b1d-792d-474a-aab5-c5d55eef0535")
+	)
+	(wire
+		(pts
+			(xy 53.34 100.33) (xy 53.34 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e994d6c1-519f-4a01-bc8c-3f20fcc1aaaf")
+	)
+	(wire
+		(pts
+			(xy 104.14 87.63) (xy 104.14 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecffa62a-4614-4255-a5a3-d42058a192f9")
+	)
+	(wire
+		(pts
+			(xy 76.2 81.28) (xy 76.2 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed9a1871-868b-4ea9-b1fb-7f6eda1418a8")
+	)
+	(wire
+		(pts
+			(xy 73.66 110.49) (xy 83.82 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f21bcc25-61cc-498a-b4b1-d16d5d3bf9bc")
+	)
+	(wire
+		(pts
+			(xy 55.88 74.93) (xy 55.88 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4447767-aa17-4197-b0bb-e8b9e747cc6d")
+	)
+	(wire
+		(pts
+			(xy 93.98 83.82) (xy 104.14 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f52023e4-ad0a-4448-9b14-4d6a183c9a85")
+	)
+	(wire
+		(pts
+			(xy 66.04 60.96) (xy 66.04 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb0ce991-7f99-47d0-8a30-180afa0f68c2")
+	)
+	(wire
+		(pts
+			(xy 53.34 81.28) (xy 53.34 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffc21fa6-dd93-4d92-9f3a-c6e2d5848726")
+	)
+	(hierarchical_label "4"
+		(shape input)
+		(at 86.36 60.96 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "025de2bb-2bde-4c2e-bea1-53b1307215f1")
+	)
+	(hierarchical_label "F"
+		(shape output)
+		(at 110.49 102.87 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0fa62e7b-d510-4c44-b6c6-83bc9f0b513c")
+	)
+	(hierarchical_label "B"
+		(shape output)
+		(at 110.49 77.47 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "14e0b6d3-02ab-4a40-8e6d-8a24565bc1c9")
+	)
+	(hierarchical_label "A"
+		(shape output)
+		(at 110.49 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "16366b1b-ab24-42d4-a4b3-6bb9e2f44b32")
+	)
+	(hierarchical_label "C"
+		(shape output)
+		(at 110.49 83.82 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "208d1c58-6413-4129-8309-2f77b5870f4d")
+	)
+	(hierarchical_label "G"
+		(shape output)
+		(at 110.49 110.49 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "271aeb87-37a3-4698-af70-fbe8119f194d")
+	)
+	(hierarchical_label "3"
+		(shape input)
+		(at 76.2 60.96 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "59e059ac-788a-4911-a9ec-3522b7ddb0ac")
+	)
+	(hierarchical_label "2"
+		(shape input)
+		(at 66.04 60.96 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "90fe77af-2c58-42b7-ad33-d36be8915820")
+	)
+	(hierarchical_label "E"
+		(shape output)
+		(at 110.49 96.52 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9367da2b-51d6-4c47-b051-87fc610236d1")
+	)
+	(hierarchical_label "0"
+		(shape input)
+		(at 45.72 60.96 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9b2c9b85-e42e-4dfb-bc19-24db2ab44f92")
+	)
+	(hierarchical_label "1"
+		(shape input)
+		(at 55.88 60.96 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a18d5739-77a0-4ae9-a8ae-c8a0e735317a")
+	)
+	(hierarchical_label "5"
+		(shape input)
+		(at 96.52 60.96 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bea86330-8763-414d-8a84-5ae3a5aa4a11")
+	)
+	(hierarchical_label "D"
+		(shape output)
+		(at 110.49 90.17 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "caedb4fb-733f-44bc-87e7-0fe4a7a4f885")
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 49.53 87.63 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0ac5ca23-9369-4f68-95fc-65f477f249c2")
+		(property "Reference" "D68"
+			(at 49.53 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 49.53 85.2711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 49.53 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 49.53 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 49.53 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 49.53 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 49.53 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 49.53 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6e1af7a-a704-4352-b7d8-8546df277fc9")
+		)
+		(pin "2"
+			(uuid "f9317d9f-528a-45fd-9ad9-26cb68c310c5")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D95")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D68")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 69.85 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0e634889-3df6-491a-b6cd-471b55302c12")
+		(property "Reference" "D73"
+			(at 69.85 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 69.85 66.2211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "24c3f8a3-c97a-44f8-9789-e8cee412069f")
+		)
+		(pin "2"
+			(uuid "8f829c7a-d112-4fa3-a8cc-612331c178ac")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D100")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D73")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 90.17 74.93 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "17f1c06b-60e4-4699-9ff7-361fbcebb90f")
+		(property "Reference" "D83"
+			(at 90.17 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 90.17 72.5711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 90.17 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.17 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 90.17 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 90.17 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 90.17 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 90.17 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 90.17 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "00478350-da8d-4334-8b24-db5246089455")
+		)
+		(pin "2"
+			(uuid "bccd5673-e329-4578-b60f-9afb30b7a06e")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D110")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D83")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 59.69 81.28 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "29e630a1-ff8c-4ccc-9d77-d559791c36ed")
+		(property "Reference" "D72"
+			(at 59.69 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 59.69 78.9211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 59.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 59.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 59.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 59.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 59.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 59.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 59.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad5bcead-c351-420d-826a-781675ada3b2")
+		)
+		(pin "2"
+			(uuid "d47fbbe2-4b9b-4054-9f60-2f329fc23826")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D99")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D72")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 80.01 74.93 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2da58032-0074-41f1-9fd0-0bae8921530b")
+		(property "Reference" "D79"
+			(at 80.01 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 80.01 72.5711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 80.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0a41c9fb-6477-4df3-a40c-10b3f2def449")
+		)
+		(pin "2"
+			(uuid "c1b33191-f35e-4368-9889-1406037e97cb")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D106")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D79")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 100.33 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "34c77c81-d950-41ec-bbd9-92c8658fe897")
+		(property "Reference" "D87"
+			(at 100.33 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 100.33 66.2211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f0fe9ef8-e495-4a9d-8c3e-2bb5b81207ad")
+		)
+		(pin "2"
+			(uuid "0af8d225-2c87-4803-9482-01b9997ff9e6")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D114")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D87")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 80.01 81.28 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3e54c386-3fc4-4d71-b2d0-dc57e74a1225")
+		(property "Reference" "D80"
+			(at 80.01 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 80.01 78.9211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4d8a9c8e-1101-4a01-b345-d66a7d34862d")
+		)
+		(pin "2"
+			(uuid "a97034d5-418a-47f3-990a-5412a0ce506a")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D107")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D80")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 49.53 93.98 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4c299afb-676b-4946-b62d-3f463cbbc2a2")
+		(property "Reference" "D69"
+			(at 49.53 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 49.53 91.6211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 49.53 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 49.53 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 49.53 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 49.53 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 49.53 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 49.53 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "70d03e6d-4f7a-4440-802b-1a61a6be6ccc")
+		)
+		(pin "2"
+			(uuid "cf617272-47c3-4140-b584-2c2c78922340")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D96")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D69")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 69.85 93.98 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4ddf6efe-4942-415e-b36e-5ea1f399d76f")
+		(property "Reference" "D76"
+			(at 69.85 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 69.85 91.6211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 69.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 69.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 69.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 69.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 69.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 69.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "89a49ec6-a976-40d0-88d4-d5385e4ea4a6")
+		)
+		(pin "2"
+			(uuid "b637dae4-9a39-43a6-8c3d-9d2faf2d986b")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D103")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D76")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 90.17 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "500298d1-ffe0-448b-89c6-15a2faa19353")
+		(property "Reference" "D86"
+			(at 90.17 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 90.17 104.3211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 90.17 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.17 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 90.17 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 90.17 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 90.17 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 90.17 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 90.17 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "66463783-068e-41a4-a04e-35b29ea7a5f3")
+		)
+		(pin "2"
+			(uuid "fabcbda3-924e-4f5a-81f4-c5eaef66a950")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D113")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D86")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 100.33 100.33 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "525d1c02-aa62-4baf-bb81-9bdf5b0164cf")
+		(property "Reference" "D90"
+			(at 100.33 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 100.33 97.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ea7a093e-6d5d-41ef-b1fa-7482d266045b")
+		)
+		(pin "2"
+			(uuid "87936823-70e4-4c42-861e-905a1c3e61ab")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D117")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D90")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 90.17 81.28 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5b9ebd67-8e5c-4d60-b1f1-8a3d2cfb0d21")
+		(property "Reference" "D84"
+			(at 90.17 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 90.17 78.9211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 90.17 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.17 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 90.17 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 90.17 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 90.17 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 90.17 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 90.17 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "10724b91-f5b0-4eea-8a79-eb07d06ba565")
+		)
+		(pin "2"
+			(uuid "10944289-3873-4ca6-a0e1-5093d5c86ec7")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D111")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D84")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 49.53 100.33 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5e0fca19-0700-40ef-84be-666dd07e6939")
+		(property "Reference" "D70"
+			(at 49.53 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 49.53 97.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 49.53 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 49.53 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 49.53 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 49.53 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 49.53 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 49.53 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "61ff1fc6-cc78-4fbd-ac6d-45db6bd354cc")
+		)
+		(pin "2"
+			(uuid "e1df4251-8b1b-4d9b-9055-17cb32022065")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D97")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D70")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 49.53 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "74fd0d9f-6fa6-4dcf-bee4-033883d08ab9")
+		(property "Reference" "D65"
+			(at 49.53 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 49.53 66.2211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 49.53 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 49.53 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 49.53 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 49.53 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 49.53 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 49.53 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bd932387-a142-490d-8b78-287bb708f95a")
+		)
+		(pin "2"
+			(uuid "26c3932a-395c-4cc8-b978-8cbdf59171fa")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D92")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D65")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 90.17 100.33 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "778b62dc-cfe0-4b4a-ade4-fb3392aac8b7")
+		(property "Reference" "D85"
+			(at 90.17 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 90.17 97.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 90.17 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.17 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 90.17 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 90.17 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 90.17 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 90.17 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 90.17 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "89b93f9d-e0f3-406c-93bd-4000b9c75699")
+		)
+		(pin "2"
+			(uuid "9b021882-8c71-4a9b-925f-c6a01cf67213")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D112")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D85")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 80.01 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "95a63ceb-d955-4dea-b801-7ec244e1033f")
+		(property "Reference" "D78"
+			(at 80.01 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 80.01 66.2211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4f5d4887-3ca6-4fc9-a8c2-c1c580d3c624")
+		)
+		(pin "2"
+			(uuid "28016acb-088b-498f-8a9d-1c4cc53f5d27")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D105")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D78")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 100.33 87.63 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9ab4189e-f20a-4a81-be2c-ab10cf29fcfe")
+		(property "Reference" "D89"
+			(at 100.33 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 100.33 85.2711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 100.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 100.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 100.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 100.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 100.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 100.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fc681a02-9105-414b-b2d1-2588bbbb35d0")
+		)
+		(pin "2"
+			(uuid "06450089-a059-4a03-8e73-2292df1cf689")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D116")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D89")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 80.01 87.63 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9c6d1575-05f8-455c-8fcb-633410f1969f")
+		(property "Reference" "D81"
+			(at 80.01 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 80.01 85.2711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 80.01 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 80.01 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 80.01 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 80.01 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 80.01 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 80.01 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 80.01 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3d3cd2f9-f117-47d8-8a57-a945afc7a9ca")
+		)
+		(pin "2"
+			(uuid "17480d84-4b22-4eb6-b04b-679a69feb902")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D108")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D81")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 49.53 74.93 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a995e34b-05ec-438a-9bd1-6f14257f5834")
+		(property "Reference" "D66"
+			(at 49.53 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 49.53 72.5711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 49.53 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 49.53 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 49.53 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 49.53 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 49.53 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 49.53 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "70ad9dde-bc85-41c1-8140-765ffaef76d5")
+		)
+		(pin "2"
+			(uuid "1d425902-77db-401b-a15e-0f6fb1b43638")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D93")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D66")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 59.69 74.93 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bba6a631-b927-435d-ad95-d0d35e8e0371")
+		(property "Reference" "D71"
+			(at 59.69 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 59.69 72.5711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 59.69 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2ae31c37-e47a-44e2-801f-98cfb4b9cefb")
+		)
+		(pin "2"
+			(uuid "b4065f31-3fcc-46b2-acec-30e12dc50c36")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D98")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D71")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 49.53 81.28 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bec0d0c8-06b6-4aa5-b9dc-9c28fa842cc2")
+		(property "Reference" "D67"
+			(at 49.53 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 49.53 78.9211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 49.53 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 49.53 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 49.53 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 49.53 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 49.53 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 49.53 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2dc63000-b65c-4edb-b227-93d92bb84edc")
+		)
+		(pin "2"
+			(uuid "a495a61a-53f6-4f11-8f29-be98c9166d69")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D94")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D67")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 80.01 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cadcbcd5-b6aa-49a9-b504-4e22faf9782d")
+		(property "Reference" "D82"
+			(at 80.01 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 80.01 104.3211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 80.01 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 80.01 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 80.01 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 80.01 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 80.01 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 80.01 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 80.01 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "efa4596b-207d-49cf-a6d2-ebf0d4f59753")
+		)
+		(pin "2"
+			(uuid "938a5595-5269-493b-9f5b-de80b2e26dc9")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D109")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D82")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 100.33 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d366313e-25f6-4210-94a7-181a0609756c")
+		(property "Reference" "D91"
+			(at 100.33 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 100.33 104.3211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 100.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 100.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 100.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 100.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 100.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 100.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c285099d-8afb-4d17-b2e8-fbc172999de5")
+		)
+		(pin "2"
+			(uuid "1411763f-623a-4bc2-9452-20580c7eed35")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D118")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D91")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 69.85 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dc0e9b2a-3265-4e5a-b811-c532f4d499ba")
+		(property "Reference" "D77"
+			(at 69.85 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 69.85 104.3211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 69.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 69.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 69.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 69.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 69.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 69.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4bfb8d1d-5020-430d-bee2-88a028fc9d76")
+		)
+		(pin "2"
+			(uuid "9e6104cb-c16f-49e1-9bcd-cef30482d79c")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D104")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D77")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 69.85 87.63 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e0074984-fbec-482e-aabd-4e65582049c6")
+		(property "Reference" "D75"
+			(at 69.85 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 69.85 85.2711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 69.85 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 69.85 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 69.85 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 69.85 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 69.85 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 69.85 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "351fcf4a-7ec9-4da6-929e-81b5e0fc778e")
+		)
+		(pin "2"
+			(uuid "bd23cb70-d671-4616-87b0-42d83c30c7cc")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D102")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D75")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 100.33 81.28 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e4e31fc8-e6d7-43f1-93f6-ae59c975b51b")
+		(property "Reference" "D88"
+			(at 100.33 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 100.33 78.9211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 100.33 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 100.33 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 100.33 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 100.33 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 100.33 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 100.33 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba135a33-de8d-494e-8eae-0123c3f6d9a5")
+		)
+		(pin "2"
+			(uuid "eb5de7b6-3edc-420a-8e86-f17c74d3a88d")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D115")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D88")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 69.85 74.93 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f986b2c4-8a83-43f5-a84a-7c66efcf383c")
+		(property "Reference" "D74"
+			(at 69.85 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 69.85 72.5711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 69.85 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 69.85 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 69.85 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 69.85 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 69.85 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 69.85 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "985c8a87-7359-497d-9d94-9ed0dd897b75")
+		)
+		(pin "2"
+			(uuid "2299baf3-f8f9-43b9-bff9-97fe452a18b9")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/369b0561-6154-45b1-b267-ff673911a7b5/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D101")
+					(unit 1)
+				)
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc837116-7951-4754-b134-6b29a9ce0d20/d6ca6b38-08bd-4101-b113-65d5674e5566"
+					(reference "D74")
+					(unit 1)
+				)
+			)
+		)
+	)
 )

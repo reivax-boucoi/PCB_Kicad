@@ -1,1972 +1,4231 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid 08e15fe9-ccbd-4c9b-a439-acc019c2d49c)
-
-  (paper "A4")
-
-  (lib_symbols
-    (symbol "Device:C" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
-      (property "Reference" "C" (at 0.635 2.54 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "C" (at 0.635 -2.54 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "" (at 0.9652 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "cap capacitor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Unpolarized capacitor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "C_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "C_0_1"
-        (polyline
-          (pts
-            (xy -2.032 -0.762)
-            (xy 2.032 -0.762)
-          )
-          (stroke (width 0.508) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -2.032 0.762)
-            (xy 2.032 0.762)
-          )
-          (stroke (width 0.508) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "C_1_1"
-        (pin passive line (at 0 3.81 270) (length 2.794)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -3.81 90) (length 2.794)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Device:C_Polarized" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
-      (property "Reference" "C" (at 0.635 2.54 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "C_Polarized" (at 0.635 -2.54 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "" (at 0.9652 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "cap capacitor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Polarized capacitor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "CP_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "C_Polarized_0_1"
-        (rectangle (start -2.286 0.508) (end 2.286 1.016)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -1.778 2.286)
-            (xy -0.762 2.286)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -1.27 2.794)
-            (xy -1.27 1.778)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (rectangle (start 2.286 -0.508) (end -2.286 -1.016)
-          (stroke (width 0) (type default))
-          (fill (type outline))
-        )
-      )
-      (symbol "C_Polarized_1_1"
-        (pin passive line (at 0 3.81 270) (length 2.794)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -3.81 90) (length 2.794)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Device:D" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "D" (at 0 2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "D" (at 0 -2.54 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Sim.Device" "D" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Sim.Pins" "1=K 2=A" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "diode" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Diode" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "D_0_1"
-        (polyline
-          (pts
-            (xy -1.27 1.27)
-            (xy -1.27 -1.27)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.27 0)
-            (xy -1.27 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.27 1.27)
-            (xy 1.27 -1.27)
-            (xy -1.27 0)
-            (xy 1.27 1.27)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "D_1_1"
-        (pin passive line (at -3.81 0 0) (length 2.54)
-          (name "K" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 3.81 0 180) (length 2.54)
-          (name "A" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Device:R" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "R" (at 2.032 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "R" (at 0 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at -1.778 0 90)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "R res resistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Resistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "R_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "R_0_1"
-        (rectangle (start -1.016 -2.54) (end 1.016 2.54)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "R_1_1"
-        (pin passive line (at 0 3.81 270) (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -3.81 90) (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Device:R_Potentiometer" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "RV" (at -4.445 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "R_Potentiometer" (at -2.54 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "resistor variable" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Potentiometer" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "Potentiometer*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "R_Potentiometer_0_1"
-        (polyline
-          (pts
-            (xy 2.54 0)
-            (xy 1.524 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.143 0)
-            (xy 2.286 0.508)
-            (xy 2.286 -0.508)
-            (xy 1.143 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type outline))
-        )
-        (rectangle (start 1.016 2.54) (end -1.016 -2.54)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "R_Potentiometer_1_1"
-        (pin passive line (at 0 3.81 270) (length 1.27)
-          (name "1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 3.81 0 180) (length 1.27)
-          (name "2" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -3.81 90) (length 1.27)
-          (name "3" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Transistor_BJT:MMBT3904" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "Q" (at 5.08 1.905 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "MMBT3904" (at 5.08 0 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 5.08 -1.905 0)
-        (effects (font (size 1.27 1.27) italic) (justify left) hide)
-      )
-      (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
-      )
-      (property "ki_keywords" "NPN Transistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "SOT?23*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "MMBT3904_0_1"
-        (polyline
-          (pts
-            (xy 0.635 0.635)
-            (xy 2.54 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.635 -0.635)
-            (xy 2.54 -2.54)
-            (xy 2.54 -2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.635 1.905)
-            (xy 0.635 -1.905)
-            (xy 0.635 -1.905)
-          )
-          (stroke (width 0.508) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.27 -1.778)
-            (xy 1.778 -1.27)
-            (xy 2.286 -2.286)
-            (xy 1.27 -1.778)
-            (xy 1.27 -1.778)
-          )
-          (stroke (width 0) (type default))
-          (fill (type outline))
-        )
-        (circle (center 1.27 0) (radius 2.8194)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "MMBT3904_1_1"
-        (pin input line (at -5.08 0 0) (length 5.715)
-          (name "B" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 -5.08 90) (length 2.54)
-          (name "E" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 5.08 270) (length 2.54)
-          (name "C" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Transistor_BJT:MMBT3906" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "Q" (at 5.08 1.905 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "MMBT3906" (at 5.08 0 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 5.08 -1.905 0)
-        (effects (font (size 1.27 1.27) italic) (justify left) hide)
-      )
-      (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
-      )
-      (property "ki_keywords" "PNP Transistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, SOT-23" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "SOT?23*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "MMBT3906_0_1"
-        (polyline
-          (pts
-            (xy 0.635 0.635)
-            (xy 2.54 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.635 -0.635)
-            (xy 2.54 -2.54)
-            (xy 2.54 -2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.635 1.905)
-            (xy 0.635 -1.905)
-            (xy 0.635 -1.905)
-          )
-          (stroke (width 0.508) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.286 -1.778)
-            (xy 1.778 -2.286)
-            (xy 1.27 -1.27)
-            (xy 2.286 -1.778)
-            (xy 2.286 -1.778)
-          )
-          (stroke (width 0) (type default))
-          (fill (type outline))
-        )
-        (circle (center 1.27 0) (radius 2.8194)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "MMBT3906_1_1"
-        (pin input line (at -5.08 0 0) (length 5.715)
-          (name "B" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 -5.08 90) (length 2.54)
-          (name "E" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 5.08 270) (length 2.54)
-          (name "C" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "GND" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "GND_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 -1.27)
-            (xy 1.27 -1.27)
-            (xy 0 -2.54)
-            (xy -1.27 -1.27)
-            (xy 0 -1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "GND_1_1"
-        (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:VCC" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "VCC" (at 0 3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"VCC\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "VCC_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "VCC_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "VCC" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-  )
-
-  (junction (at 119.38 105.41) (diameter 0) (color 0 0 0 0)
-    (uuid 7cbd0b0d-a3af-4d6f-9d74-e8d5411cc4f8)
-  )
-  (junction (at 104.14 67.31) (diameter 0) (color 0 0 0 0)
-    (uuid 8e5a9eea-22b8-4dbc-b6db-651fa3ac5162)
-  )
-  (junction (at 97.79 95.25) (diameter 0) (color 0 0 0 0)
-    (uuid 946d2def-3bbb-4cee-96de-07bc836960b7)
-  )
-  (junction (at 142.24 81.28) (diameter 0) (color 0 0 0 0)
-    (uuid 9af6c8f6-a2a4-4231-8196-ceb31e58f8d2)
-  )
-  (junction (at 160.02 90.17) (diameter 0) (color 0 0 0 0)
-    (uuid aa8c0a6e-77db-4718-aaa9-dab317114167)
-  )
-  (junction (at 97.79 63.5) (diameter 0) (color 0 0 0 0)
-    (uuid bf71b9a9-7d6c-4278-a4c0-0268f01d5a95)
-  )
-  (junction (at 97.79 74.93) (diameter 0) (color 0 0 0 0)
-    (uuid e54713b7-6d5c-478b-8bb2-a13f3f377540)
-  )
-  (junction (at 191.77 105.41) (diameter 0) (color 0 0 0 0)
-    (uuid e59f6f3e-a143-4183-8257-3b8f53f8bf28)
-  )
-  (junction (at 127 100.33) (diameter 0) (color 0 0 0 0)
-    (uuid e5ff7f57-c388-40b0-936c-76bb1992352f)
-  )
-  (junction (at 142.24 97.79) (diameter 0) (color 0 0 0 0)
-    (uuid f227c09d-826a-4f51-9211-f340c83b4c7a)
-  )
-
-  (wire (pts (xy 160.02 107.95) (xy 160.02 90.17))
-    (stroke (width 0) (type default))
-    (uuid 0953da1c-bb23-4880-81a3-4d65489ba4d5)
-  )
-  (wire (pts (xy 104.14 67.31) (xy 104.14 63.5))
-    (stroke (width 0) (type default))
-    (uuid 1b17b8bb-320c-442d-953d-4ac9b60bf516)
-  )
-  (wire (pts (xy 97.79 71.12) (xy 97.79 74.93))
-    (stroke (width 0) (type default))
-    (uuid 1c51ecc7-2a6c-460e-9670-0fb49deb15e0)
-  )
-  (wire (pts (xy 127 115.57) (xy 127 110.49))
-    (stroke (width 0) (type default))
-    (uuid 1ddd9f7a-d1b4-4201-87b7-8fc3e582a0c3)
-  )
-  (wire (pts (xy 142.24 81.28) (xy 152.4 81.28))
-    (stroke (width 0) (type default))
-    (uuid 222b1794-213c-4ab8-b410-5ff526ca4f26)
-  )
-  (wire (pts (xy 97.79 74.93) (xy 104.14 74.93))
-    (stroke (width 0) (type default))
-    (uuid 2986f362-3d75-4919-b74a-38c3a9b12af6)
-  )
-  (wire (pts (xy 186.69 105.41) (xy 191.77 105.41))
-    (stroke (width 0) (type default))
-    (uuid 33394298-b782-4190-9cb4-5407bf83be77)
-  )
-  (wire (pts (xy 160.02 68.58) (xy 160.02 76.2))
-    (stroke (width 0) (type default))
-    (uuid 649618c6-85ba-496a-a092-4cefc690625f)
-  )
-  (wire (pts (xy 142.24 68.58) (xy 142.24 71.12))
-    (stroke (width 0) (type default))
-    (uuid 684493f3-eec8-4bd2-b5ae-f239bade3254)
-  )
-  (wire (pts (xy 97.79 74.93) (xy 97.79 76.2))
-    (stroke (width 0) (type default))
-    (uuid 6bb0fc1c-248d-4041-ac07-a0dccc92534f)
-  )
-  (wire (pts (xy 127 97.79) (xy 127 100.33))
-    (stroke (width 0) (type default))
-    (uuid 8b8ff4ea-6c9d-43bf-82e0-f1c7f39289c7)
-  )
-  (wire (pts (xy 127 97.79) (xy 142.24 97.79))
-    (stroke (width 0) (type default))
-    (uuid 8c622309-1cb1-4f5e-a11e-93160895c410)
-  )
-  (wire (pts (xy 97.79 95.25) (xy 97.79 93.98))
-    (stroke (width 0) (type default))
-    (uuid 9169d119-0188-4e20-807e-a0e7788cd53a)
-  )
-  (wire (pts (xy 78.74 88.9) (xy 90.17 88.9))
-    (stroke (width 0) (type default))
-    (uuid 93e4d041-2a6b-44c0-8cb1-65a8ebd32837)
-  )
-  (wire (pts (xy 142.24 97.79) (xy 142.24 107.95))
-    (stroke (width 0) (type default))
-    (uuid ac3708fd-5bc5-43c6-a477-cf6233694894)
-  )
-  (wire (pts (xy 191.77 105.41) (xy 196.85 105.41))
-    (stroke (width 0) (type default))
-    (uuid ae7a9c89-029e-4123-917a-d0880f178ac4)
-  )
-  (wire (pts (xy 104.14 67.31) (xy 101.6 67.31))
-    (stroke (width 0) (type default))
-    (uuid c7723189-d2bf-45b5-a24b-3ee0721ac548)
-  )
-  (wire (pts (xy 119.38 107.95) (xy 119.38 105.41))
-    (stroke (width 0) (type default))
-    (uuid cdf0c4ae-047e-45b0-91c9-e3a0e4a17007)
-  )
-  (wire (pts (xy 160.02 90.17) (xy 176.53 90.17))
-    (stroke (width 0) (type default))
-    (uuid d0515068-0dac-4ed9-ad5b-8632aabe45d6)
-  )
-  (wire (pts (xy 142.24 81.28) (xy 142.24 82.55))
-    (stroke (width 0) (type default))
-    (uuid e297cc74-09b3-4fe9-8114-958ff14b181b)
-  )
-  (wire (pts (xy 97.79 95.25) (xy 104.14 95.25))
-    (stroke (width 0) (type default))
-    (uuid e7de9084-5ac3-4d49-bbb3-336ee2290f47)
-  )
-  (wire (pts (xy 97.79 96.52) (xy 97.79 95.25))
-    (stroke (width 0) (type default))
-    (uuid f0112ccd-5c3e-4dd0-aecf-693ec19ee4d0)
-  )
-  (wire (pts (xy 160.02 90.17) (xy 160.02 86.36))
-    (stroke (width 0) (type default))
-    (uuid f2ad58f6-3f46-4bfc-8678-c6fc668ac2e4)
-  )
-  (wire (pts (xy 104.14 63.5) (xy 97.79 63.5))
-    (stroke (width 0) (type default))
-    (uuid f7fe0143-15f5-4323-bc68-5467c6f6d881)
-  )
-  (wire (pts (xy 142.24 78.74) (xy 142.24 81.28))
-    (stroke (width 0) (type default))
-    (uuid fb8e6cf7-acb7-41bf-9933-d5a973b03889)
-  )
-
-  (text "TODO: cap type: metalized polyester film" (at 54.61 101.6 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 0385df39-94ea-4d48-b4f1-3b41db6317c1)
-  )
-  (text "3k9" (at 104.14 82.55 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 33fb5cc8-351c-400d-94a0-bd629f030854)
-  )
-  (text "2k" (at 90.17 68.58 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 7bee33c1-42cb-43ff-818b-119b207fb2a9)
-  )
-  (text "TODO check chg current+pot" (at 57.15 76.2 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid c7862e92-af6b-4f72-a2b5-e7d2caea190a)
-  )
-
-  (hierarchical_label "IN" (shape input) (at 78.74 88.9 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 66238bcd-d4d9-40b4-ae1d-3fb7a5710eb6)
-  )
-  (hierarchical_label "OUT" (shape output) (at 176.53 90.17 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 6de0d7fb-730b-4dcf-8365-67131556673d)
-  )
-
-  (symbol (lib_id "power:GND") (at 142.24 115.57 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 02265a61-26f9-451b-a0d4-6ad5848deb16)
-    (property "Reference" "#PWR09" (at 142.24 121.92 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 142.24 119.7055 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 142.24 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 142.24 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 38a9e516-5037-4f7d-bc3f-1adf5333e537))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR09") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0112") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0181") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0208") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0244") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Transistor_BJT:MMBT3906") (at 121.92 100.33 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 05557743-5549-4be5-8bef-62ac2dae1439)
-    (property "Reference" "Q75" (at 116.84 102.235 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MMBT5401" (at 116.84 100.33 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 116.84 98.425 0)
-      (effects (font (size 1.27 1.27) italic) (justify left) hide)
-    )
-    (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" (at 121.92 100.33 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Assembly" "True" (at 121.92 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C8326" (at 121.92 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0137" (at 121.92 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 65d0b651-5114-4b42-8ec7-4cd213139aca))
-    (pin "2" (uuid eb198ed4-cb78-4b5a-b72c-27c0381b2aea))
-    (pin "3" (uuid 54d1fc7d-e34e-4ba6-b4c7-ff2847145b13))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "Q75") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "Q10") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "Q9") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "Q123") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "Q120") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 104.14 71.12 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 05f69677-5a06-4fe1-a1c3-27de9d887755)
-    (property "Reference" "R20" (at 105.918 70.4763 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "DNP" (at 105.918 72.3973 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 105.918 71.12 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 104.14 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "False" (at 104.14 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "" (at 104.14 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "" (at 104.14 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 925224b9-19ef-4028-9caf-7fc30eb91db3))
-    (pin "2" (uuid 2159c2c9-090c-4741-bd0a-9d5b91fb4f3f))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "R20") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "R267") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "R241") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R147") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R56") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R269") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 127 115.57 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 1abb3f82-beba-457d-b749-2edc7a557080)
-    (property "Reference" "#PWR09" (at 127 121.92 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 127 119.7055 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 127 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 127 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 37f5bc93-95b1-4b21-80a3-a4f18e03559f))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR09") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0112") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0181") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0205") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0242") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Transistor_BJT:MMBT3906") (at 95.25 88.9 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 1de29d37-8021-4c5a-b255-f18930801638)
-    (property "Reference" "Q75" (at 100.33 90.805 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MMBT5401" (at 100.33 88.9 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 100.33 86.995 0)
-      (effects (font (size 1.27 1.27) italic) (justify left) hide)
-    )
-    (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" (at 95.25 88.9 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Assembly" "True" (at 95.25 88.9 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C8326" (at 95.25 88.9 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0137" (at 95.25 88.9 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ee9b0419-1af5-4dc5-a950-e039855d4c6e))
-    (pin "2" (uuid 25bbc8f3-da6f-4392-afc4-2ea8385a3843))
-    (pin "3" (uuid f5272bdb-0ca8-49b6-a8ea-689d388a3158))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "Q75") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "Q10") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "Q9") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "Q122") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "Q119") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C") (at 97.79 100.33 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 25cab78b-2315-4107-b575-3495d02fbc43)
-    (property "Reference" "C33" (at 100.711 99.6863 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "1u" (at 100.711 101.6073 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 96.8248 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 97.79 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "False" (at 97.79 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "" (at 97.79 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "" (at 97.79 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid edd67828-5885-4b39-9aa6-368a4f08e911))
-    (pin "2" (uuid 8359d7cd-c19e-4a77-8be5-80081f0bb8cf))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "C33") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "C2") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "C1") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "C55") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "C71") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:VCC") (at 97.79 63.5 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 27c6da9a-064a-44e3-b991-e7c49e55f1d0)
-    (property "Reference" "#PWR022" (at 97.79 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VCC" (at 97.79 59.9981 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 97.79 63.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 97.79 63.5 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid bc579c91-b128-4a0f-acd0-11757f6fa98c))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR022") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0114") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0191") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0229") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0254") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:VCC") (at 142.24 68.58 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 2942343c-dfb7-4123-b2f9-181a55631c6b)
-    (property "Reference" "#PWR022" (at 142.24 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VCC" (at 142.24 65.0781 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 142.24 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 142.24 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 6e030121-a922-4846-9326-f1f484979936))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR022") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0114") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0191") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0200") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0243") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C") (at 196.85 109.22 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 40a1affb-8e56-43dc-a1e7-d988f6fd1f04)
-    (property "Reference" "C77" (at 199.771 108.5763 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "100n" (at 199.771 110.4973 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 195.8848 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 196.85 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 196.85 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C14663" (at 196.85 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0021" (at 196.85 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 1aa146e2-d653-41e2-9866-5dd7eb024f4a))
-    (pin "2" (uuid 1113950b-193d-437e-a518-f24a51f7c7da))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "C77") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "C1") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "C33") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "C2") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "C73") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C_Polarized") (at 186.69 109.22 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 5201894f-7726-4d26-9eeb-41edb81d9a48)
-    (property "Reference" "C76" (at 189.611 107.6873 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "10u" (at 189.611 109.6083 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 187.6552 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 186.69 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 186.69 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C15850" (at 186.69 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0105" (at 186.69 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4528b096-4b52-44a2-a354-398a89e7ffa5))
-    (pin "2" (uuid 50ca8692-64d7-48fa-b832-9828236b1cf4))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "C76") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "C72") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 119.38 115.57 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 56fb36a6-91dd-49eb-ab36-ef7d4bfd3419)
-    (property "Reference" "#PWR09" (at 119.38 121.92 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 119.38 119.7055 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 119.38 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 119.38 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4f762feb-06cc-4fa1-bbb9-5bfbff937ac4))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR09") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0112") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0181") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0204") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0241") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 142.24 74.93 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 615b440f-3275-44b7-bd1a-fdb7bcf90707)
-    (property "Reference" "R252" (at 144.018 74.2863 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "2k2" (at 144.018 76.2073 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 140.462 74.93 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 142.24 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 142.24 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C4190" (at 142.24 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0009" (at 142.24 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 25ee63ac-323e-468a-b1d1-166a19d8cffe))
-    (pin "2" (uuid c2bf7c99-3c69-4313-b4c9-921974150ccc))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "R252") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "R241") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R147") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R56") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "R20") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R248") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R_Potentiometer") (at 97.79 67.31 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6817ebfd-23fe-481e-8de4-fbaff5d20f5c)
-    (property "Reference" "RV1" (at 96.0121 66.6663 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "1k" (at 96.0121 68.5873 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "Potentiometer_THT:Potentiometer_Vishay_T73YP_Vertical" (at 97.79 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 97.79 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "OK" (at 97.79 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "" (at 97.79 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "" (at 97.79 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f915ee11-af5e-4914-8fe5-b4c0e72b59c3))
-    (pin "2" (uuid bc641155-405e-4a41-9006-c747147b6622))
-    (pin "3" (uuid afaceb8d-503a-4770-aa4f-04a88b1fae5d))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "RV1") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "RV2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 107.95 95.25 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6a6f6e30-7164-4067-ba58-b249960ea3a8)
-    (property "Reference" "R20" (at 107.95 91.2241 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1k" (at 107.95 93.1451 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 107.95 97.028 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 107.95 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 107.95 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C21190" (at 107.95 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0005" (at 107.95 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 99013127-0916-420f-83a8-e3b17ab5da90))
-    (pin "2" (uuid 1f710a27-421d-4cef-9191-1d902ec8c3a1))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "R20") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R56") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R147") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "R241") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "R248") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R244") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 142.24 93.98 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6e3b4986-aa67-4f7c-b8db-0088f3949c50)
-    (property "Reference" "R20" (at 144.018 93.3363 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "10k" (at 144.018 95.2573 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 140.462 93.98 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 142.24 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 142.24 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C25804" (at 142.24 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0008" (at 142.24 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a6788a9f-fee4-4f4c-a363-baee18629749))
-    (pin "2" (uuid 20d05457-edba-49e1-95c0-6151c7bdeb24))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "R20") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R56") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R147") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "R225") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "R254") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R237") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 119.38 111.76 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 72b89387-9f7a-4f60-92e3-2c12b750aeb1)
-    (property "Reference" "R20" (at 121.158 111.1163 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "100k" (at 121.158 113.0373 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 117.602 111.76 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 119.38 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 119.38 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C25803" (at 119.38 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0009" (at 119.38 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0de9bbc3-4573-4840-8b80-8bea1de8743b))
-    (pin "2" (uuid 1ee795c3-786e-4dcd-b899-c35ea89b2838))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "R20") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R56") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R147") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "R225") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "R249") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R247") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 186.69 113.03 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 77698150-10d3-4526-901a-3e8d8f41be97)
-    (property "Reference" "#PWR09" (at 186.69 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 186.69 117.1655 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 186.69 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 186.69 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 64778145-6f10-4e7d-beaf-be7dcb4f304b))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR09") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0112") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0181") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0253") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0247") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 160.02 115.57 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7dad5ca1-0d5c-4d16-8561-08c2269799be)
-    (property "Reference" "#PWR09" (at 160.02 121.92 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 160.02 119.7055 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 160.02 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 160.02 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 7703ed6a-35bb-49d2-ba08-614c845e5788))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR09") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0112") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0181") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0208") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0246") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 97.79 104.14 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 8f0fc577-372d-4de0-8d66-65e315197b21)
-    (property "Reference" "#PWR09" (at 97.79 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 97.79 108.2755 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 97.79 104.14 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 97.79 104.14 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid aaa158aa-dc05-43a3-aa5e-d4ad09d85f71))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR09") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0112") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0181") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0203") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0238") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 160.02 111.76 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 986b6847-eaba-4df8-b31e-63b2aa5be13b)
-    (property "Reference" "R20" (at 161.798 111.1163 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "10k" (at 161.798 113.0373 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 158.242 111.76 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 160.02 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 160.02 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C25804" (at 160.02 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0008" (at 160.02 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f7db215f-bac2-4814-a783-73cdf76aff18))
-    (pin "2" (uuid 63285d9d-3768-42da-a0f0-75540ea35ae1))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "R20") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "R253") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "R225") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R147") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R56") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R251") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Transistor_BJT:MMBT3904") (at 124.46 105.41 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid ab9254cb-c850-4230-b974-016c5238d6b8)
-    (property "Reference" "Q11" (at 129.54 103.505 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MMBT5551" (at 129.54 105.41 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 129.54 107.315 0)
-      (effects (font (size 1.27 1.27) italic) (justify left) hide)
-    )
-    (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" (at 124.46 105.41 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Assembly" "True" (at 124.46 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C2145" (at 124.46 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0136" (at 124.46 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid e5a40414-407e-4484-968b-6da41d6c037d))
-    (pin "2" (uuid 47aae9ab-c2e9-43ed-8a07-52faec6162f9))
-    (pin "3" (uuid 4b538591-05b9-4342-829f-619d47ef614d))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "Q11") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "Q28") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "Q74") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "Q113") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "Q124") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "Q121") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 142.24 111.76 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid c8567ec2-e62c-4dc1-bc3c-507079d8a5a0)
-    (property "Reference" "R20" (at 144.018 111.1163 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "100k" (at 144.018 113.0373 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 140.462 111.76 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 142.24 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 142.24 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C25803" (at 142.24 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0009" (at 142.24 111.76 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid c9ed6403-9309-4096-a0a8-549c97fb50f7))
-    (pin "2" (uuid b9fbd379-36fc-44be-a1c3-66cbb30529e5))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "R20") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "R253") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "R225") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R147") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R56") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R250") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 97.79 80.01 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid e274eb6d-9773-455e-bb1e-6f00a02eb85c)
-    (property "Reference" "R20" (at 99.568 79.3663 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "2k2" (at 99.568 81.2873 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 99.568 80.01 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 97.79 80.01 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 97.79 80.01 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C4190" (at 97.79 80.01 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0009" (at 97.79 80.01 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 6373a7bb-6f5c-4d68-9f8f-1bd0e091a008))
-    (pin "2" (uuid 13105683-3194-4889-a04e-617814fd7280))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "R20") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "R235") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "R241") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R147") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R56") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R243") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Transistor_BJT:MMBT3906") (at 157.48 81.28 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid f3d4a6b0-2808-4a88-bc5c-653bdbb2be66)
-    (property "Reference" "Q9" (at 162.56 83.185 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MMBT5401" (at 162.56 81.28 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 162.56 79.375 0)
-      (effects (font (size 1.27 1.27) italic) (justify left) hide)
-    )
-    (property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" (at 157.48 81.28 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Assembly" "True" (at 157.48 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C8326" (at 157.48 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0137" (at 157.48 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4a8d2f73-631a-4a1c-85ff-a247fc74072f))
-    (pin "2" (uuid 19068f03-6a51-4745-83c3-ce2bdcebe5b0))
-    (pin "3" (uuid f4ce7a2c-57b0-4e5b-a108-8c3f13bedef7))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "Q9") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "Q122") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "Q75") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "Q10") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "Q122") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:VCC") (at 191.77 105.41 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid f71dc464-149c-437a-bba9-9be6d4612dcb)
-    (property "Reference" "#PWR022" (at 191.77 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VCC" (at 191.77 101.9081 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 191.77 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 191.77 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d820fdf6-ce0f-4ff4-8830-178a2e60f023))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR022") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0114") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0191") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0261") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0248") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 142.24 86.36 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid fae7078f-f0dd-4573-9fcc-3516f9faa0cb)
-    (property "Reference" "R20" (at 144.018 85.7163 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "10k" (at 144.018 87.6373 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 140.462 86.36 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 142.24 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 142.24 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C25804" (at 142.24 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0008" (at 142.24 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 96dd6473-f8b3-4a31-be71-40035f294eb2))
-    (pin "2" (uuid ccd4a51a-6937-47c1-b452-0a6db1c1b01f))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "R20") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R56") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "R147") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "R225") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "R254") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "R249") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:VCC") (at 160.02 68.58 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid fd792373-5535-481c-9451-f6f409138dc6)
-    (property "Reference" "#PWR022" (at 160.02 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VCC" (at 160.02 65.0781 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 160.02 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 160.02 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8a59175a-8829-4069-b4c2-1d1a76844cd3))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR022") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0114") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0191") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0200") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0245") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 115.57 95.25 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid fed38e24-4cb1-4e1c-96b9-e81f7188ed97)
-    (property "Reference" "D22" (at 115.57 90.9701 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1N4148W" (at 115.57 92.8911 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 115.57 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 115.57 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 115.57 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 115.57 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Assembly" "True" (at 115.57 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC_PN" "C81598" (at 115.57 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Price" "0.0061" (at 115.57 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 37589765-3fea-46c6-a22c-80677efcc007))
-    (pin "2" (uuid a687a6f2-d6df-4f3a-9b84-c21852fed182))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "D22") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "D253") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "D124") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec/28fcebf3-a860-4674-8b07-a85c9eaa7b85"
-          (reference "D23") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "D293") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 196.85 113.03 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid ff80772e-2d9d-4ba7-8639-b02bc7e01d92)
-    (property "Reference" "#PWR09" (at 196.85 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 196.85 117.1655 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 196.85 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 196.85 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ee5bdb9a-0f66-4235-9ad1-a9071ba9b04a))
-    (instances
-      (project "transistor_clock"
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/fc84256b-6a0b-4a66-8a9d-3464331d8c4b/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR09") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/7ea6f02c-98d6-4cc3-9d12-1d5708d2f4a9/cadfc701-a229-43d0-bd3d-a4fb656a51ec"
-          (reference "#PWR0112") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2"
-          (reference "#PWR0181") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/e603d182-4df8-47af-be90-10669ba852bc"
-          (reference "#PWR0260") (unit 1)
-        )
-        (path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
-          (reference "#PWR0249") (unit 1)
-        )
-      )
-    )
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "08e15fe9-ccbd-4c9b-a439-acc019c2d49c")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:C_Polarized"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Polarized_0_1"
+				(rectangle
+					(start -2.286 0.508)
+					(end 2.286 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794) (xy -1.27 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "C_Polarized_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:D"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R_Potentiometer"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "RV"
+				(at -4.445 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_Potentiometer"
+				(at -2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Potentiometer"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "resistor variable"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Potentiometer*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Potentiometer_0_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.016 2.54)
+					(end -1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Potentiometer_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_BJT:MMBT3904"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "MMBT3904"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "NPN Transistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MMBT3904_0_1"
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MMBT3904_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.715)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_BJT:MMBT3906"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "MMBT3906"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "PNP Transistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MMBT3906_0_1"
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.778) (xy 1.778 -2.286) (xy 1.27 -1.27) (xy 2.286 -1.778) (xy 2.286 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MMBT3906_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.715)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0) hide
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:VCC"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "VCC"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VCC_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VCC_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0) hide
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 119.38 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7cbd0b0d-a3af-4d6f-9d74-e8d5411cc4f8")
+	)
+	(junction
+		(at 104.14 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8e5a9eea-22b8-4dbc-b6db-651fa3ac5162")
+	)
+	(junction
+		(at 97.79 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "946d2def-3bbb-4cee-96de-07bc836960b7")
+	)
+	(junction
+		(at 142.24 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9af6c8f6-a2a4-4231-8196-ceb31e58f8d2")
+	)
+	(junction
+		(at 160.02 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aa8c0a6e-77db-4718-aaa9-dab317114167")
+	)
+	(junction
+		(at 97.79 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bf71b9a9-7d6c-4278-a4c0-0268f01d5a95")
+	)
+	(junction
+		(at 97.79 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e54713b7-6d5c-478b-8bb2-a13f3f377540")
+	)
+	(junction
+		(at 191.77 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e59f6f3e-a143-4183-8257-3b8f53f8bf28")
+	)
+	(junction
+		(at 127 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e5ff7f57-c388-40b0-936c-76bb1992352f")
+	)
+	(junction
+		(at 142.24 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f227c09d-826a-4f51-9211-f340c83b4c7a")
+	)
+	(wire
+		(pts
+			(xy 160.02 107.95) (xy 160.02 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0953da1c-bb23-4880-81a3-4d65489ba4d5")
+	)
+	(wire
+		(pts
+			(xy 104.14 67.31) (xy 104.14 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b17b8bb-320c-442d-953d-4ac9b60bf516")
+	)
+	(wire
+		(pts
+			(xy 97.79 71.12) (xy 97.79 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c51ecc7-2a6c-460e-9670-0fb49deb15e0")
+	)
+	(wire
+		(pts
+			(xy 127 115.57) (xy 127 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ddd9f7a-d1b4-4201-87b7-8fc3e582a0c3")
+	)
+	(wire
+		(pts
+			(xy 142.24 81.28) (xy 152.4 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "222b1794-213c-4ab8-b410-5ff526ca4f26")
+	)
+	(wire
+		(pts
+			(xy 97.79 74.93) (xy 104.14 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2986f362-3d75-4919-b74a-38c3a9b12af6")
+	)
+	(wire
+		(pts
+			(xy 186.69 105.41) (xy 191.77 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33394298-b782-4190-9cb4-5407bf83be77")
+	)
+	(wire
+		(pts
+			(xy 160.02 68.58) (xy 160.02 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "649618c6-85ba-496a-a092-4cefc690625f")
+	)
+	(wire
+		(pts
+			(xy 142.24 68.58) (xy 142.24 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "684493f3-eec8-4bd2-b5ae-f239bade3254")
+	)
+	(wire
+		(pts
+			(xy 97.79 74.93) (xy 97.79 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bb0fc1c-248d-4041-ac07-a0dccc92534f")
+	)
+	(wire
+		(pts
+			(xy 127 97.79) (xy 127 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b8ff4ea-6c9d-43bf-82e0-f1c7f39289c7")
+	)
+	(wire
+		(pts
+			(xy 127 97.79) (xy 142.24 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c622309-1cb1-4f5e-a11e-93160895c410")
+	)
+	(wire
+		(pts
+			(xy 97.79 95.25) (xy 97.79 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9169d119-0188-4e20-807e-a0e7788cd53a")
+	)
+	(wire
+		(pts
+			(xy 78.74 88.9) (xy 90.17 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93e4d041-2a6b-44c0-8cb1-65a8ebd32837")
+	)
+	(wire
+		(pts
+			(xy 142.24 97.79) (xy 142.24 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac3708fd-5bc5-43c6-a477-cf6233694894")
+	)
+	(wire
+		(pts
+			(xy 191.77 105.41) (xy 196.85 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae7a9c89-029e-4123-917a-d0880f178ac4")
+	)
+	(wire
+		(pts
+			(xy 104.14 67.31) (xy 101.6 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7723189-d2bf-45b5-a24b-3ee0721ac548")
+	)
+	(wire
+		(pts
+			(xy 119.38 107.95) (xy 119.38 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdf0c4ae-047e-45b0-91c9-e3a0e4a17007")
+	)
+	(wire
+		(pts
+			(xy 160.02 90.17) (xy 176.53 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0515068-0dac-4ed9-ad5b-8632aabe45d6")
+	)
+	(wire
+		(pts
+			(xy 142.24 81.28) (xy 142.24 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e297cc74-09b3-4fe9-8114-958ff14b181b")
+	)
+	(wire
+		(pts
+			(xy 97.79 95.25) (xy 104.14 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7de9084-5ac3-4d49-bbb3-336ee2290f47")
+	)
+	(wire
+		(pts
+			(xy 97.79 96.52) (xy 97.79 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0112ccd-5c3e-4dd0-aecf-693ec19ee4d0")
+	)
+	(wire
+		(pts
+			(xy 160.02 90.17) (xy 160.02 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2ad58f6-3f46-4bfc-8678-c6fc668ac2e4")
+	)
+	(wire
+		(pts
+			(xy 104.14 63.5) (xy 97.79 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7fe0143-15f5-4323-bc68-5467c6f6d881")
+	)
+	(wire
+		(pts
+			(xy 142.24 78.74) (xy 142.24 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb8e6cf7-acb7-41bf-9933-d5a973b03889")
+	)
+	(text "TODO: cap type: metalized polyester film"
+		(exclude_from_sim no)
+		(at 54.61 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0385df39-94ea-4d48-b4f1-3b41db6317c1")
+	)
+	(text "3k9"
+		(exclude_from_sim no)
+		(at 104.14 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "33fb5cc8-351c-400d-94a0-bd629f030854")
+	)
+	(text "2k"
+		(exclude_from_sim no)
+		(at 90.17 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7bee33c1-42cb-43ff-818b-119b207fb2a9")
+	)
+	(text "TODO check chg current+pot"
+		(exclude_from_sim no)
+		(at 57.15 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c7862e92-af6b-4f72-a2b5-e7d2caea190a")
+	)
+	(hierarchical_label "IN"
+		(shape input)
+		(at 78.74 88.9 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "66238bcd-d4d9-40b4-ae1d-3fb7a5710eb6")
+	)
+	(hierarchical_label "OUT"
+		(shape output)
+		(at 176.53 90.17 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6de0d7fb-730b-4dcf-8365-67131556673d")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 142.24 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "02265a61-26f9-451b-a0d4-6ad5848deb16")
+		(property "Reference" "#PWR0244"
+			(at 142.24 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 119.7055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38a9e516-5037-4f7d-bc3f-1adf5333e537")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0244")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBT3906")
+		(at 121.92 100.33 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "05557743-5549-4be5-8bef-62ac2dae1439")
+		(property "Reference" "Q120"
+			(at 116.84 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT5401"
+			(at 116.84 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 116.84 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF"
+			(at 121.92 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 121.92 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 121.92 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C8326"
+			(at 121.92 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0137"
+			(at 121.92 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "65d0b651-5114-4b42-8ec7-4cd213139aca")
+		)
+		(pin "2"
+			(uuid "eb198ed4-cb78-4b5a-b72c-27c0381b2aea")
+		)
+		(pin "3"
+			(uuid "54d1fc7d-e34e-4ba6-b4c7-ff2847145b13")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "Q120")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 104.14 71.12 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "05f69677-5a06-4fe1-a1c3-27de9d887755")
+		(property "Reference" "R269"
+			(at 105.918 70.4763 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "DNP"
+			(at 105.918 72.3973 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 105.918 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 104.14 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "False"
+			(at 104.14 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" ""
+			(at 104.14 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 104.14 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "925224b9-19ef-4028-9caf-7fc30eb91db3")
+		)
+		(pin "2"
+			(uuid "2159c2c9-090c-4741-bd0a-9d5b91fb4f3f")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "R269")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 127 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1abb3f82-beba-457d-b749-2edc7a557080")
+		(property "Reference" "#PWR0242"
+			(at 127 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 127 119.7055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 127 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "37f5bc93-95b1-4b21-80a3-a4f18e03559f")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0242")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBT3906")
+		(at 95.25 88.9 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1de29d37-8021-4c5a-b255-f18930801638")
+		(property "Reference" "Q119"
+			(at 100.33 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT5401"
+			(at 100.33 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 100.33 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF"
+			(at 95.25 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 95.25 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 95.25 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C8326"
+			(at 95.25 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0137"
+			(at 95.25 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ee9b0419-1af5-4dc5-a950-e039855d4c6e")
+		)
+		(pin "2"
+			(uuid "25bbc8f3-da6f-4392-afc4-2ea8385a3843")
+		)
+		(pin "3"
+			(uuid "f5272bdb-0ca8-49b6-a8ea-689d388a3158")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "Q119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 97.79 100.33 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "25cab78b-2315-4107-b575-3495d02fbc43")
+		(property "Reference" "C71"
+			(at 100.711 99.6863 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1u"
+			(at 100.711 101.6073 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 96.8248 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 97.79 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 97.79 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "False"
+			(at 97.79 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" ""
+			(at 97.79 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 97.79 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "edd67828-5885-4b39-9aa6-368a4f08e911")
+		)
+		(pin "2"
+			(uuid "8359d7cd-c19e-4a77-8be5-80081f0bb8cf")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "C71")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 97.79 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "27c6da9a-064a-44e3-b991-e7c49e55f1d0")
+		(property "Reference" "#PWR0254"
+			(at 97.79 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 97.79 59.9981 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 97.79 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 97.79 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bc579c91-b128-4a0f-acd0-11757f6fa98c")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0254")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 142.24 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2942343c-dfb7-4123-b2f9-181a55631c6b")
+		(property "Reference" "#PWR0243"
+			(at 142.24 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 142.24 65.0781 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6e030121-a922-4846-9326-f1f484979936")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0243")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 196.85 109.22 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "40a1affb-8e56-43dc-a1e7-d988f6fd1f04")
+		(property "Reference" "C73"
+			(at 199.771 108.5763 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100n"
+			(at 199.771 110.4973 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 195.8848 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 196.85 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 196.85 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C14663"
+			(at 196.85 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0021"
+			(at 196.85 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1aa146e2-d653-41e2-9866-5dd7eb024f4a")
+		)
+		(pin "2"
+			(uuid "1113950b-193d-437e-a518-f24a51f7c7da")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "C73")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 186.69 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5201894f-7726-4d26-9eeb-41edb81d9a48")
+		(property "Reference" "C72"
+			(at 189.611 107.6873 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 189.611 109.6083 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 187.6552 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 186.69 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 186.69 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 186.69 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C15850"
+			(at 186.69 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0105"
+			(at 186.69 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4528b096-4b52-44a2-a354-398a89e7ffa5")
+		)
+		(pin "2"
+			(uuid "50ca8692-64d7-48fa-b832-9828236b1cf4")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "C72")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 119.38 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56fb36a6-91dd-49eb-ab36-ef7d4bfd3419")
+		(property "Reference" "#PWR0241"
+			(at 119.38 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.38 119.7055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 119.38 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4f762feb-06cc-4fa1-bbb9-5bfbff937ac4")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0241")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 142.24 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "615b440f-3275-44b7-bd1a-fdb7bcf90707")
+		(property "Reference" "R248"
+			(at 144.018 74.2863 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2k2"
+			(at 144.018 76.2073 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 140.462 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 142.24 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C4190"
+			(at 142.24 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0009"
+			(at 142.24 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "25ee63ac-323e-468a-b1d1-166a19d8cffe")
+		)
+		(pin "2"
+			(uuid "c2bf7c99-3c69-4313-b4c9-921974150ccc")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "R248")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer")
+		(at 97.79 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6817ebfd-23fe-481e-8de4-fbaff5d20f5c")
+		(property "Reference" "RV2"
+			(at 96.0121 66.6663 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 96.0121 68.5873 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Vishay_T73YP_Vertical"
+			(at 97.79 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 97.79 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 97.79 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "OK"
+			(at 97.79 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" ""
+			(at 97.79 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 97.79 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f915ee11-af5e-4914-8fe5-b4c0e72b59c3")
+		)
+		(pin "2"
+			(uuid "bc641155-405e-4a41-9006-c747147b6622")
+		)
+		(pin "3"
+			(uuid "afaceb8d-503a-4770-aa4f-04a88b1fae5d")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "RV2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 107.95 95.25 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a6f6e30-7164-4067-ba58-b249960ea3a8")
+		(property "Reference" "R244"
+			(at 107.95 91.2241 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 107.95 93.1451 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 107.95 97.028 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 107.95 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 107.95 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 107.95 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C21190"
+			(at 107.95 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0005"
+			(at 107.95 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "99013127-0916-420f-83a8-e3b17ab5da90")
+		)
+		(pin "2"
+			(uuid "1f710a27-421d-4cef-9191-1d902ec8c3a1")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "R244")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 142.24 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6e3b4986-aa67-4f7c-b8db-0088f3949c50")
+		(property "Reference" "R237"
+			(at 144.018 93.3363 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 144.018 95.2573 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 140.462 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 142.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C25804"
+			(at 142.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0008"
+			(at 142.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6788a9f-fee4-4f4c-a363-baee18629749")
+		)
+		(pin "2"
+			(uuid "20d05457-edba-49e1-95c0-6151c7bdeb24")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "R237")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 119.38 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72b89387-9f7a-4f60-92e3-2c12b750aeb1")
+		(property "Reference" "R247"
+			(at 121.158 111.1163 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 121.158 113.0373 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 117.602 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C25803"
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0009"
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0de9bbc3-4573-4840-8b80-8bea1de8743b")
+		)
+		(pin "2"
+			(uuid "1ee795c3-786e-4dcd-b899-c35ea89b2838")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "R247")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 186.69 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "77698150-10d3-4526-901a-3e8d8f41be97")
+		(property "Reference" "#PWR0247"
+			(at 186.69 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 186.69 117.1655 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 186.69 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 186.69 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "64778145-6f10-4e7d-beaf-be7dcb4f304b")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0247")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 160.02 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7dad5ca1-0d5c-4d16-8561-08c2269799be")
+		(property "Reference" "#PWR0246"
+			(at 160.02 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 119.7055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7703ed6a-35bb-49d2-ba08-614c845e5788")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0246")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 97.79 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8f0fc577-372d-4de0-8d66-65e315197b21")
+		(property "Reference" "#PWR0238"
+			(at 97.79 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 97.79 108.2755 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 97.79 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 97.79 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aaa158aa-dc05-43a3-aa5e-d4ad09d85f71")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0238")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 160.02 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "986b6847-eaba-4df8-b31e-63b2aa5be13b")
+		(property "Reference" "R251"
+			(at 161.798 111.1163 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 161.798 113.0373 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 158.242 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 160.02 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C25804"
+			(at 160.02 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0008"
+			(at 160.02 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f7db215f-bac2-4814-a783-73cdf76aff18")
+		)
+		(pin "2"
+			(uuid "63285d9d-3768-42da-a0f0-75540ea35ae1")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "R251")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBT3904")
+		(at 124.46 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab9254cb-c850-4230-b974-016c5238d6b8")
+		(property "Reference" "Q121"
+			(at 129.54 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT5551"
+			(at 129.54 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 129.54 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF"
+			(at 124.46 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 124.46 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 124.46 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C2145"
+			(at 124.46 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0136"
+			(at 124.46 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e5a40414-407e-4484-968b-6da41d6c037d")
+		)
+		(pin "2"
+			(uuid "47aae9ab-c2e9-43ed-8a07-52faec6162f9")
+		)
+		(pin "3"
+			(uuid "4b538591-05b9-4342-829f-619d47ef614d")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "Q121")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 142.24 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c8567ec2-e62c-4dc1-bc3c-507079d8a5a0")
+		(property "Reference" "R250"
+			(at 144.018 111.1163 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 144.018 113.0373 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 140.462 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 142.24 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C25803"
+			(at 142.24 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0009"
+			(at 142.24 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c9ed6403-9309-4096-a0a8-549c97fb50f7")
+		)
+		(pin "2"
+			(uuid "b9fbd379-36fc-44be-a1c3-66cbb30529e5")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "R250")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 97.79 80.01 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e274eb6d-9773-455e-bb1e-6f00a02eb85c")
+		(property "Reference" "R243"
+			(at 99.568 79.3663 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "2k2"
+			(at 99.568 81.2873 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 99.568 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 97.79 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 97.79 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 97.79 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C4190"
+			(at 97.79 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0009"
+			(at 97.79 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6373a7bb-6f5c-4d68-9f8f-1bd0e091a008")
+		)
+		(pin "2"
+			(uuid "13105683-3194-4889-a04e-617814fd7280")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "R243")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBT3906")
+		(at 157.48 81.28 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f3d4a6b0-2808-4a88-bc5c-653bdbb2be66")
+		(property "Reference" "Q122"
+			(at 162.56 83.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT5401"
+			(at 162.56 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 162.56 79.375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF"
+			(at 157.48 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 157.48 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 157.48 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C8326"
+			(at 157.48 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0137"
+			(at 157.48 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4a8d2f73-631a-4a1c-85ff-a247fc74072f")
+		)
+		(pin "2"
+			(uuid "19068f03-6a51-4745-83c3-ce2bdcebe5b0")
+		)
+		(pin "3"
+			(uuid "f4ce7a2c-57b0-4e5b-a108-8c3f13bedef7")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "Q122")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 191.77 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f71dc464-149c-437a-bba9-9be6d4612dcb")
+		(property "Reference" "#PWR0248"
+			(at 191.77 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 191.77 101.9081 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 191.77 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 191.77 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 191.77 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d820fdf6-ce0f-4ff4-8830-178a2e60f023")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0248")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 142.24 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fae7078f-f0dd-4573-9fcc-3516f9faa0cb")
+		(property "Reference" "R249"
+			(at 144.018 85.7163 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 144.018 87.6373 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 140.462 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 142.24 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C25804"
+			(at 142.24 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0008"
+			(at 142.24 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96dd6473-f8b3-4a31-be71-40035f294eb2")
+		)
+		(pin "2"
+			(uuid "ccd4a51a-6937-47c1-b452-0a6db1c1b01f")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "R249")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 160.02 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd792373-5535-481c-9451-f6f409138dc6")
+		(property "Reference" "#PWR0245"
+			(at 160.02 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 160.02 65.0781 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8a59175a-8829-4069-b4c2-1d1a76844cd3")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0245")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 115.57 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fed38e24-4cb1-4e1c-96b9-e81f7188ed97")
+		(property "Reference" "D293"
+			(at 115.57 90.9701 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 115.57 92.8911 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 115.57 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 115.57 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 115.57 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 115.57 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "True"
+			(at 115.57 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC_PN" "C81598"
+			(at 115.57 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0061"
+			(at 115.57 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "37589765-3fea-46c6-a22c-80677efcc007")
+		)
+		(pin "2"
+			(uuid "a687a6f2-d6df-4f3a-9b84-c21852fed182")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "D293")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 196.85 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ff80772e-2d9d-4ba7-8639-b02bc7e01d92")
+		(property "Reference" "#PWR0249"
+			(at 196.85 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 196.85 117.1655 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ee5bdb9a-0f66-4235-9ad1-a9071ba9b04a")
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2/294b2020-6de9-4c64-b646-a157c391fdd9"
+					(reference "#PWR0249")
+					(unit 1)
+				)
+			)
+		)
+	)
 )
