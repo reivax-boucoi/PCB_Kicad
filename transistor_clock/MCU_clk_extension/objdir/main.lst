@@ -1,0 +1,100 @@
+   1               		.file	"main.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               		.section	.text.startup,"ax",@progbits
+  11               	.global	main
+  13               	main:
+  14               	.LFB0:
+  15               		.file 1 "main.c"
+   1:main.c        **** #include <avr/io.h>
+   2:main.c        **** #include <avr/sleep.h>
+   3:main.c        **** #define F_CPU (32768/8)
+   4:main.c        **** int main(void){
+  16               		.loc 1 4 0
+  17               		.cfi_startproc
+  18               	/* prologue: function */
+  19               	/* frame size = 0 */
+  20               	/* stack size = 0 */
+  21               	.L__stack_usage = 0
+   5:main.c        ****     
+   6:main.c        ****     CLKPR=0x80;//Unlock clock prescaler
+  22               		.loc 1 6 0
+  23 0000 80E8      		ldi r24,lo8(-128)
+  24 0002 86BD      		out 0x26,r24
+   7:main.c        ****     CLKPR=0x01;//set clock prescaler to 16 (within 4 clock cycles)
+  25               		.loc 1 7 0
+  26 0004 81E0      		ldi r24,lo8(1)
+  27 0006 86BD      		out 0x26,r24
+   8:main.c        ****     
+   9:main.c        ****     DDRB=0x01;//Set PINB0 (OC0A pin) as output, push pull.
+  28               		.loc 1 9 0
+  29 0008 87BB      		out 0x17,r24
+  10:main.c        ****     PORTB=0x00;
+  30               		.loc 1 10 0
+  31 000a 18BA      		out 0x18,__zero_reg__
+  11:main.c        ****     
+  12:main.c        ****     //Fast PWM mode: Fpwm=Fclk/(N*256) where N=1,8,64,256,1024
+  13:main.c        ****     //Fclk=2048Hz, N=8 -> Fpwm=1Hz
+  14:main.c        **** 	TCCR0A =(1<<COM0A1)|(1<<WGM01)|(1<<WGM00);//Fast PWM mode: Clear OC0A on compare match, set OC0A a
+  32               		.loc 1 14 0
+  33 000c 83E8      		ldi r24,lo8(-125)
+  34 000e 8ABD      		out 0x2a,r24
+  15:main.c        ****     OCR0A=2;//8.5ms=2.17
+  35               		.loc 1 15 0
+  36 0010 82E0      		ldi r24,lo8(2)
+  37 0012 89BD      		out 0x29,r24
+  16:main.c        ****     TCCR0B = (1<<CS01)|(1<<CS00); //Set prescaler to N=80
+  38               		.loc 1 16 0
+  39 0014 83E0      		ldi r24,lo8(3)
+  40 0016 83BF      		out 0x33,r24
+  17:main.c        ****     
+  18:main.c        ****     ADCSRA=0x00;//Disable ADC, save power
+  41               		.loc 1 18 0
+  42 0018 16B8      		out 0x6,__zero_reg__
+  19:main.c        ****     PRR=0x0B;//Shut down Timer1, ADC, USI. Keep Timer0 running
+  43               		.loc 1 19 0
+  44 001a 8BE0      		ldi r24,lo8(11)
+  45 001c 80BD      		out 0x20,r24
+  20:main.c        ****     
+  21:main.c        ****     set_sleep_mode(SLEEP_MODE_IDLE);
+  46               		.loc 1 21 0
+  47 001e 85B7      		in r24,0x35
+  48 0020 877E      		andi r24,lo8(-25)
+  49 0022 85BF      		out 0x35,r24
+  22:main.c        ****     sleep_mode();
+  50               		.loc 1 22 0
+  51 0024 85B7      		in r24,0x35
+  52 0026 8062      		ori r24,lo8(32)
+  53 0028 85BF      		out 0x35,r24
+  54               	/* #APP */
+  55               	 ;  22 "main.c" 1
+  56 002a 8895      		sleep
+  57               		
+  58               	 ;  0 "" 2
+  59               	/* #NOAPP */
+  60 002c 85B7      		in r24,0x35
+  61 002e 8F7D      		andi r24,lo8(-33)
+  62 0030 85BF      		out 0x35,r24
+  63               	.L2:
+  64 0032 00C0      		rjmp .L2
+  65               		.cfi_endproc
+  66               	.LFE0:
+  68               		.text
+  69               	.Letext0:
+  70               		.file 2 "/usr/lib/avr/include/stdint.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+     /tmp/ccdaFNL4.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccdaFNL4.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccdaFNL4.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccdaFNL4.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccdaFNL4.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccdaFNL4.s:13     .text.startup:0000000000000000 main
+
+NO UNDEFINED SYMBOLS

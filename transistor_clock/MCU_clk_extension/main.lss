@@ -1,0 +1,115 @@
+
+main.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000068  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00000068  000000dc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000011  00000000  00000000  000000dc  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000000f0  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000020  00000000  00000000  0000012c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000004a7  00000000  00000000  0000014c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000043b  00000000  00000000  000005f3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000000af  00000000  00000000  00000a2e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000024  00000000  00000000  00000ae0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000027c  00000000  00000000  00000b04  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000010  00000000  00000000  00000d80  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0e c0       	rjmp	.+28     	; 0x1e <__ctors_end>
+   2:	15 c0       	rjmp	.+42     	; 0x2e <__bad_interrupt>
+   4:	14 c0       	rjmp	.+40     	; 0x2e <__bad_interrupt>
+   6:	13 c0       	rjmp	.+38     	; 0x2e <__bad_interrupt>
+   8:	12 c0       	rjmp	.+36     	; 0x2e <__bad_interrupt>
+   a:	11 c0       	rjmp	.+34     	; 0x2e <__bad_interrupt>
+   c:	10 c0       	rjmp	.+32     	; 0x2e <__bad_interrupt>
+   e:	0f c0       	rjmp	.+30     	; 0x2e <__bad_interrupt>
+  10:	0e c0       	rjmp	.+28     	; 0x2e <__bad_interrupt>
+  12:	0d c0       	rjmp	.+26     	; 0x2e <__bad_interrupt>
+  14:	0c c0       	rjmp	.+24     	; 0x2e <__bad_interrupt>
+  16:	0b c0       	rjmp	.+22     	; 0x2e <__bad_interrupt>
+  18:	0a c0       	rjmp	.+20     	; 0x2e <__bad_interrupt>
+  1a:	09 c0       	rjmp	.+18     	; 0x2e <__bad_interrupt>
+  1c:	08 c0       	rjmp	.+16     	; 0x2e <__bad_interrupt>
+
+0000001e <__ctors_end>:
+  1e:	11 24       	eor	r1, r1
+  20:	1f be       	out	0x3f, r1	; 63
+  22:	cf e5       	ldi	r28, 0x5F	; 95
+  24:	d2 e0       	ldi	r29, 0x02	; 2
+  26:	de bf       	out	0x3e, r29	; 62
+  28:	cd bf       	out	0x3d, r28	; 61
+  2a:	02 d0       	rcall	.+4      	; 0x30 <main>
+  2c:	1b c0       	rjmp	.+54     	; 0x64 <_exit>
+
+0000002e <__bad_interrupt>:
+  2e:	e8 cf       	rjmp	.-48     	; 0x0 <__vectors>
+
+00000030 <main>:
+#include <avr/io.h>
+#include <avr/sleep.h>
+#define F_CPU (32768/8)
+int main(void){
+    
+    CLKPR=0x80;//Unlock clock prescaler
+  30:	80 e8       	ldi	r24, 0x80	; 128
+  32:	86 bd       	out	0x26, r24	; 38
+    CLKPR=0x01;//set clock prescaler to 16 (within 4 clock cycles)
+  34:	81 e0       	ldi	r24, 0x01	; 1
+  36:	86 bd       	out	0x26, r24	; 38
+    
+    DDRB=0x01;//Set PINB0 (OC0A pin) as output, push pull.
+  38:	87 bb       	out	0x17, r24	; 23
+    PORTB=0x00;
+  3a:	18 ba       	out	0x18, r1	; 24
+    
+    //Fast PWM mode: Fpwm=Fclk/(N*256) where N=1,8,64,256,1024
+    //Fclk=2048Hz, N=8 -> Fpwm=1Hz
+	TCCR0A =(1<<COM0A1)|(1<<WGM01)|(1<<WGM00);//Fast PWM mode: Clear OC0A on compare match, set OC0A at bottom
+  3c:	83 e8       	ldi	r24, 0x83	; 131
+  3e:	8a bd       	out	0x2a, r24	; 42
+    OCR0A=2;//8.5ms=2.17
+  40:	82 e0       	ldi	r24, 0x02	; 2
+  42:	89 bd       	out	0x29, r24	; 41
+    TCCR0B = (1<<CS01)|(1<<CS00); //Set prescaler to N=80
+  44:	83 e0       	ldi	r24, 0x03	; 3
+  46:	83 bf       	out	0x33, r24	; 51
+    
+    ADCSRA=0x00;//Disable ADC, save power
+  48:	16 b8       	out	0x06, r1	; 6
+    PRR=0x0B;//Shut down Timer1, ADC, USI. Keep Timer0 running
+  4a:	8b e0       	ldi	r24, 0x0B	; 11
+  4c:	80 bd       	out	0x20, r24	; 32
+    
+    set_sleep_mode(SLEEP_MODE_IDLE);
+  4e:	85 b7       	in	r24, 0x35	; 53
+  50:	87 7e       	andi	r24, 0xE7	; 231
+  52:	85 bf       	out	0x35, r24	; 53
+    sleep_mode();
+  54:	85 b7       	in	r24, 0x35	; 53
+  56:	80 62       	ori	r24, 0x20	; 32
+  58:	85 bf       	out	0x35, r24	; 53
+  5a:	88 95       	sleep
+  5c:	85 b7       	in	r24, 0x35	; 53
+  5e:	8f 7d       	andi	r24, 0xDF	; 223
+  60:	85 bf       	out	0x35, r24	; 53
+  62:	ff cf       	rjmp	.-2      	; 0x62 <__SREG__+0x23>
+
+00000064 <_exit>:
+  64:	f8 94       	cli
+
+00000066 <__stop_program>:
+  66:	ff cf       	rjmp	.-2      	; 0x66 <__stop_program>
