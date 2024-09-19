@@ -7618,6 +7618,44 @@
 		)
 	)
 	(sheet
+		(at 64.77 133.35)
+		(size 26.67 11.43)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "85477c40-55fc-47a6-8daf-0f267190df30")
+		(property "Sheetname" "MCU_alt_clk_source"
+			(at 64.77 132.6384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu_clk_src.kicad_sch"
+			(at 64.77 145.3646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "transistor_clock"
+				(path "/b32464e6-c3c7-41da-ac79-643e545075e2"
+					(page "107")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 39.37 109.22)
 		(size 16.51 5.08)
 		(fields_autoplaced yes)

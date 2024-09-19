@@ -951,6 +951,10 @@
       "PSU"
     ],
     [
+      "85477c40-55fc-47a6-8daf-0f267190df30",
+      "MCU_alt_clk_source"
+    ],
+    [
       "c2c44248-f681-43f2-b7eb-46197a9fcaa7",
       "Sync gen"
     ],
