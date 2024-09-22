@@ -7,6 +7,12 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "Elevator altimeter")
+		(date "2024-09-22")
+		(rev "A")
+		(company "Xavier Bourlot")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(31 "B.Cu" signal)
@@ -830,7 +836,7 @@
 		(descr "SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip")
 		(tags "net tie solder jumper bridged")
 		(property "Reference" "JP4"
-			(at -3 0 360)
+			(at -3 0 0)
 			(layer "F.SilkS")
 			(uuid "87f9b4a0-4d02-4943-8115-12f95a4ec245")
 			(effects
@@ -852,7 +858,7 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b632bee1-8a19-4f2e-8b3a-3ac78b7e349d")
@@ -864,7 +870,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0ebfdbc4-c350-4350-85fe-def7ec5e519c")
@@ -876,7 +882,7 @@
 			)
 		)
 		(property "Description" "Jumper, 2-pole, closed/bridged"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "24174a58-a412-4db2-b834-f9b8e60aa3fb")
@@ -1121,7 +1127,7 @@
 			)
 		)
 		(property "Value" "ATtiny1634-S"
-			(at 0 7.35 360)
+			(at 0 7.35 0)
 			(layer "F.Fab")
 			(uuid "95831bc2-ee10-43c1-a3ec-85b9719b400d")
 			(effects
@@ -1132,7 +1138,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d3476dcf-2e06-4130-955d-ece5f060b7ec")
@@ -1144,7 +1150,7 @@
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8303-8-bit-AVR-Microcontroller-tinyAVR-ATtiny1634_Datasheet.pdf"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d9222c6c-a99f-4f06-b4c5-17b674f0cf00")
@@ -1156,7 +1162,7 @@
 			)
 		)
 		(property "Description" "12MHz, 16kB Flash, 1kB SRAM, 256B EEPROM, ADC, ACI, debugWIRE, SOIC-20"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9729cc45-5d78-4283-a5f9-ce12d96ab5bc")
@@ -1355,7 +1361,7 @@
 			(uuid "662a7fc8-19ca-4103-9bc5-055408c9c240")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "e8fafefb-2a6b-4776-b6f0-187e9af65e8a")
 			(effects
@@ -2218,7 +2224,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C13"
-			(at 0 -1.5 360)
+			(at 0 -1.5 0)
 			(layer "F.SilkS")
 			(uuid "62b05acc-a7b1-4668-b32b-0f339a848dc2")
 			(effects
@@ -2229,7 +2235,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 0 1.43 360)
+			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "692cf860-4e2a-4012-aa01-78be9d2fc71a")
 			(effects
@@ -2240,7 +2246,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "91f23c33-269f-4d7d-9c76-c7ab3991451f")
@@ -2252,7 +2258,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c1f7a247-6ca3-4a1b-bda7-ab40b78bc08c")
@@ -2264,7 +2270,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "81037793-2e29-44bb-b0c4-819d49b267f7")
@@ -2381,7 +2387,7 @@
 			(uuid "b14d2472-414d-4289-88f9-aefb07127f8c")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "6f755622-bc10-4f75-91b4-7d1a719a16b8")
 			(effects
@@ -3151,7 +3157,7 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2b9d06dc-54aa-4ec0-967a-4dfcb26ee675")
@@ -3163,7 +3169,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "00b1bb3a-90ca-406f-b3d9-0114457069de")
@@ -3175,7 +3181,7 @@
 			)
 		)
 		(property "Description" "Jumper, 2-pole, closed/bridged"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "91e4d7a9-5293-4a32-80cd-4bfe67ce10c5")
@@ -3664,7 +3670,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R2"
-			(at 2.75 0 360)
+			(at 2.75 0 0)
 			(layer "F.SilkS")
 			(uuid "50d6b8a3-e19e-4ecf-8cbe-33003cd6b168")
 			(effects
@@ -3675,7 +3681,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 0 1.43 360)
+			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "5d786851-a2a5-45ce-b8dd-a3046f1feaa1")
 			(effects
@@ -3686,7 +3692,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "237c8283-2ebe-4494-b556-1e0f82f0ee44")
@@ -3698,7 +3704,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8d4d4629-0c68-4626-aaa9-3af0783c2d27")
@@ -3710,7 +3716,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "23412603-832f-4269-b311-6fffe2a43930")
@@ -3827,7 +3833,7 @@
 			(uuid "41a113c8-8750-4c9b-ad85-c79b92bdfadd")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "0e11e4eb-7a66-4a23-a65f-2552e1db0e4a")
 			(effects
@@ -4505,7 +4511,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R1"
-			(at 2.75 0 360)
+			(at 2.75 0 0)
 			(layer "F.SilkS")
 			(uuid "db37bb1d-4b7d-43ad-9b53-092372bdf460")
 			(effects
@@ -4516,7 +4522,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 0 1.43 360)
+			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "2d90d509-d6ce-449e-859a-98cbc5733a58")
 			(effects
@@ -4527,7 +4533,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8dbab6a6-b8df-444b-8719-98f36363bb57")
@@ -4539,7 +4545,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c043b78c-c4da-4108-8979-7b5f90622634")
@@ -4551,7 +4557,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "641c4222-dcd6-440b-83be-5773640c613f")
@@ -4668,7 +4674,7 @@
 			(uuid "1876fb1b-4680-4194-8ac9-e4445aea2dd8")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "15455780-b9ec-4a70-b1ab-6d9928cc714b")
 			(effects
@@ -4926,7 +4932,7 @@
 		(descr "SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip")
 		(tags "net tie solder jumper bridged")
 		(property "Reference" "JP1"
-			(at 0 -2 360)
+			(at 0 -2 0)
 			(layer "F.SilkS")
 			(uuid "b8e17916-8be9-4a14-b307-ec87776d79cb")
 			(effects
@@ -4937,7 +4943,7 @@
 			)
 		)
 		(property "Value" "DAT"
-			(at 0 1.9 360)
+			(at 0 1.9 0)
 			(layer "F.Fab")
 			(uuid "00d5e2f4-2a50-4256-bfa7-8da4d3577614")
 			(effects
@@ -4948,7 +4954,7 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "77574e2d-cd3d-4295-9146-17fd819c1d9e")
@@ -4960,7 +4966,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7bf8c09e-a6d3-450e-8881-a56b292a55e5")
@@ -4972,7 +4978,7 @@
 			)
 		)
 		(property "Description" "Jumper, 2-pole, closed/bridged"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "70a92eb4-2b71-4498-8959-23e2c768a66e")
@@ -7071,7 +7077,7 @@
 			(uuid "bc924f37-1b0c-4b6e-af6b-f77f76c87786")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "379bcaef-f6b0-40e8-87e9-d07eab7be444")
 			(effects
@@ -7404,7 +7410,7 @@
 			(uuid "8bcc4e34-023e-40c3-bdc7-effb3f2d74cc")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 3.81 360)
+			(at 0 3.81 0)
 			(layer "F.Fab")
 			(uuid "8fbec6bc-db74-41bd-9fba-943f796fda1e")
 			(effects
@@ -7477,7 +7483,7 @@
 		(descr "SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip")
 		(tags "net tie solder jumper bridged")
 		(property "Reference" "JP2"
-			(at 0 -1.95 360)
+			(at 0 -1.95 0)
 			(layer "F.SilkS")
 			(uuid "e368fbf6-7fd4-4c5c-ad3e-95dba49b88ea")
 			(effects
@@ -7488,7 +7494,7 @@
 			)
 		)
 		(property "Value" "CLK"
-			(at 0 1.9 360)
+			(at 0 1.9 0)
 			(layer "F.Fab")
 			(uuid "af226f7b-92d5-404b-8e8b-4addddc3b276")
 			(effects
@@ -7499,7 +7505,7 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4d2389b9-4d07-40ec-ae36-0082d431841f")
@@ -7511,7 +7517,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f7111dcb-6bfc-4ef8-8664-de10e1722161")
@@ -7523,7 +7529,7 @@
 			)
 		)
 		(property "Description" "Jumper, 2-pole, closed/bridged"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "810598cd-96d0-448a-9878-541c6e55115e")
@@ -9394,7 +9400,7 @@
 		(descr "nRF24L01 breakout board")
 		(tags "nRF24L01 adapter breakout")
 		(property "Reference" "U2"
-			(at 2.7895 -2.875 360)
+			(at 2.7895 -2.875 0)
 			(layer "F.SilkS")
 			(uuid "e585ce12-bce5-4b93-97ac-fe2353572e07")
 			(effects
@@ -9405,7 +9411,7 @@
 			)
 		)
 		(property "Value" "NRF24L01_Breakout"
-			(at 13 5 360)
+			(at 13 5 0)
 			(layer "F.Fab")
 			(uuid "81a4a407-174d-428f-a591-03135119fb83")
 			(effects
@@ -9416,7 +9422,7 @@
 			)
 		)
 		(property "Footprint" "RF_Module:nRF24L01_Breakout"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d4dac29c-d420-4a2c-9226-0da81da53a03")
@@ -9428,7 +9434,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.nordicsemi.com/eng/content/download/2730/34105/file/nRF24L01_Product_Specification_v2_0.pdf"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "63cc1b31-9130-448a-a20c-41b3dbe4f2f1")
@@ -9440,7 +9446,7 @@
 			)
 		)
 		(property "Description" "Ultra low power 2.4GHz RF Transceiver, Carrier PCB"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "aa728786-d3c0-4c26-a4b8-221e5ac0ab9b")
@@ -9729,7 +9735,7 @@
 			(uuid "de7d0b95-c739-45b5-b139-cef1a3dc4279")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 12.5 2.5 360)
+			(at 12.5 2.5 0)
 			(layer "F.Fab")
 			(uuid "82d13992-ca00-4f39-a240-8c48da3c5842")
 			(effects
@@ -9858,7 +9864,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C6"
-			(at 0 2 360)
+			(at 0 2 0)
 			(layer "F.SilkS")
 			(uuid "24990d9e-8176-44de-af51-752377b561e3")
 			(effects
@@ -9869,7 +9875,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 0 1.68 360)
+			(at 0 1.68 0)
 			(layer "F.Fab")
 			(uuid "7404bade-8060-4ed7-bbaa-9eebc5f88f61")
 			(effects
@@ -9880,7 +9886,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e2885a1e-7005-4153-b01b-6eb10fda48d2")
@@ -9892,7 +9898,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "929c9cfb-89ec-4a35-9dbe-3dfec717c7b4")
@@ -9904,7 +9910,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e43fdee7-e4b1-4236-88b8-efa1e4999acb")
@@ -10021,7 +10027,7 @@
 			(uuid "af83d144-6407-47e6-888a-9ede2c8dad8a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "650e428c-c192-4e77-b06f-9ed2cb664ddd")
 			(effects
@@ -10079,7 +10085,7 @@
 			)
 		)
 		(property "Value" "UART"
-			(at 0 7.41 360)
+			(at 0 7.41 0)
 			(layer "F.Fab")
 			(uuid "5c948d43-849b-4892-b00b-2a7c706a9069")
 			(effects
@@ -10090,7 +10096,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cf699a26-d8b0-4cd7-9364-b1cf586bbdba")
@@ -10102,7 +10108,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "241e7a82-014c-418d-8e44-37f8e3fdac54")
@@ -10114,7 +10120,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9b7a31f6-fe5f-4deb-b90d-c46ac3acfe69")
