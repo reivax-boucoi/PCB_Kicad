@@ -4,6 +4,12 @@
 	(generator_version "8.0")
 	(uuid "acf46b34-b9a0-4f2e-b08a-347c81969a5c")
 	(paper "A4")
+	(title_block
+		(title "Elevator altimeter")
+		(date "2024-09-22")
+		(rev "A")
+		(company "Xavier Bourlot")
+	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x03"
 			(pin_names
@@ -9174,7 +9180,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "b3e5c6be-0d2c-4943-bcb1-af06896114f2")
 		(property "Reference" "J3"
 			(at 111.76 134.2855 0)
@@ -9446,7 +9452,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "c173a931-29f0-4706-bb68-b2eb1e26c054")
 		(property "Reference" "J1"
 			(at 127 135.5555 0)
