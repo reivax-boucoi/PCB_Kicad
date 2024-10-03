@@ -506,10 +506,10 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "./output/",
+      "plot": "3D/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "Planar_XFMR.step",
+      "step": "3D/Planar_XFMR_L2L3.step",
       "svg": "",
       "vrml": ""
     },
