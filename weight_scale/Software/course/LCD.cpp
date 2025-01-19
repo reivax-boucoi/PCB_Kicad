@@ -15,11 +15,20 @@ LCD::LCD(bool lowP){
 	LCDCRB|=(1<<LCDMUX1)|(1<<LCDMUX0);
 	
 	if(lowP){
+		
+#if (F_CPU==1000000)
+		LCDFRR|=(1<<LCDPS2)|(1<<LCDCD2)|(1<<LCDCD1)|(1<<LCDCD0); // prescaler 512, division factor 32 & K=8 for duty 1/4
+#else
 		LCDFRR|=(1<<LCDPS2)|(1<<LCDPS1)|(1<<LCDPS0)|(1<<LCDCD2)|(1<<LCDCD1)|(1<<LCDCD0); // prescaler 4096, division factor 32 & K=8 for duty 1/4
+#endif
 		LCDCCR|=(1<<LCDDC0);// 2.6V 70µs
 		LCDCRA|=(1<<LCDEN)|(1<<LCDAB);//LCDAB=low power waveform
 	}else{
+#if (F_CPU==1000000)
+		LCDFRR|=(1<<LCDPS2)|(1<<LCDCD2)|(1<<LCDCD2)|(1<<LCDCD0); // prescaler 512, division factor 8 & K=8 for duty 1/4
+#else
 		LCDFRR|=(1<<LCDPS2)|(1<<LCDPS1)|(1<<LCDPS0)|(1<<LCDCD2)|(1<<LCDCD2)|(1<<LCDCD0); // prescaler 4096, division factor 8 & K=8 for duty 1/4
+#endif
 		LCDCCR|=(1<<LCDCC1)|(1<<LCDCC2)|(1<<LCDDC1);//2.7V 1150µs
 		LCDCRA|=(1<<LCDEN);
 	}

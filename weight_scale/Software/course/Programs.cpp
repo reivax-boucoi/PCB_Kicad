@@ -137,7 +137,12 @@ void Beep::update(void){
     }
 }
 void Beep::on(void){
-    TCCR0A|=(1<<WGM01)|(1<<COM0A0)|(1<<CS01);//|(1<<CS00);//toggle OC0A on compare match, 8 prescaler, start timer
+    
+#if (F_CPU==1000000)
+    TCCR0A|=(1<<WGM01)|(1<<COM0A0)|(1<<CS00);//toggle OC0A on compare match, 1 prescaler, start timer
+#else
+    TCCR0A|=(1<<WGM01)|(1<<COM0A0)|(1<<CS01);//toggle OC0A on compare match, 8 prescaler, start timer
+#endif
 }
 void Beep::off(void){
     TCCR0A=0;

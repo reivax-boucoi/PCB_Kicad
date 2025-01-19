@@ -5,7 +5,7 @@
 #include <stdlib.h> //for itoa
 
 #include "LCD.h"
-#include "UART.h"
+//#include "UART.h"
 #include "Programs.h"
 
 #define BTN0 (PIND&(1<<4))
@@ -24,7 +24,7 @@
 #define BATT_TWOBAR 320
 #define BATT_FULL 330
 
-UART uart;
+//UART uart;
 LCD myLCD=LCD(0);//Use 1 for lowest power LCD mode
 Program myProgram(&myLCD);
 
@@ -55,8 +55,13 @@ int main(void){
 	ADCSRA|=(1<<ADEN)|(1<<ADIE)|(1<<ADPS1);//Enable conversion complete interrupt, Clock prescaler 12MHz/64=187kHz
 	PRR|=(1<<PRSPI)|(1<<PRUSART0);//Disable SPI and UART to save power
 	
+#if (F_CPU==1000000)
+	TCCR1B |=(1<<WGM12)|(1<<CS10)|(1<<CS11);// prescaler=clk/64, OCR1A is top.
+	OCR1A=1662; // 8MHz/64 = 15620Hz -> COMPA_ISR every 100ms
+#else
 	TCCR1B |=(1<<WGM12)|(1<<CS12);// prescaler=clk/256, OCR1A is top.
-	OCR1A=3332; // 8MHz/256 = 31250Hz -> COMPA_ISR every 100ms
+	OCR1A=3125; // 8MHz/256 = 31250Hz -> COMPA_ISR every 100ms
+#endif
 	TIMSK1|=(1<<OCIE1A);
 	
 	
@@ -118,10 +123,10 @@ int main(void){
 				btn0_pressDuration=0;
 			}			
 		}
-		if(uart.isDataAvailable()){
+		/*if(uart.isDataAvailable()){
 			char *cmd=uart.retrieve();
 			uart.sendString("Start verbose streaming",true);
-		}
+		}*/
 		ADCSRA&=~(1<<ADEN);//Disable ADC
 		PRR|=(1<<PRSPI)|(1<<PRUSART0)|(1<<PRADC);//Shut down clock to Timer1, SPI, UART, ADC
 		set_sleep_mode(SLEEP_MODE_IDLE);
@@ -174,10 +179,10 @@ ISR(TIMER1_COMPA_vect){//every 100ms
 	myProgram.myBeep.update();
 	flags_state|=0x01;
 }
-
+/*
 ISR(USART0_RX_vect){
 	uart.receive();
-}
+}*/
 
 void writeTime(void){
 	uint8_t mins=total_time_ts/600;
