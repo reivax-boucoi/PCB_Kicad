@@ -28,7 +28,8 @@
 LCD myLCD=LCD(0);//Use 1 for lowest power LCD mode
 Program myProgram(&myLCD);
 
-//Fuses -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0xfd:m 
+//Fuses -U lfuse:w:0x62:m -U hfuse:w:0xd9:m -U efuse:w:0xfd:m -> 1MHz
+//Fuses -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0xfd:m -> 8MHz
 //Int RC osc, 6CK+65ms startup time
 //No Clock div by 8
 //Brown out detection enabled, 1.8V
