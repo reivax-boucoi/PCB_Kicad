@@ -96,52 +96,65 @@
   57:main.cpp      **** 	LED0_ON;
   37               		.loc 1 57 0
   38 0010 5E9A      		sbi 0xb,6
-  58:main.cpp      **** 	PRR|=(1<<PRTIM1);//Shut down clock to Timer1
+  58:main.cpp      **** 	LED1_ON;
   39               		.loc 1 58 0
-  40 0012 8091 6400 		lds r24,100
-  41 0016 8860      		ori r24,lo8(8)
-  42 0018 8093 6400 		sts 100,r24
-  59:main.cpp      **** 	
-  60:main.cpp      **** 	ADMUX|=(1<<REFS0)|0b11110;//Set AVCC as reference voltage for ADC, ADC MUX input to 1.1V BG
-  43               		.loc 1 60 0
-  44 001c 8091 7C00 		lds r24,124
-  45 0020 8E65      		ori r24,lo8(94)
-  46 0022 8093 7C00 		sts 124,r24
-  61:main.cpp      **** 	ADCSRA|=(1<<ADEN)|(1<<ADIE)|(1<<ADPS1);//Enable conversin complete interrupt, Clock prescaler 12MH
-  47               		.loc 1 61 0
-  48 0026 8091 7A00 		lds r24,122
-  49 002a 8A68      		ori r24,lo8(-118)
-  50 002c 8093 7A00 		sts 122,r24
-  62:main.cpp      **** 	sei();
-  51               		.loc 1 62 0
-  52               	/* #APP */
-  53               	 ;  62 "main.cpp" 1
-  54 0030 7894      		sei
-  55               	 ;  0 "" 2
-  56               	/* #NOAPP */
-  57               	.LBB9:
-  63:main.cpp      **** 	
+  40 0012 5F9A      		sbi 0xb,7
+  59:main.cpp      **** 	//PRR|=(1<<PRTIM1);//Shut down clock to Timer1
+  60:main.cpp      **** 	
+  61:main.cpp      **** 	ADMUX|=(1<<REFS0)|0b11110;//Set AVCC as reference voltage for ADC, ADC MUX input to 1.1V BG
+  41               		.loc 1 61 0
+  42 0014 8091 7C00 		lds r24,124
+  43 0018 8E65      		ori r24,lo8(94)
+  44 001a 8093 7C00 		sts 124,r24
+  62:main.cpp      **** 	ADCSRA|=(1<<ADEN)|(1<<ADIE)|(1<<ADPS1);//Enable conversin complete interrupt, Clock prescaler 12MH
+  45               		.loc 1 62 0
+  46 001e 8091 7A00 		lds r24,122
+  47 0022 8A68      		ori r24,lo8(-118)
+  48 0024 8093 7A00 		sts 122,r24
+  63:main.cpp      **** 	sei();
+  49               		.loc 1 63 0
+  50               	/* #APP */
+  51               	 ;  63 "main.cpp" 1
+  52 0028 7894      		sei
+  53               	 ;  0 "" 2
   64:main.cpp      **** 	
-  65:main.cpp      **** 	while(1){
-  66:main.cpp      **** 	
-  67:main.cpp      **** 		_delay_ms(10);
-  68:main.cpp      **** 		loop_cnt++;
-  69:main.cpp      **** 		if(loop_cnt>9){
-  70:main.cpp      **** 			loop_cnt=0;
-  71:main.cpp      **** 			//mySM.update();
-  72:main.cpp      **** 		}
-  73:main.cpp      **** 
-  74:main.cpp      **** 		if(BTN0!=btn_state){
-  75:main.cpp      **** 			btn_state=BTN0;
-  76:main.cpp      **** 			if(btn_state){
-  77:main.cpp      **** 				LED0_Toggle;
-  58               		.loc 1 77 0
-  59 0032 C0E4      		ldi r28,lo8(64)
-  60               	.L6:
-  61               	.LVL0:
-  62               	.LBB10:
-  63               	.LBB11:
-  64               		.file 2 "/usr/lib/avr/include/util/delay.h"
+  65:main.cpp      **** 	myLCD.setNb(12345,5);
+  54               		.loc 1 65 0
+  55               	/* #NOAPP */
+  56 002a 45E0      		ldi r20,lo8(5)
+  57 002c 69E3      		ldi r22,lo8(57)
+  58 002e 70E3      		ldi r23,lo8(48)
+  59 0030 80E0      		ldi r24,0
+  60 0032 90E0      		ldi r25,0
+  61 0034 0E94 0000 		call _ZN3LCD5setNbElh
+  62               	.LVL0:
+  66:main.cpp      **** 	myLCD.setBattery(LCD::FULL);
+  63               		.loc 1 66 0
+  64 0038 87E0      		ldi r24,lo8(7)
+  65 003a 0E94 0000 		call _ZN3LCD10setBatteryENS_7BatteryE
+  66               	.LVL1:
+  67               	.LBB9:
+  67:main.cpp      **** 	
+  68:main.cpp      **** 	while(1){
+  69:main.cpp      **** 	
+  70:main.cpp      **** 		_delay_ms(10);
+  71:main.cpp      **** 		loop_cnt++;
+  72:main.cpp      **** 		if(loop_cnt>9){
+  73:main.cpp      **** 			loop_cnt=0;
+  74:main.cpp      **** 			//mySM.update();
+  75:main.cpp      **** 		}
+  76:main.cpp      **** 
+  77:main.cpp      **** 		if(BTN0!=btn_state){
+  78:main.cpp      **** 			btn_state=BTN0;
+  79:main.cpp      **** 			if(btn_state){
+  80:main.cpp      **** 				LED0_Toggle;
+  68               		.loc 1 80 0
+  69 003e C0E4      		ldi r28,lo8(64)
+  70               	.L6:
+  71               	.LVL2:
+  72               	.LBB10:
+  73               	.LBB11:
+  74               		.file 2 "/usr/lib/avr/include/util/delay.h"
    1:/usr/lib/avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
    2:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
    3:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2007  Florin-Viorel Petrov
@@ -329,532 +342,544 @@
  185:/usr/lib/avr/include/util/delay.h **** 	#endif
  186:/usr/lib/avr/include/util/delay.h **** 
  187:/usr/lib/avr/include/util/delay.h **** 	__builtin_avr_delay_cycles(__ticks_dc);
-  65               		.loc 2 187 0
-  66 0034 8FE1      		ldi r24,lo8(19999)
-  67 0036 9EE4      		ldi r25,hi8(19999)
-  68 0038 0197      	1:	sbiw r24,1
-  69 003a 01F4      		brne 1b
-  70 003c 00C0      		rjmp .
-  71 003e 0000      		nop
-  72               	.LVL1:
-  73               	.LBE11:
-  74               	.LBE10:
-  68:main.cpp      **** 		if(loop_cnt>9){
-  75               		.loc 1 68 0
-  76 0040 8091 0000 		lds r24,loop_cnt
-  77 0044 8F5F      		subi r24,lo8(-(1))
-  78 0046 8093 0000 		sts loop_cnt,r24
-  69:main.cpp      **** 			loop_cnt=0;
-  79               		.loc 1 69 0
-  80 004a 8091 0000 		lds r24,loop_cnt
-  81 004e 8A30      		cpi r24,lo8(10)
-  82 0050 00F0      		brlo .L2
-  70:main.cpp      **** 			//mySM.update();
-  83               		.loc 1 70 0
-  84 0052 1092 0000 		sts loop_cnt,__zero_reg__
-  85               	.L2:
-  74:main.cpp      **** 			btn_state=BTN0;
-  86               		.loc 1 74 0
-  87 0056 89B1      		in r24,0x9
-  88 0058 9091 0000 		lds r25,btn_state
-  89 005c 8071      		andi r24,lo8(16)
-  90 005e 8917      		cp r24,r25
-  91 0060 01F0      		breq .L4
-  75:main.cpp      **** 			if(btn_state){
-  92               		.loc 1 75 0
-  93 0062 89B1      		in r24,0x9
-  94 0064 8071      		andi r24,lo8(16)
-  95 0066 8093 0000 		sts btn_state,r24
-  76:main.cpp      **** 				LED0_Toggle;
-  96               		.loc 1 76 0
-  97 006a 8091 0000 		lds r24,btn_state
-  98 006e 8823      		tst r24
-  99 0070 01F0      		breq .L4
- 100               		.loc 1 77 0
- 101 0072 8BB1      		in r24,0xb
- 102 0074 8C27      		eor r24,r28
- 103 0076 8BB9      		out 0xb,r24
- 104               	.L4:
- 105               	.LBB12:
-  78:main.cpp      **** 			}
-  79:main.cpp      **** 		}
-  80:main.cpp      **** 		if(uart.isDataAvailable()){
- 106               		.loc 1 80 0
- 107 0078 80E0      		ldi r24,lo8(uart)
- 108 007a 90E0      		ldi r25,hi8(uart)
- 109 007c 0E94 0000 		call _ZN4UART15isDataAvailableEv
- 110               	.LVL2:
- 111 0080 8823      		tst r24
- 112 0082 01F0      		breq .L6
- 113               	.LBB13:
-  81:main.cpp      **** 			char *cmd=uart.retrieve();
- 114               		.loc 1 81 0
- 115 0084 80E0      		ldi r24,lo8(uart)
- 116 0086 90E0      		ldi r25,hi8(uart)
- 117 0088 0E94 0000 		call _ZN4UART8retrieveEv
- 118               	.LVL3:
-  82:main.cpp      **** 			uart.sendString("Start verbose streaming",true);
- 119               		.loc 1 82 0
- 120 008c 41E0      		ldi r20,lo8(1)
- 121 008e 60E0      		ldi r22,lo8(.LC0)
- 122 0090 70E0      		ldi r23,hi8(.LC0)
- 123 0092 80E0      		ldi r24,lo8(uart)
- 124 0094 90E0      		ldi r25,hi8(uart)
- 125 0096 0E94 0000 		call _ZN4UART10sendStringEPcb
- 126               	.LVL4:
- 127               	.LBE13:
- 128 009a 00C0      		rjmp .L6
- 129               	.LBE12:
- 130               	.LBE9:
- 131               		.cfi_endproc
- 132               	.LFE10:
- 134               	.global	__floatunsisf
- 135               	.global	__divsf3
- 136               	.global	__fixunssfsi
- 137               		.text
- 138               	.global	__vector_19
- 140               	__vector_19:
- 141               	.LFB11:
-  83:main.cpp      **** 		}
-  84:main.cpp      **** 	}
-  85:main.cpp      **** 
-  86:main.cpp      **** 	return 0;
-  87:main.cpp      **** }
+  75               		.loc 2 187 0
+  76 0040 8FE1      		ldi r24,lo8(19999)
+  77 0042 9EE4      		ldi r25,hi8(19999)
+  78 0044 0197      	1:	sbiw r24,1
+  79 0046 01F4      		brne 1b
+  80 0048 00C0      		rjmp .
+  81 004a 0000      		nop
+  82               	.LVL3:
+  83               	.LBE11:
+  84               	.LBE10:
+  71:main.cpp      **** 		if(loop_cnt>9){
+  85               		.loc 1 71 0
+  86 004c 8091 0000 		lds r24,loop_cnt
+  87 0050 8F5F      		subi r24,lo8(-(1))
+  88 0052 8093 0000 		sts loop_cnt,r24
+  72:main.cpp      **** 			loop_cnt=0;
+  89               		.loc 1 72 0
+  90 0056 8091 0000 		lds r24,loop_cnt
+  91 005a 8A30      		cpi r24,lo8(10)
+  92 005c 00F0      		brlo .L2
+  73:main.cpp      **** 			//mySM.update();
+  93               		.loc 1 73 0
+  94 005e 1092 0000 		sts loop_cnt,__zero_reg__
+  95               	.L2:
+  77:main.cpp      **** 			btn_state=BTN0;
+  96               		.loc 1 77 0
+  97 0062 89B1      		in r24,0x9
+  98 0064 9091 0000 		lds r25,btn_state
+  99 0068 8071      		andi r24,lo8(16)
+ 100 006a 8917      		cp r24,r25
+ 101 006c 01F0      		breq .L4
+  78:main.cpp      **** 			if(btn_state){
+ 102               		.loc 1 78 0
+ 103 006e 89B1      		in r24,0x9
+ 104 0070 8071      		andi r24,lo8(16)
+ 105 0072 8093 0000 		sts btn_state,r24
+  79:main.cpp      **** 				LED0_Toggle;
+ 106               		.loc 1 79 0
+ 107 0076 8091 0000 		lds r24,btn_state
+ 108 007a 8823      		tst r24
+ 109 007c 01F0      		breq .L4
+ 110               		.loc 1 80 0
+ 111 007e 8BB1      		in r24,0xb
+ 112 0080 8C27      		eor r24,r28
+ 113 0082 8BB9      		out 0xb,r24
+ 114               	.L4:
+ 115               	.LBB12:
+  81:main.cpp      **** 			}
+  82:main.cpp      **** 		}
+  83:main.cpp      **** 		if(uart.isDataAvailable()){
+ 116               		.loc 1 83 0
+ 117 0084 80E0      		ldi r24,lo8(uart)
+ 118 0086 90E0      		ldi r25,hi8(uart)
+ 119 0088 0E94 0000 		call _ZN4UART15isDataAvailableEv
+ 120               	.LVL4:
+ 121 008c 8823      		tst r24
+ 122 008e 01F0      		breq .L6
+ 123               	.LBB13:
+  84:main.cpp      **** 			char *cmd=uart.retrieve();
+ 124               		.loc 1 84 0
+ 125 0090 80E0      		ldi r24,lo8(uart)
+ 126 0092 90E0      		ldi r25,hi8(uart)
+ 127 0094 0E94 0000 		call _ZN4UART8retrieveEv
+ 128               	.LVL5:
+  85:main.cpp      **** 			uart.sendString("Start verbose streaming",true);
+ 129               		.loc 1 85 0
+ 130 0098 41E0      		ldi r20,lo8(1)
+ 131 009a 60E0      		ldi r22,lo8(.LC0)
+ 132 009c 70E0      		ldi r23,hi8(.LC0)
+ 133 009e 80E0      		ldi r24,lo8(uart)
+ 134 00a0 90E0      		ldi r25,hi8(uart)
+ 135 00a2 0E94 0000 		call _ZN4UART10sendStringEPcb
+ 136               	.LVL6:
+ 137               	.LBE13:
+ 138 00a6 00C0      		rjmp .L6
+ 139               	.LBE12:
+ 140               	.LBE9:
+ 141               		.cfi_endproc
+ 142               	.LFE10:
+ 144               	.global	__floatunsisf
+ 145               	.global	__divsf3
+ 146               	.global	__fixunssfsi
+ 147               		.text
+ 148               	.global	__vector_19
+ 150               	__vector_19:
+ 151               	.LFB11:
+  86:main.cpp      **** 		}
+  87:main.cpp      **** 	}
   88:main.cpp      **** 
-  89:main.cpp      **** 
-  90:main.cpp      **** 
+  89:main.cpp      **** 	return 0;
+  90:main.cpp      **** }
   91:main.cpp      **** 
-  92:main.cpp      **** ISR(ADC_vect){
- 142               		.loc 1 92 0
- 143               		.cfi_startproc
- 144 0000 1F92      		push r1
- 145               	.LCFI0:
- 146               		.cfi_def_cfa_offset 3
- 147               		.cfi_offset 1, -2
- 148 0002 0F92      		push r0
- 149               	.LCFI1:
- 150               		.cfi_def_cfa_offset 4
- 151               		.cfi_offset 0, -3
- 152 0004 0FB6      		in r0,__SREG__
- 153 0006 0F92      		push r0
- 154 0008 1124      		clr __zero_reg__
- 155 000a CF92      		push r12
- 156               	.LCFI2:
- 157               		.cfi_def_cfa_offset 5
- 158               		.cfi_offset 12, -4
- 159 000c DF92      		push r13
- 160               	.LCFI3:
- 161               		.cfi_def_cfa_offset 6
- 162               		.cfi_offset 13, -5
- 163 000e EF92      		push r14
- 164               	.LCFI4:
- 165               		.cfi_def_cfa_offset 7
- 166               		.cfi_offset 14, -6
- 167 0010 FF92      		push r15
- 168               	.LCFI5:
- 169               		.cfi_def_cfa_offset 8
- 170               		.cfi_offset 15, -7
- 171 0012 2F93      		push r18
- 172               	.LCFI6:
- 173               		.cfi_def_cfa_offset 9
- 174               		.cfi_offset 18, -8
- 175 0014 3F93      		push r19
- 176               	.LCFI7:
- 177               		.cfi_def_cfa_offset 10
- 178               		.cfi_offset 19, -9
- 179 0016 4F93      		push r20
- 180               	.LCFI8:
- 181               		.cfi_def_cfa_offset 11
- 182               		.cfi_offset 20, -10
- 183 0018 5F93      		push r21
- 184               	.LCFI9:
- 185               		.cfi_def_cfa_offset 12
- 186               		.cfi_offset 21, -11
- 187 001a 6F93      		push r22
- 188               	.LCFI10:
- 189               		.cfi_def_cfa_offset 13
- 190               		.cfi_offset 22, -12
- 191 001c 7F93      		push r23
- 192               	.LCFI11:
- 193               		.cfi_def_cfa_offset 14
- 194               		.cfi_offset 23, -13
- 195 001e 8F93      		push r24
- 196               	.LCFI12:
- 197               		.cfi_def_cfa_offset 15
- 198               		.cfi_offset 24, -14
- 199 0020 9F93      		push r25
- 200               	.LCFI13:
- 201               		.cfi_def_cfa_offset 16
- 202               		.cfi_offset 25, -15
- 203 0022 AF93      		push r26
- 204               	.LCFI14:
- 205               		.cfi_def_cfa_offset 17
- 206               		.cfi_offset 26, -16
- 207 0024 BF93      		push r27
- 208               	.LCFI15:
- 209               		.cfi_def_cfa_offset 18
- 210               		.cfi_offset 27, -17
- 211 0026 EF93      		push r30
- 212               	.LCFI16:
- 213               		.cfi_def_cfa_offset 19
- 214               		.cfi_offset 30, -18
- 215 0028 FF93      		push r31
- 216               	.LCFI17:
- 217               		.cfi_def_cfa_offset 20
- 218               		.cfi_offset 31, -19
- 219               	/* prologue: Signal */
- 220               	/* frame size = 0 */
- 221               	/* stack size = 19 */
- 222               	.L__stack_usage = 19
-  93:main.cpp      **** 	uint16_t ADC_val=ADCL;
- 223               		.loc 1 93 0
- 224 002a 8091 7800 		lds r24,120
- 225               	.LVL5:
-  94:main.cpp      **** 	ADC_val+=ADCH<<8;
- 226               		.loc 1 94 0
- 227 002e 6091 7900 		lds r22,121
- 228               	.LVL6:
-  95:main.cpp      **** 	
-  96:main.cpp      **** 	//CNT=1.1*1024/Vref
-  97:main.cpp      **** 	//Vref=1.1*1024/CNT
-  98:main.cpp      **** 	//1.02578
-  99:main.cpp      **** 	//1.0127
- 100:main.cpp      **** 	//
- 101:main.cpp      **** 	uint32_t cnt=(109875.0)/ADC_val;// in tens of mV, i.e. 330=>3.30V
- 229               		.loc 1 101 0
- 230 0032 70E0      		ldi r23,0
- 231 0034 762F      		mov r23,r22
- 232 0036 6627      		clr r22
- 233               	.LVL7:
- 234 0038 680F      		add r22,r24
- 235 003a 711D      		adc r23,__zero_reg__
- 236 003c 80E0      		ldi r24,0
- 237 003e 90E0      		ldi r25,0
- 238 0040 0E94 0000 		call __floatunsisf
- 239               	.LVL8:
- 240 0044 9B01      		movw r18,r22
- 241 0046 AC01      		movw r20,r24
- 242 0048 60E8      		ldi r22,lo8(-128)
- 243 004a 79E9      		ldi r23,lo8(-103)
- 244 004c 86ED      		ldi r24,lo8(-42)
- 245 004e 97E4      		ldi r25,lo8(71)
- 246 0050 0E94 0000 		call __divsf3
- 247               	.LVL9:
- 248 0054 0E94 0000 		call __fixunssfsi
- 249               	.LVL10:
- 250 0058 6B01      		movw r12,r22
- 251 005a 7C01      		movw r14,r24
- 252               	.LVL11:
- 102:main.cpp      **** 	myLCD.setNb(cnt,3);
- 253               		.loc 1 102 0
- 254 005c 43E0      		ldi r20,lo8(3)
- 255 005e 0E94 0000 		call _ZN3LCD5setNbElh
- 256               	.LVL12:
- 103:main.cpp      **** 	if(cnt>=BATT_FULL){
- 257               		.loc 1 103 0
- 258 0062 8FE4      		ldi r24,79
- 259 0064 C816      		cp r12,r24
- 260 0066 81E0      		ldi r24,1
- 261 0068 D806      		cpc r13,r24
- 262 006a E104      		cpc r14,__zero_reg__
- 263 006c F104      		cpc r15,__zero_reg__
- 264 006e 00F0      		brlo .L15
- 104:main.cpp      **** 		myLCD.setBattery(LCD::FULL);
- 265               		.loc 1 104 0
- 266 0070 87E0      		ldi r24,lo8(7)
- 267 0072 00C0      		rjmp .L20
- 268               	.L15:
- 105:main.cpp      **** 	}else if(cnt>=BATT_TWOBAR){
- 269               		.loc 1 105 0
- 270 0074 85E4      		ldi r24,69
- 271 0076 C816      		cp r12,r24
- 272 0078 81E0      		ldi r24,1
- 273 007a D806      		cpc r13,r24
- 274 007c E104      		cpc r14,__zero_reg__
- 275 007e F104      		cpc r15,__zero_reg__
- 276 0080 00F0      		brlo .L17
- 106:main.cpp      **** 		myLCD.setBattery(LCD::TWOBAR);
- 277               		.loc 1 106 0
- 278 0082 86E0      		ldi r24,lo8(6)
- 279 0084 00C0      		rjmp .L20
- 280               	.L17:
- 107:main.cpp      **** 	}else if(cnt>=BATT_ONEBAR){
- 281               		.loc 1 107 0
- 282 0086 8BE3      		ldi r24,59
- 283 0088 C816      		cp r12,r24
- 284 008a 81E0      		ldi r24,1
- 285 008c D806      		cpc r13,r24
- 286 008e E104      		cpc r14,__zero_reg__
- 287 0090 F104      		cpc r15,__zero_reg__
- 288 0092 00F0      		brlo .L18
- 108:main.cpp      **** 		myLCD.setBattery(LCD::ONEBAR);
- 289               		.loc 1 108 0
- 290 0094 85E0      		ldi r24,lo8(5)
- 291 0096 00C0      		rjmp .L20
- 292               	.L18:
- 109:main.cpp      **** 	}else if(cnt>=BATT_EMPTY){
- 293               		.loc 1 109 0
- 294 0098 81E3      		ldi r24,49
- 295 009a C816      		cp r12,r24
- 296 009c 81E0      		ldi r24,1
- 297 009e D806      		cpc r13,r24
- 298 00a0 E104      		cpc r14,__zero_reg__
- 299 00a2 F104      		cpc r15,__zero_reg__
- 300 00a4 00F0      		brlo .L19
- 110:main.cpp      **** 		myLCD.setBattery(LCD::EMPTY);
- 301               		.loc 1 110 0
- 302 00a6 81E0      		ldi r24,lo8(1)
- 303 00a8 00C0      		rjmp .L20
- 304               	.L19:
- 111:main.cpp      **** 	}else{
- 112:main.cpp      **** 		myLCD.setBattery(LCD::NONE);
- 305               		.loc 1 112 0
- 306 00aa 80E0      		ldi r24,0
- 307               	.L20:
- 308 00ac 0E94 0000 		call _ZN3LCD10setBatteryENS_7BatteryE
- 309               	.LVL13:
- 310               	/* epilogue start */
- 113:main.cpp      **** 		//we should shutdown here
- 114:main.cpp      **** 	}
- 115:main.cpp      **** }
- 311               		.loc 1 115 0
- 312 00b0 FF91      		pop r31
- 313 00b2 EF91      		pop r30
- 314 00b4 BF91      		pop r27
- 315 00b6 AF91      		pop r26
- 316 00b8 9F91      		pop r25
- 317 00ba 8F91      		pop r24
- 318 00bc 7F91      		pop r23
- 319 00be 6F91      		pop r22
- 320 00c0 5F91      		pop r21
- 321 00c2 4F91      		pop r20
- 322 00c4 3F91      		pop r19
- 323 00c6 2F91      		pop r18
- 324 00c8 FF90      		pop r15
- 325 00ca EF90      		pop r14
- 326 00cc DF90      		pop r13
- 327 00ce CF90      		pop r12
- 328               	.LVL14:
- 329 00d0 0F90      		pop r0
- 330 00d2 0FBE      		out __SREG__,r0
- 331 00d4 0F90      		pop r0
- 332 00d6 1F90      		pop r1
- 333 00d8 1895      		reti
- 334               		.cfi_endproc
- 335               	.LFE11:
- 337               	.global	__vector_13
- 339               	__vector_13:
- 340               	.LFB12:
- 116:main.cpp      **** 
- 117:main.cpp      **** ISR(USART0_RX_vect){
- 341               		.loc 1 117 0
- 342               		.cfi_startproc
- 343 00da 1F92      		push r1
- 344               	.LCFI18:
- 345               		.cfi_def_cfa_offset 3
- 346               		.cfi_offset 1, -2
- 347 00dc 0F92      		push r0
- 348               	.LCFI19:
- 349               		.cfi_def_cfa_offset 4
- 350               		.cfi_offset 0, -3
- 351 00de 0FB6      		in r0,__SREG__
- 352 00e0 0F92      		push r0
- 353 00e2 1124      		clr __zero_reg__
- 354 00e4 2F93      		push r18
- 355               	.LCFI20:
- 356               		.cfi_def_cfa_offset 5
- 357               		.cfi_offset 18, -4
- 358 00e6 3F93      		push r19
- 359               	.LCFI21:
- 360               		.cfi_def_cfa_offset 6
- 361               		.cfi_offset 19, -5
- 362 00e8 4F93      		push r20
- 363               	.LCFI22:
- 364               		.cfi_def_cfa_offset 7
- 365               		.cfi_offset 20, -6
- 366 00ea 5F93      		push r21
- 367               	.LCFI23:
- 368               		.cfi_def_cfa_offset 8
- 369               		.cfi_offset 21, -7
- 370 00ec 6F93      		push r22
- 371               	.LCFI24:
- 372               		.cfi_def_cfa_offset 9
- 373               		.cfi_offset 22, -8
- 374 00ee 7F93      		push r23
- 375               	.LCFI25:
- 376               		.cfi_def_cfa_offset 10
- 377               		.cfi_offset 23, -9
- 378 00f0 8F93      		push r24
- 379               	.LCFI26:
- 380               		.cfi_def_cfa_offset 11
- 381               		.cfi_offset 24, -10
- 382 00f2 9F93      		push r25
- 383               	.LCFI27:
- 384               		.cfi_def_cfa_offset 12
- 385               		.cfi_offset 25, -11
- 386 00f4 AF93      		push r26
- 387               	.LCFI28:
- 388               		.cfi_def_cfa_offset 13
- 389               		.cfi_offset 26, -12
- 390 00f6 BF93      		push r27
- 391               	.LCFI29:
- 392               		.cfi_def_cfa_offset 14
- 393               		.cfi_offset 27, -13
- 394 00f8 EF93      		push r30
- 395               	.LCFI30:
- 396               		.cfi_def_cfa_offset 15
- 397               		.cfi_offset 30, -14
- 398 00fa FF93      		push r31
- 399               	.LCFI31:
- 400               		.cfi_def_cfa_offset 16
- 401               		.cfi_offset 31, -15
- 402               	/* prologue: Signal */
- 403               	/* frame size = 0 */
- 404               	/* stack size = 15 */
- 405               	.L__stack_usage = 15
- 118:main.cpp      **** 	uart.receive();
- 406               		.loc 1 118 0
- 407 00fc 80E0      		ldi r24,lo8(uart)
- 408 00fe 90E0      		ldi r25,hi8(uart)
- 409 0100 0E94 0000 		call _ZN4UART7receiveEv
- 410               	.LVL15:
- 411               	/* epilogue start */
- 119:main.cpp      **** }
- 412               		.loc 1 119 0
- 413 0104 FF91      		pop r31
- 414 0106 EF91      		pop r30
- 415 0108 BF91      		pop r27
- 416 010a AF91      		pop r26
- 417 010c 9F91      		pop r25
- 418 010e 8F91      		pop r24
- 419 0110 7F91      		pop r23
- 420 0112 6F91      		pop r22
- 421 0114 5F91      		pop r21
- 422 0116 4F91      		pop r20
- 423 0118 3F91      		pop r19
- 424 011a 2F91      		pop r18
- 425 011c 0F90      		pop r0
- 426 011e 0FBE      		out __SREG__,r0
- 427 0120 0F90      		pop r0
- 428 0122 1F90      		pop r1
- 429 0124 1895      		reti
- 430               		.cfi_endproc
- 431               	.LFE12:
- 433               		.section	.text.startup
- 435               	_GLOBAL__sub_I_uart:
- 436               	.LFB14:
- 437               		.loc 1 119 0
- 438               		.cfi_startproc
- 439               	/* prologue: function */
- 440               	/* frame size = 0 */
- 441               	/* stack size = 0 */
- 442               	.L__stack_usage = 0
- 443               	.LVL16:
- 444               	.LBB16:
- 445               	.LBB17:
+  92:main.cpp      **** 
+  93:main.cpp      **** 
+  94:main.cpp      **** 
+  95:main.cpp      **** ISR(ADC_vect){
+ 152               		.loc 1 95 0
+ 153               		.cfi_startproc
+ 154 0000 1F92      		push r1
+ 155               	.LCFI0:
+ 156               		.cfi_def_cfa_offset 3
+ 157               		.cfi_offset 1, -2
+ 158 0002 0F92      		push r0
+ 159               	.LCFI1:
+ 160               		.cfi_def_cfa_offset 4
+ 161               		.cfi_offset 0, -3
+ 162 0004 0FB6      		in r0,__SREG__
+ 163 0006 0F92      		push r0
+ 164 0008 1124      		clr __zero_reg__
+ 165 000a CF92      		push r12
+ 166               	.LCFI2:
+ 167               		.cfi_def_cfa_offset 5
+ 168               		.cfi_offset 12, -4
+ 169 000c DF92      		push r13
+ 170               	.LCFI3:
+ 171               		.cfi_def_cfa_offset 6
+ 172               		.cfi_offset 13, -5
+ 173 000e EF92      		push r14
+ 174               	.LCFI4:
+ 175               		.cfi_def_cfa_offset 7
+ 176               		.cfi_offset 14, -6
+ 177 0010 FF92      		push r15
+ 178               	.LCFI5:
+ 179               		.cfi_def_cfa_offset 8
+ 180               		.cfi_offset 15, -7
+ 181 0012 2F93      		push r18
+ 182               	.LCFI6:
+ 183               		.cfi_def_cfa_offset 9
+ 184               		.cfi_offset 18, -8
+ 185 0014 3F93      		push r19
+ 186               	.LCFI7:
+ 187               		.cfi_def_cfa_offset 10
+ 188               		.cfi_offset 19, -9
+ 189 0016 4F93      		push r20
+ 190               	.LCFI8:
+ 191               		.cfi_def_cfa_offset 11
+ 192               		.cfi_offset 20, -10
+ 193 0018 5F93      		push r21
+ 194               	.LCFI9:
+ 195               		.cfi_def_cfa_offset 12
+ 196               		.cfi_offset 21, -11
+ 197 001a 6F93      		push r22
+ 198               	.LCFI10:
+ 199               		.cfi_def_cfa_offset 13
+ 200               		.cfi_offset 22, -12
+ 201 001c 7F93      		push r23
+ 202               	.LCFI11:
+ 203               		.cfi_def_cfa_offset 14
+ 204               		.cfi_offset 23, -13
+ 205 001e 8F93      		push r24
+ 206               	.LCFI12:
+ 207               		.cfi_def_cfa_offset 15
+ 208               		.cfi_offset 24, -14
+ 209 0020 9F93      		push r25
+ 210               	.LCFI13:
+ 211               		.cfi_def_cfa_offset 16
+ 212               		.cfi_offset 25, -15
+ 213 0022 AF93      		push r26
+ 214               	.LCFI14:
+ 215               		.cfi_def_cfa_offset 17
+ 216               		.cfi_offset 26, -16
+ 217 0024 BF93      		push r27
+ 218               	.LCFI15:
+ 219               		.cfi_def_cfa_offset 18
+ 220               		.cfi_offset 27, -17
+ 221 0026 EF93      		push r30
+ 222               	.LCFI16:
+ 223               		.cfi_def_cfa_offset 19
+ 224               		.cfi_offset 30, -18
+ 225 0028 FF93      		push r31
+ 226               	.LCFI17:
+ 227               		.cfi_def_cfa_offset 20
+ 228               		.cfi_offset 31, -19
+ 229               	/* prologue: Signal */
+ 230               	/* frame size = 0 */
+ 231               	/* stack size = 19 */
+ 232               	.L__stack_usage = 19
+  96:main.cpp      **** 	uint16_t ADC_val=ADCL;
+ 233               		.loc 1 96 0
+ 234 002a 6091 7800 		lds r22,120
+ 235               	.LVL7:
+  97:main.cpp      **** 	ADC_val+=ADCH<<8;
+ 236               		.loc 1 97 0
+ 237 002e 8091 7900 		lds r24,121
+ 238               	.LVL8:
+ 239 0032 90E0      		ldi r25,0
+ 240 0034 982F      		mov r25,r24
+ 241 0036 8827      		clr r24
+ 242               	.LVL9:
+ 243 0038 680F      		add r22,r24
+ 244 003a 792F      		mov r23,r25
+ 245 003c 711D      		adc r23,__zero_reg__
+  98:main.cpp      **** 	
+  99:main.cpp      **** 	//CNT=1.1*1024/Vref
+ 100:main.cpp      **** 	//Vref=1.1*1024/CNT
+ 101:main.cpp      **** 	//1.02578
+ 102:main.cpp      **** 	//1.0127
+ 103:main.cpp      **** 	//
+ 104:main.cpp      **** 	uint32_t cnt=(109875.0)/ADC_val;// in tens of mV, i.e. 330=>3.30V
+ 246               		.loc 1 104 0
+ 247 003e 90E0      		ldi r25,0
+ 248 0040 80E0      		ldi r24,0
+ 249 0042 0E94 0000 		call __floatunsisf
+ 250               	.LVL10:
+ 251 0046 9B01      		movw r18,r22
+ 252 0048 AC01      		movw r20,r24
+ 253 004a 60E8      		ldi r22,lo8(-128)
+ 254 004c 79E9      		ldi r23,lo8(-103)
+ 255 004e 86ED      		ldi r24,lo8(-42)
+ 256 0050 97E4      		ldi r25,lo8(71)
+ 257 0052 0E94 0000 		call __divsf3
+ 258               	.LVL11:
+ 259 0056 0E94 0000 		call __fixunssfsi
+ 260               	.LVL12:
+ 261 005a 6B01      		movw r12,r22
+ 262 005c 7C01      		movw r14,r24
+ 263               	.LVL13:
+ 105:main.cpp      **** 	myLCD.setNb(cnt,3);
+ 264               		.loc 1 105 0
+ 265 005e 43E0      		ldi r20,lo8(3)
+ 266 0060 0E94 0000 		call _ZN3LCD5setNbElh
+ 267               	.LVL14:
+ 106:main.cpp      **** 	if(cnt>=BATT_FULL){
+ 268               		.loc 1 106 0
+ 269 0064 8FE4      		ldi r24,79
+ 270 0066 C816      		cp r12,r24
+ 271 0068 81E0      		ldi r24,1
+ 272 006a D806      		cpc r13,r24
+ 273 006c E104      		cpc r14,__zero_reg__
+ 274 006e F104      		cpc r15,__zero_reg__
+ 275 0070 00F0      		brlo .L14
+ 107:main.cpp      **** 		myLCD.setBattery(LCD::FULL);
+ 276               		.loc 1 107 0
+ 277 0072 87E0      		ldi r24,lo8(7)
+ 278               	.L19:
+ 108:main.cpp      **** 	}else if(cnt>=BATT_TWOBAR){
+ 109:main.cpp      **** 		myLCD.setBattery(LCD::TWOBAR);
+ 110:main.cpp      **** 	}else if(cnt>=BATT_ONEBAR){
+ 111:main.cpp      **** 		myLCD.setBattery(LCD::ONEBAR);
+ 112:main.cpp      **** 	}else if(cnt>=BATT_EMPTY){
+ 113:main.cpp      **** 		myLCD.setBattery(LCD::EMPTY);
+ 114:main.cpp      **** 	}else{
+ 115:main.cpp      **** 		myLCD.setBattery(LCD::NONE);
+ 279               		.loc 1 115 0
+ 280 0074 0E94 0000 		call _ZN3LCD10setBatteryENS_7BatteryE
+ 281               	.LVL15:
+ 282               	/* epilogue start */
+ 116:main.cpp      **** 		//we should shutdown here
+ 117:main.cpp      **** 	}
+ 118:main.cpp      **** }
+ 283               		.loc 1 118 0
+ 284 0078 FF91      		pop r31
+ 285 007a EF91      		pop r30
+ 286 007c BF91      		pop r27
+ 287 007e AF91      		pop r26
+ 288 0080 9F91      		pop r25
+ 289 0082 8F91      		pop r24
+ 290 0084 7F91      		pop r23
+ 291 0086 6F91      		pop r22
+ 292 0088 5F91      		pop r21
+ 293 008a 4F91      		pop r20
+ 294 008c 3F91      		pop r19
+ 295 008e 2F91      		pop r18
+ 296 0090 FF90      		pop r15
+ 297 0092 EF90      		pop r14
+ 298 0094 DF90      		pop r13
+ 299 0096 CF90      		pop r12
+ 300               	.LVL16:
+ 301 0098 0F90      		pop r0
+ 302 009a 0FBE      		out __SREG__,r0
+ 303 009c 0F90      		pop r0
+ 304 009e 1F90      		pop r1
+ 305 00a0 1895      		reti
+ 306               	.LVL17:
+ 307               	.L14:
+ 108:main.cpp      **** 	}else if(cnt>=BATT_TWOBAR){
+ 308               		.loc 1 108 0
+ 309 00a2 85E4      		ldi r24,69
+ 310 00a4 C816      		cp r12,r24
+ 311 00a6 81E0      		ldi r24,1
+ 312 00a8 D806      		cpc r13,r24
+ 313 00aa E104      		cpc r14,__zero_reg__
+ 314 00ac F104      		cpc r15,__zero_reg__
+ 315 00ae 00F0      		brlo .L16
+ 109:main.cpp      **** 	}else if(cnt>=BATT_ONEBAR){
+ 316               		.loc 1 109 0
+ 317 00b0 86E0      		ldi r24,lo8(6)
+ 318 00b2 00C0      		rjmp .L19
+ 319               	.L16:
+ 110:main.cpp      **** 		myLCD.setBattery(LCD::ONEBAR);
+ 320               		.loc 1 110 0
+ 321 00b4 8BE3      		ldi r24,59
+ 322 00b6 C816      		cp r12,r24
+ 323 00b8 81E0      		ldi r24,1
+ 324 00ba D806      		cpc r13,r24
+ 325 00bc E104      		cpc r14,__zero_reg__
+ 326 00be F104      		cpc r15,__zero_reg__
+ 327 00c0 00F0      		brlo .L17
+ 111:main.cpp      **** 	}else if(cnt>=BATT_EMPTY){
+ 328               		.loc 1 111 0
+ 329 00c2 85E0      		ldi r24,lo8(5)
+ 330 00c4 00C0      		rjmp .L19
+ 331               	.L17:
+ 112:main.cpp      **** 		myLCD.setBattery(LCD::EMPTY);
+ 332               		.loc 1 112 0
+ 333 00c6 81E3      		ldi r24,49
+ 334 00c8 C816      		cp r12,r24
+ 335 00ca 81E0      		ldi r24,1
+ 336 00cc D806      		cpc r13,r24
+ 337 00ce E104      		cpc r14,__zero_reg__
+ 338 00d0 F104      		cpc r15,__zero_reg__
+ 339 00d2 00F0      		brlo .L18
+ 113:main.cpp      **** 	}else{
+ 340               		.loc 1 113 0
+ 341 00d4 81E0      		ldi r24,lo8(1)
+ 342 00d6 00C0      		rjmp .L19
+ 343               	.L18:
+ 115:main.cpp      **** 		//we should shutdown here
+ 344               		.loc 1 115 0
+ 345 00d8 80E0      		ldi r24,0
+ 346 00da 00C0      		rjmp .L19
+ 347               		.cfi_endproc
+ 348               	.LFE11:
+ 350               	.global	__vector_13
+ 352               	__vector_13:
+ 353               	.LFB12:
+ 119:main.cpp      **** 
+ 120:main.cpp      **** ISR(USART0_RX_vect){
+ 354               		.loc 1 120 0
+ 355               		.cfi_startproc
+ 356 00dc 1F92      		push r1
+ 357               	.LCFI18:
+ 358               		.cfi_def_cfa_offset 3
+ 359               		.cfi_offset 1, -2
+ 360 00de 0F92      		push r0
+ 361               	.LCFI19:
+ 362               		.cfi_def_cfa_offset 4
+ 363               		.cfi_offset 0, -3
+ 364 00e0 0FB6      		in r0,__SREG__
+ 365 00e2 0F92      		push r0
+ 366 00e4 1124      		clr __zero_reg__
+ 367 00e6 2F93      		push r18
+ 368               	.LCFI20:
+ 369               		.cfi_def_cfa_offset 5
+ 370               		.cfi_offset 18, -4
+ 371 00e8 3F93      		push r19
+ 372               	.LCFI21:
+ 373               		.cfi_def_cfa_offset 6
+ 374               		.cfi_offset 19, -5
+ 375 00ea 4F93      		push r20
+ 376               	.LCFI22:
+ 377               		.cfi_def_cfa_offset 7
+ 378               		.cfi_offset 20, -6
+ 379 00ec 5F93      		push r21
+ 380               	.LCFI23:
+ 381               		.cfi_def_cfa_offset 8
+ 382               		.cfi_offset 21, -7
+ 383 00ee 6F93      		push r22
+ 384               	.LCFI24:
+ 385               		.cfi_def_cfa_offset 9
+ 386               		.cfi_offset 22, -8
+ 387 00f0 7F93      		push r23
+ 388               	.LCFI25:
+ 389               		.cfi_def_cfa_offset 10
+ 390               		.cfi_offset 23, -9
+ 391 00f2 8F93      		push r24
+ 392               	.LCFI26:
+ 393               		.cfi_def_cfa_offset 11
+ 394               		.cfi_offset 24, -10
+ 395 00f4 9F93      		push r25
+ 396               	.LCFI27:
+ 397               		.cfi_def_cfa_offset 12
+ 398               		.cfi_offset 25, -11
+ 399 00f6 AF93      		push r26
+ 400               	.LCFI28:
+ 401               		.cfi_def_cfa_offset 13
+ 402               		.cfi_offset 26, -12
+ 403 00f8 BF93      		push r27
+ 404               	.LCFI29:
+ 405               		.cfi_def_cfa_offset 14
+ 406               		.cfi_offset 27, -13
+ 407 00fa EF93      		push r30
+ 408               	.LCFI30:
+ 409               		.cfi_def_cfa_offset 15
+ 410               		.cfi_offset 30, -14
+ 411 00fc FF93      		push r31
+ 412               	.LCFI31:
+ 413               		.cfi_def_cfa_offset 16
+ 414               		.cfi_offset 31, -15
+ 415               	/* prologue: Signal */
+ 416               	/* frame size = 0 */
+ 417               	/* stack size = 15 */
+ 418               	.L__stack_usage = 15
+ 121:main.cpp      **** 	uart.receive();
+ 419               		.loc 1 121 0
+ 420 00fe 80E0      		ldi r24,lo8(uart)
+ 421 0100 90E0      		ldi r25,hi8(uart)
+ 422 0102 0E94 0000 		call _ZN4UART7receiveEv
+ 423               	.LVL18:
+ 424               	/* epilogue start */
+ 122:main.cpp      **** }
+ 425               		.loc 1 122 0
+ 426 0106 FF91      		pop r31
+ 427 0108 EF91      		pop r30
+ 428 010a BF91      		pop r27
+ 429 010c AF91      		pop r26
+ 430 010e 9F91      		pop r25
+ 431 0110 8F91      		pop r24
+ 432 0112 7F91      		pop r23
+ 433 0114 6F91      		pop r22
+ 434 0116 5F91      		pop r21
+ 435 0118 4F91      		pop r20
+ 436 011a 3F91      		pop r19
+ 437 011c 2F91      		pop r18
+ 438 011e 0F90      		pop r0
+ 439 0120 0FBE      		out __SREG__,r0
+ 440 0122 0F90      		pop r0
+ 441 0124 1F90      		pop r1
+ 442 0126 1895      		reti
+ 443               		.cfi_endproc
+ 444               	.LFE12:
+ 446               		.section	.text.startup
+ 448               	_GLOBAL__sub_I_uart:
+ 449               	.LFB14:
+ 450               		.loc 1 122 0
+ 451               		.cfi_startproc
+ 452               	/* prologue: function */
+ 453               	/* frame size = 0 */
+ 454               	/* stack size = 0 */
+ 455               	.L__stack_usage = 0
+ 456               	.LVL19:
+ 457               	.LBB16:
+ 458               	.LBB17:
   35:main.cpp      **** LCD myLCD=LCD(0);//Use 1 for lowest power LCD mode
- 446               		.loc 1 35 0
- 447 009c 80E0      		ldi r24,lo8(uart)
- 448 009e 90E0      		ldi r25,hi8(uart)
- 449 00a0 0E94 0000 		call _ZN4UARTC1Ev
- 450               	.LVL17:
+ 459               		.loc 1 35 0
+ 460 00a8 80E0      		ldi r24,lo8(uart)
+ 461 00aa 90E0      		ldi r25,hi8(uart)
+ 462 00ac 0E94 0000 		call _ZN4UARTC1Ev
+ 463               	.LVL20:
   36:main.cpp      **** //Scale myScale=Scale(&uart);
- 451               		.loc 1 36 0
- 452 00a4 60E0      		ldi r22,0
- 453 00a6 80E0      		ldi r24,lo8(myLCD)
- 454 00a8 90E0      		ldi r25,hi8(myLCD)
- 455 00aa 0C94 0000 		jmp _ZN3LCDC1Eb
- 456               	.LVL18:
- 457               	.LBE17:
- 458               	.LBE16:
- 459               		.cfi_endproc
- 460               	.LFE14:
- 462               		.global __do_global_ctors
- 463               		.section .ctors,"a",@progbits
- 464               		.p2align	1
- 465 0000 0000      		.word	gs(_GLOBAL__sub_I_uart)
- 466               		.section	.text.exit,"ax",@progbits
- 468               	_GLOBAL__sub_D_uart:
- 469               	.LFB15:
- 470               		.loc 1 119 0
- 471               		.cfi_startproc
- 472               	/* prologue: function */
- 473               	/* frame size = 0 */
- 474               	/* stack size = 0 */
- 475               	.L__stack_usage = 0
- 476               	.LVL19:
- 477               	.LBB22:
- 478               	.LBB23:
- 479               	.LBB24:
+ 464               		.loc 1 36 0
+ 465 00b0 60E0      		ldi r22,0
+ 466 00b2 80E0      		ldi r24,lo8(myLCD)
+ 467 00b4 90E0      		ldi r25,hi8(myLCD)
+ 468 00b6 0C94 0000 		jmp _ZN3LCDC1Eb
+ 469               	.LVL21:
+ 470               	.LBE17:
+ 471               	.LBE16:
+ 472               		.cfi_endproc
+ 473               	.LFE14:
+ 475               		.global __do_global_ctors
+ 476               		.section .ctors,"a",@progbits
+ 477               		.p2align	1
+ 478 0000 0000      		.word	gs(_GLOBAL__sub_I_uart)
+ 479               		.section	.text.exit,"ax",@progbits
+ 481               	_GLOBAL__sub_D_uart:
+ 482               	.LFB15:
+ 483               		.loc 1 122 0
+ 484               		.cfi_startproc
+ 485               	/* prologue: function */
+ 486               	/* frame size = 0 */
+ 487               	/* stack size = 0 */
+ 488               	.L__stack_usage = 0
+ 489               	.LVL22:
+ 490               	.LBB22:
+ 491               	.LBB23:
+ 492               	.LBB24:
   36:main.cpp      **** //Scale myScale=Scale(&uart);
- 480               		.loc 1 36 0
- 481 0000 80E0      		ldi r24,lo8(myLCD)
- 482 0002 90E0      		ldi r25,hi8(myLCD)
- 483 0004 0E94 0000 		call _ZN3LCDD1Ev
- 484               	.LVL20:
+ 493               		.loc 1 36 0
+ 494 0000 80E0      		ldi r24,lo8(myLCD)
+ 495 0002 90E0      		ldi r25,hi8(myLCD)
+ 496 0004 0E94 0000 		call _ZN3LCDD1Ev
+ 497               	.LVL23:
   35:main.cpp      **** LCD myLCD=LCD(0);//Use 1 for lowest power LCD mode
- 485               		.loc 1 35 0
- 486 0008 80E0      		ldi r24,lo8(uart)
- 487 000a 90E0      		ldi r25,hi8(uart)
- 488 000c 0C94 0000 		jmp _ZN4UARTD1Ev
- 489               	.LVL21:
- 490               	.LBE24:
- 491               	.LBE23:
- 492               	.LBE22:
- 493               		.cfi_endproc
- 494               	.LFE15:
- 496               		.global __do_global_dtors
- 497               		.section .dtors,"a",@progbits
- 498               		.p2align	1
- 499 0000 0000      		.word	gs(_GLOBAL__sub_D_uart)
- 500               	.global	btn_state
- 501               		.section .bss
- 504               	btn_state:
- 505 0000 00        		.zero	1
- 506               	.global	loop_cnt
- 509               	loop_cnt:
- 510 0001 00        		.zero	1
- 511               	.global	myLCD
- 514               	myLCD:
- 515 0002 00        		.zero	1
- 516               	.global	uart
- 519               	uart:
- 520 0003 0000 0000 		.zero	22
- 520      0000 0000 
- 520      0000 0000 
- 520      0000 0000 
- 520      0000 0000 
- 521               		.text
- 522               	.Letext0:
- 523               		.file 3 "/usr/lib/avr/include/stdint.h"
- 524               		.file 4 "UART.h"
- 525               		.file 5 "LCD.h"
+ 498               		.loc 1 35 0
+ 499 0008 80E0      		ldi r24,lo8(uart)
+ 500 000a 90E0      		ldi r25,hi8(uart)
+ 501 000c 0C94 0000 		jmp _ZN4UARTD1Ev
+ 502               	.LVL24:
+ 503               	.LBE24:
+ 504               	.LBE23:
+ 505               	.LBE22:
+ 506               		.cfi_endproc
+ 507               	.LFE15:
+ 509               		.global __do_global_dtors
+ 510               		.section .dtors,"a",@progbits
+ 511               		.p2align	1
+ 512 0000 0000      		.word	gs(_GLOBAL__sub_D_uart)
+ 513               	.global	btn_state
+ 514               		.section .bss
+ 517               	btn_state:
+ 518 0000 00        		.zero	1
+ 519               	.global	loop_cnt
+ 522               	loop_cnt:
+ 523 0001 00        		.zero	1
+ 524               	.global	myLCD
+ 527               	myLCD:
+ 528 0002 00        		.zero	1
+ 529               	.global	uart
+ 532               	uart:
+ 533 0003 0000 0000 		.zero	22
+ 533      0000 0000 
+ 533      0000 0000 
+ 533      0000 0000 
+ 533      0000 0000 
+ 534               		.text
+ 535               	.Letext0:
+ 536               		.file 3 "/usr/lib/avr/include/stdint.h"
+ 537               		.file 4 "/usr/lib/gcc/avr/7.3.0/include/stddef.h"
+ 538               		.file 5 "/usr/lib/avr/include/stdlib.h"
+ 539               		.file 6 "UART.h"
+ 540               		.file 7 "LCD.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.cpp
-     /tmp/ccy1PBD1.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccy1PBD1.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccy1PBD1.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccy1PBD1.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccy1PBD1.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccy1PBD1.s:16     .text.startup:0000000000000000 main
-     /tmp/ccy1PBD1.s:509    .bss:0000000000000001 loop_cnt
-     /tmp/ccy1PBD1.s:504    .bss:0000000000000000 btn_state
-     /tmp/ccy1PBD1.s:519    .bss:0000000000000003 uart
-     /tmp/ccy1PBD1.s:140    .text:0000000000000000 __vector_19
-     /tmp/ccy1PBD1.s:339    .text:00000000000000da __vector_13
-     /tmp/ccy1PBD1.s:435    .text.startup:000000000000009c _GLOBAL__sub_I_uart
-     /tmp/ccy1PBD1.s:514    .bss:0000000000000002 myLCD
-     /tmp/ccy1PBD1.s:468    .text.exit:0000000000000000 _GLOBAL__sub_D_uart
+     /tmp/cchmOMeE.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cchmOMeE.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cchmOMeE.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cchmOMeE.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cchmOMeE.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cchmOMeE.s:16     .text.startup:0000000000000000 main
+     /tmp/cchmOMeE.s:522    .bss:0000000000000001 loop_cnt
+     /tmp/cchmOMeE.s:517    .bss:0000000000000000 btn_state
+     /tmp/cchmOMeE.s:532    .bss:0000000000000003 uart
+     /tmp/cchmOMeE.s:150    .text:0000000000000000 __vector_19
+     /tmp/cchmOMeE.s:352    .text:00000000000000dc __vector_13
+     /tmp/cchmOMeE.s:448    .text.startup:00000000000000a8 _GLOBAL__sub_I_uart
+     /tmp/cchmOMeE.s:527    .bss:0000000000000002 myLCD
+     /tmp/cchmOMeE.s:481    .text.exit:0000000000000000 _GLOBAL__sub_D_uart
 
 UNDEFINED SYMBOLS
+_ZN3LCD5setNbElh
+_ZN3LCD10setBatteryENS_7BatteryE
 _ZN4UART15isDataAvailableEv
 _ZN4UART8retrieveEv
 _ZN4UART10sendStringEPcb
 __floatunsisf
 __divsf3
 __fixunssfsi
-_ZN3LCD5setNbElh
-_ZN3LCD10setBatteryENS_7BatteryE
 _ZN4UART7receiveEv
 _ZN4UARTC1Ev
 _ZN3LCDC1Eb

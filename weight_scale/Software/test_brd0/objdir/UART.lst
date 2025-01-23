@@ -59,278 +59,289 @@
   47 0026 8081      		ld r24,Z
   48 0028 8068      		ori r24,lo8(-128)
   49 002a 8083      		st Z,r24
-  50 002c 0895      		ret
+  50               	/* epilogue start */
   51               	.LBE14:
-  52               		.cfi_endproc
-  53               	.LFE5:
-  55               	.global	_ZN4UARTC1Ev
-  56               		.set	_ZN4UARTC1Ev,_ZN4UARTC2Ev
-  57               	.global	_ZN4UARTD2Ev
-  59               	_ZN4UARTD2Ev:
-  60               	.LFB8:
   14:UART.cpp      **** }
+  52               		.loc 1 14 0
+  53 002c 0895      		ret
+  54               		.cfi_endproc
+  55               	.LFE5:
+  57               	.global	_ZN4UARTC1Ev
+  58               		.set	_ZN4UARTC1Ev,_ZN4UARTC2Ev
+  59               	.global	_ZN4UARTD2Ev
+  61               	_ZN4UARTD2Ev:
+  62               	.LFB8:
   15:UART.cpp      **** 
   16:UART.cpp      **** UART::~UART(void){
-  61               		.loc 1 16 0
-  62               		.cfi_startproc
-  63               	.LVL2:
-  64               	/* prologue: function */
-  65               	/* frame size = 0 */
-  66               	/* stack size = 0 */
-  67               	.L__stack_usage = 0
-  68 002e 0895      		ret
-  69               		.cfi_endproc
-  70               	.LFE8:
-  72               	.global	_ZN4UARTD1Ev
-  73               		.set	_ZN4UARTD1Ev,_ZN4UARTD2Ev
-  74               	.global	_ZN4UART8sendByteEc
-  76               	_ZN4UART8sendByteEc:
-  77               	.LFB10:
+  63               		.loc 1 16 0
+  64               		.cfi_startproc
+  65               	.LVL2:
+  66               	/* prologue: function */
+  67               	/* frame size = 0 */
+  68               	/* stack size = 0 */
+  69               	.L__stack_usage = 0
+  70               	/* epilogue start */
   17:UART.cpp      ****     
   18:UART.cpp      **** }
+  71               		.loc 1 18 0
+  72 002e 0895      		ret
+  73               		.cfi_endproc
+  74               	.LFE8:
+  76               	.global	_ZN4UARTD1Ev
+  77               		.set	_ZN4UARTD1Ev,_ZN4UARTD2Ev
+  78               	.global	_ZN4UART8sendByteEc
+  80               	_ZN4UART8sendByteEc:
+  81               	.LFB10:
   19:UART.cpp      **** 
   20:UART.cpp      **** void UART::sendByte(char b){
-  78               		.loc 1 20 0
-  79               		.cfi_startproc
-  80               	/* prologue: function */
-  81               	/* frame size = 0 */
-  82               	/* stack size = 0 */
-  83               	.L__stack_usage = 0
-  84               	.LVL3:
-  85               	.L4:
+  82               		.loc 1 20 0
+  83               		.cfi_startproc
+  84               	/* prologue: function */
+  85               	/* frame size = 0 */
+  86               	/* stack size = 0 */
+  87               	.L__stack_usage = 0
+  88               	.LVL3:
+  89               	.L4:
   21:UART.cpp      ****     while (!( UCSR0A & (1<<UDRE0)));	// wait while register is free
-  86               		.loc 1 21 0
-  87 0030 8091 C000 		lds r24,192
-  88 0034 85FF      		sbrs r24,5
-  89 0036 00C0      		rjmp .L4
+  90               		.loc 1 21 0
+  91 0030 8091 C000 		lds r24,192
+  92 0034 85FF      		sbrs r24,5
+  93 0036 00C0      		rjmp .L4
   22:UART.cpp      ****     UDR0 = b;	// load data in the register
-  90               		.loc 1 22 0
-  91 0038 6093 C600 		sts 198,r22
-  92 003c 0895      		ret
-  93               		.cfi_endproc
-  94               	.LFE10:
-  96               	.global	_ZN4UART10sendStringEPc
-  98               	_ZN4UART10sendStringEPc:
-  99               	.LFB11:
+  94               		.loc 1 22 0
+  95 0038 6093 C600 		sts 198,r22
+  96               	/* epilogue start */
   23:UART.cpp      **** }
+  97               		.loc 1 23 0
+  98 003c 0895      		ret
+  99               		.cfi_endproc
+ 100               	.LFE10:
+ 102               	.global	_ZN4UART10sendStringEPc
+ 104               	_ZN4UART10sendStringEPc:
+ 105               	.LFB11:
   24:UART.cpp      **** 
   25:UART.cpp      **** void UART::sendString(char* data){
- 100               		.loc 1 25 0
- 101               		.cfi_startproc
- 102               	.LVL4:
- 103 003e 0F93      		push r16
- 104               	.LCFI0:
- 105               		.cfi_def_cfa_offset 3
- 106               		.cfi_offset 16, -2
- 107 0040 1F93      		push r17
- 108               	.LCFI1:
- 109               		.cfi_def_cfa_offset 4
- 110               		.cfi_offset 17, -3
- 111 0042 CF93      		push r28
- 112               	.LCFI2:
- 113               		.cfi_def_cfa_offset 5
- 114               		.cfi_offset 28, -4
- 115 0044 DF93      		push r29
- 116               	.LCFI3:
- 117               		.cfi_def_cfa_offset 6
- 118               		.cfi_offset 29, -5
- 119               	/* prologue: function */
- 120               	/* frame size = 0 */
- 121               	/* stack size = 4 */
- 122               	.L__stack_usage = 4
- 123 0046 8C01      		movw r16,r24
- 124 0048 EB01      		movw r28,r22
- 125               	.LVL5:
- 126               	.L10:
+ 106               		.loc 1 25 0
+ 107               		.cfi_startproc
+ 108               	.LVL4:
+ 109 003e 0F93      		push r16
+ 110               	.LCFI0:
+ 111               		.cfi_def_cfa_offset 3
+ 112               		.cfi_offset 16, -2
+ 113 0040 1F93      		push r17
+ 114               	.LCFI1:
+ 115               		.cfi_def_cfa_offset 4
+ 116               		.cfi_offset 17, -3
+ 117 0042 CF93      		push r28
+ 118               	.LCFI2:
+ 119               		.cfi_def_cfa_offset 5
+ 120               		.cfi_offset 28, -4
+ 121 0044 DF93      		push r29
+ 122               	.LCFI3:
+ 123               		.cfi_def_cfa_offset 6
+ 124               		.cfi_offset 29, -5
+ 125               	/* prologue: function */
+ 126               	/* frame size = 0 */
+ 127               	/* stack size = 4 */
+ 128               	.L__stack_usage = 4
+ 129 0046 8C01      		movw r16,r24
+ 130 0048 EB01      		movw r28,r22
+ 131               	.LVL5:
+ 132               	.L9:
   26:UART.cpp      ****     while(*data>0){
- 127               		.loc 1 26 0
- 128 004a 6991      		ld r22,Y+
- 129               	.LVL6:
- 130 004c 6623      		tst r22
- 131 004e 01F0      		breq .L8
- 132               	.LVL7:
+ 133               		.loc 1 26 0
+ 134 004a 6991      		ld r22,Y+
+ 135               	.LVL6:
+ 136 004c 6623      		tst r22
+ 137 004e 01F0      		breq .L7
+ 138               	.LVL7:
   27:UART.cpp      **** 		sendByte(*data++);
- 133               		.loc 1 27 0
- 134 0050 C801      		movw r24,r16
- 135 0052 0E94 0000 		call _ZN4UART8sendByteEc
- 136               	.LVL8:
+ 139               		.loc 1 27 0
+ 140 0050 C801      		movw r24,r16
+ 141 0052 0E94 0000 		call _ZN4UART8sendByteEc
+ 142               	.LVL8:
   26:UART.cpp      ****     while(*data>0){
- 137               		.loc 1 26 0
- 138 0056 00C0      		rjmp .L10
- 139               	.LVL9:
- 140               	.L8:
- 141               	/* epilogue start */
+ 143               		.loc 1 26 0
+ 144 0056 00C0      		rjmp .L9
+ 145               	.LVL9:
+ 146               	.L7:
+ 147               	/* epilogue start */
   28:UART.cpp      **** 	}
   29:UART.cpp      **** }
- 142               		.loc 1 29 0
- 143 0058 DF91      		pop r29
- 144 005a CF91      		pop r28
- 145               	.LVL10:
- 146 005c 1F91      		pop r17
- 147 005e 0F91      		pop r16
- 148               	.LVL11:
- 149 0060 0895      		ret
- 150               		.cfi_endproc
- 151               	.LFE11:
- 153               	.global	_ZN4UART10sendStringEPcb
- 155               	_ZN4UART10sendStringEPcb:
- 156               	.LFB12:
+ 148               		.loc 1 29 0
+ 149 0058 DF91      		pop r29
+ 150 005a CF91      		pop r28
+ 151               	.LVL10:
+ 152 005c 1F91      		pop r17
+ 153 005e 0F91      		pop r16
+ 154               	.LVL11:
+ 155 0060 0895      		ret
+ 156               		.cfi_endproc
+ 157               	.LFE11:
+ 159               	.global	_ZN4UART10sendStringEPcb
+ 161               	_ZN4UART10sendStringEPcb:
+ 162               	.LFB12:
   30:UART.cpp      **** 
   31:UART.cpp      **** void UART::sendString(char* data, bool lineReturn){
- 157               		.loc 1 31 0
- 158               		.cfi_startproc
- 159               	.LVL12:
- 160 0062 FF92      		push r15
- 161               	.LCFI4:
- 162               		.cfi_def_cfa_offset 3
- 163               		.cfi_offset 15, -2
- 164 0064 0F93      		push r16
- 165               	.LCFI5:
- 166               		.cfi_def_cfa_offset 4
- 167               		.cfi_offset 16, -3
- 168 0066 1F93      		push r17
- 169               	.LCFI6:
- 170               		.cfi_def_cfa_offset 5
- 171               		.cfi_offset 17, -4
- 172 0068 CF93      		push r28
- 173               	.LCFI7:
- 174               		.cfi_def_cfa_offset 6
- 175               		.cfi_offset 28, -5
- 176 006a DF93      		push r29
- 177               	.LCFI8:
- 178               		.cfi_def_cfa_offset 7
- 179               		.cfi_offset 29, -6
- 180               	/* prologue: function */
- 181               	/* frame size = 0 */
- 182               	/* stack size = 5 */
- 183               	.L__stack_usage = 5
- 184 006c 8C01      		movw r16,r24
- 185 006e F42E      		mov r15,r20
- 186 0070 EB01      		movw r28,r22
- 187               	.LVL13:
- 188               	.L13:
+ 163               		.loc 1 31 0
+ 164               		.cfi_startproc
+ 165               	.LVL12:
+ 166 0062 FF92      		push r15
+ 167               	.LCFI4:
+ 168               		.cfi_def_cfa_offset 3
+ 169               		.cfi_offset 15, -2
+ 170 0064 0F93      		push r16
+ 171               	.LCFI5:
+ 172               		.cfi_def_cfa_offset 4
+ 173               		.cfi_offset 16, -3
+ 174 0066 1F93      		push r17
+ 175               	.LCFI6:
+ 176               		.cfi_def_cfa_offset 5
+ 177               		.cfi_offset 17, -4
+ 178 0068 CF93      		push r28
+ 179               	.LCFI7:
+ 180               		.cfi_def_cfa_offset 6
+ 181               		.cfi_offset 28, -5
+ 182 006a DF93      		push r29
+ 183               	.LCFI8:
+ 184               		.cfi_def_cfa_offset 7
+ 185               		.cfi_offset 29, -6
+ 186               	/* prologue: function */
+ 187               	/* frame size = 0 */
+ 188               	/* stack size = 5 */
+ 189               	.L__stack_usage = 5
+ 190 006c 8C01      		movw r16,r24
+ 191 006e F42E      		mov r15,r20
+ 192 0070 EB01      		movw r28,r22
+ 193               	.LVL13:
+ 194               	.L12:
   32:UART.cpp      ****     while(*data>0){
- 189               		.loc 1 32 0
- 190 0072 6991      		ld r22,Y+
- 191               	.LVL14:
- 192 0074 6623      		tst r22
- 193 0076 01F0      		breq .L12
- 194               	.LVL15:
+ 195               		.loc 1 32 0
+ 196 0072 6991      		ld r22,Y+
+ 197               	.LVL14:
+ 198 0074 6623      		tst r22
+ 199 0076 01F0      		breq .L11
+ 200               	.LVL15:
   33:UART.cpp      **** 		sendByte(*data++);
- 195               		.loc 1 33 0
- 196 0078 C801      		movw r24,r16
- 197 007a 0E94 0000 		call _ZN4UART8sendByteEc
- 198               	.LVL16:
+ 201               		.loc 1 33 0
+ 202 0078 C801      		movw r24,r16
+ 203 007a 0E94 0000 		call _ZN4UART8sendByteEc
+ 204               	.LVL16:
   32:UART.cpp      ****     while(*data>0){
- 199               		.loc 1 32 0
- 200 007e 00C0      		rjmp .L13
- 201               	.LVL17:
- 202               	.L12:
+ 205               		.loc 1 32 0
+ 206 007e 00C0      		rjmp .L12
+ 207               	.LVL17:
+ 208               	.L11:
   34:UART.cpp      **** 	}
   35:UART.cpp      ****     if(lineReturn){
- 203               		.loc 1 35 0
- 204 0080 FF20      		tst r15
- 205 0082 01F0      		breq .L11
- 206               	.LVL18:
- 207               	.LBB17:
- 208               	.LBB18:
+ 209               		.loc 1 35 0
+ 210 0080 FF20      		tst r15
+ 211 0082 01F0      		breq .L10
+ 212               	.LVL18:
+ 213               	.LBB17:
+ 214               	.LBB18:
   36:UART.cpp      ****         sendByte('\r');
- 209               		.loc 1 36 0
- 210 0084 6DE0      		ldi r22,lo8(13)
- 211 0086 C801      		movw r24,r16
- 212 0088 0E94 0000 		call _ZN4UART8sendByteEc
- 213               	.LVL19:
+ 215               		.loc 1 36 0
+ 216 0084 6DE0      		ldi r22,lo8(13)
+ 217 0086 C801      		movw r24,r16
+ 218 0088 0E94 0000 		call _ZN4UART8sendByteEc
+ 219               	.LVL19:
   37:UART.cpp      ****         sendByte('\n');
- 214               		.loc 1 37 0
- 215 008c 6AE0      		ldi r22,lo8(10)
- 216 008e C801      		movw r24,r16
- 217               	/* epilogue start */
- 218               	.LBE18:
- 219               	.LBE17:
+ 220               		.loc 1 37 0
+ 221 008c 6AE0      		ldi r22,lo8(10)
+ 222 008e C801      		movw r24,r16
+ 223               	/* epilogue start */
+ 224               	.LBE18:
+ 225               	.LBE17:
   38:UART.cpp      ****     }
   39:UART.cpp      **** }
- 220               		.loc 1 39 0
- 221 0090 DF91      		pop r29
- 222 0092 CF91      		pop r28
- 223               	.LVL20:
- 224 0094 1F91      		pop r17
- 225 0096 0F91      		pop r16
- 226               	.LVL21:
- 227 0098 FF90      		pop r15
- 228               	.LVL22:
- 229               	.LBB20:
- 230               	.LBB19:
+ 226               		.loc 1 39 0
+ 227 0090 DF91      		pop r29
+ 228 0092 CF91      		pop r28
+ 229               	.LVL20:
+ 230 0094 1F91      		pop r17
+ 231 0096 0F91      		pop r16
+ 232               	.LVL21:
+ 233 0098 FF90      		pop r15
+ 234               	.LVL22:
+ 235               	.LBB20:
+ 236               	.LBB19:
   37:UART.cpp      ****         sendByte('\n');
- 231               		.loc 1 37 0
- 232 009a 0C94 0000 		jmp _ZN4UART8sendByteEc
- 233               	.LVL23:
- 234               	.L11:
- 235               	/* epilogue start */
- 236               	.LBE19:
- 237               	.LBE20:
- 238               		.loc 1 39 0
- 239 009e DF91      		pop r29
- 240 00a0 CF91      		pop r28
- 241               	.LVL24:
- 242 00a2 1F91      		pop r17
- 243 00a4 0F91      		pop r16
- 244               	.LVL25:
- 245 00a6 FF90      		pop r15
- 246               	.LVL26:
- 247 00a8 0895      		ret
- 248               		.cfi_endproc
- 249               	.LFE12:
- 251               	.global	_ZN4UART6sendNbElhb
- 253               	_ZN4UART6sendNbElhb:
- 254               	.LFB13:
+ 237               		.loc 1 37 0
+ 238 009a 0C94 0000 		jmp _ZN4UART8sendByteEc
+ 239               	.LVL23:
+ 240               	.L10:
+ 241               	/* epilogue start */
+ 242               	.LBE19:
+ 243               	.LBE20:
+ 244               		.loc 1 39 0
+ 245 009e DF91      		pop r29
+ 246 00a0 CF91      		pop r28
+ 247               	.LVL24:
+ 248 00a2 1F91      		pop r17
+ 249 00a4 0F91      		pop r16
+ 250               	.LVL25:
+ 251 00a6 FF90      		pop r15
+ 252               	.LVL26:
+ 253 00a8 0895      		ret
+ 254               		.cfi_endproc
+ 255               	.LFE12:
+ 257               	.global	_ZN4UART6sendNbElhb
+ 259               	_ZN4UART6sendNbElhb:
+ 260               	.LFB13:
   40:UART.cpp      **** 
   41:UART.cpp      **** void UART::sendNb(int32_t nb,uint8_t base, bool lineReturn){
- 255               		.loc 1 41 0
- 256               		.cfi_startproc
- 257               	.LVL27:
- 258 00aa EF92      		push r14
- 259               	.LCFI9:
- 260               		.cfi_def_cfa_offset 3
- 261               		.cfi_offset 14, -2
- 262 00ac FF92      		push r15
- 263               	.LCFI10:
- 264               		.cfi_def_cfa_offset 4
- 265               		.cfi_offset 15, -3
- 266 00ae 0F93      		push r16
- 267               	.LCFI11:
- 268               		.cfi_def_cfa_offset 5
- 269               		.cfi_offset 16, -4
- 270 00b0 CF93      		push r28
- 271               	.LCFI12:
- 272               		.cfi_def_cfa_offset 6
- 273               		.cfi_offset 28, -5
- 274 00b2 DF93      		push r29
- 275               	.LCFI13:
- 276               		.cfi_def_cfa_offset 7
- 277               		.cfi_offset 29, -6
- 278 00b4 CDB7      		in r28,__SP_L__
- 279 00b6 DEB7      		in r29,__SP_H__
- 280               	.LCFI14:
- 281               		.cfi_def_cfa_register 28
- 282 00b8 A397      		sbiw r28,35
- 283               	.LCFI15:
- 284               		.cfi_def_cfa_offset 42
- 285 00ba 0FB6      		in __tmp_reg__,__SREG__
- 286 00bc F894      		cli
- 287 00be DEBF      		out __SP_H__,r29
- 288 00c0 0FBE      		out __SREG__,__tmp_reg__
- 289 00c2 CDBF      		out __SP_L__,r28
- 290               	/* prologue: function */
- 291               	/* frame size = 35 */
- 292               	/* stack size = 40 */
- 293               	.L__stack_usage = 40
- 294 00c4 7C01      		movw r14,r24
- 295 00c6 CB01      		movw r24,r22
- 296 00c8 BA01      		movw r22,r20
- 297               	.LVL28:
- 298               	.LBB21:
- 299               	.LBB22:
- 300               		.file 2 "/usr/lib/avr/include/stdlib.h"
+ 261               		.loc 1 41 0
+ 262               		.cfi_startproc
+ 263               	.LVL27:
+ 264 00aa EF92      		push r14
+ 265               	.LCFI9:
+ 266               		.cfi_def_cfa_offset 3
+ 267               		.cfi_offset 14, -2
+ 268 00ac FF92      		push r15
+ 269               	.LCFI10:
+ 270               		.cfi_def_cfa_offset 4
+ 271               		.cfi_offset 15, -3
+ 272 00ae 0F93      		push r16
+ 273               	.LCFI11:
+ 274               		.cfi_def_cfa_offset 5
+ 275               		.cfi_offset 16, -4
+ 276 00b0 CF93      		push r28
+ 277               	.LCFI12:
+ 278               		.cfi_def_cfa_offset 6
+ 279               		.cfi_offset 28, -5
+ 280 00b2 DF93      		push r29
+ 281               	.LCFI13:
+ 282               		.cfi_def_cfa_offset 7
+ 283               		.cfi_offset 29, -6
+ 284 00b4 CDB7      		in r28,__SP_L__
+ 285 00b6 DEB7      		in r29,__SP_H__
+ 286               	.LCFI14:
+ 287               		.cfi_def_cfa_register 28
+ 288 00b8 A397      		sbiw r28,35
+ 289               	.LCFI15:
+ 290               		.cfi_def_cfa_offset 42
+ 291 00ba 0FB6      		in __tmp_reg__,__SREG__
+ 292 00bc F894      		cli
+ 293 00be DEBF      		out __SP_H__,r29
+ 294 00c0 0FBE      		out __SREG__,__tmp_reg__
+ 295 00c2 CDBF      		out __SP_L__,r28
+ 296               	/* prologue: function */
+ 297               	/* frame size = 35 */
+ 298               	/* stack size = 40 */
+ 299               	.L__stack_usage = 40
+ 300 00c4 7C01      		movw r14,r24
+ 301 00c6 CB01      		movw r24,r22
+ 302               	.LVL28:
+ 303 00c8 BA01      		movw r22,r20
+ 304               	.LVL29:
+  42:UART.cpp      ****     char buffer [35];
+  43:UART.cpp      ****     ltoa(nb,buffer,base);
+ 305               		.loc 1 43 0
+ 306 00ca 30E0      		ldi r19,0
+ 307               	.LBB21:
+ 308               	.LBB22:
+ 309               		.file 2 "/usr/lib/avr/include/stdlib.h"
    1:/usr/lib/avr/include/stdlib.h **** /* Copyright (c) 2002, Marek Michalkiewicz
    2:/usr/lib/avr/include/stdlib.h ****    Copyright (c) 2004,2007 Joerg Wunsch
    3:/usr/lib/avr/include/stdlib.h **** 
@@ -809,330 +820,338 @@
  476:/usr/lib/avr/include/stdlib.h ****     if (!__builtin_constant_p (__radix)) {
  477:/usr/lib/avr/include/stdlib.h **** 	extern char *__ltoa (long, char *, int);
  478:/usr/lib/avr/include/stdlib.h **** 	return __ltoa (__val, __s, __radix);
- 301               		.loc 2 478 0
- 302 00ca 30E0      		ldi r19,0
- 303 00cc AE01      		movw r20,r28
- 304               	.LVL29:
- 305 00ce 4F5F      		subi r20,-1
- 306 00d0 5F4F      		sbci r21,-1
- 307 00d2 0E94 0000 		call __ltoa
- 308               	.LVL30:
- 309               	.LBE22:
- 310               	.LBE21:
-  42:UART.cpp      ****     char buffer [35];
-  43:UART.cpp      ****     ltoa(nb,buffer,base);
+ 310               		.loc 2 478 0
+ 311 00cc AE01      		movw r20,r28
+ 312               	.LVL30:
+ 313 00ce 4F5F      		subi r20,-1
+ 314 00d0 5F4F      		sbci r21,-1
+ 315 00d2 0E94 0000 		call __ltoa
+ 316               	.LVL31:
+ 317               	.LBE22:
+ 318               	.LBE21:
   44:UART.cpp      ****     sendString(buffer,lineReturn);
- 311               		.loc 1 44 0
- 312 00d6 402F      		mov r20,r16
- 313 00d8 BE01      		movw r22,r28
- 314 00da 6F5F      		subi r22,-1
- 315 00dc 7F4F      		sbci r23,-1
- 316 00de C701      		movw r24,r14
- 317 00e0 0E94 0000 		call _ZN4UART10sendStringEPcb
- 318               	.LVL31:
- 319               	/* epilogue start */
+ 319               		.loc 1 44 0
+ 320 00d6 402F      		mov r20,r16
+ 321 00d8 BE01      		movw r22,r28
+ 322 00da 6F5F      		subi r22,-1
+ 323 00dc 7F4F      		sbci r23,-1
+ 324 00de C701      		movw r24,r14
+ 325 00e0 0E94 0000 		call _ZN4UART10sendStringEPcb
+ 326               	.LVL32:
+ 327               	/* epilogue start */
   45:UART.cpp      **** }
- 320               		.loc 1 45 0
- 321 00e4 A396      		adiw r28,35
- 322 00e6 0FB6      		in __tmp_reg__,__SREG__
- 323 00e8 F894      		cli
- 324 00ea DEBF      		out __SP_H__,r29
- 325 00ec 0FBE      		out __SREG__,__tmp_reg__
- 326 00ee CDBF      		out __SP_L__,r28
- 327 00f0 DF91      		pop r29
- 328 00f2 CF91      		pop r28
- 329 00f4 0F91      		pop r16
- 330               	.LVL32:
- 331 00f6 FF90      		pop r15
- 332 00f8 EF90      		pop r14
- 333               	.LVL33:
- 334 00fa 0895      		ret
- 335               		.cfi_endproc
- 336               	.LFE13:
- 338               	.global	_ZN4UART6sendNbEl
- 340               	_ZN4UART6sendNbEl:
- 341               	.LFB14:
+ 328               		.loc 1 45 0
+ 329 00e4 A396      		adiw r28,35
+ 330 00e6 0FB6      		in __tmp_reg__,__SREG__
+ 331 00e8 F894      		cli
+ 332 00ea DEBF      		out __SP_H__,r29
+ 333 00ec 0FBE      		out __SREG__,__tmp_reg__
+ 334 00ee CDBF      		out __SP_L__,r28
+ 335 00f0 DF91      		pop r29
+ 336 00f2 CF91      		pop r28
+ 337 00f4 0F91      		pop r16
+ 338               	.LVL33:
+ 339 00f6 FF90      		pop r15
+ 340 00f8 EF90      		pop r14
+ 341               	.LVL34:
+ 342 00fa 0895      		ret
+ 343               		.cfi_endproc
+ 344               	.LFE13:
+ 346               	.global	_ZN4UART6sendNbEl
+ 348               	_ZN4UART6sendNbEl:
+ 349               	.LFB14:
   46:UART.cpp      **** 
   47:UART.cpp      **** void UART::sendNb(int32_t nb){
- 342               		.loc 1 47 0
- 343               		.cfi_startproc
- 344               	.LVL34:
- 345 00fc 0F93      		push r16
- 346               	.LCFI16:
- 347               		.cfi_def_cfa_offset 3
- 348               		.cfi_offset 16, -2
- 349 00fe 1F93      		push r17
- 350               	.LCFI17:
- 351               		.cfi_def_cfa_offset 4
- 352               		.cfi_offset 17, -3
- 353 0100 CF93      		push r28
- 354               	.LCFI18:
- 355               		.cfi_def_cfa_offset 5
- 356               		.cfi_offset 28, -4
- 357 0102 DF93      		push r29
- 358               	.LCFI19:
- 359               		.cfi_def_cfa_offset 6
- 360               		.cfi_offset 29, -5
- 361 0104 CDB7      		in r28,__SP_L__
- 362 0106 DEB7      		in r29,__SP_H__
- 363               	.LCFI20:
- 364               		.cfi_def_cfa_register 28
- 365 0108 2C97      		sbiw r28,12
- 366               	.LCFI21:
- 367               		.cfi_def_cfa_offset 18
- 368 010a 0FB6      		in __tmp_reg__,__SREG__
- 369 010c F894      		cli
- 370 010e DEBF      		out __SP_H__,r29
- 371 0110 0FBE      		out __SREG__,__tmp_reg__
- 372 0112 CDBF      		out __SP_L__,r28
- 373               	/* prologue: function */
- 374               	/* frame size = 12 */
- 375               	/* stack size = 16 */
- 376               	.L__stack_usage = 16
- 377 0114 8C01      		movw r16,r24
- 378 0116 CB01      		movw r24,r22
- 379 0118 BA01      		movw r22,r20
- 380               	.LVL35:
- 381               	.LBB23:
- 382               	.LBB24:
+ 350               		.loc 1 47 0
+ 351               		.cfi_startproc
+ 352               	.LVL35:
+ 353 00fc 0F93      		push r16
+ 354               	.LCFI16:
+ 355               		.cfi_def_cfa_offset 3
+ 356               		.cfi_offset 16, -2
+ 357 00fe 1F93      		push r17
+ 358               	.LCFI17:
+ 359               		.cfi_def_cfa_offset 4
+ 360               		.cfi_offset 17, -3
+ 361 0100 CF93      		push r28
+ 362               	.LCFI18:
+ 363               		.cfi_def_cfa_offset 5
+ 364               		.cfi_offset 28, -4
+ 365 0102 DF93      		push r29
+ 366               	.LCFI19:
+ 367               		.cfi_def_cfa_offset 6
+ 368               		.cfi_offset 29, -5
+ 369 0104 CDB7      		in r28,__SP_L__
+ 370 0106 DEB7      		in r29,__SP_H__
+ 371               	.LCFI20:
+ 372               		.cfi_def_cfa_register 28
+ 373 0108 2C97      		sbiw r28,12
+ 374               	.LCFI21:
+ 375               		.cfi_def_cfa_offset 18
+ 376 010a 0FB6      		in __tmp_reg__,__SREG__
+ 377 010c F894      		cli
+ 378 010e DEBF      		out __SP_H__,r29
+ 379 0110 0FBE      		out __SREG__,__tmp_reg__
+ 380 0112 CDBF      		out __SP_L__,r28
+ 381               	/* prologue: function */
+ 382               	/* frame size = 12 */
+ 383               	/* stack size = 16 */
+ 384               	.L__stack_usage = 16
+ 385 0114 8C01      		movw r16,r24
+ 386 0116 CB01      		movw r24,r22
+ 387               	.LVL36:
+ 388 0118 BA01      		movw r22,r20
+ 389               	.LVL37:
+ 390               	.LBB23:
+ 391               	.LBB24:
  479:/usr/lib/avr/include/stdlib.h ****     } else if (__radix < 2 || __radix > 36) {
  480:/usr/lib/avr/include/stdlib.h **** 	*__s = 0;
  481:/usr/lib/avr/include/stdlib.h **** 	return __s;
  482:/usr/lib/avr/include/stdlib.h ****     } else {
  483:/usr/lib/avr/include/stdlib.h **** 	extern char *__ltoa_ncheck (long, char *, unsigned char);
  484:/usr/lib/avr/include/stdlib.h **** 	return __ltoa_ncheck (__val, __s, __radix);
- 383               		.loc 2 484 0
- 384 011a 2AE0      		ldi r18,lo8(10)
- 385 011c AE01      		movw r20,r28
- 386               	.LVL36:
- 387 011e 4F5F      		subi r20,-1
- 388 0120 5F4F      		sbci r21,-1
- 389 0122 0E94 0000 		call __ltoa_ncheck
- 390               	.LVL37:
- 391               	.LBE24:
- 392               	.LBE23:
+ 392               		.loc 2 484 0
+ 393 011a 2AE0      		ldi r18,lo8(10)
+ 394 011c AE01      		movw r20,r28
+ 395               	.LVL38:
+ 396 011e 4F5F      		subi r20,-1
+ 397 0120 5F4F      		sbci r21,-1
+ 398 0122 0E94 0000 		call __ltoa_ncheck
+ 399               	.LVL39:
+ 400               	.LBE24:
+ 401               	.LBE23:
   48:UART.cpp      ****     char buffer [12];//32 bits in decimal is 4milions, 10 digits
   49:UART.cpp      ****     ltoa(nb,buffer,10);
   50:UART.cpp      ****     sendString(buffer);
- 393               		.loc 1 50 0
- 394 0126 BE01      		movw r22,r28
- 395 0128 6F5F      		subi r22,-1
- 396 012a 7F4F      		sbci r23,-1
- 397 012c C801      		movw r24,r16
- 398 012e 0E94 0000 		call _ZN4UART10sendStringEPc
- 399               	.LVL38:
+ 402               		.loc 1 50 0
+ 403 0126 BE01      		movw r22,r28
+ 404 0128 6F5F      		subi r22,-1
+ 405 012a 7F4F      		sbci r23,-1
+ 406 012c C801      		movw r24,r16
+ 407 012e 0E94 0000 		call _ZN4UART10sendStringEPc
+ 408               	.LVL40:
   51:UART.cpp      ****     sendByte('\r');
- 400               		.loc 1 51 0
- 401 0132 6DE0      		ldi r22,lo8(13)
- 402 0134 C801      		movw r24,r16
- 403 0136 0E94 0000 		call _ZN4UART8sendByteEc
- 404               	.LVL39:
+ 409               		.loc 1 51 0
+ 410 0132 6DE0      		ldi r22,lo8(13)
+ 411 0134 C801      		movw r24,r16
+ 412 0136 0E94 0000 		call _ZN4UART8sendByteEc
+ 413               	.LVL41:
   52:UART.cpp      ****     sendByte('\n');
- 405               		.loc 1 52 0
- 406 013a 6AE0      		ldi r22,lo8(10)
- 407 013c C801      		movw r24,r16
- 408 013e 0E94 0000 		call _ZN4UART8sendByteEc
- 409               	.LVL40:
- 410               	/* epilogue start */
+ 414               		.loc 1 52 0
+ 415 013a 6AE0      		ldi r22,lo8(10)
+ 416 013c C801      		movw r24,r16
+ 417 013e 0E94 0000 		call _ZN4UART8sendByteEc
+ 418               	.LVL42:
+ 419               	/* epilogue start */
   53:UART.cpp      **** }
- 411               		.loc 1 53 0
- 412 0142 2C96      		adiw r28,12
- 413 0144 0FB6      		in __tmp_reg__,__SREG__
- 414 0146 F894      		cli
- 415 0148 DEBF      		out __SP_H__,r29
- 416 014a 0FBE      		out __SREG__,__tmp_reg__
- 417 014c CDBF      		out __SP_L__,r28
- 418 014e DF91      		pop r29
- 419 0150 CF91      		pop r28
- 420 0152 1F91      		pop r17
- 421 0154 0F91      		pop r16
- 422               	.LVL41:
- 423 0156 0895      		ret
- 424               		.cfi_endproc
- 425               	.LFE14:
- 427               	.global	_ZN4UART7getCharEv
- 429               	_ZN4UART7getCharEv:
- 430               	.LFB15:
+ 420               		.loc 1 53 0
+ 421 0142 2C96      		adiw r28,12
+ 422 0144 0FB6      		in __tmp_reg__,__SREG__
+ 423 0146 F894      		cli
+ 424 0148 DEBF      		out __SP_H__,r29
+ 425 014a 0FBE      		out __SREG__,__tmp_reg__
+ 426 014c CDBF      		out __SP_L__,r28
+ 427 014e DF91      		pop r29
+ 428 0150 CF91      		pop r28
+ 429 0152 1F91      		pop r17
+ 430 0154 0F91      		pop r16
+ 431               	.LVL43:
+ 432 0156 0895      		ret
+ 433               		.cfi_endproc
+ 434               	.LFE14:
+ 436               	.global	_ZN4UART7getCharEv
+ 438               	_ZN4UART7getCharEv:
+ 439               	.LFB15:
   54:UART.cpp      **** 
   55:UART.cpp      **** char UART::getChar(void){
- 431               		.loc 1 55 0
- 432               		.cfi_startproc
- 433               	.LVL42:
- 434 0158 CF93      		push r28
- 435               	.LCFI22:
- 436               		.cfi_def_cfa_offset 3
- 437               		.cfi_offset 28, -2
- 438               	/* prologue: function */
- 439               	/* frame size = 0 */
- 440               	/* stack size = 1 */
- 441               	.L__stack_usage = 1
+ 440               		.loc 1 55 0
+ 441               		.cfi_startproc
+ 442               	.LVL44:
+ 443 0158 CF93      		push r28
+ 444               	.LCFI22:
+ 445               		.cfi_def_cfa_offset 3
+ 446               		.cfi_offset 28, -2
+ 447               	/* prologue: function */
+ 448               	/* frame size = 0 */
+ 449               	/* stack size = 1 */
+ 450               	.L__stack_usage = 1
   56:UART.cpp      ****     //while(!(UCSRA) & (1<<RXC));	// wait while data is being received
   57:UART.cpp      ****     char d=UDR0;
- 442               		.loc 1 57 0
- 443 015a C091 C600 		lds r28,198
- 444               	.LVL43:
+ 451               		.loc 1 57 0
+ 452 015a C091 C600 		lds r28,198
+ 453               	.LVL45:
   58:UART.cpp      **** #ifdef UART_ECHO
   59:UART.cpp      ****     sendByte(d);
- 445               		.loc 1 59 0
- 446 015e 6C2F      		mov r22,r28
- 447 0160 0E94 0000 		call _ZN4UART8sendByteEc
- 448               	.LVL44:
+ 454               		.loc 1 59 0
+ 455 015e 6C2F      		mov r22,r28
+ 456 0160 0E94 0000 		call _ZN4UART8sendByteEc
+ 457               	.LVL46:
   60:UART.cpp      **** #endif
   61:UART.cpp      ****     return d;	// return 8-bit data
   62:UART.cpp      **** }
- 449               		.loc 1 62 0
- 450 0164 8C2F      		mov r24,r28
- 451               	/* epilogue start */
- 452 0166 CF91      		pop r28
- 453               	.LVL45:
- 454 0168 0895      		ret
- 455               		.cfi_endproc
- 456               	.LFE15:
- 458               	.global	_ZN4UART7receiveEv
- 460               	_ZN4UART7receiveEv:
- 461               	.LFB16:
+ 458               		.loc 1 62 0
+ 459 0164 8C2F      		mov r24,r28
+ 460               	/* epilogue start */
+ 461 0166 CF91      		pop r28
+ 462               	.LVL47:
+ 463 0168 0895      		ret
+ 464               		.cfi_endproc
+ 465               	.LFE15:
+ 467               	.global	_ZN4UART7receiveEv
+ 469               	_ZN4UART7receiveEv:
+ 470               	.LFB16:
   63:UART.cpp      **** 
   64:UART.cpp      **** void UART::receive(void){
- 462               		.loc 1 64 0
- 463               		.cfi_startproc
- 464               	.LVL46:
- 465 016a CF93      		push r28
- 466               	.LCFI23:
- 467               		.cfi_def_cfa_offset 3
- 468               		.cfi_offset 28, -2
- 469 016c DF93      		push r29
- 470               	.LCFI24:
- 471               		.cfi_def_cfa_offset 4
- 472               		.cfi_offset 29, -3
- 473               	/* prologue: function */
- 474               	/* frame size = 0 */
- 475               	/* stack size = 2 */
- 476               	.L__stack_usage = 2
- 477 016e EC01      		movw r28,r24
+ 471               		.loc 1 64 0
+ 472               		.cfi_startproc
+ 473               	.LVL48:
+ 474 016a CF93      		push r28
+ 475               	.LCFI23:
+ 476               		.cfi_def_cfa_offset 3
+ 477               		.cfi_offset 28, -2
+ 478 016c DF93      		push r29
+ 479               	.LCFI24:
+ 480               		.cfi_def_cfa_offset 4
+ 481               		.cfi_offset 29, -3
+ 482               	/* prologue: function */
+ 483               	/* frame size = 0 */
+ 484               	/* stack size = 2 */
+ 485               	.L__stack_usage = 2
+ 486 016e EC01      		movw r28,r24
   65:UART.cpp      ****     char d=getChar();
- 478               		.loc 1 65 0
- 479 0170 0E94 0000 		call _ZN4UART7getCharEv
- 480               	.LVL47:
-  66:UART.cpp      ****     if(d=='\r'){
- 481               		.loc 1 66 0
- 482 0174 8D30      		cpi r24,lo8(13)
- 483 0176 01F4      		brne .L19
-  67:UART.cpp      ****         dataReady=true;
- 484               		.loc 1 67 0
- 485 0178 81E0      		ldi r24,lo8(1)
- 486               	.LVL48:
- 487 017a 8C8B      		std Y+20,r24
- 488 017c 00C0      		rjmp .L18
+ 487               		.loc 1 65 0
+ 488 0170 0E94 0000 		call _ZN4UART7getCharEv
  489               	.LVL49:
- 490               	.L19:
+  66:UART.cpp      ****     if(d=='\r'){
+ 490               		.loc 1 66 0
+ 491 0174 8D30      		cpi r24,lo8(13)
+ 492 0176 01F4      		brne .L18
+  67:UART.cpp      ****         dataReady=true;
+ 493               		.loc 1 67 0
+ 494 0178 81E0      		ldi r24,lo8(1)
+ 495               	.LVL50:
+ 496 017a 8C8B      		std Y+20,r24
+ 497               	.L17:
+ 498               	/* epilogue start */
   68:UART.cpp      ****     }else{    
   69:UART.cpp      ****         data[data_len]=d;
- 491               		.loc 1 69 0
- 492 017e 9D89      		ldd r25,Y+21
- 493 0180 FE01      		movw r30,r28
- 494 0182 E90F      		add r30,r25
- 495 0184 F11D      		adc r31,__zero_reg__
- 496 0186 8083      		st Z,r24
   70:UART.cpp      ****         data_len++;
- 497               		.loc 1 70 0
- 498 0188 9F5F      		subi r25,lo8(-(1))
- 499 018a 9D8B      		std Y+21,r25
- 500               	.LVL50:
- 501               	.L18:
- 502               	/* epilogue start */
   71:UART.cpp      ****     }
   72:UART.cpp      **** }
- 503               		.loc 1 72 0
- 504 018c DF91      		pop r29
- 505 018e CF91      		pop r28
- 506               	.LVL51:
- 507 0190 0895      		ret
- 508               		.cfi_endproc
- 509               	.LFE16:
- 511               	.global	_ZN4UART8retrieveEv
- 513               	_ZN4UART8retrieveEv:
- 514               	.LFB17:
+ 499               		.loc 1 72 0
+ 500 017c DF91      		pop r29
+ 501 017e CF91      		pop r28
+ 502               	.LVL51:
+ 503 0180 0895      		ret
+ 504               	.LVL52:
+ 505               	.L18:
+  69:UART.cpp      ****         data_len++;
+ 506               		.loc 1 69 0
+ 507 0182 9D89      		ldd r25,Y+21
+ 508 0184 FE01      		movw r30,r28
+ 509 0186 E90F      		add r30,r25
+ 510 0188 F11D      		adc r31,__zero_reg__
+ 511 018a 8083      		st Z,r24
+  70:UART.cpp      ****     }
+ 512               		.loc 1 70 0
+ 513 018c 9F5F      		subi r25,lo8(-(1))
+ 514 018e 9D8B      		std Y+21,r25
+ 515               		.loc 1 72 0
+ 516 0190 00C0      		rjmp .L17
+ 517               		.cfi_endproc
+ 518               	.LFE16:
+ 520               	.global	_ZN4UART8retrieveEv
+ 522               	_ZN4UART8retrieveEv:
+ 523               	.LFB17:
   73:UART.cpp      **** 
   74:UART.cpp      **** char* UART::retrieve(void){
- 515               		.loc 1 74 0
- 516               		.cfi_startproc
- 517               	.LVL52:
- 518               	/* prologue: function */
- 519               	/* frame size = 0 */
- 520               	/* stack size = 0 */
- 521               	.L__stack_usage = 0
+ 524               		.loc 1 74 0
+ 525               		.cfi_startproc
+ 526               	.LVL53:
+ 527               	/* prologue: function */
+ 528               	/* frame size = 0 */
+ 529               	/* stack size = 0 */
+ 530               	.L__stack_usage = 0
   75:UART.cpp      ****     data[data_len]='\0';
- 522               		.loc 1 75 0
- 523 0192 FC01      		movw r30,r24
- 524 0194 2589      		ldd r18,Z+21
- 525 0196 E20F      		add r30,r18
- 526 0198 F11D      		adc r31,__zero_reg__
- 527 019a 1082      		st Z,__zero_reg__
+ 531               		.loc 1 75 0
+ 532 0192 DC01      		movw r26,r24
+ 533 0194 5596      		adiw r26,21
+ 534 0196 EC91      		ld r30,X
+ 535 0198 5597      		sbiw r26,21
+ 536 019a E80F      		add r30,r24
+ 537 019c F92F      		mov r31,r25
+ 538 019e F11D      		adc r31,__zero_reg__
+ 539 01a0 1082      		st Z,__zero_reg__
   76:UART.cpp      ****     dataReady=false;
- 528               		.loc 1 76 0
- 529 019c FC01      		movw r30,r24
- 530 019e 148A      		std Z+20,__zero_reg__
+ 540               		.loc 1 76 0
+ 541 01a2 5496      		adiw r26,20
+ 542 01a4 1C92      		st X,__zero_reg__
+ 543 01a6 5497      		sbiw r26,20
   77:UART.cpp      ****     data_len=0;
- 531               		.loc 1 77 0
- 532 01a0 158A      		std Z+21,__zero_reg__
+ 544               		.loc 1 77 0
+ 545 01a8 5596      		adiw r26,21
+ 546 01aa 1C92      		st X,__zero_reg__
+ 547               	/* epilogue start */
   78:UART.cpp      ****     return data;
   79:UART.cpp      **** }
- 533               		.loc 1 79 0
- 534 01a2 0895      		ret
- 535               		.cfi_endproc
- 536               	.LFE17:
- 538               	.global	_ZN4UART15isDataAvailableEv
- 540               	_ZN4UART15isDataAvailableEv:
- 541               	.LFB18:
+ 548               		.loc 1 79 0
+ 549 01ac 0895      		ret
+ 550               		.cfi_endproc
+ 551               	.LFE17:
+ 553               	.global	_ZN4UART15isDataAvailableEv
+ 555               	_ZN4UART15isDataAvailableEv:
+ 556               	.LFB18:
   80:UART.cpp      **** 
   81:UART.cpp      **** bool UART::isDataAvailable(void){
- 542               		.loc 1 81 0
- 543               		.cfi_startproc
- 544               	.LVL53:
- 545               	/* prologue: function */
- 546               	/* frame size = 0 */
- 547               	/* stack size = 0 */
- 548               	.L__stack_usage = 0
- 549 01a4 FC01      		movw r30,r24
+ 557               		.loc 1 81 0
+ 558               		.cfi_startproc
+ 559               	.LVL54:
+ 560               	/* prologue: function */
+ 561               	/* frame size = 0 */
+ 562               	/* stack size = 0 */
+ 563               	.L__stack_usage = 0
+ 564 01ae FC01      		movw r30,r24
   82:UART.cpp      ****     return dataReady & (data_len!=0);
- 550               		.loc 1 82 0
- 551 01a6 91E0      		ldi r25,lo8(1)
- 552 01a8 8589      		ldd r24,Z+21
- 553               	.LVL54:
- 554 01aa 8111      		cpse r24,__zero_reg__
- 555 01ac 00C0      		rjmp .L23
- 556 01ae 90E0      		ldi r25,0
- 557               	.L23:
- 558 01b0 8489      		ldd r24,Z+20
+ 565               		.loc 1 82 0
+ 566 01b0 91E0      		ldi r25,lo8(1)
+ 567 01b2 8589      		ldd r24,Z+21
+ 568               	.LVL55:
+ 569 01b4 8111      		cpse r24,__zero_reg__
+ 570 01b6 00C0      		rjmp .L22
+ 571 01b8 90E0      		ldi r25,0
+ 572               	.L22:
+ 573 01ba 8489      		ldd r24,Z+20
   83:UART.cpp      **** }
- 559               		.loc 1 83 0
- 560 01b2 8923      		and r24,r25
- 561 01b4 0895      		ret
- 562               		.cfi_endproc
- 563               	.LFE18:
- 565               	.Letext0:
- 566               		.file 3 "/usr/lib/avr/include/stdint.h"
- 567               		.file 4 "UART.h"
+ 574               		.loc 1 83 0
+ 575 01bc 8923      		and r24,r25
+ 576               	/* epilogue start */
+ 577 01be 0895      		ret
+ 578               		.cfi_endproc
+ 579               	.LFE18:
+ 581               	.Letext0:
+ 582               		.file 3 "/usr/lib/avr/include/stdint.h"
+ 583               		.file 4 "/usr/lib/gcc/avr/7.3.0/include/stddef.h"
+ 584               		.file 5 "UART.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 UART.cpp
-     /tmp/ccM0hMoP.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccM0hMoP.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccM0hMoP.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccM0hMoP.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccM0hMoP.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccM0hMoP.s:12     .text:0000000000000000 _ZN4UARTC2Ev
-     /tmp/ccM0hMoP.s:12     .text:0000000000000000 _ZN4UARTC1Ev
-     /tmp/ccM0hMoP.s:59     .text:000000000000002e _ZN4UARTD2Ev
-     /tmp/ccM0hMoP.s:59     .text:000000000000002e _ZN4UARTD1Ev
-     /tmp/ccM0hMoP.s:76     .text:0000000000000030 _ZN4UART8sendByteEc
-     /tmp/ccM0hMoP.s:98     .text:000000000000003e _ZN4UART10sendStringEPc
-     /tmp/ccM0hMoP.s:155    .text:0000000000000062 _ZN4UART10sendStringEPcb
-     /tmp/ccM0hMoP.s:253    .text:00000000000000aa _ZN4UART6sendNbElhb
-     /tmp/ccM0hMoP.s:340    .text:00000000000000fc _ZN4UART6sendNbEl
-     /tmp/ccM0hMoP.s:429    .text:0000000000000158 _ZN4UART7getCharEv
-     /tmp/ccM0hMoP.s:460    .text:000000000000016a _ZN4UART7receiveEv
-     /tmp/ccM0hMoP.s:513    .text:0000000000000192 _ZN4UART8retrieveEv
-     /tmp/ccM0hMoP.s:540    .text:00000000000001a4 _ZN4UART15isDataAvailableEv
+     /tmp/ccXkMfTu.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccXkMfTu.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccXkMfTu.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccXkMfTu.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccXkMfTu.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccXkMfTu.s:12     .text:0000000000000000 _ZN4UARTC2Ev
+     /tmp/ccXkMfTu.s:12     .text:0000000000000000 _ZN4UARTC1Ev
+     /tmp/ccXkMfTu.s:61     .text:000000000000002e _ZN4UARTD2Ev
+     /tmp/ccXkMfTu.s:61     .text:000000000000002e _ZN4UARTD1Ev
+     /tmp/ccXkMfTu.s:80     .text:0000000000000030 _ZN4UART8sendByteEc
+     /tmp/ccXkMfTu.s:104    .text:000000000000003e _ZN4UART10sendStringEPc
+     /tmp/ccXkMfTu.s:161    .text:0000000000000062 _ZN4UART10sendStringEPcb
+     /tmp/ccXkMfTu.s:259    .text:00000000000000aa _ZN4UART6sendNbElhb
+     /tmp/ccXkMfTu.s:348    .text:00000000000000fc _ZN4UART6sendNbEl
+     /tmp/ccXkMfTu.s:438    .text:0000000000000158 _ZN4UART7getCharEv
+     /tmp/ccXkMfTu.s:469    .text:000000000000016a _ZN4UART7receiveEv
+     /tmp/ccXkMfTu.s:522    .text:0000000000000192 _ZN4UART8retrieveEv
+     /tmp/ccXkMfTu.s:555    .text:00000000000001ae _ZN4UART15isDataAvailableEv
 
 UNDEFINED SYMBOLS
 __ltoa

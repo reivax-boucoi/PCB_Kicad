@@ -55,12 +55,15 @@ int main(void){
 	PORTE=0b11100000;//Enable IRQ pullup, set LoadCell_en/PWR_en to 1
 	
 	LED0_ON;
-	PRR|=(1<<PRTIM1);//Shut down clock to Timer1
+	LED1_ON;
+	//PRR|=(1<<PRTIM1);//Shut down clock to Timer1
 	
 	ADMUX|=(1<<REFS0)|0b11110;//Set AVCC as reference voltage for ADC, ADC MUX input to 1.1V BG
 	ADCSRA|=(1<<ADEN)|(1<<ADIE)|(1<<ADPS1);//Enable conversin complete interrupt, Clock prescaler 12MHz/64=187kHz
 	sei();
 	
+	myLCD.setNb(12345,5);
+	myLCD.setBattery(LCD::FULL);
 	
 	while(1){
 	
