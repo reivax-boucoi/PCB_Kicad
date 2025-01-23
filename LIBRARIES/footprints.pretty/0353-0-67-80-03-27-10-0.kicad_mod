@@ -1,0 +1,90 @@
+(footprint "0353-0-67-80-03-27-10-0"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Mill Max Through socket (DCM1000x) Pin diameter 1-1.5mm")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "51d4f7bf-4b6d-455c-bce5-b965ea9de899")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "0353-0-67-80-03-27-10-0"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "4515c786-d749-49b6-aa13-a0a3453579ec")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "03f14789-ab69-4027-a00c-078fbc18a5bd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cc711fef-a69f-4e49-8f75-c20537b4c5bc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1aecb7e2-1ce5-4789-9336-492e9bd531d6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 3.2 3.2)
+		(drill 2.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "520f07df-894a-421e-93fb-8853814375f7")
+	)
+	(model "${KICAD_USR_LIB_DIR}/3Dmodels/mill-max-0353-0-43-01-03-XX-10-0.STEP"
+		(offset
+			(xyz 0 0 -2.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 90 0)
+		)
+	)
+)
