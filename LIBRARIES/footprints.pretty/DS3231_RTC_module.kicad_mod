@@ -67,6 +67,26 @@
 	)
 	(attr through_hole)
 	(fp_line
+		(start -7 5.5)
+		(end -8.5 4.5)
+		(stroke
+			(width 0.25)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "a5a0ac42-b1fa-4582-bf66-4028ce46d2a8")
+	)
+	(fp_line
+		(start -7 5.5)
+		(end -4.5 2.5)
+		(stroke
+			(width 0.25)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "da14902a-75b3-409d-82ae-6ad9a81c93af")
+	)
+	(fp_line
 		(start -1.33 -1.33)
 		(end 0 -1.33)
 		(stroke
@@ -127,19 +147,30 @@
 		(uuid "09bf1fa9-9ec6-4d5c-bed9-fcd1fe76bd8e")
 	)
 	(fp_rect
-		(start -13 -2)
-		(end 1.8 12)
+		(start -12.85 -2)
+		(end 1.65 12.5)
 		(stroke
-			(width 0.25)
+			(width 0.1)
 			(type default)
 		)
 		(fill none)
 		(layer "F.SilkS")
 		(uuid "63bc9eb1-c685-47c0-9ea0-9b7ee954b05a")
 	)
+	(fp_circle
+		(center -7 5.5)
+		(end -2 5.5)
+		(stroke
+			(width 0.25)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "d2be9f33-16b1-4cc1-aa7f-95ee202e1a9d")
+	)
 	(fp_rect
 		(start -12.875 -2)
-		(end 1.8 11.95)
+		(end 1.625 12.5)
 		(stroke
 			(width 0.12)
 			(type default)
@@ -197,19 +228,6 @@
 		)
 		(layer "F.Fab")
 		(uuid "dde86203-069d-47dc-8693-34fe614da099")
-	)
-	(fp_text user "TBC"
-		(at -7.8 5.6 0)
-		(unlocked yes)
-		(layer "F.SilkS")
-		(uuid "ab402dd3-ee37-487b-8839-812a187c55e8")
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.6)
-				(bold yes)
-			)
-		)
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 5.08 90)

@@ -3681,7 +3681,7 @@
 				)
 			)
 		)
-		(symbol "MCU_Microchip_ATmega:ATmega32A-P"
+		(symbol "MCU_Microchip_ATmega:ATmega644PA-P"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3694,7 +3694,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Value" "ATmega32A-P"
+			(property "Value" "ATmega644PA-P"
 				(at 2.54 -49.53 0)
 				(effects
 					(font
@@ -3713,7 +3713,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8155-8-bit-microcontroller-avr-atmega32a_datasheet.pdf"
+			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8272-8-bit-AVR-microcontroller-ATmega164A_PA-324A_PA-644A_PA-1284_P_datasheet.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3722,7 +3722,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "16MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, JTAG, DIP-40"
+			(property "Description" "20MHz, 64kB Flash, 4kB SRAM, 2kB EEPROM, JTAG, DIP-40"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3731,7 +3731,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "AVR 8bit Microcontroller MegaAVR"
+			(property "ki_keywords" "AVR 8bit Microcontroller MegaAVR PicoPower"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3749,7 +3749,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "ATmega32A-P_0_1"
+			(symbol "ATmega644PA-P_0_1"
 				(rectangle
 					(start -12.7 -48.26)
 					(end 12.7 48.26)
@@ -3762,7 +3762,7 @@
 					)
 				)
 			)
-			(symbol "ATmega32A-P_1_1"
+			(symbol "ATmega644PA-P_1_1"
 				(pin bidirectional line
 					(at 15.24 20.32 180)
 					(length 2.54)
@@ -8918,7 +8918,6 @@
 	)
 	(label "Mot1_I"
 		(at 167.64 64.77 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8929,7 +8928,6 @@
 	)
 	(label "MOSI"
 		(at 241.3 144.78 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8940,7 +8938,6 @@
 	)
 	(label "Mot2_I"
 		(at 251.46 40.64 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8951,7 +8948,6 @@
 	)
 	(label "SIM_RX"
 		(at 228.6 118.11 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8962,7 +8958,6 @@
 	)
 	(label "SIM_RX"
 		(at 167.64 133.35 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8973,7 +8968,6 @@
 	)
 	(label "Proxi2"
 		(at 41.91 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8984,7 +8978,6 @@
 	)
 	(label "Mot2_G"
 		(at 243.84 35.56 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8995,7 +8988,6 @@
 	)
 	(label "Btn_USR2"
 		(at 39.37 179.07 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9006,7 +8998,6 @@
 	)
 	(label "RTC_SDA"
 		(at 167.64 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9017,7 +9008,6 @@
 	)
 	(label "Proxi_PWR"
 		(at 167.64 118.11 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9028,7 +9018,6 @@
 	)
 	(label "LED_R"
 		(at 167.64 77.47 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9039,7 +9028,6 @@
 	)
 	(label "Vin"
 		(at 36.83 24.13 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9050,7 +9038,6 @@
 	)
 	(label "Mot2_PWM"
 		(at 198.12 77.47 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9061,7 +9048,6 @@
 	)
 	(label "XTAL2"
 		(at 120.65 72.39 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9072,7 +9058,6 @@
 	)
 	(label "MISO"
 		(at 167.64 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9083,7 +9068,6 @@
 	)
 	(label "Mot1_G"
 		(at 243.84 72.39 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9094,7 +9078,6 @@
 	)
 	(label "LED_B"
 		(at 140.97 167.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9105,7 +9088,6 @@
 	)
 	(label "Btn_USR1"
 		(at 39.37 149.86 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9116,7 +9098,6 @@
 	)
 	(label "LED_Y"
 		(at 118.11 167.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9127,7 +9108,6 @@
 	)
 	(label "SIM_RST"
 		(at 167.64 146.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9138,7 +9118,6 @@
 	)
 	(label "RST"
 		(at 241.3 149.86 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9149,7 +9128,6 @@
 	)
 	(label "RTC_SCL"
 		(at 204.47 148.59 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9160,7 +9138,6 @@
 	)
 	(label "Mot1_PWM"
 		(at 167.64 143.51 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9171,7 +9148,6 @@
 	)
 	(label "5V_bst"
 		(at 146.05 19.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9182,7 +9158,6 @@
 	)
 	(label "SIM_RST"
 		(at 228.6 123.19 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9193,7 +9168,6 @@
 	)
 	(label "Mot2_D"
 		(at 265.43 25.4 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9204,7 +9178,6 @@
 	)
 	(label "Proxi2"
 		(at 167.64 138.43 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9215,7 +9188,6 @@
 	)
 	(label "LED_Y"
 		(at 167.64 74.93 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9226,7 +9198,6 @@
 	)
 	(label "SIM_PWR"
 		(at 214.63 102.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9237,7 +9208,6 @@
 	)
 	(label "Mot2_I"
 		(at 167.64 67.31 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9248,7 +9218,6 @@
 	)
 	(label "Mot2_PWM"
 		(at 167.64 140.97 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9259,7 +9228,6 @@
 	)
 	(label "Btn_USR2"
 		(at 167.64 115.57 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9270,7 +9238,6 @@
 	)
 	(label "Proxi1"
 		(at 167.64 135.89 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9281,7 +9248,6 @@
 	)
 	(label "MISO"
 		(at 241.3 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9292,7 +9258,6 @@
 	)
 	(label "Btn_USR1"
 		(at 167.64 113.03 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9303,7 +9268,6 @@
 	)
 	(label "Mot1_D"
 		(at 265.43 62.23 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9314,7 +9278,6 @@
 	)
 	(label "Mot2_PWM"
 		(at 163.83 167.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9325,7 +9288,6 @@
 	)
 	(label "5V_fb"
 		(at 158.75 34.29 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9336,7 +9298,6 @@
 	)
 	(label "Batt_mon"
 		(at 167.64 62.23 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9347,7 +9308,6 @@
 	)
 	(label "RTC_SDA"
 		(at 204.47 146.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9358,7 +9318,6 @@
 	)
 	(label "Mot1_PWM"
 		(at 152.4 167.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9369,7 +9328,6 @@
 	)
 	(label "Proxi_PWR"
 		(at 99.06 124.46 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9380,7 +9338,6 @@
 	)
 	(label "XTAL1"
 		(at 120.65 67.31 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9391,7 +9348,6 @@
 	)
 	(label "SIM_RX"
 		(at 200.66 113.03 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9402,7 +9358,6 @@
 	)
 	(label "SIM_TX"
 		(at 228.6 115.57 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9413,7 +9368,6 @@
 	)
 	(label "RTC_SDA"
 		(at 200.66 128.27 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9424,7 +9378,6 @@
 	)
 	(label "Mot1_I"
 		(at 251.46 77.47 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9435,7 +9388,6 @@
 	)
 	(label "Mot2_D"
 		(at 248.92 52.07 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9446,7 +9398,6 @@
 	)
 	(label "LED_G"
 		(at 129.54 167.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9457,7 +9408,6 @@
 	)
 	(label "Mot1_PWM"
 		(at 198.12 72.39 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9468,7 +9418,6 @@
 	)
 	(label "Proxi1"
 		(at 39.37 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9479,7 +9428,6 @@
 	)
 	(label "RTC_SQW"
 		(at 204.47 151.13 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9490,7 +9438,6 @@
 	)
 	(label "SIM_TX"
 		(at 200.66 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9501,7 +9448,6 @@
 	)
 	(label "RTC_SCL"
 		(at 200.66 125.73 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9512,7 +9458,6 @@
 	)
 	(label "5V_sw"
 		(at 146.05 26.67 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9523,7 +9468,6 @@
 	)
 	(label "RTC_SQW"
 		(at 167.64 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9534,7 +9478,6 @@
 	)
 	(label "LED_G"
 		(at 167.64 72.39 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9545,7 +9488,6 @@
 	)
 	(label "RTC_SCL"
 		(at 167.64 107.95 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9556,7 +9498,6 @@
 	)
 	(label "Batt_mon"
 		(at 107.95 31.75 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9567,7 +9508,6 @@
 	)
 	(label "LED_B"
 		(at 167.64 69.85 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9578,7 +9518,6 @@
 	)
 	(label "SCK"
 		(at 241.3 147.32 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9589,7 +9528,6 @@
 	)
 	(label "SCK"
 		(at 167.64 102.87 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9600,7 +9538,6 @@
 	)
 	(label "SIM_PWR"
 		(at 167.64 120.65 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9611,7 +9548,6 @@
 	)
 	(label "MOSI"
 		(at 167.64 97.79 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9622,7 +9558,6 @@
 	)
 	(label "SIM_TX"
 		(at 167.64 130.81 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9633,7 +9568,6 @@
 	)
 	(label "RST"
 		(at 73.66 151.13 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9644,7 +9578,6 @@
 	)
 	(label "LED_R"
 		(at 106.68 167.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9655,7 +9588,6 @@
 	)
 	(label "RST"
 		(at 120.65 62.23 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11595,6 +11527,191 @@
 			(project "horse_feeder"
 				(path "/bdeff217-2bc0-4651-8ab4-3cac9152fd39"
 					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MCU_Microchip_ATmega:ATmega644PA-P")
+		(at 143.51 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2c09207c-e81e-4513-bf38-8d4b5761a2f4")
+		(property "Reference" "U3"
+			(at 145.7041 155.3901 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ATmega644PA-P"
+			(at 145.7041 157.8144 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-40_W15.24mm"
+			(at 143.51 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8272-8-bit-AVR-microcontroller-ATmega164A_PA-324A_PA-644A_PA-1284_P_datasheet.pdf"
+			(at 143.51 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "20MHz, 64kB Flash, 4kB SRAM, 2kB EEPROM, JTAG, DIP-40"
+			(at 143.51 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "17"
+			(uuid "0522f96a-9bef-4e2b-aaa5-0454f0f58551")
+		)
+		(pin "38"
+			(uuid "dee56f13-3462-463c-a581-9a5e84576552")
+		)
+		(pin "3"
+			(uuid "34328ff0-7da8-4f17-a5ba-fb2d9245da86")
+		)
+		(pin "31"
+			(uuid "403b8009-7598-4f03-9db9-14249a396ba1")
+		)
+		(pin "9"
+			(uuid "8f82381f-9644-46e0-8f48-b956f3fb5060")
+		)
+		(pin "32"
+			(uuid "6b409270-d3f4-4e43-9bfa-b97c0e6a0e7a")
+		)
+		(pin "35"
+			(uuid "8a599ccb-3343-4602-818f-523018cbcb25")
+		)
+		(pin "6"
+			(uuid "fc8ed30c-4e0b-43a2-ba92-2cc353935cd8")
+		)
+		(pin "25"
+			(uuid "92db6ce1-4d74-4957-9ef5-48b7b691551c")
+		)
+		(pin "23"
+			(uuid "0670a5fb-c818-4e1b-a7b4-097d3ddaaf5c")
+		)
+		(pin "37"
+			(uuid "1bc17ec8-f13b-4197-8f07-0004fc4e32ca")
+		)
+		(pin "34"
+			(uuid "1de401a3-b1a7-4819-90ad-29e803e7b41b")
+		)
+		(pin "4"
+			(uuid "379d2b50-ec04-4c77-972a-262fdd533c75")
+		)
+		(pin "1"
+			(uuid "3e19475a-1e54-45fe-b404-8b1d66859cd3")
+		)
+		(pin "33"
+			(uuid "35c5eceb-8662-4f9c-b8ed-4f26e0cd5e3c")
+		)
+		(pin "26"
+			(uuid "f6cdf3a8-7117-414a-8e8d-6fa9e083bfff")
+		)
+		(pin "30"
+			(uuid "785e22f5-a0f6-4db3-b9cf-9b574a065613")
+		)
+		(pin "39"
+			(uuid "67d8c92e-9903-4a92-b597-31d315a689cb")
+		)
+		(pin "5"
+			(uuid "fa9f593e-cbb1-495d-bcbb-9df335262768")
+		)
+		(pin "7"
+			(uuid "61a9814e-5b8e-4d38-a7fb-5fb2c87729b8")
+		)
+		(pin "16"
+			(uuid "44070fb6-b059-4c47-8e06-5d6b72f94d64")
+		)
+		(pin "10"
+			(uuid "559895be-51b5-4bee-8c31-49c8b6ac2d48")
+		)
+		(pin "12"
+			(uuid "68369b25-1a61-45b8-8a3f-7aa50adc6254")
+		)
+		(pin "18"
+			(uuid "d26d5bdc-d3a4-4d04-8d7b-ca6cfc785351")
+		)
+		(pin "11"
+			(uuid "0c535d0f-21a6-4037-99c4-522da251f94a")
+		)
+		(pin "14"
+			(uuid "4ffb11a5-7746-4aa8-b2ff-905ec197c2ee")
+		)
+		(pin "40"
+			(uuid "77c4277a-da49-477b-817b-8c786b0da16c")
+		)
+		(pin "29"
+			(uuid "747bc963-a49f-4a6c-8edf-b804f1e51181")
+		)
+		(pin "22"
+			(uuid "71456ce1-a111-4605-8081-efe56fb1d017")
+		)
+		(pin "24"
+			(uuid "d34a8d39-5a97-4077-b865-c588b0901e16")
+		)
+		(pin "27"
+			(uuid "8ad803d7-8600-4697-b4ae-269133bc4d1f")
+		)
+		(pin "28"
+			(uuid "1f90a795-caf3-49df-84a0-2421fdceb18a")
+		)
+		(pin "21"
+			(uuid "f78cd6b1-edf6-472e-8cf1-528db67e5d64")
+		)
+		(pin "19"
+			(uuid "8241f4ec-8282-4708-a70f-a79bed77fb52")
+		)
+		(pin "20"
+			(uuid "e471bb77-66ae-4b1b-b057-fc4312d9922f")
+		)
+		(pin "13"
+			(uuid "a6077354-da97-44d8-ad19-1103c0e060a9")
+		)
+		(pin "8"
+			(uuid "19c1ad5f-70b0-4617-aa7c-02878705e6fd")
+		)
+		(pin "36"
+			(uuid "72d56f9c-481b-4797-a24a-6ac4e35c9ddf")
+		)
+		(pin "2"
+			(uuid "a28b7cf5-5091-4b54-8054-9696bb0c3f5f")
+		)
+		(pin "15"
+			(uuid "19a48a5e-836c-4bd5-85cf-88128b4af644")
+		)
+		(instances
+			(project ""
+				(path "/bdeff217-2bc0-4651-8ab4-3cac9152fd39"
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -14393,7 +14510,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6879e05e-dc0d-4989-a572-47cf746f457f")
 		(property "Reference" "U4"
 			(at 233.68 148.1208 0)
@@ -16656,191 +16772,6 @@
 			(project "horse_feeder"
 				(path "/bdeff217-2bc0-4651-8ab4-3cac9152fd39"
 					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "MCU_Microchip_ATmega:ATmega32A-P")
-		(at 143.51 105.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8bd8d737-864c-4d82-979d-092ef6d1def1")
-		(property "Reference" "U3"
-			(at 145.7041 155.3901 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ATmega32A-P"
-			(at 145.7041 157.8144 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-40_W15.24mm"
-			(at 143.51 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-8155-8-bit-microcontroller-avr-atmega32a_datasheet.pdf"
-			(at 143.51 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "16MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, JTAG, DIP-40"
-			(at 143.51 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "18"
-			(uuid "39ceac45-db73-4036-8b61-d5e1c3f0447a")
-		)
-		(pin "20"
-			(uuid "ccd2c36d-9feb-4c4c-8100-e1bba60186a3")
-		)
-		(pin "33"
-			(uuid "c871e74a-a422-46e6-a4fa-78a5171c7502")
-		)
-		(pin "39"
-			(uuid "2f626caa-3c48-4049-861d-3ef051c0a106")
-		)
-		(pin "36"
-			(uuid "f9e2bf76-8e50-4986-ac0c-d94ea67fd595")
-		)
-		(pin "13"
-			(uuid "6bb2c50e-6e35-4bb1-b729-f23f64172b9f")
-		)
-		(pin "15"
-			(uuid "eec1d20c-0ada-45ef-a440-76d31c53e796")
-		)
-		(pin "2"
-			(uuid "6f9e98d0-5726-46fb-af2c-515a8e362905")
-		)
-		(pin "34"
-			(uuid "ebd8932a-1382-42e4-ab3a-896177596d26")
-		)
-		(pin "22"
-			(uuid "146922b7-e91e-4a47-b062-7762999a15f9")
-		)
-		(pin "3"
-			(uuid "a2c4c871-f468-4df1-b6df-eae66c8bf9a0")
-		)
-		(pin "32"
-			(uuid "88a8f3ea-8ee4-4c10-a1de-a6f5366d1bf2")
-		)
-		(pin "25"
-			(uuid "ebf4d59d-733a-45e4-847d-c7a1db33cbb0")
-		)
-		(pin "1"
-			(uuid "6d27e873-8253-4a86-9ef0-73a1574bc677")
-		)
-		(pin "6"
-			(uuid "5b5ac4d7-2429-490d-970c-85edec6023c7")
-		)
-		(pin "4"
-			(uuid "8b592bb9-8418-4f17-b3f0-eb867f493a0d")
-		)
-		(pin "30"
-			(uuid "5f6627af-f3bc-428b-84af-e7a478aa0c2a")
-		)
-		(pin "17"
-			(uuid "6d971193-8443-41f6-b354-a3f89079392f")
-		)
-		(pin "28"
-			(uuid "0145e4f3-97fc-4aec-a2cf-a9e73e33ebbb")
-		)
-		(pin "11"
-			(uuid "843659b2-256f-4f23-8f3f-243d6be3c844")
-		)
-		(pin "10"
-			(uuid "c55d401e-2db7-464a-945e-dbdf52b8e654")
-		)
-		(pin "19"
-			(uuid "446b5f11-7058-4917-a2ad-a23439064e3e")
-		)
-		(pin "27"
-			(uuid "8a94d8da-9b2f-4045-b4ad-044782aaddd8")
-		)
-		(pin "5"
-			(uuid "28829437-bbcb-4837-bfd4-3a827a05986a")
-		)
-		(pin "40"
-			(uuid "541a03c3-0da3-424b-ace7-008a71fbd3d6")
-		)
-		(pin "21"
-			(uuid "6d180b59-c8c0-42e0-867d-37db67ecf0bc")
-		)
-		(pin "37"
-			(uuid "e4120d4e-c026-4291-9196-79b5efd63523")
-		)
-		(pin "14"
-			(uuid "9833b00e-de36-4baa-97af-22ad514fa2e2")
-		)
-		(pin "9"
-			(uuid "f8d5300b-61bf-49c8-b8ae-24860f295770")
-		)
-		(pin "29"
-			(uuid "98e70691-7d08-45f5-ad50-78c7e4f57469")
-		)
-		(pin "7"
-			(uuid "1ff691df-59d5-48f6-9d1b-8f725009fe25")
-		)
-		(pin "8"
-			(uuid "10d3a265-fcf7-4b11-9f43-14eea00e41b0")
-		)
-		(pin "23"
-			(uuid "58c66946-a21b-4006-b041-b88f81fec57b")
-		)
-		(pin "16"
-			(uuid "bf694647-2e9d-4686-a13b-7e802e4cd6df")
-		)
-		(pin "12"
-			(uuid "5590b526-715c-4e05-ba18-80a6f3330ea6")
-		)
-		(pin "24"
-			(uuid "0664028a-33bd-4702-a788-81d5d855e9c2")
-		)
-		(pin "35"
-			(uuid "6b96d4cc-ea39-4821-86ba-d5bd6c58a6a1")
-		)
-		(pin "38"
-			(uuid "c5ef3338-7f6e-4ae9-8aeb-270cf99f60cf")
-		)
-		(pin "26"
-			(uuid "2404bd02-7df4-4b5c-a904-1820cd2a8a3b")
-		)
-		(pin "31"
-			(uuid "e08e76fe-a857-473e-8ad0-4e98d77f72ac")
-		)
-		(instances
-			(project ""
-				(path "/bdeff217-2bc0-4651-8ab4-3cac9152fd39"
-					(reference "U3")
 					(unit 1)
 				)
 			)
