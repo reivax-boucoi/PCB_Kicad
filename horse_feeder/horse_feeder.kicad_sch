@@ -9836,7 +9836,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+		(property "Footprint" "footprints:TerminalBlock_bornier-2_P5.08mm"
 			(at 271.78 25.4 0)
 			(effects
 				(font
@@ -10982,7 +10982,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1b75dace-b59f-47b9-96e2-ff72ad58fbf7")
 		(property "Reference" "J5"
@@ -13109,7 +13109,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+		(property "Footprint" "footprints:TerminalBlock_bornier-2_P5.08mm"
 			(at 19.05 179.07 0)
 			(effects
 				(font
@@ -15275,7 +15275,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "763711d4-d17f-4e77-b6b8-d8fd2867309a")
 		(property "Reference" "J7"
@@ -18940,7 +18940,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+		(property "Footprint" "footprints:TerminalBlock_bornier-2_P5.08mm"
 			(at 21.59 24.13 0)
 			(effects
 				(font
@@ -20061,7 +20061,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+		(property "Footprint" "footprints:TerminalBlock_bornier-2_P5.08mm"
 			(at 60.96 151.13 0)
 			(effects
 				(font
@@ -20683,7 +20683,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+		(property "Footprint" "footprints:TerminalBlock_bornier-2_P5.08mm"
 			(at 271.78 62.23 0)
 			(effects
 				(font
@@ -20819,7 +20819,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
+		(property "Footprint" "footprints:TerminalBlock_bornier-2_P5.08mm"
 			(at 19.05 149.86 0)
 			(effects
 				(font

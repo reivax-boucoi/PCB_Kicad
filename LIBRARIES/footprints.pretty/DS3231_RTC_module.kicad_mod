@@ -280,15 +280,15 @@
 		(remove_unused_layers no)
 		(uuid "c1741286-ba0e-4f33-8f37-5fd51504bac5")
 	)
-	(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x05_P2.54mm_Vertical.wrl"
+	(model "${KICAD_USR_LIB_DIR}/3Dmodels/DS3231 Module.step"
 		(offset
-			(xyz 0 0 0)
+			(xyz -5.5 -5 8.5)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 0)
+			(xyz 0 0 180)
 		)
 	)
 )

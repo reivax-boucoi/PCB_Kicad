@@ -67,96 +67,6 @@
 	)
 	(attr through_hole)
 	(fp_line
-		(start -27.9 -3)
-		(end -27.9 12.1)
-		(stroke
-			(width 0.25)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "5dbbab0e-da19-4853-be4a-30f22911b375")
-	)
-	(fp_line
-		(start -27.9 12.1)
-		(end -12.1 12.1)
-		(stroke
-			(width 0.25)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "085e2fce-c9e1-4fa7-bfa6-270336129a9e")
-	)
-	(fp_line
-		(start -22.8 -8.1)
-		(end -27.9 -3)
-		(stroke
-			(width 0.25)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "70d80f1f-4782-4fc2-96cb-77fac18002ba")
-	)
-	(fp_line
-		(start -18 -6)
-		(end -19 -5)
-		(stroke
-			(width 0.5)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "1d0b5737-8317-432a-b502-f0b87dc92665")
-	)
-	(fp_line
-		(start -18 -6)
-		(end -18 0)
-		(stroke
-			(width 0.5)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "9ab9df72-a2a7-4fdf-95b8-c890c3cf7704")
-	)
-	(fp_line
-		(start -18 -6)
-		(end -17 -5)
-		(stroke
-			(width 0.5)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "3f16b179-5464-44e3-9af9-aeb2f9c5cc4a")
-	)
-	(fp_line
-		(start -18 0)
-		(end -19 -1)
-		(stroke
-			(width 0.5)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "b02df896-0312-4cd6-b36d-00d770652101")
-	)
-	(fp_line
-		(start -18 0)
-		(end -17 -1)
-		(stroke
-			(width 0.5)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "cde2b57c-0dd6-4510-b068-2bd574d265f3")
-	)
-	(fp_line
-		(start -12.1 12.1)
-		(end -12.1 -8.1)
-		(stroke
-			(width 0.25)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "146eb35e-d75c-420e-be4a-e1d65cdd07fd")
-	)
-	(fp_line
 		(start -1.33 -1.33)
 		(end 0 -1.33)
 		(stroke
@@ -220,52 +130,23 @@
 		(start -38.2 -8.1)
 		(end 1.6 19.4)
 		(stroke
-			(width 0.25)
+			(width 0.1)
 			(type default)
 		)
 		(fill none)
 		(layer "F.SilkS")
 		(uuid "5eef5f03-56a9-488e-aa46-0d3247fdf14b")
 	)
-	(fp_line
-		(start -1.8 -1.8)
-		(end -1.8 17.05)
+	(fp_rect
+		(start -38.2 -8.1)
+		(end 1.6 19.4)
 		(stroke
-			(width 0.05)
-			(type solid)
+			(width 0.1)
+			(type default)
 		)
+		(fill none)
 		(layer "F.CrtYd")
-		(uuid "3e4bdc11-4439-44e1-8645-dffdeee3095d")
-	)
-	(fp_line
-		(start -1.8 17.05)
-		(end 1.8 17.05)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "26f116e1-3769-48f2-8d32-68cce2dc8c2d")
-	)
-	(fp_line
-		(start 1.8 -1.8)
-		(end -1.8 -1.8)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "1217e94f-fdcb-4d0d-829d-ba425c0881f8")
-	)
-	(fp_line
-		(start 1.8 17.05)
-		(end 1.8 -1.8)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "95d19fc7-a1c1-4dcb-9c2c-9ad3883dff59")
+		(uuid "6b067a33-0550-4109-9c96-8e81e3cd11cd")
 	)
 	(fp_rect
 		(start -38.2 -8.1)
@@ -415,5 +296,16 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "ae856802-b50a-49c8-8fb4-184cc797903e")
+	)
+	(model "${KICAD_USR_LIB_DIR}/3Dmodels/SIM800L_EVB-Module.step"
+		(offset
+			(xyz -18.5 -5.5 9)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
 	)
 )
