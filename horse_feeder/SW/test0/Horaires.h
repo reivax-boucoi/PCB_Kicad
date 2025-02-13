@@ -34,9 +34,11 @@ public:
     Horaires();                 // Constructor (initializes I2C and loads alarms)
     void setDate(uint8_t day, uint8_t month, uint16_t year, uint8_t hours, uint8_t minutes, uint8_t seconds);
     DateTime getDate();         // Retrieve full date and time
-
+    void printDate();
     void setAlarm(uint8_t alarmNumber, uint8_t hours, uint8_t minutes); // Set & enable an alarm
     Alarm getAlarmTime(uint8_t alarmNumber); // Retrieve alarm time
+    void printAlarm(uint8_t alarmNumber);
+    void printAlarms();
     void disableAlarm(uint8_t alarmNumber); // Disable an alarm
     void disableAllAlarms();                // Disable all alarms
     void clearAlarm(uint8_t alarmNumber);   // Stop ringing alarm

@@ -4,8 +4,8 @@
 #include <Arduino.h>
 #include <EEPROM.h>  // Include EEPROM library
 
-#define TIMEOUT_MS 5000       // Timeout in milliseconds (5 seconds)
-#define RATION_SCALE 10       // Scaling factor for ration quantity conversion
+#define TIMEOUT_MS 20000       // Timeout in milliseconds (5 seconds)
+#define RATION_SCALE 8       // Scaling factor for ration quantity conversion
 #define EEPROM_RATION_ADDR 0  // EEPROM address to store ration quantity
 
 enum RationStatus {
@@ -26,8 +26,8 @@ private:
     RationStatus status;  // Current distribution status
 
     static Ration* instance; // Static pointer to access class in ISR
-    static void ISR_INT0();  // Interrupt Service Routine for Motor1 (INT0)
-    static void ISR_INT1();  // Interrupt Service Routine for Motor2 (INT1)
+    static void INT0_isr();  // Interrupt Service Routine for Motor1 (INT0)
+    static void INT1_isr();  // Interrupt Service Routine for Motor2 (INT1)
 
     void loadRationFromEEPROM(); // Load ration from EEPROM
     void saveRationToEEPROM();   // Save ration to EEPROM

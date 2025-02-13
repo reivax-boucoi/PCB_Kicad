@@ -48,6 +48,22 @@ DateTime Horaires::getDate() {
     return currentDate;
 }
 
+void Horaires::printDate(){
+    DateTime currentDate=getDate();
+    Serial.print(currentDate.day);
+    Serial.write('/');
+    Serial.print(currentDate.month);
+    Serial.write('/');
+    Serial.print(currentDate.year);
+    Serial.write(',');
+    Serial.print(currentDate.hours);
+    Serial.write('h');
+    Serial.print(currentDate.minutes);
+    Serial.write(':');
+    Serial.print(currentDate.seconds);
+    Serial.println('s');
+}
+
 // **Set an alarm time and enable it automatically**
 void Horaires::setAlarm(uint8_t alarmNumber, uint8_t hours, uint8_t minutes) {
     if (alarmNumber >= MAX_ALARMS) return; // Ensure valid alarm number
@@ -62,6 +78,23 @@ Alarm Horaires::getAlarmTime(uint8_t alarmNumber) {
     return alarms[alarmNumber];
 }
 
+void Horaires::printAlarm(uint8_t alarmNumber){
+    Serial.print("Alarme ");
+    Serial.print(alarmNumber);
+    if(alarms[alarmNumber].enabled){
+        Serial.print(" Active,");
+    }else{
+        Serial.print(" Inactive,");
+    }
+    Serial.print(alarms[alarmNumber].hours);
+    Serial.write('h');
+    Serial.println(alarms[alarmNumber].minutes);
+}
+void Horaires::printAlarms(){
+    for(uint8_t i = 0; i < MAX_ALARMS; i++) {
+        printAlarm(i);
+    }
+}
 
 // **Disable an alarm**
 void Horaires::disableAlarm(uint8_t alarmNumber) {
@@ -81,7 +114,9 @@ void Horaires::disableAllAlarms() {
 void Horaires::clearAlarm(uint8_t alarmNumber) {
     if (alarmNumber >= MAX_ALARMS) return;
     alarms[alarmNumber].ringing = false;
-    lastClearedTime[alarmNumber] = millis() / 60000; // Store last cleared time in minutes
+    
+    DateTime currentDate=getDate();
+    lastClearedTime[alarmNumber] = currentDate.minutes+currentDate.hours*60;
 }
 
 // **Check if any alarm is ringing, return alarm number or -1**
@@ -105,10 +140,8 @@ void Horaires::update() {
         unsigned long alarmTimeMinutes = alarms[i].hours * 60 + alarms[i].minutes;
 
         // Check if alarm should ring (current time is within ALARM_WINDOW minutes after alarm time)
-        if (!alarms[i].ringing && currentTimeMinutes >= alarmTimeMinutes && currentTimeMinutes < alarmTimeMinutes + ALARM_WINDOW) {
-            if (currentTimeMinutes >= lastClearedTime[i] + ALARM_BLANKING_WINDOW) { 
+        if (!alarms[i].ringing && (currentTimeMinutes >= alarmTimeMinutes) && (currentTimeMinutes < alarmTimeMinutes + ALARM_WINDOW) && (currentTimeMinutes >= lastClearedTime[i] + ALARM_BLANKING_WINDOW)) {
                 alarms[i].ringing = true;
-            }
         }
     }
 }

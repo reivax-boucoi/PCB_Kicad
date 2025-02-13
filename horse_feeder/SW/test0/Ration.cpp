@@ -4,10 +4,9 @@
 Ration* Ration::instance = nullptr;
 
 // **Interrupt Service Routine (ISR) for INT0 (Motor1)**
-void Ration::ISR_INT0() {
+void Ration::INT0_isr() {
     if (instance) {
         instance->countM1++;
-
         // Stop Motor1 if it has distributed the required amount
         if (instance->countM1 >= instance->ration_qty) {
             digitalWrite(instance->motorPin1, LOW); // Stop Motor1
@@ -16,10 +15,9 @@ void Ration::ISR_INT0() {
 }
 
 // **Interrupt Service Routine (ISR) for INT1 (Motor2)**
-void Ration::ISR_INT1() {
+void Ration::INT1_isr() {
     if (instance) {
         instance->countM2++;
-
         // Stop Motor2 if it has distributed the required amount
         if (instance->countM2 >= instance->ration_qty) {
             digitalWrite(instance->motorPin2, LOW); // Stop Motor2
@@ -36,12 +34,14 @@ Ration::Ration(uint8_t motorPin1, uint8_t motorPin2)
     pinMode(motorPin2, OUTPUT);
     digitalWrite(motorPin1, LOW); // Ensure motors are off initially
     digitalWrite(motorPin2, LOW);
-
     instance = this; // Assign instance pointer for ISR access
-    attachInterrupt(digitalPinToInterrupt(2), ISR_INT0, FALLING); // Enable INT0 (PD2) for Motor1
-    attachInterrupt(digitalPinToInterrupt(3), ISR_INT1, FALLING); // Enable INT1 (PD3) for Motor2
-
+    pinMode(10,INPUT_PULLUP);
+    pinMode(11,INPUT_PULLUP);
+    attachInterrupt(digitalPinToInterrupt(10), INT0_isr, FALLING); // Enable INT0 (PD2) for Motor1
+    attachInterrupt(digitalPinToInterrupt(11), INT1_isr, FALLING); // Enable INT1 (PD3) for Motor2
     loadRationFromEEPROM(); // Load saved ration quantity from EEPROM
+    Serial.print("Initialized ration with ");
+    Serial.println(ration_qty);
 }
 
 // **Destructor**
@@ -73,6 +73,8 @@ void Ration::setRation(float qty) {
     if (new_ration_qty != ration_qty) { // Only update if changed
         ration_qty = new_ration_qty;
         saveRationToEEPROM(); // Save to EEPROM
+        Serial.print("Updated ration to ");
+        Serial.println(ration_qty);
     }
 }
 
@@ -91,6 +93,7 @@ void Ration::startDistribution() {
     digitalWrite(motorPin2, HIGH); // Turn on Motor2
     startTime = millis(); // Start timeout counter
     status = ONGOING; // Set status to ongoing
+    //Serial.print("Started ration");
 }
 
 // **Update function to check for ration completion (Non-blocking)**
@@ -106,6 +109,8 @@ RationStatus Ration::update() {
         } else if (countM2 < ration_qty) {
             status = TIMED_OUT_M2;
         }
+        digitalWrite(motorPin1, LOW);
+        digitalWrite(motorPin2, LOW);
     }
 
     // Check if both motors have completed their ration
