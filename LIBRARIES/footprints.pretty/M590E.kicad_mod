@@ -1,0 +1,348 @@
+(footprint "M590E"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "SIM GSM module, mini SIM card")
+	(property "Reference" "REF**"
+		(at 2.5 0 0)
+		(layer "F.SilkS")
+		(uuid "8e76cb48-5cc8-4230-8363-3ba490a13d0a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "M590E"
+		(at 3 1.5 0)
+		(layer "F.Fab")
+		(uuid "803619fa-8158-4f02-b848-96250671bc9d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at -8.5 8.5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2a6aa466-9d80-4777-94ad-693e95f332d6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at -8.5 8.5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "180e37b4-5a07-46dc-8f7d-ae2999e7f935")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at -8.5 8.5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ac91c461-fb29-48f5-8dcb-c61e472f7673")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -9.83 7.17)
+		(end -8.5 7.17)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "882bed7b-2603-4740-ad95-cca87bd16440")
+	)
+	(fp_line
+		(start -9.83 8.5)
+		(end -9.83 7.17)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a244b5bf-6827-44ee-bea3-8ec454a0bd6a")
+	)
+	(fp_line
+		(start -9.83 9.77)
+		(end -9.83 25.07)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1a240e14-8489-4376-a58e-2ce70c038c45")
+	)
+	(fp_line
+		(start -9.83 9.77)
+		(end -7.17 9.77)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "16e7b6d7-acf2-4413-a154-ad3138e8df63")
+	)
+	(fp_line
+		(start -9.83 25.07)
+		(end -7.17 25.07)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "98d93693-9772-47dc-a941-6a605be1636a")
+	)
+	(fp_line
+		(start -7.17 9.77)
+		(end -7.17 25.07)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c1073b13-d57f-487f-87f9-4a51f6317bd5")
+	)
+	(fp_rect
+		(start -50 0)
+		(end 0 50)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "d6ca9864-417a-444a-9ee3-82cc1ee68eed")
+	)
+	(fp_rect
+		(start -50 0)
+		(end 0 50)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "a2cc51b2-dae4-405e-a2c0-ccf871e620af")
+	)
+	(fp_line
+		(start -40.5 0.75)
+		(end -14.5 0.75)
+		(stroke
+			(width 0.25)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "1ec5e766-dbad-4542-bec2-9c8a2eb32b2c")
+	)
+	(fp_line
+		(start -40.5 18.25)
+		(end -40.5 0.75)
+		(stroke
+			(width 0.25)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "7a23ca9c-f906-4416-ab96-7f4d27c36e14")
+	)
+	(fp_line
+		(start -14.5 0.75)
+		(end -10.5 4.75)
+		(stroke
+			(width 0.25)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "0324c43a-ba5c-4601-b199-38b76fef603d")
+	)
+	(fp_line
+		(start -10.5 4.75)
+		(end -10.5 18.25)
+		(stroke
+			(width 0.25)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "16339d5a-ac43-4242-8f35-fbb474465e5d")
+	)
+	(fp_line
+		(start -10.5 18.25)
+		(end -40.5 18.25)
+		(stroke
+			(width 0.25)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "54298654-f18e-4061-8dd6-6996028f213e")
+	)
+	(fp_rect
+		(start -50 0)
+		(end 0 50)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "bcc27e8b-998c-4c3f-ba16-48cd5693ec19")
+	)
+	(fp_rect
+		(start -18.526507 43.473493)
+		(end -15.541291 46.458709)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "7ec1874f-7f52-48bc-a0ab-7ecddf5b4d94")
+	)
+	(fp_circle
+		(center -17 45)
+		(end -17 46)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "95d816ca-c3cb-4528-a8e2-e85d44957b5f")
+	)
+	(fp_circle
+		(center -17 45)
+		(end -16.9 45)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "f47f2a61-7df6-495b-bb41-a55c6c4b6d63")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -2.5 10.5 90)
+		(layer "F.Fab")
+		(uuid "2a60423e-2737-4a79-aacb-48e99c2086e6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -47.5 2.5)
+		(size 4 4)
+		(drill 3)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "2df5c3ba-9b9b-4731-97bd-15ae25bfd646")
+	)
+	(pad "" np_thru_hole circle
+		(at -47.5 47.5)
+		(size 4 4)
+		(drill 3)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "0049f775-3fd7-47a9-913e-32f1d85fcd12")
+	)
+	(pad "" np_thru_hole circle
+		(at -2.5 2.5)
+		(size 4 4)
+		(drill 3)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "67dd7e77-8108-44d9-a78f-df373845665c")
+	)
+	(pad "" np_thru_hole circle
+		(at -2.5 47.5)
+		(size 4 4)
+		(drill 3)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "8886075d-a758-456f-bc1a-3d1c8fdbee8f")
+	)
+	(pad "1" thru_hole rect
+		(at -8.5 8.5)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c92221b7-e80e-4bcd-b8eb-7b86b4ce2e22")
+	)
+	(pad "2" thru_hole oval
+		(at -8.5 11.04)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b5ca0c85-3307-4520-8c33-316547d43f87")
+	)
+	(pad "3" thru_hole oval
+		(at -8.5 13.58)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3a83ddcd-c68d-461c-a70c-e73ce6b4cbc2")
+	)
+	(pad "4" thru_hole oval
+		(at -8.5 16.12)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "fb5c51a9-e65d-4a12-8682-3466c28aa8e9")
+	)
+	(pad "5" thru_hole oval
+		(at -8.5 18.66)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "65681c7e-de16-431d-ba61-aee7cadd5f28")
+	)
+	(pad "6" thru_hole oval
+		(at -8.5 21.2)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "34044b43-d5fc-4a88-ac0e-1b4f2c624e08")
+	)
+	(pad "7" thru_hole oval
+		(at -8.5 23.74)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ae856802-b50a-49c8-8fb4-184cc797903e")
+	)
+	(model "${KICAD_USR_LIB_DIR}/3Dmodels/M590E-GSM-module.STEP"
+		(offset
+			(xyz -50 -50 5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
