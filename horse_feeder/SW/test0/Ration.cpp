@@ -40,8 +40,8 @@ Ration::Ration(uint8_t motorPin1, uint8_t motorPin2)
     attachInterrupt(digitalPinToInterrupt(10), INT0_isr, FALLING); // Enable INT0 (PD2) for Motor1
     attachInterrupt(digitalPinToInterrupt(11), INT1_isr, FALLING); // Enable INT1 (PD3) for Motor2
     loadRationFromEEPROM(); // Load saved ration quantity from EEPROM
-    Serial.print("Initialized ration with ");
-    Serial.println(ration_qty);
+    Serial1.print("Initialized ration with ");
+    Serial1.println(ration_qty);
 }
 
 // **Destructor**
@@ -73,8 +73,8 @@ void Ration::setRation(float qty) {
     if (new_ration_qty != ration_qty) { // Only update if changed
         ration_qty = new_ration_qty;
         saveRationToEEPROM(); // Save to EEPROM
-        Serial.print("Updated ration to ");
-        Serial.println(ration_qty);
+        Serial1.print("Updated ration to ");
+        Serial1.println(ration_qty);
     }
 }
 

@@ -3602,6 +3602,151 @@
 				)
 			)
 		)
+		(symbol "Diode:SS14"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SS14"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMA"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.vishay.com/docs/88746/ss12.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "40V 1A Schottky Diode, SMA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*SMA*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SS14_0_1"
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SS14_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Driver_FET:MIC4427"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -6887,6 +7032,12 @@
 		(uuid "2fb8183e-39d8-4cf4-b479-a6d0bf7a441b")
 	)
 	(junction
+		(at 257.81 22.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "35fafa3f-2256-400a-833e-1613e8f10e5e")
+	)
+	(junction
 		(at 35.56 184.15)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6951,6 +7102,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "581443c8-6ea0-4cf5-bcac-53c4e284ce19")
+	)
+	(junction
+		(at 257.81 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5997ad85-2e6a-481e-a85d-045b5da3785f")
 	)
 	(junction
 		(at 111.76 24.13)
@@ -8266,6 +8423,16 @@
 	)
 	(wire
 		(pts
+			(xy 255.27 30.48) (xy 257.81 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b3708e2-1d9d-4830-beb5-e2386b2e3b6c")
+	)
+	(wire
+		(pts
 			(xy 140.97 177.8) (xy 140.97 180.34)
 		)
 		(stroke
@@ -8376,7 +8543,7 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 59.69) (xy 254 59.69)
+			(xy 257.81 59.69) (xy 255.27 59.69)
 		)
 		(stroke
 			(width 0)
@@ -9036,6 +9203,16 @@
 	)
 	(wire
 		(pts
+			(xy 255.27 22.86) (xy 257.81 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcfb2818-60ac-4427-b98d-3c7c47e6b9b9")
+	)
+	(wire
+		(pts
 			(xy 78.74 24.13) (xy 90.17 24.13)
 		)
 		(stroke
@@ -9156,7 +9333,7 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 67.31) (xy 248.92 67.31)
+			(xy 257.81 67.31) (xy 255.27 67.31)
 		)
 		(stroke
 			(width 0)
@@ -9845,16 +10022,6 @@
 		)
 		(uuid "b5eb2370-c3ee-4515-a5a8-a1efa74c52ab")
 	)
-	(label "Mot2_D"
-		(at 248.92 52.07 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b9f3a57a-4024-452c-a33d-c17f554eef46")
-	)
 	(label "LED_G"
 		(at 129.54 170.18 0)
 		(effects
@@ -10331,6 +10498,76 @@
 			(project "horse_feeder"
 				(path "/bdeff217-2bc0-4651-8ab4-3cac9152fd39"
 					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SS14")
+		(at 255.27 63.5 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "094a7129-d8c4-4fe5-bd95-34ed2398d4cf")
+		(property "Reference" "D3"
+			(at 253.238 61.9703 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SS14"
+			(at 253.238 64.3946 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 250.825 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/88746/ss12.pdf"
+			(at 255.27 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "40V 1A Schottky Diode, SMA"
+			(at 255.27 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0a056f47-5ab4-4236-ae15-84644c354a2a")
+		)
+		(pin "2"
+			(uuid "21fc03e2-4e99-4e57-b060-07e13c9512ff")
+		)
+		(instances
+			(project ""
+				(path "/bdeff217-2bc0-4651-8ab4-3cac9152fd39"
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -13710,7 +13947,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 60.96 56.515 0)
 			(effects
 				(font
@@ -14286,6 +14523,76 @@
 			(project "horse_feeder"
 				(path "/bdeff217-2bc0-4651-8ab4-3cac9152fd39"
 					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SS14")
+		(at 255.27 26.67 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5bb105bf-ea8b-446c-a67a-d03f32c1570b")
+		(property "Reference" "D13"
+			(at 253.238 25.1403 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SS14"
+			(at 253.238 27.5646 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 250.825 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/88746/ss12.pdf"
+			(at 255.27 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "40V 1A Schottky Diode, SMA"
+			(at 255.27 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3e05b05a-4a85-480d-a8fd-ab2fedf61b4d")
+		)
+		(pin "2"
+			(uuid "295a1b91-6f3d-44fa-a3c0-c433cb1389a0")
+		)
+		(instances
+			(project "horse_feeder"
+				(path "/bdeff217-2bc0-4651-8ab4-3cac9152fd39"
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -18661,7 +18968,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 41.275 93.98 0)
 			(effects
 				(font
@@ -18801,7 +19108,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 46.355 120.65 0)
 			(effects
 				(font
@@ -21142,7 +21449,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
 			(at 266.7 146.05 90)
 			(effects
 				(font
@@ -21479,79 +21786,6 @@
 			(project "horse_feeder"
 				(path "/bdeff217-2bc0-4651-8ab4-3cac9152fd39"
 					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:BAT54C")
-		(at 248.92 59.69 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d179cd81-8edc-40cd-8272-ec3742a321bf")
-		(property "Reference" "D3"
-			(at 247.015 58.4778 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BAT54C"
-			(at 247.015 60.9021 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 245.745 57.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.diodes.com/_files/datasheets/ds11005.pdf"
-			(at 248.92 61.722 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "dual schottky barrier diode, common cathode"
-			(at 248.92 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b6379239-6ed6-4ef2-93b3-e1c8144700f2")
-		)
-		(pin "3"
-			(uuid "1fd6824e-ebf7-417b-bf23-7948994a82df")
-		)
-		(pin "2"
-			(uuid "c3b2279a-d3b4-4c24-b848-80eb89abfc30")
-		)
-		(instances
-			(project "horse_feeder"
-				(path "/bdeff217-2bc0-4651-8ab4-3cac9152fd39"
-					(reference "D3")
 					(unit 1)
 				)
 			)

@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -59,9 +59,13 @@
         }
       ],
       "drc_exclusions": [
-        "silk_overlap|194253561|82741742|af7a044e-7b8a-41f5-91ec-a76e73b59801|2e8d6033-4a1e-41b7-b1b0-22497affc9cc",
-        "silk_overlap|196690000|81575000|bd9a8b42-bbd3-469e-b459-5265c5241a0c|1814c6a4-0c53-422e-9fa1-413d0c36497d",
-        "silk_overlap|196690000|96575000|ecbaefb9-1466-456b-a285-dc2eec7e36be|009f499a-add0-4efd-a922-c25b01f73fc8"
+        "annular_width|108840000|73400000|0cf9a35b-24b3-4cac-a2df-d68b5dc488ce|00000000-0000-0000-0000-000000000000",
+        "annular_width|108840000|75100000|03a1f88c-89d1-480d-b282-2dcff303000d|00000000-0000-0000-0000-000000000000",
+        "annular_width|108840000|76800000|62305d97-f4dd-48b0-9cb5-eb33a1d6b27c|00000000-0000-0000-0000-000000000000",
+        "annular_width|108840000|78500000|770b2a9c-7fbe-4e6d-a9cb-edeb81bcc8fd|00000000-0000-0000-0000-000000000000",
+        "annular_width|108840000|80200000|9d36b842-6c6c-4ac2-9bc5-d8bccb89266b|00000000-0000-0000-0000-000000000000",
+        "silk_overlap|196641041|96575000|00cabab4-532a-47e5-945d-fb6b29b3ce42|ecbaefb9-1466-456b-a285-dc2eec7e36be",
+        "silk_overlap|196690000|81575000|e61e1eab-0981-43b3-903c-1fc1e48ed083|bd9a8b42-bbd3-469e-b459-5265c5241a0c"
       ],
       "meta": {
         "version": 2
@@ -496,7 +500,7 @@
       "plot": "./output",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "horse_feeder.step",
       "svg": "",
       "vrml": ""
     },

@@ -50,18 +50,18 @@ DateTime Horaires::getDate() {
 
 void Horaires::printDate(){
     DateTime currentDate=getDate();
-    Serial.print(currentDate.day);
-    Serial.write('/');
-    Serial.print(currentDate.month);
-    Serial.write('/');
-    Serial.print(currentDate.year);
-    Serial.write(',');
-    Serial.print(currentDate.hours);
-    Serial.write('h');
-    Serial.print(currentDate.minutes);
-    Serial.write(':');
-    Serial.print(currentDate.seconds);
-    Serial.println('s');
+    Serial1.print(currentDate.day);
+    Serial1.write('/');
+    Serial1.print(currentDate.month);
+    Serial1.write('/');
+    Serial1.print(currentDate.year);
+    Serial1.write(',');
+    Serial1.print(currentDate.hours);
+    Serial1.write('h');
+    Serial1.print(currentDate.minutes);
+    Serial1.write(':');
+    Serial1.print(currentDate.seconds);
+    Serial1.println('s');
 }
 
 // **Set an alarm time and enable it automatically**
@@ -79,16 +79,16 @@ Alarm Horaires::getAlarmTime(uint8_t alarmNumber) {
 }
 
 void Horaires::printAlarm(uint8_t alarmNumber){
-    Serial.print("Alarme ");
-    Serial.print(alarmNumber);
+    Serial1.print("Alarme ");
+    Serial1.print(alarmNumber);
     if(alarms[alarmNumber].enabled){
-        Serial.print(" Active,");
+        Serial1.print(" Active,");
     }else{
-        Serial.print(" Inactive,");
+        Serial1.print(" Inactive,");
     }
-    Serial.print(alarms[alarmNumber].hours);
-    Serial.write('h');
-    Serial.println(alarms[alarmNumber].minutes);
+    Serial1.print(alarms[alarmNumber].hours);
+    Serial1.write('h');
+    Serial1.println(alarms[alarmNumber].minutes);
 }
 void Horaires::printAlarms(){
     for(uint8_t i = 0; i < MAX_ALARMS; i++) {
