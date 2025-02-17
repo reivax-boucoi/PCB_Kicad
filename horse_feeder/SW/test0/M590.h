@@ -1,12 +1,8 @@
-/*
-    created March 2017
-    by Leandro Späth
-*/
-
-#ifndef M590_h //handle including library twice
+#ifndef M590_h
 #define M590_h
 
 #include <Arduino.h>
+#include <EEPROM.h>  // Include EEPROM library
 
 #define COMMAND_TIMEOUT 1000
 #define ASYNC_TIMEOUT   20000
@@ -14,6 +10,8 @@
 
 #define SMS_TIMEOUT 10000
 #define SW_RETRY_CNT 10
+#define EEPROM_NUMBER_ADDR 40  // EEPROM address to store target phone number
+#define EEPROM_SIMPIN_ADDR 60  // EEPROM address to store SIM pin #
 
 enum m590ResponseCode {
     M590_SUCCESS,
@@ -68,10 +66,14 @@ class M590 {
         bool waitForRegistration(const unsigned int timeout);
 
         bool queueSMS();
-        String targetNum="0605006547";//TODO
+        String targetNum="0605006547";
+        void setTargetNum(String num);//Update target phone number and store into eeprom
+        String SIMPIN="0000";
+        void setSIMPin(String pin);//Update SIM pin and store into eeprom
         bool reInit();
         uint8_t newSMSAvailable();
         String getSMS();
+        char *_text_ptr=NULL;
 
     private:
         HardwareSerial *_gsmSerial;
@@ -84,7 +86,6 @@ class M590 {
         const char *_asyncProgmemResponseString = NULL;
         char _responseBuffer[16];
 
-        char *_text_ptr=NULL;
         uint8_t restartRetries=0;
         
         byte asyncMatchedChars = 0;

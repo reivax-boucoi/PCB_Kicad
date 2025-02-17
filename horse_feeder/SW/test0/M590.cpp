@@ -7,43 +7,43 @@
 #include "M590.h"
 
 const char M590_COMMAND_GET_SIM_IDENTIFICATION[]   PROGMEM = "CCID",
-M590_COMMAND_CHECK_STATUS[]             PROGMEM = "CPAS",
-M590_COMMAND_CHECK_NETWORK_STATUS[]     PROGMEM = "CREG?",
-M590_COMMAND_CHECK_PIN[]                PROGMEM = "CPIN?",
-M590_COMMAND_INPUT_PIN[]                PROGMEM = "CPIN=",
-M590_COMMAND_SHUTDOWN[]                 PROGMEM = "CPWROFF",
-M590_COMMAND_GET_SIGNAL_STRENGTH[]      PROGMEM = "CSQ",
-M590_COMMAND_GET_NATIVE_NUMBER[]        PROGMEM = "CNUM",
-M590_COMMAND_SET_INPUT_TEXT_MODE[]      PROGMEM = "CMGF=1",
-M590_COMMAND_SET_INPUT_TEXT_FORMAT[]    PROGMEM = "CSCS=\"GSM\"",
-M590_COMMAND_SEND_SMS[]                 PROGMEM = "CMGS=\"",
-M590_COMMAND_GET_SMS_CNT[]              PROGMEM = "CPMS?",
-M590_COMMAND_GET_SMS_ATIDX[]            PROGMEM = "CMGR=1",
-M590_COMMAND_DEL_SMS_ATIDX[]            PROGMEM = "CMGD=1";
+                                                   M590_COMMAND_CHECK_STATUS[]             PROGMEM = "CPAS",
+                                                                                           M590_COMMAND_CHECK_NETWORK_STATUS[]     PROGMEM = "CREG?",
+                                                                                                                                   M590_COMMAND_CHECK_PIN[]                PROGMEM = "CPIN?",
+                                                                                                                                                                           M590_COMMAND_INPUT_PIN[]                PROGMEM = "CPIN=",
+                                                                                                                                                                                                                   M590_COMMAND_SHUTDOWN[]                 PROGMEM = "CPWROFF",
+                                                                                                                                                                                                                                                           M590_COMMAND_GET_SIGNAL_STRENGTH[]      PROGMEM = "CSQ",
+                                                                                                                                                                                                                                                                                                   M590_COMMAND_GET_NATIVE_NUMBER[]        PROGMEM = "CNUM",
+                                                                                                                                                                                                                                                                                                                                           M590_COMMAND_SET_INPUT_TEXT_MODE[]      PROGMEM = "CMGF=1",
+                                                                                                                                                                                                                                                                                                                                                                                   M590_COMMAND_SET_INPUT_TEXT_FORMAT[]    PROGMEM = "CSCS=\"GSM\"",
+                                                                                                                                                                                                                                                                                                                                                                                                                           M590_COMMAND_SEND_SMS[]                 PROGMEM = "CMGS=\"",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   M590_COMMAND_GET_SMS_CNT[]              PROGMEM = "CPMS?",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           M590_COMMAND_GET_SMS_ATIDX[]            PROGMEM = "CMGR=1",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   M590_COMMAND_DEL_SMS_ATIDX[]            PROGMEM = "CMGD=1";
 
 const char
 M590_RESPONSE_PREFIX[]          PROGMEM = "+",//"\r\n+",
-M590_RESPONSE_SEPERATOR[]       PROGMEM = ": ",
-M590_RESPONSE_OK[]              PROGMEM = "OK\r\n",
-M590_RESPONSE_ERROR[]           PROGMEM = "ERROR\r\n",
-M590_RESPONSE_FAIL[]            PROGMEM = "FAIL\r\n",
-M590_RESPONSE_PIN_REQUIRED[]    PROGMEM = " SIM PIN",
-M590_RESPONSE_PIN_DONE[]        PROGMEM = " READY",
-M590_RESPONSE_PIN_VAL_DONE[]    PROGMEM = "+PBREADY";
+                                M590_RESPONSE_SEPERATOR[]       PROGMEM = ": ",
+                                                                M590_RESPONSE_OK[]              PROGMEM = "OK\r\n",
+                                                                                                M590_RESPONSE_ERROR[]           PROGMEM = "ERROR\r\n",
+                                                                                                                                M590_RESPONSE_FAIL[]            PROGMEM = "FAIL\r\n",
+                                                                                                                                                                M590_RESPONSE_PIN_REQUIRED[]    PROGMEM = " SIM PIN",
+                                                                                                                                                                                                M590_RESPONSE_PIN_DONE[]        PROGMEM = " READY",
+                                                                                                                                                                                                                                M590_RESPONSE_PIN_VAL_DONE[]    PROGMEM = "+PBREADY";
 
 const char
 M590_AT[]                       PROGMEM = "AT",
-M590_CRLF[]                     PROGMEM = "\r\n",
-M590_COMMAND_PREFIX[]           PROGMEM = "AT+",
-M590_CONTENT_LENGTH_HEADER[]    PROGMEM = "Content-Length: ";
+                                M590_CRLF[]                     PROGMEM = "\r\n",
+                                                                M590_COMMAND_PREFIX[]           PROGMEM = "AT+",
+                                                                                                M590_CONTENT_LENGTH_HEADER[]    PROGMEM = "Content-Length: ";
 
 const char
 M590_ERROR_NOT_RESPONDING[]         PROGMEM = "\nThe M590 did not respond to an \"AT\". Please check serial connection, power supply and ONOFF pin.",
-M590_ERROR_NO_PIN[]                 PROGMEM = "\nNo pin was specified, but the module requests one",
-M590_ERROR_WRONG_PIN[]              PROGMEM = "\nWrong PIN was entered, down one try.",
-M590_ERROR_OTHER_PIN_ERR[]          PROGMEM = "\nError during PIN check, maybe a PUK is required, please check SIM card in a phone",
-M590_ERROR_PINVAL_TIMEOUT[]         PROGMEM = "\nTimeout during pin validation, please check module and try again",
-M590_ERROR_UNHANDLED_NET_STATE[]    PROGMEM = "\nNetwork status returned unhandled state: ";
+                                    M590_ERROR_NO_PIN[]                 PROGMEM = "\nNo pin was specified, but the module requests one",
+                                                                        M590_ERROR_WRONG_PIN[]              PROGMEM = "\nWrong PIN was entered, down one try.",
+                                                                                                            M590_ERROR_OTHER_PIN_ERR[]          PROGMEM = "\nError during PIN check, maybe a PUK is required, please check SIM card in a phone",
+                                                                                                                                                M590_ERROR_PINVAL_TIMEOUT[]         PROGMEM = "\nTimeout during pin validation, please check module and try again",
+                                                                                                                                                                                    M590_ERROR_UNHANDLED_NET_STATE[]    PROGMEM = "\nNetwork status returned unhandled state: ";
 
 
 const char
@@ -51,17 +51,17 @@ M590_LOG_NO_PIN_REQUIRED[]      PROGMEM = "No PIN was required";
 
 const char
 M590_LOG_00[]   PROGMEM = "Shutdown",
-M590_LOG_01[]   PROGMEM = "In Startup",
-M590_LOG_02[]   PROGMEM = "Module is active.",
-M590_LOG_03[]   PROGMEM = "Pin entry is required",
-M590_LOG_04[]   PROGMEM = "Pin entry successful",
-M590_LOG_05[]   PROGMEM = "Pin is being validated",
-M590_LOG_06[]   PROGMEM = "Pin validation successful",
-M590_LOG_07[]   PROGMEM = "Registering on cellular network",
-M590_LOG_08[]   PROGMEM = "Connected to cellular network",
-M590_LOG_09[]   PROGMEM = "Configuring SMS format",
-M590_LOG_10[]   PROGMEM = "Ready for SMS",
-M590_LOG_11[]   PROGMEM = "A fatal error occured, library can not continue";
+                M590_LOG_01[]   PROGMEM = "In Startup",
+                                M590_LOG_02[]   PROGMEM = "Module is active.",
+                                                M590_LOG_03[]   PROGMEM = "Pin entry is required",
+                                                                M590_LOG_04[]   PROGMEM = "Pin entry successful",
+                                                                                M590_LOG_05[]   PROGMEM = "Pin is being validated",
+                                                                                                M590_LOG_06[]   PROGMEM = "Pin validation successful",
+                                                                                                                M590_LOG_07[]   PROGMEM = "Registering on cellular network",
+                                                                                                                                M590_LOG_08[]   PROGMEM = "Connected to cellular network",
+                                                                                                                                                M590_LOG_09[]   PROGMEM = "Configuring SMS format",
+                                                                                                                                                                M590_LOG_10[]   PROGMEM = "Ready for SMS",
+                                                                                                                                                                                M590_LOG_11[]   PROGMEM = "A fatal error occured, library can not continue";
 
 //crude method of accessing multiple progmem Strings easily // index corresponds to m590States
 const char *M590_LOG[] = {
@@ -81,8 +81,28 @@ const char *M590_LOG[] = {
 
 
 M590::M590(char *text_ptr) {
-    _text_ptr = text_ptr;
+    _text_ptr = NULL;
     _gsmSerial = NULL;
+
+    String compstr = "";
+    char c = EEPROM.read(EEPROM_NUMBER_ADDR);
+    int i = 0;
+    while (c != '\0' && i < 1024) {
+        compstr += c;
+        i++;
+        c = EEPROM.read(EEPROM_NUMBER_ADDR + i);
+    }
+    targetNum = compstr;
+    
+    String compstr = "";
+    char c = EEPROM.read(EEPROM_SIMPIN_ADDR);
+    int i = 0;
+    while (c != '\0' && i < 1024) {
+        compstr += c;
+        i++;
+        c = EEPROM.read(EEPROM_SIMPIN_ADDR + i);
+    }
+    SIMPIN = compstr;
 }
 
 bool M590::begin(unsigned long baudRate = 115200, HardwareSerial *gsmSerial = NULL) {
@@ -181,29 +201,29 @@ void M590::loop() {
                 }
                 break;
             }
-        case  M590_STATE_CELLULAR_CONNECTED:{
-            _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_PREFIX);
-            _gsmSerial->println((__FlashStringHelper *) M590_COMMAND_SET_INPUT_TEXT_MODE);
-            bool success = readForResponses(M590_RESPONSE_OK, M590_RESPONSE_FAIL) == M590_SUCCESS;
-            if (success){
-                _currentState = M590_STATE_INPUT_MODE;
-            }else{
-                _currentState = M590_STATE_FATAL_ERROR;
+        case  M590_STATE_CELLULAR_CONNECTED: {
+                _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_PREFIX);
+                _gsmSerial->println((__FlashStringHelper *) M590_COMMAND_SET_INPUT_TEXT_MODE);
+                bool success = readForResponses(M590_RESPONSE_OK, M590_RESPONSE_FAIL) == M590_SUCCESS;
+                if (success) {
+                    _currentState = M590_STATE_INPUT_MODE;
+                } else {
+                    _currentState = M590_STATE_FATAL_ERROR;
+                }
+                break;
             }
-            break;
-        }
-        case M590_STATE_INPUT_MODE:{
-            _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_PREFIX);
-            _gsmSerial->println((__FlashStringHelper *) M590_COMMAND_SET_INPUT_TEXT_FORMAT);
-            bool success = readForResponses(M590_RESPONSE_OK, M590_RESPONSE_FAIL) == M590_SUCCESS;
-            if (success){
-                _currentState = M590_STATE_INPUT_MODE_DONE;
-            }else{
-                _currentState = M590_STATE_FATAL_ERROR;
+        case M590_STATE_INPUT_MODE: {
+                _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_PREFIX);
+                _gsmSerial->println((__FlashStringHelper *) M590_COMMAND_SET_INPUT_TEXT_FORMAT);
+                bool success = readForResponses(M590_RESPONSE_OK, M590_RESPONSE_FAIL) == M590_SUCCESS;
+                if (success) {
+                    _currentState = M590_STATE_INPUT_MODE_DONE;
+                } else {
+                    _currentState = M590_STATE_FATAL_ERROR;
+                }
+
+                break;
             }
-            
-            break;
-        }
         case M590_STATE_FATAL_ERROR: {
                 //reset the library and try again
                 break;
@@ -474,70 +494,110 @@ void M590::printDebug(const String s, bool withNewline) {
 
 
 bool M590::queueSMS() {
+
+    _debugSerial->print(F("SMS: "));
+    _debugSerial->println(_text_ptr);
+
     if (_currentState == M590_STATE_INPUT_MODE_DONE) {
-        
+
         _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_PREFIX);
         _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_SEND_SMS);
         _gsmSerial->print(targetNum);
         _gsmSerial->println('"');
-        if(readUntil('>') == M590_TIMEOUT)return false;
+        if (readUntil('>') == M590_TIMEOUT)return false;
         _gsmSerial->print((char*)_text_ptr);
         _gsmSerial->write(0x1A);
-        return readForResponses(M590_RESPONSE_OK, M590_RESPONSE_FAIL,SMS_TIMEOUT) == M590_SUCCESS;
+        return readForResponses(M590_RESPONSE_OK, M590_RESPONSE_FAIL, SMS_TIMEOUT) == M590_SUCCESS;
     }
     return false;
 }
 
 
-bool M590::reInit(){
-    if(restartRetries>=SW_RETRY_CNT){
+bool M590::reInit() {
+    if (restartRetries >= SW_RETRY_CNT) {
         _debugSerial->println(F("Module SW retries failed, need HW reset!"));
-    }else{
+    } else {
         _debugSerial->println(F("Module SW retry"));
         restartRetries++;
-        _currentState=M590_STATE_SHUTDOWN;
+        _currentState = M590_STATE_SHUTDOWN;
         resetAsyncVariables();//TODO is this needed?
         initialize("0000");
     }
-     
+
 }
 
-uint8_t newSMSAvailable(){
+uint8_t M590::newSMSAvailable() {
     if (_currentState != M590_STATE_INPUT_MODE_DONE)return 0;
-        
+
     _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_PREFIX);
     _gsmSerial->println((__FlashStringHelper *) M590_COMMAND_GET_SMS_CNT);
-    
+
     memset(_responseBuffer, 0, sizeof(_responseBuffer));
-    
+
     m590ResponseCode r = readForResponse(M590_RESPONSE_OK, _responseBuffer, sizeof(_responseBuffer));
     //"SM",0,50 or "SM",0,50
-    if (r == M590_SUCCESS){
+    if (r == M590_SUCCESS) {
         _debugSerial->print(F("newSMS sucess : "));
         _debugSerial->println(_responseBuffer);
         return (uint8_t) (_responseBuffer[6] - '0'); //convert to integer, maps to m590NetworkStates
-    }else{
+    } else {
         _debugSerial->println(F("newSMS parseError"));
         return M590_NET_PARSE_ERROR;
     }
-    
+
 
 }
 
 
-   
-M590_COMMAND_GET_SMS_ATIDX[]            PROGMEM = "CMGR=1",
-M590_COMMAND_DEL_SMS_ATIDX[]            PROGMEM = "CMGD=1"
-
-String getSMS(){
+String M590::getSMS() {
     if (_currentState != M590_STATE_INPUT_MODE_DONE)return "";
 
     _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_PREFIX);
     _gsmSerial->println((__FlashStringHelper *) M590_COMMAND_GET_SMS_ATIDX);
-//TODO get SMS string here
+    //TODO get SMS string here
     m590ResponseCode r = readForResponse(M590_RESPONSE_OK, _responseBuffer, sizeof(_responseBuffer));
-    
+
     _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_PREFIX);
     _gsmSerial->println((__FlashStringHelper *) M590_COMMAND_DEL_SMS_ATIDX);
-    if(readForResponses(M590_RESPONSE_OK, M590_RESPONSE_FAIL,COMMAND_TIMEOUT) != M590_SUCCESS)_debugSerial->println(F("getSMS delError"));
+    if (readForResponses(M590_RESPONSE_OK, M590_RESPONSE_FAIL, COMMAND_TIMEOUT) != M590_SUCCESS)_debugSerial->println(F("getSMS delError"));
+}
+
+void M590::setTargetNum(String num) {
+    targetNum = num;
+
+    String compstr = "";
+    char c = EEPROM.read(EEPROM_NUMBER_ADDR);
+    int i = 0;
+    while (c != '\0' && i < 1024) {
+        compstr += c;
+        i++;
+        c = EEPROM.read(EEPROM_NUMBER_ADDR + i);
+    }
+
+    //Serial1.println("set number "+num);
+    if (compstr == num)return;
+    //Serial1.println("Update EEPROM with new number");
+    for (int i = 0; i < num.length(); i++) {
+        EEPROM.write(EEPROM_NUMBER_ADDR + i, num[i]);
+    }
+    EEPROM.write(EEPROM_NUMBER_ADDR + num.length(), '\0');
+
+}
+
+void M590::setSIMPin(String pin) {
+SIMPIN = pin;
+
+    String compstr = "";
+    char c = EEPROM.read(EEPROM_SIMPIN_ADDR);
+    int i = 0;
+    while (c != '\0' && i < 1024) {
+        compstr += c;
+        i++;
+        c = EEPROM.read(EEPROM_SIMPIN_ADDR + i);
+    }
+    if (compstr == pin)return;
+    for (int i = 0; i < pin.length(); i++) {
+        EEPROM.write(EEPROM_SIMPIN_ADDR + i, pin[i]);
+    }
+    EEPROM.write(EEPROM_SIMPIN_ADDR + pin.length(), '\0');
 }

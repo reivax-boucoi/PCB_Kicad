@@ -26,8 +26,8 @@ void Ration::INT1_isr() {
 }
 
 // **Constructor - Load ration quantity from EEPROM**
-Ration::Ration(uint8_t motorPin1, uint8_t motorPin2) 
-    : motorPin1(motorPin1), motorPin2(motorPin2), ration_qty(0), 
+Ration::Ration(uint8_t motorPin1, uint8_t motorPin2)
+    : motorPin1(motorPin1), motorPin2(motorPin2), ration_qty(0),
       countM1(0), countM2(0), startTime(0), status(ONGOING) {
 
     pinMode(motorPin1, OUTPUT);
@@ -35,8 +35,8 @@ Ration::Ration(uint8_t motorPin1, uint8_t motorPin2)
     digitalWrite(motorPin1, LOW); // Ensure motors are off initially
     digitalWrite(motorPin2, LOW);
     instance = this; // Assign instance pointer for ISR access
-    pinMode(10,INPUT_PULLUP);
-    pinMode(11,INPUT_PULLUP);
+    pinMode(10, INPUT_PULLUP);
+    pinMode(11, INPUT_PULLUP);
     attachInterrupt(digitalPinToInterrupt(10), INT0_isr, FALLING); // Enable INT0 (PD2) for Motor1
     attachInterrupt(digitalPinToInterrupt(11), INT1_isr, FALLING); // Enable INT1 (PD3) for Motor2
     loadRationFromEEPROM(); // Load saved ration quantity from EEPROM
@@ -58,6 +58,7 @@ void Ration::loadRationFromEEPROM() {
     if (stored_ration > 0 && stored_ration < 255) { // Basic validation
         ration_qty = stored_ration;
     }
+    ration_gain = EEPROM.read(EEPROM_RATIONGain_ADDR);
 }
 
 // **Save ration quantity to EEPROM (only if changed)**
@@ -66,21 +67,25 @@ void Ration::saveRationToEEPROM() {
         EEPROM.write(EEPROM_RATION_ADDR, ration_qty);
     }
 }
+void Ration::saveGainToEEPROM() {
+    if (EEPROM.read(EEPROM_RATIONGain_ADDR) != ration_gain) { // Avoid unnecessary writes
+        EEPROM.write(EEPROM_RATIONGain_ADDR, ration_gain);
+    }
+}
 
+void Ration::setGain(uint8_t g) {
+    ration_gain = g;
+    saveGainToEEPROM();
+}
 // **Set ration quantity using a float**
-void Ration::setRation(float qty) {
-    uint8_t new_ration_qty = static_cast<uint8_t>(qty * RATION_SCALE);
+void Ration::setRation(uint8_t qty) {
+    uint8_t new_ration_qty = qty;
     if (new_ration_qty != ration_qty) { // Only update if changed
         ration_qty = new_ration_qty;
         saveRationToEEPROM(); // Save to EEPROM
         Serial1.print("Updated ration to ");
         Serial1.println(ration_qty);
     }
-}
-
-// **Get ration quantity as a float (inverse calculation)**
-float Ration::getRation() const {
-    return static_cast<float>(ration_qty) / RATION_SCALE;
 }
 
 // **Start ration distribution (Non-blocking)**
@@ -105,7 +110,8 @@ RationStatus Ration::update() {
     // Check for timeout
     if ((millis() - startTime) > TIMEOUT_MS) {
         if (countM1 < ration_qty) {
-            status = TIMED_OUT_M1;
+            if (countM2 < ration_qty) status = TIMED_OUT_M12;
+            else status = TIMED_OUT_M1;
         } else if (countM2 < ration_qty) {
             status = TIMED_OUT_M2;
         }

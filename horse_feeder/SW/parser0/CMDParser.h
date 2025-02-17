@@ -2,31 +2,16 @@
 #define PARSER_H
 
 #include <Arduino.h>
-#include "Ration.h"
-#include "Horaires.h"
-#include "M590.h"
-
-#define SMS_TEXT_BUF 255
-
 
 class Parser {
     public:
-        Parser(M590 *gsm, Horaires *rtc, Ration *feeder);
+        Parser();/*M590 *gsm, Horaires *rtc,Ration *feeder*/
         void update();
         void parse(String msg);
-
-
-        uint8_t text_length = 0;
-        char text_content[SMS_TEXT_BUF];
-
-        void sendRationStatus(uint8_t alarmIdx); //used when a ration completes
-        void sendLowBattery(uint16_t batt);//batt=tension en mV *64
-        void sendSystemRestarted();
-
     private:
-        M590 *_gsm;
-        Horaires *_rtc;
-        Ration *_feeder;
+        /*  M590 *_gsm;
+            Horaires *_rtc;
+            Ration *_feeder;*/
         void dateQuery();
         void dateSet(String date, String time);
         void rationQuery();

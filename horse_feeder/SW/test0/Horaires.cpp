@@ -67,7 +67,7 @@ void Horaires::printDate(){
 // **Set an alarm time and enable it automatically**
 void Horaires::setAlarm(uint8_t alarmNumber, uint8_t hours, uint8_t minutes) {
     if (alarmNumber >= MAX_ALARMS) return; // Ensure valid alarm number
-
+    if(alarmNumber==lastAlarmRung)lastAlarmRung=-1;
     alarms[alarmNumber] = { hours, minutes, true, false }; // Automatically enable
     saveAlarmToEEPROM(alarmNumber);
 }
@@ -101,6 +101,20 @@ void Horaires::disableAlarm(uint8_t alarmNumber) {
     if (alarmNumber >= MAX_ALARMS) return;
     alarms[alarmNumber].enabled = false;
     saveAlarmToEEPROM(alarmNumber);
+}
+
+// **Enable an alarm**
+void Horaires::enableAlarm(uint8_t alarmNumber) {
+    if (alarmNumber >= MAX_ALARMS) return;
+    alarms[alarmNumber].enabled = true;
+    saveAlarmToEEPROM(alarmNumber);
+}
+
+// Enable all alarms
+    void Horaires::enableAllAlarms(){
+    for (uint8_t i = 0; i < MAX_ALARMS; i++) {
+        enableAlarm(i);
+    }
 }
 
 // **Disable all alarms**
@@ -142,6 +156,7 @@ void Horaires::update() {
         // Check if alarm should ring (current time is within ALARM_WINDOW minutes after alarm time)
         if (!alarms[i].ringing && (currentTimeMinutes >= alarmTimeMinutes) && (currentTimeMinutes < alarmTimeMinutes + ALARM_WINDOW) && (currentTimeMinutes >= lastClearedTime[i] + ALARM_BLANKING_WINDOW)) {
                 alarms[i].ringing = true;
+                lastAlarmRung=i;
         }
     }
 }

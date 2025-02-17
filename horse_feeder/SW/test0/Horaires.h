@@ -39,11 +39,14 @@ public:
     Alarm getAlarmTime(uint8_t alarmNumber); // Retrieve alarm time
     void printAlarm(uint8_t alarmNumber);
     void printAlarms();
+    void enableAlarm(uint8_t alarmNumber); // Enable an alarm
+    void enableAllAlarms(); // Enable all alarms
     void disableAlarm(uint8_t alarmNumber); // Disable an alarm
     void disableAllAlarms();                // Disable all alarms
     void clearAlarm(uint8_t alarmNumber);   // Stop ringing alarm
     int checkAlarms();                      // Return ringing alarm number or -1
     void update();                           // Regularly called in loop to check alarms
+    int8_t lastAlarmRung=-1;
 
 private:
     Alarm alarms[MAX_ALARMS];  // Store alarms in RAM (not in EEPROM)
