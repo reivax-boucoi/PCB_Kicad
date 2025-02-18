@@ -2,6 +2,7 @@
 #include "Horaires.h"
 #include "M590.h"
 #include "CMDParser.h"
+#include "StatusM.h"
 
 #define BATT_MON PIN_PA0
 #define MOT1_I PIN_PA1
@@ -46,8 +47,7 @@ void setup() {
 
 void loop() {
     gsm.loop();
-    rtc.update();
-    rtc.getAlarmTime(0);
+    DateTime now=rtc.update();
     int ringingAlarm = rtc.checkAlarms();
     if (ringingAlarm != -1) {
         Serial1.print(F("Declenchement distribution "));

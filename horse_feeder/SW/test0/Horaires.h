@@ -45,7 +45,7 @@ public:
     void disableAllAlarms();                // Disable all alarms
     void clearAlarm(uint8_t alarmNumber);   // Stop ringing alarm
     int checkAlarms();                      // Return ringing alarm number or -1
-    void update();                           // Regularly called in loop to check alarms
+    DateTime update();                      // Regularly called in loop to check alarms
     int8_t lastAlarmRung=-1;
 
 private:

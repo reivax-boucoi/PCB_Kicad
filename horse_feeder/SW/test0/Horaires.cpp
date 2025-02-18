@@ -144,7 +144,7 @@ int Horaires::checkAlarms() {
 }
 
 // **Regularly called to check and update alarm status**
-void Horaires::update() {
+DateTime Horaires::update() {
     DateTime now = getDate();
     unsigned long currentTimeMinutes = now.hours * 60 + now.minutes;
 
@@ -159,6 +159,7 @@ void Horaires::update() {
                 lastAlarmRung=i;
         }
     }
+	return now;
 }
 
 // **Load all alarms from EEPROM once at startup**
