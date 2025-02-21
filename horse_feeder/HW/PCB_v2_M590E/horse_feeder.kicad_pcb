@@ -19266,7 +19266,7 @@
 		(sheetname "Root")
 		(sheetfile "horse_feeder.kicad_sch")
 		(zone_connect 1)
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.7 -1)
 			(end 0.7 -1)
@@ -21029,7 +21029,7 @@
 		(sheetname "Root")
 		(sheetfile "horse_feeder.kicad_sch")
 		(zone_connect 1)
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start 1.4 -0.3)
 			(end 1.4 0.3)

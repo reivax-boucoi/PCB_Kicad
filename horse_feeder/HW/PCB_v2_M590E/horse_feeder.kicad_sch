@@ -9504,6 +9504,7 @@
 	)
 	(label "Mot1_Ip"
 		(at 157.48 76.2 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9514,6 +9515,7 @@
 	)
 	(label "MOSI"
 		(at 241.3 144.78 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9524,6 +9526,7 @@
 	)
 	(label "Mot2_I"
 		(at 251.46 40.64 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9534,6 +9537,7 @@
 	)
 	(label "SIM_RXl"
 		(at 236.22 107.95 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9544,6 +9548,7 @@
 	)
 	(label "SIM_RX"
 		(at 149.86 142.24 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9554,6 +9559,7 @@
 	)
 	(label "Proxi2"
 		(at 41.91 116.84 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9564,6 +9570,7 @@
 	)
 	(label "Mot2_G"
 		(at 243.84 35.56 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9574,6 +9581,7 @@
 	)
 	(label "Btn_USR2"
 		(at 39.37 179.07 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9584,6 +9592,7 @@
 	)
 	(label "RTC_SDA"
 		(at 149.86 119.38 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9594,6 +9603,7 @@
 	)
 	(label "Mot2_I"
 		(at 167.64 73.66 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9604,6 +9614,7 @@
 	)
 	(label "Proxi_PWR"
 		(at 149.86 127 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9614,6 +9625,7 @@
 	)
 	(label "SIM_TX"
 		(at 204.47 105.41 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9624,6 +9636,7 @@
 	)
 	(label "LED_Y_fp"
 		(at 25.4 149.86 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9634,6 +9647,7 @@
 	)
 	(label "LED_R"
 		(at 149.86 81.28 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9644,6 +9658,7 @@
 	)
 	(label "Vin"
 		(at 36.83 24.13 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9654,6 +9669,7 @@
 	)
 	(label "Mot2_PWM"
 		(at 198.12 77.47 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9664,6 +9680,7 @@
 	)
 	(label "XTAL2"
 		(at 102.87 81.28 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9674,6 +9691,7 @@
 	)
 	(label "MISO"
 		(at 149.86 109.22 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9684,6 +9702,7 @@
 	)
 	(label "Mot1_G"
 		(at 243.84 72.39 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9694,6 +9713,7 @@
 	)
 	(label "LED_B"
 		(at 140.97 170.18 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9704,6 +9724,7 @@
 	)
 	(label "LED_B_fp"
 		(at 140.97 180.34 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9714,6 +9735,7 @@
 	)
 	(label "LED_R_fp"
 		(at 106.68 180.34 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9724,6 +9746,7 @@
 	)
 	(label "Btn_USR1"
 		(at 40.64 142.24 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9734,6 +9757,7 @@
 	)
 	(label "LED_Y"
 		(at 118.11 170.18 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9744,6 +9768,7 @@
 	)
 	(label "SIM_BOOT"
 		(at 149.86 154.94 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9754,6 +9779,7 @@
 	)
 	(label "RST"
 		(at 241.3 149.86 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9764,6 +9790,7 @@
 	)
 	(label "LED_G_fp"
 		(at 129.54 180.34 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9774,6 +9801,7 @@
 	)
 	(label "RTC_SCL"
 		(at 204.47 148.59 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9784,6 +9812,7 @@
 	)
 	(label "LED_Y_fp"
 		(at 118.11 180.34 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9794,6 +9823,7 @@
 	)
 	(label "Mot1_PWM"
 		(at 149.86 152.4 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9804,6 +9834,7 @@
 	)
 	(label "SIM_BOOT"
 		(at 236.22 115.57 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9814,6 +9845,7 @@
 	)
 	(label "Mot2_D"
 		(at 265.43 25.4 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9824,6 +9856,7 @@
 	)
 	(label "Proxi2"
 		(at 149.86 144.78 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9834,6 +9867,7 @@
 	)
 	(label "LED_Y"
 		(at 149.86 86.36 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9844,6 +9878,7 @@
 	)
 	(label "Mot2_Ip"
 		(at 157.48 73.66 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9854,6 +9889,7 @@
 	)
 	(label "Mot2_PWM"
 		(at 149.86 149.86 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9864,6 +9900,7 @@
 	)
 	(label "Btn_USR2"
 		(at 149.86 124.46 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9874,6 +9911,7 @@
 	)
 	(label "Proxi1"
 		(at 149.86 147.32 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9884,6 +9922,7 @@
 	)
 	(label "MISO"
 		(at 241.3 142.24 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9894,6 +9933,7 @@
 	)
 	(label "Btn_USR1"
 		(at 149.86 121.92 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9904,6 +9944,7 @@
 	)
 	(label "Mot1_D"
 		(at 265.43 62.23 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9914,6 +9955,7 @@
 	)
 	(label "Mot2_PWM"
 		(at 163.83 170.18 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9924,6 +9966,7 @@
 	)
 	(label "5V_fb"
 		(at 187.96 21.59 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9934,6 +9977,7 @@
 	)
 	(label "Batt_mon"
 		(at 147.32 71.12 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9944,6 +9988,7 @@
 	)
 	(label "RTC_SDA"
 		(at 204.47 146.05 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9954,6 +9999,7 @@
 	)
 	(label "Mot1_PWM"
 		(at 152.4 170.18 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9964,6 +10010,7 @@
 	)
 	(label "Proxi_PWR"
 		(at 87.63 154.94 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9974,6 +10021,7 @@
 	)
 	(label "XTAL1"
 		(at 102.87 76.2 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9984,6 +10032,7 @@
 	)
 	(label "SIM_RX"
 		(at 180.34 101.6 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9994,6 +10043,7 @@
 	)
 	(label "SIM_TXl"
 		(at 236.22 105.41 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10004,6 +10054,7 @@
 	)
 	(label "RTC_SDA"
 		(at 180.34 119.38 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10014,6 +10065,7 @@
 	)
 	(label "Mot1_I"
 		(at 251.46 77.47 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10024,6 +10076,7 @@
 	)
 	(label "LED_G"
 		(at 129.54 170.18 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10034,6 +10087,7 @@
 	)
 	(label "Mot1_PWM"
 		(at 198.12 72.39 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10044,6 +10098,7 @@
 	)
 	(label "LED_R_fp"
 		(at 59.69 187.96 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10054,6 +10109,7 @@
 	)
 	(label "Proxi1"
 		(at 39.37 90.17 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10064,6 +10120,7 @@
 	)
 	(label "SIM_TX"
 		(at 180.34 104.14 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10074,6 +10131,7 @@
 	)
 	(label "RTC_SCL"
 		(at 180.34 116.84 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10084,6 +10142,7 @@
 	)
 	(label "Mot1_I"
 		(at 167.64 76.2 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10094,6 +10153,7 @@
 	)
 	(label "5V_sw"
 		(at 170.18 29.21 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10104,6 +10164,7 @@
 	)
 	(label "LED_G"
 		(at 149.86 83.82 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10114,6 +10175,7 @@
 	)
 	(label "RTC_SCL"
 		(at 149.86 116.84 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10124,6 +10186,7 @@
 	)
 	(label "Batt_mon"
 		(at 132.08 31.75 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10134,6 +10197,7 @@
 	)
 	(label "LED_B"
 		(at 149.86 78.74 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10144,6 +10208,7 @@
 	)
 	(label "SCK"
 		(at 241.3 147.32 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10154,6 +10219,7 @@
 	)
 	(label "SCK"
 		(at 149.86 111.76 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10164,6 +10230,7 @@
 	)
 	(label "MOSI"
 		(at 149.86 106.68 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10174,6 +10241,7 @@
 	)
 	(label "LED_G_fp"
 		(at 24.13 186.69 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10184,6 +10252,7 @@
 	)
 	(label "SIM_TX"
 		(at 149.86 139.7 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10194,6 +10263,7 @@
 	)
 	(label "RST"
 		(at 67.31 180.34 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10204,6 +10274,7 @@
 	)
 	(label "LED_R"
 		(at 106.68 170.18 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10214,6 +10285,7 @@
 	)
 	(label "RST"
 		(at 102.87 71.12 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10224,6 +10296,7 @@
 	)
 	(label "SIM_RX"
 		(at 204.47 107.95 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11393,7 +11466,7 @@
 		(at 78.74 127 0)
 		(unit 1)
 		(exclude_from_sim yes)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -22628,7 +22701,7 @@
 		(at 60.96 49.53 0)
 		(unit 1)
 		(exclude_from_sim yes)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
