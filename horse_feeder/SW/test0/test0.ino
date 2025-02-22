@@ -2,31 +2,19 @@
 #include "Horaires.h"
 #include "M590.h"
 #include "CMDParser.h"
-#include "StatusM.h"
 
-#define BATT_MON PIN_PA0
 #define MOT1_I PIN_PA1
 #define MOT2_I PIN_PA2
-#define LED_B PIN_PA3
-#define LED_G PIN_PA4
-#define LED_Y PIN_PA5
-#define LED_R PIN_PA6
 #define RTC_SQW PIN_PB2
-#define BTN_USR1 PIN_PC2
-#define BTN_USR2 PIN_PC3
-#define PROXI_PWR PIN_PC4
 #define SIM_PWR PIN_PC5
-#define MOT1_PWM PIN_PD4
-#define MOT2_PWM PIN_PD5
 #define SIM_RST PIN_PD6
 
-Ration feeder(MOT1_PWM, MOT2_PWM);
+Ration feeder;
 Horaires rtc;
 
 
 M590 gsm(NULL);
-
-Parser SMShandler(&gsm, &rtc,&feeder);
+Parser SMShandler(&gsm, &rtc, &feeder,rtc.getDate());
 String input = "";
 
 void setup() {
@@ -47,7 +35,8 @@ void setup() {
 
 void loop() {
     gsm.loop();
-    DateTime now=rtc.update();
+    DateTime now = rtc.update();
+    SMShandler.update(now);
     int ringingAlarm = rtc.checkAlarms();
     if (ringingAlarm != -1) {
         Serial1.print(F("Declenchement distribution "));
@@ -55,9 +44,11 @@ void loop() {
         Serial1.print(" ");
         rtc.clearAlarm(ringingAlarm);
         feeder.startDistribution();
+        SMShandler.status.setLED(1, LED_ON);
         while (feeder.update() == ONGOING) {
             delay(50);
         }
+        
         SMShandler.sendRationStatus(ringingAlarm);
     }
     delay(500); // Wait before starting again

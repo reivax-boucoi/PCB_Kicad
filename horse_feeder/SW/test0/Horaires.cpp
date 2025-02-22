@@ -4,10 +4,12 @@
 Horaires::Horaires() {
     Wire.begin();  // Initialize I2C
     loadAlarmsFromEEPROM(); // Load saved alarms into RAM
-
+    distriMode=0;
     for (uint8_t i = 0; i < MAX_ALARMS; i++) {
         lastClearedTime[i] = 0; // Initialize last cleared times
+        if(alarms[i].enabled)distriMode++;//count enabled alarms
     }
+    if(distriMode>1)distriMode=2;//0:manuel, 1:semaine, 2:vacances
 }
 
 // **Set full date and time on DS3231 RTC**

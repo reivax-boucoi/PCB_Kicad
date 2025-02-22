@@ -3,20 +3,59 @@
 
 
 
-Parser::Parser(M590 *gsm, Horaires *rtc, Ration *feeder) {
+Parser::Parser(M590 *gsm, Horaires *rtc, Ration *feeder, DateTime now): status(now) {
     _gsm = gsm;
     _rtc = rtc;
     _feeder = feeder;
     _gsm->_text_ptr = text_content;
 }
-void Parser::update() {
+void Parser::update(DateTime now) {
+    uint8_t buttons = status.handleButtons();
+    switch (buttons) { //0: no buttons, 1: green pressed, 2: green depressed, 3: yellow pressed
+        case 1:
+            if (_rtc->distriMode == 3) { // Bourrage ON
+                Serial1.println(F("Bourrage ON"));
+                _feeder->startMotors();
+            } else {
+                Serial1.println(F("Bouton vert -> distri man"));
+                manualDistribute();
+            }
+            break;
+        case 2:
+            if (_rtc->distriMode == 3) { // Bourrage OFF
+                Serial1.println(F("Bourrage OFF"));
+                _feeder->stopMotors();
+            }
+            break;
+        case 3:
+            if (_rtc->distriMode == 0) {
+                Serial1.println(F("Bouton jaune -> semaine"));
+                modeSemaineSet();
+            } else if (_rtc->distriMode == 1) {
+                Serial1.println(F("Bouton jaune -> vacances"));
+                modeVacancesSet();
+            } else if (_rtc->distriMode == 2) {
+                Serial1.println(F("Bouton jaune -> bourrage"));
+                _feeder->modeBourrage(true);
+                _rtc->distriMode = 3;
+            } else if (_rtc->distriMode == 3) {
+                Serial1.println(F("Bouton jaune -> manuel"));
+                _feeder->modeBourrage(false);
+                modeManuelSet();
+            }
+            break;
+    }
+    status.update(now);
+    status.animateLEDs();
+
+
     uint8_t nbMsg = _gsm->newSMSAvailable();
     while (nbMsg-- > 0) {
         parse(_gsm->getSMS());
     }
 }
 
-void Parser::parse(String msg) {
+bool Parser::parse(String msg) {
     msg = collapseSpaces(msg);// Remove leading, trailing and duplicate whitespace
     msg.toLowerCase();  //uniform case
     int8_t spaceIndex1 = msg.indexOf(' ');
@@ -40,6 +79,7 @@ void Parser::parse(String msg) {
                 advancedStatusQuery();
             } else {
                 parseFailed("Unknown keyword for query with no arguments: \"" + msg + "\"");
+                return false;
             }
         } else {
             //Serial1.println("Getter with space detected");
@@ -48,10 +88,15 @@ void Parser::parse(String msg) {
             if (keyword == "horaire") {
                 int alarmNB = restOfString[0] - 'a';
                 uint8_t MAXALARMS = 3; //TODO
-                if (alarmNB >= 0 && alarmNB < MAXALARMS)horaireQuery(alarmNB);
-                else parseFailed("Numero d'horaire invalide: [A : " + String((char)('A' + MAXALARMS - 1)) + "]");
+                if (alarmNB >= 0 && alarmNB < MAXALARMS) {
+                    horaireQuery(alarmNB);
+                } else {
+                    parseFailed("Numero d'horaire invalide: [A : " + String((char)('A' + MAXALARMS - 1)) + "]");
+                    return false;
+                }
             } else {
                 parseFailed("Unknown keyword for query with 1 argument \"" + keyword + "\"");
+                return false;
             }
         }
     } else if (spaceIndex1 == -1) {// Case: No space, just "Keyword"
@@ -68,6 +113,7 @@ void Parser::parse(String msg) {
             manualDistribute();
         } else {
             parseFailed("Unknwon keyword for single word setter \"" + msg + "\"");
+            return false;
         }
     } else {
         String keyword = msg.substring(0, spaceIndex1);
@@ -83,13 +129,22 @@ void Parser::parse(String msg) {
             } else if (keyword == "gain") {
                 gainSet(restOfString.toInt());
             } else if (keyword == "numero") {
-                if (restOfString.length() == 12 || restOfString.length() == 10)setNumber(restOfString);
-                else parseFailed("New number must be either 10 or 12 digits, not " + String(restOfString.length()));
+                if (restOfString.length() == 12 || restOfString.length() == 10) {
+                    setNumber(restOfString);
+                } else {
+                    parseFailed("New number must be either 10 or 12 digits, not " + String(restOfString.length()));
+                    return false;
+                }
             }  else if (keyword == "pin") {
-                if (restOfString.length() > 3)_gsm->setSIMPin(restOfString);
-                else parseFailed("New PIN must at least be 4 digits long");
+                if (restOfString.length() > 3) {
+                    _gsm->setSIMPin(restOfString);
+                } else {
+                    parseFailed("New PIN must at least be 4 digits long");
+                    return false;
+                }
             } else {
                 parseFailed("Unknown keyword for setter with 1 argument \"" + keyword + "\"");
+                return false;
             }
         } else {
             //Serial1.println("Setter with 2 arguments detected");
@@ -102,7 +157,7 @@ void Parser::parse(String msg) {
                 uint8_t MAXALARMS = 3; //TODO
                 if (alarmNB < 0 && alarmNB > MAXALARMS) {
                     parseFailed("Numero d'horaire invalide: [A : " + String((char)('A' + MAXALARMS - 1)) + "]");
-                    return;
+                    return false;;
                 }
                 spaceIndex1 = arg2.indexOf(' ');
                 String time = "";
@@ -129,9 +184,13 @@ void Parser::parse(String msg) {
                 }
             } else {
                 parseFailed("Unknown keyword for setter with 1 argument \"" + keyword + "\"");
+                return false;
             }
         }
     }
+
+    status.setLED(3, LED_OFF);
+    return true;
 }
 
 
@@ -203,8 +262,8 @@ void Parser::statusQuery() {
         }
     }
     if (minNextTime == 24 * 60) text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Pas de prochaine distribution prévue."));
-    else text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Prochaine distribution dans %uh%02u."), minNextTime / 60,minNextTime % 60);
-    
+    else text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Prochaine distribution dans %uh%02u."), minNextTime / 60, minNextTime % 60);
+
     int rssi = -40;//TODO getRSSI();
     uint16_t batt = 12345;//TODO getBatt();
     uint16_t LOW_BATT_TH = 12200; //TODO #define
@@ -215,10 +274,13 @@ void Parser::statusQuery() {
 
 void Parser::advancedStatusQuery() {
     Serial1.println("Advanced status query called");
+    status.getReport(text_content);
+    _gsm->queueSMS();
 }
 
 void Parser::statusReset() {
-    Serial1.println("Status reset called");
+    status.resetStats();
+    advancedStatusQuery();
 }
 
 void Parser::horaireQuery(uint8_t alarmNb) {
@@ -254,7 +316,9 @@ void Parser::horaireSet(uint8_t alarmNb, bool state, String time) {
 
 void Parser::modeVacancesSet() {
     text_length = 0;
+    _rtc->distriMode = 2;
     _rtc->enableAllAlarms();
+    status.setLED(2, LED_FASTBLINK);
     text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Mode auto actif: distributions à "));
 
     for (uint8_t i = 0; i < MAX_ALARMS - 1; i++) {
@@ -269,6 +333,8 @@ void Parser::modeVacancesSet() {
 void Parser::modeSemaineSet() {
     _rtc->disableAllAlarms();
     _rtc->enableAlarm(1);
+    _rtc->distriMode = 1;
+    status.setLED(2, LED_SLOWBLINK);
     Alarm a = _rtc->getAlarmTime(1);
     sprintf_P(text_content, PSTR(" Mode semaine actif: distribution à %uh%02u."), a.hours, a.minutes);
     _gsm->queueSMS();
@@ -276,12 +342,15 @@ void Parser::modeSemaineSet() {
 
 void Parser::modeManuelSet() {
     _rtc->disableAllAlarms();
+    _rtc->distriMode = 0;
+    status.setLED(2, LED_OFF);
     sprintf_P(text_content, PSTR("Mode auto inactif: toutes les distributions automatiques sont désactivées."));
     _gsm->queueSMS();
 }
 
 void Parser::manualDistribute() {
     _feeder->startDistribution();
+    status.setLED(1, LED_ON);
     while (_feeder->update() == ONGOING) {
         delay(50);
     }
@@ -290,17 +359,21 @@ void Parser::manualDistribute() {
     text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Distribution manuelle "));
     if (s == COMPLETED) {
         text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("réalisée avec succès."));
+        status.setLED(1, LED_OFF);
     } else {
         uint8_t moteur = 0;
         switch (s) {
             case TIMED_OUT_M1:
                 moteur = 1;
+                status.setLED(1, LED_FASTBLINK);
                 break;
             case TIMED_OUT_M2:
                 moteur = 2;
+                status.setLED(1, LED_SLOWBLINK);
                 break;
             case TIMED_OUT_M12:
                 moteur = 12;
+                status.setLED(1, LED_FASTBLINK);
                 break;
             default:
                 moteur = 4;
@@ -334,6 +407,7 @@ void Parser::setNumber(String nb) {
 void Parser::parseFailed(String errorMsg) {
     Serial1.print(F("Parsing failed: "));
     Serial1.println(errorMsg);
+    status.setLED(3, LED_FASTBLINK);
 }
 
 String Parser::collapseSpaces(String input) {
@@ -361,18 +435,22 @@ void Parser::sendRationStatus(uint8_t alarmIdx) {
     RationStatus s = _feeder->update();
     text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Distribution de %dh%02d "), _rtc->getAlarmTime(alarmIdx).hours, _rtc->getAlarmTime(alarmIdx).minutes);
     if (s == COMPLETED) {
+        status.setLED(1, LED_OFF);
         text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("distribuée avec succès."));
     } else {
         uint8_t moteur = 0;
         switch (s) {
             case TIMED_OUT_M1:
                 moteur = 1;
+                status.setLED(1, LED_FASTBLINK);
                 break;
             case TIMED_OUT_M2:
                 moteur = 2;
+                status.setLED(1, LED_SLOWBLINK);
                 break;
             case TIMED_OUT_M12:
                 moteur = 12;
+                status.setLED(1, LED_FASTBLINK);
                 break;
             default:
                 moteur = 4;

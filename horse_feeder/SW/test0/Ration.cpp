@@ -6,10 +6,11 @@ Ration* Ration::instance = nullptr;
 // **Interrupt Service Routine (ISR) for INT0 (Motor1)**
 void Ration::INT0_isr() {
     if (instance) {
+        if (instance->modeBourrageActive)return;
         instance->countM1++;
         // Stop Motor1 if it has distributed the required amount
         if (instance->countM1 >= instance->ration_qty) {
-            digitalWrite(instance->motorPin1, LOW); // Stop Motor1
+            digitalWrite(MOT1_PWM, LOW); // Stop Motor1
         }
     }
 }
@@ -17,39 +18,41 @@ void Ration::INT0_isr() {
 // **Interrupt Service Routine (ISR) for INT1 (Motor2)**
 void Ration::INT1_isr() {
     if (instance) {
+        if (instance->modeBourrageActive)return;
         instance->countM2++;
         // Stop Motor2 if it has distributed the required amount
         if (instance->countM2 >= instance->ration_qty) {
-            digitalWrite(instance->motorPin2, LOW); // Stop Motor2
+            digitalWrite(MOT2_PWM, LOW); // Stop Motor2
         }
     }
 }
 
 // **Constructor - Load ration quantity from EEPROM**
-Ration::Ration(uint8_t motorPin1, uint8_t motorPin2)
-    : motorPin1(motorPin1), motorPin2(motorPin2), ration_qty(0),
-      countM1(0), countM2(0), startTime(0), status(ONGOING) {
+Ration::Ration() {
+    ration_qty = 0;
+    countM1 = 0;
+    countM2 = 0;
+    startTime = 0;
+    status = COMPLETED;
 
-    pinMode(motorPin1, OUTPUT);
-    pinMode(motorPin2, OUTPUT);
-    digitalWrite(motorPin1, LOW); // Ensure motors are off initially
-    digitalWrite(motorPin2, LOW);
+    pinMode(MOT1_PWM, OUTPUT);
+    pinMode(MOT2_PWM, OUTPUT);
+    stopMotors();
     instance = this; // Assign instance pointer for ISR access
-    pinMode(10, INPUT_PULLUP);
-    pinMode(11, INPUT_PULLUP);
-    attachInterrupt(digitalPinToInterrupt(10), INT0_isr, FALLING); // Enable INT0 (PD2) for Motor1
-    attachInterrupt(digitalPinToInterrupt(11), INT1_isr, FALLING); // Enable INT1 (PD3) for Motor2
+    pinMode(MOT1_PROXI, INPUT_PULLUP);
+    pinMode(MOT2_PROXI, INPUT_PULLUP);
+    attachInterrupt(digitalPinToInterrupt(MOT1_PROXI), INT0_isr, FALLING); // Enable INT0 (PD2) for Motor1
+    attachInterrupt(digitalPinToInterrupt(MOT2_PROXI), INT1_isr, FALLING); // Enable INT1 (PD3) for Motor2
     loadRationFromEEPROM(); // Load saved ration quantity from EEPROM
-    Serial1.print("Initialized ration with ");
+    Serial1.print(F("Initialized ration with "));
     Serial1.println(ration_qty);
 }
 
 // **Destructor**
 Ration::~Ration() {
-    detachInterrupt(digitalPinToInterrupt(2)); // Disable INT0
-    detachInterrupt(digitalPinToInterrupt(3)); // Disable INT1
-    digitalWrite(motorPin1, LOW); // Ensure motors are off
-    digitalWrite(motorPin2, LOW);
+    detachInterrupt(digitalPinToInterrupt(MOT1_PROXI)); // Disable INT0
+    detachInterrupt(digitalPinToInterrupt(MOT2_PROXI)); // Disable INT1
+    stopMotors();
 }
 
 // **Load ration quantity from EEPROM**
@@ -83,7 +86,7 @@ void Ration::setRation(uint8_t qty) {
     if (new_ration_qty != ration_qty) { // Only update if changed
         ration_qty = new_ration_qty;
         saveRationToEEPROM(); // Save to EEPROM
-        Serial1.print("Updated ration to ");
+        Serial1.print(F("Updated ration to "));
         Serial1.println(ration_qty);
     }
 }
@@ -94,13 +97,20 @@ void Ration::startDistribution() {
 
     countM1 = 0; // Reset Motor1 pulse count
     countM2 = 0; // Reset Motor2 pulse count
-    digitalWrite(motorPin1, HIGH); // Turn on Motor1
-    digitalWrite(motorPin2, HIGH); // Turn on Motor2
+    startMotors();
     startTime = millis(); // Start timeout counter
     status = ONGOING; // Set status to ongoing
     //Serial.print("Started ration");
 }
 
+void Ration::startMotors() {
+    digitalWrite(MOT1_PWM, HIGH); // Turn on Motor1
+    digitalWrite(MOT2_PWM, HIGH); // Turn on Motor2
+}
+void Ration::stopMotors() {
+    digitalWrite(MOT1_PWM, LOW);
+    digitalWrite(MOT2_PWM, LOW);
+}
 // **Update function to check for ration completion (Non-blocking)**
 RationStatus Ration::update() {
     if (status == COMPLETED || status == TIMED_OUT_M1 || status == TIMED_OUT_M2) {
@@ -115,8 +125,7 @@ RationStatus Ration::update() {
         } else if (countM2 < ration_qty) {
             status = TIMED_OUT_M2;
         }
-        digitalWrite(motorPin1, LOW);
-        digitalWrite(motorPin2, LOW);
+        stopMotors();
     }
 
     // Check if both motors have completed their ration
@@ -125,4 +134,15 @@ RationStatus Ration::update() {
     }
 
     return status;
+}
+
+
+void Ration::modeBourrage(bool active) {
+    modeBourrageActive = active;
+    if (!active) {
+        stopMotors();
+        status = COMPLETED;
+        countM1 = 0; // Reset Motor1 pulse count
+        countM2 = 0; // Reset Motor2 pulse count
+    }
 }

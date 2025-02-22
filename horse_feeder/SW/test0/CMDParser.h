@@ -5,16 +5,17 @@
 #include "Ration.h"
 #include "Horaires.h"
 #include "M590.h"
+#include "StatusM.h"
 
 #define SMS_TEXT_BUF 255
 
 
 class Parser {
     public:
-        Parser(M590 *gsm, Horaires *rtc, Ration *feeder);
-        void update();
-        void parse(String msg);
-
+        Parser(M590 *gsm, Horaires *rtc, Ration *feeder, DateTime now);
+        StatusM status;
+        void update(DateTime now);
+        bool parse(String msg);
 
         uint8_t text_length = 0;
         char text_content[SMS_TEXT_BUF];
@@ -27,6 +28,7 @@ class Parser {
         M590 *_gsm;
         Horaires *_rtc;
         Ration *_feeder;
+
         void dateQuery();
         void dateSet(String date, String time);
         void rationQuery();
@@ -36,9 +38,9 @@ class Parser {
         void statusReset();
         void horaireQuery(uint8_t alarmNb);
         void horaireSet(uint8_t alarmNb, bool state, String time);
-        void modeVacancesSet();
-        void modeSemaineSet();
         void modeManuelSet();
+        void modeSemaineSet();
+        void modeVacancesSet();
         void manualDistribute();
         void gainQuery();
         void gainSet(uint8_t gain);

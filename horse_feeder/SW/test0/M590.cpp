@@ -94,9 +94,9 @@ M590::M590(char *text_ptr) {
     }
     targetNum = compstr;
     
-    String compstr = "";
-    char c = EEPROM.read(EEPROM_SIMPIN_ADDR);
-    int i = 0;
+    compstr = "";
+    c = EEPROM.read(EEPROM_SIMPIN_ADDR);
+    i = 0;
     while (c != '\0' && i < 1024) {
         compstr += c;
         i++;

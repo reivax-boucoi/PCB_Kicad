@@ -47,6 +47,7 @@ public:
     int checkAlarms();                      // Return ringing alarm number or -1
     DateTime update();                      // Regularly called in loop to check alarms
     int8_t lastAlarmRung=-1;
+    uint8_t distriMode=0;//0: manuel, 1:semaine, 2:vacances
 
 private:
     Alarm alarms[MAX_ALARMS];  // Store alarms in RAM (not in EEPROM)
