@@ -39,8 +39,8 @@ Ration::Ration() {
     pinMode(MOT2_PWM, OUTPUT);
     stopMotors();
     instance = this; // Assign instance pointer for ISR access
-    pinMode(MOT1_PROXI, INPUT_PULLUP);
-    pinMode(MOT2_PROXI, INPUT_PULLUP);
+    pinMode(MOT1_PROXI, INPUT);
+    pinMode(MOT2_PROXI, INPUT);
     attachInterrupt(digitalPinToInterrupt(MOT1_PROXI), INT0_isr, FALLING); // Enable INT0 (PD2) for Motor1
     attachInterrupt(digitalPinToInterrupt(MOT2_PROXI), INT1_isr, FALLING); // Enable INT1 (PD3) for Motor2
     loadRationFromEEPROM(); // Load saved ration quantity from EEPROM
@@ -57,10 +57,7 @@ Ration::~Ration() {
 
 // **Load ration quantity from EEPROM**
 void Ration::loadRationFromEEPROM() {
-    uint8_t stored_ration = EEPROM.read(EEPROM_RATION_ADDR);
-    if (stored_ration > 0 && stored_ration < 255) { // Basic validation
-        ration_qty = stored_ration;
-    }
+    ration_qty = EEPROM.read(EEPROM_RATION_ADDR);
     ration_gain = EEPROM.read(EEPROM_RATIONGain_ADDR);
 }
 
@@ -76,13 +73,13 @@ void Ration::saveGainToEEPROM() {
     }
 }
 
-void Ration::setGain(uint8_t g) {
+void Ration::setGain(uint16_t g) {
     ration_gain = g;
     saveGainToEEPROM();
 }
 // **Set ration quantity using a float**
-void Ration::setRation(uint8_t qty) {
-    uint8_t new_ration_qty = qty;
+void Ration::setRation(uint16_t qty) {
+    uint16_t new_ration_qty = qty;
     if (new_ration_qty != ration_qty) { // Only update if changed
         ration_qty = new_ration_qty;
         saveRationToEEPROM(); // Save to EEPROM

@@ -39,13 +39,13 @@ public:
     Ration(); // Constructor
     ~Ration(); // Destructor
 
-    void setRation(uint8_t qty);  // Set ration quantity
-    void setGain(uint8_t g);  // Set ration gain
+    void setRation(uint16_t qty);  // Set ration quantity
+    void setGain(uint16_t g);  // Set ration gain
     void modeBourrage(bool active);
-    uint8_t ration_qty;   // Number of INT0/INT1 interrupts before stopping
-    uint8_t ration_gain;   //volume to # of INT scaling factor, can be updated via GAIN?/Gain x
-    volatile uint8_t countM1; // Count of interrupts for Motor1 (INT0)
-    volatile uint8_t countM2; // Count of interrupts for Motor2 (INT1)
+    uint16_t ration_qty;   // Number of INT0/INT1 interrupts before stopping
+    uint16_t ration_gain;   //volume to # of INT scaling factor, can be updated via GAIN?/Gain x
+    volatile uint16_t countM1; // Count of interrupts for Motor1 (INT0)
+    volatile uint16_t countM2; // Count of interrupts for Motor2 (INT1)
     void startDistribution();   // Start ration distribution
     void startMotors();
     void stopMotors();

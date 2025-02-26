@@ -238,8 +238,7 @@ void Parser::rationQuery() {
 
 void Parser::rationSet(uint16_t qty) {
     uint16_t q = qty * _feeder->ration_gain / 100;
-    if (q > 254)_feeder->setRation(254);
-    else _feeder->setRation(q);
+    _feeder->setRation(q);
     rationQuery();
 }
 
@@ -389,9 +388,9 @@ void Parser::gainQuery() {
     _gsm->queueSMS();
 }
 
-void Parser::gainSet(uint8_t gain) {
-    uint16_t Pration = _feeder->ration_qty * 1000 / _feeder->ration_gain * gain; //attempt to conserve same target volume with gain change.
-    _feeder->ration_qty = Pration / 1000;
+void Parser::gainSet(uint16_t gain) {
+    uint16_t Pration = _feeder->ration_qty * 100 / _feeder->ration_gain * gain; //attempt to conserve same target volume with gain change.
+    _feeder->ration_qty = Pration / 100;
     _feeder->setGain(gain);
     gainQuery();
 }

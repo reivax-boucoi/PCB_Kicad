@@ -43,7 +43,7 @@ class Parser {
         void modeVacancesSet();
         void manualDistribute();
         void gainQuery();
-        void gainSet(uint8_t gain);
+        void gainSet(uint16_t gain);
         void setNumber(String nb);
         void parseFailed(String errorMsg);
         String collapseSpaces(String input);
