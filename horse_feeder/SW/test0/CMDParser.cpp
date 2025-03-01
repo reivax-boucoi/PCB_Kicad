@@ -4,13 +4,16 @@
 
 
 Parser::Parser(M590 *gsm, Horaires *rtc, Ration *feeder, DateTime now): status(now) {
+    
+    Serial1.println("status init0");
     _gsm = gsm;
     _rtc = rtc;
     _feeder = feeder;
     _gsm->_text_ptr = text_content;
+    Serial1.println("status init");
 }
 void Parser::update(DateTime now) {
-    uint8_t buttons = status.handleButtons();
+    uint8_t buttons = 0;//status.handleButtons();
     switch (buttons) { //0: no buttons, 1: green pressed, 2: green depressed, 3: yellow pressed
         case 1:
             if (_rtc->distriMode == 3) { // Bourrage ON
@@ -50,6 +53,7 @@ void Parser::update(DateTime now) {
 
 
     uint8_t nbMsg = _gsm->newSMSAvailable();
+    Serial1.println("parser update 4");
     while (nbMsg-- > 0) {
         parse(_gsm->getSMS());
     }
@@ -267,7 +271,7 @@ void Parser::statusQuery() {
     uint16_t batt = 12345;//TODO getBatt();
     uint16_t LOW_BATT_TH = 12200; //TODO #define
     uint16_t r = _feeder->ration_qty * 100 / _feeder->ration_gain;
-    text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("\r\nRation %u%02uL, RSSI %ddBm, Batterie %u.%02uV (%s)"), r / 100, r % 100, rssi, batt / 1000, (batt % 1000) / 10, batt > LOW_BATT_TH ? PSTR("OK") : PSTR("Faible"));
+    text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR(" Ration %u%02uL, RSSI %ddBm, Batterie %u.%02uV (%s)"), r / 100, r % 100, rssi, batt / 1000, (batt % 1000) / 10, batt > LOW_BATT_TH ? PSTR("OK") : PSTR("Faible"));
     _gsm->queueSMS();
 }
 

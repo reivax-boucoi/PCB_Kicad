@@ -84,7 +84,7 @@ class M590 {
         byte _asyncBytesMatched = 0;
         byte _asyncResponseLength = 0;
         const char *_asyncProgmemResponseString = NULL;
-        char _responseBuffer[16];
+        char _responseBuffer[32];
 
         uint8_t restartRetries=0;
         
@@ -95,6 +95,7 @@ class M590 {
         m590ResponseCode readForAsyncResponse(const char *progmemResponseString = NULL,const unsigned int timeout = ASYNC_TIMEOUT);
         //if given a buffer pointer, the buffer will contain the response data after the colon
         m590ResponseCode readForResponse(const char *progmemResponseString,char *buffer = NULL,const unsigned int max_bytes = 0,const unsigned int timeout = COMMAND_TIMEOUT);
+        m590ResponseCode readSMS(const char *progmemResponseString,char *buffer = NULL,const unsigned int max_bytes = 0,const unsigned int timeout = COMMAND_TIMEOUT);
         m590ResponseCode readForResponses(const char *progmemResponseString,const char *progmemFailString,const unsigned int timeout = COMMAND_TIMEOUT);
         m590ResponseCode serialToBuffer(char *buffer,const char readUntil,const unsigned int max_bytes,const unsigned int timeout = COMMAND_TIMEOUT);
         m590ResponseCode readUntil(const char readUntil,const unsigned int timeout = COMMAND_TIMEOUT);

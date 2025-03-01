@@ -41,7 +41,7 @@ class StatusM {
         StatusM(DateTime now);
         void getReport(char *text_content);
         void resetStats();
-        void update(DateTime now);
+        uint16_t update(DateTime now);
         void increaseErrorCnt(ErrorType err);
         void animateLEDs();
         void setLED(uint8_t led, LED_STATUS s);

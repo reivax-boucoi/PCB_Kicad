@@ -14,7 +14,7 @@ Horaires rtc;
 
 
 M590 gsm(NULL);
-Parser SMShandler(&gsm, &rtc, &feeder,rtc.getDate());
+Parser *SMShandler;//(&gsm, &rtc, &feeder, rtc.getDate());
 String input = "";
 
 void setup() {
@@ -25,40 +25,43 @@ void setup() {
     gsm.initialize("0000"); //enter your PIN here, leave empty for no pin
     rtc.printDate();
     rtc.printAlarms();
+    SMShandler = new Parser(&gsm, &rtc, &feeder, rtc.getDate());
     //rtc.setAlarm(0, 20, 11);
     //rtc.setAlarm(1, 20, 20);
     //rtc.setAlarm(2, 8, 55);
-    SMShandler.sendLowBattery(12435);
-    SMShandler.sendSystemRestarted();
+    SMShandler->sendLowBattery(12435);
+    SMShandler->sendSystemRestarted();
 
 }
 
 void loop() {
-    gsm.loop();
-    DateTime now = rtc.update();
-    SMShandler.update(now);
-    int ringingAlarm = rtc.checkAlarms();
-    if (ringingAlarm != -1) {
-        Serial1.print(F("Declenchement distribution "));
-        Serial1.write('A' + ringingAlarm);
-        Serial1.print(" ");
-        rtc.clearAlarm(ringingAlarm);
-        feeder.startDistribution();
-        SMShandler.status.setLED(1, LED_ON);
-        while (feeder.update() == ONGOING) {
-            delay(50);
+    
+        gsm.loop();
+        DateTime now = rtc.update();
+        SMShandler->update(now);
+        int ringingAlarm = rtc.checkAlarms();
+        if (ringingAlarm != -1) {
+            Serial1.print(F("Declenchement distribution "));
+            Serial1.write('A' + ringingAlarm);
+            Serial1.print(" ");
+            rtc.clearAlarm(ringingAlarm);
+            feeder.startDistribution();
+            SMShandler->status.setLED(1, LED_ON);
+            while (feeder.update() == ONGOING) {
+                delay(50);
+            }
+
+            SMShandler->sendRationStatus(ringingAlarm);
         }
-        
-        SMShandler.sendRationStatus(ringingAlarm);
-    }
-    delay(500); // Wait before starting again
-    while (Serial1.available() > 0) {
-        char c = Serial1.read();
-        if (c == '\r' || c == '\n') {
-            SMShandler.parse(input);
-            input = "";
-        } else {
-            input += c;
+        delay(500); // Wait before starting again
+        while (Serial1.available() > 0) {
+            char c = Serial1.read();
+            Serial1.write(c);
+            if (c == '\r' || c == '\n') {
+                SMShandler->parse(input);
+                input = "";
+            } else {
+                input += c;
+            }
         }
-    }
 }
