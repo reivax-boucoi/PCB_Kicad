@@ -19,7 +19,7 @@ String input = "";
 
 void setup() {
     Serial1.begin(115200);
-    while (!Serial1); // Wait for Serial to initialize
+    //while (!Serial1); // Wait for Serial to initialize
     gsm.begin(115200, &Serial); //connect to M590 with 9600 baud, RX pin 3, TX pin 2
     gsm.enableDebugSerial(&Serial1); //optionally output debug information on Serial
     gsm.initialize("0000"); //enter your PIN here, leave empty for no pin
