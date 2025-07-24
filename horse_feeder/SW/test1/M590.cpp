@@ -556,7 +556,7 @@ bool M590::queueSMS() {
 
     _debugSerial->print(F("SMS: "));
     _debugSerial->println(_text_ptr);
-
+return;/*
     if (_currentState == M590_STATE_INPUT_MODE_DONE) {
 
         _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_PREFIX);
@@ -568,7 +568,7 @@ bool M590::queueSMS() {
         _gsmSerial->write(0x1A);
         return readForResponses(M590_RESPONSE_OK, M590_RESPONSE_FAIL, SMS_TIMEOUT) == M590_SUCCESS;
     }
-    return false;
+    return false;*/
 }
 
 
@@ -587,7 +587,7 @@ bool M590::reInit() {
 
 uint8_t M590::newSMSAvailable() {
     if (_currentState != M590_STATE_INPUT_MODE_DONE)return 0;
-
+return 0;/*
     _gsmSerial->print((__FlashStringHelper *) M590_COMMAND_PREFIX);
     _gsmSerial->println((__FlashStringHelper *) M590_COMMAND_GET_SMS_CNT);
 
@@ -609,11 +609,13 @@ uint8_t M590::newSMSAvailable() {
         return 0;//M590_NET_PARSE_ERROR;
     }
 
-
+*/
 }
 
 
 String M590::getSMS() {
+    return "";//TODO
+    /*
     if (_currentState != M590_STATE_INPUT_MODE_DONE)return "";
     String res = "";
 
@@ -640,7 +642,7 @@ String M590::getSMS() {
         _debugSerial->println(F("getSMS delError"));
         return "";
     }
-    return res;
+    return res;*/
 }
 
 void M590::setTargetNum(String num) {

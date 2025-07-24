@@ -13,6 +13,8 @@
 #define EEPROM_NUMBER_ADDR 40  // EEPROM address to store target phone number
 #define EEPROM_SIMPIN_ADDR 60  // EEPROM address to store SIM pin #
 
+#define SIM_BOOT_PIN PIN_PD6
+
 enum m590ResponseCode {
     M590_SUCCESS,
     M590_FAILURE,
@@ -66,7 +68,7 @@ class M590 {
         bool waitForRegistration(const unsigned int timeout);
 
         bool queueSMS();
-        String targetNum="0605006547";
+        String targetNum="0678050070";
         void setTargetNum(String num);//Update target phone number and store into eeprom
         String SIMPIN="1234";
         void setSIMPin(String pin);//Update SIM pin and store into eeprom

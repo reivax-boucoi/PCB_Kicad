@@ -4,44 +4,58 @@
 
 
 Parser::Parser(M590 *gsm, Horaires *rtc, Ration *feeder, DateTime now): status(now) {
-    
-    Serial1.println("status init0");
+
     _gsm = gsm;
     _rtc = rtc;
     _feeder = feeder;
     _gsm->_text_ptr = text_content;
-    Serial1.println("status init");
+    lastPollTime=now.seconds;
+    switch (_rtc->distriMode) {
+        case 1:
+            status.setLED(LED_YELLOWBUTTON, LED_SLOWBLINK);
+            break;
+        case 2:
+            status.setLED(LED_YELLOWBUTTON, LED_FASTBLINK);
+            break;
+    }
 }
 void Parser::update(DateTime now) {
-    uint8_t buttons = 0;//status.handleButtons();
+    uint8_t buttons = status.handleButtons();
     switch (buttons) { //0: no buttons, 1: green pressed, 2: green depressed, 3: yellow pressed
         case 1:
-            if (_rtc->distriMode == 3) { // Bourrage ON
-                Serial1.println(F("Bourrage ON"));
-                _feeder->startMotors();
+            if (_rtc->distriMode == 3) { // Bourrage ON horaire
+                Serial1.println(F("Bourrage ON horaire"));
+                _rtc->distriMode++;
+                _feeder->startMotor(0);
+            } else if (_rtc->distriMode == 4) { // Bourrage ON antihoraire
+                Serial1.println(F("Bourrage ON anti horaire"));
+                _rtc->distriMode--;
+                _feeder->startMotor(1);
+
             } else {
                 Serial1.println(F("Bouton vert -> distri man"));
                 manualDistribute();
             }
             break;
         case 2:
-            if (_rtc->distriMode == 3) { // Bourrage OFF
+            if (_rtc->distriMode == 3 || _rtc->distriMode == 4) { // Bourrage OFF
                 Serial1.println(F("Bourrage OFF"));
-                _feeder->stopMotors();
+                _feeder->stopAll();
             }
             break;
         case 3:
             if (_rtc->distriMode == 0) {
-                Serial1.println(F("Bouton jaune -> semaine"));
-                modeSemaineSet();
-            } else if (_rtc->distriMode == 1) {
                 Serial1.println(F("Bouton jaune -> vacances"));
                 modeVacancesSet();
-            } else if (_rtc->distriMode == 2) {
+            } else if (_rtc->distriMode == 1) {
                 Serial1.println(F("Bouton jaune -> bourrage"));
                 _feeder->modeBourrage(true);
+                status.setLED(LED_YELLOWBUTTON, LED_ON);
                 _rtc->distriMode = 3;
-            } else if (_rtc->distriMode == 3) {
+            } else if (_rtc->distriMode == 2) {
+                Serial1.println(F("Bouton jaune -> semaine"));
+                modeSemaineSet();
+            } else if (_rtc->distriMode == 3 || _rtc->distriMode == 4) {
                 Serial1.println(F("Bouton jaune -> manuel"));
                 _feeder->modeBourrage(false);
                 modeManuelSet();
@@ -51,10 +65,13 @@ void Parser::update(DateTime now) {
     status.update(now);
     status.animateLEDs();
 
-
-    uint8_t nbMsg = _gsm->newSMSAvailable();
-    while (nbMsg-- > 0) {
-        parse(_gsm->getSMS());
+    if (now.seconds % 10 == 0 && lastPollTime!=now.seconds) {
+        lastPollTime=now.seconds;
+        Serial1.println("checking sms");
+        uint8_t nbMsg = _gsm->newSMSAvailable();
+        while (nbMsg-- > 0) {
+            parse(_gsm->getSMS());
+        }
     }
 }
 
@@ -138,13 +155,13 @@ bool Parser::parse(String msg) {
                     parseFailed("New number must be either 10 or 12 digits, not " + String(restOfString.length()));
                     return false;
                 }
-            }  else if (keyword == "pin") {
+           /* }  else if (keyword == "pin") {
                 if (restOfString.length() > 3) {
                     _gsm->setSIMPin(restOfString);
                 } else {
                     parseFailed("New PIN must at least be 4 digits long");
                     return false;
-                }
+                }*/
             } else {
                 parseFailed("Unknown keyword for setter with 1 argument \"" + keyword + "\"");
                 return false;
@@ -192,7 +209,7 @@ bool Parser::parse(String msg) {
         }
     }
 
-    status.setLED(3, LED_OFF);
+    status.setLED(LED_REDBOARD, LED_OFF);
     return true;
 }
 
@@ -275,7 +292,7 @@ void Parser::statusQuery() {
 }
 
 void Parser::advancedStatusQuery() {
-    Serial1.println("Advanced status query called");
+    Serial1.println(F("Advanced status query called"));
     status.getReport(text_content);
     _gsm->queueSMS();
 }
@@ -320,7 +337,7 @@ void Parser::modeVacancesSet() {
     text_length = 0;
     _rtc->distriMode = 2;
     _rtc->enableAllAlarms();
-    status.setLED(2, LED_FASTBLINK);
+    status.setLED(LED_YELLOWBUTTON, LED_FASTBLINK);
     text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Mode auto actif: distributions à "));
 
     for (uint8_t i = 0; i < MAX_ALARMS - 1; i++) {
@@ -336,7 +353,7 @@ void Parser::modeSemaineSet() {
     _rtc->disableAllAlarms();
     _rtc->enableAlarm(1);
     _rtc->distriMode = 1;
-    status.setLED(2, LED_SLOWBLINK);
+    status.setLED(LED_YELLOWBUTTON, LED_SLOWBLINK);
     Alarm a = _rtc->getAlarmTime(1);
     sprintf_P(text_content, PSTR(" Mode semaine actif: distribution à %uh%02u."), a.hours, a.minutes);
     _gsm->queueSMS();
@@ -345,37 +362,37 @@ void Parser::modeSemaineSet() {
 void Parser::modeManuelSet() {
     _rtc->disableAllAlarms();
     _rtc->distriMode = 0;
-    status.setLED(2, LED_OFF);
+    status.setLED(LED_YELLOWBUTTON, LED_OFF);
     sprintf_P(text_content, PSTR("Mode auto inactif: toutes les distributions automatiques sont désactivées."));
     _gsm->queueSMS();
 }
 
 void Parser::manualDistribute() {
     _feeder->startDistribution();
-    status.setLED(1, LED_ON);
-    while (_feeder->update() == ONGOING) {
-        delay(50);
+    status.setLED(LED_BLUEBUTTON, LED_ON);
+    while (_feeder->update() < 3 ) {
+        delay(15);
     }
     text_length = 0;
     RationStatus s = _feeder->update();
     text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Distribution manuelle "));
     if (s == COMPLETED) {
         text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("réalisée avec succès."));
-        status.setLED(1, LED_OFF);
+        status.setLED(LED_BLUEBUTTON, LED_OFF);
     } else {
         uint8_t moteur = 0;
         switch (s) {
             case TIMED_OUT_M1:
                 moteur = 1;
-                status.setLED(1, LED_FASTBLINK);
+                status.setLED(LED_BLUEBUTTON, LED_FASTBLINK);
                 break;
             case TIMED_OUT_M2:
                 moteur = 2;
-                status.setLED(1, LED_SLOWBLINK);
+                status.setLED(LED_BLUEBUTTON, LED_SLOWBLINK);
                 break;
             case TIMED_OUT_M12:
                 moteur = 12;
-                status.setLED(1, LED_FASTBLINK);
+                status.setLED(LED_BLUEBUTTON, LED_FASTBLINK);
                 break;
             default:
                 moteur = 4;
@@ -401,7 +418,7 @@ void Parser::gainSet(uint16_t gain) {
 void Parser::setNumber(String nb) {
     sprintf_P(text_content, PSTR("Numero set to %s"), nb.c_str());
     _gsm->queueSMS();
-    _gsm->setTargetNum(nb);
+    _gsm->replyNumber=nb;
     sprintf_P(text_content, PSTR("Numero set to %s"), nb.c_str());
     _gsm->queueSMS();
 }
@@ -409,7 +426,7 @@ void Parser::setNumber(String nb) {
 void Parser::parseFailed(String errorMsg) {
     Serial1.print(F("Parsing failed: "));
     Serial1.println(errorMsg);
-    status.setLED(3, LED_FASTBLINK);
+    status.setLED(LED_REDBOARD, LED_FASTBLINK);
 }
 
 String Parser::collapseSpaces(String input) {
@@ -437,22 +454,22 @@ void Parser::sendRationStatus(uint8_t alarmIdx) {
     RationStatus s = _feeder->update();
     text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Distribution de %dh%02d "), _rtc->getAlarmTime(alarmIdx).hours, _rtc->getAlarmTime(alarmIdx).minutes);
     if (s == COMPLETED) {
-        status.setLED(1, LED_OFF);
+        status.setLED(LED_BLUEBUTTON, LED_OFF);
         text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("distribuée avec succès."));
     } else {
         uint8_t moteur = 0;
         switch (s) {
             case TIMED_OUT_M1:
                 moteur = 1;
-                status.setLED(1, LED_FASTBLINK);
+                status.setLED(LED_BLUEBUTTON, LED_FASTBLINK);
                 break;
             case TIMED_OUT_M2:
                 moteur = 2;
-                status.setLED(1, LED_SLOWBLINK);
+                status.setLED(LED_BLUEBUTTON, LED_SLOWBLINK);
                 break;
             case TIMED_OUT_M12:
                 moteur = 12;
-                status.setLED(1, LED_FASTBLINK);
+                status.setLED(LED_BLUEBUTTON, LED_FASTBLINK);
                 break;
             default:
                 moteur = 4;
@@ -473,4 +490,5 @@ void Parser::sendSystemRestarted() {
     DateTime d = _rtc->getDate();
     sprintf_P(text_content, PSTR("Le système a redémarré ! %d/%d/%d, %dh%02d:%02d"), d.day, d.month, d.year, d.hours, d.minutes, d.seconds);
     _gsm->queueSMS();
+    status.setLED(LED_REDBUTTON, LED_FASTBLINK);
 }
