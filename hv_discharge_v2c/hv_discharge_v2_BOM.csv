@@ -1,0 +1,29 @@
+Reference,Value,Footprint,Datasheet,Qty,DNP
+C1,10u,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,~,1,
+C2,DNP,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,~,1,x
+"D1,D2,D4,D6",1N4007,Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal,http://www.vishay.com/docs/88503/1n4001.pdf,4,"D1/D2 DNP, diode supplied replaces both D4/D6"
+"D3,D5",BZV55B10,Diode_SMD:D_MiniMELF,https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf,2,
+"D7,D8",D,Diode_SMD:D_MiniMELF,~,2,x
+D9,5V1,Diode_SMD:D_MiniMELF,~,1,
+D10,BAT54W,Package_TO_SOT_SMD:SOT-23,https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf,1,
+D11,LED,LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,~,1,x
+D12,LED,LED_THT:LED_D5.0mm,~,1,
+J1,INb-,TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm,~,1,x
+J2,INa+,TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm,~,1,x
+J3,INb+,TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm,~,1,x
+J4,INa-,TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm,~,1,x
+"J5,J9,J12",DC+,TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm,~,3,x
+"J6,J10,J11",DC-,TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm,~,3,x
+J7,M-,TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm,~,1,x
+J8,M+,TestPoint:TestPoint_THTPad_D2.5mm_Drill1.2mm,~,1,x
+Q1,2N7002,Package_TO_SOT_SMD:SOT-23,https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF,1,
+Q2,Q_NMOS_GDS,Package_TO_SOT_THT:TO-247-3_Vertical,~,1,supplied
+"R1,R12",10M,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,2,
+"R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R20,R21,R22,R23,R24,R25",470k,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,16,
+"R13,R14",10,footprints:THS2510RJ_special,~,2,supplied 47R
+"R15,R16,R17,R18,R19",2M,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,5,x
+"R26,R28",560k,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,2,
+R27,330k,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,1,
+R29,470,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,1,
+RV1,200k,Potentiometer_THT:Potentiometer_Bourns_3266Y_Vertical,~,1,x
+U1,MCP65R41T-2402E_CHY,footprints:MCP65R41T-2402E,,1,
