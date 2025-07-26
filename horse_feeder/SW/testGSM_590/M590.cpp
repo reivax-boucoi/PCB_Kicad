@@ -14,7 +14,14 @@ int freeRam() {
 
 
 void M590::queueSMS() {
-    Serial1.println("queued new sms");
+    Serial1.print("queued new sms:");
+    Serial1.println(_text_ptr);
+    bool success=sendSMS(_text_ptr);
+    if(success){
+        myStatus->setLED(LED_REDBOARD, LED_OFF);
+    }else{
+        myStatus->setLED(LED_REDBOARD, LED_SLOWBLINK);
+    }
 }
 
 M590::M590() {
@@ -34,7 +41,7 @@ void M590::togglePWR() {
     delay(500);
 }
 uint8_t M590::initialize(uint8_t retries, uint8_t errorCode) {
-    display_freeram();
+    //display_freeram();
     if (retries == 0) {
         status = errorCode;
         return errorCode;
@@ -48,16 +55,20 @@ uint8_t M590::initialize(uint8_t retries, uint8_t errorCode) {
                 if (sendCommand("AT+CREG?", "+CREG: 0,1", 20000)) {
                     delay(500);
                     status = 0;
-                    display_freeram();
+                    //display_freeram();
                     return 0;
 
                 } else
-                    initialize(retries - 1, 4);
+                    status = 4;
+                initialize(retries - 1, 4);
             } else
-                initialize(retries - 1, 3);
+                status = 3;
+            initialize(retries - 1, 3);
         } else
-            initialize(retries - 1, 2);
+            status = 2;
+        initialize(retries - 1, 2);
     } else {
+        status = 1;
         togglePWR();
         initialize(retries - 1, 1);
     }
@@ -107,7 +118,7 @@ void M590::readResponse(unsigned long timeout) {
     unsigned long start = millis();
     uint8_t str_len = 0;
 
-    display_freeram();
+    //display_freeram();
     while ((millis() - start < timeout) && str_len < 254) {
         while (M590_SERIAL.available()) {
             char c = (char)M590_SERIAL.read();
@@ -130,7 +141,7 @@ void M590::readResponse(unsigned long timeout) {
 
 uint8_t M590::newSMSAvailable() {
     if (status != 0)return 0;
-    delay(150);
+    delay(50);
     serial_flush();
     M590_SERIAL.println("AT+CPMS?");
     readResponse();
@@ -193,7 +204,7 @@ String M590::getSMS() {
         status = 9;
         return "";
     }
-    replyNumber = response.substring(numberStart + 1, numberEnd);
+    replyNumber = response.substring(numberStart + 2, numberEnd - 1);
 
 #ifdef DEBUG_EN
     Serial1.print(F("incoming number:"));
@@ -224,6 +235,8 @@ String M590::getSMS() {
 
 bool M590::sendSMS(const String& msg) {
     if (status != 0)return 0;
+    delay(500);
+    serial_flush();
 
     if (replyNumber.length() < 10) {
         replyNumber = DFLT_PHONE_NUMBER;
@@ -241,9 +254,13 @@ bool M590::sendSMS(const String& msg) {
         status = 5;
         return false;
     }
-
+    delay(50);
     M590_SERIAL.print(LatinEncode(msg));
+
+    delay(50);
     serial_flush();
+
+    delay(50);
     M590_SERIAL.write(0x1A); // CTRL+Z
 
     readResponse(7000);
@@ -276,6 +293,30 @@ String M590::LatinEncode(String input) {
         }
     }
     return output;
+}
+
+int8_t M590::getRSSI(){
+    
+    if (status != 0)return 0;
+    delay(500);
+    serial_flush();
+    M590_SERIAL.println("AT+CSQ");
+    readResponse();
+    int idx = response.indexOf("+CSQ: ");
+    if (idx == -1) {
+        status = 13;
+        return 0;
+    }
+    int nextIdx=response.indexOf(',',idx+5);
+    if (nextIdx == -1) {
+        status = 14;
+        return 0;
+    }
+    String unreadStr = response.substring(idx + 5, nextIdx);
+    Serial1.print(F("RSSI level: "));
+    Serial1.print(unreadStr);
+    return unreadStr.toInt()*2-113;
+    delay(50);
 }
 
 void M590::serial_flush() {

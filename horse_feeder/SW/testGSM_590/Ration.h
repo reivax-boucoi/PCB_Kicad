@@ -4,8 +4,8 @@
 #include <Arduino.h>
 #include <EEPROM.h>  // Include EEPROM library
 
-#define LAP_TIMEOUT_MS 2000       // Timeout for 1 lap in ms
-#define LAP_MINTIME_MS 150       // Min plausible time for 1 lap in ms
+#define LAP_TIMEOUT_MS 2500       // Timeout for 1 lap in ms
+#define LAP_MINTIME_MS 200       // Min plausible time for 1 lap in ms
 #define EEPROM_RATION_ADDR 0  // EEPROM address to store ration quantity
 #define EEPROM_RATIONGain_ADDR 1  // EEPROM address to store ration gain
 #define RATION_QTY_DFLT 3           //default ration qty (if blank eeprom contents)

@@ -85,6 +85,8 @@ void Ration::loadRationFromEEPROM() {
     ration_gain = EEPROM.read(EEPROM_RATIONGain_ADDR);
     if (ration_qty == 255) {
         ration_qty = RATION_QTY_DFLT;
+    }
+    if (ration_gain == 255) {
         ration_gain = RATION_GAIN_DFLT;
     }
 }

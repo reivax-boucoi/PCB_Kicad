@@ -9,7 +9,8 @@ Parser::Parser(M590 *gsm, Horaires *rtc, Ration *feeder, DateTime now): status(n
     _rtc = rtc;
     _feeder = feeder;
     _gsm->_text_ptr = text_content;
-    lastPollTime=now.seconds;
+    _gsm->myStatus=&status;
+    lastPollTime = now.seconds;
     switch (_rtc->distriMode) {
         case 1:
             status.setLED(LED_YELLOWBUTTON, LED_SLOWBLINK);
@@ -62,16 +63,33 @@ void Parser::update(DateTime now) {
             }
             break;
     }
-    status.update(now);
+    uint16_t batt = status.update(now);
     status.animateLEDs();
 
-    if (now.seconds % 10 == 0 && lastPollTime!=now.seconds) {
-        lastPollTime=now.seconds;
-        Serial1.println("checking sms");
+    if (now.seconds % 3 == 0 && lastPollTime != now.seconds) {
+        //Serial1.print(F("batt level:"));
+        //Serial1.println(batt);
+        lastPollTime = now.seconds;
+        Serial1.print(F("\r\nchecking sms: "));
         uint8_t nbMsg = _gsm->newSMSAvailable();
-        while (nbMsg-- > 0) {
-            parse(_gsm->getSMS());
+        if (_gsm->status > 0) {
+            
+             status.setLED(LED_REDBUTTON, LED_SLOWBLINK);
+            if (now.seconds % 30 == 0) {
+                Serial1.print(F("gsm issue "));
+                Serial1.print(_gsm->status);
+                Serial1.print(F(", restarting"));
+                _gsm->initialize();
+            }
+        }else{
+             status.setLED(LED_REDBUTTON, LED_FASTBLINK);
         }
+      //  while (nbMsg-- > 0) {
+            if(nbMsg>0)parse(_gsm->getSMS());
+      //          Serial1.print(nbMsg);
+      //          Serial1.println(F("SMS left "));
+            
+      //  }
     }
 }
 
@@ -155,13 +173,13 @@ bool Parser::parse(String msg) {
                     parseFailed("New number must be either 10 or 12 digits, not " + String(restOfString.length()));
                     return false;
                 }
-           /* }  else if (keyword == "pin") {
-                if (restOfString.length() > 3) {
-                    _gsm->setSIMPin(restOfString);
-                } else {
-                    parseFailed("New PIN must at least be 4 digits long");
-                    return false;
-                }*/
+                /*  }  else if (keyword == "pin") {
+                     if (restOfString.length() > 3) {
+                         _gsm->setSIMPin(restOfString);
+                     } else {
+                         parseFailed("New PIN must at least be 4 digits long");
+                         return false;
+                     }*/
             } else {
                 parseFailed("Unknown keyword for setter with 1 argument \"" + keyword + "\"");
                 return false;
@@ -177,7 +195,7 @@ bool Parser::parse(String msg) {
                 uint8_t MAXALARMS = 3; //TODO
                 if (alarmNB < 0 && alarmNB > MAXALARMS) {
                     parseFailed("Numero d'horaire invalide: [A : " + String((char)('A' + MAXALARMS - 1)) + "]");
-                    return false;;
+                    return false;
                 }
                 spaceIndex1 = arg2.indexOf(' ');
                 String time = "";
@@ -209,7 +227,7 @@ bool Parser::parse(String msg) {
         }
     }
 
-    status.setLED(LED_REDBOARD, LED_OFF);
+    //status.setLED(LED_REDBOARD, LED_OFF);
     return true;
 }
 
@@ -283,11 +301,14 @@ void Parser::statusQuery() {
     if (minNextTime == 24 * 60) text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Pas de prochaine distribution prévue."));
     else text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Prochaine distribution dans %uh%02u."), minNextTime / 60, minNextTime % 60);
 
-    int rssi = -40;//TODO getRSSI();
-    uint16_t batt = 12345;//TODO getBatt();
-    uint16_t LOW_BATT_TH = 12200; //TODO #define
+    int rssi = _gsm->getRSSI();
+    
+    Serial1.print(rssi);
+    uint16_t batt = status.batt_level;
+    Serial1.print(F("batt level:"));
+    Serial1.println(batt);
     uint16_t r = _feeder->ration_qty * 100 / _feeder->ration_gain;
-    text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR(" Ration %u%02uL, RSSI %ddBm, Batterie %u.%02uV (%s)"), r / 100, r % 100, rssi, batt / 1000, (batt % 1000) / 10, batt > LOW_BATT_TH ? PSTR("OK") : PSTR("Faible"));
+    text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR(" Ration %u.%02uL, RSSI %ddBm, Batterie %u.%02uV"), r / 100, r % 100, rssi, batt / 100, (batt % 100) / 10);
     _gsm->queueSMS();
 }
 
@@ -339,13 +360,14 @@ void Parser::modeVacancesSet() {
     _rtc->enableAllAlarms();
     status.setLED(LED_YELLOWBUTTON, LED_FASTBLINK);
     text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("Mode auto actif: distributions à "));
-
+    char c='A';
     for (uint8_t i = 0; i < MAX_ALARMS - 1; i++) {
         Alarm a = _rtc->getAlarmTime(i);
-        text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("%uh%02u, "), a.hours, a.minutes);
+        text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("%c %uh%02u, "), c,a.hours, a.minutes);
+        c+=1;
     }
     Alarm a = _rtc->getAlarmTime(MAX_ALARMS - 1);
-    text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("%uh%02u"), a.hours, a.minutes);
+    text_length += snprintf_P(text_content + text_length, SMS_TEXT_BUF - text_length, PSTR("%c %uh%02u"),c, a.hours, a.minutes);
     _gsm->queueSMS();
 }
 
@@ -355,7 +377,7 @@ void Parser::modeSemaineSet() {
     _rtc->distriMode = 1;
     status.setLED(LED_YELLOWBUTTON, LED_SLOWBLINK);
     Alarm a = _rtc->getAlarmTime(1);
-    sprintf_P(text_content, PSTR(" Mode semaine actif: distribution à %uh%02u."), a.hours, a.minutes);
+    sprintf_P(text_content, PSTR(" Mode semaine actif: distribution B à %uh%02u."), a.hours, a.minutes);
     _gsm->queueSMS();
 }
 
@@ -418,7 +440,7 @@ void Parser::gainSet(uint16_t gain) {
 void Parser::setNumber(String nb) {
     sprintf_P(text_content, PSTR("Numero set to %s"), nb.c_str());
     _gsm->queueSMS();
-    _gsm->replyNumber=nb;
+    _gsm->replyNumber = nb;
     sprintf_P(text_content, PSTR("Numero set to %s"), nb.c_str());
     _gsm->queueSMS();
 }
@@ -427,6 +449,7 @@ void Parser::parseFailed(String errorMsg) {
     Serial1.print(F("Parsing failed: "));
     Serial1.println(errorMsg);
     status.setLED(LED_REDBOARD, LED_FASTBLINK);
+    _gsm->sendSMS(errorMsg);
 }
 
 String Parser::collapseSpaces(String input) {
@@ -482,13 +505,13 @@ void Parser::sendRationStatus(uint8_t alarmIdx) {
 
 //batt=tension en mV
 void Parser::sendLowBattery(uint16_t batt) {
-    sprintf_P(text_content, PSTR("Batterie faible ! %u.%02uV"), batt / 1000, (batt % 1000) / 10);
+    sprintf_P(text_content, PSTR("Batterie faible ! %u.%02uV"), batt / 100, (batt % 100) / 10);
     _gsm->queueSMS();
 }
 
 void Parser::sendSystemRestarted() {
     DateTime d = _rtc->getDate();
-    sprintf_P(text_content, PSTR("Le système a redémarré ! %d/%d/%d, %dh%02d:%02d"), d.day, d.month, d.year, d.hours, d.minutes, d.seconds);
+    sprintf_P(text_content, PSTR("Le système a redémarré ! %d/%d/%d, %dh%02d:%02d, Batt=%u.%02uV"), d.day, d.month, d.year, d.hours, d.minutes, d.seconds, status.batt_level / 100, (status.batt_level% 100) / 10);
     _gsm->queueSMS();
     status.setLED(LED_REDBUTTON, LED_FASTBLINK);
 }

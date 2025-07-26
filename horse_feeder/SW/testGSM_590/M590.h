@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include <EEPROM.h>
+#include "StatusM.h"
 
 #define EEPROM_NUMBER_ADDR 40
 #define M590_SERIAL Serial
@@ -24,11 +25,13 @@ class M590 {
         uint8_t newSMSAvailable();
         String getSMS();
         bool sendSMS(const String& msg);
-        uint8_t status;//255:uninitialized, 0:OK, 1-4:init, 5:sendSMS>, 6-10:getSMS, 11-12:getNbSMS
+        int8_t getRSSI();
+        uint8_t status;//255:uninitialized, 0:OK, 1-4:init, 5:sendSMS>, 6-10:getSMS, 11-12:getNbSMS, 13:getRSSI
         String replyNumber;
 
         void queueSMS();
         char *_text_ptr = NULL;
+        StatusM *myStatus=NULL;
 
     private:
         bool sendCommand(const String& cmd, const String& expected, unsigned long timeout = M590_TIMEOUT);

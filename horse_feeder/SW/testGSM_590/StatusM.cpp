@@ -21,6 +21,7 @@ StatusM::StatusM(DateTime now) {
     ledFastTime = millis();
     ledSlowTime = 0;
     buttonStates = digitalRead(BTN_USR1) << 1 | digitalRead(BTN_USR2);
+    batt_level = analogRead(BATT_MON) * BATT_ADC_GAIN;
 }
 
 void StatusM::setLED(uint8_t led, LED_STATUS s) {

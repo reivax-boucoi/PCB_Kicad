@@ -20,13 +20,19 @@ String input = "";
 
 void setup() {
     Serial1.begin(115200);
-    while (!Serial1); // Wait for Serial to initialize
-    delay(100);
+    //while (!Serial1); // Wait for Serial to initialize
+    delay(1000);
     Serial1.println(F("\r\n\r\nSystem reset"));
 
     rtc.initialize();
     feeder.initialize();
     sim.initialize();
+    if(sim.status>0){
+        Serial1.print(F("SIM init failed: "));
+        Serial1.println(sim.status);
+    }else{
+        Serial1.println(F("SIM init OK"));
+    }
     delay(100);
     rtc.printDate();
     rtc.printAlarms();
@@ -63,7 +69,7 @@ void loop() {
         SMShandler->sendRationStatus(ringingAlarm);
     }
     delay(15);
-
+/*
     while (Serial1.available() > 0) {
         char c = Serial1.read();
         Serial1.write(c);
@@ -73,5 +79,5 @@ void loop() {
         } else {
             input += c;
         }
-    }
+    }*/
 }
