@@ -5839,7 +5839,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 50.8) (xy 132.08 53.34)
+			(xy 133.35 50.8) (xy 133.35 53.34)
 		)
 		(stroke
 			(width 0)
@@ -6029,7 +6029,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 38.1) (xy 173.99 38.1)
+			(xy 168.91 38.1) (xy 173.99 38.1)
 		)
 		(stroke
 			(width 0)
@@ -6089,7 +6089,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 40.64) (xy 138.43 40.64)
+			(xy 133.35 40.64) (xy 138.43 40.64)
 		)
 		(stroke
 			(width 0)
@@ -6579,7 +6579,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 43.18) (xy 132.08 40.64)
+			(xy 133.35 43.18) (xy 133.35 40.64)
 		)
 		(stroke
 			(width 0)
@@ -6949,7 +6949,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 53.34) (xy 138.43 53.34)
+			(xy 133.35 53.34) (xy 138.43 53.34)
 		)
 		(stroke
 			(width 0)
@@ -6959,7 +6959,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 38.1) (xy 167.64 43.18)
+			(xy 168.91 38.1) (xy 168.91 43.18)
 		)
 		(stroke
 			(width 0)
@@ -7288,7 +7288,7 @@
 		(uuid "13677711-1a93-4ab9-8e21-4faba380a023")
 	)
 	(label "Coil"
-		(at 167.64 38.1 0)
+		(at 168.91 38.1 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9614,7 +9614,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 132.08 46.99 0)
+		(at 133.35 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9622,7 +9622,7 @@
 		(dnp no)
 		(uuid "5bedc61c-4e99-4633-a8ff-466924562a9d")
 		(property "Reference" "C2"
-			(at 128.27 44.8309 0)
+			(at 129.54 44.8309 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9631,7 +9631,7 @@
 			)
 		)
 		(property "Value" "10F"
-			(at 128.27 47.3709 0)
+			(at 129.54 47.3709 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9640,7 +9640,7 @@
 			)
 		)
 		(property "Footprint" "footprints:Board_edge_cap_P5mm_D10mm"
-			(at 133.0452 50.8 0)
+			(at 134.3152 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9649,7 +9649,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 46.99 0)
+			(at 133.35 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9658,7 +9658,7 @@
 			)
 		)
 		(property "Description" "BCAP0010 P270 S01"
-			(at 130.302 52.324 0)
+			(at 131.572 52.324 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12431,7 +12431,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 167.64 50.8 0)
+		(at 168.91 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12440,7 +12440,7 @@
 		(fields_autoplaced yes)
 		(uuid "eb91675a-dbbd-49b5-99ac-8a79464f21a2")
 		(property "Reference" "#PWR08"
-			(at 167.64 57.15 0)
+			(at 168.91 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12449,7 +12449,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 167.64 55.88 0)
+			(at 168.91 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12457,7 +12457,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 50.8 0)
+			(at 168.91 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12466,7 +12466,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 50.8 0)
+			(at 168.91 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12475,7 +12475,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 50.8 0)
+			(at 168.91 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12758,7 +12758,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 167.64 46.99 0)
+		(at 168.91 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12767,25 +12767,25 @@
 		(fields_autoplaced yes)
 		(uuid "ffdd5dad-d26c-4ede-bfb5-612985b94c34")
 		(property "Reference" "R1"
-			(at 170.18 45.7199 0)
+			(at 166.37 45.7199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "1Meg"
-			(at 170.18 48.2599 0)
+			(at 166.37 48.2599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 165.862 46.99 90)
+			(at 167.132 46.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12794,7 +12794,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 167.64 46.99 0)
+			(at 168.91 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12803,7 +12803,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 46.99 0)
+			(at 168.91 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
