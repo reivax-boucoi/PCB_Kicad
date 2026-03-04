@@ -1,12 +1,12 @@
 (footprint "282834-4"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 4 -2 0)
 		(layer "F.SilkS")
-		(uuid "916baf08-f1bd-49a9-b32e-2b8eec1a63c3")
+		(uuid "dd3b24e0-e194-4e18-864b-aaae269ad649")
 		(effects
 			(font
 				(size 1 1)
@@ -17,22 +17,10 @@
 	(property "Value" "CONN4_282834-4_TEC"
 		(at 3.5 -4.5 0)
 		(layer "F.SilkS")
-		(uuid "7b9e4fdd-6488-4f7d-943d-0b684a39084c")
+		(uuid "f03931c1-6d85-4c2a-b4ac-4766cfa00794")
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "d33ed39e-b90f-4973-aa6a-dbefe30ce377")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -41,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "24a02e13-eb72-41d6-8692-013a96cd9a70")
+		(uuid "3250758f-7bfc-43ed-94c6-27b2c2f5bdb9")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -53,7 +41,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "77a0aebf-2611-46bf-970b-1df5146a1857")
+		(uuid "edafbef0-606c-4a9c-af50-49907236aa70")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -225,6 +213,7 @@
 		(remove_unused_layers no)
 		(uuid "780ba08c-ff75-4dc7-b45b-c7a3a4eb5529")
 	)
+	(embedded_fonts no)
 	(model "${KICAD_USR_LIB_DIR}/3Dmodels/c-282834-4-c-3d.stp"
 		(offset
 			(xyz 3.75 -3.25 3)
