@@ -12,6 +12,475 @@
 		(comment 1 "M.B./J.M./X.B.")
 	)
 	(lib_symbols
+		(symbol "74xx:74LS241"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -7.62 16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "74LS241"
+				(at -7.62 -16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74ls241.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Octal Buffer and Line Driver With 3-State Output, complementary enables, non-inverting outputs"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "7400 logic ttl low power schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "DIP?20*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "74LS241_1_0"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy 0.635 -1.27) (xy 0.635 1.27) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy -0.635 1.27) (xy 0.635 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -12.7 12.7 0)
+					(length 5.08)
+					(name "I0a"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 10.16 0)
+					(length 5.08)
+					(name "I1a"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 7.62 0)
+					(length 5.08)
+					(name "I2a"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 5.08 0)
+					(length 5.08)
+					(name "I3a"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 2.54 0)
+					(length 5.08)
+					(name "I0b"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 0 0)
+					(length 5.08)
+					(name "I1b"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -2.54 0)
+					(length 5.08)
+					(name "I2b"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -5.08 0)
+					(length 5.08)
+					(name "I3b"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at -12.7 -10.16 0)
+					(length 5.08)
+					(name "OEa"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -12.7 0)
+					(length 5.08)
+					(name "OEb"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 20.32 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -20.32 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 12.7 12.7 180)
+					(length 5.08)
+					(name "O0a"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 12.7 10.16 180)
+					(length 5.08)
+					(name "O1a"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 12.7 7.62 180)
+					(length 5.08)
+					(name "O2a"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 12.7 5.08 180)
+					(length 5.08)
+					(name "O3a"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 12.7 2.54 180)
+					(length 5.08)
+					(name "O0b"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 12.7 0 180)
+					(length 5.08)
+					(name "O1b"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 12.7 -2.54 180)
+					(length 5.08)
+					(name "O2b"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 12.7 -5.08 180)
+					(length 5.08)
+					(name "O3b"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "74LS241_1_1"
+				(rectangle
+					(start -7.62 15.24)
+					(end 7.62 -15.24)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:Raspberry_Pi_4"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3478,13 +3947,19 @@
 	)
 	(text "+3V3 - Jaune\nDATA - Rouge\n0V - Noir"
 		(exclude_from_sim no)
-		(at 167.386 174.498 0)
+		(at 169.926 140.208 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "9e035d13-efb0-47f9-afe2-bf52ceb67de5")
+	)
+	(junction
+		(at 153.67 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "00a1dada-29ef-4e12-9220-ceda5ce06efb")
 	)
 	(junction
 		(at 189.23 27.94)
@@ -3529,6 +4004,12 @@
 		(uuid "1091304d-fda2-4aff-acf2-0c23f663c643")
 	)
 	(junction
+		(at 41.91 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1424c75d-87d8-48be-b6ce-40b6c7fb23fb")
+	)
+	(junction
 		(at 189.23 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3557,6 +4038,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "300a9439-26a6-4dcf-9399-82fe5700658a")
+	)
+	(junction
+		(at 25.4 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "327a092c-ef2c-4088-a6e1-dbfbab532855")
 	)
 	(junction
 		(at 205.74 38.1)
@@ -3589,6 +4076,12 @@
 		(uuid "4b15ff4c-15a4-4894-9dfd-543796674cd5")
 	)
 	(junction
+		(at 58.42 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4c5854d7-10b8-49ac-8490-2b05596d4678")
+	)
+	(junction
 		(at 245.11 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3601,13 +4094,25 @@
 		(uuid "51866e32-cb28-45b5-8b81-421a28856d61")
 	)
 	(junction
-		(at 144.78 158.75)
+		(at 153.67 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5b19a495-4b28-47ce-9375-1b48cb2f5018")
 	)
 	(junction
-		(at 144.78 149.86)
+		(at 54.61 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5dc3ede6-a0b6-4699-898f-5ed712657616")
+	)
+	(junction
+		(at 29.21 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "75d56bb0-7705-421a-b1cb-ed74cb207ed3")
+	)
+	(junction
+		(at 153.67 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "77d0e7e7-dc55-4bd6-a709-13981d06ba9e")
@@ -3617,6 +4122,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "78566593-5c34-428a-9ee9-6e3cfa2430dd")
+	)
+	(junction
+		(at 54.61 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f240ae7-61a7-4376-8cef-178dd700a79d")
 	)
 	(junction
 		(at 34.29 35.56)
@@ -3641,6 +4152,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8fcc53ce-6f4a-45f4-8981-ffac2ccd8a4b")
+	)
+	(junction
+		(at 54.61 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9e56a149-ac87-47bf-b137-da74db4dd449")
 	)
 	(junction
 		(at 129.54 68.58)
@@ -3671,6 +4188,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ab89ab9f-1afb-4bc3-8e04-2215a80d4ada")
+	)
+	(junction
+		(at 29.21 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b1a87e2f-4ba9-48d7-84ab-7cab96e3a2b5")
 	)
 	(junction
 		(at 201.93 20.32)
@@ -3751,29 +4274,35 @@
 		(uuid "f4bdf7db-e89e-48fe-86ca-3fcda134bd17")
 	)
 	(junction
+		(at 29.21 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f5eade8b-86de-4d81-b7b7-50b11c920c88")
+	)
+	(junction
 		(at 67.31 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f6181186-b7d0-4bbc-9159-6de47a69da76")
 	)
 	(no_connect
-		(at 137.16 143.51)
+		(at 146.05 143.51)
 		(uuid "111e9c1f-6480-4867-a18b-5661d10b7ee5")
 	)
 	(no_connect
-		(at 137.16 173.99)
+		(at 146.05 173.99)
 		(uuid "20dbfe29-f09e-4704-b122-035de00471d3")
 	)
 	(no_connect
-		(at 71.12 163.83)
+		(at 80.01 163.83)
 		(uuid "28e604db-5ad5-4990-a6f7-fb6797a98981")
 	)
 	(no_connect
-		(at 71.12 138.43)
+		(at 80.01 138.43)
 		(uuid "2a31e5fe-bc39-4086-b01a-ddec10518079")
 	)
 	(no_connect
-		(at 71.12 146.05)
+		(at 80.01 146.05)
 		(uuid "2ef22fc2-88c0-4b3a-9d00-65f0462a0c15")
 	)
 	(no_connect
@@ -3781,55 +4310,51 @@
 		(uuid "48d72df0-cc50-4263-a8f1-f0b240ec0b88")
 	)
 	(no_connect
-		(at 137.16 161.29)
+		(at 146.05 161.29)
 		(uuid "55b49820-b2b0-4637-b878-9561f93ccb37")
 	)
 	(no_connect
-		(at 137.16 146.05)
+		(at 146.05 146.05)
 		(uuid "70a18bae-ba97-42d6-a920-c7d805f7c2c0")
 	)
 	(no_connect
-		(at 71.12 143.51)
+		(at 80.01 143.51)
 		(uuid "74f565ab-cb25-48ba-a544-dd8807c2327a")
 	)
 	(no_connect
-		(at 137.16 163.83)
+		(at 146.05 179.07)
+		(uuid "7bd1c703-3e6b-4dc7-bde3-778abf85917e")
+	)
+	(no_connect
+		(at 146.05 163.83)
 		(uuid "85722007-412f-4fc1-a31f-b26576c43470")
 	)
 	(no_connect
-		(at 137.16 151.13)
-		(uuid "860705eb-9059-4eed-933c-e7d972ee9a40")
-	)
-	(no_connect
-		(at 71.12 135.89)
+		(at 80.01 135.89)
 		(uuid "8a6ea151-68d5-4726-9943-5dd50d4f23b5")
 	)
 	(no_connect
-		(at 71.12 158.75)
+		(at 80.01 158.75)
 		(uuid "9f18e0cc-0137-4c5a-96cc-72c78c652a9b")
 	)
 	(no_connect
-		(at 137.16 179.07)
-		(uuid "b078761d-37d5-487a-975c-e1d2d4d3cc32")
-	)
-	(no_connect
-		(at 137.16 153.67)
+		(at 146.05 153.67)
 		(uuid "b96df169-8afb-401a-b851-48bfe619042f")
 	)
 	(no_connect
-		(at 71.12 151.13)
+		(at 80.01 151.13)
 		(uuid "cc1653e9-c94a-4088-af22-854dbb4d2e72")
 	)
 	(no_connect
-		(at 137.16 176.53)
+		(at 146.05 176.53)
 		(uuid "cf2637f1-92c5-4ce4-aced-1ab29a25c9de")
 	)
 	(no_connect
-		(at 137.16 168.91)
+		(at 146.05 168.91)
 		(uuid "d257413c-93ad-442f-b266-3d6567ba825b")
 	)
 	(no_connect
-		(at 137.16 171.45)
+		(at 146.05 171.45)
 		(uuid "d618ab6f-1008-461c-bb6d-f3a0f33b4a2f")
 	)
 	(no_connect
@@ -3888,6 +4413,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 71.12) (xy 54.61 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09d63da1-57ee-4a6b-91f9-c6fb2bbff73b")
+	)
+	(wire
+		(pts
 			(xy 250.19 124.46) (xy 250.19 137.16)
 		)
 		(stroke
@@ -3928,7 +4463,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 138.43) (xy 142.24 138.43)
+			(xy 146.05 138.43) (xy 151.13 138.43)
 		)
 		(stroke
 			(width 0)
@@ -3988,6 +4523,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 63.5) (xy 54.61 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e30d40b-ceaf-4657-8ee0-cfd98812f16e")
+	)
+	(wire
+		(pts
 			(xy 205.74 20.32) (xy 205.74 22.86)
 		)
 		(stroke
@@ -3998,7 +4543,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 161.29) (xy 55.88 88.9)
+			(xy 64.77 161.29) (xy 64.77 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4008,7 +4553,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 163.83) (xy 158.75 161.29)
+			(xy 163.83 163.83) (xy 163.83 161.29)
 		)
 		(stroke
 			(width 0)
@@ -4028,6 +4573,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 151.13) (xy 146.05 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2589c43f-baed-4824-9a20-602361e36396")
+	)
+	(wire
+		(pts
 			(xy 201.93 63.5) (xy 205.74 63.5)
 		)
 		(stroke
@@ -4038,13 +4593,23 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 158.75) (xy 137.16 158.75)
+			(xy 153.67 158.75) (xy 146.05 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "26369897-1065-4fd2-8c47-b086d8b8c998")
+	)
+	(wire
+		(pts
+			(xy 54.61 73.66) (xy 59.69 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "274b4d0b-5437-4fc2-8af3-a039d1c00487")
 	)
 	(wire
 		(pts
@@ -4058,6 +4623,16 @@
 	)
 	(wire
 		(pts
+			(xy 15.24 73.66) (xy 29.21 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29550931-31e6-4f88-ad0c-6ca3b8d05bdf")
+	)
+	(wire
+		(pts
 			(xy 199.39 55.88) (xy 201.93 55.88)
 		)
 		(stroke
@@ -4068,13 +4643,13 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 173.99) (xy 71.12 173.99)
+			(xy 58.42 35.56) (xy 45.72 35.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2b031629-0318-47b5-9fc8-ceea8afb2d9c")
+		(uuid "2a699351-2dde-46b5-bbf0-e63f710e3085")
 	)
 	(wire
 		(pts
@@ -4085,6 +4660,16 @@
 			(type default)
 		)
 		(uuid "2b414526-b0cd-4318-8dba-c4ed73ed480e")
+	)
+	(wire
+		(pts
+			(xy 64.77 173.99) (xy 80.01 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d5ce778-d8c2-45ef-b409-fe2edcdf264b")
 	)
 	(wire
 		(pts
@@ -4138,6 +4723,16 @@
 	)
 	(wire
 		(pts
+			(xy 29.21 66.04) (xy 29.21 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e493a23-acd9-45cf-bfd3-ad232846e4ed")
+	)
+	(wire
+		(pts
 			(xy 113.03 66.04) (xy 113.03 50.8)
 		)
 		(stroke
@@ -4145,6 +4740,16 @@
 			(type default)
 		)
 		(uuid "3f81b295-b6f9-4551-831f-4bc513c8beb1")
+	)
+	(wire
+		(pts
+			(xy 54.61 66.04) (xy 113.03 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44c9e06e-2f62-445f-82d8-fc0e4d6dbaed")
 	)
 	(wire
 		(pts
@@ -4158,6 +4763,16 @@
 	)
 	(wire
 		(pts
+			(xy 15.24 60.96) (xy 25.4 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49b488a0-6afa-4efe-a8a2-dcae75fa81ea")
+	)
+	(wire
+		(pts
 			(xy 254 81.28) (xy 250.19 81.28)
 		)
 		(stroke
@@ -4165,6 +4780,16 @@
 			(type default)
 		)
 		(uuid "4d586589-308d-4ea0-ae7e-8c0fc922072d")
+	)
+	(wire
+		(pts
+			(xy 153.67 179.07) (xy 163.83 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e66902d-7f50-4f95-8e28-5bcf8aaa9822")
 	)
 	(wire
 		(pts
@@ -4208,7 +4833,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 168.91) (xy 66.04 129.54)
+			(xy 74.93 168.91) (xy 74.93 129.54)
 		)
 		(stroke
 			(width 0)
@@ -4225,6 +4850,16 @@
 			(type default)
 		)
 		(uuid "5c647c3b-98a3-4664-9578-7791b1cb9010")
+	)
+	(wire
+		(pts
+			(xy 163.83 170.18) (xy 153.67 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d17bc47-6d59-4e55-96a7-98ca02a01518")
 	)
 	(wire
 		(pts
@@ -4245,6 +4880,16 @@
 			(type default)
 		)
 		(uuid "6368a191-1212-4036-84f1-f70de1c62bcb")
+	)
+	(wire
+		(pts
+			(xy 54.61 66.04) (xy 54.61 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "642ce1aa-bd43-47e1-bb3a-1ce43f313e23")
 	)
 	(wire
 		(pts
@@ -4278,6 +4923,16 @@
 	)
 	(wire
 		(pts
+			(xy 64.77 176.53) (xy 80.01 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a99ca14-7efa-4a8f-8823-d9d68b7002e1")
+	)
+	(wire
+		(pts
 			(xy 189.23 55.88) (xy 191.77 55.88)
 		)
 		(stroke
@@ -4288,17 +4943,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 63.5) (xy 45.72 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d608068-228c-4659-993b-fada0062235c")
-	)
-	(wire
-		(pts
-			(xy 144.78 158.75) (xy 158.75 158.75)
+			(xy 153.67 158.75) (xy 163.83 158.75)
 		)
 		(stroke
 			(width 0)
@@ -4318,7 +4963,17 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 153.67) (xy 71.12 153.67)
+			(xy 21.59 83.82) (xy 21.59 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70d61cbe-a269-4360-a5b5-64e2907ab1d8")
+	)
+	(wire
+		(pts
+			(xy 67.31 153.67) (xy 80.01 153.67)
 		)
 		(stroke
 			(width 0)
@@ -4335,6 +4990,16 @@
 			(type default)
 		)
 		(uuid "71d1ed46-c126-4b0a-939a-45f381a6a322")
+	)
+	(wire
+		(pts
+			(xy 59.69 68.58) (xy 115.57 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76b05b2c-5716-4211-9fab-adbf1691385c")
 	)
 	(wire
 		(pts
@@ -4358,7 +5023,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 171.45) (xy 63.5 171.45)
+			(xy 80.01 171.45) (xy 72.39 171.45)
 		)
 		(stroke
 			(width 0)
@@ -4378,13 +5043,23 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 100.33) (xy 208.28 100.33)
+			(xy 67.31 100.33) (xy 208.28 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7b76a5a7-35ef-46be-bb23-e3f347ac26f2")
+	)
+	(wire
+		(pts
+			(xy 24.13 93.98) (xy 24.13 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b991bb0-d1d6-4850-ad30-ccdf0d35676c")
 	)
 	(wire
 		(pts
@@ -4398,13 +5073,23 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 129.54) (xy 208.28 129.54)
+			(xy 74.93 129.54) (xy 208.28 129.54)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7bd23ed5-31b9-4ec5-afc7-fcd7ba730683")
+	)
+	(wire
+		(pts
+			(xy 29.21 86.36) (xy 21.59 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d015a0f-c691-4a3e-a99b-fd4c070e51f7")
 	)
 	(wire
 		(pts
@@ -4438,23 +5123,33 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 116.84) (xy 195.58 116.84)
+			(xy 15.24 66.04) (xy 29.21 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "824e7039-b4bd-4be5-85e4-acf60108df2f")
+	)
+	(wire
+		(pts
+			(xy 58.42 78.74) (xy 58.42 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86457855-7c53-451b-abcb-30ac9d7bb7c0")
+	)
+	(wire
+		(pts
+			(xy 69.85 116.84) (xy 195.58 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8b88eabb-1046-47fd-bc45-67350bd71040")
-	)
-	(wire
-		(pts
-			(xy 48.26 176.53) (xy 48.26 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8bc0b83e-4ecd-455c-9026-cfdc93d91637")
 	)
 	(wire
 		(pts
@@ -4468,7 +5163,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 168.91) (xy 66.04 168.91)
+			(xy 80.01 168.91) (xy 74.93 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4488,7 +5183,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 156.21) (xy 158.75 149.86)
+			(xy 163.83 156.21) (xy 163.83 149.86)
 		)
 		(stroke
 			(width 0)
@@ -4498,7 +5193,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 158.75) (xy 144.78 157.48)
+			(xy 153.67 158.75) (xy 153.67 157.48)
 		)
 		(stroke
 			(width 0)
@@ -4548,7 +5243,17 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 149.86) (xy 144.78 149.86)
+			(xy 54.61 73.66) (xy 54.61 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95380259-99f7-40b2-9a8c-2de546b16081")
+	)
+	(wire
+		(pts
+			(xy 163.83 149.86) (xy 153.67 149.86)
 		)
 		(stroke
 			(width 0)
@@ -4558,7 +5263,17 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 86.36) (xy 53.34 181.61)
+			(xy 29.21 60.96) (xy 29.21 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "966519e5-4add-4d18-8f01-5cec09ce0330")
+	)
+	(wire
+		(pts
+			(xy 62.23 86.36) (xy 62.23 181.61)
 		)
 		(stroke
 			(width 0)
@@ -4588,13 +5303,23 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 171.45) (xy 63.5 114.3)
+			(xy 72.39 171.45) (xy 72.39 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "99555bf6-9dc7-4420-9a82-a9d40831bbee")
+	)
+	(wire
+		(pts
+			(xy 29.21 73.66) (xy 29.21 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a2e987f-8769-4d7c-b77b-6fa28e2570d5")
 	)
 	(wire
 		(pts
@@ -4608,7 +5333,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 179.07) (xy 71.12 179.07)
+			(xy 64.77 179.07) (xy 80.01 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4618,13 +5343,33 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 54.61) (xy 67.31 54.61)
+			(xy 58.42 54.61) (xy 67.31 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a0016cc1-efc9-4ab0-b2b8-a9d33d4111f9")
+	)
+	(wire
+		(pts
+			(xy 153.67 179.07) (xy 153.67 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a08abf20-3f92-40f2-ba37-8d5478124f63")
+	)
+	(wire
+		(pts
+			(xy 163.83 184.15) (xy 163.83 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a222ab7a-ec95-4381-8fe4-08f06e7fa318")
 	)
 	(wire
 		(pts
@@ -4638,13 +5383,23 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 161.29) (xy 55.88 161.29)
+			(xy 80.01 161.29) (xy 64.77 161.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a3c047af-9ff4-483f-9451-1a9576577dde")
+	)
+	(wire
+		(pts
+			(xy 163.83 176.53) (xy 163.83 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a48b3e1b-f8bf-4c0c-aa30-71471e5131fc")
 	)
 	(wire
 		(pts
@@ -4688,16 +5443,6 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 68.58) (xy 50.8 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aafe7771-0750-4b5d-9796-bc848728780f")
-	)
-	(wire
-		(pts
 			(xy 142.24 58.42) (xy 142.24 55.88)
 		)
 		(stroke
@@ -4715,16 +5460,6 @@
 			(type default)
 		)
 		(uuid "ae1ecd85-4bb1-442d-ae7a-266330ea5207")
-	)
-	(wire
-		(pts
-			(xy 71.12 176.53) (xy 48.26 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1197ddb-b771-4907-b129-85329e7a4959")
 	)
 	(wire
 		(pts
@@ -4748,7 +5483,27 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 153.67) (xy 58.42 100.33)
+			(xy 25.4 78.74) (xy 25.4 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc60bab7-afac-4c42-89a9-c925aac13001")
+	)
+	(wire
+		(pts
+			(xy 58.42 63.5) (xy 110.49 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcc4c6ac-bbce-4ca7-8cf0-6dabfea01ac3")
+	)
+	(wire
+		(pts
+			(xy 67.31 153.67) (xy 67.31 100.33)
 		)
 		(stroke
 			(width 0)
@@ -4758,7 +5513,27 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 181.61) (xy 53.34 181.61)
+			(xy 41.91 93.98) (xy 24.13 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c07b044b-5e72-4cb1-ab9b-cce5dba03ffa")
+	)
+	(wire
+		(pts
+			(xy 29.21 71.12) (xy 29.21 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1c62822-0a56-4d2c-b184-54da1de66855")
+	)
+	(wire
+		(pts
+			(xy 80.01 181.61) (xy 62.23 181.61)
 		)
 		(stroke
 			(width 0)
@@ -4768,7 +5543,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 116.84) (xy 60.96 156.21)
+			(xy 69.85 116.84) (xy 69.85 156.21)
 		)
 		(stroke
 			(width 0)
@@ -4788,17 +5563,27 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 66.04) (xy 113.03 66.04)
+			(xy 29.21 78.74) (xy 25.4 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c25d9180-444f-4977-aeb3-62197f3ee206")
+		(uuid "c25275a5-9246-49c0-bcf4-905402e852c2")
 	)
 	(wire
 		(pts
-			(xy 138.43 135.89) (xy 137.16 135.89)
+			(xy 24.13 83.82) (xy 29.21 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c30a1b22-5fef-4e27-a455-899cc90a4c97")
+	)
+	(wire
+		(pts
+			(xy 147.32 135.89) (xy 146.05 135.89)
 		)
 		(stroke
 			(width 0)
@@ -4808,7 +5593,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 68.58) (xy 50.8 173.99)
+			(xy 59.69 68.58) (xy 59.69 73.66)
 		)
 		(stroke
 			(width 0)
@@ -4848,7 +5633,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 114.3) (xy 208.28 114.3)
+			(xy 72.39 114.3) (xy 208.28 114.3)
 		)
 		(stroke
 			(width 0)
@@ -4868,17 +5653,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 63.5) (xy 45.72 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0fc631e-580d-4622-a6fb-13f2c4ee6985")
-	)
-	(wire
-		(pts
-			(xy 55.88 88.9) (xy 195.58 88.9)
+			(xy 64.77 88.9) (xy 195.58 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4928,7 +5703,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 156.21) (xy 71.12 156.21)
+			(xy 69.85 156.21) (xy 80.01 156.21)
 		)
 		(stroke
 			(width 0)
@@ -4978,7 +5753,17 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 86.36) (xy 208.28 86.36)
+			(xy 25.4 60.96) (xy 29.21 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1c29c10-dd51-4873-9d91-2c9312a51a56")
+	)
+	(wire
+		(pts
+			(xy 62.23 86.36) (xy 208.28 86.36)
 		)
 		(stroke
 			(width 0)
@@ -5008,13 +5793,33 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 54.61) (xy 45.72 35.56)
+			(xy 54.61 60.96) (xy 54.61 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9dc1d3a-09bb-4450-b056-fca693e8b80d")
+	)
+	(wire
+		(pts
+			(xy 58.42 54.61) (xy 58.42 35.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "fb8a1157-e8dd-41ce-b691-c8774de17493")
+	)
+	(wire
+		(pts
+			(xy 41.91 95.25) (xy 41.91 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fba8a331-08c2-4bef-afbc-f77c463e5454")
 	)
 	(wire
 		(pts
@@ -5026,6 +5831,16 @@
 		)
 		(uuid "fd39e9ea-796b-4794-8155-d577acfe7726")
 	)
+	(wire
+		(pts
+			(xy 54.61 78.74) (xy 58.42 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff5e547a-02e7-4749-9aea-4df61edea3d4")
+	)
 	(label "PWM_Fan1"
 		(at 233.68 88.9 0)
 		(effects
@@ -5035,6 +5850,16 @@
 			(justify left bottom)
 		)
 		(uuid "0ef1c7d1-4a4d-45db-866b-b1ac75187b26")
+	)
+	(label "GPIO_Peltier2"
+		(at 64.77 176.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0f5c13c8-52ca-43c1-95e0-7b5d24799097")
 	)
 	(label "Peltier3"
 		(at 173.99 63.5 0)
@@ -5056,6 +5881,16 @@
 		)
 		(uuid "2808effb-5f04-41cc-88fa-3bc6a34078e2")
 	)
+	(label "T_sensor_2"
+		(at 153.67 179.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "330cf1b3-8dfd-4d95-ae87-59126d114151")
+	)
 	(label "GPIO_Tacho_Fan2B"
 		(at 167.64 129.54 0)
 		(effects
@@ -5065,6 +5900,26 @@
 			(justify left bottom)
 		)
 		(uuid "45dbe9bd-1f0f-47be-9938-566b60c7d8bf")
+	)
+	(label "T_sensor_2"
+		(at 152.4 151.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4f98efe5-5626-4a63-ae03-550ed86c4f43")
+	)
+	(label "GPIO_Peltier3"
+		(at 64.77 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "51ef1f46-a458-49e2-a383-70b6df9a90e5")
 	)
 	(label "GPIO_Fan2"
 		(at 181.61 116.84 0)
@@ -5086,8 +5941,8 @@
 		)
 		(uuid "6d7acaa3-3536-4974-85b5-fd9b424a55d8")
 	)
-	(label "T_sensor"
-		(at 148.59 158.75 0)
+	(label "T_sensor_1"
+		(at 153.67 158.75 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5117,7 +5972,17 @@
 		(uuid "713b234c-1768-49a1-8d41-79f5ea48c246")
 	)
 	(label "GPIO_Peltier2"
-		(at 74.93 66.04 0)
+		(at 15.24 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7488f0d8-d481-4183-9af2-01ca6e156f51")
+	)
+	(label "Gate_Peltier2"
+		(at 85.09 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5125,6 +5990,16 @@
 			(justify left bottom)
 		)
 		(uuid "756445f8-37c0-44f8-b8bb-4b7f10aa0944")
+	)
+	(label "GPIO_Peltier1"
+		(at 15.24 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a3eb1ee8-84be-4918-9e21-df06607acc3e")
 	)
 	(label "Tacho_Fan2A"
 		(at 226.06 114.3 0)
@@ -5166,8 +6041,8 @@
 		)
 		(uuid "c10956ce-4382-4b7d-ab5c-3ad2d182da7f")
 	)
-	(label "GPIO_Peltier3"
-		(at 84.4012 68.58 0)
+	(label "Gate_Peltier3"
+		(at 85.09 68.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5175,6 +6050,16 @@
 			(justify left bottom)
 		)
 		(uuid "ccfce2c8-3fcb-49ec-8607-a72df4559077")
+	)
+	(label "GPIO_Peltier1"
+		(at 64.77 179.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d97fe620-9bf0-43be-b5e3-6ca3494d572e")
 	)
 	(label "Tacho_Fan2B"
 		(at 226.06 129.54 0)
@@ -5186,8 +6071,8 @@
 		)
 		(uuid "d98e75ea-3ec3-47db-a233-10aef43e918b")
 	)
-	(label "GPIO_Peltier1"
-		(at 67.31 63.5 0)
+	(label "Gate_Peltier1"
+		(at 85.09 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5215,6 +6100,206 @@
 			(justify left bottom)
 		)
 		(uuid "e8fa2395-33d7-4ef0-a8c5-85630f21c65d")
+	)
+	(label "GPIO_Peltier3"
+		(at 15.24 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f7edcf04-2a06-48eb-94d6-024c984405d1")
+	)
+	(symbol
+		(lib_id "74xx:74LS241")
+		(at 41.91 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "01aea869-e338-4bde-beab-b4d5790fe348")
+		(property "Reference" "U1"
+			(at 44.0533 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CD74HCT241E"
+			(at 44.0533 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm_LongPads"
+			(at 41.91 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74ls241.pdf"
+			(at 41.91 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Octal Buffer and Line Driver With 3-State Output, complementary enables, non-inverting outputs"
+			(at 41.91 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "12"
+			(uuid "5bf3819c-2ace-473b-b0db-c07e183d0ba8")
+		)
+		(pin "17"
+			(uuid "bf0b2462-8cfe-40e9-a80c-79ebaf6ebf38")
+		)
+		(pin "7"
+			(uuid "f993e550-e76f-4269-9859-7c7f7ec426d2")
+		)
+		(pin "15"
+			(uuid "b90b7df0-400a-43f9-a182-bd94663174ba")
+		)
+		(pin "1"
+			(uuid "2679e256-8c73-47e0-b5f1-8c776aff3e7d")
+		)
+		(pin "20"
+			(uuid "f47a915e-07e8-4e8f-b19f-c8d6e30fa507")
+		)
+		(pin "9"
+			(uuid "51abeb7e-a5a5-4cdb-ad6c-9c9a42856ebd")
+		)
+		(pin "19"
+			(uuid "3a42d1c8-4f7b-4765-9e59-6c3ce0fe6d20")
+		)
+		(pin "13"
+			(uuid "986eac06-d76a-4b9b-ad2d-51883daa5a56")
+		)
+		(pin "11"
+			(uuid "b2c4d3d5-77e9-4417-9663-fff16251ad52")
+		)
+		(pin "3"
+			(uuid "6fe368d3-d91b-44dd-9c83-8b05a49ad26c")
+		)
+		(pin "10"
+			(uuid "baed5d1b-3e88-47e7-a759-4761d6a905d1")
+		)
+		(pin "5"
+			(uuid "977df415-4a71-43b0-94fb-1aa983725298")
+		)
+		(pin "18"
+			(uuid "d28403e2-062c-44a9-a5e1-307590e00551")
+		)
+		(pin "8"
+			(uuid "ca8cda2c-6d61-40db-a84d-1a6a37e8f651")
+		)
+		(pin "4"
+			(uuid "2e95b480-cff7-4b6b-9b3e-23c0e28784c0")
+		)
+		(pin "2"
+			(uuid "aa76f646-15d9-454c-b8b8-d9b4b4f2ed22")
+		)
+		(pin "6"
+			(uuid "3bd2650f-8cab-4aa4-a8c8-e8455fe56c5b")
+		)
+		(pin "16"
+			(uuid "9530e51e-89fa-4d72-b2b7-b0f40db689ba")
+		)
+		(pin "14"
+			(uuid "895a1533-043d-4bbd-a5cc-7dec62fa9c1f")
+		)
+		(instances
+			(project ""
+				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 163.83 184.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "04c6ef37-a5e8-454f-bcf2-f56617219da7")
+		(property "Reference" "#PWR028"
+			(at 163.83 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 163.83 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 163.83 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c0b54e7d-88ff-4507-8b12-558559b7a5b6")
+		)
+		(instances
+			(project "PCB_Ventil"
+				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Diode:1N4002")
@@ -5544,7 +6629,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/SWR25X-NRTC-S04-ST-BA/2769654"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/molex/0470531000/2421261"
 			(at 259.08 127 0)
 			(effects
 				(font
@@ -5562,7 +6647,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "SWR25X-NRTC-S04-ST-BA"
+		(property "Farnell Part Number" "0470531000"
 			(at 259.08 127 0)
 			(effects
 				(font
@@ -5571,7 +6656,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.11"
+		(property "Farnell Price/Stock" "0.44"
 			(at 259.08 127 0)
 			(effects
 				(font
@@ -5603,7 +6688,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 142.24 190.5 0)
+		(at 151.13 190.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -5612,7 +6697,7 @@
 		(fields_autoplaced yes)
 		(uuid "1479fb4e-1313-498d-9ad2-1fabccb5d741")
 		(property "Reference" "J17"
-			(at 144.78 190.4999 0)
+			(at 153.67 190.4999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5621,7 +6706,7 @@
 			)
 		)
 		(property "Value" "Peltier1+"
-			(at 144.78 191.7699 0)
+			(at 153.67 191.7699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5631,7 +6716,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 142.24 190.5 0)
+			(at 151.13 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5639,8 +6724,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 142.24 190.5 0)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
+			(at 151.13 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5649,7 +6734,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 142.24 190.5 0)
+			(at 151.13 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5657,8 +6742,8 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
-			(at 142.24 190.5 0)
+		(property "Farnell Part Number" "4966"
+			(at 151.13 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5666,8 +6751,8 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
-			(at 142.24 190.5 0)
+		(property "Farnell Price/Stock" ".18"
+			(at 151.13 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5686,7 +6771,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 144.78 153.67 0)
+		(at 153.67 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5695,7 +6780,7 @@
 		(fields_autoplaced yes)
 		(uuid "16e0d240-30b0-4fe6-8c3c-42f5f2dc931c")
 		(property "Reference" "R7"
-			(at 147.32 152.3999 0)
+			(at 156.21 152.3999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5704,7 +6789,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 147.32 154.9399 0)
+			(at 156.21 154.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5713,7 +6798,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
-			(at 143.002 153.67 90)
+			(at 151.892 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5722,7 +6807,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 153.67 0)
+			(at 153.67 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5731,7 +6816,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 144.78 153.67 0)
+			(at 153.67 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5740,7 +6825,7 @@
 			)
 		)
 		(property "Farnell Price/Stock" "0"
-			(at 144.78 153.67 0)
+			(at 153.67 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6054,6 +7139,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 41.91 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2180529f-0bce-4171-adb0-ae9617f143aa")
+		(property "Reference" "#PWR029"
+			(at 41.91 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 41.91 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 41.91 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b7228875-8807-4922-a3bf-088f50f70129")
+		)
+		(instances
+			(project "PCB_Ventil"
+				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 189.23 41.91 90)
 		(unit 1)
@@ -6089,7 +7240,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-bright-optoelectronics-corporation/BL-B5134-1-TBS20A/22486920?s=N4IgTCBcDaIEIBkC0cCsBGAzAFiepAKnAMpgAMAgiALoC%2BQA"
 			(at 189.23 41.91 0)
 			(effects
 				(font
@@ -6116,6 +7267,24 @@
 				(hide yes)
 			)
 		)
+		(property "Farnell Part Number" "BL-B5134-1-TBS20A"
+			(at 189.23 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price/Stock" "0.075"
+			(at 189.23 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d33b71cf-59f3-4a58-b612-147e9437b1c3")
 		)
@@ -6133,7 +7302,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x03")
-		(at 163.83 158.75 0)
+		(at 168.91 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6142,7 +7311,7 @@
 		(fields_autoplaced yes)
 		(uuid "28ed2f3f-f481-4bcd-ae12-1782ec39ffab")
 		(property "Reference" "J4"
-			(at 166.37 157.4799 0)
+			(at 171.45 157.4799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6150,8 +7319,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DS18B20"
-			(at 166.37 160.0199 0)
+		(property "Value" "NTC1"
+			(at 171.45 160.0199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6160,7 +7329,7 @@
 			)
 		)
 		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm"
-			(at 163.83 158.75 0)
+			(at 168.91 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6169,7 +7338,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/dcomponents/BLR513-5-V/27565851"
-			(at 163.83 158.75 0)
+			(at 168.91 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6178,7 +7347,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 163.83 158.75 0)
+			(at 168.91 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6187,7 +7356,7 @@
 			)
 		)
 		(property "Farnell Part Number" "BLR513-5-V"
-			(at 163.83 158.75 0)
+			(at 168.91 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6196,7 +7365,7 @@
 			)
 		)
 		(property "Farnell Price/Stock" "0.424"
-			(at 163.83 158.75 0)
+			(at 168.91 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6259,7 +7428,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.digikey.com/en/products/detail/keystone-electronics/1287/124268"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
 			(at 210.82 63.5 0)
 			(effects
 				(font
@@ -6277,7 +7446,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
+		(property "Farnell Part Number" "4966"
 			(at 210.82 63.5 0)
 			(effects
 				(font
@@ -6286,7 +7455,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
+		(property "Farnell Price/Stock" ".18"
 			(at 210.82 63.5 0)
 			(effects
 				(font
@@ -6489,7 +7658,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.digikey.com/en/products/detail/keystone-electronics/1287/124268"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
 			(at 210.82 45.72 0)
 			(effects
 				(font
@@ -6507,7 +7676,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
+		(property "Farnell Part Number" "4966"
 			(at 210.82 45.72 0)
 			(effects
 				(font
@@ -6516,7 +7685,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
+		(property "Farnell Price/Stock" ".18"
 			(at 210.82 45.72 0)
 			(effects
 				(font
@@ -6783,7 +7952,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.digikey.com/en/products/detail/keystone-electronics/1287/124268"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
 			(at 210.82 22.86 0)
 			(effects
 				(font
@@ -6801,7 +7970,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
+		(property "Farnell Part Number" "4966"
 			(at 210.82 22.86 0)
 			(effects
 				(font
@@ -6810,7 +7979,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
+		(property "Farnell Price/Stock" ".18"
 			(at 210.82 22.86 0)
 			(effects
 				(font
@@ -7040,7 +8209,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.digikey.com/en/products/detail/keystone-electronics/1287/124268"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
 			(at 29.21 39.37 0)
 			(effects
 				(font
@@ -7058,7 +8227,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
+		(property "Farnell Part Number" "4966"
 			(at 29.21 39.37 0)
 			(effects
 				(font
@@ -7067,7 +8236,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
+		(property "Farnell Price/Stock" ".18"
 			(at 29.21 39.37 0)
 			(effects
 				(font
@@ -7125,7 +8294,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/SWR25X-NRTC-S04-ST-BA/2769654"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/molex/0470531000/2421261"
 			(at 259.08 83.82 0)
 			(effects
 				(font
@@ -7143,7 +8312,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "SWR25X-NRTC-S04-ST-BA"
+		(property "Farnell Part Number" "0470531000"
 			(at 259.08 83.82 0)
 			(effects
 				(font
@@ -7152,7 +8321,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.11"
+		(property "Farnell Price/Stock" "0.44"
 			(at 259.08 83.82 0)
 			(effects
 				(font
@@ -7249,6 +8418,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 153.67 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5d125b78-87f3-4caa-b146-b737aa55e9c9")
+		(property "Reference" "R22"
+			(at 156.21 172.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 156.21 175.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
+			(at 151.892 173.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 153.67 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 153.67 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price/Stock" "0"
+			(at 153.67 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38e8fd7e-0c58-48ba-97af-f475ec4b2331")
+		)
+		(pin "2"
+			(uuid "c23d316b-efb5-4ade-a4b6-b0636f46a041")
+		)
+		(instances
+			(project "PCB_Ventil"
+				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
+					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x01")
 		(at 210.82 40.64 0)
 		(unit 1)
@@ -7285,7 +8533,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.digikey.com/en/products/detail/keystone-electronics/1287/124268"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
 			(at 210.82 40.64 0)
 			(effects
 				(font
@@ -7303,7 +8551,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
+		(property "Farnell Part Number" "4966"
 			(at 210.82 40.64 0)
 			(effects
 				(font
@@ -7312,7 +8560,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
+		(property "Farnell Price/Stock" ".18"
 			(at 210.82 40.64 0)
 			(effects
 				(font
@@ -7513,7 +8761,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.digikey.com/en/products/detail/keystone-electronics/1287/124268"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
 			(at 210.82 27.94 0)
 			(effects
 				(font
@@ -7531,7 +8779,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
+		(property "Farnell Part Number" "4966"
 			(at 210.82 27.94 0)
 			(effects
 				(font
@@ -7540,7 +8788,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
+		(property "Farnell Price/Stock" ".18"
 			(at 210.82 27.94 0)
 			(effects
 				(font
@@ -7729,7 +8977,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-bright-optoelectronics-corporation/BL-B5134-1-TBS20A/22486920?s=N4IgTCBcDaIEIBkC0cCsBGAzAFiepAKnAMpgAMAgiALoC%2BQA"
 			(at 189.23 24.13 0)
 			(effects
 				(font
@@ -7749,6 +8997,24 @@
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 189.23 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "BL-B5134-1-TBS20A"
+			(at 189.23 24.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price/Stock" "0.075"
+			(at 189.23 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7893,7 +9159,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.digikey.com/en/products/detail/keystone-electronics/1287/124268"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
 			(at 29.21 27.94 0)
 			(effects
 				(font
@@ -7911,7 +9177,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
+		(property "Farnell Part Number" "4966"
 			(at 29.21 27.94 0)
 			(effects
 				(font
@@ -7920,7 +9186,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
+		(property "Farnell Price/Stock" ".18"
 			(at 29.21 27.94 0)
 			(effects
 				(font
@@ -7943,7 +9209,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 144.78 149.86 0)
+		(at 153.67 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7952,7 +9218,7 @@
 		(fields_autoplaced yes)
 		(uuid "8001df8a-7351-45d7-a263-44780892a282")
 		(property "Reference" "#PWR012"
-			(at 144.78 153.67 0)
+			(at 153.67 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7961,7 +9227,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 144.78 144.78 0)
+			(at 153.67 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7969,7 +9235,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 144.78 149.86 0)
+			(at 153.67 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7978,7 +9244,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 149.86 0)
+			(at 153.67 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7987,7 +9253,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 144.78 149.86 0)
+			(at 153.67 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8078,6 +9344,89 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 142.24 195.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "830ef73c-8371-4495-bd9d-b45d26f22954")
+		(property "Reference" "J21"
+			(at 144.78 195.5799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Peltier1+"
+			(at 144.78 196.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 142.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
+			(at 142.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 142.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "4966"
+			(at 142.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price/Stock" ".18"
+			(at 142.24 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "PCB_Ventil"
+				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
+					(reference "J21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x01")
 		(at 210.82 58.42 0)
 		(unit 1)
@@ -8114,7 +9463,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.digikey.com/en/products/detail/keystone-electronics/1287/124268"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
 			(at 210.82 58.42 0)
 			(effects
 				(font
@@ -8132,7 +9481,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
+		(property "Farnell Part Number" "4966"
 			(at 210.82 58.42 0)
 			(effects
 				(font
@@ -8141,7 +9490,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
+		(property "Farnell Price/Stock" ".18"
 			(at 210.82 58.42 0)
 			(effects
 				(font
@@ -8199,7 +9548,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/SWR25X-NRTC-S04-ST-BA/2769654"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/molex/0470531000/2421261"
 			(at 259.08 97.79 0)
 			(effects
 				(font
@@ -8217,7 +9566,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "SWR25X-NRTC-S04-ST-BA"
+		(property "Farnell Part Number" "0470531000"
 			(at 259.08 97.79 0)
 			(effects
 				(font
@@ -8226,7 +9575,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.11"
+		(property "Farnell Price/Stock" "0.44"
 			(at 259.08 97.79 0)
 			(effects
 				(font
@@ -8282,7 +9631,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
 			(at 119.38 52.578 90)
 			(effects
 				(font
@@ -8517,7 +9866,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 181.61 154.94 90)
+		(at 262.89 154.94 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8525,7 +9874,7 @@
 		(dnp yes)
 		(uuid "8d450525-244a-4852-b6ec-00bb5f0b37b6")
 		(property "Reference" "D8"
-			(at 176.276 153.924 90)
+			(at 257.556 153.924 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8534,7 +9883,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 176.276 156.464 90)
+			(at 257.556 156.464 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8543,7 +9892,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D5.0mm"
-			(at 181.61 154.94 0)
+			(at 262.89 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8551,8 +9900,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 181.61 154.94 0)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-bright-optoelectronics-corporation/BL-B5134-1-TBS20A/22486920?s=N4IgTCBcDaIEIBkC0cCsBGAzAFiepAKnAMpgAMAgiALoC%2BQA"
+			(at 262.89 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8561,7 +9910,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 181.61 154.94 0)
+			(at 262.89 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8570,7 +9919,25 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 181.61 154.94 0)
+			(at 262.89 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "BL-B5134-1-TBS20A"
+			(at 262.89 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price/Stock" "0.075"
+			(at 262.89 154.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8755,7 +10122,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 181.61 147.32 0)
+		(at 262.89 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8763,7 +10130,7 @@
 		(dnp yes)
 		(uuid "91eb0d04-5abb-4f5a-8523-f1a76a7dd064")
 		(property "Reference" "R21"
-			(at 176.784 147.32 90)
+			(at 258.064 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8771,7 +10138,7 @@
 			)
 		)
 		(property "Value" "2k"
-			(at 179.324 147.32 90)
+			(at 260.604 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8779,7 +10146,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
-			(at 179.832 147.32 90)
+			(at 261.112 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8788,7 +10155,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 147.32 0)
+			(at 262.89 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8797,7 +10164,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 181.61 147.32 0)
+			(at 262.89 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8806,7 +10173,7 @@
 			)
 		)
 		(property "Farnell Price/Stock" "0"
-			(at 181.61 147.32 0)
+			(at 262.89 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8831,7 +10198,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Raspberry_Pi_4")
-		(at 104.14 158.75 0)
+		(at 113.03 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8840,7 +10207,7 @@
 		(fields_autoplaced yes)
 		(uuid "924540cc-9366-459a-a2ec-5894ab6a7feb")
 		(property "Reference" "J3"
-			(at 104.14 128.27 0)
+			(at 113.03 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8848,7 +10215,7 @@
 			)
 		)
 		(property "Value" "Raspberry_Pi_4"
-			(at 104.14 130.81 0)
+			(at 113.03 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8856,7 +10223,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical"
-			(at 174.244 206.248 0)
+			(at 183.134 206.248 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8866,7 +10233,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61304021821/16608657"
-			(at 119.888 191.008 0)
+			(at 128.778 191.008 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8876,7 +10243,7 @@
 			)
 		)
 		(property "Description" "Raspberry Pi 4 Model B"
-			(at 119.888 188.468 0)
+			(at 128.778 188.468 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8886,7 +10253,7 @@
 			)
 		)
 		(property "Farnell Part Number" "61304021821"
-			(at 104.14 158.75 0)
+			(at 113.03 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8895,7 +10262,7 @@
 			)
 		)
 		(property "Farnell Price/Stock" "1.76"
-			(at 104.14 158.75 0)
+			(at 113.03 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9069,7 +10436,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/SWR25X-NRTC-S04-ST-BA/2769654"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/molex/0470531000/2421261"
 			(at 259.08 111.76 0)
 			(effects
 				(font
@@ -9087,7 +10454,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "SWR25X-NRTC-S04-ST-BA"
+		(property "Farnell Part Number" "0470531000"
 			(at 259.08 111.76 0)
 			(effects
 				(font
@@ -9096,7 +10463,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.11"
+		(property "Farnell Price/Stock" "0.44"
 			(at 259.08 111.76 0)
 			(effects
 				(font
@@ -9121,6 +10488,72 @@
 			(project "PCB_Ventil"
 				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
 					(reference "J13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 41.91 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9527811c-792d-4ce6-872d-8a97941f3cc7")
+		(property "Reference" "#PWR030"
+			(at 41.91 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 41.91 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 41.91 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f28568b0-5523-4bab-a7fe-a3c80363a15a")
+		)
+		(instances
+			(project "PCB_Ventil"
+				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -9207,7 +10640,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 104.14 186.69 0)
+		(at 113.03 186.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9216,7 +10649,7 @@
 		(fields_autoplaced yes)
 		(uuid "99190d25-51bf-4132-b89d-f861449753cd")
 		(property "Reference" "#PWR04"
-			(at 104.14 193.04 0)
+			(at 113.03 193.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9225,7 +10658,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 104.14 191.77 0)
+			(at 113.03 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9233,7 +10666,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 186.69 0)
+			(at 113.03 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9242,7 +10675,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 186.69 0)
+			(at 113.03 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9251,7 +10684,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 104.14 186.69 0)
+			(at 113.03 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9273,7 +10706,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 142.24 138.43 0)
+		(at 151.13 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9282,7 +10715,7 @@
 		(fields_autoplaced yes)
 		(uuid "9969be2d-0fba-42c5-af8c-f8fb5bfe65b2")
 		(property "Reference" "#PWR011"
-			(at 142.24 142.24 0)
+			(at 151.13 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9291,7 +10724,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 142.24 133.35 0)
+			(at 151.13 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9299,7 +10732,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 138.43 0)
+			(at 151.13 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9308,7 +10741,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 138.43 0)
+			(at 151.13 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9317,7 +10750,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 142.24 138.43 0)
+			(at 151.13 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9371,7 +10804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.digikey.com/en/products/detail/keystone-electronics/1287/124268"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
 			(at 29.21 31.75 0)
 			(effects
 				(font
@@ -9389,7 +10822,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
+		(property "Farnell Part Number" "4966"
 			(at 29.21 31.75 0)
 			(effects
 				(font
@@ -9398,7 +10831,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
+		(property "Farnell Price/Stock" ".18"
 			(at 29.21 31.75 0)
 			(effects
 				(font
@@ -9497,6 +10930,163 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 21.59 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aed42ec0-bfae-44a4-84c8-3d4d8d3e62a8")
+		(property "Reference" "#PWR031"
+			(at 21.59 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 21.59 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 21.59 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 21.59 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 21.59 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6c606ffa-3ef6-48e2-8556-a401df5bc824")
+		)
+		(instances
+			(project "PCB_Ventil"
+				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x03")
+		(at 168.91 179.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b0ac9076-1b4a-4f6e-8177-48dd3c424308")
+		(property "Reference" "J19"
+			(at 171.45 177.7999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NTC2"
+			(at 171.45 180.3399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm"
+			(at 168.91 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/dcomponents/BLR513-5-V/27565851"
+			(at 168.91 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 168.91 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "BLR513-5-V"
+			(at 168.91 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price/Stock" "0.424"
+			(at 168.91 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f5aa2173-e6c4-4b28-990d-119dc258104c")
+		)
+		(pin "2"
+			(uuid "94f8e73a-f4b9-44ff-91e6-51b92506b449")
+		)
+		(pin "3"
+			(uuid "73abefba-f81b-4b8e-a865-bc7efd4160cc")
+		)
+		(instances
+			(project "PCB_Ventil"
+				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
+					(reference "J19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 208.28 106.68 0)
 		(unit 1)
@@ -9563,6 +11153,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 153.67 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bb540c2b-aa6d-44b5-8d3b-8586b0803b03")
+		(property "Reference" "#PWR027"
+			(at 153.67 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 153.67 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 153.67 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 153.67 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 153.67 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "353cfccc-c11d-4d28-b919-9034bc8d2c23")
+		)
+		(instances
+			(project "PCB_Ventil"
+				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 119.38 33.02 90)
 		(unit 1)
@@ -9588,7 +11244,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
 			(at 119.38 34.798 90)
 			(effects
 				(font
@@ -9993,7 +11649,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-bright-optoelectronics-corporation/BL-B5134-1-TBS20A/22486920?s=N4IgTCBcDaIEIBkC0cCsBGAzAFiepAKnAMpgAMAgiALoC%2BQA"
 			(at 189.23 59.69 0)
 			(effects
 				(font
@@ -10013,6 +11669,24 @@
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 189.23 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "BL-B5134-1-TBS20A"
+			(at 189.23 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price/Stock" "0.075"
+			(at 189.23 59.69 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10256,7 +11930,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 138.43 135.89 0)
+		(at 147.32 135.89 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10265,7 +11939,7 @@
 		(fields_autoplaced yes)
 		(uuid "d367eea0-ec66-406c-964d-81496606b0c4")
 		(property "Reference" "#PWR09"
-			(at 138.43 139.7 0)
+			(at 147.32 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10274,7 +11948,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 138.43 130.81 0)
+			(at 147.32 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10282,7 +11956,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 135.89 0)
+			(at 147.32 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10291,7 +11965,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 135.89 0)
+			(at 147.32 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10300,7 +11974,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 138.43 135.89 0)
+			(at 147.32 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10474,7 +12148,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 158.75 163.83 0)
+		(at 163.83 163.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10483,7 +12157,7 @@
 		(fields_autoplaced yes)
 		(uuid "da1a0c43-aef3-4e60-b10e-8f23b70d8182")
 		(property "Reference" "#PWR014"
-			(at 158.75 170.18 0)
+			(at 163.83 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10492,7 +12166,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.75 168.91 0)
+			(at 163.83 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10500,7 +12174,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 158.75 163.83 0)
+			(at 163.83 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10509,7 +12183,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 163.83 0)
+			(at 163.83 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10518,7 +12192,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 158.75 163.83 0)
+			(at 163.83 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10533,6 +12207,89 @@
 			(project "PCB_Ventil"
 				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 142.24 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dd620cee-63b4-42f0-aa24-5ed83de5ffa2")
+		(property "Reference" "J20"
+			(at 144.78 190.4999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Peltier1+"
+			(at 144.78 191.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 142.24 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
+			(at 142.24 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 142.24 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Part Number" "4966"
+			(at 142.24 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Farnell Price/Stock" ".18"
+			(at 142.24 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "PCB_Ventil"
+				(path "/bc47b7d1-534f-4a17-b883-61e37a069876"
+					(reference "J20")
 					(unit 1)
 				)
 			)
@@ -10564,7 +12321,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
 			(at 199.39 118.618 90)
 			(effects
 				(font
@@ -10920,7 +12677,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
 			(at 218.44 116.078 90)
 			(effects
 				(font
@@ -11201,7 +12958,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 181.61 143.51 0)
+		(at 262.89 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11209,7 +12966,7 @@
 		(dnp no)
 		(uuid "fad9aa71-1ada-490e-8c0a-724edca8300b")
 		(property "Reference" "#PWR025"
-			(at 181.61 147.32 0)
+			(at 262.89 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11218,7 +12975,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 181.61 139.446 0)
+			(at 262.89 139.446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11226,7 +12983,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 143.51 0)
+			(at 262.89 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11235,7 +12992,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 143.51 0)
+			(at 262.89 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11244,7 +13001,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 181.61 143.51 0)
+			(at 262.89 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11300,7 +13057,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "www.digikey.com/en/products/detail/keystone-electronics/1287/124268"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
 			(at 29.21 35.56 0)
 			(effects
 				(font
@@ -11318,7 +13075,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
+		(property "Farnell Part Number" "4966"
 			(at 29.21 35.56 0)
 			(effects
 				(font
@@ -11327,7 +13084,7 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
+		(property "Farnell Price/Stock" ".18"
 			(at 29.21 35.56 0)
 			(effects
 				(font
@@ -11482,7 +13239,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 181.61 158.75 0)
+		(at 262.89 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11491,7 +13248,7 @@
 		(fields_autoplaced yes)
 		(uuid "ff031532-6248-467f-b434-2b33c4113768")
 		(property "Reference" "#PWR026"
-			(at 181.61 165.1 0)
+			(at 262.89 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11500,7 +13257,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 163.83 0)
+			(at 262.89 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11508,7 +13265,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 158.75 0)
+			(at 262.89 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11517,7 +13274,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 158.75 0)
+			(at 262.89 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11526,7 +13283,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 181.61 158.75 0)
+			(at 262.89 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11548,7 +13305,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 142.24 195.58 0)
+		(at 151.13 195.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -11557,7 +13314,7 @@
 		(fields_autoplaced yes)
 		(uuid "ff8414de-3de3-48a8-8e2d-8b0e8bbee8f4")
 		(property "Reference" "J18"
-			(at 144.78 195.5799 0)
+			(at 153.67 195.5799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11566,7 +13323,7 @@
 			)
 		)
 		(property "Value" "Peltier1+"
-			(at 144.78 196.8499 0)
+			(at 153.67 196.8499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11576,7 +13333,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 142.24 195.58 0)
+			(at 151.13 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11584,8 +13341,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 142.24 195.58 0)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/keystone-electronics/4966/303924"
+			(at 151.13 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11594,7 +13351,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 142.24 195.58 0)
+			(at 151.13 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11602,8 +13359,8 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Part Number" "1287"
-			(at 142.24 195.58 0)
+		(property "Farnell Part Number" "4966"
+			(at 151.13 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11611,8 +13368,8 @@
 				(hide yes)
 			)
 		)
-		(property "Farnell Price/Stock" "0.08"
-			(at 142.24 195.58 0)
+		(property "Farnell Price/Stock" ".18"
+			(at 151.13 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
