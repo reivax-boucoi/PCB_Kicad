@@ -515,7 +515,7 @@
       "plot": "./output",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "PCB_Ventil.step",
+      "step": "../PCB_Ventil.step",
       "svg": "",
       "vrml": ""
     },
