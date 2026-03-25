@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Librairie_de_Mano")(type "KiCad")(uri "${KIPRJMOD}/Librairie_de_Mano.kicad_sym")(options "")(descr ""))
+)

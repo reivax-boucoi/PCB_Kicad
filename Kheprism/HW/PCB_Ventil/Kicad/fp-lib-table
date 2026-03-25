@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "1287_250mil_Tab_P5.08")(type "KiCad")(uri "${KIPRJMOD}/1287_250mil_Tab_P5.08.pretty")(options "")(descr ""))
+)

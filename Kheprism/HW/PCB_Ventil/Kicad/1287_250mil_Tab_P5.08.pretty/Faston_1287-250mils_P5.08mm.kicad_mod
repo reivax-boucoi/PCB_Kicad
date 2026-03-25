@@ -1,0 +1,129 @@
+(footprint "Faston_1287-250mils_P5.08mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
+	(tags "terminal block bornier2")
+	(property "Reference" "REF**"
+		(at 2.54 -5.08 0)
+		(layer "F.SilkS")
+		(uuid "58a768f0-cbed-4992-a8f5-68a9cb9221fd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Faston_1287-250mils_P5.08mm"
+		(at 2.54 5.08 0)
+		(layer "F.Fab")
+		(uuid "e6b5beef-cd67-490e-836f-44290a595873")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bcff6493-3183-47f7-b436-1b98ebcb2fea")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c278eaba-34db-4ee9-a58e-b3528294f2f0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -1.75 -1.75)
+		(end 6.75 1.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "bdaf5bc2-f288-4505-b7b0-6eea76cf7de5")
+	)
+	(fp_rect
+		(start -1.75 -1.75)
+		(end 6.75 1.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "5a80a0d5-118e-4e89-99d9-00335cd80804")
+	)
+	(fp_rect
+		(start -1.75 -1.75)
+		(end 6.75 1.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "bdb51006-5d4b-4767-aac0-ce467ef80f37")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 2.54 0 0)
+		(layer "F.Fab")
+		(uuid "107497c8-9ab4-407c-8c4a-38b42f271e19")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 3 3)
+		(drill 1.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ed716211-f3bc-4748-85ae-29b0c1f147de")
+	)
+	(pad "1" thru_hole circle
+		(at 5.08 0)
+		(size 3 3)
+		(drill 1.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "359ae08d-fb10-46a9-ada1-91305e0b3340")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/1287_250mil_Tab_P5.08.pretty/1287--3DModel-STEP-630548.STEP"
+		(offset
+			(xyz 2.54 0.5 -4)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)
