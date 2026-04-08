@@ -4958,6 +4958,25 @@
 			)
 		)
 		(symbol "BAT54_1_1"
+			(pin no_connect line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(hide yes)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin passive line
 				(at -5.08 0 0)
 				(length 3.81)
@@ -16428,7 +16447,7 @@
 				)
 			)
 			(pin power_in line
-				(at -2.54 -20.32 90)
+				(at -3.81 -20.32 90)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -16438,6 +16457,24 @@
 					)
 				)
 				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -1.27 -20.32 90)
+				(length 2.54)
+				(name "EP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -16608,6 +16645,7 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 	(symbol "Mini360"
 		(pin_names
@@ -16923,7 +16961,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:PSM01-082A-103B2_MotorizedPot"
 			(at 0 0 0)
 			(effects
 				(font
@@ -17015,7 +17053,7 @@
 						)
 					)
 				)
-				(number "6"
+				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17033,7 +17071,7 @@
 						)
 					)
 				)
-				(number "4"
+				(number "3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17051,7 +17089,7 @@
 						)
 					)
 				)
-				(number "5"
+				(number "4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17108,7 +17146,7 @@
 						)
 					)
 				)
-				(number "8"
+				(number "7"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17126,7 +17164,7 @@
 						)
 					)
 				)
-				(number "10"
+				(number "9"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17144,7 +17182,7 @@
 						)
 					)
 				)
-				(number "9"
+				(number "8"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17276,7 +17314,7 @@
 						)
 					)
 				)
-				(number "7"
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17533,6 +17571,25 @@
 					)
 				)
 				(number "E1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 0 3.81 270)
+				(length 2.54)
+				(hide yes)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "L1"
 					(effects
 						(font
 							(size 1.27 1.27)
