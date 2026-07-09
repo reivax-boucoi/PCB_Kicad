@@ -1,0 +1,175 @@
+(footprint "HB01RE"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "High voltage high value resistor")
+	(property "Reference" "REF**"
+		(at 10 -3.75 0)
+		(layer "F.SilkS")
+		(uuid "c8e530e9-bc9d-4054-93cf-d2e359b8f25d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "HB01RE"
+		(at 10 4 0)
+		(layer "F.Fab")
+		(uuid "76bb5eec-a8c6-48a1-a645-025bb8e46341")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "22571e31-8282-42da-aa70-f20ee1db4e9e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1238c914-ccf9-49d1-be32-8362c303eba4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -3.25 -1)
+		(end -2.75 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "6b2de956-de3c-4bad-ab7d-486944d3c270")
+	)
+	(fp_line
+		(start -3.25 2.5)
+		(end -3.25 -1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "081eb248-8826-4af7-b91e-b5128a03336d")
+	)
+	(fp_line
+		(start 0 -1)
+		(end 20 -1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "13845dd5-c8ce-46d4-bc0d-7386447502e6")
+	)
+	(fp_line
+		(start 23.25 -1)
+		(end 22.75 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "87d89bf4-eae1-47a9-9552-bef265afd1ba")
+	)
+	(fp_line
+		(start 23.25 -1)
+		(end 23.25 2.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cbfd1c20-d902-4984-b2e1-c0a8d02eb8af")
+	)
+	(fp_line
+		(start 23.25 2.5)
+		(end -3.25 2.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3ff136ad-8b47-4f7a-a387-b285db93d98b")
+	)
+	(fp_rect
+		(start -3.5 -1.75)
+		(end 23.5 2.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "41e77259-8f4e-451c-b1a0-de0305ec8957")
+	)
+	(fp_rect
+		(start -3.25 -1.5)
+		(end 23.25 2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "7a7cfcb1-694b-409f-abba-42993efd31a2")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 10 0.75 0)
+		(layer "F.Fab")
+		(uuid "dfb07c5d-7af5-4779-b119-da16a44d760a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -1.45 0)
+		(size 2.8 2.8)
+		(drill 1.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1c17ab79-d63b-47c0-8c6f-cf0994f25ee3")
+	)
+	(pad "2" thru_hole circle
+		(at 21.45 0)
+		(size 2.8 2.8)
+		(drill 1.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8529a8f4-4cf1-4495-8531-c2c14502aaec")
+	)
+	(embedded_fonts no)
+	(model "${KICAD_SYMBOL_LIB}/3Dmodels/HB01RE c-2-1625958-7-h1-3d.stp"
+		(offset
+			(xyz 10 -1 1)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -180 -0 -0)
+		)
+	)
+)
