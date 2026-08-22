@@ -1,7 +1,7 @@
 (footprint "GDC0570_LCD_6digits_2mmPitch"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 4.5 0)
@@ -21,18 +21,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "a6a2f39c-18c9-48cb-a2bf-95015bb1ca9a")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -448,6 +436,7 @@
 		(thermal_bridge_angle 45)
 		(uuid "1593550d-4ed8-4f77-9cbf-ba4eb8d5fa13")
 	)
+	(embedded_fonts no)
 	(model "${KICAD_USR_LIB_DIR}/3Dmodels/GDC0570_LCD.step"
 		(offset
 			(xyz 21 -0.25 12)
