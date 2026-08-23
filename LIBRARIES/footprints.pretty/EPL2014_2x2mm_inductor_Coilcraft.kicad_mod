@@ -55,8 +55,8 @@
 	)
 	(attr smd)
 	(fp_rect
-		(start -1 -1)
-		(end 1 1)
+		(start -1.1 -1.1)
+		(end 1.1 1.1)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -103,4 +103,15 @@
 		(uuid "85850990-08e1-4ad4-b893-5745c6eb5715")
 	)
 	(embedded_fonts no)
+	(model "${KICAD_USR_LIB_DIR}/3Dmodels/EPL2014.STEP"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
 )
