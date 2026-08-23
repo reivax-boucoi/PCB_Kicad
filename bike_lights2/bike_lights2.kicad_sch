@@ -441,33 +441,33 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:USB_C_Plug_USB2.0"
+		(symbol "Connector:USB_C_Receptacle_PowerOnly_6P"
 			(pin_names
 				(offset 1.016)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "P"
-				(at -10.16 19.05 0)
+			(property "Reference" "J"
+				(at 0 16.51 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify bottom)
 				)
 			)
-			(property "Value" "USB_C_Plug_USB2.0"
-				(at 12.7 19.05 0)
+			(property "Value" "USB_C_Receptacle_PowerOnly_6P"
+				(at 0 13.97 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
+					(justify bottom)
 				)
 			)
 			(property "Footprint" ""
-				(at 3.81 0 0)
+				(at 3.81 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -476,15 +476,6 @@
 				)
 			)
 			(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
-				(at 3.81 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "USB 2.0-only Type-C Plug connector"
 				(at 0 0 0)
 				(effects
 					(font
@@ -493,7 +484,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "usb universal serial bus type-C USB2.0"
+			(property "Description" "USB Power-Only 6P Type-C Receptacle connector"
 				(at 0 0 0)
 				(effects
 					(font
@@ -502,7 +493,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "USB*C*Plug*"
+			(property "ki_keywords" "usb universal serial bus type-C power-only charging-only 6P 6C"
 				(at 0 0 0)
 				(effects
 					(font
@@ -511,32 +502,19 @@
 					(hide yes)
 				)
 			)
-			(symbol "USB_C_Plug_USB2.0_0_0"
-				(rectangle
-					(start -0.254 -17.78)
-					(end 0.254 -16.764)
-					(stroke
-						(width 0)
-						(type default)
+			(property "ki_fp_filters" "USB*C*Receptacle*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
-					(fill
-						(type none)
-					)
+					(hide yes)
 				)
+			)
+			(symbol "USB_C_Receptacle_PowerOnly_6P_0_0"
 				(rectangle
-					(start 10.16 15.494)
-					(end 9.144 14.986)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 10.16 10.414)
-					(end 9.144 9.906)
+					(start -0.254 -12.7)
+					(end 0.254 -11.684)
 					(stroke
 						(width 0)
 						(type default)
@@ -557,8 +535,8 @@
 					)
 				)
 				(rectangle
-					(start 10.16 2.794)
-					(end 9.144 2.286)
+					(start 10.16 -4.826)
+					(end 9.144 -5.334)
 					(stroke
 						(width 0)
 						(type default)
@@ -568,8 +546,8 @@
 					)
 				)
 				(rectangle
-					(start 10.16 -2.286)
-					(end 9.144 -2.794)
+					(start 10.16 -7.366)
+					(end 9.144 -7.874)
 					(stroke
 						(width 0)
 						(type default)
@@ -579,10 +557,10 @@
 					)
 				)
 			)
-			(symbol "USB_C_Plug_USB2.0_0_1"
+			(symbol "USB_C_Receptacle_PowerOnly_6P_0_1"
 				(rectangle
-					(start -10.16 17.78)
-					(end 10.16 -17.78)
+					(start -10.16 12.7)
+					(end 10.16 -12.7)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -593,7 +571,7 @@
 				)
 				(polyline
 					(pts
-						(xy -8.89 -3.81) (xy -8.89 3.81)
+						(xy -8.89 -1.27) (xy -8.89 6.35)
 					)
 					(stroke
 						(width 0.508)
@@ -604,8 +582,8 @@
 					)
 				)
 				(rectangle
-					(start -7.62 -3.81)
-					(end -6.35 3.81)
+					(start -7.62 -1.27)
+					(end -6.35 6.35)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -615,9 +593,9 @@
 					)
 				)
 				(arc
-					(start -7.62 3.81)
-					(mid -6.985 4.4423)
-					(end -6.35 3.81)
+					(start -7.62 6.35)
+					(mid -6.985 6.9823)
+					(end -6.35 6.35)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -627,9 +605,9 @@
 					)
 				)
 				(arc
-					(start -7.62 3.81)
-					(mid -6.985 4.4423)
-					(end -6.35 3.81)
+					(start -7.62 6.35)
+					(mid -6.985 6.9823)
+					(end -6.35 6.35)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -639,9 +617,9 @@
 					)
 				)
 				(arc
-					(start -8.89 3.81)
-					(mid -6.985 5.7067)
-					(end -5.08 3.81)
+					(start -8.89 6.35)
+					(mid -6.985 8.2467)
+					(end -5.08 6.35)
 					(stroke
 						(width 0.508)
 						(type default)
@@ -651,9 +629,9 @@
 					)
 				)
 				(arc
-					(start -5.08 -3.81)
-					(mid -6.985 -5.7067)
-					(end -8.89 -3.81)
+					(start -5.08 -1.27)
+					(mid -6.985 -3.1667)
+					(end -8.89 -1.27)
 					(stroke
 						(width 0.508)
 						(type default)
@@ -663,9 +641,9 @@
 					)
 				)
 				(arc
-					(start -6.35 -3.81)
-					(mid -6.985 -4.4423)
-					(end -7.62 -3.81)
+					(start -6.35 -1.27)
+					(mid -6.985 -1.9023)
+					(end -7.62 -1.27)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -675,9 +653,9 @@
 					)
 				)
 				(arc
-					(start -6.35 -3.81)
-					(mid -6.985 -4.4423)
-					(end -7.62 -3.81)
+					(start -6.35 -1.27)
+					(mid -6.985 -1.9023)
+					(end -7.62 -1.27)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -688,7 +666,7 @@
 				)
 				(polyline
 					(pts
-						(xy -5.08 3.81) (xy -5.08 -3.81)
+						(xy -5.08 6.35) (xy -5.08 -1.27)
 					)
 					(stroke
 						(width 0.508)
@@ -699,7 +677,7 @@
 					)
 				)
 				(circle
-					(center -2.54 1.143)
+					(center -2.54 3.683)
 					(radius 0.635)
 					(stroke
 						(width 0.254)
@@ -711,7 +689,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 4.318) (xy 0 6.858) (xy 1.27 4.318) (xy -1.27 4.318)
+						(xy -1.27 6.858) (xy 0 9.398) (xy 1.27 6.858) (xy -1.27 6.858)
 					)
 					(stroke
 						(width 0.254)
@@ -723,7 +701,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -2.032) (xy 2.54 0.508) (xy 2.54 1.778)
+						(xy 0 0.508) (xy 2.54 3.048) (xy 2.54 4.318)
 					)
 					(stroke
 						(width 0.508)
@@ -735,7 +713,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -3.302) (xy -2.54 -0.762) (xy -2.54 0.508)
+						(xy 0 -0.762) (xy -2.54 1.778) (xy -2.54 3.048)
 					)
 					(stroke
 						(width 0.508)
@@ -747,7 +725,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -5.842) (xy 0 4.318)
+						(xy 0 -3.302) (xy 0 6.858)
 					)
 					(stroke
 						(width 0.508)
@@ -758,7 +736,7 @@
 					)
 				)
 				(circle
-					(center 0 -5.842)
+					(center 0 -3.302)
 					(radius 1.27)
 					(stroke
 						(width 0)
@@ -769,8 +747,8 @@
 					)
 				)
 				(rectangle
-					(start 1.905 1.778)
-					(end 3.175 3.048)
+					(start 1.905 4.318)
+					(end 3.175 5.588)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -780,9 +758,9 @@
 					)
 				)
 			)
-			(symbol "USB_C_Plug_USB2.0_1_1"
+			(symbol "USB_C_Receptacle_PowerOnly_6P_1_1"
 				(pin passive line
-					(at -7.62 -22.86 90)
+					(at -7.62 -17.78 90)
 					(length 5.08)
 					(name "SHIELD"
 						(effects
@@ -800,27 +778,8 @@
 					)
 				)
 				(pin passive line
-					(at 0 -22.86 90)
+					(at 0 -17.78 90)
 					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -22.86 90)
-					(length 5.08)
-					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -837,26 +796,7 @@
 					)
 				)
 				(pin passive line
-					(at 0 -22.86 90)
-					(length 5.08)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -22.86 90)
+					(at 0 -17.78 90)
 					(length 5.08)
 					(hide yes)
 					(name "GND"
@@ -875,27 +815,8 @@
 					)
 				)
 				(pin passive line
-					(at 15.24 15.24 180)
+					(at 15.24 7.62 180)
 					(length 5.08)
-					(name "VBUS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 15.24 15.24 180)
-					(length 5.08)
-					(hide yes)
 					(name "VBUS"
 						(effects
 							(font
@@ -912,26 +833,7 @@
 					)
 				)
 				(pin passive line
-					(at 15.24 15.24 180)
-					(length 5.08)
-					(hide yes)
-					(name "VBUS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 15.24 15.24 180)
+					(at 15.24 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "VBUS"
@@ -950,9 +852,9 @@
 					)
 				)
 				(pin bidirectional line
-					(at 15.24 10.16 180)
+					(at 15.24 -5.08 180)
 					(length 5.08)
-					(name "CC"
+					(name "CC1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -968,9 +870,9 @@
 					)
 				)
 				(pin bidirectional line
-					(at 15.24 7.62 180)
+					(at 15.24 -7.62 180)
 					(length 5.08)
-					(name "VCONN"
+					(name "CC2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -978,42 +880,6 @@
 						)
 					)
 					(number "B5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15.24 2.54 180)
-					(length 5.08)
-					(name "D-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15.24 -2.54 180)
-					(length 5.08)
-					(name "D+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2980,7 +2846,7 @@
 	)
 	(text "Ich=500mA"
 		(exclude_from_sim no)
-		(at 50.8 40.386 0)
+		(at 59.69 41.402 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3044,7 +2910,7 @@
 	)
 	(text "USB CHARGER"
 		(exclude_from_sim no)
-		(at 52.324 47.244 0)
+		(at 73.406 48.006 0)
 		(effects
 			(font
 				(size 2.159 2.159)
@@ -3085,6 +2951,12 @@
 		(uuid "0a7d37f7-5e33-49ab-b691-8402c7efdba6")
 	)
 	(junction
+		(at 46.99 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "143bc032-0a6f-4add-bc3b-98c38844dac1")
+	)
+	(junction
 		(at 113.03 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3101,12 +2973,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2d0c1283-74f7-41fa-ac41-5202d57c6538")
-	)
-	(junction
-		(at 19.05 58.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "34932973-61bb-4ecf-8e34-5fbd1244bb97")
 	)
 	(junction
 		(at 54.61 113.03)
@@ -3187,16 +3053,16 @@
 		(uuid "76d2665e-e7ab-4ddd-82c5-b26242c29092")
 	)
 	(junction
+		(at 26.67 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7d2cc6d9-c91d-4341-ae7a-d6392872ac43")
+	)
+	(junction
 		(at 127 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "816b47da-f3e8-4e0a-bd1d-a1492a7b8ca6")
-	)
-	(junction
-		(at 26.67 58.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8b71d4d9-77e4-4d82-a23f-2c4b88fbbb2d")
 	)
 	(junction
 		(at 50.8 20.32)
@@ -3235,6 +3101,12 @@
 		(uuid "af24b328-8965-4bc5-afc8-318805e02380")
 	)
 	(junction
+		(at 19.05 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b1e25650-ed1e-4435-a816-878eab72c4dd")
+	)
+	(junction
 		(at 115.57 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3263,12 +3135,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c352803c-512c-4a82-90c2-6afc12b0ac76")
-	)
-	(junction
-		(at 78.74 25.4)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cace06cf-7e04-44fa-bf1d-17f0ff268e26")
 	)
 	(junction
 		(at 165.1 82.55)
@@ -3317,16 +3183,8 @@
 		(uuid "12780fe1-26ee-44f9-a4a6-b3d8ef34279c")
 	)
 	(no_connect
-		(at 41.91 27.94)
-		(uuid "1b48bee0-fb67-468e-bffe-fa119ee1c775")
-	)
-	(no_connect
 		(at 125.73 20.32)
 		(uuid "c718b6f7-21cf-4d32-a8ed-0d2b4bd8e4a1")
-	)
-	(no_connect
-		(at 41.91 25.4)
-		(uuid "f96dba3a-c90c-4b2a-ba65-7c45a1ae8658")
 	)
 	(wire
 		(pts
@@ -3377,6 +3235,16 @@
 			(type default)
 		)
 		(uuid "0d76e70a-c722-427b-84f7-4b36fef1c15c")
+	)
+	(wire
+		(pts
+			(xy 45.72 43.18) (xy 45.72 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1469e318-51fe-4033-b602-4e46cb0bda3a")
 	)
 	(wire
 		(pts
@@ -3500,26 +3368,6 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 58.42) (xy 30.48 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "304581bc-f093-49d8-bf3f-4fa0d1d533d9")
-	)
-	(wire
-		(pts
-			(xy 41.91 33.02) (xy 41.91 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3342e65f-ce07-4fe0-9b16-b7da568663b0")
-	)
-	(wire
-		(pts
 			(xy 102.87 24.13) (xy 104.14 25.4)
 		)
 		(stroke
@@ -3610,6 +3458,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 26.67) (xy 41.91 20.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "430fed5f-6c44-4404-9840-fcfc8fac461a")
+	)
+	(wire
+		(pts
 			(xy 170.18 82.55) (xy 175.26 82.55)
 		)
 		(stroke
@@ -3680,7 +3538,7 @@
 	)
 	(wire
 		(pts
-			(xy 19.05 58.42) (xy 26.67 58.42)
+			(xy 19.05 52.07) (xy 26.67 52.07)
 		)
 		(stroke
 			(width 0)
@@ -3770,6 +3628,26 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 39.37) (xy 48.26 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6084c7de-233c-4bbc-ae0a-b0123d161294")
+	)
+	(wire
+		(pts
+			(xy 50.8 26.67) (xy 50.8 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60ca3c72-e171-4b92-bbc1-a86dd6fa4f17")
+	)
+	(wire
+		(pts
 			(xy 124.46 64.77) (xy 124.46 67.31)
 		)
 		(stroke
@@ -3840,6 +3718,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 50.8) (xy 46.99 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "694aa235-6b07-4e80-8132-3bfcc9510e5e")
+	)
+	(wire
+		(pts
 			(xy 113.03 69.85) (xy 113.03 74.93)
 		)
 		(stroke
@@ -3870,6 +3758,16 @@
 	)
 	(wire
 		(pts
+			(xy 26.67 52.07) (xy 30.48 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "701f32e2-e567-42d7-8da6-86c2bdc2ff40")
+	)
+	(wire
+		(pts
 			(xy 144.78 25.4) (xy 152.4 25.4)
 		)
 		(stroke
@@ -3877,6 +3775,26 @@
 			(type default)
 		)
 		(uuid "7503fbff-67d8-4f35-b89e-3790d359d551")
+	)
+	(wire
+		(pts
+			(xy 41.91 41.91) (xy 45.72 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78786448-3576-49da-8bf0-b2d087cfe478")
+	)
+	(wire
+		(pts
+			(xy 41.91 39.37) (xy 48.26 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79db0981-ad45-467b-a8aa-c44af93be608")
 	)
 	(wire
 		(pts
@@ -3907,16 +3825,6 @@
 			(type default)
 		)
 		(uuid "824af787-951c-4456-8641-30e0ef7a6e6a")
-	)
-	(wire
-		(pts
-			(xy 76.2 25.4) (xy 78.74 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82cf79cb-d0c0-4d17-b5fa-f564d0f3b32f")
 	)
 	(wire
 		(pts
@@ -3957,16 +3865,6 @@
 			(type default)
 		)
 		(uuid "900b9c51-309c-4ff1-ba1c-2cab172d5d53")
-	)
-	(wire
-		(pts
-			(xy 41.91 20.32) (xy 46.99 20.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92ddb8a0-23df-49d8-b5cc-a1164e3a45c7")
 	)
 	(wire
 		(pts
@@ -4087,6 +3985,16 @@
 			(type default)
 		)
 		(uuid "b2f25e61-901b-4163-af27-e83c2f4e43da")
+	)
+	(wire
+		(pts
+			(xy 46.99 50.8) (xy 48.26 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b67464fe-56b4-4f7a-9c57-62dea7b016a6")
 	)
 	(wire
 		(pts
@@ -4270,6 +4178,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 20.32) (xy 46.99 20.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2244da9-0df8-462a-a092-2c0a344b3282")
+	)
+	(wire
+		(pts
 			(xy 113.03 69.85) (xy 115.57 69.85)
 		)
 		(stroke
@@ -4348,6 +4266,16 @@
 		)
 		(uuid "3c152630-725e-4399-b4c6-523e51658e19")
 	)
+	(label "CC2"
+		(at 41.91 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "57607374-257b-461f-b6e6-6656bc39016c")
+	)
 	(label "LED+"
 		(at 154.94 69.85 0)
 		(effects
@@ -4367,6 +4295,16 @@
 			(justify left bottom)
 		)
 		(uuid "6fa4e120-4ef9-4395-933a-ce3a5ad669b6")
+	)
+	(label "CC1"
+		(at 41.91 39.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "88c69a84-961b-44d0-a41f-920e4cbe3b95")
 	)
 	(label "BlinkRC"
 		(at 40.64 120.65 0)
@@ -4646,6 +4584,71 @@
 			(project "bike_lights2"
 				(path "/2ca4c43c-86e8-49ad-a9b0-de66b7c49181"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 46.99 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "079b70f9-9675-4bc3-aaaa-7eb5ec6f1124")
+		(property "Reference" "#PWR011"
+			(at 46.99 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 46.99 54.864 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 46.99 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 46.99 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c909140f-8cf7-48a3-b01f-59923b955fd7")
+		)
+		(instances
+			(project "bike_lights2"
+				(path "/2ca4c43c-86e8-49ad-a9b0-de66b7c49181"
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -4936,8 +4939,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:USB_C_Plug_USB2.0")
-		(at 26.67 35.56 0)
+		(lib_id "Connector:USB_C_Receptacle_PowerOnly_6P")
+		(at 26.67 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4946,7 +4949,7 @@
 		(fields_autoplaced yes)
 		(uuid "25195a19-13c9-4c36-9a62-457e4411ff70")
 		(property "Reference" "P1"
-			(at 26.67 12.7 0)
+			(at 26.67 16.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4954,7 +4957,7 @@
 			)
 		)
 		(property "Value" "USB_C_Plug_USB2.0"
-			(at 26.67 15.24 0)
+			(at 26.67 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4962,7 +4965,7 @@
 			)
 		)
 		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4125-xx-x_6P_TopMnt_Horizontal"
-			(at 30.48 35.56 0)
+			(at 30.48 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4971,7 +4974,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
-			(at 30.48 35.56 0)
+			(at 26.67 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4979,20 +4982,14 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "USB 2.0-only Type-C Plug connector"
-			(at 26.67 35.56 0)
+		(property "Description" "USB Power-Only 6P Type-C Receptacle connector"
+			(at 26.67 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "A6"
-			(uuid "12407c4f-3524-4e0e-aa0e-e461c22ae62b")
-		)
-		(pin "A7"
-			(uuid "bad8e072-7362-4df5-8b12-82ee6e00607f")
 		)
 		(pin "B5"
 			(uuid "f34996bd-dc54-4902-9577-9a282a69a14a")
@@ -5003,26 +5000,14 @@
 		(pin "B9"
 			(uuid "10ed4ce9-0cb3-4280-84ea-5eb484218782")
 		)
-		(pin "B4"
-			(uuid "6d21c4f4-28b8-4990-9eb8-5408835a3831")
-		)
 		(pin "A9"
 			(uuid "c5a0db81-10b1-4075-acf1-56bf723930d2")
-		)
-		(pin "A4"
-			(uuid "dd426089-b944-40b9-acd4-6ec66ff6b7a8")
 		)
 		(pin "B12"
 			(uuid "4c3d3fed-d495-4cdf-9112-4e9f311ab1a8")
 		)
-		(pin "B1"
-			(uuid "5591d72f-1120-4998-8108-12b89135fc46")
-		)
 		(pin "A12"
 			(uuid "1bbdfc39-d8d5-4c23-a8c1-2e8e920ce29e")
-		)
-		(pin "A1"
-			(uuid "e1267a3c-33e8-4dab-990c-21894962003c")
 		)
 		(pin "S1"
 			(uuid "c29224df-34e4-4230-a4a8-fcb80f051083")
@@ -5448,16 +5433,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 19.05 58.42 0)
+		(at 19.05 52.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "32f5a5b1-d29e-46f6-94c9-1e7135903fe8")
 		(property "Reference" "#PWR020"
-			(at 19.05 64.77 0)
+			(at 19.05 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5466,7 +5450,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 19.05 63.5 0)
+			(at 19.05 56.134 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5474,7 +5458,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 19.05 58.42 0)
+			(at 19.05 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5483,7 +5467,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 19.05 58.42 0)
+			(at 19.05 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5492,7 +5476,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 19.05 58.42 0)
+			(at 19.05 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6363,6 +6347,75 @@
 			(project "bike_lights2"
 				(path "/2ca4c43c-86e8-49ad-a9b0-de66b7c49181"
 					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 48.26 46.99 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5973e27b-4253-4e29-bd58-0237c1cb1851")
+		(property "Reference" "R14"
+			(at 50.038 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5k1"
+			(at 50.038 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 50.038 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 48.26 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 48.26 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5f608168-c7d8-4c89-8750-dde6541ee29e")
+		)
+		(pin "2"
+			(uuid "dd2451ff-8e96-4411-9657-2be9260fe77b")
+		)
+		(instances
+			(project "bike_lights2"
+				(path "/2ca4c43c-86e8-49ad-a9b0-de66b7c49181"
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -7510,7 +7563,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a07fb6db-8fde-4f07-b871-aa8384099744")
 		(property "Reference" "#PWR03"
 			(at 49.53 64.77 0)
@@ -7522,7 +7574,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 49.53 55.88 0)
+			(at 49.53 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7563,6 +7615,75 @@
 			(project "bike_lights2"
 				(path "/2ca4c43c-86e8-49ad-a9b0-de66b7c49181"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 45.72 46.99 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a47e158d-7267-4a0d-bf87-abcb9de4da91")
+		(property "Reference" "R1"
+			(at 40.64 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5k1"
+			(at 40.64 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 47.498 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 45.72 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 45.72 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a5d4c716-2926-4469-bc68-d046041a266b")
+		)
+		(pin "2"
+			(uuid "560df45b-487e-4c4f-bd2f-2385cdd1c64d")
+		)
+		(instances
+			(project "bike_lights2"
+				(path "/2ca4c43c-86e8-49ad-a9b0-de66b7c49181"
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -8070,7 +8191,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "footprints:JST_PH_1x02_P2.0-2.5mm_Vertical"
 			(at 182.88 69.85 0)
 			(effects
 				(font
@@ -8456,7 +8577,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 50.8 27.94 0)
+		(at 50.8 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8464,7 +8585,7 @@
 		(dnp no)
 		(uuid "e78fe42c-5c94-4fdb-a87f-d96cfa0511f4")
 		(property "Reference" "#PWR019"
-			(at 50.8 34.29 0)
+			(at 50.8 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8473,7 +8594,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 50.8 31.75 0)
+			(at 50.8 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8481,7 +8602,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 27.94 0)
+			(at 50.8 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8490,7 +8611,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 27.94 0)
+			(at 50.8 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8499,7 +8620,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 50.8 27.94 0)
+			(at 50.8 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8521,7 +8642,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 30.48 58.42 270)
+		(at 30.48 52.07 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8530,7 +8651,7 @@
 		(fields_autoplaced yes)
 		(uuid "ef063928-12ec-45b9-b6a2-89fa7aaeae44")
 		(property "Reference" "#FLG02"
-			(at 32.385 58.42 0)
+			(at 32.385 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8539,7 +8660,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 34.29 58.4199 90)
+			(at 34.29 52.0699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8549,7 +8670,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 30.48 58.42 0)
+			(at 30.48 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8558,7 +8679,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 30.48 58.42 0)
+			(at 30.48 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8567,7 +8688,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 30.48 58.42 0)
+			(at 30.48 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
