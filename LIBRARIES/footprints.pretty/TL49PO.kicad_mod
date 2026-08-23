@@ -1,0 +1,142 @@
+(footprint "TL49PO"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "APEM Subminitaure toggle switch ON-OFF-ON")
+	(property "Reference" "REF**"
+		(at 0 -5.5 180)
+		(layer "F.SilkS")
+		(uuid "2a47b733-a9f6-4ef6-995f-da46d231700c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TL49PO"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "cbe3bb50-e2b5-4faa-af3a-7ed7792e07b7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7220dc6e-4793-47ef-bf26-754546097bb0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0826ed01-8ad3-427c-854a-bf206531d404")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -4.25 -4.75)
+		(end 4.25 4.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "a33a435e-5ac3-4136-bb8e-28a628d7a060")
+	)
+	(fp_rect
+		(start -4.05 -4.55)
+		(end 4.05 4.55)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "0a721d56-7f6d-465f-a0ed-f5afba2378a6")
+	)
+	(pad "1" thru_hole oval
+		(at -2.54 2.54)
+		(size 1.2 2)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "d668b398-05b4-449d-9de4-e809ac43c5b8")
+	)
+	(pad "2" thru_hole oval
+		(at 0 2.54)
+		(size 1.2 2)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "70f24a39-a634-42f8-9d84-549a40672653")
+	)
+	(pad "3" thru_hole oval
+		(at 2.54 2.54)
+		(size 1.2 2)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "8724825e-9ed0-441f-a5d3-81f6f029e124")
+	)
+	(pad "4" thru_hole oval
+		(at -2.54 -2.54)
+		(size 1.2 2)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "8dd9743f-b26a-40cd-950f-3063a42302e6")
+	)
+	(pad "5" thru_hole oval
+		(at 0 -2.54)
+		(size 1.2 2)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "e79da8cb-26dd-40a5-aa86-d5e932c3ecfe")
+	)
+	(pad "6" thru_hole oval
+		(at 2.54 -2.54)
+		(size 1.2 2)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "8272bff7-aaf5-428e-8a79-3e8c5ebe41d9")
+	)
+	(embedded_fonts no)
+	(model "${KICAD_USR_LIB_DIR}/3Dmodels/tl42p005000.stp"
+		(offset
+			(xyz 0 0 1.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)
