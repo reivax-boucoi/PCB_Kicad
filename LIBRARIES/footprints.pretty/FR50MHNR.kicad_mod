@@ -265,7 +265,7 @@
 		(uuid "7e8a09fc-1738-49db-bf3d-85948f9129b9")
 	)
 	(embedded_fonts no)
-	(model "${KICAD_SYMBOL_LIB}/3Dmodels/F04415-300-4-Pin-Horizontal-RedLink-Connector-Step-File--Black--Rev-A.stp"
+	(model "${KICAD_USR_LIB_DIR}/3Dmodels/F04415-300-4-Pin-Horizontal-RedLink-Connector-Step-File--Black--Rev-A.stp"
 		(offset
 			(xyz 5 9.5 4.25)
 		)
