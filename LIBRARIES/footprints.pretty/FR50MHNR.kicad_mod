@@ -1,14 +1,14 @@
 (footprint "FR50MHNR"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(descr "Fiber Optic RedLink® receiver 50 MBd Non-inverting")
 	(property "Reference" "REF**"
 		(at 5.075 -13.462 0)
 		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "ff0cad2a-422d-4ca1-87ac-7f12d6318560")
+		(uuid "16a93269-afc8-407b-8a64-aff7365483a7")
 		(effects
 			(font
 				(size 1 1)
@@ -20,7 +20,7 @@
 		(at 5.207 1.016 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "8e71cf0e-a5e2-44ec-9bc4-45c5f7712e11")
+		(uuid "a2cd40d7-8eb1-4bb3-a4af-3d67cee4808c")
 		(effects
 			(font
 				(size 1 1)
@@ -33,7 +33,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "78b4f21c-a11f-41e9-9dda-319419520182")
+		(uuid "e238d6f0-47a3-4675-ada9-c7bc8bb3c996")
 		(effects
 			(font
 				(size 1 1)
@@ -46,7 +46,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "bd8bca01-6dc7-4fb9-b085-423c5e39a92a")
+		(uuid "f41cf50b-9a17-40f6-a2fc-680581c99071")
 		(effects
 			(font
 				(size 1 1)
@@ -55,6 +55,7 @@
 		)
 	)
 	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start 0 -12.35)
 		(end 10.15 -12.35)
@@ -63,7 +64,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "bc4c3866-1d5d-47b5-bd95-e40ce65444ad")
+		(uuid "db5493f2-f1d0-4f42-a32a-b87ab70829ab")
 	)
 	(fp_line
 		(start 0 0)
@@ -73,7 +74,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "f403b26a-8cf1-4cd1-84ec-3e9499aa6430")
+		(uuid "769a168b-0b28-4ee5-ae29-56d26b384553")
 	)
 	(fp_line
 		(start 3.81 -1.27)
@@ -83,7 +84,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "ef7ef308-58de-4d21-b7ed-56f93e9dc853")
+		(uuid "5bc65753-8563-499f-b8b1-c61061a8eeab")
 	)
 	(fp_line
 		(start 3.81 0)
@@ -93,7 +94,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "029fa5ca-ac29-4b66-859a-73fe1597ce30")
+		(uuid "ca859ee2-0979-4c60-8145-0776749b7a63")
 	)
 	(fp_line
 		(start 3.81 0)
@@ -103,7 +104,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "3fb6a5d3-87b3-41b2-823c-7ddec6a84dbb")
+		(uuid "e8a0b007-49fa-41cf-8291-f8cfd026554d")
 	)
 	(fp_line
 		(start 5.08 -3.81)
@@ -113,7 +114,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "3def07ae-fb23-4822-8a02-cc8f8a7610d0")
+		(uuid "ac520563-7727-4dcf-abd3-2ddd1c15f9cd")
 	)
 	(fp_line
 		(start 5.08 -3.81)
@@ -123,7 +124,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "eebf385d-4cfb-4eca-b3fb-010660c0dd9d")
+		(uuid "c24bd0ec-dff0-4f0b-8089-e8f6d34039eb")
 	)
 	(fp_line
 		(start 5.08 -1.27)
@@ -133,7 +134,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "80cb0e95-6da3-4687-b876-8ac56e09c9ae")
+		(uuid "9bb59247-9d07-4a2e-ab98-48d371681988")
 	)
 	(fp_line
 		(start 6.35 -1.27)
@@ -143,7 +144,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "11349a77-dcce-4ca0-9336-e59e0a1a410a")
+		(uuid "d21a512f-0614-4757-97ae-4df3c2acbe32")
 	)
 	(fp_line
 		(start 10.15 -12.35)
@@ -153,7 +154,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "a2f424df-7bb8-47db-8be4-8cf79be78ef9")
+		(uuid "51bd7cb6-e94d-4318-95e7-433a80813c1b")
 	)
 	(fp_line
 		(start 10.15 0)
@@ -163,7 +164,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "d3e1ebef-dd36-4d6a-871f-5afa068ef832")
+		(uuid "48568886-aede-4477-9157-eb74d375f5b1")
 	)
 	(fp_circle
 		(center 8.89 -11.557)
@@ -174,18 +175,18 @@
 		)
 		(fill yes)
 		(layer "F.SilkS")
-		(uuid "5c1ed0dc-2b8d-4709-a340-a900d7810bb7")
+		(uuid "257b0a08-7d56-41af-8230-ee2347414665")
 	)
 	(fp_rect
-		(start 0 -12.35)
-		(end 10.15 0)
+		(start 0.2 -12.15)
+		(end 9.95 0)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "8264fd82-39a9-4386-b7bf-b262e6858917")
+		(uuid "7ee74b4e-9f8e-416a-a50b-7a44def86bba")
 	)
 	(fp_rect
 		(start 0 -12.35)
@@ -196,13 +197,13 @@
 		)
 		(fill no)
 		(layer "B.Fab")
-		(uuid "fb4fd00a-7fb0-471b-b0d3-c7e459ab5020")
+		(uuid "b36a9af4-ff54-4728-8688-7e53b4059c39")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 5.207 2.516 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "a7fa725c-e618-4467-aaff-479f10740484")
+		(uuid "c692bc4f-d004-4ba4-8ba9-a51bd522fc3f")
 		(effects
 			(font
 				(size 1 1)
@@ -217,7 +218,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 45)
-		(uuid "b18697e8-558e-483e-b6a5-1c9c8439bab3")
+		(uuid "27ec7c14-c008-411a-8e88-0b095f8c3c54")
 	)
 	(pad "2" thru_hole oval
 		(at 6.345 -9.52 90)
@@ -226,7 +227,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 45)
-		(uuid "81c99574-fa7a-4a63-80d6-2c3d529f982f")
+		(uuid "6d2e2df7-535a-4392-921e-0d42cb4ef45f")
 	)
 	(pad "3" thru_hole oval
 		(at 3.81 -9.52 90)
@@ -235,7 +236,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 45)
-		(uuid "8c9a137e-b132-40ae-80b5-21bd0724cf04")
+		(uuid "cf152a20-bf4f-4017-9eb8-1a313d9491bf")
 	)
 	(pad "4" thru_hole oval
 		(at 1.265 -9.52 90)
@@ -244,7 +245,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 45)
-		(uuid "e023f0c9-301f-4cad-95c3-69e8020b62a5")
+		(uuid "f904d376-b1fd-432b-8202-b943227534d5")
 	)
 	(pad "5" thru_hole oval
 		(at 1.265 -1.9 90)
@@ -253,7 +254,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 45)
-		(uuid "01317ea6-c77d-4256-a7e2-efbea1f8f00b")
+		(uuid "cbb99ec5-0408-4cfd-9abb-7312dd9ac4a4")
 	)
 	(pad "8" thru_hole oval
 		(at 8.89 -1.9 90)
@@ -262,7 +263,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(thermal_bridge_angle 45)
-		(uuid "7e8a09fc-1738-49db-bf3d-85948f9129b9")
+		(uuid "3015d521-f28a-4fc9-8cb9-3275ac907aee")
 	)
 	(embedded_fonts no)
 	(model "${KICAD_USR_LIB_DIR}/3Dmodels/F04415-300-4-Pin-Horizontal-RedLink-Connector-Step-File--Black--Rev-A.stp"

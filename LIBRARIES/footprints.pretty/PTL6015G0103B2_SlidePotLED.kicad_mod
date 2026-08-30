@@ -305,7 +305,7 @@
 		(uuid "cf75d17c-b2fa-4d89-b799-0d5f0af1abeb")
 	)
 	(embedded_fonts no)
-	(model "${KICAD_SYMBOL_LIB}/3Dmodels/PTL60-10G0-103B2_slidePotLED.stp"
+	(model "${KICAD_USR_LIB_DIR}/3Dmodels/PTL60-10G0-103B2_slidePotLED.stp"
 		(offset
 			(xyz 34.970001 -1.25 0)
 		)
