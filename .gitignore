@@ -1,6 +1,7 @@
 PCB_Christmas_Tree/
 PACKAGES3D/
 
+
 # Temporary files
 *.000
 *.bak
@@ -12,6 +13,7 @@ PACKAGES3D/
 *.sch-bak
 *.lck
 *~
+.history/
 _autosave-*
 *.tmp
 *-save.pro
