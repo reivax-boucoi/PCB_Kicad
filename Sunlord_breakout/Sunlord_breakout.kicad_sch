@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "e0f7fde1-a273-4044-8253-31fdc9e48fca")
 	(paper "A5")
 	(title_block
@@ -20,8 +20,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
 				(at 0.254 3.048 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -30,6 +34,8 @@
 			)
 			(property "Value" "Conn_Coaxial"
 				(at 2.921 0 90)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -38,47 +44,57 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "BNC SMA SMB SMC LEMO coaxial connector CINCH RCA MCX MMCX U.FL UMRF"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "Conn_Coaxial_0_1"
@@ -190,8 +206,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "T"
 				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -200,6 +220,8 @@
 			)
 			(property "Value" "Transformer_1P_1S"
 				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -208,38 +230,46 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Transformer, single primary, single secondary"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "transformer coil magnet"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "Transformer_1P_1S_0_1"
@@ -498,24 +528,6 @@
 					)
 				)
 				(pin passive line
-					(at 10.16 5.08 180)
-					(length 7.62)
-					(name "SB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at 10.16 -5.08 180)
 					(length 7.62)
 					(name "SA"
@@ -526,6 +538,24 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 5.08 180)
+					(length 7.62)
+					(name "SB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -547,8 +577,12 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "JP"
 				(at 0 2.794 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -557,6 +591,8 @@
 			)
 			(property "Value" "Jumper_2_Open"
 				(at 0 -2.286 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -565,47 +601,57 @@
 			)
 			(property "Footprint" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "Description" "Jumper, 2-pole, open"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "Jumper SPST"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
 				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(symbol "Jumper_2_Open_0_0"
@@ -689,7 +735,7 @@
 	)
 	(text "JP1/JP2 for fixture calibration (short) and leakage measurement"
 		(exclude_from_sim no)
-		(at 98.044 98.044 0)
+		(at 118.364 99.314 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -699,7 +745,7 @@
 	)
 	(text "Route H/L as Kelvin Force/Sense connections for impedance analyzer"
 		(exclude_from_sim no)
-		(at 98.806 94.996 0)
+		(at 119.126 96.266 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -708,92 +754,364 @@
 		(uuid "a0aa6534-c79e-4c8a-a62f-86bfbab30162")
 	)
 	(junction
-		(at 93.98 54.61)
+		(at 107.95 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "11937194-3cf3-4a77-bcb5-189e86c17ef4")
+		(uuid "01258eba-e184-4624-8269-211896c3376b")
 	)
 	(junction
-		(at 50.8 72.39)
+		(at 81.28 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "238edcae-4828-4811-9784-e4f7b5ab5b2a")
+		(uuid "01699faf-a6a1-4b02-ab9d-2c440174b336")
 	)
 	(junction
-		(at 50.8 44.45)
+		(at 96.52 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2c03baac-00bb-462d-9519-f648fe9884fa")
+		(uuid "05da6a72-c37e-4f70-a16e-9370a2f452d7")
 	)
 	(junction
-		(at 114.3 44.45)
+		(at 81.28 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3b86fe5d-f7c4-4a98-bd4e-4165bb7193a9")
+		(uuid "06e0feca-6f03-43bc-ac65-6deb1154dc7b")
 	)
 	(junction
-		(at 93.98 44.45)
+		(at 115.57 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3e6572e0-f275-45e1-9311-15f98ba2aee8")
+		(uuid "083e8d5c-64b6-46e7-ab62-587bc83b66bb")
 	)
 	(junction
-		(at 177.8 77.47)
+		(at 107.95 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3f5fd21c-4a50-42ca-85ff-e6c4f05dc4aa")
+		(uuid "08bccd37-734f-4119-b7df-b12425ca1b02")
 	)
 	(junction
-		(at 157.48 44.45)
+		(at 143.51 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "54ec1e2d-dadd-4727-aeb8-7f26838c5bf5")
+		(uuid "0d35ffeb-5d30-4da4-8871-135ee966e207")
 	)
 	(junction
-		(at 157.48 72.39)
+		(at 115.57 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "64f71a0d-9dd4-4bbe-b681-fc193e127d2b")
+		(uuid "152e0895-1047-47fa-b8d6-6e638c891a3e")
 	)
 	(junction
-		(at 177.8 63.5)
+		(at 143.51 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "94588d71-df07-4974-b3aa-53b964392c6f")
+		(uuid "1b078612-e6d3-4197-abc6-b15ac12bd72e")
 	)
 	(junction
-		(at 40.64 91.44)
+		(at 96.52 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ac83100f-1146-4c5c-a34e-9d35e04da87e")
+		(uuid "274f8ef1-8033-45ca-b2c7-777c1293a3c3")
 	)
 	(junction
-		(at 114.3 54.61)
+		(at 115.57 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c30b7ff6-b466-4924-8356-5811a760b444")
+		(uuid "2885d2a6-c064-46f6-8269-c9f05ccc6386")
 	)
 	(junction
-		(at 30.48 63.5)
+		(at 151.13 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f350c692-3a9a-4f24-9846-523d13e230f7")
+		(uuid "2f4b917d-7c23-4817-9e3c-7781b7229713")
 	)
 	(junction
-		(at 30.48 77.47)
+		(at 123.19 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f645f705-adbe-4cc8-a47f-42211c8b4bc1")
+		(uuid "4186d10c-e440-4497-8ba2-a6542cffc6ab")
 	)
 	(junction
-		(at 167.64 91.44)
+		(at 88.9 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f88d4f08-eae5-4a43-ae64-e654a0c7a664")
+		(uuid "46704b0b-db88-4156-97c8-a3566f93aa9c")
+	)
+	(junction
+		(at 151.13 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4703ed2a-b2d0-4f5b-849f-4c690b2808be")
+	)
+	(junction
+		(at 158.75 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48fe04c0-a7f5-4b00-a4c2-6724f34cec73")
+	)
+	(junction
+		(at 156.21 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "49adb151-610c-4b48-a69d-ea142f7bc590")
+	)
+	(junction
+		(at 107.95 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4bef9b78-2bad-42e2-8569-98bbfe8b006c")
+	)
+	(junction
+		(at 60.96 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4dbbb523-4ffa-43f0-b851-ca70c2904648")
+	)
+	(junction
+		(at 158.75 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "511ac800-34f0-46db-8841-014a5e8847ad")
+	)
+	(junction
+		(at 115.57 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "521f0c9b-8be1-47e2-8dcb-14ce555d5aea")
+	)
+	(junction
+		(at 45.72 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55bc8f59-667d-4b87-a5b3-3b15cc4c8ef2")
+	)
+	(junction
+		(at 60.96 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56322211-3f81-4653-b8e1-8f93fc700942")
+	)
+	(junction
+		(at 88.9 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6003df67-17df-4031-b779-9b3a38ee268e")
+	)
+	(junction
+		(at 93.98 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "607c4ac8-9efd-467a-b4ab-18c2fc716e5b")
+	)
+	(junction
+		(at 53.34 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6ae38156-940d-4d5e-9a75-61054f490e2e")
+	)
+	(junction
+		(at 143.51 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e4bfe2b-c94b-4e59-b775-840307ff763d")
+	)
+	(junction
+		(at 48.26 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "74435b0d-dacb-43d8-bb92-2563044245f0")
+	)
+	(junction
+		(at 151.13 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "79365172-9272-4848-a5e5-8a216df3db64")
+	)
+	(junction
+		(at 123.19 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7a94451b-77f5-4f89-90f7-16430e75cab2")
+	)
+	(junction
+		(at 45.72 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "81ad8447-a62f-41b5-80ae-fd7d2087127e")
+	)
+	(junction
+		(at 110.49 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "83bf047e-d4e8-49aa-8bb9-3bfe8b3b9f00")
+	)
+	(junction
+		(at 48.26 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8462d826-1a9f-4c95-9e63-9f9e6b6ebe35")
+	)
+	(junction
+		(at 158.75 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "86bed333-fec9-43df-8dc2-c976943123c4")
+	)
+	(junction
+		(at 45.72 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "93396f5f-2e21-4bed-8b03-220383d37cdf")
+	)
+	(junction
+		(at 143.51 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a051fef6-e942-4a3f-9ed6-9287fd12e523")
+	)
+	(junction
+		(at 151.13 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a84df948-24eb-4c13-a21d-5d44f9a7ff68")
+	)
+	(junction
+		(at 88.9 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab7f0977-712d-4216-9931-1f7c0c5f7d9d")
+	)
+	(junction
+		(at 60.96 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "abf52837-2741-4eef-ae54-73ad1a736359")
+	)
+	(junction
+		(at 53.34 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aeeed58a-f20d-4357-9fa8-ac914d8264f4")
+	)
+	(junction
+		(at 53.34 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b47f8ac8-23d5-49af-9ddd-a220fd68612d")
+	)
+	(junction
+		(at 60.96 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b527f409-a1be-4990-9d72-472e19420a64")
+	)
+	(junction
+		(at 93.98 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bdeaef2d-f1e4-4e52-af77-86963abedcd6")
+	)
+	(junction
+		(at 53.34 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0bcd12b-f85e-492c-a835-f8d0a26706d4")
+	)
+	(junction
+		(at 123.19 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd6840c7-746c-40c5-9f5c-a9395d131169")
+	)
+	(junction
+		(at 123.19 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d2b99620-c110-4e40-b37e-766d780f62a5")
+	)
+	(junction
+		(at 45.72 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6c45732-0910-4333-a88f-97a7a82a787e")
+	)
+	(junction
+		(at 107.95 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9881298-b600-4f5d-b312-0a1a07987784")
+	)
+	(junction
+		(at 110.49 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dabf0fcf-038f-48c8-8b7c-6cdc53e14b65")
+	)
+	(junction
+		(at 81.28 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dca5749a-93cd-433a-971d-5a226f6a94dd")
+	)
+	(junction
+		(at 88.9 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e04e0e51-40f4-4dd4-ba81-1619477db6e7")
+	)
+	(junction
+		(at 156.21 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e3a028e3-1421-4c54-b0e6-954d4e8332aa")
+	)
+	(junction
+		(at 96.52 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e3c0a0c5-7dba-4079-b7e7-2206ccb02362")
+	)
+	(junction
+		(at 96.52 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f1c535bc-0d13-425e-bb50-01b93689950b")
+	)
+	(junction
+		(at 81.28 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa565aaf-2045-4441-92ef-18c9ace0d911")
+	)
+	(junction
+		(at 158.75 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ffb8650c-4f67-41ee-82d0-d51eea338684")
 	)
 	(wire
 		(pts
-			(xy 40.64 91.44) (xy 167.64 91.44)
+			(xy 158.75 40.64) (xy 158.75 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00071740-fdc6-4d0e-865b-5bd8c80171c4")
+	)
+	(wire
+		(pts
+			(xy 158.75 55.88) (xy 156.21 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00e76e9a-aafb-480a-b1e3-0a657cf12dfc")
+	)
+	(wire
+		(pts
+			(xy 48.26 55.88) (xy 93.98 55.88)
 		)
 		(stroke
 			(width 0)
@@ -803,27 +1121,37 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 44.45) (xy 157.48 44.45)
+			(xy 45.72 82.55) (xy 48.26 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0a63d673-8177-4e2f-828f-0e9878665872")
+		(uuid "04d56308-5e93-459c-98fe-07ae3cfa06a8")
 	)
 	(wire
 		(pts
-			(xy 50.8 44.45) (xy 93.98 44.45)
+			(xy 158.75 73.66) (xy 156.21 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0b3b4c75-84ff-412a-b95f-4a10bf282508")
+		(uuid "080c768b-0366-4985-ab94-f7ba5481e848")
 	)
 	(wire
 		(pts
-			(xy 50.8 58.42) (xy 50.8 44.45)
+			(xy 107.95 66.04) (xy 107.95 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08300ff3-3bd9-4f4c-9291-d7131e044bfc")
+	)
+	(wire
+		(pts
+			(xy 53.34 35.56) (xy 53.34 27.94)
 		)
 		(stroke
 			(width 0)
@@ -833,7 +1161,137 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 77.47) (xy 167.64 77.47)
+			(xy 53.34 62.23) (xy 60.96 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "127305e2-2ef1-4928-895e-2c961d60d065")
+	)
+	(wire
+		(pts
+			(xy 156.21 33.02) (xy 158.75 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "149079c0-8238-4449-ac6a-f9c2b127cb3f")
+	)
+	(wire
+		(pts
+			(xy 115.57 43.18) (xy 123.19 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a085dd3-89a1-495f-aae0-758e92c93929")
+	)
+	(wire
+		(pts
+			(xy 88.9 69.85) (xy 88.9 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b31e37d-4a48-4f3d-b0a8-ca01076d6cc4")
+	)
+	(wire
+		(pts
+			(xy 110.49 55.88) (xy 156.21 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2000aba3-4afe-4ca5-a557-a53964e078a0")
+	)
+	(wire
+		(pts
+			(xy 53.34 85.09) (xy 53.34 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2241d8fb-3b12-44ce-b624-634c6e9fe60f")
+	)
+	(wire
+		(pts
+			(xy 123.19 71.12) (xy 123.19 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22a019d5-bbd2-40e9-990b-22f878c47315")
+	)
+	(wire
+		(pts
+			(xy 81.28 77.47) (xy 88.9 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22e58d96-c5ff-469b-acdd-eee8c6a06223")
+	)
+	(wire
+		(pts
+			(xy 110.49 88.9) (xy 156.21 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "232e0699-65ab-4ee8-ab1c-73efe0cbd173")
+	)
+	(wire
+		(pts
+			(xy 107.95 88.9) (xy 110.49 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "267e6f12-e1ab-4103-ac0e-6381392edec0")
+	)
+	(wire
+		(pts
+			(xy 96.52 82.55) (xy 93.98 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2689eb8d-0fec-40df-a885-43740d045155")
+	)
+	(wire
+		(pts
+			(xy 81.28 72.39) (xy 81.28 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "286327ed-a639-4256-ade5-1d01b7a5eab7")
+	)
+	(wire
+		(pts
+			(xy 45.72 74.93) (xy 45.72 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ed2e0ba-7b06-43c8-9b5a-f23aaba95563")
+	)
+	(wire
+		(pts
+			(xy 96.52 48.26) (xy 93.98 48.26)
 		)
 		(stroke
 			(width 0)
@@ -843,17 +1301,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 58.42) (xy 157.48 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3825d820-6521-45c7-add0-46607fb2e78c")
-	)
-	(wire
-		(pts
-			(xy 30.48 63.5) (xy 40.64 63.5)
+			(xy 45.72 40.64) (xy 48.26 40.64)
 		)
 		(stroke
 			(width 0)
@@ -863,7 +1311,27 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 63.5) (xy 30.48 77.47)
+			(xy 48.26 90.17) (xy 93.98 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ee27754-4b07-48c9-8ca1-9816c2104f8f")
+	)
+	(wire
+		(pts
+			(xy 81.28 62.23) (xy 88.9 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4258f934-2a9d-4d0b-bb9f-250cf813edc9")
+	)
+	(wire
+		(pts
+			(xy 45.72 40.64) (xy 45.72 48.26)
 		)
 		(stroke
 			(width 0)
@@ -873,17 +1341,27 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 72.39) (xy 50.8 72.39)
+			(xy 143.51 60.96) (xy 151.13 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "448c65a6-bc4f-457d-9004-f02e0e3a6d31")
+		(uuid "45d1f21a-abe4-471e-9e4a-ff86df34a780")
 	)
 	(wire
 		(pts
-			(xy 114.3 54.61) (xy 114.3 72.39)
+			(xy 107.95 55.88) (xy 110.49 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48eaa924-f503-4694-93e0-705835c640f9")
+	)
+	(wire
+		(pts
+			(xy 81.28 38.1) (xy 81.28 43.18)
 		)
 		(stroke
 			(width 0)
@@ -893,7 +1371,37 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 49.53) (xy 177.8 49.53)
+			(xy 93.98 67.31) (xy 96.52 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c704ba7-d5ab-4104-bbdb-dca0552711da")
+	)
+	(wire
+		(pts
+			(xy 96.52 67.31) (xy 96.52 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cf5440b-5afe-49d9-82d5-105a61ac20aa")
+	)
+	(wire
+		(pts
+			(xy 151.13 83.82) (xy 151.13 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e35c96a-5f44-4b75-9459-1c56aaf2f857")
+	)
+	(wire
+		(pts
+			(xy 93.98 33.02) (xy 96.52 33.02)
 		)
 		(stroke
 			(width 0)
@@ -903,7 +1411,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 63.5) (xy 177.8 77.47)
+			(xy 96.52 40.64) (xy 96.52 48.26)
 		)
 		(stroke
 			(width 0)
@@ -913,7 +1421,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 77.47) (xy 177.8 91.44)
+			(xy 96.52 48.26) (xy 96.52 55.88)
 		)
 		(stroke
 			(width 0)
@@ -923,17 +1431,47 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 86.36) (xy 50.8 86.36)
+			(xy 45.72 67.31) (xy 45.72 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5feb4acd-d589-404d-91dc-99af9a28817c")
+		(uuid "626e1bc4-a341-4fdb-b21c-dbef44390904")
 	)
 	(wire
 		(pts
-			(xy 30.48 77.47) (xy 40.64 77.47)
+			(xy 107.95 73.66) (xy 110.49 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "646fba26-3d76-4d03-8cec-f8ca04344d37")
+	)
+	(wire
+		(pts
+			(xy 107.95 40.64) (xy 107.95 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64be058c-a1bc-41be-b830-71d947fba3ca")
+	)
+	(wire
+		(pts
+			(xy 96.52 90.17) (xy 93.98 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65dd6422-ad6b-4793-8619-dae619942ea2")
+	)
+	(wire
+		(pts
+			(xy 45.72 48.26) (xy 48.26 48.26)
 		)
 		(stroke
 			(width 0)
@@ -943,7 +1481,47 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 49.53) (xy 30.48 49.53)
+			(xy 158.75 40.64) (xy 156.21 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f216b5b-7459-4927-ac64-5823b1526e6d")
+	)
+	(wire
+		(pts
+			(xy 115.57 27.94) (xy 123.19 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71a478b0-469a-447e-9fef-d13fcbd1204b")
+	)
+	(wire
+		(pts
+			(xy 96.52 74.93) (xy 93.98 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "724486ef-f136-4723-b331-13b0dcdc34f8")
+	)
+	(wire
+		(pts
+			(xy 53.34 27.94) (xy 60.96 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7381b780-de57-42c8-ab07-a97d9efe2a77")
+	)
+	(wire
+		(pts
+			(xy 48.26 33.02) (xy 45.72 33.02)
 		)
 		(stroke
 			(width 0)
@@ -953,17 +1531,57 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 44.45) (xy 50.8 44.45)
+			(xy 53.34 69.85) (xy 53.34 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8d009b64-aef9-4424-b446-92c024b89590")
+		(uuid "75091ee1-da68-4a99-b4cf-127dc4504878")
 	)
 	(wire
 		(pts
-			(xy 177.8 49.53) (xy 177.8 63.5)
+			(xy 115.57 76.2) (xy 123.19 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "764c8e1c-84e0-4b98-a16c-a4460041ebbd")
+	)
+	(wire
+		(pts
+			(xy 158.75 81.28) (xy 158.75 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79994519-ba1f-4e54-8fd5-4ead364d5aed")
+	)
+	(wire
+		(pts
+			(xy 115.57 50.8) (xy 115.57 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "877fc833-cdcd-418f-a28e-aa712977556b")
+	)
+	(wire
+		(pts
+			(xy 48.26 67.31) (xy 45.72 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89680007-09ff-47f6-be28-4b73ad2fbf11")
+	)
+	(wire
+		(pts
+			(xy 96.52 33.02) (xy 96.52 40.64)
 		)
 		(stroke
 			(width 0)
@@ -973,7 +1591,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 63.5) (xy 167.64 63.5)
+			(xy 96.52 40.64) (xy 93.98 40.64)
 		)
 		(stroke
 			(width 0)
@@ -983,17 +1601,47 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 86.36) (xy 157.48 86.36)
+			(xy 88.9 85.09) (xy 88.9 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8fcd9519-735c-481f-a926-90220070910c")
+		(uuid "8f8f73d6-d5a9-456e-a56c-d05821b49c93")
 	)
 	(wire
 		(pts
-			(xy 157.48 58.42) (xy 157.48 44.45)
+			(xy 96.52 74.93) (xy 96.52 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9040a1f2-fb6c-4ba5-945e-b261f59aca49")
+	)
+	(wire
+		(pts
+			(xy 143.51 43.18) (xy 151.13 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "914e9893-a019-4016-a7e1-75761dd8c105")
+	)
+	(wire
+		(pts
+			(xy 151.13 68.58) (xy 151.13 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94ba028a-ed68-4882-83e0-0fad27fe7a4e")
+	)
+	(wire
+		(pts
+			(xy 88.9 35.56) (xy 88.9 27.94)
 		)
 		(stroke
 			(width 0)
@@ -1003,7 +1651,37 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 49.53) (xy 30.48 63.5)
+			(xy 151.13 50.8) (xy 151.13 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99c53d99-4156-41a0-9773-244b0a683bd3")
+	)
+	(wire
+		(pts
+			(xy 53.34 77.47) (xy 60.96 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b836b10-9bfb-440e-9469-d9c07847aa0e")
+	)
+	(wire
+		(pts
+			(xy 110.49 33.02) (xy 107.95 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c2340c5-9760-4696-80b7-89bfeecad7eb")
+	)
+	(wire
+		(pts
+			(xy 45.72 33.02) (xy 45.72 40.64)
 		)
 		(stroke
 			(width 0)
@@ -1013,17 +1691,97 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 58.42) (xy 50.8 58.42)
+			(xy 123.19 38.1) (xy 123.19 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b7056bfd-dfc2-4fc8-a9e1-528b76988ae5")
+		(uuid "a0383992-f0ef-4f30-96d8-0405bf21fabe")
 	)
 	(wire
 		(pts
-			(xy 50.8 86.36) (xy 50.8 72.39)
+			(xy 107.95 81.28) (xy 110.49 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a26dab0c-9c00-437d-8a9d-019fea81622d")
+	)
+	(wire
+		(pts
+			(xy 107.95 40.64) (xy 110.49 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3280198-cfe1-41c3-9947-61140697d897")
+	)
+	(wire
+		(pts
+			(xy 143.51 71.12) (xy 143.51 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a833462f-708f-4336-83df-0a505a6b6bd3")
+	)
+	(wire
+		(pts
+			(xy 110.49 66.04) (xy 107.95 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a91426fc-ad55-465d-a362-ce869c3c5be4")
+	)
+	(wire
+		(pts
+			(xy 107.95 81.28) (xy 107.95 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0a60776-79a0-4c4c-9c76-a210ebd0fc27")
+	)
+	(wire
+		(pts
+			(xy 60.96 72.39) (xy 60.96 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1717ff2-2f8d-4201-9bae-c32850663eab")
+	)
+	(wire
+		(pts
+			(xy 45.72 82.55) (xy 45.72 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be219de4-b774-48e5-b645-679919203fc7")
+	)
+	(wire
+		(pts
+			(xy 156.21 66.04) (xy 158.75 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfe8ad52-9e5c-4407-9430-0a6d3a3631f2")
+	)
+	(wire
+		(pts
+			(xy 53.34 50.8) (xy 53.34 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1033,7 +1791,17 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 91.44) (xy 167.64 91.44)
+			(xy 115.57 83.82) (xy 115.57 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0a275d3-843f-4a96-a945-05c5a9d8b1cf")
+	)
+	(wire
+		(pts
+			(xy 96.52 55.88) (xy 93.98 55.88)
 		)
 		(stroke
 			(width 0)
@@ -1043,17 +1811,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 72.39) (xy 157.48 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6915c09-f3f9-47c1-85f4-8464d67790d0")
-	)
-	(wire
-		(pts
-			(xy 30.48 91.44) (xy 40.64 91.44)
+			(xy 45.72 55.88) (xy 48.26 55.88)
 		)
 		(stroke
 			(width 0)
@@ -1063,7 +1821,17 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 72.39) (xy 157.48 72.39)
+			(xy 115.57 35.56) (xy 115.57 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cba89a00-b50b-4aed-9148-3faaaa4c60cd")
+	)
+	(wire
+		(pts
+			(xy 81.28 43.18) (xy 88.9 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1073,7 +1841,27 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 54.61) (xy 93.98 72.39)
+			(xy 158.75 88.9) (xy 156.21 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccbe1c79-ff4b-4da6-a68a-f6a3a4f4fea3")
+	)
+	(wire
+		(pts
+			(xy 45.72 74.93) (xy 48.26 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd801589-f3b9-42c1-a1a9-f9975e48a1c2")
+	)
+	(wire
+		(pts
+			(xy 60.96 38.1) (xy 60.96 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1083,7 +1871,27 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 77.47) (xy 30.48 91.44)
+			(xy 115.57 68.58) (xy 115.57 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1cb6313-23a0-4e38-8a7e-7c9cf6f8ffed")
+	)
+	(wire
+		(pts
+			(xy 158.75 81.28) (xy 156.21 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d541d1fe-5453-41fe-bc4d-e8a77a2a1d1d")
+	)
+	(wire
+		(pts
+			(xy 45.72 48.26) (xy 45.72 55.88)
 		)
 		(stroke
 			(width 0)
@@ -1093,7 +1901,17 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 86.36) (xy 157.48 72.39)
+			(xy 143.51 76.2) (xy 151.13 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d98ae5b8-085b-48e4-9939-acf03b407928")
+	)
+	(wire
+		(pts
+			(xy 88.9 50.8) (xy 88.9 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1103,7 +1921,77 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 44.45) (xy 114.3 44.45)
+			(xy 107.95 48.26) (xy 107.95 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcfe7e51-b564-4757-b669-a0e8c2269274")
+	)
+	(wire
+		(pts
+			(xy 151.13 35.56) (xy 151.13 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd501174-c1de-494b-85aa-3818f96be61d")
+	)
+	(wire
+		(pts
+			(xy 158.75 33.02) (xy 158.75 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dff93ce3-99c4-4a8d-8e59-8ac1fd5858bd")
+	)
+	(wire
+		(pts
+			(xy 107.95 48.26) (xy 110.49 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1761067-f3ee-42ba-a070-64f2b393e84b")
+	)
+	(wire
+		(pts
+			(xy 143.51 27.94) (xy 151.13 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6fb8857-7beb-446f-9369-7f0c51862294")
+	)
+	(wire
+		(pts
+			(xy 107.95 33.02) (xy 107.95 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e89066d1-75c7-4644-a26a-63da9bff5c82")
+	)
+	(wire
+		(pts
+			(xy 158.75 48.26) (xy 158.75 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8f467c8-52f8-40f8-9471-686e392b3e8c")
+	)
+	(wire
+		(pts
+			(xy 81.28 27.94) (xy 88.9 27.94)
 		)
 		(stroke
 			(width 0)
@@ -1113,7 +2001,57 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 72.39) (xy 50.8 72.39)
+			(xy 96.52 82.55) (xy 96.52 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb570396-2390-4d4b-98ea-9ea9d76ac4ce")
+	)
+	(wire
+		(pts
+			(xy 143.51 38.1) (xy 143.51 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed3c8d04-a512-4201-9fb2-70c74f93eabb")
+	)
+	(wire
+		(pts
+			(xy 158.75 66.04) (xy 158.75 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee20b89a-d3e2-4e60-a2a3-11a040b77b76")
+	)
+	(wire
+		(pts
+			(xy 158.75 73.66) (xy 158.75 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef7311fb-2319-4367-ab4e-e6a5ba156d53")
+	)
+	(wire
+		(pts
+			(xy 115.57 60.96) (xy 123.19 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f25d4ad3-a644-45bb-8b57-0706a0522cf6")
+	)
+	(wire
+		(pts
+			(xy 53.34 43.18) (xy 60.96 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1121,8 +2059,88 @@
 		)
 		(uuid "f3a9c77e-7d4e-4423-babc-4f64665374cd")
 	)
-	(label "C"
-		(at 114.3 44.45 0)
+	(wire
+		(pts
+			(xy 107.95 73.66) (xy 107.95 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5c04410-b551-49b8-bc90-b4f9eabeb8dd")
+	)
+	(wire
+		(pts
+			(xy 45.72 90.17) (xy 48.26 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbf06bed-08aa-4a12-b8d0-2517bacf4601")
+	)
+	(wire
+		(pts
+			(xy 158.75 48.26) (xy 156.21 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbfc4c9b-f027-460e-9395-a566ee2a1369")
+	)
+	(label "COM"
+		(at 130.81 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "055432df-1852-478c-b1a9-bdaefcbaee62")
+	)
+	(label "D4"
+		(at 143.51 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0ddc2ea2-f4f6-4518-9ace-e95c244f3296")
+	)
+	(label "COM"
+		(at 68.58 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "30d94a73-a665-4464-a462-0fb99b864566")
+	)
+	(label "A2"
+		(at 115.57 27.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3ce834d5-9feb-4228-8b08-0b978775c944")
+	)
+	(label "D2"
+		(at 143.51 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "591c0b62-a1ae-4f5a-803a-b30831487995")
+	)
+	(label "C1"
+		(at 81.28 27.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1131,8 +2149,8 @@
 		)
 		(uuid "60afca86-3513-4790-9786-ac4ec82eeef9")
 	)
-	(label "D"
-		(at 114.3 54.61 0)
+	(label "D1"
+		(at 81.28 38.1 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1141,8 +2159,18 @@
 		)
 		(uuid "622003da-4e0f-4091-bb6d-c3884f6da276")
 	)
-	(label "A"
-		(at 83.82 44.45 0)
+	(label "B3"
+		(at 53.34 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6e2a6c9f-b927-4bb7-bc65-9b74eb70e4c6")
+	)
+	(label "A1"
+		(at 53.34 27.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1151,8 +2179,68 @@
 		)
 		(uuid "6fb4c25e-83fd-4507-bf6a-365da109c22d")
 	)
-	(label "B"
-		(at 82.55 72.39 0)
+	(label "B2"
+		(at 115.57 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7008a087-70b7-46af-914e-d447028ef307")
+	)
+	(label "C4"
+		(at 143.51 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "707b3c74-bca5-4f54-990d-3c3e5ef155f2")
+	)
+	(label "C2"
+		(at 143.51 27.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8c963123-8e7c-4a4c-b716-7e0fac4182e6")
+	)
+	(label "D3"
+		(at 81.28 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ad1f6934-d650-43f8-99ae-9800ae34e711")
+	)
+	(label "C3"
+		(at 81.28 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b4ebb5aa-8c17-4ca9-8f26-1d529284cd7a")
+	)
+	(label "A3"
+		(at 53.34 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bb6287b0-bbf6-4b80-ba9b-288d0ddc1684")
+	)
+	(label "B1"
+		(at 53.34 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1162,7 +2250,7 @@
 		(uuid "c152fe58-c51e-4b21-b7e0-a01f36b75069")
 	)
 	(label "COM"
-		(at 101.6 91.44 0)
+		(at 68.58 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1171,19 +2259,134 @@
 		)
 		(uuid "cefb6015-c287-4c82-b718-d63651375a6b")
 	)
+	(label "A4"
+		(at 115.57 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cf550782-4838-437f-86e9-aafc12ea64cb")
+	)
+	(label "COM"
+		(at 130.81 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e9ccc7d7-1c68-40da-b426-5639109e8d3a")
+	)
+	(label "B4"
+		(at 115.57 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fdd4b661-8217-49ac-9ab0-867cd2dccfb4")
+	)
 	(symbol
 		(lib_id "Connector:Conn_Coaxial")
-		(at 40.64 44.45 0)
-		(mirror y)
+		(at 156.21 68.58 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1f5d8875-8792-42c7-824e-f028f911a1d6")
-		(property "Reference" "J1"
-			(at 40.9574 38.1 0)
+		(uuid "038ff1bc-687f-45bb-b614-66bfa22447dc")
+		(property "Reference" "J30"
+			(at 160.02 67.6031 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CL"
+			(at 160.02 70.1431 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 156.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 156.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9d2f4493-d7d1-4c37-aa8e-e916fff9d468")
+		)
+		(pin "2"
+			(uuid "aadeed0f-7905-4706-8dff-ba87e5fbc125")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 110.49 60.96 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1092ac6a-d75a-4910-adb7-e11888403017")
+		(property "Reference" "J25"
+			(at 105.41 59.436 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1191,7 +2394,9 @@
 			)
 		)
 		(property "Value" "AH"
-			(at 40.9574 40.64 0)
+			(at 105.41 61.976 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1199,30 +2404,440 @@
 			)
 		)
 		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
-			(at 40.64 44.45 0)
+			(at 110.49 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 40.64 44.45 0)
+		(property "Datasheet" ""
+			(at 110.49 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-			(at 40.64 44.45 0)
+			(at 110.49 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ffbc7029-78ce-4f25-b7ff-90f4fe840e71")
+		)
+		(pin "2"
+			(uuid "d1d6cd7e-3e3e-4151-a564-a0906ba8aa89")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 110.49 68.58 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "13f76af9-1cd5-42a9-92c8-a94c664183b1")
+		(property "Reference" "J26"
+			(at 105.41 67.056 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AL"
+			(at 105.41 69.596 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 110.49 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 110.49 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "27507145-b04a-44ca-b143-fc14a8a5d6e2")
+		)
+		(pin "2"
+			(uuid "7a96b490-8323-4e02-aee1-826b0296856a")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 110.49 76.2 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "172b9aac-7f50-402c-a8ae-9f7230391529")
+		(property "Reference" "J27"
+			(at 105.41 74.676 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BH"
+			(at 105.41 77.216 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 110.49 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 110.49 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2a19db21-8707-4517-b77c-321fe19e006d")
+		)
+		(pin "2"
+			(uuid "f5fc853f-7941-4f02-95b2-59bd75a00ec3")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 156.21 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "199abc43-79aa-4a09-9cf0-2c52555edad8")
+		(property "Reference" "J29"
+			(at 160.02 59.9831 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH"
+			(at 160.02 62.5231 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 156.21 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 156.21 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ab1b389f-4abb-42cd-960c-c23d7b058248")
+		)
+		(pin "2"
+			(uuid "36ff80a8-ea1f-4d1c-a32c-4d2cf6b00b03")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 156.21 27.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1d3aa739-5d1a-491c-bfef-0301ac862c40")
+		(property "Reference" "J13"
+			(at 160.02 26.9631 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH"
+			(at 160.02 29.5031 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 156.21 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 156.21 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a8a42786-8f62-44e2-96e6-96142eb38a95")
+		)
+		(pin "2"
+			(uuid "7218897c-e7e1-41db-bcb3-b3bf3192ebf1")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 48.26 27.94 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1f5d8875-8792-42c7-824e-f028f911a1d6")
+		(property "Reference" "J1"
+			(at 43.18 26.416 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AH"
+			(at 43.18 28.956 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 48.26 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 48.26 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -1232,7 +2847,7 @@
 			(uuid "befc80ff-7256-4438-b785-09f741731952")
 		)
 		(instances
-			(project ""
+			(project "Sunlord_breakout"
 				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
 					(reference "J1")
 					(unit 1)
@@ -1242,16 +2857,20 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_Coaxial")
-		(at 167.64 86.36 0)
+		(at 156.21 76.2 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4d606ea3-6988-43fe-b8dc-fea966dafa40")
-		(property "Reference" "J8"
-			(at 171.45 85.3831 0)
+		(uuid "2a4b8197-135b-497e-b61f-c955fdfec526")
+		(property "Reference" "J31"
+			(at 160.02 75.2231 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1259,8 +2878,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DL"
-			(at 171.45 87.9231 0)
+		(property "Value" "DH"
+			(at 160.02 77.7631 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1269,30 +2890,366 @@
 			)
 		)
 		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
-			(at 167.64 86.36 0)
+			(at 156.21 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 167.64 86.36 0)
+		(property "Datasheet" ""
+			(at 156.21 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-			(at 167.64 86.36 0)
+			(at 156.21 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "67715bea-cd5a-4850-8dcb-dea16608e20c")
+		)
+		(pin "2"
+			(uuid "608806f8-57f9-4807-b0a8-227c7c21f91f")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 123.19 33.02 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "39f36fff-275a-4b0e-872a-b3577959eb41")
+		(property "Reference" "JP3"
+			(at 120.65 31.7499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "A-B"
+			(at 120.65 34.2899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 123.19 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 123.19 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "092a3921-2790-4372-bda6-b3a602726f84")
+		)
+		(pin "2"
+			(uuid "f1fb1b52-2bc5-4729-ad4b-119b3e5ce101")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "JP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 48.26 62.23 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "464ef71f-ebef-4372-b162-246ffd2df66d")
+		(property "Reference" "J17"
+			(at 43.18 60.706 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AH"
+			(at 43.18 63.246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 48.26 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 48.26 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d5a842d4-7047-42df-a410-be679683659e")
+		)
+		(pin "2"
+			(uuid "9077cd50-d4e0-421b-8ec7-cdb47f703e1c")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Transformer_1P_1S")
+		(at 71.12 67.31 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "49ff55dd-b7d1-471e-abed-09aeb2a54983")
+		(property "Reference" "T3"
+			(at 71.1327 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Transformer_1P_1S"
+			(at 71.1327 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footprints:AW2222_Sunlord_µXFMR"
+			(at 71.12 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Transformer, single primary, single secondary"
+			(at 71.12 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2da3c405-4816-43f9-b167-c4f145470434")
+		)
+		(pin "2"
+			(uuid "546b4594-8a83-4389-b6a1-fba8f562e251")
+		)
+		(pin "4"
+			(uuid "4a832206-0a03-4c19-9c7a-8c9a02d124d1")
+		)
+		(pin "3"
+			(uuid "634e45d6-0e6f-4fa4-a67f-71a0cf60bc2a")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "T3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 93.98 50.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4d606ea3-6988-43fe-b8dc-fea966dafa40")
+		(property "Reference" "J8"
+			(at 97.79 49.8231 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DL"
+			(at 97.79 52.3631 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 93.98 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 93.98 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -1312,16 +3269,180 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_Coaxial")
-		(at 167.64 72.39 0)
+		(at 110.49 50.8 0)
+		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4d6307dd-e9d7-46ac-9979-d465ee077056")
+		(property "Reference" "J12"
+			(at 105.41 49.276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BL"
+			(at 105.41 51.816 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 110.49 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 110.49 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee679e09-b066-408b-a3d8-9f3a0e39ff40")
+		)
+		(pin "2"
+			(uuid "05f6eb0e-fe61-41e9-a63d-4d8ec7e9b63e")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 110.49 43.18 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4fa1c53e-8002-4cc2-989d-8fcc7a6dc09f")
+		(property "Reference" "J11"
+			(at 105.41 41.656 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BH"
+			(at 105.41 44.196 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 110.49 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 110.49 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "29ac4458-886c-4c61-a6dc-24bcba570444")
+		)
+		(pin "2"
+			(uuid "47f7a287-0226-4ef8-b065-a5cab464987d")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 93.98 77.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6bb3a812-386b-4948-a61a-86c882e935c1")
-		(property "Reference" "J7"
-			(at 171.45 71.4131 0)
+		(uuid "57ce0463-1e8d-4096-8dbb-87f774fcaae9")
+		(property "Reference" "J23"
+			(at 97.79 76.4931 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1330,7 +3451,9 @@
 			)
 		)
 		(property "Value" "DH"
-			(at 171.45 73.9531 0)
+			(at 97.79 79.0331 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1339,30 +3462,280 @@
 			)
 		)
 		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
-			(at 167.64 72.39 0)
+			(at 93.98 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 167.64 72.39 0)
+		(property "Datasheet" ""
+			(at 93.98 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-			(at 167.64 72.39 0)
+			(at 93.98 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae780513-43e3-43ae-ba66-c84f9b0289a7")
+		)
+		(pin "2"
+			(uuid "7ef83799-0634-41fd-b63a-e8b8c9ff2289")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 48.26 77.47 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "58409f5c-5c9f-41bf-889a-b40ef9a3fbf0")
+		(property "Reference" "J19"
+			(at 43.18 75.946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BH"
+			(at 43.18 78.486 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 48.26 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 48.26 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f5abce0e-532d-468c-b943-53724bffcf08")
+		)
+		(pin "2"
+			(uuid "d6a47fda-7d57-489d-b19f-769de4c995d3")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 60.96 67.31 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "685fd644-6d57-4535-b51a-63d631a1d18d")
+		(property "Reference" "JP5"
+			(at 58.42 66.0399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "A-B"
+			(at 58.42 68.5799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 60.96 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 60.96 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d42f2326-b00c-4c10-b411-226b6292a47c")
+		)
+		(pin "2"
+			(uuid "38d10e0f-e9dc-4e33-af65-e230cece20da")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "JP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 93.98 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6bb3a812-386b-4948-a61a-86c882e935c1")
+		(property "Reference" "J7"
+			(at 97.79 42.2031 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DH"
+			(at 97.79 44.7431 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 93.98 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 93.98 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -1382,25 +3755,30 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_Coaxial")
-		(at 40.64 58.42 0)
+		(at 48.26 85.09 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7c1f3529-23f2-4359-8690-4dfc42d5a13a")
-		(property "Reference" "J2"
-			(at 40.9574 52.07 0)
+		(uuid "7187b63f-0403-4c93-b3e4-cb541f89735a")
+		(property "Reference" "J20"
+			(at 43.18 83.566 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "AL"
-			(at 40.9574 54.61 0)
+		(property "Value" "BL"
+			(at 43.18 86.106 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1408,30 +3786,196 @@
 			)
 		)
 		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
-			(at 40.64 58.42 0)
+			(at 48.26 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 40.64 58.42 0)
+		(property "Datasheet" ""
+			(at 48.26 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-			(at 40.64 58.42 0)
+			(at 48.26 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9275b403-e27f-4096-a161-d39b05afb9c8")
+		)
+		(pin "2"
+			(uuid "6c4d8a43-4f05-495e-b538-bea1371cac70")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 48.26 69.85 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7bd8b806-b90c-4e27-995d-f917dd8d6b31")
+		(property "Reference" "J18"
+			(at 43.18 68.326 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AL"
+			(at 43.18 70.866 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 48.26 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 48.26 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "49fad4bf-82af-42de-9204-6ac5acc5a6a3")
+		)
+		(pin "2"
+			(uuid "d5ba29f3-47ef-481e-b389-cb7353a54943")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 48.26 35.56 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7c1f3529-23f2-4359-8690-4dfc42d5a13a")
+		(property "Reference" "J2"
+			(at 43.18 34.036 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AL"
+			(at 43.18 36.576 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 48.26 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 48.26 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -1450,17 +3994,347 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Transformer_1P_1S")
-		(at 104.14 49.53 0)
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 143.51 33.02 270)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7d7d931a-db48-469f-866d-52d06b28c153")
+		(property "Reference" "JP4"
+			(at 146.05 31.7499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C-D"
+			(at 146.05 34.2899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 143.51 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 143.51 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "17c9f236-d4b8-4b3f-a019-0234fab4bb55")
+		)
+		(pin "2"
+			(uuid "981b4751-5d88-4e81-b438-36afb22aac7b")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "JP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 143.51 66.04 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "87e2a97a-7960-40df-996c-f5870e9213a3")
+		(property "Reference" "JP8"
+			(at 146.05 64.7699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C-D"
+			(at 146.05 67.3099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 143.51 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 143.51 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d1185918-74de-46c5-908e-516c16721369")
+		)
+		(pin "2"
+			(uuid "82729f92-ac7f-4681-b1b2-458bc467672f")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "JP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 93.98 85.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "89a2ceb6-b048-44d2-aa11-697174b2c86a")
+		(property "Reference" "J24"
+			(at 97.79 84.1131 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DL"
+			(at 97.79 86.6531 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 93.98 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 93.98 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "50d153ec-74b2-4517-8123-4bf4f7567745")
+		)
+		(pin "2"
+			(uuid "51900dc3-d966-4f10-8ac2-1780ae7a7d51")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 110.49 27.94 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8c9bdeef-16b3-4751-a9bd-845ad9992a79")
+		(property "Reference" "J9"
+			(at 105.41 26.416 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AH"
+			(at 105.41 28.956 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 110.49 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 110.49 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "227a99bc-dc43-4234-8b5e-42e464136eff")
+		)
+		(pin "2"
+			(uuid "085b1504-12a3-4b76-9d26-4f4d9c7304e3")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Transformer_1P_1S")
+		(at 71.12 33.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8f7905f3-5bb3-4bcc-8632-9fdd00bdd7c6")
 		(property "Reference" "T1"
-			(at 104.1527 39.37 0)
+			(at 71.1327 22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1468,7 +4342,9 @@
 			)
 		)
 		(property "Value" "Transformer_1P_1S"
-			(at 104.1527 41.91 0)
+			(at 71.1327 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1476,30 +4352,36 @@
 			)
 		)
 		(property "Footprint" "footprints:AW2222_Sunlord_µXFMR"
-			(at 104.14 49.53 0)
+			(at 71.12 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 104.14 49.53 0)
+		(property "Datasheet" ""
+			(at 71.12 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Transformer, single primary, single secondary"
-			(at 104.14 49.53 0)
+			(at 71.12 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -1515,7 +4397,7 @@
 			(uuid "387559e6-54f0-4664-8398-95b90c0b2ccb")
 		)
 		(instances
-			(project ""
+			(project "Sunlord_breakout"
 				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
 					(reference "T1")
 					(unit 1)
@@ -1525,16 +4407,20 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_Coaxial")
-		(at 167.64 44.45 0)
+		(at 93.98 27.94 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a46a8737-62c0-4d7f-9e81-26f4fd172af4")
 		(property "Reference" "J5"
-			(at 171.45 43.4731 0)
+			(at 97.79 26.9631 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1543,7 +4429,9 @@
 			)
 		)
 		(property "Value" "CH"
-			(at 171.45 46.0131 0)
+			(at 97.79 29.5031 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1552,30 +4440,36 @@
 			)
 		)
 		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
-			(at 167.64 44.45 0)
+			(at 93.98 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 167.64 44.45 0)
+		(property "Datasheet" ""
+			(at 93.98 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-			(at 167.64 44.45 0)
+			(at 93.98 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -1594,17 +4488,107 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:Jumper_2_Open")
-		(at 93.98 49.53 90)
+		(lib_id "Device:Transformer_1P_1S")
+		(at 133.35 66.04 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7be77b9-4f54-4456-ab06-f5951a40e1b0")
+		(property "Reference" "T4"
+			(at 133.3627 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Transformer_1P_1S"
+			(at 133.3627 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footprints:AW2222_Sunlord_µXFMR"
+			(at 133.35 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Transformer, single primary, single secondary"
+			(at 133.35 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a7918efa-cb55-4b98-b714-4f30cd4358e0")
+		)
+		(pin "2"
+			(uuid "1980d6fb-3f6e-4374-bbd5-3627e77fcc08")
+		)
+		(pin "4"
+			(uuid "cdfc5706-d5c8-4620-a53c-385a87b1f55d")
+		)
+		(pin "3"
+			(uuid "22c1df7f-6e7c-400f-a0ff-0f8bb9463a63")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "T4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 60.96 33.02 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab7aeaed-2535-4e24-956f-8403f78af5d7")
 		(property "Reference" "JP1"
-			(at 91.44 48.2599 90)
+			(at 58.42 31.7499 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1613,7 +4597,9 @@
 			)
 		)
 		(property "Value" "A-B"
-			(at 91.44 50.7999 90)
+			(at 58.42 34.2899 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1622,30 +4608,36 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 93.98 49.53 0)
+			(at 60.96 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 93.98 49.53 0)
+		(property "Datasheet" ""
+			(at 60.96 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Jumper, 2-pole, open"
-			(at 93.98 49.53 0)
+			(at 60.96 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -1655,7 +4647,7 @@
 			(uuid "1b248216-711e-45b9-9a5e-09763d1a379f")
 		)
 		(instances
-			(project ""
+			(project "Sunlord_breakout"
 				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
 					(reference "JP1")
 					(unit 1)
@@ -1664,17 +4656,183 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:Jumper_2_Open")
-		(at 114.3 49.53 270)
+		(lib_id "Connector:Conn_Coaxial")
+		(at 110.49 35.56 0)
+		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b0072d55-87b3-450c-978b-42a50c6b6774")
+		(property "Reference" "J10"
+			(at 105.41 34.036 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AL"
+			(at 105.41 36.576 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 110.49 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 110.49 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0d19ddcd-1781-40b8-96d3-4c50e7f84f0a")
+		)
+		(pin "2"
+			(uuid "bded7bdb-f37a-4356-8d89-8e70734b6d00")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 93.98 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b4ced418-a7eb-4d1d-b810-7b37ae6321e4")
+		(property "Reference" "J22"
+			(at 97.79 68.8731 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CL"
+			(at 97.79 71.4131 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 93.98 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 93.98 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ebbe0d21-f03b-4cb2-96ce-e092c2f8b3c2")
+		)
+		(pin "2"
+			(uuid "b2f342d4-5f83-45a8-a3e0-c0144464cebd")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 81.28 33.02 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb9492c7-b01a-4916-b126-29dcc3d7ccd9")
 		(property "Reference" "JP2"
-			(at 116.84 48.2599 90)
+			(at 83.82 31.7499 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1683,7 +4841,9 @@
 			)
 		)
 		(property "Value" "C-D"
-			(at 116.84 50.7999 90)
+			(at 83.82 34.2899 90)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1692,30 +4852,36 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 114.3 49.53 0)
+			(at 81.28 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 114.3 49.53 0)
+		(property "Datasheet" ""
+			(at 81.28 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "Jumper, 2-pole, open"
-			(at 114.3 49.53 0)
+			(at 81.28 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -1735,17 +4901,20 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_Coaxial")
-		(at 40.64 86.36 0)
+		(at 48.26 50.8 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c2771a65-7a83-4a4c-8315-775f05395cbc")
 		(property "Reference" "J4"
-			(at 40.9574 80.01 0)
+			(at 43.18 49.276 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1753,7 +4922,9 @@
 			)
 		)
 		(property "Value" "BL"
-			(at 40.9574 82.55 0)
+			(at 43.18 51.816 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1761,30 +4932,36 @@
 			)
 		)
 		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
-			(at 40.64 86.36 0)
+			(at 48.26 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 40.64 86.36 0)
+		(property "Datasheet" ""
+			(at 48.26 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-			(at 40.64 86.36 0)
+			(at 48.26 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -1804,16 +4981,20 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_Coaxial")
-		(at 167.64 58.42 0)
+		(at 93.98 62.23 0)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f255a010-b87c-483c-97e7-92355156e959")
-		(property "Reference" "J6"
-			(at 171.45 57.4431 0)
+		(uuid "c3aaba16-49e4-4571-9f25-bc3399723a07")
+		(property "Reference" "J21"
+			(at 97.79 61.2531 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1821,8 +5002,10 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CL"
-			(at 171.45 59.9831 0)
+		(property "Value" "CH"
+			(at 97.79 63.7931 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1831,30 +5014,612 @@
 			)
 		)
 		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
-			(at 167.64 58.42 0)
+			(at 93.98 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 167.64 58.42 0)
+		(property "Datasheet" ""
+			(at 93.98 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-			(at 167.64 58.42 0)
+			(at 93.98 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0e6087d4-287d-4935-8f9a-4cc3888cca0b")
+		)
+		(pin "2"
+			(uuid "d0a365a7-7c9e-418c-bce9-72a1d925acf9")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 156.21 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cc02d85e-bc12-4bf7-bbf2-cf3cd17a26ec")
+		(property "Reference" "J15"
+			(at 160.02 42.2031 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DH"
+			(at 160.02 44.7431 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 156.21 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 156.21 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5da01f1f-518a-45d8-9d7f-87a27175d056")
+		)
+		(pin "2"
+			(uuid "9237c580-9ec1-47eb-83f4-ab47ee3a52c6")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 156.21 50.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d2a64f7c-7dd4-43a2-9725-777f861fd261")
+		(property "Reference" "J16"
+			(at 160.02 49.8231 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DL"
+			(at 160.02 52.3631 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 156.21 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 156.21 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cc420166-9dc0-4c50-89c6-bdfd105a1adc")
+		)
+		(pin "2"
+			(uuid "8b71a47b-ebcd-4119-b12f-6f57e5e6f3e6")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 123.19 66.04 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d59fb69d-bfbd-4f99-a16c-11b324281663")
+		(property "Reference" "JP7"
+			(at 120.65 64.7699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "A-B"
+			(at 120.65 67.3099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 123.19 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 123.19 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2d640512-adfb-4e0d-a426-71ed4e9884bb")
+		)
+		(pin "2"
+			(uuid "57acb8cc-7a98-4d93-ad1d-d1ee4fa776f4")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "JP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Transformer_1P_1S")
+		(at 133.35 33.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d8ae0694-37e9-4ab5-991b-665f89011fd5")
+		(property "Reference" "T2"
+			(at 133.3627 22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Transformer_1P_1S"
+			(at 133.3627 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footprints:AW2222_Sunlord_µXFMR"
+			(at 133.35 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Transformer, single primary, single secondary"
+			(at 133.35 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "91f31d7a-9a0a-4c65-abe0-1f7fee0a42a0")
+		)
+		(pin "2"
+			(uuid "2032a131-0193-4d46-8503-0d6afadc71cf")
+		)
+		(pin "4"
+			(uuid "ea7f8ba7-3ebe-4d7f-ba7e-f130cb247804")
+		)
+		(pin "3"
+			(uuid "0cdca145-8113-44a7-9d93-1ead45b7c6db")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "T2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 81.28 67.31 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e16b2793-d402-49ed-a3de-788c985577e7")
+		(property "Reference" "JP6"
+			(at 83.82 66.0399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C-D"
+			(at 83.82 68.5799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 81.28 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 81.28 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2cf4f637-aba3-466b-bd10-a67a1c17ed09")
+		)
+		(pin "2"
+			(uuid "194a5ea8-ba9e-49d1-8af1-9db4fa065358")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "JP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 110.49 83.82 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e56c1b0e-3102-44cc-bead-2278e4b89304")
+		(property "Reference" "J28"
+			(at 105.41 82.296 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BL"
+			(at 105.41 84.836 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 110.49 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 110.49 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f026cc7a-1f9a-4714-bbee-c46033968bcd")
+		)
+		(pin "2"
+			(uuid "dcf19c03-eba8-4d74-ac45-535e13723226")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 93.98 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f255a010-b87c-483c-97e7-92355156e959")
+		(property "Reference" "J6"
+			(at 97.79 34.5831 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CL"
+			(at 97.79 37.1231 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 93.98 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 93.98 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -1874,17 +5639,20 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_Coaxial")
-		(at 40.64 72.39 0)
+		(at 48.26 43.18 0)
 		(mirror y)
 		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f59aa76a-d74f-420c-91eb-9b85a15aab9e")
 		(property "Reference" "J3"
-			(at 40.9574 66.04 0)
+			(at 43.18 41.656 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1892,7 +5660,9 @@
 			)
 		)
 		(property "Value" "BH"
-			(at 40.9574 68.58 0)
+			(at 43.18 44.196 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1900,30 +5670,36 @@
 			)
 		)
 		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
-			(at 40.64 72.39 0)
+			(at 48.26 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 40.64 72.39 0)
+		(property "Datasheet" ""
+			(at 48.26 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-			(at 40.64 72.39 0)
+			(at 48.26 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -1936,6 +5712,170 @@
 			(project "Sunlord_breakout"
 				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
 					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 156.21 83.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa3c03af-5a11-40d4-854a-a167610ea731")
+		(property "Reference" "J32"
+			(at 160.02 82.8431 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DL"
+			(at 160.02 85.3831 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 156.21 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 156.21 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "942f96e2-0cf2-4751-bb96-81727cb81707")
+		)
+		(pin "2"
+			(uuid "a77b36be-f49b-46b3-8e91-a185d95e29e1")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 156.21 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fcea230b-1275-452a-b068-2cdea32003ad")
+		(property "Reference" "J14"
+			(at 160.02 34.5831 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CL"
+			(at 160.02 37.1231 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount"
+			(at 156.21 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 156.21 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "053bdd85-adb3-4ce4-b398-b067d78576ac")
+		)
+		(pin "2"
+			(uuid "f8c69853-c049-4d3d-aa86-c2ba76054c9a")
+		)
+		(instances
+			(project "Sunlord_breakout"
+				(path "/e0f7fde1-a273-4044-8253-31fdc9e48fca"
+					(reference "J14")
 					(unit 1)
 				)
 			)
