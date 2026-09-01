@@ -4339,6 +4339,513 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "GD_lib:HBFR-2521Z"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -1.735 11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "HBFR-2521Z"
+				(at -1.735 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "footprints:FR50MHNR"
+				(at 0 -10.668 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 16.51 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Fiber Optic RedLink® receiver 5 MBd"
+				(at 0 -8.128 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Site" "https://www.broadcom.com/products/fiber-optic-modules-components/industrial/industrial-control-general-purpose/650nm/hfbr-2521z"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MANU_PN" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Fiber Optic, Receiver"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Everlight*IRM?H6xxT*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HBFR-2521Z_0_0"
+				(arc
+					(start -10.287 -1.778)
+					(mid -11.0899 -0.1905)
+					(end -10.287 1.397)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 5.08) (xy 0.127 5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 -5.08) (xy 0.127 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "DEMOD"
+					(at -3.175 0.254 900)
+					(effects
+						(font
+							(size 1.524 1.524)
+						)
+					)
+				)
+			)
+			(symbol "HBFR-2521Z_0_1"
+				(rectangle
+					(start -10.16 6.35)
+					(end 7.62 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.763 0.381) (xy -9.652 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.763 0.381) (xy -9.271 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.763 0.381) (xy -8.763 0.889)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.636 -0.635) (xy -9.525 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.636 -0.635) (xy -9.144 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.636 -0.635) (xy -8.636 -0.127)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.382 0.635) (xy -6.731 0.635) (xy -7.62 -1.016) (xy -8.382 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.382 -1.016) (xy -6.731 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -6.096 5.588)
+					(end 0.127 -5.588)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.096 1.397) (xy -7.62 1.397) (xy -7.62 -1.778) (xy -6.096 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.683) (xy 2.286 3.937) (xy 1.27 4.191) (xy 1.905 4.445) (xy 1.905 5.08) (xy 2.54 5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.683) (xy 2.286 3.429) (xy 1.27 3.175) (xy 2.286 2.921) (xy 1.27 2.667) (xy 1.905 2.54)
+						(xy 1.905 1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.905) (xy 1.27 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 1.905 -1.905) (xy 1.905 -1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.921) (xy 0.127 -2.921)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -3.175) (xy 1.905 -3.81) (xy 1.905 -5.08) (xy 2.54 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.397 -3.556) (xy 1.524 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.651 -3.556) (xy 1.524 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.651 -3.556) (xy 1.651 -3.302)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "HBFR-2521Z_1_1"
+				(pin output inverted
+					(at 10.16 -1.27 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "Vcc"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 1.27 180)
+					(length 2.54)
+					(name "RL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Jumper:Jumper_2_Bridged"
 			(pin_numbers
 				(hide yes)
@@ -5836,494 +6343,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "_MYLIBRARY:FR50MHNR"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -10.16 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "FR50MHNR"
-				(at -10.16 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "footprints:FR50MHNR"
-				(at -1.27 -9.525 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 16.51 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Fiber Optic RedLink® receiver 50 MBd Inverting"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Fiber receiver"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Everlight*IRM?H6xxT*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "FR50MHNR_0_0"
-				(arc
-					(start -10.287 -1.778)
-					(mid -11.0899 -0.1905)
-					(end -10.287 1.397)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.905 5.08) (xy 0.127 5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.905 -5.08) (xy 0.127 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "DEMOD"
-					(at -3.175 0.254 900)
-					(effects
-						(font
-							(size 1.524 1.524)
-						)
-					)
-				)
-			)
-			(symbol "FR50MHNR_0_1"
-				(rectangle
-					(start -10.16 6.35)
-					(end 7.62 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -8.763 0.381) (xy -9.652 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -8.763 0.381) (xy -9.271 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -8.763 0.381) (xy -8.763 0.889)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -8.636 -0.635) (xy -9.525 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -8.636 -0.635) (xy -9.144 -0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -8.636 -0.635) (xy -8.636 -0.127)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -8.382 0.635) (xy -6.731 0.635) (xy -7.62 -1.016) (xy -8.382 0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -8.382 -1.016) (xy -6.731 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -6.096 5.588)
-					(end 0.127 -5.588)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -6.096 1.397) (xy -7.62 1.397) (xy -7.62 -1.778) (xy -6.096 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 3.048) (xy 2.286 3.302) (xy 1.27 3.556) (xy 1.905 3.81) (xy 1.905 5.08) (xy 2.54 5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 3.048) (xy 2.286 2.794) (xy 1.27 2.54) (xy 2.286 2.286) (xy 1.27 2.032) (xy 1.905 1.905)
-						(xy 1.905 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.905) (xy 1.27 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 1.905 -1.905) (xy 1.905 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -2.921) (xy 0.127 -2.921)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -3.175) (xy 1.905 -3.81) (xy 1.905 -5.08) (xy 2.54 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.397 -3.556) (xy 1.524 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.651 -3.556) (xy 1.524 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.651 -3.556) (xy 1.651 -3.302)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "FR50MHNR_1_1"
-				(pin output inverted
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 10.16 -5.08 180)
-					(length 2.54)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 5.08 180)
-					(length 2.54)
-					(name "Vcc"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 10.16 -2.54 180)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 10.16 -5.08 180)
-					(length 2.54)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 -5.08 180)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -6765,29 +6784,6 @@
 		)
 		(uuid "ec3ddcd1-df0a-4d4a-a93d-c9d9560764d6")
 	)
-	(text_box "TO CHECK\n	LDO output/adj connection\n	Inverter logic thresholds/drive capability + footprint\n	VGD_LDO/VDDIO\n	J11 & J19 orientation"
-		(exclude_from_sim no)
-		(at 176.53 84.0591 0)
-		(size 60.96 12.4609)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 255 255 194 1)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left top)
-		)
-		(uuid "9bbd9c67-7aaf-497b-8dad-5d632a9c49f6")
-	)
 	(junction
 		(at 279.4 29.21)
 		(diameter 0)
@@ -6813,6 +6809,12 @@
 		(uuid "0bd9790d-e4ce-4449-bc5a-83d54108e54a")
 	)
 	(junction
+		(at 43.18 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c02bbba-2e75-4455-824b-8256e3ed9579")
+	)
+	(junction
 		(at 242.57 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6835,6 +6837,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "128ad546-8c65-4712-a369-9f464214ea57")
+	)
+	(junction
+		(at 43.18 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "159033db-992c-4ea5-aa98-4c2bc8c769e7")
 	)
 	(junction
 		(at 138.43 31.75)
@@ -7023,6 +7031,12 @@
 		(uuid "489fcc87-0854-4493-89d5-a17bb0472c05")
 	)
 	(junction
+		(at 43.18 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4bd70de3-f91e-40c4-b22f-8775037860fd")
+	)
+	(junction
 		(at 123.19 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7209,6 +7223,12 @@
 		(uuid "89ad5cf3-f1e8-4d24-b3d3-b3b905dfbd32")
 	)
 	(junction
+		(at 43.18 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8e929548-a38f-41e4-bbd2-38673f8c0a30")
+	)
+	(junction
 		(at 138.43 171.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7227,6 +7247,12 @@
 		(uuid "8f90e960-bb5a-4161-96c0-ffc29fc7625f")
 	)
 	(junction
+		(at 43.18 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "929f6c73-397f-4caf-9260-f46cb3b57b6b")
+	)
+	(junction
 		(at 139.7 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7243,6 +7269,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "99ea39ab-a9de-411a-9278-903717b8514a")
+	)
+	(junction
+		(at 43.18 163.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9c6127c5-503c-41de-b1b6-f2564d2bb3e3")
 	)
 	(junction
 		(at 175.26 30.48)
@@ -7347,6 +7379,12 @@
 		(uuid "bc6ff484-4e5c-4985-9286-528a90d1fe0d")
 	)
 	(junction
+		(at 43.18 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "be32a4d8-77f5-4670-9419-896aae987b63")
+	)
+	(junction
 		(at 133.35 191.77)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7435,6 +7473,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e47c4033-4977-4337-90da-9c248e266292")
+	)
+	(junction
+		(at 43.18 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e8a88ed5-e82c-4144-a9d1-f652c13a597f")
 	)
 	(junction
 		(at 85.09 144.78)
@@ -7619,6 +7663,16 @@
 			(type default)
 		)
 		(uuid "0b14d8b0-5dba-4155-ac0f-c0dc0f5fc0be")
+	)
+	(wire
+		(pts
+			(xy 43.18 104.14) (xy 43.18 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b559f21-ad49-42fb-9a6c-e1efb313be43")
 	)
 	(wire
 		(pts
@@ -7849,6 +7903,16 @@
 			(type default)
 		)
 		(uuid "1f9544a9-a498-4f8f-95b9-9f6a2fb6e32d")
+	)
+	(wire
+		(pts
+			(xy 43.18 85.09) (xy 43.18 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21738a62-0a90-4f59-a6c0-29785c3c1994")
 	)
 	(wire
 		(pts
@@ -8132,6 +8196,26 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 162.56) (xy 43.18 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39aa7925-2798-4f61-982d-ba2b84a2d686")
+	)
+	(wire
+		(pts
+			(xy 43.18 124.46) (xy 43.18 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a3ceec5-99e3-404d-b652-557eec293217")
+	)
+	(wire
+		(pts
 			(xy 160.02 104.14) (xy 172.72 104.14)
 		)
 		(stroke
@@ -8219,6 +8303,26 @@
 			(type default)
 		)
 		(uuid "471d6459-5956-47b2-b836-8990cc497b06")
+	)
+	(wire
+		(pts
+			(xy 43.18 67.31) (xy 43.18 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "483ddf10-8c12-4aeb-90a9-e85a9d6bb011")
+	)
+	(wire
+		(pts
+			(xy 43.18 105.41) (xy 43.18 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "492138c4-a969-412e-b5ad-1857e4599624")
 	)
 	(wire
 		(pts
@@ -8602,6 +8706,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 46.99) (xy 43.18 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ce6f7e7-e07f-4a9d-abce-74425dea9963")
+	)
+	(wire
+		(pts
 			(xy 134.62 129.54) (xy 147.32 129.54)
 		)
 		(stroke
@@ -8689,6 +8803,16 @@
 			(type default)
 		)
 		(uuid "766bcfe7-42f0-4555-a470-eced598580ee")
+	)
+	(wire
+		(pts
+			(xy 43.18 163.83) (xy 43.18 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76a90398-63f5-4833-bb0e-7492f5355928")
 	)
 	(wire
 		(pts
@@ -9042,13 +9166,13 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 88.9) (xy 106.68 88.9)
+			(xy 43.18 86.36) (xy 43.18 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a4c98ab3-2514-4ec9-b9bf-efac61b7dcdc")
+		(uuid "a0e2d7dd-3556-495d-87f3-fd4229441884")
 	)
 	(wire
 		(pts
@@ -9062,7 +9186,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 88.9) (xy 106.68 93.98)
+			(xy 106.68 87.63) (xy 106.68 93.98)
 		)
 		(stroke
 			(width 0)
@@ -9122,6 +9246,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 144.78) (xy 43.18 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9cc5e24-6b26-4c8e-90fa-a871943caf61")
+	)
+	(wire
+		(pts
 			(xy 45.72 78.74) (xy 45.72 81.28)
 		)
 		(stroke
@@ -9139,6 +9273,16 @@
 			(type default)
 		)
 		(uuid "aac66a31-f5cb-4905-8936-bee611bab194")
+	)
+	(wire
+		(pts
+			(xy 106.68 87.63) (xy 119.38 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab82d3b6-bab1-4226-a632-f1d44b479aa1")
 	)
 	(wire
 		(pts
@@ -9242,6 +9386,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 48.26) (xy 43.18 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2944e0c-42d4-416d-9644-af7cf4b77e3b")
+	)
+	(wire
+		(pts
 			(xy 175.26 30.48) (xy 176.53 30.48)
 		)
 		(stroke
@@ -9292,7 +9446,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 93.98) (xy 119.38 88.9)
+			(xy 119.38 93.98) (xy 119.38 87.63)
 		)
 		(stroke
 			(width 0)
@@ -9469,6 +9623,16 @@
 			(type default)
 		)
 		(uuid "c1abbdd8-9cde-4b85-88f5-89888e90e986")
+	)
+	(wire
+		(pts
+			(xy 43.18 29.21) (xy 43.18 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c20392b5-d3d3-4168-aa57-d634eb9b7e09")
 	)
 	(wire
 		(pts
@@ -9702,6 +9866,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 123.19) (xy 43.18 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d812d2d7-c661-4e04-8ada-d1b301d5cb69")
+	)
+	(wire
+		(pts
 			(xy 90.17 163.83) (xy 85.09 163.83)
 		)
 		(stroke
@@ -9759,6 +9933,16 @@
 			(type default)
 		)
 		(uuid "dc30ca44-5998-4163-8040-5a24a429da3a")
+	)
+	(wire
+		(pts
+			(xy 43.18 143.51) (xy 43.18 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc958128-d606-43af-99d2-d202d4a29321")
 	)
 	(wire
 		(pts
@@ -9992,6 +10176,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 27.94) (xy 43.18 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f11df5fa-bf8b-4909-8ba8-ff239eddc02b")
+	)
+	(wire
+		(pts
 			(xy 113.03 171.45) (xy 124.46 171.45)
 		)
 		(stroke
@@ -10029,6 +10223,16 @@
 			(type default)
 		)
 		(uuid "f3b9311b-da06-496d-bbf9-a4d098345956")
+	)
+	(wire
+		(pts
+			(xy 43.18 66.04) (xy 43.18 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f51b64e3-758b-4a7b-89ea-0eadbbef04f4")
 	)
 	(wire
 		(pts
@@ -10151,7 +10355,7 @@
 		(uuid "05f71af0-c144-4843-98ad-d932cf6a6387")
 	)
 	(label "Vin_12V"
-		(at 116.84 88.9 180)
+		(at 116.84 87.63 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11887,7 +12091,7 @@
 		)
 	)
 	(symbol
-		(lib_id "_MYLIBRARY:FR50MHNR")
+		(lib_id "GD_lib:HBFR-2521Z")
 		(at 33.02 144.78 0)
 		(unit 1)
 		(body_style 1)
@@ -11908,7 +12112,7 @@
 				)
 			)
 		)
-		(property "Value" "FR50MHNR"
+		(property "Value" "HBFR-2521Z"
 			(at 31.285 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11940,8 +12144,8 @@
 				)
 			)
 		)
-		(property "Description" "Fiber Optic RedLink® receiver 50 MBd Inverting"
-			(at 33.02 144.78 0)
+		(property "Description" "Fiber Optic RedLink® receiver 5 MBd"
+			(at 33.02 152.908 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11951,8 +12155,8 @@
 				)
 			)
 		)
-		(property "Site" "https://www.deumol.com/goods.php?id=1722"
-			(at 33.02 144.78 0)
+		(property "Site" "https://www.broadcom.com/products/fiber-optic-modules-components/industrial/industrial-control-general-purpose/650nm/hfbr-2521z"
+			(at 33.02 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13022,7 +13226,7 @@
 		)
 	)
 	(symbol
-		(lib_id "_MYLIBRARY:FR50MHNR")
+		(lib_id "GD_lib:HBFR-2521Z")
 		(at 33.02 48.26 0)
 		(unit 1)
 		(body_style 1)
@@ -13043,7 +13247,7 @@
 				)
 			)
 		)
-		(property "Value" "FR50MHNR"
+		(property "Value" "HBFR-2521Z"
 			(at 31.285 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13075,8 +13279,8 @@
 				)
 			)
 		)
-		(property "Description" "Fiber Optic RedLink® receiver 50 MBd Inverting"
-			(at 33.02 48.26 0)
+		(property "Description" "Fiber Optic RedLink® receiver 5 MBd"
+			(at 33.02 56.388 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13086,8 +13290,8 @@
 				)
 			)
 		)
-		(property "Site" "https://www.deumol.com/goods.php?id=1722"
-			(at 33.02 48.26 0)
+		(property "Site" "https://www.broadcom.com/products/fiber-optic-modules-components/industrial/industrial-control-general-purpose/650nm/hfbr-2521z"
+			(at 33.02 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13735,7 +13939,7 @@
 		)
 	)
 	(symbol
-		(lib_id "_MYLIBRARY:FR50MHNR")
+		(lib_id "GD_lib:HBFR-2521Z")
 		(at 33.02 124.46 0)
 		(unit 1)
 		(body_style 1)
@@ -13756,7 +13960,7 @@
 				)
 			)
 		)
-		(property "Value" "FR50MHNR"
+		(property "Value" "HBFR-2521Z"
 			(at 31.285 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13788,8 +13992,8 @@
 				)
 			)
 		)
-		(property "Description" "Fiber Optic RedLink® receiver 50 MBd Inverting"
-			(at 33.02 124.46 0)
+		(property "Description" "Fiber Optic RedLink® receiver 5 MBd"
+			(at 33.02 132.588 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13799,8 +14003,8 @@
 				)
 			)
 		)
-		(property "Site" "https://www.deumol.com/goods.php?id=1722"
-			(at 33.02 124.46 0)
+		(property "Site" "https://www.broadcom.com/products/fiber-optic-modules-components/industrial/industrial-control-general-purpose/650nm/hfbr-2521z"
+			(at 33.02 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17500,7 +17704,7 @@
 		)
 	)
 	(symbol
-		(lib_id "_MYLIBRARY:FR50MHNR")
+		(lib_id "GD_lib:HBFR-2521Z")
 		(at 33.02 105.41 0)
 		(unit 1)
 		(body_style 1)
@@ -17521,7 +17725,7 @@
 				)
 			)
 		)
-		(property "Value" "FR50MHNR"
+		(property "Value" "HBFR-2521Z"
 			(at 31.285 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17553,8 +17757,8 @@
 				)
 			)
 		)
-		(property "Description" "Fiber Optic RedLink® receiver 50 MBd Inverting"
-			(at 33.02 105.41 0)
+		(property "Description" "Fiber Optic RedLink® receiver 5 MBd"
+			(at 33.02 113.538 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17564,8 +17768,8 @@
 				)
 			)
 		)
-		(property "Site" "https://www.deumol.com/goods.php?id=1722"
-			(at 33.02 105.41 0)
+		(property "Site" "https://www.broadcom.com/products/fiber-optic-modules-components/industrial/industrial-control-general-purpose/650nm/hfbr-2521z"
+			(at 33.02 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19097,7 +19301,7 @@
 		)
 	)
 	(symbol
-		(lib_id "_MYLIBRARY:FR50MHNR")
+		(lib_id "GD_lib:HBFR-2521Z")
 		(at 33.02 67.31 0)
 		(unit 1)
 		(body_style 1)
@@ -19118,7 +19322,7 @@
 				)
 			)
 		)
-		(property "Value" "FR50MHNR"
+		(property "Value" "HBFR-2521Z"
 			(at 31.285 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19150,8 +19354,8 @@
 				)
 			)
 		)
-		(property "Description" "Fiber Optic RedLink® receiver 50 MBd Inverting"
-			(at 33.02 67.31 0)
+		(property "Description" "Fiber Optic RedLink® receiver 5 MBd"
+			(at 33.02 75.438 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19161,8 +19365,8 @@
 				)
 			)
 		)
-		(property "Site" "https://www.deumol.com/goods.php?id=1722"
-			(at 33.02 67.31 0)
+		(property "Site" "https://www.broadcom.com/products/fiber-optic-modules-components/industrial/industrial-control-general-purpose/650nm/hfbr-2521z"
+			(at 33.02 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19211,7 +19415,7 @@
 		)
 	)
 	(symbol
-		(lib_id "_MYLIBRARY:FR50MHNR")
+		(lib_id "GD_lib:HBFR-2521Z")
 		(at 33.02 163.83 0)
 		(unit 1)
 		(body_style 1)
@@ -19232,7 +19436,7 @@
 				)
 			)
 		)
-		(property "Value" "FR50MHNR"
+		(property "Value" "HBFR-2521Z"
 			(at 31.285 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19264,8 +19468,8 @@
 				)
 			)
 		)
-		(property "Description" "Fiber Optic RedLink® receiver 50 MBd Inverting"
-			(at 33.02 163.83 0)
+		(property "Description" "Fiber Optic RedLink® receiver 5 MBd"
+			(at 33.02 171.958 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19275,8 +19479,8 @@
 				)
 			)
 		)
-		(property "Site" "https://www.deumol.com/goods.php?id=1722"
-			(at 33.02 163.83 0)
+		(property "Site" "https://www.broadcom.com/products/fiber-optic-modules-components/industrial/industrial-control-general-purpose/650nm/hfbr-2521z"
+			(at 33.02 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19347,7 +19551,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SolderJumper_3_Bridged123"
+		(property "Value" "PS_EN"
 			(at 142.24 76.1999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24223,8 +24427,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x23_Odd_Even")
-		(at 205.74 134.62 0)
-		(mirror y)
+		(at 203.2 134.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24254,7 +24457,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x23_P2.54mm_Horizontal"
-			(at 205.74 134.62 0)
+			(at 203.2 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24265,7 +24468,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 205.74 134.62 0)
+			(at 203.2 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24276,7 +24479,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x23, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 205.74 134.62 0)
+			(at 203.2 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24287,7 +24490,7 @@
 			)
 		)
 		(property "MANU_PN" ""
-			(at 205.74 134.62 0)
+			(at 203.2 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24298,7 +24501,7 @@
 			)
 		)
 		(property "MFG_NAME01" "SAMTEC"
-			(at 205.74 134.62 0)
+			(at 203.2 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24309,7 +24512,7 @@
 			)
 		)
 		(property "MFG_PN" "SSW-123-02-T-D-RA "
-			(at 205.74 134.62 0)
+			(at 203.2 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24320,7 +24523,7 @@
 			)
 		)
 		(property "Mouser Part Number" "200-SSW12302TDRA "
-			(at 205.74 134.62 0)
+			(at 203.2 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24836,7 +25039,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x03_Top_Bottom")
-		(at 114.3 96.52 180)
+		(at 111.76 96.52 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24844,10 +25047,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8c45db92-3328-4d26-a05e-f1a2fd855e4b")
 		(property "Reference" "J19"
-			(at 113.03 105.41 0)
+			(at 113.03 91.186 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24857,7 +25059,7 @@
 			)
 		)
 		(property "Value" "SSW-102-02-T-T-RA"
-			(at 113.03 102.87 0)
+			(at 112.268 101.854 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24867,7 +25069,7 @@
 			)
 		)
 		(property "Footprint" "GD_lib:SAMTEC_SSW-102-02-T-T-RA"
-			(at 114.3 96.52 0)
+			(at 111.76 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24878,7 +25080,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 96.52 0)
+			(at 111.76 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24889,7 +25091,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x03, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 114.3 96.52 0)
+			(at 111.76 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24900,7 +25102,7 @@
 			)
 		)
 		(property "PARTREV" "R"
-			(at 114.3 96.52 0)
+			(at 111.76 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24912,7 +25114,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 114.3 96.52 0)
+			(at 111.76 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24924,7 +25126,7 @@
 			)
 		)
 		(property "Manufacturer" "Samtec"
-			(at 114.3 96.52 0)
+			(at 111.76 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24936,7 +25138,7 @@
 			)
 		)
 		(property "MANU_PN" ""
-			(at 114.3 96.52 0)
+			(at 111.76 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24947,7 +25149,7 @@
 			)
 		)
 		(property "MFG_NAME01" "SAMTEC"
-			(at 114.3 96.52 0)
+			(at 111.76 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24958,7 +25160,7 @@
 			)
 		)
 		(property "MFG_PN" "SSW-102-02-T-T-RA"
-			(at 114.3 96.52 0)
+			(at 111.76 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24969,7 +25171,7 @@
 			)
 		)
 		(property "Mouser Part Number" "200-SSW10202TTRA "
-			(at 114.3 96.52 0)
+			(at 111.76 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25623,7 +25825,7 @@
 		)
 	)
 	(symbol
-		(lib_id "_MYLIBRARY:FR50MHNR")
+		(lib_id "GD_lib:HBFR-2521Z")
 		(at 33.02 29.21 0)
 		(unit 1)
 		(body_style 1)
@@ -25644,7 +25846,7 @@
 				)
 			)
 		)
-		(property "Value" "FR50MHNR"
+		(property "Value" "HBFR-2521Z"
 			(at 31.285 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25676,8 +25878,8 @@
 				)
 			)
 		)
-		(property "Description" "Fiber Optic RedLink® receiver 50 MBd Inverting"
-			(at 33.02 29.21 0)
+		(property "Description" "Fiber Optic RedLink® receiver 5 MBd"
+			(at 33.02 37.338 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25687,8 +25889,8 @@
 				)
 			)
 		)
-		(property "Site" "https://www.deumol.com/goods.php?id=1722"
-			(at 33.02 29.21 0)
+		(property "Site" "https://www.broadcom.com/products/fiber-optic-modules-components/industrial/industrial-control-general-purpose/650nm/hfbr-2521z"
+			(at 33.02 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27335,7 +27537,7 @@
 		)
 	)
 	(symbol
-		(lib_id "_MYLIBRARY:FR50MHNR")
+		(lib_id "GD_lib:HBFR-2521Z")
 		(at 33.02 86.36 0)
 		(unit 1)
 		(body_style 1)
@@ -27356,7 +27558,7 @@
 				)
 			)
 		)
-		(property "Value" "FR50MHNR"
+		(property "Value" "HBFR-2521Z"
 			(at 31.285 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27388,8 +27590,8 @@
 				)
 			)
 		)
-		(property "Description" "Fiber Optic RedLink® receiver 50 MBd Inverting"
-			(at 33.02 86.36 0)
+		(property "Description" "Fiber Optic RedLink® receiver 5 MBd"
+			(at 33.02 94.488 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27399,8 +27601,8 @@
 				)
 			)
 		)
-		(property "Site" "https://www.deumol.com/goods.php?id=1722"
-			(at 33.02 86.36 0)
+		(property "Site" "https://www.broadcom.com/products/fiber-optic-modules-components/industrial/industrial-control-general-purpose/650nm/hfbr-2521z"
+			(at 33.02 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
