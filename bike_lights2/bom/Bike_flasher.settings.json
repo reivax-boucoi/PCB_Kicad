@@ -1,0 +1,48 @@
+{
+    "type": "InteractiveHtmlBom settings",
+    "version": 1,
+    "pcbmetadata": {
+        "title": " Bike_flasher",
+        "revision": "A",
+        "company": "Xavier Bourlot",
+        "date": "2026-08-23",
+        "variant": ""
+    },
+    "settings": {
+        "canvaslayout": "F",
+        "bomlayout": "left-right",
+        "bommode": "grouped",
+        "checkboxes": [
+            "Sourced",
+            "Placed"
+        ],
+        "checkboxStoredRefs": {
+            "Sourced": "24,30,3,31,33,17,32,18,35,14,26,7,29,22,20,36,37,12,15,28,34,27,11,25,16,2,1,0,8,21,9,5,13,6,23",
+            "Placed": "36,37,15,28,33,17,32,12,18,35,14,26,7,29,22,20,31,30,24,34,27,11,25,16,2,1,0,8,21,9,13,5,6"
+        },
+        "darkMode": true,
+        "highlightpin1": "none",
+        "redrawOnDrag": true,
+        "boardRotation": 0,
+        "offsetBackRotation": false,
+        "renderPads": true,
+        "renderReferences": true,
+        "renderValues": true,
+        "renderSilkscreen": true,
+        "renderFabrication": false,
+        "renderDnpOutline": false,
+        "renderTracks": false,
+        "renderZones": false,
+        "columnOrder": [
+            "checkboxes",
+            "References",
+            "Value",
+            "Footprint",
+            "Quantity"
+        ],
+        "hiddenColumns": [],
+        "netColors": {},
+        "markWhenChecked": "",
+        "highlightRowOnClick": false
+    }
+}
